@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Street Gadgets Care | Phone & Laptop Repair</title>
+
+  <meta name="description" content="Street Gadgets Care - Professional phone and laptop repair, accessories and digital services.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #061412;
+      --card: rgba(20, 39, 36, 0.78);
+      --border: rgba(54, 225, 190, 0.18);
+      --accent: #31e6c0;
+      --accent-dark: #16b99a;
+      --text: #f1fffb;
+      --muted: #a8bbb7;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(30, 160, 135, 0.16), transparent 35%),
+        linear-gradient(145deg, #061412, #091c19 50%, #04100e);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 760px;
+      margin: auto;
+      padding: 35px 0 60px;
+    }
+
+    /* HEADER */
+
+    header {
+      text-align: center;
+      padding: 25px 10px 35px;
+    }
+
+    .logo {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 18px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(49, 230, 192, 0.08);
+      border: 1px solid var(--border);
+      font-size: 35px;
+    }
+
+    .brand {
+      font-size: clamp(36px, 9vw, 65px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.5;
+      margin-top: 18px;
+    }
+
+    .location {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 7px 13px;
+      border-radius: 30px;
+      background: rgba(49, 230, 192, 0.08);
+      border: 1px solid var(--border);
+      color: #c8ded9;
+      font-size: 13px;
+    }
+
+    /* CARDS */
+
+    .card {
+      position: relative;
+      margin: 20px 0;
+      padding: 28px 22px;
+      border-radius: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: var(--accent);
+      opacity: 0.035;
+      border-radius: 50%;
+      top: -60px;
+      right: -40px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(49, 230, 192, 0.45);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 13px 27px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #03120f;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .button:hover {
+      background: #ffffff;
+      transform: scale(1.04);
+    }
+
+    /* SERVICES */
+
+    .services {
+      margin-top: 35px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 25px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .service {
+      padding: 16px 10px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #c5d5d2;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .contact-box {
+      padding: 28px 20px;
+      border-radius: 25px;
+      background: linear-gradient(
+        145deg,
+        rgba(49,230,192,0.10),
+        rgba(20,39,36,0.65)
+      );
+      border: 1px solid var(--border);
+    }
+
+    .contact-box h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .contact-button {
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 600;
+    }
+
+    .contact-button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      color: #718581;
+      font-size: 13px;
+      margin-top: 45px;
+      line-height: 1.7;
+    }
+
+    .footer-brand {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: 90%;
+        padding-top: 20px;
+      }
+
+      .brand {
+        font-size: 40px;
+      }
+
+      .tagline {
+        font-size: 15px;
+      }
+
+      .card {
+        padding: 25px 17px;
+      }
+
+      .card h2 {
+        font-size: 22px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+      <div class="logo">🔧</div>
+
+      <div class="brand">
+        Street <span>Gadgets</span> Care
+      </div>
+
+      <p class="tagline">
+        Professional technology care for your phones,
+        laptops and everyday gadgets.
+      </p>
+
+      <div class="location">
+        📍 Nairobi, Kenya
+      </div>
+
+    </header>
+
+
+    <!-- PHONE REPAIR -->
+
+    <section class="card">
+
+      <div class="icon">📱</div>
+
+      <h2>Phone Repair</h2>
+
+      <p>
+        Screen replacement, battery problems, charging faults,
+        software issues, water damage diagnosis and more.
+      </p>
+
+      <a class="button" href="#phone">
+        View Services
+      </a>
+
+    </section>
+
+
+    <!-- LAPTOP REPAIR -->
+
+    <section class="card">
+
+      <div class="icon">💻</div>
+
+      <h2>Laptop Repair</h2>
+
+      <p>
+        Windows installation, screen and keyboard replacement,
+        SSD & RAM upgrades, charging problems and diagnostics.
+      </p>
+
+      <a class="button" href="#laptop">
+        View Services
+      </a>
+
+    </section>
+
+
+    <!-- ACCESSORIES -->
+
+    <section class="card">
+
+      <div class="icon">🛍️</div>
+
+      <h2>Gadgets & Accessories</h2>
+
+      <p>
+        Chargers, cables, phone covers, screen protectors,
+        earbuds, smartwatches and other essential accessories.
+      </p>
+
+      <a class="button" href="#accessories">
+        Explore
+      </a>
+
+    </section>
+
+
+    <!-- GRAPHIC DESIGN -->
+
+    <section class="card">
+
+      <div class="icon">🎨</div>
+
+      <h2>Graphic Design</h2>
+
+      <p>
+        Professional logos, business posters, flyers,
+        social media designs and other digital designs.
+      </p>
+
+      <a class="button" href="#design">
+        View Services
+      </a>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="phone">
+
+      <h2 class="section-title">
+        What We Do
+      </h2>
+
+      <div class="service-list">
+
+        <div class="service">📱 Screen Replacement</div>
+        <div class="service">🔋 Battery Replacement</div>
+
+        <div class="service">⚡ Charging Repairs</div>
+        <div class="service">🔊 Speaker & Mic Repair</div>
+
+        <div class="service">🛠️ Software Services</div>
+        <div class="service">💧 Water Damage Diagnosis</div>
+
+        <div class="service" id="laptop">💻 Laptop Repair</div>
+        <div class="service">⌨️ Keyboard Replacement</div>
+
+        <div class="service">💾 SSD & RAM Upgrade</div>
+        <div class="service">🖥️ Laptop Screen Repair</div>
+
+        <div class="service">🔌 Charging Port Repair</div>
+        <div class="service">⚙️ BIOS & System Repair</div>
+
+        <div class="service" id="accessories">🛒 Accessories</div>
+        <div class="service">🎧 Earbuds & Audio</div>
+
+        <div class="service">⌚ Smartwatches</div>
+        <div class="service" id="design">🎨 Graphic Design</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+      <div class="contact-box">
+
+        <h2>Let's Fix Your Device</h2>
+
+        <p>
+          Have a phone or laptop problem?
+          Contact Street Gadgets Care today.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            class="contact-button"
+            href="tel:0114259961">
+            📞 Call Us
+          </a>
+
+          <a
+            class="contact-button"
+            href="https://wa.me/254114259961">
+            💬 WhatsApp
+          </a>
+
+          <a
+            class="contact-button"
+            href="mailto:streetgadgetscare@gmail.com">
+            ✉️ Email
+          </a>
+
+        </div>
+
+        <a
+          class="button"
+          href="https://wa.me/254114259961">
+          Book a Repair
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <div class="footer-brand">
+        STREET GADGETS CARE 🔧
+      </div>
+
+      Professional Phone & Laptop Repair
+
+      <br>
+
+      © 2026 Street Gadgets Care. All Rights Reserved.
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
