@@ -7,186 +7,262 @@
 
 <title>Products & Accessories | Street Gadgets Care</title>
 
-<meta name="description" content="Shop phone and laptop accessories from Street Gadgets Care.">
+<meta name="description" content="Explore phones, laptops, smart devices and quality accessories at Street Gadgets Care.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7fa;
-color:#17202a;
-line-height:1.6
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-background:#0b1220;
-color:white;
-padding:15px 6%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-position:sticky;
-top:0;
-z-index:1000
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #17202a;
+    line-height: 1.6;
 }
 
-.logo{font-size:22px;font-weight:bold}
-.logo span{color:#19a7ce}
-
-nav{display:flex;gap:22px}
-nav a{
-color:white;
-text-decoration:none;
-font-size:14px;
-font-weight:600
+header {
+    background: #0b1220;
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav a:hover,nav a.active{color:#19a7ce}
-
-.page-header{
-background:#0b1220;
-color:white;
-text-align:center;
-padding:75px 6%
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.page-header small{
-color:#19a7ce;
-font-weight:bold;
-text-transform:uppercase;
-letter-spacing:2px
+.logo span {
+    color: #19a7ce;
 }
 
-.page-header h1{font-size:48px;margin:10px 0}
-.page-header p{color:#c7d0dc;max-width:650px;margin:auto}
-
-.section{padding:75px 6%}
-
-.section-title{
-text-align:center;
-margin-bottom:45px
+nav {
+    display: flex;
+    gap: 22px;
 }
 
-.section-title small{
-color:#19a7ce;
-font-weight:bold;
-text-transform:uppercase;
-letter-spacing:1.5px
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.section-title h2{
-font-size:34px;
-margin-top:8px
+nav a:hover,
+nav a.active {
+    color: #19a7ce;
 }
 
-.product-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px
+.page-header {
+    background: #0b1220;
+    color: white;
+    text-align: center;
+    padding: 75px 6%;
 }
 
-.product-card{
-background:white;
-border-radius:12px;
-padding:30px;
-box-shadow:0 5px 25px rgba(0,0,0,.06);
-transition:.3s
+.page-header small {
+    color: #19a7ce;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.product-card:hover{
-transform:translateY(-5px)
+.page-header h1 {
+    font-size: 48px;
+    margin: 10px 0;
 }
 
-.product-icon{
-height:130px;
-background:#e6f7fb;
-border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:55px;
-margin-bottom:20px
+.page-header p {
+    color: #c7d0dc;
+    max-width: 650px;
+    margin: auto;
 }
 
-.product-card h3{
-margin-bottom:8px
+.section {
+    padding: 75px 6%;
 }
 
-.product-card p{
-color:#667085;
-font-size:14px;
-margin-bottom:15px
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
 }
 
-.tag{
-display:inline-block;
-padding:5px 10px;
-background:#eef8fb;
-color:#1287a8;
-border-radius:20px;
-font-size:12px;
-font-weight:bold
+.section-title small {
+    color: #19a7ce;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-.note{
-max-width:850px;
-margin:45px auto 0;
-background:#0b1220;
-color:#c7d0dc;
-padding:25px;
-border-radius:10px;
-text-align:center
+.section-title h2 {
+    font-size: 34px;
+    margin-top: 8px;
 }
 
-.cta{
-background:#19a7ce;
-color:white;
-text-align:center;
-padding:60px 6%
+.section-title p {
+    max-width: 650px;
+    margin: 10px auto;
+    color: #667085;
 }
 
-.cta h2{font-size:35px;margin-bottom:12px}
-.cta p{margin-bottom:22px}
-
-.btn{
-display:inline-block;
-padding:13px 23px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-background:white;
-color:#0b1220
+.product-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-footer{
-background:#070d18;
-color:#aeb8c5;
-padding:35px 6%;
-text-align:center
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,.06);
+    transition: 0.3s;
 }
 
-footer strong{color:white}
-
-.footer-links{margin-top:15px}
-.footer-links a{
-color:#aeb8c5;
-text-decoration:none;
-margin:0 8px;
-font-size:14px
+.product-card:hover {
+    transform: translateY(-6px);
 }
 
-@media(max-width:850px){
-header{flex-direction:column;gap:12px}
-nav{flex-wrap:wrap;justify-content:center}
-.product-grid{grid-template-columns:repeat(2,1fr)}
-.page-header h1{font-size:40px}
+.product-image {
+    height: 180px;
+    background: #e6f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
 }
 
-@media(max-width:550px){
-.product-grid{grid-template-columns:1fr}
+.product-content {
+    padding: 25px;
+}
+
+.product-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.product-content p {
+    color: #667085;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #e6f7fb;
+    color: #1287a8;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.note {
+    max-width: 850px;
+    margin: 50px auto 0;
+    background: #0b1220;
+    color: #c7d0dc;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.note strong {
+    color: white;
+    font-size: 18px;
+}
+
+.cta {
+    background: #19a7ce;
+    color: white;
+    text-align: center;
+    padding: 60px 6%;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    margin-bottom: 22px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    background: white;
+    color: #0b1220;
+}
+
+footer {
+    background: #070d18;
+    color: #aeb8c5;
+    padding: 35px 6%;
+    text-align: center;
+}
+
+footer strong {
+    color: white;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #aeb8c5;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #19a7ce;
+}
+
+@media(max-width: 850px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 550px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
 }
 </style>
 </head>
@@ -194,142 +270,230 @@ nav{flex-wrap:wrap;justify-content:center}
 <body>
 
 <header>
-<div class="logo">STREET <span>GADGETS</span> CARE</div>
+    <div class="logo">
+        STREET <span>GADGETS</span> CARE
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="repairs.html">Repairs</a>
-<a href="products.html" class="active">Products</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
+
 <section class="page-header">
-<small>Gadgets & Accessories</small>
-<h1>Products & Accessories</h1>
-<p>
-Useful accessories for your phone, laptop and everyday technology needs.
-</p>
+    <small>Gadgets & Accessories</small>
+    <h1>Products & Accessories</h1>
+    <p>
+        Explore phones, laptops, smart devices and useful accessories
+        for your everyday technology needs.
+    </p>
 </section>
+
 
 <section class="section">
 
-<div class="section-title">
-<small>What We Stock</small>
-<h2>Shop Our Accessories</h2>
-</div>
+    <div class="section-title">
+        <small>Our Products</small>
+        <h2>Explore Our Categories</h2>
+        <p>
+            Find a range of gadgets and accessories at Street Gadgets Care.
+        </p>
+    </div>
 
-<div class="product-grid">
 
-<div class="product-card">
-<div class="product-icon">🔌</div>
-<h3>Chargers</h3>
-<p>
-Phone and laptop charging solutions for different devices.
-</p>
-<span class="tag">Chargers</span>
-</div>
+    <div class="product-grid">
 
-<div class="product-card">
-<div class="product-icon">🔗</div>
-<h3>Charging Cables</h3>
-<p>
-Type-C, iPhone and Micro-USB cables for everyday use.
-</p>
-<span class="tag">Cables</span>
-</div>
 
-<div class="product-card">
-<div class="product-icon">📱</div>
-<h3>Phone Cases</h3>
-<p>
-Protective cases for a range of popular smartphone models.
-</p>
-<span class="tag">Protection</span>
-</div>
+        <!-- Phones, Laptops & Smart Devices -->
 
-<div class="product-card">
-<div class="product-icon">🛡️</div>
-<h3>Screen Protectors</h3>
-<p>
-Protection accessories designed to help keep your screen safe.
-</p>
-<span class="tag">Protection</span>
-</div>
+        <div class="product-card">
+            <div class="product-image">💻📱⌚</div>
 
-<div class="product-card">
-<div class="product-icon">💼</div>
-<h3>Laptop Bags</h3>
-<p>
-Practical bags for carrying and protecting your laptop.
-</p>
-<span class="tag">Laptop</span>
-</div>
+            <div class="product-content">
+                <h3>Phones, Laptops & Smart Devices</h3>
 
-<div class="product-card">
-<div class="product-icon">🎧</div>
-<h3>Earphones & Bluetooth</h3>
-<p>
-Audio accessories for music, calls and everyday entertainment.
-</p>
-<span class="tag">Audio</span>
-</div>
+                <p>
+                    Explore smartphones, laptops, smart watches and other
+                    smart devices for your everyday needs.
+                </p>
 
-<div class="product-card">
-<div class="product-icon">⌚</div>
-<h3>Smart Watches</h3>
-<p>
-Smart wearable devices for everyday use.
-</p>
-<span class="tag">Smart Gadgets</span>
-</div>
+                <span class="tag">Smart Devices</span>
+            </div>
+        </div>
 
-<div class="product-card">
-<div class="product-icon">🔋</div>
-<h3>Replacement Batteries</h3>
-<p>
-Replacement batteries for selected phones and other devices.
-</p>
-<span class="tag">Batteries</span>
-</div>
 
-<div class="product-card">
-<div class="product-icon">💾</div>
-<h3>Storage & Gadgets</h3>
-<p>
-Selected storage devices and useful technology accessories.
-</p>
-<span class="tag">Tech</span>
-</div>
+        <!-- Chargers -->
 
-</div>
+        <div class="product-card">
+            <div class="product-image">🔌</div>
 
-<div class="note">
-<strong>Looking for something specific?</strong><br>
-Contact us and ask about availability for your device or model.
-</div>
+            <div class="product-content">
+                <h3>Chargers</h3>
+
+                <p>
+                    Phone chargers, laptop chargers and other charging
+                    solutions for different devices.
+                </p>
+
+                <span class="tag">Charging</span>
+            </div>
+        </div>
+
+
+        <!-- Charging Cables -->
+
+        <div class="product-card">
+            <div class="product-image">🔗</div>
+
+            <div class="product-content">
+                <h3>Charging Cables</h3>
+
+                <p>
+                    Type-C, iPhone and Micro-USB charging cables for
+                    different devices.
+                </p>
+
+                <span class="tag">Cables</span>
+            </div>
+        </div>
+
+
+        <!-- Phone Protection -->
+
+        <div class="product-card">
+            <div class="product-image">🛡️📱</div>
+
+            <div class="product-content">
+                <h3>Phone Protection</h3>
+
+                <p>
+                    Smartphone cases and screen protectors to help protect
+                    your device from everyday damage.
+                </p>
+
+                <span class="tag">Protection</span>
+            </div>
+        </div>
+
+
+        <!-- Laptop Bags -->
+
+        <div class="product-card">
+            <div class="product-image">💼</div>
+
+            <div class="product-content">
+                <h3>Laptop Bags</h3>
+
+                <p>
+                    Practical and stylish laptop bags for carrying and
+                    protecting your laptop.
+                </p>
+
+                <span class="tag">Laptop Accessories</span>
+            </div>
+        </div>
+
+
+        <!-- Earphones & Bluetooth -->
+
+        <div class="product-card">
+            <div class="product-image">🎧</div>
+
+            <div class="product-content">
+                <h3>Earphones & Bluetooth</h3>
+
+                <p>
+                    Earphones, Bluetooth devices and other audio accessories
+                    for music and calls.
+                </p>
+
+                <span class="tag">Audio</span>
+            </div>
+        </div>
+
+
+        <!-- Replacement Batteries -->
+
+        <div class="product-card">
+            <div class="product-image">🔋</div>
+
+            <div class="product-content">
+                <h3>Replacement Batteries</h3>
+
+                <p>
+                    Replacement batteries for selected phones and other
+                    compatible devices.
+                </p>
+
+                <span class="tag">Batteries</span>
+            </div>
+        </div>
+
+
+        <!-- Storage & Other Gadgets -->
+
+        <div class="product-card">
+            <div class="product-image">💾</div>
+
+            <div class="product-content">
+                <h3>Storage & Other Gadgets</h3>
+
+                <p>
+                    Storage devices and other useful gadgets and technology
+                    accessories.
+                </p>
+
+                <span class="tag">Tech Accessories</span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="note">
+        <strong>Looking for something specific?</strong>
+        <br>
+        Contact Street Gadgets Care and ask about the availability
+        of the product or accessory you need.
+    </div>
 
 </section>
+
 
 <section class="cta">
-<h2>Looking For an Accessory?</h2>
-<p>Contact Street Gadgets Care and ask about the item you need.</p>
-<a href="contact.html" class="btn">Contact Us</a>
+
+    <h2>Looking for a Gadget or Accessory?</h2>
+
+    <p>
+        Contact us and let us help you find what you need.
+    </p>
+
+    <a href="contact.html" class="btn">Contact Us</a>
+
 </section>
 
-<footer>
-<p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
 
-<div class="footer-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="repairs.html">Repairs</a>
-<a href="products.html">Products</a>
-<a href="contact.html">Contact</a>
-</div>
+<footer>
+
+    <p>
+        © 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
+    </p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
 </footer>
 
 </body>
