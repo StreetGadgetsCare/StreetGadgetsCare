@@ -1,39 +1,311 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Street Gadgets Care</title>
+
+<meta name="description" content="Explore phone repair, laptop repair, accessories and graphic design services from Street Gadgets Care.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fa;
+color:#17202a;
+line-height:1.6
+}
+
+header{
+background:#0b1220;
+color:white;
+padding:15px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:sticky;
+top:0;
+z-index:1000
+}
+
+.logo{font-size:22px;font-weight:bold}
+.logo span{color:#19a7ce}
+
+nav{display:flex;gap:22px}
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:600
+}
+
+nav a:hover,nav a.active{color:#19a7ce}
+
+.page-header{
+background:#0b1220;
+color:white;
+text-align:center;
+padding:75px 6%
+}
+
+.page-header small{
+color:#19a7ce;
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing:2px
+}
+
+.page-header h1{font-size:48px;margin:10px 0}
+.page-header p{color:#c7d0dc;max-width:650px;margin:auto}
+
+.section{padding:75px 6%}
+
+.section-title{text-align:center;margin-bottom:45px}
+.section-title small{
+color:#19a7ce;
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing:1.5px
+}
+
+.section-title h2{font-size:34px;margin-top:8px}
+
+.section-title p{
+max-width:650px;
+margin:10px auto;
+color:#667085
+}
+
+.service-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px
+}
+
+.service-card{
+background:white;
+padding:35px;
+border-radius:12px;
+box-shadow:0 5px 25px rgba(0,0,0,.06);
+border-left:4px solid #19a7ce
+}
+
+.icon{
+font-size:32px;
+margin-bottom:15px
+}
+
+.service-card h3{
+font-size:22px;
+margin-bottom:10px
+}
+
+.service-card p{
+color:#667085;
+margin-bottom:15px
+}
+
+.service-card ul{
+padding-left:20px;
+color:#4b5563
+}
+
+.service-card li{margin:7px 0}
+
+.dark{
+background:#0b1220;
+color:white
+}
+
+.dark .section-title p{color:#b9c2cf}
+
+.highlight{
+color:#19a7ce
+}
+
+.cta{
+background:#19a7ce;
+color:white;
+text-align:center;
+padding:60px 6%
+}
+
+.cta h2{font-size:35px;margin-bottom:12px}
+.cta p{margin-bottom:22px}
+
+.btn{
+display:inline-block;
+padding:13px 23px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+background:white;
+color:#0b1220
+}
+
+footer{
+background:#070d18;
+color:#aeb8c5;
+padding:35px 6%;
+text-align:center
+}
+
+footer strong{color:white}
+
+.footer-links{margin-top:15px}
+.footer-links a{
+color:#aeb8c5;
+text-decoration:none;
+margin:0 8px;
+font-size:14px
+}
+
+@media(max-width:800px){
+header{flex-direction:column;gap:12px}
+nav{flex-wrap:wrap;justify-content:center}
+.service-grid{grid-template-columns:1fr}
+.page-header h1{font-size:40px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">STREET <span>GADGETS</span> CARE</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html" class="active">Services</a>
+<a href="repairs.html">Repairs</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="page-header">
+<small>What We Offer</small>
 <h1>Our Services</h1>
+<p>
+Practical technology services for phones, laptops and everyday gadgets.
+</p>
+</section>
 
-<p>At Street Gadgets Care, we provide reliable and professional technology services.</p>
+<section class="section">
 
-<h2>Phone Repair</h2>
+<div class="section-title">
+<small>Our Expertise</small>
+<h2>Professional Tech Services</h2>
+<p>
+From repairs to accessories and design services, we provide solutions for different technology needs.
+</p>
+</div>
 
-<ul>
-  <li>Screen Replacement</li>
-  <li>Battery Replacement</li>
-  <li>Charging Port Repair</li>
-  <li>Software Updates and Flashing</li>
-  <li>Speaker and Microphone Repair</li>
-  <li>Water Damage Diagnosis</li>
-  <li>Fingerprint and Face ID Repair</li>
-</ul>
+<div class="service-grid">
 
-<h2>Laptop Repair</h2>
-
-<ul>
-  <li>Windows Installation</li>
-  <li>Keyboard Replacement</li>
-  <li>Screen Replacement</li>
-  <li>Overheating Repair and Cleaning</li>
-  <li>RAM and SSD Upgrades</li>
-  <li>BIOS Repair</li>
-  <li>Charging Port Repair</li>
-  <li>No Display Troubleshooting</li>
-</ul>
-
-<h2>Other Services</h2>
+<div class="service-card">
+<div class="icon">📱</div>
+<h3>Phone Services</h3>
+<p>Professional solutions for common phone hardware and software problems.</p>
 
 <ul>
-  <li>Graphic Design</li>
-  <li>Logo Design</li>
-  <li>Business Posters and Flyers</li>
-  <li>Social Media Designs</li>
+<li>Screen replacement</li>
+<li>Battery replacement</li>
+<li>Charging system repair</li>
+<li>Speaker and microphone issues</li>
+<li>Software flashing and updates</li>
+<li>Water damage diagnosis</li>
+<li>Face ID / fingerprint repair</li>
 </ul>
+</div>
 
-<p>We are committed to providing reliable, affordable, and professional services.</p>
+<div class="service-card">
+<div class="icon">💻</div>
+<h3>Laptop Services</h3>
+<p>Reliable laptop troubleshooting, repairs and upgrades.</p>
+
+<ul>
+<li>Windows installation</li>
+<li>Keyboard replacement</li>
+<li>Screen replacement</li>
+<li>Overheating repair and cleaning</li>
+<li>RAM and SSD upgrades</li>
+<li>BIOS repair</li>
+<li>Charging port repair</li>
+<li>No-display troubleshooting</li>
+</ul>
+</div>
+
+<div class="service-card">
+<div class="icon">🔌</div>
+<h3>Accessories</h3>
+<p>Useful accessories for phones, laptops and other gadgets.</p>
+
+<ul>
+<li>Phone chargers</li>
+<li>USB and Type-C cables</li>
+<li>Laptop chargers</li>
+<li>Laptop bags</li>
+<li>Phone cases and protectors</li>
+<li>Earphones and Bluetooth devices</li>
+<li>Replacement batteries</li>
+</ul>
+</div>
+
+<div class="service-card">
+<div class="icon">🎨</div>
+<h3>Graphic Design</h3>
+<p>Creative design solutions for individuals and businesses.</p>
+
+<ul>
+<li>Logo design</li>
+<li>Business posters</li>
+<li>Flyers</li>
+<li>Social media graphics</li>
+<li>Business profile designs</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="section dark">
+
+<div class="section-title">
+<small>More Than Repairs</small>
+<h2>One Place For Your Tech Needs</h2>
+<p>
+Whether you need a repair, an accessory or a design solution, Street Gadgets Care is ready to assist.
+</p>
+</div>
+
+</section>
+
+<section class="cta">
+<h2>Need a Service?</h2>
+<p>Tell us what you need and let's find the right solution.</p>
+<a href="contact.html" class="btn">Contact Us</a>
+</section>
+
+<footer>
+<p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="repairs.html">Repairs</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</div>
+</footer>
+
+</body>
+</html>
+```
