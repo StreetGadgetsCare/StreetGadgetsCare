@@ -1,7 +1,393 @@
-<h1>About Street Gadgets Care</h1>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>Welcome to Street Gadgets Care.</p>
+    <title>About Us | Street Gadgets Care</title>
 
-<p>We specialize in professional phone and laptop repair, gadget accessories, and quality devices.</p>
+    <meta name="description" content="Learn more about Street Gadgets Care, your trusted destination for phone and laptop repairs and gadget accessories.">
 
-<p>Our goal is to provide reliable, affordable, and professional services to our customers.</p>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #17202a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b1220;
+            color: white;
+            padding: 15px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span,
+        .highlight {
+            color: #19a7ce;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #19a7ce;
+        }
+
+        .page-header {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 75px 6%;
+        }
+
+        .page-header small {
+            color: #19a7ce;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        .page-header p {
+            color: #c7d0dc;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 75px 6%;
+        }
+
+        .about-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 35px;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #667085;
+            margin-bottom: 16px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+        }
+
+        .about-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .about-box ul {
+            list-style: none;
+        }
+
+        .about-box li {
+            padding: 10px 0;
+            border-bottom: 1px solid #edf0f3;
+        }
+
+        .about-box li:last-child {
+            border-bottom: none;
+        }
+
+        .about-box li::before {
+            content: "✓";
+            color: #19a7ce;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .values {
+            background: #0b1220;
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            color: #19a7ce;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-top: 8px;
+        }
+
+        .value-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value-card {
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .value-card .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: #b9c2cf;
+            font-size: 15px;
+        }
+
+        .cta {
+            background: #19a7ce;
+            color: white;
+            text-align: center;
+            padding: 60px 6%;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            margin-bottom: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            background: white;
+            color: #0b1220;
+        }
+
+        footer {
+            background: #070d18;
+            color: #aeb8c5;
+            padding: 35px 6%;
+            text-align: center;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #aeb8c5;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        STREET <span>GADGETS</span> CARE
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <small>About Street Gadgets Care</small>
+    <h1>Technology With Care</h1>
+    <p>
+        Professional gadget solutions designed around your needs.
+    </p>
+</section>
+
+<section class="section">
+
+    <div class="about-grid">
+
+        <div class="about-text">
+            <h2>We Take Care of Your <span class="highlight">Gadgets</span></h2>
+
+            <p>
+                Street Gadgets Care provides phone and laptop repair services
+                together with a range of useful gadget accessories.
+            </p>
+
+            <p>
+                Our goal is simple: provide practical solutions, honest advice
+                and careful service whenever your device needs attention.
+            </p>
+
+            <p>
+                Whether your phone has a damaged screen, your laptop needs
+                troubleshooting, or you are looking for the right accessory,
+                we are here to help.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <h3>What We Stand For</h3>
+
+            <ul>
+                <li>Professional device care</li>
+                <li>Clear and honest communication</li>
+                <li>Practical repair solutions</li>
+                <li>Quality-focused service</li>
+                <li>Customer satisfaction</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section values">
+
+    <div class="section-title">
+        <small>Our Values</small>
+        <h2>Why We Do What We Do</h2>
+    </div>
+
+    <div class="value-grid">
+
+        <div class="value-card">
+            <div class="icon">🔧</div>
+            <h3>Careful Work</h3>
+            <p>
+                We treat every device with attention and care.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <div class="icon">💬</div>
+            <h3>Honest Advice</h3>
+            <p>
+                We explain device problems clearly so you can make informed decisions.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <div class="icon">🤝</div>
+            <h3>Customer First</h3>
+            <p>
+                We aim to make every interaction straightforward and helpful.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta">
+    <h2>Have a Device That Needs Attention?</h2>
+    <p>Let Street Gadgets Care help you find the right solution.</p>
+    <a href="contact.html" class="btn">Get In Touch</a>
+</section>
+
+<footer>
+    <p>
+        © 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
+    </p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>
+```
