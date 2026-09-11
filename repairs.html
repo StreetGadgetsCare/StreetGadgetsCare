@@ -31,8 +31,17 @@ top:0;
 z-index:1000
 }
 
-.logo{font-size:22px;font-weight:bold}
-.logo span{color:#19a7ce}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
 
 nav{display:flex;gap:22px}
 nav a{
@@ -201,7 +210,9 @@ nav{flex-wrap:wrap;justify-content:center}
 <body>
 
 <header>
-<div class="logo">STREET <span>GADGETS</span> CARE</div>
+<div class="logo">
+    <img src="Logo.png" alt="Street Gadgets Care Logo">
+</div>
 
 <nav>
 <a href="index.html">Home</a>
