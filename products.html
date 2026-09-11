@@ -36,12 +36,15 @@ header {
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: #19a7ce;
+.logo img {
+    width: 150px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
 }
 
 nav {
@@ -271,8 +274,8 @@ footer strong {
 
 <header>
     <div class="logo">
-        STREET <span>GADGETS</span> CARE
-    </div>
+    <img src="Logo.png" alt="Street Gadgets Care Logo">
+</div>
 
     <nav>
         <a href="index.html">Home</a>
