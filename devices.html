@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Phones, Laptops & Smart Devices | Street Gadgets Care</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f8;
+            color: #111;
+        }
+
+        header {
+            background: #0b1220;
+            color: white;
+            padding: 12px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 55px;
+            object-fit: contain;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #19a7ce;
+        }
+
+        .page-header {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 70px 6%;
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .devices {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 6%;
+        }
+
+        .device-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .device-card {
+            background: white;
+            border-radius: 12px;
+            padding: 45px 25px;
+            text-align: center;
+            text-decoration: none;
+            color: #111;
+            box-shadow: 0 5px 25px rgba(0,0,0,.08);
+            transition: 0.3s;
+        }
+
+        .device-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .device-icon {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .device-card h2 {
+            margin-bottom: 12px;
+            font-size: 23px;
+        }
+
+        .device-card p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 850px) {
+            .device-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .device-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Phones, Laptops & Smart Devices</h1>
+    <p>Explore our range of laptops, smartphones and smart devices.</p>
+</section>
+
+<section class="devices">
+
+    <div class="device-grid">
+
+        <a href="laptops.html" class="device-card">
+            <div class="device-icon">💻</div>
+            <h2>Laptops</h2>
+            <p>Explore our available laptops and find the right device for your needs.</p>
+        </a>
+
+        <a href="phones.html" class="device-card">
+            <div class="device-icon">📱</div>
+            <h2>Phones</h2>
+            <p>Explore smartphones and other mobile devices available from Street Gadgets Care.</p>
+        </a>
+
+        <a href="smart-watches.html" class="device-card">
+            <div class="device-icon">⌚</div>
+            <h2>Smart Watches</h2>
+            <p>Explore smart watches and wearable devices for everyday use.</p>
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
