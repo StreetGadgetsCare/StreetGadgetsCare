@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Laptops | Street Gadgets Care</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f8;
+            color: #111;
+        }
+
+        header {
+            background: #0b1220;
+            color: white;
+            padding: 12px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 55px;
+            object-fit: contain;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #19a7ce;
+        }
+
+        .page-header {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 60px 6%;
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 6%;
+        }
+
+        .laptop-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .laptop-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            transition: 0.3s;
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .laptop-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .laptop-card h3 {
+            padding: 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 900px) {
+            .laptop-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .laptop-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Laptops</h1>
+
+    <p>
+        Explore our available laptops and contact us for availability and pricing.
+    </p>
+
+</section>
+
+
+<section class="products">
+
+    <div class="laptop-grid">
+
+        <div class="laptop-card">
+            <img src="Laptop 1.jpeg" alt="Laptop">
+            <h3>Laptop 1</h3>
+        </div>
+
+        <div class="laptop-card">
+            <img src="Laptop 2.jpeg" alt="Laptop">
+            <h3>Laptop 2</h3>
+        </div>
+
+        <div class="laptop-card">
+            <img src="Laptop 3.jpeg" alt="Laptop">
+            <h3>Laptop 3</h3>
+        </div>
+
+        <div class="laptop-card">
+            <img src="Laptop 4.jpeg" alt="Laptop">
+            <h3>Laptop 4</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
