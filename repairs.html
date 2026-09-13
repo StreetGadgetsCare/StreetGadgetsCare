@@ -7,328 +7,663 @@
 
 <title>Repairs | Street Gadgets Care</title>
 
-<meta name="description" content="Professional phone and laptop repair services from Street Gadgets Care.">
+<meta name="description" content="Street Gadgets Care provides professional phone and laptop repair services, diagnostics, maintenance and reliable technology solutions in Nairobi.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7fa;
-color:#17202a;
-line-height:1.6
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#17202a;
+    line-height:1.6;
 }
+
+/* HEADER */
 
 header{
-background:#0b1220;
-color:white;
-padding:15px 6%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-position:sticky;
-top:0;
-z-index:1000
+    background:#0b1220;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.logo{
+    display:flex;
+    align-items:center;
 }
 
-.logo img {
-    width: 150px;
-    height: 55px;
-    object-fit: contain;
-    display: block;
+.logo img{
+    width:150px;
+    height:55px;
+    object-fit:contain;
+    display:block;
 }
 
-nav{display:flex;gap:22px}
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
 nav a{
-color:white;
-text-decoration:none;
-font-size:14px;
-font-weight:600
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
-nav a:hover,nav a.active{color:#19a7ce}
+nav a:hover,
+nav a.active{
+    color:#19a7ce;
+}
+
+/* PAGE HEADER */
 
 .page-header{
-background:#0b1220;
-color:white;
-text-align:center;
-padding:75px 6%
+    background:#0b1220;
+    color:white;
+    text-align:center;
+    padding:85px 6%;
 }
 
 .page-header small{
-color:#19a7ce;
-font-weight:bold;
-text-transform:uppercase;
-letter-spacing:2px
+    color:#19a7ce;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.page-header h1{font-size:48px;margin:10px 0}
-.page-header p{color:#c7d0dc;max-width:650px;margin:auto}
-
-.section{padding:75px 6%}
-
-.repair-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px
+.page-header h1{
+    font-size:48px;
+    margin:12px 0;
 }
 
-.repair-card{
-background:white;
-padding:35px;
-border-radius:12px;
-box-shadow:0 5px 25px rgba(0,0,0,.06)
+.page-header p{
+    color:#c7d0dc;
+    max-width:680px;
+    margin:auto;
+    font-size:17px;
 }
 
-.repair-card .icon{
-font-size:35px;
-margin-bottom:15px
-}
+/* REPAIR SECTION */
 
-.repair-card h2{
-margin-bottom:10px
-}
-
-.repair-card p{
-color:#667085;
-margin-bottom:15px
-}
-
-.repair-card ul{
-padding-left:20px;
-color:#4b5563
-}
-
-.repair-card li{margin:8px 0}
-
-.process{
-background:#0b1220;
-color:white
+.section{
+    padding:80px 6%;
 }
 
 .section-title{
-text-align:center;
-margin-bottom:45px
+    text-align:center;
+    margin-bottom:50px;
 }
 
 .section-title small{
-color:#19a7ce;
-font-weight:bold;
-text-transform:uppercase;
-letter-spacing:1.5px
+    color:#19a7ce;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
 .section-title h2{
-font-size:34px;
-margin-top:8px
+    font-size:36px;
+    margin-top:8px;
+}
+
+.section-title p{
+    max-width:680px;
+    margin:12px auto 0;
+    color:#667085;
+}
+
+.repair-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.repair-card{
+    background:white;
+    padding:38px;
+    border-radius:14px;
+    border:1px solid #e7ebef;
+    border-top:4px solid #19a7ce;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.repair-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 35px rgba(0,0,0,.09);
+}
+
+.repair-icon{
+    width:62px;
+    height:62px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eefbfe;
+    border-radius:12px;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.repair-card h2{
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.repair-card p{
+    color:#667085;
+    margin-bottom:20px;
+}
+
+.repair-card ul{
+    padding-left:20px;
+    color:#4b5563;
+}
+
+.repair-card li{
+    margin:9px 0;
+}
+
+/* REPAIR HIGHLIGHTS */
+
+.highlight-grid{
+    max-width:1100px;
+    margin:45px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.highlight-card{
+    background:white;
+    padding:28px;
+    border-radius:12px;
+    border:1px solid #e7ebef;
+    text-align:center;
+}
+
+.highlight-card h3{
+    margin-bottom:9px;
+}
+
+.highlight-card p{
+    color:#667085;
+    font-size:15px;
+}
+
+/* PROCESS */
+
+.process{
+    background:#0b1220;
+    color:white;
+}
+
+.process .section-title h2{
+    color:white;
+}
+
+.process .section-title p{
+    color:#b9c2cf;
 }
 
 .process-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .process-box{
-border:1px solid rgba(255,255,255,.12);
-padding:25px;
-border-radius:10px
+    background:#111b2c;
+    border:1px solid rgba(255,255,255,.08);
+    padding:28px;
+    border-radius:12px;
 }
 
 .number{
-font-size:28px;
-font-weight:bold;
-color:#19a7ce;
-margin-bottom:10px
+    font-size:30px;
+    font-weight:bold;
+    color:#19a7ce;
+    margin-bottom:12px;
+}
+
+.process-box h3{
+    margin-bottom:8px;
 }
 
 .process-box p{
-color:#b9c2cf;
-font-size:14px
+    color:#b9c2cf;
+    font-size:14px;
 }
+
+/* CTA */
 
 .cta{
-background:#19a7ce;
-color:white;
-text-align:center;
-padding:60px 6%
+    background:#19a7ce;
+    color:white;
+    text-align:center;
+    padding:65px 6%;
 }
 
-.cta h2{font-size:35px;margin-bottom:12px}
-.cta p{margin-bottom:22px}
+.cta h2{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
 
 .btn{
-display:inline-block;
-padding:13px 23px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-background:white;
-color:#0b1220
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    background:white;
+    color:#0b1220;
+    transition:.3s;
 }
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* FOOTER */
 
 footer{
-background:#070d18;
-color:#aeb8c5;
-padding:35px 6%;
-text-align:center
+    background:#070d18;
+    color:#aeb8c5;
+    padding:35px 6%;
+    text-align:center;
 }
 
-footer strong{color:white}
+footer strong{
+    color:white;
+}
 
-.footer-links{margin-top:15px}
+.footer-links{
+    margin-top:15px;
+}
+
 .footer-links a{
-color:#aeb8c5;
-text-decoration:none;
-margin:0 8px;
-font-size:14px
+    color:#aeb8c5;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:14px;
 }
+
+.footer-links a:hover{
+    color:#19a7ce;
+}
+
+/* MOBILE */
 
 @media(max-width:850px){
-header{flex-direction:column;gap:12px}
-nav{flex-wrap:wrap;justify-content:center}
-.repair-grid{grid-template-columns:1fr}
-.process-grid{grid-template-columns:repeat(2,1fr)}
-.page-header h1{font-size:40px}
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .logo img{
+        width:140px;
+        height:52px;
+    }
+
+    .page-header{
+        padding:65px 6%;
+    }
+
+    .page-header h1{
+        font-size:40px;
+    }
+
+    .repair-grid{
+        grid-template-columns:1fr;
+    }
+
+    .highlight-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section{
+        padding:65px 6%;
+    }
 }
 
 @media(max-width:550px){
-.process-grid{grid-template-columns:1fr}
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-header h1{
+        font-size:34px;
+    }
+
+    .repair-card{
+        padding:28px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
 <div class="logo">
     <img src="Logo.png" alt="Street Gadgets Care Logo">
 </div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="repairs.html" class="active">Repairs</a>
-<a href="products.html">Products</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="repairs.html" class="active">Repairs</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
 </nav>
+
 </header>
 
+
+<!-- PAGE INTRO -->
+
 <section class="page-header">
-<small>Device Repair</small>
-<h1>Professional Repairs</h1>
-<p>
-Phone and laptop repairs handled with care and attention.
-</p>
+
+    <small>Device Repair</small>
+
+    <h1>Professional Repairs</h1>
+
+    <p>
+        Careful diagnostics, practical solutions and reliable repairs
+        for phones and laptops.
+    </p>
+
 </section>
+
+
+<!-- REPAIR SERVICES -->
 
 <section class="section">
 
+<div class="section-title">
+
+    <small>Repair Services</small>
+
+    <h2>We Repair Your Technology</h2>
+
+    <p>
+        From everyday device problems to more complex hardware and
+        software issues, we help get your technology working again.
+    </p>
+
+</div>
+
+
 <div class="repair-grid">
 
-<div class="repair-card">
-<div class="icon">📱</div>
-<h2>Phone Repairs</h2>
-<p>
-We diagnose and repair a wide range of phone problems.
-</p>
 
-<ul>
-<li>Broken or damaged screens</li>
-<li>Battery problems</li>
-<li>Charging problems</li>
-<li>Speaker and microphone issues</li>
-<li>Software problems</li>
-<li>Water damage diagnosis</li>
-<li>Biometric issues</li>
-</ul>
-</div>
+<!-- PHONE REPAIRS -->
 
 <div class="repair-card">
-<div class="icon">💻</div>
-<h2>Laptop Repairs</h2>
-<p>
-We troubleshoot hardware and software problems affecting laptops.
-</p>
 
-<ul>
-<li>Windows installation</li>
-<li>Slow performance</li>
-<li>Overheating</li>
-<li>Broken keyboards</li>
-<li>Screen problems</li>
-<li>RAM and SSD upgrades</li>
-<li>Charging problems</li>
-<li>No-display problems</li>
-</ul>
+    <div class="repair-icon">📱</div>
+
+    <h2>Phone Repairs</h2>
+
+    <p>
+        Professional troubleshooting and repair for a wide range
+        of smartphone problems.
+    </p>
+
+    <ul>
+        <li>Broken or damaged screens</li>
+        <li>Battery problems</li>
+        <li>Charging system issues</li>
+        <li>Speaker and microphone problems</li>
+        <li>Software troubleshooting</li>
+        <li>Liquid damage diagnosis</li>
+        <li>Biometric and sensor issues</li>
+    </ul>
+
+</div>
+
+
+<!-- LAPTOP REPAIRS -->
+
+<div class="repair-card">
+
+    <div class="repair-icon">💻</div>
+
+    <h2>Laptop Repairs</h2>
+
+    <p>
+        Hardware and software troubleshooting for different
+        laptop models and common problems.
+    </p>
+
+    <ul>
+        <li>Windows installation</li>
+        <li>Slow performance</li>
+        <li>Overheating problems</li>
+        <li>Keyboard replacement</li>
+        <li>Screen problems</li>
+        <li>RAM and SSD upgrades</li>
+        <li>Charging and power issues</li>
+        <li>No-display troubleshooting</li>
+    </ul>
+
 </div>
 
 </div>
+
 </section>
+
+
+<!-- WHAT WE HANDLE -->
+
+<section class="section">
+
+<div class="section-title">
+
+    <small>What We Handle</small>
+
+    <h2>Common Device Problems</h2>
+
+    <p>
+        We help diagnose a variety of hardware, software and
+        performance-related issues.
+    </p>
+
+</div>
+
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+
+    <h3>Hardware Issues</h3>
+
+    <p>
+        Screens, batteries, charging systems, keyboards, speakers,
+        ports and other hardware problems.
+    </p>
+
+</div>
+
+
+<div class="highlight-card">
+
+    <h3>Software Issues</h3>
+
+    <p>
+        Operating system problems, software troubleshooting,
+        installations, updates and configuration.
+    </p>
+
+</div>
+
+
+<div class="highlight-card">
+
+    <h3>Performance Problems</h3>
+
+    <p>
+        Slow systems, overheating, storage issues and other
+        performance-related problems.
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REPAIR PROCESS -->
 
 <section class="section process">
 
 <div class="section-title">
-<small>Our Process</small>
-<h2>How We Handle Repairs</h2>
+
+    <small>Our Process</small>
+
+    <h2>How We Handle Repairs</h2>
+
+    <p>
+        We follow a straightforward process designed to understand
+        the problem before carrying out the repair.
+    </p>
+
 </div>
+
 
 <div class="process-grid">
 
-<div class="process-box">
-<div class="number">01</div>
-<h3>Diagnosis</h3>
-<p>We identify the problem affecting your device.</p>
-</div>
 
 <div class="process-box">
-<div class="number">02</div>
-<h3>Assessment</h3>
-<p>We explain the issue and the available solution.</p>
+
+    <div class="number">01</div>
+
+    <h3>Diagnosis</h3>
+
+    <p>
+        We identify the problem affecting your device.
+    </p>
+
 </div>
+
 
 <div class="process-box">
-<div class="number">03</div>
-<h3>Repair</h3>
-<p>The device is worked on carefully using the appropriate solution.</p>
+
+    <div class="number">02</div>
+
+    <h3>Assessment</h3>
+
+    <p>
+        We explain the issue and discuss the available solution.
+    </p>
+
 </div>
+
 
 <div class="process-box">
-<div class="number">04</div>
-<h3>Testing</h3>
-<p>We check the device after the repair before handing it back.</p>
+
+    <div class="number">03</div>
+
+    <h3>Repair</h3>
+
+    <p>
+        The device is worked on carefully using the appropriate
+        repair solution.
+    </p>
+
+</div>
+
+
+<div class="process-box">
+
+    <div class="number">04</div>
+
+    <h3>Testing</h3>
+
+    <p>
+        We check the device after the repair before handing it back.
+    </p>
+
 </div>
 
 </div>
+
 </section>
+
+
+<!-- CTA -->
 
 <section class="cta">
-<h2>Is Your Device Giving You Problems?</h2>
-<p>Get in touch with Street Gadgets Care.</p>
-<a href="contact.html" class="btn">Request a Repair</a>
+
+    <h2>Is Your Device Giving You Problems?</h2>
+
+    <p>
+        Get in touch with Street Gadgets Care and tell us what
+        your device needs.
+    </p>
+
+    <a href="contact.html" class="btn">Request a Repair</a>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-<p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
+
+<p>
+    © 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
+</p>
 
 <div class="footer-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="repairs.html">Repairs</a>
-<a href="products.html">Products</a>
-<a href="contact.html">Contact</a>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="repairs.html">Repairs</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+
 </div>
+
 </footer>
 
 </body>
