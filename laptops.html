@@ -74,7 +74,30 @@
             margin: auto;
             padding: 60px 6%;
         }
+        .laptop-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
 
+        .laptop-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            transition: 0.3s;
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .laptop-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
       .laptop-info {
     padding: 18px;
 }
@@ -97,6 +120,17 @@
     font-size: 20px;
     color: #0b1220;
 }
+        @media (max-width: 900px) {
+            .laptop-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .laptop-grid {
+                grid-template-columns: 1fr;
+            }
+        }        
     </style>
 </head>
 
