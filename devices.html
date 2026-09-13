@@ -1,199 +1,756 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Phones, Laptops & Smart Devices | Street Gadgets Care</title>
+<meta charset="UTF-8">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7f8;
-            color: #111;
-        }
+<title>Phones, Laptops & Smart Devices | Street Gadgets Care</title>
 
-        header {
-            background: #0b1220;
-            color: white;
-            padding: 12px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+<meta name="description" content="Explore laptops, smartphones and smart watches available from Street Gadgets Care.">
 
-        .logo img {
-            width: 150px;
-            height: 55px;
-            object-fit: contain;
-            display: block;
-        }
+<style>
 
-        nav {
-            display: flex;
-            gap: 22px;
-        }
+/* RESET */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        nav a:hover,
-        nav a.active {
-            color: #19a7ce;
-        }
 
-        .page-header {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 70px 6%;
-        }
+/* BODY */
 
-        .page-header h1 {
-            font-size: 36px;
-            margin-bottom: 12px;
-        }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#17202a;
+    line-height:1.6;
+}
 
-        .devices {
-            max-width: 1100px;
-            margin: auto;
-            padding: 70px 6%;
-        }
 
-        .device-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+/* HEADER */
 
-        .device-card {
-            background: white;
-            border-radius: 12px;
-            padding: 45px 25px;
-            text-align: center;
-            text-decoration: none;
-            color: #111;
-            box-shadow: 0 5px 25px rgba(0,0,0,.08);
-            transition: 0.3s;
-        }
+header{
+    background:#0b1220;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .device-card:hover {
-            transform: translateY(-7px);
-        }
 
-        .device-icon {
-            font-size: 65px;
-            margin-bottom: 20px;
-        }
+.logo{
+    display:flex;
+    align-items:center;
+}
 
-        .device-card h2 {
-            margin-bottom: 12px;
-            font-size: 23px;
-        }
 
-        .device-card p {
-            color: #667085;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+.logo img{
+    width:150px;
+    height:55px;
+    object-fit:contain;
+    display:block;
+}
 
-        footer {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
 
-        @media (max-width: 850px) {
-            .device-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+/* NAVIGATION */
 
-            nav {
-                gap: 10px;
-            }
-        }
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
 
-        @media (max-width: 600px) {
 
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
 
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
-            .device-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+nav a:hover,
+nav a.active{
+    color:#19a7ce;
+}
+
+
+/* PAGE HEADER */
+
+.page-header{
+    background:#0b1220;
+    color:white;
+    text-align:center;
+    padding:80px 6%;
+}
+
+
+.page-header small{
+    color:#19a7ce;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+
+.page-header h1{
+    font-size:46px;
+    margin:12px 0;
+}
+
+
+.page-header p{
+    color:#c7d0dc;
+    max-width:650px;
+    margin:auto;
+    font-size:17px;
+}
+
+
+/* DEVICES SECTION */
+
+.devices{
+    padding:80px 6%;
+}
+
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+
+.section-title small{
+    color:#19a7ce;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+
+.section-title h2{
+    font-size:34px;
+    margin-top:8px;
+}
+
+
+.section-title p{
+    max-width:650px;
+    margin:12px auto;
+    color:#667085;
+}
+
+
+/* DEVICE GRID */
+
+.device-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+}
+
+
+/* DEVICE CARD */
+
+.device-card{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:45px 28px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#17202a;
+
+    border:1px solid #e7ebef;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+.device-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+}
+
+
+/* DEVICE ICON */
+
+.device-icon{
+
+    width:100px;
+
+    height:100px;
+
+    margin:0 auto 22px;
+
+    background:#e6f7fb;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:50px;
+
+}
+
+
+/* DEVICE TEXT */
+
+.device-card h2{
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+
+.device-card p{
+
+    color:#667085;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+
+.view-link{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#19a7ce;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+
+/* INFO SECTION */
+
+.info{
+
+    max-width:900px;
+
+    margin:60px auto 0;
+
+    background:#0b1220;
+
+    color:#c7d0dc;
+
+    padding:35px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+}
+
+
+.info h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:26px;
+
+}
+
+
+.info p{
+
+    margin-bottom:20px;
+
+}
+
+
+.info-btn{
+
+    display:inline-block;
+
+    background:#19a7ce;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+/* CTA */
+
+.cta{
+
+    background:#19a7ce;
+
+    color:white;
+
+    text-align:center;
+
+    padding:65px 6%;
+
+}
+
+
+.cta h2{
+
+    font-size:35px;
+
+    margin-bottom:12px;
+
+}
+
+
+.cta p{
+
+    margin-bottom:24px;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:13px 25px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    background:white;
+
+    color:#0b1220;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background:#070d18;
+
+    color:#aeb8c5;
+
+    padding:35px 6%;
+
+    text-align:center;
+
+}
+
+
+footer strong{
+
+    color:white;
+
+}
+
+
+.footer-links{
+
+    margin-top:15px;
+
+}
+
+
+.footer-links a{
+
+    color:#aeb8c5;
+
+    text-decoration:none;
+
+    margin:0 8px;
+
+    font-size:14px;
+
+}
+
+
+.footer-links a:hover{
+
+    color:#19a7ce;
+
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+
+    nav{
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+
+    .device-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .page-header h1{
+
+        font-size:40px;
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .device-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .devices{
+
+        padding:65px 6%;
+
+    }
+
+
+    .page-header{
+
+        padding:65px 6%;
+
+    }
+
+
+    .page-header h1{
+
+        font-size:34px;
+
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<header>
-    <div class="logo">
-        <img src="Logo.png" alt="Street Gadgets Care Logo">
-    </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html" class="active">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<img src="Logo.png" alt="Street Gadgets Care Logo">
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="repairs.html">Repairs</a>
+
+<a href="products.html" class="active">Products</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
 </header>
 
+
+<!-- PAGE HEADER -->
+
 <section class="page-header">
-    <h1>Phones, Laptops & Smart Devices</h1>
-    <p>Explore our range of laptops, smartphones and smart devices.</p>
+
+<small>Smart Technology</small>
+
+<h1>Phones, Laptops & Smart Devices</h1>
+
+<p>
+
+Explore laptops, smartphones and smart devices available
+through Street Gadgets Care.
+
+</p>
+
 </section>
+
+
+<!-- DEVICES -->
 
 <section class="devices">
 
-    <div class="device-grid">
 
-        <a href="laptops.html" class="device-card">
-            <div class="device-icon">💻</div>
-            <h2>Laptops</h2>
-            <p>Explore our available laptops and find the right device for your needs.</p>
-        </a>
+<div class="section-title">
 
-        <a href="phones.html" class="device-card">
-            <div class="device-icon">📱</div>
-            <h2>Phones</h2>
-            <p>Explore smartphones and other mobile devices available from Street Gadgets Care.</p>
-        </a>
+<small>Browse Devices</small>
 
-        <a href="smart-watches.html" class="device-card">
-            <div class="device-icon">⌚</div>
-            <h2>Smart Watches</h2>
-            <p>Explore smart watches and wearable devices for everyday use.</p>
-        </a>
+<h2>Find The Right Device</h2>
 
-    </div>
+<p>
+
+Explore our available technology categories and find
+a device that suits your everyday needs.
+
+</p>
+
+</div>
+
+
+<div class="device-grid">
+
+
+<!-- LAPTOPS -->
+
+<a href="laptops.html" class="device-card">
+
+<div class="device-icon">
+
+💻
+
+</div>
+
+
+<h2>Laptops</h2>
+
+
+<p>
+
+Explore available laptops for work, school,
+business and everyday use.
+
+</p>
+
+
+<span class="view-link">
+
+View Laptops →
+
+</span>
+
+
+</a>
+
+
+
+<!-- PHONES -->
+
+<a href="phones.html" class="device-card">
+
+<div class="device-icon">
+
+📱
+
+</div>
+
+
+<h2>Phones</h2>
+
+
+<p>
+
+Explore smartphones and other mobile devices
+available from Street Gadgets Care.
+
+</p>
+
+
+<span class="view-link">
+
+View Phones →
+
+</span>
+
+
+</a>
+
+
+
+<!-- SMART WATCHES -->
+
+<a href="smart-watches.html" class="device-card">
+
+<div class="device-icon">
+
+⌚
+
+</div>
+
+
+<h2>Smart Watches</h2>
+
+
+<p>
+
+Explore smart watches and wearable technology
+for everyday use.
+
+</p>
+
+
+<span class="view-link">
+
+View Smart Watches →
+
+</span>
+
+
+</a>
+
+
+</div>
+
+
+<!-- INFO -->
+
+<div class="info">
+
+<h2>Looking for a Specific Device?</h2>
+
+<p>
+
+Contact Street Gadgets Care and ask about
+available models, specifications and prices.
+
+</p>
+
+<a href="contact.html" class="info-btn">
+
+Ask About Availability
+
+</a>
+
+</div>
+
 
 </section>
 
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Need Help Choosing a Device?</h2>
+
+<p>
+
+Contact us and we will help you find the right
+device for your needs.
+
+</p>
+
+<a href="contact.html" class="btn">
+
+Contact Us
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
+
+<p>
+
+© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
+
+</p>
+
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="repairs.html">Repairs</a>
+
+<a href="products.html">Products</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+
 </footer>
 
+
 </body>
+
 </html>
+```
