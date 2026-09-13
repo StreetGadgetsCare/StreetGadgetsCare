@@ -75,67 +75,28 @@
             padding: 60px 6%;
         }
 
-        .laptop-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
+      .laptop-info {
+    padding: 18px;
+}
 
-        .laptop-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
-            transition: 0.3s;
-        }
+.laptop-info h3 {
+    padding: 0;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 12px;
+}
 
-        .laptop-card:hover {
-            transform: translateY(-5px);
-        }
+.laptop-info p {
+    margin: 7px 0;
+    font-size: 14px;
+    color: #555;
+}
 
-        .laptop-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .laptop-card h3 {
-            padding: 15px;
-            font-size: 16px;
-            text-align: center;
-        }
-
-        footer {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 900px) {
-            .laptop-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .laptop-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+.laptop-info h2 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #0b1220;
+}
     </style>
 </head>
 
@@ -188,53 +149,25 @@
                 <h2>KSh 15,000</h2>
             </div>
         </div>
-<div class="product-card">
-    <div class="product-image">
-        <img src="images/dell.jpg" alt="Dell Laptop">
-    </div>
+        <div class="laptop-card">
+            <img src="images/dell.jpg" alt="Dell Latitude Laptop">
 
-    <div class="product-content">
-        <h3>Dell Latitude Laptop</h3>
+            <div class="laptop-info">
+                <h3>Dell Latitude Laptop</h3>
 
-        <p>
-            Reliable Dell laptop suitable for school, business,
-            office work and everyday use.
-        </p>
+                <p><strong>Processor:</strong> Intel Core i5</p>
+                <p><strong>RAM:</strong> 8GB</p>
+                <p><strong>Storage:</strong> 256GB SSD</p>
+                <p><strong>Display:</strong> 14-inch</p>
+                <p><strong>Features:</strong> Wi-Fi, Bluetooth, Webcam</p>
 
-        <p><strong>Processor:</strong> Intel Core i5</p>
-        <p><strong>RAM:</strong> 8GB</p>
-        <p><strong>Storage:</strong> 256GB SSD</p>
-        <p><strong>Display:</strong> 14-inch</p>
-        <p><strong>Features:</strong> Wi-Fi, Bluetooth, Webcam</p>
+                <h2>KSh 25,000</h2>
+            </div>
+               </div>
 
-        <h2>KSh 25,000</h2>
-    </div>
-</div>
     </div>
 
 </section>
-.laptop-info {
-    padding: 18px;
-}
-
-.laptop-info h3 {
-    padding: 0;
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 12px;
-}
-
-.laptop-info p {
-    margin: 7px 0;
-    font-size: 14px;
-    color: #555;
-}
-
-.laptop-info h2 {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #0b1220;
-}    
 
 <footer>
     <p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
