@@ -520,10 +520,13 @@ footer strong{
 
     <h2>Send an Enquiry</h2>
 
-    <form action="mailto:streetgadgetscare@gmail.com"
-          method="post"
-          enctype="text/plain">
+    <form action="https://formsubmit.co/streetgadgetscare@gmail.com"
+      method="POST">
+        <input type="hidden" name="_subject" value="New Enquiry - Street Gadgets Care">
 
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_next" value="https://streetgadgetscare.github.io/StreetGadgetsCare/contact.html">
         <div class="form-group">
 
             <label for="name">Your Name</label>
@@ -589,7 +592,9 @@ footer strong{
             ></textarea>
 
         </div>
-
+<button type="submit" class="submit-btn">
+    Send Enquiry
+</button>
 
         <button type="submit">
             Send Enquiry
