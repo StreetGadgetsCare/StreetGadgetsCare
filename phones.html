@@ -1,1 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Phones | Street Gadgets Care</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #0b1220;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 55px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #25D366;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            font-size: 34px;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+        }
+
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .phone-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .phone-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .phone-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .phone-card h2 {
+            margin: 15px 0 8px;
+            font-size: 21px;
+        }
+
+        .phone-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .price {
+            color: #111;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            margin-top: 18px;
+            padding: 12px 15px;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .phone-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .phone-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-card img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="Logo.png" alt="Street Gadgets Care Logo" class="logo">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Button Phones</h1>
+    <p>Affordable and reliable button phones available at Street Gadgets Care.</p>
+</section>
+
+<section class="products">
+
+    <div class="phone-grid">
+
+        <!-- Q-Seven Q2163 -->
+        <div class="phone-card">
+            <img src="Q-Seven%20Q2163.jpeg" alt="Q-Seven Q2163 Button Phone">
+
+            <h2>Q-Seven Q2163</h2>
+
+            <p>Reliable button phone</p>
+            <p>Wireless FM</p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Q-Seven%20Q2163."
+               target="_blank">
+                💬 Inquire on WhatsApp
+            </a>
+        </div>
+
+
+        <!-- itel it2166 -->
+        <div class="phone-card">
+            <img src="itel%20it2166.jpeg" alt="itel it2166 Button Phone">
+
+            <h2>itel it2166</h2>
+
+            <p>Reliable everyday button phone</p>
+            <p>2.0" Big Screen</p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20itel%20it2166."
+               target="_blank">
+                💬 Inquire on WhatsApp
+            </a>
+        </div>
+
+
+        <!-- itel it8010 -->
+        <div class="phone-card">
+            <img src="itel%20it8010.jpeg" alt="itel it8010 Button Phone">
+
+            <h2>itel it8010</h2>
+
+            <p>Feature-packed button phone</p>
+            <p>4G Support</p>
+            <p>2.0" Big Screen</p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20itel%20it8010."
+               target="_blank">
+                💬 Inquire on WhatsApp
+            </a>
+        </div>
+
+
+        <!-- Raeno R1280 -->
+        <div class="phone-card">
+            <img src="Raeno%20R1280.jpeg" alt="Raeno R1280 Button Phone">
+
+            <h2>Raeno R1280</h2>
+
+            <p>Strong signal</p>
+            <p>Bluetooth</p>
+            <p>Wireless FM</p>
+            <p>24 Months Warranty</p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Raeno%20R1280."
+               target="_blank">
+                💬 Inquire on WhatsApp
+            </a>
+        </div>
+
+
+        <!-- Visiontel V2160 -->
+        <div class="phone-card">
+            <img src="Visiontel%20V2160.jpeg" alt="Visiontel V2160 Button Phone">
+
+            <h2>Visiontel V2160</h2>
+
+            <p>Simple and reliable button phone</p>
+            <p>Great for everyday use</p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Visiontel%20V2160."
+               target="_blank">
+                💬 Inquire on WhatsApp
+            </a>
+        </div>
+
+
+        <!-- Momofly M312E -->
+        <div class="phone-card">
+            <img src="Momofly%20M312E.jpeg" alt="Momofly M312E Button Phone">
+
+            <h2>Momofly M312E</h2>
+
+            <p>Triple SIM</p>
+            <p>5C Battery</p>
+            <p>12+1 Months Warranty</p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Momofly%20M312E."
+               target="_blank">
+                💬 Inquire on WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p><strong>Street Gadgets Care</strong></p>
+    <p>Phone & Laptop Repair | Accessories | Graphic Design</p>
+    <p>📞 0114259961 | ✉️ streetgadgetscare@gmail.com</p>
+    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
