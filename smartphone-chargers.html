@@ -1,1 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Smartphone Chargers | Street Gadgets Care</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #0b1220;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            opacity: 0.75;
+        }
+
+        .page-header {
+            background: white;
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            font-size: 36px;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .charger-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .charger-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .charger-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        .charger-image {
+            width: 100%;
+            height: 260px;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .charger-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .charger-content {
+            padding: 20px;
+        }
+
+        .charger-content h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .charger-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 12px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .price-options {
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 12px 0;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            margin-top: 18px;
+            padding: 12px 15px;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        .info-section {
+            max-width: 900px;
+            margin: 55px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 30px 0 50px;
+        }
+
+        .back-link a {
+            color: #0b1220;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .charger-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 15px;
+            }
+
+            nav {
+                gap: 9px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .charger-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .charger-image {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+<section class="page-header">
+    <h1>Smartphone Chargers</h1>
+    <p>Quality chargers for different smartphone brands and charging needs.</p>
+</section>
+
+
+<section class="products">
+
+    <div class="charger-grid">
+
+        <!-- Samsung 25W -->
+        <div class="charger-card">
+
+            <div class="charger-image">
+                <img src="Samsung%2025W.jpeg" alt="Samsung 25W Fast Charger">
+            </div>
+
+            <div class="charger-content">
+                <h3>Samsung 25W Fast Charger</h3>
+
+                <p>
+                    Fast charging adapter suitable for compatible Samsung
+                    smartphones.
+                </p>
+
+                <div class="price">
+                    KSh 950
+                </div>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%2025W%20Fast%20Charger%20at%20KSh%20950."
+                    class="whatsapp-btn"
+                >
+                    Order on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Samsung 45W -->
+        <div class="charger-card">
+
+            <div class="charger-image">
+                <img src="Samsung%2045W.jpeg" alt="Samsung 45W Fast Charger">
+            </div>
+
+            <div class="charger-content">
+                <h3>Samsung 45W Fast Charger</h3>
+
+                <p>
+                    High-power charging adapter for compatible Samsung
+                    smartphones and devices.
+                </p>
+
+                <div class="price">
+                    KSh 1,500
+                </div>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%2045W%20Fast%20Charger%20at%20KSh%201500."
+                    class="whatsapp-btn"
+                >
+                    Order on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- iPhone -->
+        <div class="charger-card">
+
+            <div class="charger-image">
+                <img src="iPhone%20Chargers.jpeg" alt="iPhone USB-C Power Adapter">
+            </div>
+
+            <div class="charger-content">
+                <h3>iPhone USB-C Power Adapter</h3>
+
+                <p>
+                    USB-C power adapters available in two power options.
+                </p>
+
+                <div class="price-options">
+                    <strong>25W — KSh 1,500</strong><br>
+                    <strong>55W — KSh 2,500</strong>
+                </div>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20iPhone%20USB-C%20Power%20Adapter.%20Please%20confirm%20availability%20of%20the%2025W%20or%2055W%20option."
+                    class="whatsapp-btn"
+                >
+                    Order on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Tecno -->
+        <div class="charger-card">
+
+            <div class="charger-image">
+                <img src="Tecno%20Charger.jpeg" alt="Tecno Fast Charger">
+            </div>
+
+            <div class="charger-content">
+                <h3>Tecno Fast Charger</h3>
+
+                <p>
+                    Reliable fast charger for compatible Tecno smartphones.
+                </p>
+
+                <div class="price">
+                    KSh 950
+                </div>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Tecno%20Fast%20Charger%20at%20KSh%20950."
+                    class="whatsapp-btn"
+                >
+                    Order on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Infinix -->
+        <div class="charger-card">
+
+            <div class="charger-image">
+                <img src="Infinix%2033W.jpeg" alt="Infinix 33W Fast Charger">
+            </div>
+
+            <div class="charger-content">
+                <h3>Infinix 33W Fast Charger</h3>
+
+                <p>
+                    Fast charging adapter for compatible Infinix smartphones.
+                </p>
+
+                <div class="price">
+                    KSh 1,500
+                </div>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Infinix%2033W%20Fast%20Charger%20at%20KSh%201500."
+                    class="whatsapp-btn"
+                >
+                    Order on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Oraimo -->
+        <div class="charger-card">
+
+            <div class="charger-image">
+                <img src="Oraimo%2010W.jpeg" alt="Oraimo 10W PowerMate 101">
+            </div>
+
+            <div class="charger-content">
+                <h3>Oraimo 10W PowerMate 101</h3>
+
+                <p>
+                    Compact Oraimo charger with Micro-USB cable for
+                    compatible devices.
+                </p>
+
+                <div class="price">
+                    KSh 1,250
+                </div>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%2010W%20PowerMate%20101%20at%20KSh%201250."
+                    class="whatsapp-btn"
+                >
+                    Order on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="info-section">
+    <h2>Need Help Choosing a Charger?</h2>
+
+    <p>
+        Not sure which charger is suitable for your phone?
+        Contact Street Gadgets Care and we can help you choose the
+        right charger for your device.
+    </p>
+</section>
+
+
+<div class="back-link">
+    <a href="chargers.html">← Back to Chargers</a>
+</div>
+
+
+<footer>
+    <p><strong>Street Gadgets Care</strong></p>
+    <p>Phone & Laptop Repair • Accessories • Graphic Design</p>
+    <p>📞 0114259961 | ✉ streetgadgetscare@gmail.com</p>
+    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
