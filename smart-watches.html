@@ -13,16 +13,11 @@
 
 <style>
 
-/* RESET */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
-
-/* BODY */
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -30,9 +25,6 @@ body{
     color:#17202a;
     line-height:1.6;
 }
-
-
-/* HEADER */
 
 header{
     background:#0b1220;
@@ -46,12 +38,10 @@ header{
     z-index:1000;
 }
 
-
 .logo{
     display:flex;
     align-items:center;
 }
-
 
 .logo img{
     width:150px;
@@ -60,16 +50,12 @@ header{
     display:block;
 }
 
-
-/* NAVIGATION */
-
 nav{
     display:flex;
     align-items:center;
     gap:22px;
     flex-wrap:wrap;
 }
-
 
 nav a{
     color:white;
@@ -79,14 +65,10 @@ nav a{
     transition:.3s;
 }
 
-
 nav a:hover,
 nav a.active{
     color:#19a7ce;
 }
-
-
-/* PAGE HEADER */
 
 .page-header{
     background:#0b1220;
@@ -95,7 +77,6 @@ nav a.active{
     padding:80px 6%;
 }
 
-
 .page-header small{
     color:#19a7ce;
     font-weight:bold;
@@ -103,12 +84,10 @@ nav a.active{
     letter-spacing:2px;
 }
 
-
 .page-header h1{
     font-size:46px;
     margin:12px 0;
 }
-
 
 .page-header p{
     color:#c7d0dc;
@@ -117,19 +96,14 @@ nav a.active{
     font-size:17px;
 }
 
-
-/* WATCHES SECTION */
-
 .watches{
     padding:80px 6%;
 }
-
 
 .section-title{
     text-align:center;
     margin-bottom:50px;
 }
-
 
 .section-title small{
     color:#19a7ce;
@@ -138,21 +112,16 @@ nav a.active{
     letter-spacing:1.5px;
 }
 
-
 .section-title h2{
     font-size:34px;
     margin-top:8px;
 }
-
 
 .section-title p{
     max-width:650px;
     margin:12px auto;
     color:#667085;
 }
-
-
-/* WATCH GRID */
 
 .watch-grid{
     max-width:1200px;
@@ -161,9 +130,6 @@ nav a.active{
     grid-template-columns:repeat(3,1fr);
     gap:28px;
 }
-
-
-/* WATCH CARD */
 
 .watch-card{
     background:white;
@@ -174,14 +140,10 @@ nav a.active{
     transition:.3s;
 }
 
-
 .watch-card:hover{
     transform:translateY(-7px);
     box-shadow:0 15px 35px rgba(0,0,0,.10);
 }
-
-
-/* WATCH IMAGE */
 
 .watch-image{
     width:100%;
@@ -193,7 +155,6 @@ nav a.active{
     padding:20px;
 }
 
-
 .watch-image img{
     width:100%;
     height:100%;
@@ -201,13 +162,9 @@ nav a.active{
     display:block;
 }
 
-
-/* WATCH CONTENT */
-
 .watch-content{
     padding:24px;
 }
-
 
 .watch-content h2{
     font-size:22px;
@@ -215,13 +172,11 @@ nav a.active{
     color:#17202a;
 }
 
-
 .watch-content p{
     color:#667085;
     font-size:14px;
     margin-bottom:15px;
 }
-
 
 .price{
     font-size:23px;
@@ -229,9 +184,6 @@ nav a.active{
     color:#19a7ce;
     margin-bottom:18px;
 }
-
-
-/* WHATSAPP BUTTON */
 
 .whatsapp-btn{
     display:block;
@@ -247,14 +199,10 @@ nav a.active{
     transition:.3s;
 }
 
-
 .whatsapp-btn:hover{
     background:#1ebe5d;
     transform:translateY(-2px);
 }
-
-
-/* INFO */
 
 .info{
     max-width:900px;
@@ -266,18 +214,15 @@ nav a.active{
     text-align:center;
 }
 
-
 .info h2{
     color:white;
     margin-bottom:10px;
     font-size:26px;
 }
 
-
 .info p{
     margin-bottom:20px;
 }
-
 
 .info-btn{
     display:inline-block;
@@ -289,9 +234,6 @@ nav a.active{
     font-weight:bold;
 }
 
-
-/* CTA */
-
 .cta{
     background:#19a7ce;
     color:white;
@@ -299,17 +241,14 @@ nav a.active{
     padding:65px 6%;
 }
 
-
 .cta h2{
     font-size:35px;
     margin-bottom:12px;
 }
 
-
 .cta p{
     margin-bottom:24px;
 }
-
 
 .btn{
     display:inline-block;
@@ -321,9 +260,6 @@ nav a.active{
     color:#0b1220;
 }
 
-
-/* FOOTER */
-
 footer{
     background:#070d18;
     color:#aeb8c5;
@@ -331,16 +267,13 @@ footer{
     text-align:center;
 }
 
-
 footer strong{
     color:white;
 }
 
-
 .footer-links{
     margin-top:15px;
 }
-
 
 .footer-links a{
     color:#aeb8c5;
@@ -349,13 +282,9 @@ footer strong{
     font-size:14px;
 }
 
-
 .footer-links a:hover{
     color:#19a7ce;
 }
-
-
-/* TABLET */
 
 @media(max-width:900px){
 
@@ -364,17 +293,14 @@ footer strong{
         gap:12px;
     }
 
-
     nav{
         justify-content:center;
         gap:15px;
     }
 
-
     .watch-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
 
     .page-header h1{
         font-size:40px;
@@ -382,25 +308,19 @@ footer strong{
 
 }
 
-
-/* MOBILE */
-
 @media(max-width:600px){
 
     .watch-grid{
         grid-template-columns:1fr;
     }
 
-
     .watches{
         padding:65px 6%;
     }
 
-
     .page-header{
         padding:65px 6%;
     }
-
 
     .page-header h1{
         font-size:34px;
@@ -412,20 +332,15 @@ footer strong{
 
 </head>
 
-
 <body>
-
-
-<!-- HEADER -->
 
 <header>
 
 <div class="logo">
 
-<img src="./Logo.png" alt="Street Gadgets Care Logo">
+<img src="Logo.png" alt="Street Gadgets Care Logo">
 
 </div>
-
 
 <nav>
 
@@ -446,8 +361,6 @@ footer strong{
 </header>
 
 
-<!-- PAGE HEADER -->
-
 <section class="page-header">
 
 <small>Smart Technology</small>
@@ -455,19 +368,14 @@ footer strong{
 <h1>Smart Watches</h1>
 
 <p>
-
 Explore our available smart watches at affordable prices,
 suitable for everyday use and modern lifestyles.
-
 </p>
 
 </section>
 
 
-<!-- WATCHES -->
-
 <section class="watches">
-
 
 <div class="section-title">
 
@@ -476,10 +384,8 @@ suitable for everyday use and modern lifestyles.
 <h2>Choose Your Smart Watch</h2>
 
 <p>
-
 Browse our available smart watches and contact us
 for availability and more information.
-
 </p>
 
 </div>
@@ -494,10 +400,9 @@ for availability and more information.
 
 <div class="watch-image">
 
-<img src="./Oraimo%206%20Lite.jpeg" alt="Oraimo 6 Lite Smart Watch">
+<img src="Oraimo 6 Lite.jpeg" alt="Oraimo 6 Lite Smart Watch">
 
 </div>
-
 
 <div class="watch-content">
 
@@ -513,9 +418,7 @@ KSh 3,500
 
 <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%206%20Lite%20smart%20watch."
 class="whatsapp-btn">
-
 Inquire on WhatsApp
-
 </a>
 
 </div>
@@ -529,10 +432,9 @@ Inquire on WhatsApp
 
 <div class="watch-image">
 
-<img src="./Oraimo%205%20Lite.jpeg" alt="Oraimo 5 Lite Smart Watch">
+<img src="Oraimo 5 Lite.jpeg" alt="Oraimo 5 Lite Smart Watch">
 
 </div>
-
 
 <div class="watch-content">
 
@@ -548,9 +450,7 @@ KSh 3,500
 
 <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%205%20Lite%20smart%20watch."
 class="whatsapp-btn">
-
 Inquire on WhatsApp
-
 </a>
 
 </div>
@@ -564,10 +464,9 @@ Inquire on WhatsApp
 
 <div class="watch-image">
 
-<img src="./Oraimo%20Muse%202%20Lite.jpeg" alt="Oraimo Muse 2 Lite Smart Watch">
+<img src="Oraimo Muse 2 Lite.jpeg" alt="Oraimo Muse 2 Lite Smart Watch">
 
 </div>
-
 
 <div class="watch-content">
 
@@ -583,9 +482,7 @@ KSh 3,500
 
 <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Muse%202%20Lite%20smart%20watch."
 class="whatsapp-btn">
-
 Inquire on WhatsApp
-
 </a>
 
 </div>
@@ -599,10 +496,9 @@ Inquire on WhatsApp
 
 <div class="watch-image">
 
-<img src="./Amaya%20Premium.jpeg" alt="Amaya Premium Smart Watch">
+<img src="Amaya Premium.jpeg" alt="Amaya Premium Smart Watch">
 
 </div>
-
 
 <div class="watch-content">
 
@@ -618,9 +514,7 @@ KSh 3,000
 
 <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20Premium%20smart%20watch."
 class="whatsapp-btn">
-
 Inquire on WhatsApp
-
 </a>
 
 </div>
@@ -634,10 +528,9 @@ Inquire on WhatsApp
 
 <div class="watch-image">
 
-<img src="./W008.jpeg" alt="W008 Smart Watch">
+<img src="W008.jpeg" alt="W008 Smart Watch">
 
 </div>
-
 
 <div class="watch-content">
 
@@ -653,9 +546,7 @@ KSh 2,500
 
 <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20W008%20smart%20watch."
 class="whatsapp-btn">
-
 Inquire on WhatsApp
-
 </a>
 
 </div>
@@ -669,10 +560,9 @@ Inquire on WhatsApp
 
 <div class="watch-image">
 
-<img src="./i90.jpeg" alt="i90 Smart Watch">
+<img src="i90.jpeg" alt="i90 Smart Watch">
 
 </div>
-
 
 <div class="watch-content">
 
@@ -688,9 +578,7 @@ KSh 2,100
 
 <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20i90%20smart%20watch."
 class="whatsapp-btn">
-
 Inquire on WhatsApp
-
 </a>
 
 </div>
@@ -700,64 +588,46 @@ Inquire on WhatsApp
 
 </div>
 
-
-<!-- INFO -->
 
 <div class="info">
 
 <h2>Looking for a Specific Smart Watch?</h2>
 
 <p>
-
 Contact Street Gadgets Care to confirm availability,
 ask about features or get help choosing the right watch.
-
 </p>
 
 <a href="contact.html" class="info-btn">
-
 Ask About Availability
-
 </a>
 
 </div>
 
-
 </section>
 
-
-<!-- CTA -->
 
 <section class="cta">
 
 <h2>Need Help Choosing a Smart Watch?</h2>
 
 <p>
-
 Contact Street Gadgets Care and we'll help you find
 a smart watch that suits your needs and budget.
-
 </p>
 
 <a href="contact.html" class="btn">
-
 Contact Us
-
 </a>
 
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
 <p>
-
 © 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
-
 </p>
-
 
 <div class="footer-links">
 
@@ -775,9 +645,7 @@ Contact Us
 
 </div>
 
-
 </footer>
-
 
 </body>
 
