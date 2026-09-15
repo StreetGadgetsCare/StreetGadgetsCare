@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Watches | Street Gadgets Care</title>
+
+<meta name="description" content="Shop smart watches available from Street Gadgets Care.">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* BODY */
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#17202a;
+    line-height:1.6;
+}
+
+
+/* HEADER */
+
+header{
+    background:#0b1220;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+
+.logo img{
+    width:150px;
+    height:55px;
+    object-fit:contain;
+    display:block;
+}
+
+
+/* NAVIGATION */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+
+nav a:hover,
+nav a.active{
+    color:#19a7ce;
+}
+
+
+/* PAGE HEADER */
+
+.page-header{
+    background:#0b1220;
+    color:white;
+    text-align:center;
+    padding:80px 6%;
+}
+
+
+.page-header small{
+    color:#19a7ce;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+
+.page-header h1{
+    font-size:46px;
+    margin:12px 0;
+}
+
+
+.page-header p{
+    color:#c7d0dc;
+    max-width:650px;
+    margin:auto;
+    font-size:17px;
+}
+
+
+/* WATCHES SECTION */
+
+.watches{
+    padding:80px 6%;
+}
+
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+
+.section-title small{
+    color:#19a7ce;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+
+.section-title h2{
+    font-size:34px;
+    margin-top:8px;
+}
+
+
+.section-title p{
+    max-width:650px;
+    margin:12px auto;
+    color:#667085;
+}
+
+
+/* WATCH GRID */
+
+.watch-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+}
+
+
+/* WATCH CARD */
+
+.watch-card{
+
+    background:white;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    border:1px solid #e7ebef;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+.watch-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+}
+
+
+/* WATCH IMAGE */
+
+.watch-image{
+
+    width:100%;
+
+    height:280px;
+
+    background:#f1f4f7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+}
+
+
+.watch-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+/* WATCH CONTENT */
+
+.watch-content{
+
+    padding:24px;
+
+}
+
+
+.watch-content h2{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+    color:#17202a;
+
+}
+
+
+.watch-content p{
+
+    color:#667085;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+.price{
+
+    font-size:23px;
+
+    font-weight:bold;
+
+    color:#19a7ce;
+
+    margin-bottom:18px;
+
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+
+    display:block;
+
+    width:100%;
+
+    background:#25D366;
+
+    color:white;
+
+    text-align:center;
+
+    padding:12px 15px;
+
+    border-radius:7px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.whatsapp-btn:hover{
+
+    background:#1ebe5d;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* INFO */
+
+.info{
+
+    max-width:900px;
+
+    margin:60px auto 0;
+
+    background:#0b1220;
+
+    color:#c7d0dc;
+
+    padding:35px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+}
+
+
+.info h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:26px;
+
+}
+
+
+.info p{
+
+    margin-bottom:20px;
+
+}
+
+
+.info-btn{
+
+    display:inline-block;
+
+    background:#19a7ce;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+/* CTA */
+
+.cta{
+
+    background:#19a7ce;
+
+    color:white;
+
+    text-align:center;
+
+    padding:65px 6%;
+
+}
+
+
+.cta h2{
+
+    font-size:35px;
+
+    margin-bottom:12px;
+
+}
+
+
+.cta p{
+
+    margin-bottom:24px;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:13px 25px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    background:white;
+
+    color:#0b1220;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background:#070d18;
+
+    color:#aeb8c5;
+
+    padding:35px 6%;
+
+    text-align:center;
+
+}
+
+
+footer strong{
+
+    color:white;
+
+}
+
+
+.footer-links{
+
+    margin-top:15px;
+
+}
+
+
+.footer-links a{
+
+    color:#aeb8c5;
+
+    text-decoration:none;
+
+    margin:0 8px;
+
+    font-size:14px;
+
+}
+
+
+.footer-links a:hover{
+
+    color:#19a7ce;
+
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+
+    nav{
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+
+    .watch-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .page-header h1{
+
+        font-size:40px;
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .watch-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .watches{
+
+        padding:65px 6%;
+
+    }
+
+
+    .page-header{
+
+        padding:65px 6%;
+
+    }
+
+
+    .page-header h1{
+
+        font-size:34px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<img src="Logo.png" alt="Street Gadgets Care Logo">
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="repairs.html">Repairs</a>
+
+<a href="products.html" class="active">Products</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- PAGE HEADER -->
+
+<section class="page-header">
+
+<small>Smart Technology</small>
+
+<h1>Smart Watches</h1>
+
+<p>
+
+Explore our available smart watches at affordable prices,
+suitable for everyday use and modern lifestyles.
+
+</p>
+
+</section>
+
+
+<!-- WATCHES -->
+
+<section class="watches">
+
+
+<div class="section-title">
+
+<small>Available Watches</small>
+
+<h2>Choose Your Smart Watch</h2>
+
+<p>
+
+Browse our available smart watches and contact us
+for availability and more information.
+
+</p>
+
+</div>
+
+
+<div class="watch-grid">
+
+
+<!-- ORAIMO 6 LITE -->
+
+<div class="watch-card">
+
+<div class="watch-image">
+
+<img src="Oraimo%206%20Lite.jpeg" alt="Oraimo 6 Lite Smart Watch">
+
+</div>
+
+
+<div class="watch-content">
+
+<h2>Oraimo 6 Lite</h2>
+
+<p>
+
+Stylish and practical smart watch for everyday use.
+
+</p>
+
+<div class="price">
+
+KSh 3,500
+
+</div>
+
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%206%20Lite%20smart%20watch."
+
+class="whatsapp-btn">
+
+Inquire on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ORAIMO 5 LITE -->
+
+<div class="watch-card">
+
+<div class="watch-image">
+
+<img src="Oraimo%205%20Lite.jpeg" alt="Oraimo 5 Lite Smart Watch">
+
+</div>
+
+
+<div class="watch-content">
+
+<h2>Oraimo 5 Lite</h2>
+
+<p>
+
+Stylish and practical smart watch for everyday use.
+
+</p>
+
+<div class="price">
+
+KSh 3,500
+
+</div>
+
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%205%20Lite%20smart%20watch."
+
+class="whatsapp-btn">
+
+Inquire on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ORAIMO MUSE 2 LITE -->
+
+<div class="watch-card">
+
+<div class="watch-image">
+
+<img src="Oraimo%20Muse%202%20Lite.jpeg" alt="Oraimo Muse 2 Lite Smart Watch">
+
+</div>
+
+
+<div class="watch-content">
+
+<h2>Oraimo Muse 2 Lite</h2>
+
+<p>
+
+Modern smart watch designed for everyday use and convenience.
+
+</p>
+
+<div class="price">
+
+KSh 3,500
+
+</div>
+
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Muse%202%20Lite%20smart%20watch."
+
+class="whatsapp-btn">
+
+Inquire on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- AMAYA PREMIUM -->
+
+<div class="watch-card">
+
+<div class="watch-image">
+
+<img src="Amaya%20Premium.jpeg" alt="Amaya Premium Smart Watch">
+
+</div>
+
+
+<div class="watch-content">
+
+<h2>Amaya Premium</h2>
+
+<p>
+
+Premium-looking smart watch suitable for everyday use.
+
+</p>
+
+<div class="price">
+
+KSh 3,000
+
+</div>
+
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20Premium%20smart%20watch."
+
+class="whatsapp-btn">
+
+Inquire on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- W008 -->
+
+<div class="watch-card">
+
+<div class="watch-image">
+
+<img src="W008.jpeg" alt="W008 Smart Watch">
+
+</div>
+
+
+<div class="watch-content">
+
+<h2>W008</h2>
+
+<p>
+
+Affordable smart watch option for everyday use.
+
+</p>
+
+<div class="price">
+
+KSh 2,500
+
+</div>
+
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20W008%20smart%20watch."
+
+class="whatsapp-btn">
+
+Inquire on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- i90 -->
+
+<div class="watch-card">
+
+<div class="watch-image">
+
+<img src="i90.jpeg" alt="i90 Smart Watch">
+
+</div>
+
+
+<div class="watch-content">
+
+<h2>i90</h2>
+
+<p>
+
+Affordable and stylish smart watch for everyday use.
+
+</p>
+
+<div class="price">
+
+KSh 2,100
+
+</div>
+
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20i90%20smart%20watch."
+
+class="whatsapp-btn">
+
+Inquire on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- INFO -->
+
+<div class="info">
+
+<h2>Looking for a Specific Smart Watch?</h2>
+
+<p>
+
+Contact Street Gadgets Care to confirm availability,
+ask about features or get help choosing the right watch.
+
+</p>
+
+<a href="contact.html" class="info-btn">
+
+Ask About Availability
+
+</a>
+
+</div>
+
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Need Help Choosing a Smart Watch?</h2>
+
+<p>
+
+Contact Street Gadgets Care and we'll help you find
+a smart watch that suits your needs and budget.
+
+</p>
+
+<a href="contact.html" class="btn">
+
+Contact Us
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+
+© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
+
+</p>
+
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="repairs.html">Repairs</a>
+
+<a href="products.html">Products</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+</footer>
+
+
+</body>
+
+</html>
