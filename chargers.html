@@ -13,11 +13,12 @@
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
             color: #222;
         }
 
+        /* HEADER */
         header {
             background: #0b1220;
             padding: 15px 30px;
@@ -29,15 +30,9 @@
             z-index: 1000;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 55px;
+        header img {
             height: 55px;
-            object-fit: contain;
+            width: auto;
         }
 
         nav {
@@ -54,29 +49,32 @@
         }
 
         nav a:hover {
-            opacity: 0.75;
+            color: #25D366;
         }
 
+        /* PAGE HEADER */
         .page-header {
-            background: white;
+            background: linear-gradient(135deg, #0b1220, #1d2939);
+            color: white;
             text-align: center;
-            padding: 55px 20px 35px;
+            padding: 55px 20px;
         }
 
         .page-header h1 {
             margin: 0 0 10px;
-            font-size: 36px;
+            font-size: 38px;
         }
 
         .page-header p {
             margin: 0;
-            color: #666;
             font-size: 16px;
+            opacity: 0.9;
         }
 
+        /* CATEGORY SECTION */
         .categories {
-            max-width: 1000px;
-            margin: 45px auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
@@ -89,15 +87,15 @@
         .category-card {
             background: white;
             border-radius: 12px;
-            padding: 35px 25px;
+            padding: 35px 30px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
             transition: 0.3s ease;
         }
 
         .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .category-icon {
@@ -107,66 +105,75 @@
 
         .category-card h2 {
             margin: 0 0 12px;
-            font-size: 24px;
+            color: #111827;
+            font-size: 25px;
         }
 
         .category-card p {
-            color: #666;
-            line-height: 1.6;
+            color: #555;
+            line-height: 1.7;
             font-size: 15px;
             margin-bottom: 25px;
         }
 
-        .category-button {
+        .category-btn {
             display: inline-block;
+            padding: 12px 22px;
             background: #0b1220;
             color: white;
             text-decoration: none;
-            padding: 13px 22px;
             border-radius: 7px;
-            font-size: 14px;
             font-weight: bold;
+            font-size: 14px;
             transition: 0.3s ease;
         }
 
-        .category-button:hover {
+        .category-btn:hover {
+            background: #25D366;
             transform: translateY(-2px);
-            opacity: 0.9;
         }
 
+        /* INFO SECTION */
         .info-section {
             max-width: 900px;
-            margin: 55px auto;
+            margin: 20px auto 50px;
             padding: 0 20px;
             text-align: center;
         }
 
         .info-section h2 {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            color: #111827;
         }
 
         .info-section p {
-            color: #666;
             line-height: 1.7;
+            color: #555;
         }
 
+        /* BACK LINK */
         .back-link {
             text-align: center;
-            margin: 30px 0 50px;
+            margin-bottom: 45px;
         }
 
         .back-link a {
-            color: #0b1220;
+            color: #111827;
             text-decoration: none;
             font-weight: bold;
         }
 
+        .back-link a:hover {
+            color: #25D366;
+        }
+
+        /* FOOTER */
         footer {
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 15px;
-            margin-top: 50px;
+            padding: 25px 20px;
+            margin-top: 40px;
         }
 
         footer p {
@@ -174,6 +181,7 @@
             font-size: 14px;
         }
 
+        /* MOBILE */
         @media (max-width: 900px) {
             .category-grid {
                 grid-template-columns: 1fr;
@@ -187,20 +195,26 @@
         @media (max-width: 600px) {
             header {
                 padding: 12px 15px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            header img {
+                height: 48px;
             }
 
             nav {
-                gap: 9px;
                 flex-wrap: wrap;
-                justify-content: flex-end;
+                justify-content: center;
+                gap: 12px;
             }
 
-            nav a {
-                font-size: 12px;
+            .page-header {
+                padding: 45px 15px;
             }
 
             .page-header h1 {
-                font-size: 28px;
+                font-size: 30px;
             }
 
             .category-card {
@@ -212,131 +226,142 @@
 
 <body>
 
-<header>
+    <!-- HEADER -->
+    <header>
 
-    <div class="logo">
-        <img src="Logo.png" alt="Street Gadgets Care Logo">
-    </div>
+        <a href="index.html">
+            <img src="Logo.png" alt="Street Gadgets Care Logo">
+        </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="repairs.html">Repairs</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-</header>
-
-
-<section class="page-header">
-
-    <h1>Chargers</h1>
-
-    <p>
-        Quality charging solutions for smartphones and laptops.
-    </p>
-
-</section>
+    </header>
 
 
-<section class="categories">
+    <!-- PAGE HEADER -->
+    <section class="page-header">
 
-    <div class="category-grid">
+        <h1>Chargers</h1>
 
-        <!-- Smartphone Chargers -->
+        <p>
+            Quality charging solutions for smartphones and laptops
+        </p>
 
-        <div class="category-card">
+    </section>
 
-            <div class="category-icon">📱</div>
 
-            <h2>Smartphone Chargers</h2>
+    <!-- CHARGER CATEGORIES -->
+    <section class="categories">
 
-            <p>
-                Choose from chargers for Samsung, iPhone, Tecno,
-                Infinix, Oraimo and other compatible smartphones.
-            </p>
+        <div class="category-grid">
 
-            <a
-                href="smartphone-chargers.html"
-                class="category-button"
-            >
-                View Smartphone Chargers
-            </a>
+            <!-- SMARTPHONE CHARGERS -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    📱
+                </div>
+
+                <h2>Smartphone Chargers</h2>
+
+                <p>
+                    Fast and reliable chargers for smartphones,
+                    including Samsung, iPhone, Tecno, Infinix,
+                    Oraimo and other compatible devices.
+                </p>
+
+                <a href="smartphone-chargers.html" class="category-btn">
+                    View Smartphone Chargers
+                </a>
+
+            </div>
+
+
+            <!-- LAPTOP CHARGERS -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    💻
+                </div>
+
+                <h2>Laptop Chargers</h2>
+
+                <p>
+                    Reliable laptop charging solutions including
+                    Lenovo, HP, Acer, ASUS, Toshiba and other
+                    compatible laptop chargers.
+                </p>
+
+                <a href="laptop-chargers.html" class="category-btn">
+                    View Laptop Chargers
+                </a>
+
+            </div>
 
         </div>
 
+    </section>
 
-        <!-- Laptop Chargers -->
 
-        <div class="category-card">
+    <!-- INFO -->
+    <section class="info-section">
 
-            <div class="category-icon">💻</div>
+        <h2>Choose Your Charger</h2>
 
-            <h2>Laptop Chargers</h2>
+        <p>
+            Not sure which charger you need? Send us your device
+            model or a photo of your current charger and we'll help
+            you find the right option.
+        </p>
 
-            <p>
-                Laptop chargers and power adapters for different
-                laptop brands and models.
-            </p>
+    </section>
 
-            <a
-                href="#"
-                class="category-button"
-            >
-                View Laptop Chargers
-            </a>
 
-        </div>
+    <!-- BACK LINK -->
+    <div class="back-link">
+
+        <a href="products.html">
+            ← Back to Products & Accessories
+        </a>
 
     </div>
 
-</section>
 
+    <!-- FOOTER -->
+    <footer>
 
-<section class="info-section">
+        <p>
+            <strong>Street Gadgets Care</strong>
+        </p>
 
-    <h2>Choose Your Charger</h2>
+        <p>
+            Laptop & Phone Repair • Accessories • Graphic Design
+        </p>
 
-    <p>
-        Using the right charger helps provide reliable and safe
-        charging for your device. If you are unsure which charger
-        you need, contact Street Gadgets Care and we can help you
-        choose the right option.
-    </p>
+        <p>
+            Nairobi, Kenya
+        </p>
 
-</section>
+        <p>
+            WhatsApp: 0114259961
+        </p>
 
+        <p>
+            Email: streetgadgetscare@gmail.com
+        </p>
 
-<div class="back-link">
+        <p>
+            © 2026 Street Gadgets Care. All Rights Reserved.
+        </p>
 
-    <a href="products.html">
-        ← Back to Products & Accessories
-    </a>
-
-</div>
-
-
-<footer>
-
-    <p>
-        <strong>Street Gadgets Care</strong>
-    </p>
-
-    <p>
-        Phone & Laptop Repair • Accessories • Graphic Design
-    </p>
-
-    <p>
-        📞 0114259961 | ✉ streetgadgetscare@gmail.com
-    </p>
-
-    <p>
-        © 2026 Street Gadgets Care. All Rights Reserved.
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
