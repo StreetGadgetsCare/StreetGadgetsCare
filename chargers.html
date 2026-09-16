@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Chargers | Street Gadgets Care</title>
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f5f7fa;
+            background: #f5f6f8;
             color: #222;
         }
 
         header {
             background: #0b1220;
-            padding: 15px 40px;
+            padding: 15px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -29,43 +29,58 @@
             z-index: 1000;
         }
 
-        header img {
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 55px;
             height: 55px;
-            width: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            align-items: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #25D366;
+            opacity: 0.75;
         }
 
         .page-header {
-            background: #111827;
-            color: white;
+            background: white;
             text-align: center;
-            padding: 55px 20px;
+            padding: 55px 20px 35px;
         }
 
         .page-header h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
+            margin: 0 0 10px;
+            font-size: 36px;
         }
 
         .page-header p {
-            font-size: 17px;
-            color: #d1d5db;
+            margin: 0;
+            color: #666;
+            font-size: 16px;
         }
 
         .categories {
-            max-width: 1100px;
-            margin: 50px auto;
+            max-width: 1000px;
+            margin: 45px auto;
             padding: 0 20px;
+        }
+
+        .category-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
@@ -74,72 +89,84 @@
         .category-card {
             background: white;
             border-radius: 12px;
-            padding: 45px 30px;
+            padding: 35px 25px;
             text-align: center;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             transition: 0.3s ease;
         }
 
         .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
         }
 
         .category-icon {
             font-size: 55px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .category-card h2 {
-            font-size: 25px;
-            margin-bottom: 12px;
+            margin: 0 0 12px;
+            font-size: 24px;
         }
 
         .category-card p {
             color: #666;
             line-height: 1.6;
+            font-size: 15px;
             margin-bottom: 25px;
         }
 
-        .category-btn {
+        .category-button {
             display: inline-block;
             background: #0b1220;
             color: white;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 13px 22px;
             border-radius: 7px;
+            font-size: 14px;
             font-weight: bold;
             transition: 0.3s ease;
         }
 
-        .category-btn:hover {
-            background: #25D366;
+        .category-button:hover {
             transform: translateY(-2px);
+            opacity: 0.9;
         }
 
-        .info {
+        .info-section {
             max-width: 900px;
-            margin: 20px auto 60px;
+            margin: 55px auto;
             padding: 0 20px;
             text-align: center;
         }
 
-        .info h2 {
+        .info-section h2 {
             margin-bottom: 15px;
-            font-size: 28px;
         }
 
-        .info p {
+        .info-section p {
             color: #666;
             line-height: 1.7;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 30px 0 50px;
+        }
+
+        .back-link a {
+            color: #0b1220;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         footer {
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 20px;
-            margin-top: 40px;
+            padding: 25px 15px;
+            margin-top: 50px;
         }
 
         footer p {
@@ -148,30 +175,36 @@
         }
 
         @media (max-width: 900px) {
-            .categories {
+            .category-grid {
                 grid-template-columns: 1fr;
+            }
+
+            nav {
+                gap: 12px;
             }
         }
 
         @media (max-width: 600px) {
             header {
-                padding: 12px 20px;
-                flex-direction: column;
-                gap: 12px;
+                padding: 12px 15px;
+            }
+
+            nav {
+                gap: 9px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
             }
 
             nav a {
-                margin-left: 10px;
-                margin-right: 10px;
-                font-size: 14px;
+                font-size: 12px;
             }
 
             .page-header h1 {
-                font-size: 30px;
+                font-size: 28px;
             }
 
             .category-card {
-                padding: 35px 20px;
+                padding: 30px 20px;
             }
         }
     </style>
@@ -180,7 +213,10 @@
 <body>
 
 <header>
-    <img src="Logo.png" alt="Street Gadgets Care Logo">
+
+    <div class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </div>
 
     <nav>
         <a href="index.html">Home</a>
@@ -190,64 +226,116 @@
         <a href="products.html">Products</a>
         <a href="contact.html">Contact</a>
     </nav>
+
 </header>
 
+
 <section class="page-header">
+
     <h1>Chargers</h1>
-    <p>Quality charging solutions for smartphones and laptops</p>
+
+    <p>
+        Quality charging solutions for smartphones and laptops.
+    </p>
+
 </section>
+
 
 <section class="categories">
 
-    <!-- Smartphone Chargers -->
-    <div class="category-card">
-        <div class="category-icon">📱</div>
+    <div class="category-grid">
 
-        <h2>Smartphone Chargers</h2>
+        <!-- Smartphone Chargers -->
 
-        <p>
-            Fast and reliable chargers for smartphones, including
-            USB-C, Lightning and other popular charging options.
-        </p>
+        <div class="category-card">
 
-        <a href="#" class="category-btn">
-            View Smartphone Chargers
-        </a>
-    </div>
+            <div class="category-icon">📱</div>
 
-    <!-- Laptop Chargers -->
-    <div class="category-card">
-        <div class="category-icon">💻</div>
+            <h2>Smartphone Chargers</h2>
 
-        <h2>Laptop Chargers</h2>
+            <p>
+                Choose from chargers for Samsung, iPhone, Tecno,
+                Infinix, Oraimo and other compatible smartphones.
+            </p>
 
-        <p>
-            Reliable laptop power adapters and chargers for
-            different laptop brands and models.
-        </p>
+            <a
+                href="smartphone-chargers.html"
+                class="category-button"
+            >
+                View Smartphone Chargers
+            </a>
 
-        <a href="#" class="category-btn">
-            View Laptop Chargers
-        </a>
+        </div>
+
+
+        <!-- Laptop Chargers -->
+
+        <div class="category-card">
+
+            <div class="category-icon">💻</div>
+
+            <h2>Laptop Chargers</h2>
+
+            <p>
+                Laptop chargers and power adapters for different
+                laptop brands and models.
+            </p>
+
+            <a
+                href="#"
+                class="category-button"
+            >
+                View Laptop Chargers
+            </a>
+
+        </div>
+
     </div>
 
 </section>
 
-<section class="info">
+
+<section class="info-section">
+
     <h2>Choose Your Charger</h2>
 
     <p>
-        At Street Gadgets Care, we provide charging solutions
-        for both smartphones and laptops. Choose the category
-        that matches your device and find the right charger for your needs.
+        Using the right charger helps provide reliable and safe
+        charging for your device. If you are unsure which charger
+        you need, contact Street Gadgets Care and we can help you
+        choose the right option.
     </p>
+
 </section>
 
+
+<div class="back-link">
+
+    <a href="products.html">
+        ← Back to Products & Accessories
+    </a>
+
+</div>
+
+
 <footer>
-    <p><strong>Street Gadgets Care</strong></p>
-    <p>Laptop & Phone Repair | Accessories | Graphic Design</p>
-    <p>Phone: 0114259961</p>
-    <p>Email: streetgadgetscare@gmail.com</p>
+
+    <p>
+        <strong>Street Gadgets Care</strong>
+    </p>
+
+    <p>
+        Phone & Laptop Repair • Accessories • Graphic Design
+    </p>
+
+    <p>
+        📞 0114259961 | ✉ streetgadgetscare@gmail.com
+    </p>
+
+    <p>
+        © 2026 Street Gadgets Care. All Rights Reserved.
+    </p>
+
 </footer>
 
 </body>
