@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Laptop Chargers | Street Gadgets Care</title>
+    <title>Chargers | Street Gadgets Care</title>
 
     <style>
         * {
@@ -71,104 +71,65 @@
             opacity: 0.9;
         }
 
-        /* PRODUCTS */
-        .products {
-            max-width: 1200px;
+        /* CATEGORY SECTION */
+        .categories {
+            max-width: 1100px;
             margin: 50px auto;
             padding: 0 20px;
         }
 
-        .charger-grid {
+        .category-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
 
-        .charger-card {
+        .category-card {
             background: white;
             border-radius: 12px;
-            overflow: hidden;
+            padding: 35px 30px;
+            text-align: center;
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
             transition: 0.3s ease;
-            display: flex;
-            flex-direction: column;
         }
 
-        .charger-card:hover {
+        .category-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
-        .charger-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: contain;
-            background: #f8f9fb;
-            padding: 15px;
+        .category-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
         }
 
-        .charger-content {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .charger-content h3 {
-            margin: 0 0 10px;
-            font-size: 21px;
+        .category-card h2 {
+            margin: 0 0 12px;
             color: #111827;
+            font-size: 25px;
         }
 
-        .charger-content p {
-            margin: 0 0 15px;
-            line-height: 1.6;
+        .category-card p {
             color: #555;
-            font-size: 14px;
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 25px;
         }
 
-        .price-box {
-            background: #f5f7fa;
-            border-radius: 8px;
-            padding: 14px;
-            margin-top: auto;
-        }
-
-        .price-box div {
-            margin-bottom: 7px;
-            font-size: 14px;
-        }
-
-        .price-box div:last-child {
-            margin-bottom: 0;
-        }
-
-        .price-label {
-            font-weight: bold;
-        }
-
-        .price {
-            font-weight: bold;
-            color: #111827;
-        }
-
-        /* WHATSAPP BUTTON */
-        .whatsapp-btn {
-            display: block;
-            margin-top: 18px;
-            padding: 12px 15px;
-            background: #25D366;
+        .category-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #0b1220;
             color: white;
-            text-align: center;
             text-decoration: none;
             border-radius: 7px;
-            font-size: 14px;
             font-weight: bold;
+            font-size: 14px;
             transition: 0.3s ease;
         }
 
-        .whatsapp-btn:hover {
-            background: #1ebe5d;
+        .category-btn:hover {
+            background: #25D366;
             transform: translateY(-2px);
         }
 
@@ -220,10 +181,10 @@
             font-size: 14px;
         }
 
-        /* TABLET */
+        /* MOBILE */
         @media (max-width: 900px) {
-            .charger-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .category-grid {
+                grid-template-columns: 1fr;
             }
 
             nav {
@@ -231,7 +192,6 @@
             }
         }
 
-        /* MOBILE */
         @media (max-width: 600px) {
             header {
                 padding: 12px 15px;
@@ -257,12 +217,8 @@
                 font-size: 30px;
             }
 
-            .charger-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .charger-card img {
-                height: 250px;
+            .category-card {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -272,6 +228,7 @@
 
     <!-- HEADER -->
     <header>
+
         <a href="index.html">
             <img src="Logo.png" alt="Street Gadgets Care Logo">
         </a>
@@ -284,286 +241,68 @@
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
         </nav>
+
     </header>
 
 
     <!-- PAGE HEADER -->
     <section class="page-header">
-        <h1>Laptop Chargers</h1>
-        <p>Reliable replacement and Type-C charging options for laptops</p>
+
+        <h1>Chargers</h1>
+
+        <p>
+            Quality charging solutions for smartphones and laptops
+        </p>
+
     </section>
 
 
-    <!-- PRODUCTS -->
-    <section class="products">
+    <!-- CHARGER CATEGORIES -->
+    <section class="categories">
 
-        <div class="charger-grid">
+        <div class="category-grid">
 
-            <!-- LENOVO 65W -->
-            <div class="charger-card">
+            <!-- SMARTPHONE CHARGERS -->
+            <div class="category-card">
 
-                <img src="Lenovo%2065W.jpeg"
-                     alt="Lenovo 65W Laptop Charger">
-
-                <div class="charger-content">
-
-                    <h3>Lenovo 65W Laptop Charger</h3>
-
-                    <p>
-                        20V / 3.25A — 65W laptop charger.
-                        Suitable for compatible Lenovo laptops requiring
-                        the same power specification and connector.
-                    </p>
-
-                    <div class="price-box">
-
-                        <div>
-                            <span class="price-label">Normal Pin:</span>
-                            <span class="price">KSh 1,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Type-C Replacement:</span>
-                            <span class="price">KSh 2,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Original Type-C:</span>
-                            <span class="price">KSh 6,500</span>
-                        </div>
-
-                    </div>
-
-                    <a class="whatsapp-btn"
-                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Lenovo%2065W%20laptop%20charger."
-                       target="_blank">
-                        Inquire on WhatsApp
-                    </a>
-
+                <div class="category-icon">
+                    📱
                 </div>
+
+                <h2>Smartphone Chargers</h2>
+
+                <p>
+                    Fast and reliable chargers for smartphones,
+                    including Samsung, iPhone, Tecno, Infinix,
+                    Oraimo and other compatible devices.
+                </p>
+
+                <a href="smartphone-chargers.html" class="category-btn">
+                    View Smartphone Chargers
+                </a>
+
             </div>
 
 
-            <!-- ACER 65W -->
-            <div class="charger-card">
+            <!-- LAPTOP CHARGERS -->
+            <div class="category-card">
 
-                <img src="Acer%2065W.jpeg"
-                     alt="Acer 65W Laptop Charger">
-
-                <div class="charger-content">
-
-                    <h3>Acer 65W Laptop Charger</h3>
-
-                    <p>
-                        19V / 3.42A — 65W laptop charger.
-                        Compatible with Acer laptops that require
-                        the same voltage, wattage and connector.
-                    </p>
-
-                    <div class="price-box">
-
-                        <div>
-                            <span class="price-label">Normal Pin:</span>
-                            <span class="price">KSh 1,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Type-C Replacement:</span>
-                            <span class="price">KSh 2,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Original Type-C:</span>
-                            <span class="price">KSh 6,500</span>
-                        </div>
-
-                    </div>
-
-                    <a class="whatsapp-btn"
-                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Acer%2065W%20laptop%20charger."
-                       target="_blank">
-                        Inquire on WhatsApp
-                    </a>
-
+                <div class="category-icon">
+                    💻
                 </div>
-            </div>
 
+                <h2>Laptop Chargers</h2>
 
-            <!-- LENOVO USB PIN 2 -->
-            <div class="charger-card">
+                <p>
+                    Reliable laptop charging solutions including
+                    Lenovo, HP, Acer, ASUS, Toshiba and other
+                    compatible laptop chargers.
+                </p>
 
-                <img src="Lenovo%2065W%20USB%20Pin%202.jpeg"
-                     alt="Lenovo 65W USB Pin Laptop Charger">
+                <a href="laptop-chargers.html" class="category-btn">
+                    View Laptop Chargers
+                </a>
 
-                <div class="charger-content">
-
-                    <h3>Lenovo 65W USB Pin Charger</h3>
-
-                    <p>
-                        20V / 3.25A — 65W laptop charger with
-                        Lenovo USB pin connector.
-                    </p>
-
-                    <div class="price-box">
-
-                        <div>
-                            <span class="price-label">Normal Pin:</span>
-                            <span class="price">KSh 1,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Type-C Replacement:</span>
-                            <span class="price">KSh 2,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Original Type-C:</span>
-                            <span class="price">KSh 6,500</span>
-                        </div>
-
-                    </div>
-
-                    <a class="whatsapp-btn"
-                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Lenovo%2065W%20USB%20Pin%20laptop%20charger."
-                       target="_blank">
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-            </div>
-
-
-            <!-- HP 65W -->
-            <div class="charger-card">
-
-                <img src="HP%2065W.jpeg"
-                     alt="HP 65W Laptop Charger">
-
-                <div class="charger-content">
-
-                    <h3>HP 65W Laptop Charger</h3>
-
-                    <p>
-                        19.5V / 3.33A — 65W HP laptop charger
-                        with blue pin connector.
-                    </p>
-
-                    <div class="price-box">
-
-                        <div>
-                            <span class="price-label">Normal Pin:</span>
-                            <span class="price">KSh 1,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Type-C Replacement:</span>
-                            <span class="price">KSh 2,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Original Type-C:</span>
-                            <span class="price">KSh 6,500</span>
-                        </div>
-
-                    </div>
-
-                    <a class="whatsapp-btn"
-                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20HP%2065W%20laptop%20charger."
-                       target="_blank">
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-            </div>
-
-
-            <!-- ASUS -->
-            <div class="charger-card">
-
-                <img src="ASUS%20Laptop%20Charger.jpeg"
-                     alt="ASUS Laptop Charger">
-
-                <div class="charger-content">
-
-                    <h3>ASUS Laptop Charger</h3>
-
-                    <p>
-                        Replacement ASUS laptop charger.
-                        Compatibility depends on the laptop model,
-                        connector and required power specification.
-                    </p>
-
-                    <div class="price-box">
-
-                        <div>
-                            <span class="price-label">Normal Pin:</span>
-                            <span class="price">KSh 1,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Type-C Replacement:</span>
-                            <span class="price">KSh 2,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Original Type-C:</span>
-                            <span class="price">KSh 6,500</span>
-                        </div>
-
-                    </div>
-
-                    <a class="whatsapp-btn"
-                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20ASUS%20laptop%20charger."
-                       target="_blank">
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-            </div>
-
-
-            <!-- TOSHIBA 60W -->
-            <div class="charger-card">
-
-                <img src="Toshiba%2060W.jpeg"
-                     alt="Toshiba 60W Laptop Charger">
-
-                <div class="charger-content">
-
-                    <h3>Toshiba 60W Laptop Charger</h3>
-
-                    <p>
-                        15V / 4A — 60W laptop charger.
-                        Suitable for compatible Toshiba laptops
-                        requiring the same power specification.
-                    </p>
-
-                    <div class="price-box">
-
-                        <div>
-                            <span class="price-label">Normal Pin:</span>
-                            <span class="price">KSh 1,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Type-C Replacement:</span>
-                            <span class="price">KSh 2,500</span>
-                        </div>
-
-                        <div>
-                            <span class="price-label">Original Type-C:</span>
-                            <span class="price">KSh 6,500</span>
-                        </div>
-
-                    </div>
-
-                    <a class="whatsapp-btn"
-                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Toshiba%2060W%20laptop%20charger."
-                       target="_blank">
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
             </div>
 
         </div>
@@ -574,14 +313,12 @@
     <!-- INFO -->
     <section class="info-section">
 
-        <h2>Need Help Choosing a Laptop Charger?</h2>
+        <h2>Choose Your Charger</h2>
 
         <p>
-            Laptop chargers are not universal. The voltage, wattage,
-            connector type and laptop model must match correctly.
-            If you are not sure which charger you need, send us your
-            laptop model or a photo of your current charger and we
-            will help you choose the right one.
+            Not sure which charger you need? Send us your device
+            model or a photo of your current charger and we'll help
+            you find the right option.
         </p>
 
     </section>
@@ -589,14 +326,20 @@
 
     <!-- BACK LINK -->
     <div class="back-link">
-        <a href="chargers.html">← Back to Chargers</a>
+
+        <a href="products.html">
+            ← Back to Products & Accessories
+        </a>
+
     </div>
 
 
     <!-- FOOTER -->
     <footer>
 
-        <p><strong>Street Gadgets Care</strong></p>
+        <p>
+            <strong>Street Gadgets Care</strong>
+        </p>
 
         <p>
             Laptop & Phone Repair • Accessories • Graphic Design
