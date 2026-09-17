@@ -1,1 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Charging Cables | Street Gadgets Care</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1220;
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 55px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #25D366;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #d1d5db;
+        }
+
+        /* CATEGORY SECTION */
+        .categories {
+            padding: 60px 5%;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 14px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .category-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .category-card h2 {
+            font-size: 25px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .category-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .category-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #111827;
+            color: white;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .category-card:hover .category-btn {
+            background: #25D366;
+        }
+
+        /* INFO SECTION */
+        .info-section {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-section h2 {
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .info-section p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .back-link {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 50px;
+            color: #111827;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #25D366;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .categories {
+                padding: 40px 5%;
+            }
+
+            .category-card {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Charging Cables</h1>
+
+    <p>
+        Choose the right charging cable for your device.
+    </p>
+
+</section>
+
+
+<section class="categories">
+
+    <div class="category-grid">
+
+
+        <!-- SMARTPHONE CABLES -->
+
+        <a href="smartphone-cables.html" class="category-card">
+
+            <div class="category-icon">
+                📱
+            </div>
+
+            <h2>Smartphone Charging Cables</h2>
+
+            <p>
+                Quality charging and data cables for smartphones,
+                tablets and other mobile devices.
+            </p>
+
+            <span class="category-btn">
+                View Smartphone Cables →
+            </span>
+
+        </a>
+
+
+        <!-- LAPTOP CABLES -->
+
+        <a href="laptop-cables.html" class="category-card">
+
+            <div class="category-icon">
+                💻
+            </div>
+
+            <h2>Laptop Charging Cables</h2>
+
+            <p>
+                Reliable charging cables and compatible power
+                solutions for laptops and computers.
+            </p>
+
+            <span class="category-btn">
+                View Laptop Cables →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<section class="info-section">
+
+    <h2>Need Help Choosing a Cable?</h2>
+
+    <p>
+        Not sure which cable is right for your device?
+        Contact Street Gadgets Care and we'll help you choose
+        the correct charging or data cable.
+    </p>
+
+</section>
+
+
+<a href="products.html" class="back-link">
+    ← Back to Products & Accessories
+</a>
+
+
+<footer>
+
+    <p>
+        <strong>Street Gadgets Care</strong>
+    </p>
+
+    <p>
+        Phone & Laptop Repair • Accessories • Graphic Design
+    </p>
+
+    <p>
+        Nairobi, Kenya
+    </p>
+
+    <p>
+        WhatsApp: 0114259961
+    </p>
+
+    <p>
+        © 2026 Street Gadgets Care. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
