@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Protection | Street Gadgets Care</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #0b1220;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 170px;
+            height: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #19a7ce;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #0b1220, #16263d);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        .page-header p {
+            margin-top: 12px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        .categories {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h2 {
+            margin: 10px 0;
+            font-size: 25px;
+            color: #0b1220;
+        }
+
+        .category-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .category-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #19a7ce;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: #1289aa;
+            transform: translateY(-2px);
+        }
+
+        .info-section {
+            max-width: 900px;
+            margin: 20px auto 50px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            color: #0b1220;
+            margin-bottom: 10px;
+        }
+
+        .info-section p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 30px 0 50px;
+        }
+
+        .back-link a {
+            color: #19a7ce;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .category-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="Logo.png" alt="Street Gadgets Care">
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Phone Protection</h1>
+    <p>Protect your phone with quality screen protectors and phone covers.</p>
+</section>
+
+<section class="categories">
+
+    <div class="category-card">
+        <div class="category-icon">🛡️</div>
+
+        <h2>Screen Protectors</h2>
+
+        <p>
+            Quality screen protectors designed to help protect your phone
+            display from scratches, impacts and everyday wear.
+        </p>
+
+        <a href="screen-protectors.html" class="category-btn">
+            View Screen Protectors
+        </a>
+    </div>
+
+    <div class="category-card">
+        <div class="category-icon">📱</div>
+
+        <h2>Phone Covers</h2>
+
+        <p>
+            Browse phone covers and cases available for different phone
+            models and styles.
+        </p>
+
+        <a href="phone-covers.html" class="category-btn">
+            View Phone Covers
+        </a>
+    </div>
+
+</section>
+
+<section class="info-section">
+    <h2>Keep Your Phone Protected</h2>
+
+    <p>
+        Choose the right protection for your device, whether you need a
+        screen protector, phone cover, or both.
+    </p>
+</section>
+
+<div class="back-link">
+    <a href="products.html">← Back to Products & Accessories</a>
+</div>
+
+<footer>
+    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
+    <p>Phone & Laptop Repair | Accessories | Graphic Design</p>
+</footer>
+
+</body>
+</html>
