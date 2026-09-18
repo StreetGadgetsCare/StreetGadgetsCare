@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Screen Protectors | Street Gadgets Care</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1220;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 55px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #19a7ce;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #d9e2ec;
+        }
+
+        /* PRODUCTS */
+        .products {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .protector-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .protector-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .protector-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .protector-image {
+            width: 100%;
+            height: 300px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .protector-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .protector-content {
+            padding: 22px;
+        }
+
+        .protector-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #0b1220;
+        }
+
+        .protector-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            color: #19a7ce;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef7fa;
+            color: #0b7fa0;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-btn {
+            display: block;
+            margin-top: 18px;
+            padding: 12px 15px;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* INFO */
+        .info-section {
+            max-width: 1000px;
+            margin: 20px auto 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-section h2 {
+            color: #0b1220;
+            margin-bottom: 12px;
+        }
+
+        .info-section p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 30px auto 50px;
+            color: #19a7ce;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #c9d2dc;
+        }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+            .protector-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 15px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo {
+                height: 48px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-header {
+                padding: 40px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .protector-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .protector-image {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+
+            <a href="index.html">
+                <img src="Logo.png" alt="Street Gadgets Care Logo" class="logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="repairs.html">Repairs</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Screen Protectors</h1>
+        <p>Reliable screen protection for different smartphones.</p>
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products">
+
+        <div class="protector-grid">
+
+            <!-- 1. IPHONE -->
+            <div class="protector-card">
+
+                <div class="protector-image">
+                    <img src="iPhone%202024%20Pro%20Max%20Privacy.jpeg"
+                         alt="2024 iPhone Pro Max Privacy Tempered Glass">
+                </div>
+
+                <div class="protector-content">
+
+                    <h3>2024 iPhone Pro Max Privacy Tempered Glass</h3>
+
+                    <p>
+                        3D full-coverage privacy tempered glass designed
+                        for the 2024 iPhone Pro Max. Features 9H hardness
+                        and privacy viewing protection.
+                    </p>
+
+                    <span class="tag">iPhone Pro Max</span>
+
+                    <div class="price">
+                        KSh 950
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%202024%20iPhone%20Pro%20Max%20Privacy%20Tempered%20Glass%20%E2%80%93%20KSh%20950."
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 2. CERAMIC -->
+            <div class="protector-card">
+
+                <div class="protector-image">
+                    <img src="Samsung%202.1D%20Matte%20Ceramic.jpeg"
+                         alt="Samsung 2.1D Matte Ceramic Screen Protector">
+                </div>
+
+                <div class="protector-content">
+
+                    <h3>2.1D Matte Ceramic Screen Protector</h3>
+
+                    <p>
+                        Matte ceramic screen protector compatible with
+                        Samsung A51, A52, A53, A72, A73, M32, M33 and F22.
+                        Features anti-fingerprint, anti-glare protection
+                        and 9H hardness.
+                    </p>
+
+                    <span class="tag">Samsung A & M Series</span>
+
+                    <div class="price">
+                        KSh 450
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%202.1D%20Matte%20Ceramic%20Screen%20Protector%20%E2%80%93%20KSh%20450."
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 3. UV CURVED -->
+            <div class="protector-card">
+
+                <div class="protector-image">
+                    <img src="UV%20Curved%20Screen%20Protector.jpeg"
+                         alt="UV Curved Screen Protector">
+                </div>
+
+                <div class="protector-content">
+
+                    <h3>UV Curved Screen Protector</h3>
+
+                    <p>
+                        UV screen protector designed for smartphones
+                        with curved screens. Provides full coverage
+                        and reliable protection while maintaining
+                        touch sensitivity.
+                    </p>
+
+                    <span class="tag">Curved Screen</span>
+
+                    <div class="price">
+                        KSh 1,500
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20UV%20Curved%20Screen%20Protector%20%E2%80%93%20KSh%201500."
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 4. FULL GLUE CURVED -->
+            <div class="protector-card">
+
+                <div class="protector-image">
+                    <img src="Full%20Glue%20Curved%20Screen%20Protector.jpeg"
+                         alt="Full Glue Curved Screen Protector">
+                </div>
+
+                <div class="protector-content">
+
+                    <h3>Full Glue Curved Screen Protector</h3>
+
+                    <p>
+                        Full-glue screen protector designed for
+                        curved-screen smartphones. Provides curved
+                        edge-to-edge coverage and reliable protection.
+                    </p>
+
+                    <span class="tag">Curved Screen</span>
+
+                    <div class="price">
+                        KSh 950
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Full%20Glue%20Curved%20Screen%20Protector%20%E2%80%93%20KSh%20950."
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 5. UNPHA -->
+            <div class="protector-card">
+
+                <div class="protector-image">
+                    <img src="UNPHA%2021D%20Full%20Glue%20Glass.jpeg"
+                         alt="UNPHA 21D Full Glue Screen Protector">
+                </div>
+
+                <div class="protector-content">
+
+                    <h3>UNPHA 21D Full Glue Glass</h3>
+
+                    <p>
+                        Full-glue screen protector with 21D design,
+                        9H hardness, full coverage and sensitive
+                        touch response.
+                    </p>
+
+                    <span class="tag">Full Glue</span>
+
+                    <div class="price">
+                        KSh 450
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20UNPHA%2021D%20Full%20Glue%20Glass%20%E2%80%93%20KSh%20450."
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 6. MILAKE PRIVACY -->
+            <div class="protector-card">
+
+                <div class="protector-image">
+                    <img src="Milake%20Privacy%20Pro%20Glass.jpeg"
+                         alt="Milake Privacy Pro Glass Screen Protector">
+                </div>
+
+                <div class="protector-content">
+
+                    <h3>Milake Privacy Pro Glass</h3>
+
+                    <p>
+                        Privacy screen protector with full-glue,
+                        edge-to-edge coverage, anti-scratch protection
+                        and touch-sensitive performance.
+                    </p>
+
+                    <span class="tag">Privacy Glass</span>
+
+                    <div class="price">
+                        KSh 450
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Milake%20Privacy%20Pro%20Glass%20%E2%80%93%20KSh%20450."
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFO -->
+    <section class="info-section">
+
+        <h2>Protect Your Screen</h2>
+
+        <p>
+            We stock different types of screen protectors, including
+            privacy glass, ceramic protectors and curved-screen
+            protectors. If you're unsure which protector is compatible
+            with your phone, contact Street Gadgets Care for assistance.
+        </p>
+
+    </section>
+
+
+    <!-- BACK LINK -->
+    <a href="products.html" class="back-link">
+        ← Back to Phone Protection
+    </a>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Street Gadgets Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
