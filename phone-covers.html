@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phone Covers | Street Gadgets Care</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1220;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 55px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #19a7ce;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #d9e2ec;
+        }
+
+        /* PRODUCTS */
+        .products {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .cover-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .cover-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .cover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* IMAGE */
+        .cover-image {
+            width: 100%;
+            height: 300px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .cover-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* CONTENT */
+        .cover-content {
+            padding: 22px;
+        }
+
+        .cover-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #0b1220;
+        }
+
+        .cover-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            color: #19a7ce;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef7fa;
+            color: #0b7fa0;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-btn {
+            display: block;
+            margin-top: 18px;
+            padding: 12px 15px;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* INFO */
+        .info-section {
+            max-width: 1000px;
+            margin: 20px auto 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-section h2 {
+            color: #0b1220;
+            margin-bottom: 12px;
+        }
+
+        .info-section p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 30px auto 50px;
+            color: #19a7ce;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #c9d2dc;
+        }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+            .cover-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 15px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo {
+                height: 48px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-header {
+                padding: 40px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .cover-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cover-image {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+
+            <a href="index.html">
+                <img src="Logo.png"
+                     alt="Street Gadgets Care Logo"
+                     class="logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="repairs.html">Repairs</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Phone Covers</h1>
+        <p>Quality phone covers for protection and style.</p>
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products">
+
+        <div class="cover-grid">
+
+
+            <!-- 1. SAMSUNG MAGSAFE -->
+            <div class="cover-card">
+
+                <div class="cover-image">
+                    <img src="Samsung%20MagSafe.jpeg"
+                         alt="Samsung MagSafe Phone Case">
+                </div>
+
+                <div class="cover-content">
+
+                    <h3>Samsung MagSafe Case</h3>
+
+                    <p>
+                        Stylish MagSafe-compatible case designed for
+                        selected Samsung S Series and Note Series models.
+                        Contact us with your exact phone model to confirm
+                        compatibility.
+                    </p>
+
+                    <span class="tag">Samsung S & Note Series</span>
+
+                    <div class="price">
+                        KSh 1,550
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%20MagSafe%20Case%20%E2%80%93%20KSh%201550.%20My%20phone%20model%20is%3A"
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 2. SAMSUNG LEATHER -->
+            <div class="cover-card">
+
+                <div class="cover-image">
+                    <img src="Samsung%20Leather.jpeg"
+                         alt="Samsung Leather Phone Case">
+                </div>
+
+                <div class="cover-content">
+
+                    <h3>Samsung Leather Case</h3>
+
+                    <p>
+                        Premium-style leather phone case designed for
+                        selected Samsung Note Series and S Series models.
+                        Contact us with your exact phone model to confirm
+                        compatibility.
+                    </p>
+
+                    <span class="tag">Samsung S & Note Series</span>
+
+                    <div class="price">
+                        KSh 1,550
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%20Leather%20Case%20%E2%80%93%20KSh%201550.%20My%20phone%20model%20is%3A"
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 3. SAMSUNG SILICONE -->
+            <div class="cover-card">
+
+                <div class="cover-image">
+                    <img src="Samsung%20Silicone.jpeg"
+                         alt="Samsung Silicone Phone Case">
+                </div>
+
+                <div class="cover-content">
+
+                    <h3>Samsung Silicone Case</h3>
+
+                    <p>
+                        Soft-touch silicone case available for various
+                        Samsung phone models. Available in different
+                        colors depending on stock. Contact us with your
+                        exact phone model to confirm compatibility.
+                    </p>
+
+                    <span class="tag">Samsung</span>
+
+                    <div class="price">
+                        KSh 1,050
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%20Silicone%20Case%20%E2%80%93%20KSh%201050.%20My%20phone%20model%20is%3A"
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 4. IPHONE SILICONE -->
+            <div class="cover-card">
+
+                <div class="cover-image">
+                    <img src="iPhone%20Silicone.jpeg"
+                         alt="iPhone Silicone Phone Case">
+                </div>
+
+                <div class="cover-content">
+
+                    <h3>iPhone Silicone Case</h3>
+
+                    <p>
+                        Smooth silicone case available for various iPhone
+                        models. Available in different colors depending
+                        on stock. Contact us with your exact iPhone model
+                        to confirm compatibility.
+                    </p>
+
+                    <span class="tag">iPhone</span>
+
+                    <div class="price">
+                        KSh 1,050
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20iPhone%20Silicone%20Case%20%E2%80%93%20KSh%201050.%20My%20iPhone%20model%20is%3A"
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 5. TECNO SILICONE -->
+            <div class="cover-card">
+
+                <div class="cover-image">
+                    <img src="Tecno%20Silicone.jpeg"
+                         alt="Tecno Silicone Phone Case">
+                </div>
+
+                <div class="cover-content">
+
+                    <h3>Tecno Silicone Case</h3>
+
+                    <p>
+                        Soft-touch silicone case available for various
+                        Tecno phone models. Available in different colors
+                        depending on stock. Contact us with your exact
+                        phone model to confirm compatibility.
+                    </p>
+
+                    <span class="tag">Tecno</span>
+
+                    <div class="price">
+                        KSh 1,050
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Tecno%20Silicone%20Case%20%E2%80%93%20KSh%201050.%20My%20phone%20model%20is%3A"
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 6. REDMI SILICONE -->
+            <div class="cover-card">
+
+                <div class="cover-image">
+                    <img src="Redmi%20Silicone.jpeg"
+                         alt="Redmi Silicone Phone Case">
+                </div>
+
+                <div class="cover-content">
+
+                    <h3>Redmi Silicone Case</h3>
+
+                    <p>
+                        Soft-touch silicone case available for various
+                        Redmi phone models. Available in different colors
+                        depending on stock. Contact us with your exact
+                        phone model to confirm compatibility.
+                    </p>
+
+                    <span class="tag">Redmi</span>
+
+                    <div class="price">
+                        KSh 1,050
+                    </div>
+
+                    <a class="whatsapp-btn"
+                       href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Redmi%20Silicone%20Case%20%E2%80%93%20KSh%201050.%20My%20phone%20model%20is%3A"
+                       target="_blank">
+                        Inquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- INFO -->
+    <section class="info-section">
+
+        <h2>Find the Right Cover for Your Phone</h2>
+
+        <p>
+            We stock silicone, leather and MagSafe-style phone covers
+            for different smartphone models. Since phone cases are
+            model-specific, send us your exact phone model before
+            ordering so we can confirm availability and compatibility.
+        </p>
+
+    </section>
+
+
+    <!-- BACK LINK -->
+    <a href="phone-protection.html" class="back-link">
+        ← Back to Phone Protection
+    </a>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Street Gadgets Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
