@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Battery Replacement | Street Gadgets Care</title>
+
+    <meta name="description"
+          content="Phone and laptop battery replacement services from Street Gadgets Care. Choose phone batteries or laptop batteries.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1220;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            width: 170px;
+            max-width: 100%;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #19a7ce;
+        }
+
+        /* INTRO */
+        .page-intro {
+            text-align: center;
+            padding: 55px 20px 35px;
+            background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+        }
+
+        .page-intro h1 {
+            font-size: 35px;
+            color: #0b1220;
+            margin-bottom: 12px;
+        }
+
+        .page-intro p {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 18px;
+            color: #19a7ce;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* CATEGORY GRID */
+        .category-grid {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto 70px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 14px;
+            padding: 35px 30px;
+            text-align: center;
+            box-shadow: 0 5px 22px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+        }
+
+        .category-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h2 {
+            color: #0b1220;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .category-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .category-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #19a7ce;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: #1288a8;
+            transform: translateY(-2px);
+        }
+
+        /* INFO SECTION */
+        .info-section {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            text-align: center;
+        }
+
+        .info-section h2 {
+            color: #0b1220;
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .info-section p {
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            header img {
+                width: 150px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-intro {
+                padding: 40px 18px 25px;
+            }
+
+            .page-intro h1 {
+                font-size: 28px;
+            }
+
+            .page-intro p {
+                font-size: 14px;
+            }
+
+            .category-grid {
+                width: 92%;
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .category-card {
+                padding: 30px 22px;
+            }
+
+            .info-section {
+                width: 92%;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page-intro">
+
+    <h1>Battery Replacement</h1>
+
+    <p>
+        Find the right battery replacement for your device.
+        Choose between phone batteries and laptop batteries to explore
+        available replacement and original battery options.
+    </p>
+
+    <a href="products.html" class="back-link">
+        ← Back to Products
+    </a>
+
+</section>
+
+
+<section class="category-grid">
+
+
+    <!-- PHONE BATTERIES -->
+    <div class="category-card">
+
+        <div class="category-icon">
+            📱
+        </div>
+
+        <h2>Phone Batteries</h2>
+
+        <p>
+            Replacement and original battery options for popular phone brands
+            including iPhone, Samsung, OPPO, Nokia, Tecno, Infinix, Xiaomi
+            and other supported models.
+        </p>
+
+        <a href="phone-batteries.html" class="category-btn">
+            View Phone Batteries →
+        </a>
+
+    </div>
+
+
+    <!-- LAPTOP BATTERIES -->
+    <div class="category-card">
+
+        <div class="category-icon">
+            💻
+        </div>
+
+        <h2>Laptop Batteries</h2>
+
+        <p>
+            Replacement and original battery options for laptops from brands
+            such as HP, Dell, Lenovo, Acer, ASUS, Toshiba and other supported
+            models.
+        </p>
+
+        <a href="laptop-batteries.html" class="category-btn">
+            View Laptop Batteries →
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="info-section">
+
+    <h2>Choose the Right Battery for Your Device</h2>
+
+    <p>
+        Battery requirements vary from one device model to another.
+        At Street Gadgets Care, we help you identify the correct battery
+        option before installation. Whether you need an affordable replacement
+        or prefer an original battery where available, contact us with your
+        exact device model for confirmation and an accurate quotation.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
+
+    <p>
+        Phone & Laptop Repair • Accessories • Graphic Design
+    </p>
+
+</footer>
+
+</body>
+</html>
