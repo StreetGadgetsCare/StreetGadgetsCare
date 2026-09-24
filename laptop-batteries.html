@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laptop Batteries | Street Gadgets Care</title>
+
+    <meta name="description"
+          content="Shop laptop replacement and original batteries for HP, Lenovo, Dell, Acer, Toshiba and other laptop brands from Street Gadgets Care.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b1220;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            width: 170px;
+            max-width: 100%;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #19a7ce;
+        }
+
+
+        /* PAGE INTRO */
+
+        .page-intro {
+            text-align: center;
+            padding: 55px 20px 40px;
+            background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+        }
+
+        .page-intro h1 {
+            font-size: 35px;
+            color: #0b1220;
+            margin-bottom: 12px;
+        }
+
+        .page-intro p {
+            max-width: 850px;
+            margin: auto;
+            color: #555;
+            font-size: 16px;
+        }
+
+
+        /* BATTERY GRID */
+
+        .battery-grid {
+            width: 90%;
+            max-width: 1200px;
+            margin: 35px auto 70px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+
+            /* Prevent shorter cards from stretching */
+            align-items: start;
+        }
+
+
+        /* BATTERY CARD */
+
+        .battery-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .battery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* IMAGE */
+
+        .battery-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* CONTENT */
+
+        .battery-content {
+            padding: 25px;
+        }
+
+        .battery-content h2 {
+            color: #0b1220;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .battery-content p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+
+        /* PRICE BOX */
+
+        .price-box {
+            border-left: 4px solid #19a7ce;
+            padding: 12px 15px;
+            margin-bottom: 14px;
+            background: #f8fafc;
+        }
+
+        .price-box h3 {
+            color: #0b1220;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: #19a7ce;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .price-box p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+
+        /* INFORMATION BOX */
+
+        .info-box {
+            background: #f8fafc;
+            border-left: 4px solid #19a7ce;
+            padding: 15px;
+            margin-top: 18px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .info-box p {
+            font-size: 13px;
+            margin-bottom: 0;
+            color: #555;
+        }
+
+
+        /* WHATSAPP BUTTON */
+
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 15px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+
+        /* GENERAL INFORMATION */
+
+        .battery-info {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto 70px;
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .battery-info h2 {
+            text-align: center;
+            color: #0b1220;
+            font-size: 26px;
+            margin-bottom: 18px;
+        }
+
+        .battery-info p {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .battery-info ul {
+            margin: 10px 0 20px 20px;
+            color: #555;
+        }
+
+        .battery-info li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            text-align: center;
+            font-weight: bold;
+            color: #19a7ce;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            .battery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            header img {
+                width: 150px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-intro {
+                padding: 40px 18px 25px;
+            }
+
+            .page-intro h1 {
+                font-size: 28px;
+            }
+
+            .page-intro p {
+                font-size: 14px;
+            }
+
+            .battery-grid {
+                width: 92%;
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .battery-card img {
+                height: 220px;
+            }
+
+            .battery-content {
+                padding: 22px;
+            }
+
+            .battery-info {
+                width: 92%;
+                padding: 25px 20px;
+            }
+
+            .battery-info h2 {
+                font-size: 23px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <a href="index.html">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+    </a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="repairs.html">Repairs</a>
+
+        <a href="products.html" class="active">Products</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- PAGE INTRO -->
+
+<section class="page-intro">
+
+    <h1>Laptop Batteries</h1>
+
+    <p>
+        Give your laptop the power it needs for work, study, business
+        and everyday use. Explore original and replacement battery
+        options for popular laptop brands and choose the option that
+        fits your needs and budget.
+    </p>
+
+</section>
+
+
+
+<!-- LAPTOP BATTERIES -->
+
+<section class="battery-grid">
+
+
+    <!-- HP -->
+
+    <div class="battery-card">
+
+        <img
+            src="HP%20Laptop%20Batteries.jpeg"
+            alt="HP Laptop Batteries">
+
+        <div class="battery-content">
+
+            <h2>HP Laptop Batteries</h2>
+
+            <p>
+                Keep your HP laptop powered and ready for work, study
+                and everyday use. We offer battery options for various
+                HP laptop models.
+            </p>
+
+
+            <div class="price-box">
+
+                <h3>Replacement Battery</h3>
+
+                <div class="price">
+                    KSh 2,500
+                </div>
+
+                <p>
+                    A budget-friendly option for customers looking to
+                    restore their laptop's battery performance while
+                    keeping replacement costs lower.
+                </p>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <h3>Original Battery</h3>
+
+                <div class="price">
+                    KSh 6,500
+                </div>
+
+                <p>
+                    An original battery option for customers who prefer
+                    an original part for their compatible HP laptop.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>Find the right battery</h3>
+
+                <p>
+                    Available for various HP laptop models. Please
+                    provide your exact laptop model before purchase or
+                    installation so we can confirm compatibility.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20HP%20laptop%20battery."
+                class="whatsapp-btn"
+                target="_blank">
+                💬 Ask About HP Battery
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LENOVO -->
+
+    <div class="battery-card">
+
+        <img
+            src="Lenovo%20Laptop%20Batteries.jpeg"
+            alt="Lenovo Laptop Batteries">
+
+        <div class="battery-content">
+
+            <h2>Lenovo Laptop Batteries</h2>
+
+            <p>
+                Find a suitable battery solution for your Lenovo laptop
+                and get back to working, studying or enjoying your
+                laptop without constantly searching for a power outlet.
+            </p>
+
+
+            <div class="price-box">
+
+                <h3>Replacement Battery</h3>
+
+                <div class="price">
+                    KSh 3,500
+                </div>
+
+                <p>
+                    A cost-conscious replacement option for customers
+                    who want to restore battery performance at a more
+                    affordable price.
+                </p>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <h3>Original Battery</h3>
+
+                <div class="price">
+                    KSh 6,500
+                </div>
+
+                <p>
+                    An original battery option for customers who prefer
+                    an original part for their compatible Lenovo laptop.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>Find the right battery</h3>
+
+                <p>
+                    Batteries vary across Lenovo models. Confirm your
+                    exact laptop model before purchase or installation
+                    so we can identify the appropriate battery.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Lenovo%20laptop%20battery."
+                class="whatsapp-btn"
+                target="_blank">
+                💬 Ask About Lenovo Battery
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DELL -->
+
+    <div class="battery-card">
+
+        <img
+            src="Dell%20Laptop%20Batteries.jpeg"
+            alt="Dell Laptop Batteries">
+
+        <div class="battery-content">
+
+            <h2>Dell Laptop Batteries</h2>
+
+            <p>
+                Replace a worn-out Dell laptop battery and enjoy more
+                freedom away from the charger. Options are available
+                for various Dell laptop models.
+            </p>
+
+
+            <div class="price-box">
+
+                <h3>Replacement Battery</h3>
+
+                <div class="price">
+                    KSh 3,500
+                </div>
+
+                <p>
+                    A more affordable option for customers looking to
+                    restore their laptop's battery performance.
+                </p>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <h3>Original Battery</h3>
+
+                <div class="price">
+                    KSh 6,500
+                </div>
+
+                <p>
+                    An original battery option for customers who prefer
+                    an original part for their compatible Dell laptop.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>Find the right battery</h3>
+
+                <p>
+                    Dell batteries differ between models. Confirm your
+                    exact laptop model before purchase or installation
+                    to ensure the correct battery is selected.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Dell%20laptop%20battery."
+                class="whatsapp-btn"
+                target="_blank">
+                💬 Ask About Dell Battery
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ACER -->
+
+    <div class="battery-card">
+
+        <img
+            src="Acer%20Laptop%20Batteries.jpeg"
+            alt="Acer Laptop Batteries">
+
+        <div class="battery-content">
+
+            <h2>Acer Laptop Batteries</h2>
+
+            <p>
+                Keep your Acer laptop dependable throughout your day
+                with a suitable battery option for your specific model.
+            </p>
+
+
+            <div class="price-box">
+
+                <h3>Replacement Battery</h3>
+
+                <div class="price">
+                    KSh 4,500
+                </div>
+
+                <p>
+                    A practical replacement option for customers looking
+                    to restore battery performance while managing costs.
+                </p>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <h3>Original Battery</h3>
+
+                <div class="price">
+                    KSh 7,500
+                </div>
+
+                <p>
+                    An original battery option for customers who prefer
+                    an original part for their compatible Acer laptop.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>Find the right battery</h3>
+
+                <p>
+                    Available for various Acer models. Please confirm
+                    your exact laptop model before purchase or
+                    installation.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20Acer%20laptop%20battery."
+                class="whatsapp-btn"
+                target="_blank">
+                💬 Ask About Acer Battery
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOSHIBA -->
+
+    <div class="battery-card">
+
+        <img
+            src="Toshiba%20Laptop%20Batteries.jpeg"
+            alt="Toshiba Laptop Batteries">
+
+        <div class="battery-content">
+
+            <h2>Toshiba Laptop Batteries</h2>
+
+            <p>
+                Get a suitable battery solution for your Toshiba laptop
+                and keep your device ready for work, study and everyday
+                tasks.
+            </p>
+
+
+            <div class="price-box">
+
+                <h3>Replacement Battery</h3>
+
+                <div class="price">
+                    KSh 4,500
+                </div>
+
+                <p>
+                    A practical replacement option for customers looking
+                    to restore battery performance at a lower cost.
+                </p>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <h3>Original Battery</h3>
+
+                <div class="price">
+                    KSh 7,500
+                </div>
+
+                <p>
+                    An original battery option for customers who prefer
+                    an original part for their compatible Toshiba laptop.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>Find the right battery</h3>
+
+                <p>
+                    Toshiba batteries vary by laptop model. Confirm your
+                    exact laptop model before purchase or installation
+                    so we can check compatibility.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Toshiba%20laptop%20battery."
+                class="whatsapp-btn"
+                target="_blank">
+                💬 Ask About Toshiba Battery
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- EXTERNAL LAPTOP BATTERIES -->
+
+    <div class="battery-card">
+
+        <img
+            src="External%20Laptop%20Batteries.jpeg"
+            alt="External Laptop Batteries">
+
+        <div class="battery-content">
+
+            <h2>External Laptop Batteries</h2>
+
+            <p>
+                Looking for a convenient way to keep your laptop powered
+                while away from a wall socket? Our external laptop
+                batteries provide a portable power option for compatible
+                laptops across different brands.
+            </p>
+
+
+            <div class="price-box">
+
+                <h3>External Laptop Battery</h3>
+
+                <div class="price">
+                    KSh 4,500
+                </div>
+
+                <p>
+                    A portable power solution for compatible laptops
+                    across different brands. Ideal for customers who
+                    need additional power while working or travelling.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>Check compatibility first</h3>
+
+                <p>
+                    External batteries are not universal for every
+                    laptop. Please provide your laptop brand and exact
+                    model before purchase so compatibility can be
+                    confirmed.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20external%20laptop%20battery."
+                class="whatsapp-btn"
+                target="_blank">
+                💬 Ask About External Battery
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ORIGINAL VS REPLACEMENT -->
+
+<section class="battery-info">
+
+    <h2>Original vs Replacement Laptop Batteries</h2>
+
+    <p>
+        We offer both original and replacement battery options because
+        customers have different budgets and preferences. The right
+        choice depends on your laptop model, battery availability and
+        what you are looking for in a replacement.
+    </p>
+
+
+    <ul>
+
+        <li>
+            <strong>Replacement Battery:</strong>
+            A more affordable option for customers who want to restore
+            their laptop's battery performance while keeping the
+            replacement cost lower.
+        </li>
+
+        <li>
+            <strong>Original Battery:</strong>
+            An original battery option for customers who prefer an
+            original part designed for their compatible laptop model,
+            where available.
+        </li>
+
+        <li>
+            <strong>Why are the prices different?</strong>
+            Original and replacement batteries can differ in sourcing,
+            battery type, availability and model-specific requirements.
+            This is why prices vary between the two options.
+        </li>
+
+        <li>
+            <strong>Always confirm your model:</strong>
+            Laptop batteries are model-specific. Before purchasing,
+            provide your laptop's exact model so the correct battery
+            can be identified.
+        </li>
+
+    </ul>
+
+
+    <p class="highlight">
+        The right battery starts with the right model — send us your
+        laptop model and we'll help you find the suitable option.
+    </p>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Street Gadgets Care. All Rights Reserved.
+    </p>
+
+    <p>
+        Phone & Laptop Repair • Accessories • Graphic Design
+    </p>
+
+</footer>
+
+
+</body>
+</html>
