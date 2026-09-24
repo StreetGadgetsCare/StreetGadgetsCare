@@ -6,10 +6,10 @@
 
     <title>Products | Street Gadgets Care</title>
 
-    <meta name="description"
-          content="Explore phones, laptops, smart devices and quality technology accessories from Street Gadgets Care.">
+    <meta name="description" content="Explore phones, laptops, smart devices and quality technology accessories from Street Gadgets Care.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -30,12 +30,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
         }
 
         header img {
             width: 170px;
-            max-width: 100%;
+            height: auto;
         }
 
         nav {
@@ -47,9 +46,8 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s ease;
+            font-weight: 500;
+            transition: 0.3s;
         }
 
         nav a:hover,
@@ -60,31 +58,34 @@
         /* PAGE INTRO */
         .page-intro {
             text-align: center;
-            padding: 55px 20px 40px;
-            background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, white, #f5f7fa);
         }
 
         .page-intro h1 {
-            font-size: 35px;
+            font-size: 42px;
             color: #0b1220;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .page-intro p {
-            max-width: 800px;
+            max-width: 700px;
             margin: auto;
-            color: #555;
-            font-size: 16px;
+            color: #666;
+            font-size: 17px;
         }
 
-        /* PRODUCTS GRID */
+        /* PRODUCTS */
+        .products-section {
+            padding: 20px 5% 70px;
+        }
+
         .products-grid {
-            width: 90%;
-            max-width: 1200px;
-            margin: 35px auto 70px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
         }
 
         .product-card {
@@ -93,49 +94,52 @@
             padding: 30px 25px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.3s ease;
+
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            min-height: 300px;
+
+            transition: 0.3s;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .product-icon {
-            font-size: 52px;
-            margin-bottom: 15px;
+            font-size: 55px;
+            margin-bottom: 20px;
         }
 
         .product-card h2 {
             color: #0b1220;
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 12px;
         }
 
         .product-card p {
-            color: #555;
-            font-size: 14px;
-            margin-bottom: 22px;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 25px;
         }
 
+        /* BUTTON */
         .product-btn {
             display: inline-block;
-            padding: 12px 20px;
             background: #19a7ce;
             color: white;
             text-decoration: none;
-            border-radius: 7px;
-            font-size: 14px;
+            padding: 12px 20px;
+            border-radius: 6px;
             font-weight: bold;
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
 
         .product-btn:hover {
-            background: #1288a8;
-            transform: translateY(-2px);
+            background: #1287a8;
         }
 
         /* FOOTER */
@@ -143,18 +147,24 @@
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 15px;
-            font-size: 14px;
+            padding: 25px 20px;
+            margin-top: 30px;
         }
 
         footer p {
-            margin: 4px 0;
+            margin: 5px 0;
+            color: #ccc;
         }
 
         /* TABLET */
         @media (max-width: 900px) {
+
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-intro h1 {
+                font-size: 36px;
             }
         }
 
@@ -162,12 +172,8 @@
         @media (max-width: 600px) {
 
             header {
-                justify-content: center;
+                flex-direction: column;
                 gap: 15px;
-            }
-
-            header img {
-                width: 150px;
             }
 
             nav {
@@ -175,214 +181,222 @@
                 gap: 12px;
             }
 
-            nav a {
-                font-size: 13px;
-            }
-
             .page-intro {
-                padding: 40px 18px 25px;
+                padding: 45px 20px;
             }
 
             .page-intro h1 {
-                font-size: 28px;
-            }
-
-            .page-intro p {
-                font-size: 14px;
+                font-size: 32px;
             }
 
             .products-grid {
-                width: 92%;
                 grid-template-columns: 1fr;
-                gap: 22px;
             }
 
             .product-card {
-                padding: 28px 22px;
+                min-height: 280px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
+    <!-- HEADER -->
+    <header>
 
-    <a href="index.html">
-        <img src="Logo.png" alt="Street Gadgets Care Logo">
-    </a>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html" class="active">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-</header>
-
-
-<!-- PAGE INTRO -->
-<section class="page-intro">
-
-    <h1>Products & Accessories</h1>
-
-    <p>
-        Explore our range of phones, laptops, smart devices and quality
-        technology accessories from Street Gadgets Care.
-    </p>
-
-</section>
-
-
-<!-- PRODUCTS -->
-<section class="products-grid">
-
-
-    <!-- PHONES, LAPTOPS & SMART DEVICES -->
-    <div class="product-card">
-
-        <div>
-            <div class="product-icon">📱</div>
-
-            <h2>Phones, Laptops & Smart Devices</h2>
-
-            <p>
-                Explore smartphones, laptops, button phones, smart watches
-                and other useful smart devices.
-            </p>
-        </div>
-
-        <a href="devices.html" class="product-btn">
-            View Devices →
+        <a href="index.html">
+            <img src="Logo.png" alt="Street Gadgets Care Logo">
         </a>
 
-    </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="repairs.html">Repairs</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
 
 
-    <!-- CHARGERS -->
-    <div class="product-card">
+    <!-- PAGE INTRO -->
+    <section class="page-intro">
 
-        <div>
-            <div class="product-icon">🔌</div>
+        <h1>Our Products</h1>
 
-            <h2>Chargers</h2>
+        <p>
+            Explore quality phones, laptops, smart devices and
+            technology accessories available from Street Gadgets Care.
+        </p>
 
-            <p>
-                Smartphone and laptop chargers for different devices,
-                including fast-charging and replacement options.
-            </p>
+    </section>
+
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section">
+
+        <div class="products-grid">
+
+
+            <!-- PHONES, LAPTOPS & SMART DEVICES -->
+            <div class="product-card">
+
+                <div>
+
+                    <div class="product-icon">📱</div>
+
+                    <h2>Phones, Laptops & Smart Devices</h2>
+
+                    <p>
+                        Browse our selection of phones, laptops,
+                        smart devices and other technology products.
+                    </p>
+
+                </div>
+
+                <a href="devices.html" class="product-btn">
+                    View Devices →
+                </a>
+
+            </div>
+
+
+            <!-- CHARGERS -->
+            <div class="product-card">
+
+                <div>
+
+                    <div class="product-icon">🔌</div>
+
+                    <h2>Chargers</h2>
+
+                    <p>
+                        Quality phone, laptop and other device chargers
+                        for reliable and convenient charging.
+                    </p>
+
+                </div>
+
+                <a href="chargers.html" class="product-btn">
+                    View Chargers →
+                </a>
+
+            </div>
+
+
+            <!-- CHARGING CABLES -->
+            <div class="product-card">
+
+                <div>
+
+                    <div class="product-icon">🔋</div>
+
+                    <h2>Charging Cables</h2>
+
+                    <p>
+                        Find charging and data cables for different
+                        phones, laptops and other devices.
+                    </p>
+
+                </div>
+
+                <a href="cables.html" class="product-btn">
+                    View Cables →
+                </a>
+
+            </div>
+
+
+            <!-- PHONE PROTECTION -->
+            <div class="product-card">
+
+                <div>
+
+                    <div class="product-icon">🛡️</div>
+
+                    <h2>Phone Protection</h2>
+
+                    <p>
+                        Protect your phone with quality screen protectors,
+                        cases and other phone protection accessories.
+                    </p>
+
+                </div>
+
+                <a href="phone-protection.html" class="product-btn">
+                    View Phone Protection →
+                </a>
+
+            </div>
+
+
+            <!-- REPLACEMENT BATTERIES -->
+            <div class="product-card">
+
+                <div>
+
+                    <div class="product-icon">🔋</div>
+
+                    <h2>Replacement Batteries</h2>
+
+                    <p>
+                        Replacement batteries for selected phones,
+                        laptops and other electronic devices.
+                    </p>
+
+                </div>
+
+                <a href="battery-replacement.html" class="product-btn">
+                    View Batteries →
+                </a>
+
+            </div>
+
+
+            <!-- LAPTOP ACCESSORIES -->
+            <div class="product-card">
+
+                <div>
+
+                    <div class="product-icon">💻</div>
+
+                    <h2>Laptop Accessories</h2>
+
+                    <p>
+                        Explore laptop bags, storage and memory solutions,
+                        keyboards, mice, dongles, cleaning products and
+                        other useful laptop and computer accessories.
+                    </p>
+
+                </div>
+
+                <a href="laptop-accessories.html" class="product-btn">
+                    View Laptop Accessories →
+                </a>
+
+            </div>
+
+
         </div>
 
-        <a href="chargers.html" class="product-btn">
-            View Chargers →
-        </a>
-
-    </div>
+    </section>
 
 
-    <!-- CHARGING CABLES -->
-    <div class="product-card">
+    <!-- FOOTER -->
+    <footer>
 
-        <div>
-            <div class="product-icon">🔗</div>
+        <p>
+            &copy; 2026 Street Gadgets Care. All Rights Reserved.
+        </p>
 
-            <h2>Charging Cables</h2>
+        <p>
+            Laptop & Phone Repair | Accessories | Graphic Design
+        </p>
 
-            <p>
-                Quality charging and data cables for smartphones,
-                laptops and other compatible devices.
-            </p>
-        </div>
-
-        <a href="cables.html" class="product-btn">
-            View Charging Cables →
-        </a>
-
-    </div>
-
-
-    <!-- PHONE PROTECTION -->
-    <div class="product-card">
-
-        <div>
-            <div class="product-icon">🛡️</div>
-
-            <h2>Phone Protection</h2>
-
-            <p>
-                Protect your phone with quality screen protectors,
-                phone covers and other protective accessories.
-            </p>
-        </div>
-
-        <a href="phone-protection.html" class="product-btn">
-            View Phone Protection →
-        </a>
-
-    </div>
-
-
-    <!-- REPLACEMENT BATTERIES -->
-    <div class="product-card">
-
-        <div>
-            <div class="product-icon">🔋</div>
-
-            <h2>Replacement Batteries</h2>
-
-            <p>
-                Explore replacement and original battery options for
-                phones and laptops. Choose your device category to
-                find the right battery solution.
-            </p>
-        </div>
-
-        <!-- IMPORTANT: This connects Products to Battery Replacement -->
-        <a href="battery-replacement.html" class="product-btn">
-            View Batteries →
-        </a>
-
-    </div>
-
-
-    <!-- LAPTOP BAGS -->
-    <div class="product-card">
-
-        <div>
-            <div class="product-icon">💼</div>
-
-            <h2>Laptop Bags</h2>
-
-            <p>
-                Practical laptop bags designed to help protect and
-                carry your laptop safely.
-            </p>
-        </div>
-
-        <a href="#" class="product-btn">
-            Coming Soon
-        </a>
-
-    </div>
-
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
-
-    <p>
-        Phone & Laptop Repair • Accessories • Graphic Design
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
