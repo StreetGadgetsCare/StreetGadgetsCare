@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laptop Accessories | Street Gadgets Care</title>
+
+    <meta name="description" content="Shop laptop storage, memory and computer accessories from Street Gadgets Care.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1220;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            width: 170px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #19a7ce;
+        }
+
+        /* PAGE INTRO */
+        .page-intro {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, white, #f5f7fa);
+        }
+
+        .page-intro h1 {
+            font-size: 42px;
+            color: #0b1220;
+            margin-bottom: 15px;
+        }
+
+        .page-intro p {
+            max-width: 750px;
+            margin: auto;
+            color: #666;
+            font-size: 17px;
+        }
+
+        /* SECTION */
+        .products-section {
+            padding: 20px 5% 70px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #0b1220;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* PRODUCTS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* PRODUCT CARD */
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* PRODUCT IMAGE */
+        .product-image {
+            width: 100%;
+            height: 230px;
+            object-fit: contain;
+            display: block;
+            background: #ffffff;
+            padding: 15px;
+        }
+
+        /* PRODUCT CONTENT */
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-content h3 {
+            color: #0b1220;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        /* CAPACITY / PRICE LIST */
+        .price-list {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 9px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .capacity {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .price {
+            color: #19a7ce;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* NOTE */
+        .product-note {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1220;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-intro h1 {
+                font-size: 36px;
+            }
+
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .page-intro {
+                padding: 45px 20px;
+            }
+
+            .page-intro h1 {
+                font-size: 32px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <a href="index.html">
+            <img src="Logo.png" alt="Street Gadgets Care Logo">
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="repairs.html">Repairs</a>
+
+            <a href="products.html" class="active">Products</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE INTRO -->
+    <section class="page-intro">
+
+        <h1>Laptop Accessories</h1>
+
+        <p>
+            Quality storage, memory and computer accessories
+            for laptops, desktops and other compatible devices.
+        </p>
+
+    </section>
+
+
+    <!-- LAPTOP STORAGE & MEMORY -->
+    <section class="products-section">
+
+        <div class="section-title">
+
+            <h2>Laptop Storage & Memory</h2>
+
+            <p>
+                Upgrade your laptop or computer with reliable storage
+                and memory solutions available in different capacities.
+            </p>
+
+        </div>
+
+
+        <div class="products-grid">
+
+
+            <!-- INTERNAL HDD -->
+            <div class="product-card">
+
+                <img
+                    src="internal-hdd.jpg"
+                    alt="Internal HDD"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>Internal HDD</h3>
+
+                    <p class="product-description">
+                        Reliable internal hard disk drives for laptops
+                        and computers. Suitable for additional storage
+                        and everyday data needs.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+                            <span class="capacity">500GB</span>
+                            <span class="price">KES 2,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">1TB</span>
+                            <span class="price">KES 5,500</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NVME SSD -->
+            <div class="product-card">
+
+                <img
+                    src="nvme-ssd.jpg"
+                    alt="NVMe SSD"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>NVMe SSD</h3>
+
+                    <p class="product-description">
+                        High-speed NVMe solid-state drives designed
+                        for faster boot times, quicker file transfers
+                        and improved system performance.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+                            <span class="capacity">256GB</span>
+                            <span class="price">KES 7,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">512GB</span>
+                            <span class="price">KES 15,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">1TB</span>
+                            <span class="price">KES 27,000</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2.5 SATA SSD -->
+            <div class="product-card">
+
+                <img
+                    src="sata-ssd.jpg"
+                    alt="2.5 inch SATA SSD"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>2.5&quot; SATA SSD</h3>
+
+                    <p class="product-description">
+                        Fast and reliable 2.5-inch SATA solid-state
+                        drives for compatible laptops and computers.
+                        A great upgrade from traditional hard drives.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+                            <span class="capacity">256GB</span>
+                            <span class="price">KES 7,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">512GB</span>
+                            <span class="price">KES 15,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">1TB</span>
+                            <span class="price">KES 27,000</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXTERNAL HDD -->
+            <div class="product-card">
+
+                <img
+                    src="external-hdd.jpg"
+                    alt="External HDD"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>External HDD</h3>
+
+                    <p class="product-description">
+                        Portable external hard drives for storing,
+                        backing up and transferring your important
+                        files wherever you go.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+
+                            <span class="capacity">
+                                500GB – 1TB
+                            </span>
+
+                            <span class="price">
+                                KES 5,500 – 15,000
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <p class="product-note">
+                        Price varies depending on brand and capacity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RAM -->
+            <div class="product-card">
+
+                <img
+                    src="ram-memory.jpg"
+                    alt="RAM Memory"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>RAM Memory</h3>
+
+                    <p class="product-description">
+                        Laptop and desktop RAM memory available in
+                        different capacities and compatible with
+                        PC3 and PC4 systems.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+                            <span class="capacity">4GB</span>
+                            <span class="price">KES 2,000</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">8GB</span>
+                            <span class="price">KES 6,200</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">16GB</span>
+                            <span class="price">KES 13,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">32GB</span>
+                            <span class="price">KES 27,500</span>
+                        </div>
+
+                    </div>
+
+                    <p class="product-note">
+                        PC3 and PC4 memory available. Compatibility
+                        depends on the laptop or computer model.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY CARDS -->
+            <div class="product-card">
+
+                <img
+                    src="memory-cards.jpg"
+                    alt="Memory Cards"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>Memory Cards</h3>
+
+                    <p class="product-description">
+                        Memory cards available in multiple capacities
+                        for phones, cameras, laptops and other
+                        compatible devices.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+                            <span class="capacity">16GB</span>
+                            <span class="price">KES 700</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">32GB</span>
+                            <span class="price">KES 1,550</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">64GB</span>
+                            <span class="price">KES 1,800</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">128GB</span>
+                            <span class="price">KES 4,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">256GB</span>
+                            <span class="price">KES 9,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">512GB</span>
+                            <span class="price">KES 16,500</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FLASH DRIVES -->
+            <div class="product-card">
+
+                <img
+                    src="flash-drives.jpg"
+                    alt="USB Flash Drives"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>Flash Drives</h3>
+
+                    <p class="product-description">
+                        Portable USB flash drives for convenient
+                        storage, backup and transfer of your files
+                        between compatible devices.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+                            <span class="capacity">16GB</span>
+                            <span class="price">KES 700</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">32GB</span>
+                            <span class="price">KES 1,550</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">64GB</span>
+                            <span class="price">KES 1,800</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">128GB</span>
+                            <span class="price">KES 4,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">256GB</span>
+                            <span class="price">KES 9,500</span>
+                        </div>
+
+                        <div class="price-row">
+                            <span class="capacity">512GB</span>
+                            <span class="price">KES 16,500</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Street Gadgets Care. All Rights Reserved.
+        </p>
+
+        <p>
+            Laptop & Phone Repair | Accessories | Graphic Design
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
