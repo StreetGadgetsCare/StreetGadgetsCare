@@ -7,9 +7,10 @@
     <title>Battery Replacement | Street Gadgets Care</title>
 
     <meta name="description"
-          content="Phone and laptop battery replacement options from Street Gadgets Care. Choose phone batteries or laptop batteries.">
+          content="Choose phone or laptop battery replacement options from Street Gadgets Care.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,7 +24,9 @@
             line-height: 1.6;
         }
 
+
         /* HEADER */
+
         header {
             background: #0b1220;
             padding: 15px 5%;
@@ -52,14 +55,17 @@
             transition: 0.3s ease;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a.active {
             color: #19a7ce;
         }
 
+
         /* PAGE INTRO */
+
         .page-intro {
             text-align: center;
-            padding: 55px 20px 35px;
+            padding: 55px 20px 40px;
             background: linear-gradient(to bottom, #ffffff, #f5f7fa);
         }
 
@@ -70,115 +76,157 @@
         }
 
         .page-intro p {
-            max-width: 780px;
+            max-width: 800px;
             margin: auto;
             color: #555;
             font-size: 16px;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 18px;
-            color: #19a7ce;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
 
         /* CATEGORY GRID */
-        .category-grid {
+
+        .battery-grid {
             width: 90%;
             max-width: 1000px;
-            margin: 35px auto 65px;
+            margin: 35px auto 70px;
+
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            gap: 28px;
+
+            align-items: start;
         }
 
-        .category-card {
+
+        /* CATEGORY CARD */
+
+        .battery-card {
             background: white;
-            border-radius: 14px;
-            padding: 38px 30px;
+            border-radius: 12px;
+            padding: 30px 25px;
             text-align: center;
-            box-shadow: 0 5px 22px rgba(0, 0, 0, 0.08);
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
             transition: 0.3s ease;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .category-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+        .battery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
         }
 
-        .category-icon {
-            font-size: 58px;
-            margin-bottom: 16px;
+
+        /* ICON */
+
+        .battery-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
         }
 
-        .category-card h2 {
+
+        /* CARD TEXT */
+
+        .battery-card h2 {
             color: #0b1220;
-            font-size: 26px;
+            font-size: 23px;
             margin-bottom: 12px;
         }
 
-        .category-card p {
+        .battery-card p {
             color: #555;
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 24px;
+            font-size: 14px;
+            margin-bottom: 22px;
         }
 
-        .category-btn {
+
+        /* BUTTON */
+
+        .battery-btn {
             display: inline-block;
-            padding: 12px 25px;
+
+            padding: 12px 20px;
+
             background: #19a7ce;
             color: white;
+
             text-decoration: none;
+
             border-radius: 7px;
+
             font-size: 14px;
             font-weight: bold;
+
             transition: 0.3s ease;
         }
 
-        .category-btn:hover {
+        .battery-btn:hover {
             background: #1288a8;
             transform: translateY(-2px);
         }
 
+
         /* INFORMATION SECTION */
-        .info-section {
+
+        .battery-info {
             width: 90%;
             max-width: 1000px;
-            margin: 0 auto 60px;
+
+            margin: 0 auto 70px;
+
             background: white;
-            padding: 35px;
+
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+            padding: 35px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .battery-info h2 {
             text-align: center;
-        }
 
-        .info-section h2 {
             color: #0b1220;
+
             font-size: 26px;
-            margin-bottom: 14px;
+
+            margin-bottom: 18px;
         }
 
-        .info-section p {
-            max-width: 850px;
-            margin: auto;
+        .battery-info p {
             color: #555;
-            font-size: 14px;
-            line-height: 1.8;
+
+            font-size: 15px;
+
+            margin-bottom: 15px;
         }
+
+        .battery-info ul {
+            margin: 10px 0 20px 20px;
+
+            color: #555;
+        }
+
+        .battery-info li {
+            margin-bottom: 10px;
+        }
+
 
         /* FOOTER */
+
         footer {
             background: #0b1220;
+
             color: white;
+
             text-align: center;
+
             padding: 25px 15px;
+
             font-size: 14px;
         }
 
@@ -186,8 +234,21 @@
             margin: 4px 0;
         }
 
-        /* TABLET / MOBILE */
-        @media (max-width: 700px) {
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            .battery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
 
             header {
                 justify-content: center;
@@ -219,145 +280,235 @@
                 font-size: 14px;
             }
 
-            .category-grid {
+            .battery-grid {
                 width: 92%;
                 grid-template-columns: 1fr;
                 gap: 22px;
             }
 
-            .category-card {
-                padding: 30px 22px;
+            .battery-card {
+                padding: 28px 22px;
             }
 
-            .info-section {
+            .battery-info {
                 width: 92%;
                 padding: 25px 20px;
             }
 
-            .info-section h2 {
+            .battery-info h2 {
                 font-size: 23px;
             }
+
         }
+
     </style>
 </head>
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
     <a href="index.html">
-        <img src="Logo.png" alt="Street Gadgets Care Logo">
+
+        <img
+            src="Logo.png"
+            alt="Street Gadgets Care Logo">
+
     </a>
 
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="repairs.html">
+            Repairs
+        </a>
+
+        <a href="products.html"
+           class="active">
+            Products
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
     </nav>
 
 </header>
 
 
+
 <!-- PAGE INTRO -->
+
 <section class="page-intro">
 
     <h1>Battery Replacement</h1>
 
     <p>
-        Whether your phone or laptop is struggling to hold a charge,
-        we can help you find the right battery solution. Choose your
-        device category below to explore available replacement and
-        original battery options.
+        Give your device a new lease of life with the right battery.
+        Choose between phone and laptop battery options and find a
+        suitable solution for your device.
     </p>
 
-    <a href="products.html" class="back-link">
-        ← Back to Products
-    </a>
-
 </section>
+
 
 
 <!-- BATTERY CATEGORIES -->
-<section class="category-grid">
+
+<section class="battery-grid">
 
 
     <!-- PHONE BATTERIES -->
-    <div class="category-card">
 
-        <div class="category-icon">
-            📱
+    <div class="battery-card">
+
+        <div>
+
+            <div class="battery-icon">
+                📱
+            </div>
+
+            <h2>
+                Phone Batteries
+            </h2>
+
+            <p>
+                Explore replacement and original battery options for
+                popular phone brands including OPPO, Samsung, iPhone,
+                Nokia, Tecno, Infinix and Xiaomi.
+            </p>
+
         </div>
 
-        <h2>Phone Batteries</h2>
 
-        <p>
-            Explore replacement and original battery options for
-            iPhone, Samsung, OPPO, Nokia, Tecno, Infinix, Xiaomi
-            and other supported phone models.
-        </p>
+        <a
+            href="phone-batteries.html"
+            class="battery-btn">
 
-        <a href="phone-batteries.html" class="category-btn">
             View Phone Batteries →
+
         </a>
 
     </div>
+
 
 
     <!-- LAPTOP BATTERIES -->
-    <div class="category-card">
 
-        <div class="category-icon">
-            💻
+    <div class="battery-card">
+
+        <div>
+
+            <div class="battery-icon">
+                💻
+            </div>
+
+            <h2>
+                Laptop Batteries
+            </h2>
+
+            <p>
+                Find original and replacement battery options for
+                popular laptop brands including HP, Lenovo, Dell,
+                Acer, Toshiba and external multi-brand laptop batteries.
+            </p>
+
         </div>
 
-        <h2>Laptop Batteries</h2>
 
-        <p>
-            Explore replacement and original battery options for
-            HP, Dell, Lenovo, Acer, ASUS, Toshiba and other supported
-            laptop models.
-        </p>
+        <a
+            href="laptop-batteries.html"
+            class="battery-btn">
 
-        <a href="laptop-batteries.html" class="category-btn">
             View Laptop Batteries →
+
         </a>
 
     </div>
 
-
 </section>
+
 
 
 <!-- INFORMATION -->
-<section class="info-section">
 
-    <h2>Choose the Right Battery for Your Device</h2>
+<section class="battery-info">
+
+    <h2>
+        Choose the Right Battery for Your Device
+    </h2>
+
 
     <p>
-        Battery requirements vary from one device model to another.
-        At Street Gadgets Care, we help you identify the correct battery
-        option before installation. Whether you need an affordable
-        replacement or prefer an original battery where available,
-        contact us with your exact device model for confirmation and
-        an accurate quotation.
+        Battery replacement is an important part of keeping your
+        phone or laptop reliable and ready for everyday use. At
+        Street Gadgets Care, we provide different battery options
+        to suit different devices, budgets and customer preferences.
     </p>
+
+
+    <ul>
+
+        <li>
+            <strong>Phone Batteries:</strong>
+            Replacement and original battery options are available
+            for selected phone brands and models.
+        </li>
+
+        <li>
+            <strong>Laptop Batteries:</strong>
+            Original and replacement options are available for
+            various laptop brands and models.
+        </li>
+
+        <li>
+            <strong>Exact model matters:</strong>
+            Batteries are not universal. Always provide your exact
+            device model so the correct battery can be identified.
+        </li>
+
+        <li>
+            <strong>Professional installation:</strong>
+            We can help you identify the suitable battery and
+            professionally install it for your device.
+        </li>
+
+    </ul>
 
 </section>
 
 
+
 <!-- FOOTER -->
+
 <footer>
 
-    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
+    <p>
+        © 2026 Street Gadgets Care. All Rights Reserved.
+    </p>
 
     <p>
         Phone & Laptop Repair • Accessories • Graphic Design
     </p>
 
 </footer>
+
 
 </body>
 </html>
