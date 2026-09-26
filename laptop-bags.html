@@ -7,9 +7,10 @@
     <title>Laptop Bags | Street Gadgets Care</title>
 
     <meta name="description"
-          content="Shop quality laptop bags at Street Gadgets Care. Choose from a range of laptop bags at affordable prices.">
+          content="Shop quality laptop bags at Street Gadgets Care. Choose from different laptop bag styles and price ranges for work, school, travel and everyday use.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,24 +24,27 @@
             line-height: 1.6;
         }
 
+        /* HEADER */
         header {
             background: #0b1220;
-            padding: 18px 7%;
+            padding: 15px 6%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .logo {
-            height: 55px;
-            width: auto;
+        .logo img {
+            width: 180px;
+            height: auto;
+            display: block;
         }
 
         nav {
             display: flex;
             gap: 22px;
             flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         nav a {
@@ -48,104 +52,139 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
+            transition: 0.3s ease;
         }
 
         nav a:hover {
             color: #19a7ce;
         }
 
-        .hero {
-            background: linear-gradient(135deg, #0b1220, #123047);
-            color: white;
-            text-align: center;
-            padding: 65px 20px;
+        nav a.active {
+            color: #19a7ce;
         }
 
-        .hero h1 {
-            font-size: 38px;
+        /* PAGE INTRO */
+        .page-intro {
+            text-align: center;
+            padding: 55px 20px 35px;
+            background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+        }
+
+        .page-intro h1 {
+            font-size: 36px;
+            color: #0b1220;
             margin-bottom: 12px;
         }
 
-        .hero p {
-            max-width: 700px;
+        .page-intro p {
+            max-width: 750px;
             margin: auto;
-            color: #dce7ee;
+            color: #666;
             font-size: 16px;
         }
 
+        /* SECTION */
         .section {
+            width: 90%;
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin: 0 auto 60px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .section-title h2 {
-            font-size: 30px;
             color: #0b1220;
+            font-size: 28px;
             margin-bottom: 8px;
         }
 
         .section-title p {
             color: #666;
+            font-size: 15px;
         }
 
+        /* PRODUCT GRID */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 25px;
         }
 
+        /* PRODUCT CARD */
         .product-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             transition: 0.3s ease;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
         }
 
-        .product-card img {
+        /* PRODUCT IMAGE */
+        .product-image {
             width: 100%;
             height: 260px;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
+            background: #ffffff;
+            padding: 15px;
         }
 
-        .product-info {
-            padding: 22px;
+        /* PRODUCT CONTENT */
+        .product-content {
+            padding: 20px;
         }
 
-        .product-info h3 {
+        .product-content h3 {
             color: #0b1220;
             font-size: 20px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        .product-info p {
+        .product-description {
             color: #666;
             font-size: 14px;
-            margin-bottom: 14px;
-        }
-
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #19a7ce;
             margin-bottom: 15px;
         }
 
+        /* PRICE */
+        .price-list {
+            margin-top: 10px;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .capacity {
+            color: #555;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .price {
+            color: #19a7ce;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        /* WHATSAPP BUTTON */
         .whatsapp-btn {
             display: block;
-            margin-top: 15px;
+            margin-top: 18px;
             padding: 12px 15px;
             background: #25D366;
             color: white;
@@ -162,310 +201,437 @@
             transform: translateY(-2px);
         }
 
+        /* BACK BUTTON */
+        .back-container {
+            text-align: center;
+            margin: 10px 0 60px;
+        }
+
         .back-btn {
             display: inline-block;
-            margin-top: 35px;
             padding: 12px 20px;
-            background: #0b1220;
+            background: #19a7ce;
             color: white;
             text-decoration: none;
             border-radius: 7px;
+            font-size: 14px;
             font-weight: bold;
+            transition: 0.3s ease;
         }
 
         .back-btn:hover {
-            background: #19a7ce;
+            background: #0b8daf;
+            transform: translateY(-2px);
         }
 
+        /* FOOTER */
         footer {
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 20px;
-            margin-top: 60px;
+            padding: 25px 15px;
+            font-size: 14px;
         }
 
         footer p {
-            font-size: 14px;
-            color: #cbd5df;
+            margin: 5px 0;
         }
 
+        footer a {
+            color: #19a7ce;
+            text-decoration: none;
+        }
+
+        /* TABLET */
         @media (max-width: 900px) {
+
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            header {
+                padding: 15px 4%;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
         }
 
+        /* MOBILE */
         @media (max-width: 600px) {
+
             header {
-                justify-content: center;
-                gap: 15px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo img {
+                width: 160px;
             }
 
             nav {
                 justify-content: center;
-                gap: 14px;
+                gap: 12px;
             }
 
-            .hero h1 {
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-intro {
+                padding: 40px 18px 30px;
+            }
+
+            .page-intro h1 {
                 font-size: 30px;
+            }
+
+            .page-intro p {
+                font-size: 14px;
             }
 
             .products-grid {
                 grid-template-columns: 1fr;
             }
 
-            .product-card img {
-                height: 280px;
+            .product-image {
+                height: 250px;
             }
+
+            .section {
+                width: 92%;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
-<header>
+    <!-- HEADER -->
+    <header>
 
-    <a href="index.html">
-        <img src="Logo.png" alt="Street Gadgets Care Logo" class="logo">
-    </a>
+        <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Street Gadgets Care Logo">
+        </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="repairs.html">Repairs</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-</header>
-
-
-<section class="hero">
-
-    <h1>Laptop Bags</h1>
-
-    <p>
-        Protect and carry your laptop with our selection of
-        quality laptop bags suitable for everyday use, work and travel.
-    </p>
-
-</section>
+    </header>
 
 
-<section class="section">
+    <!-- PAGE INTRO -->
+    <section class="page-intro">
 
-    <div class="section-title">
-
-        <h2>Available Laptop Bags</h2>
+        <h1>Laptop Bags</h1>
 
         <p>
-            Choose a laptop bag that fits your needs and budget.
+            Protect and carry your laptop with confidence.
+            Explore our selection of quality laptop bags suitable
+            for work, school, travel and everyday use.
         </p>
 
-    </div>
+    </section>
 
 
-    <div class="products-grid">
+    <!-- LAPTOP BAGS -->
+    <section class="section">
 
+        <div class="section-title">
 
-        <!-- LAPTOP BAG 1 -->
+            <h2>Available Laptop Bags</h2>
 
-        <div class="product-card">
-
-            <img src="laptop-bag-1.jpg"
-                 alt="Laptop Bag 1">
-
-            <div class="product-info">
-
-                <h3>Laptop Bag 1</h3>
-
-                <p>
-                    Quality laptop bag designed to provide convenient
-                    storage and protection for your laptop and accessories.
-                </p>
-
-                <div class="price">
-                    KES 5,500
-                </div>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%201."
-                    class="whatsapp-btn"
-                    target="_blank">
-                    Inquire on WhatsApp
-                </a>
-
-            </div>
+            <p>
+                Choose from different styles and price ranges.
+            </p>
 
         </div>
 
 
-        <!-- LAPTOP BAG 2 -->
+        <div class="products-grid">
 
-        <div class="product-card">
 
-            <img src="laptop-bag-2.jpg"
-                 alt="Laptop Bag 2">
+            <!-- BAG 1 -->
+            <div class="product-card">
 
-            <div class="product-info">
+                <img src="laptop-bag-1.jpg"
+                     alt="Laptop Bag 1"
+                     class="product-image">
 
-                <h3>Laptop Bag 2</h3>
+                <div class="product-content">
 
-                <p>
-                    Practical laptop bag offering comfortable carrying
-                    and useful space for your laptop and everyday essentials.
-                </p>
+                    <h3>Laptop Bag 1</h3>
 
-                <div class="price">
-                    KES 4,000
+                    <p class="product-description">
+                        Quality laptop bag suitable for carrying
+                        your laptop safely to work, school or travel.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+
+                            <span class="capacity">
+                                Price
+                            </span>
+
+                            <span class="price">
+                                KES 5,500
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%201%20priced%20at%20KES%205%2C500."
+                       class="whatsapp-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Order on WhatsApp
+                    </a>
+
                 </div>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%202."
-                    class="whatsapp-btn"
-                    target="_blank">
-                    Inquire on WhatsApp
-                </a>
 
             </div>
 
-        </div>
 
+            <!-- BAG 2 -->
+            <div class="product-card">
 
-        <!-- LAPTOP BAG 3 -->
+                <img src="laptop-bag-2.jpg"
+                     alt="Laptop Bag 2"
+                     class="product-image">
 
-        <div class="product-card">
+                <div class="product-content">
 
-            <img src="laptop-bag-3.jpg"
-                 alt="Laptop Bag 3">
+                    <h3>Laptop Bag 2</h3>
 
-            <div class="product-info">
+                    <p class="product-description">
+                        Practical laptop bag designed for everyday
+                        laptop protection and convenient carrying.
+                    </p>
 
-                <h3>Laptop Bag 3</h3>
+                    <div class="price-list">
 
-                <p>
-                    Stylish and practical laptop bag suitable for
-                    carrying your laptop safely at work, school or travel.
-                </p>
+                        <div class="price-row">
 
-                <div class="price">
-                    KES 2,200
+                            <span class="capacity">
+                                Price
+                            </span>
+
+                            <span class="price">
+                                KES 4,000
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%202%20priced%20at%20KES%204%2C000."
+                       class="whatsapp-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Order on WhatsApp
+                    </a>
+
                 </div>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%203."
-                    class="whatsapp-btn"
-                    target="_blank">
-                    Inquire on WhatsApp
-                </a>
 
             </div>
 
-        </div>
 
+            <!-- BAG 3 -->
+            <div class="product-card">
 
-        <!-- LAPTOP BAG 4 -->
+                <img src="laptop-bag-3.jpg"
+                     alt="Laptop Bag 3"
+                     class="product-image">
 
-        <div class="product-card">
+                <div class="product-content">
 
-            <img src="laptop-bag-4.jpg"
-                 alt="Laptop Bag 4">
+                    <h3>Laptop Bag 3</h3>
 
-            <div class="product-info">
+                    <p class="product-description">
+                        Affordable laptop bag offering a convenient
+                        way to carry and protect your laptop.
+                    </p>
 
-                <h3>Laptop Bag 4</h3>
+                    <div class="price-list">
 
-                <p>
-                    Affordable laptop bag offering a convenient way
-                    to carry and protect your laptop and accessories.
-                </p>
+                        <div class="price-row">
 
-                <div class="price">
-                    KES 1,500
+                            <span class="capacity">
+                                Price
+                            </span>
+
+                            <span class="price">
+                                KES 2,200
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%203%20priced%20at%20KES%202%2C200."
+                       class="whatsapp-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Order on WhatsApp
+                    </a>
+
                 </div>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%204."
-                    class="whatsapp-btn"
-                    target="_blank">
-                    Inquire on WhatsApp
-                </a>
 
             </div>
 
-        </div>
 
+            <!-- BAG 4 -->
+            <div class="product-card">
 
-        <!-- LAPTOP BAG 5 -->
+                <img src="laptop-bag-4.jpg"
+                     alt="Laptop Bag 4"
+                     class="product-image">
 
-        <div class="product-card">
+                <div class="product-content">
 
-            <img src="laptop-bag-5.jpg"
-                 alt="Laptop Bag 5">
+                    <h3>Laptop Bag 4</h3>
 
-            <div class="product-info">
+                    <p class="product-description">
+                        Simple and reliable laptop bag suitable for
+                        everyday use, school and office work.
+                    </p>
 
-                <h3>Laptop Bag 5</h3>
+                    <div class="price-list">
 
-                <p>
-                    Compact and practical laptop bag for everyday
-                    laptop carrying and protection.
-                </p>
+                        <div class="price-row">
 
-                <div class="price">
-                    KES 1,500
+                            <span class="capacity">
+                                Price
+                            </span>
+
+                            <span class="price">
+                                KES 1,500
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%204%20priced%20at%20KES%201%2C500."
+                       class="whatsapp-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Order on WhatsApp
+                    </a>
+
                 </div>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%205."
-                    class="whatsapp-btn"
-                    target="_blank">
-                    Inquire on WhatsApp
-                </a>
 
             </div>
 
-        </div>
 
+            <!-- BAG 5 -->
+            <div class="product-card">
 
-        <!-- LAPTOP BAG 6 -->
+                <img src="laptop-bag-5.jpg"
+                     alt="Laptop Bag 5"
+                     class="product-image">
 
-        <div class="product-card">
+                <div class="product-content">
 
-            <img src="laptop-bag-6.jpg"
-                 alt="Laptop Bag 6">
+                    <h3>Laptop Bag 5</h3>
 
-            <div class="product-info">
+                    <p class="product-description">
+                        Compact and practical laptop bag for
+                        everyday laptop carrying and protection.
+                    </p>
 
-                <h3>Laptop Bag 6</h3>
+                    <div class="price-list">
 
-                <p>
-                    Budget-friendly laptop bag for convenient everyday
-                    laptop carrying and basic protection.
-                </p>
+                        <div class="price-row">
 
-                <div class="price">
-                    KES 1,000
+                            <span class="capacity">
+                                Price
+                            </span>
+
+                            <span class="price">
+                                KES 1,500
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%205%20priced%20at%20KES%201%2C500."
+                       class="whatsapp-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Order on WhatsApp
+                    </a>
+
                 </div>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%206."
-                    class="whatsapp-btn"
-                    target="_blank">
-                    Inquire on WhatsApp
-                </a>
 
             </div>
 
+
+            <!-- BAG 6 -->
+            <div class="product-card">
+
+                <img src="laptop-bag-6.jpg"
+                     alt="Laptop Bag 6"
+                     class="product-image">
+
+                <div class="product-content">
+
+                    <h3>Laptop Bag 6</h3>
+
+                    <p class="product-description">
+                        Budget-friendly laptop bag suitable for
+                        everyday carrying and basic laptop protection.
+                    </p>
+
+                    <div class="price-list">
+
+                        <div class="price-row">
+
+                            <span class="capacity">
+                                Price
+                            </span>
+
+                            <span class="price">
+                                KES 1,000
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20Laptop%20Bag%206%20priced%20at%20KES%201%2C000."
+                       class="whatsapp-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Order on WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
         </div>
 
+    </section>
 
-    </div>
 
-
-    <div style="text-align: center;">
+    <!-- BACK BUTTON -->
+    <div class="back-container">
 
         <a href="laptop-accessories.html" class="back-btn">
             ← Back to Laptop Accessories
@@ -473,16 +639,27 @@
 
     </div>
 
-</section>
 
+    <!-- FOOTER -->
+    <footer>
 
-<footer>
+        <p>
+            © 2026 Street Gadgets Care. All Rights Reserved.
+        </p>
 
-    <p>
-        © 2026 Street Gadgets Care. All Rights Reserved.
-    </p>
+        <p>
+            Laptop & Phone Repair • Accessories • Graphic Design
+        </p>
 
-</footer>
+        <p>
+            <a href="mailto:streetgadgetscare@gmail.com">
+                streetgadgetscare@gmail.com
+            </a>
+            |
+            0114259961
+        </p>
+
+    </footer>
 
 </body>
 </html>
