@@ -6,7 +6,8 @@
 
     <title>Laptop Accessories | Street Gadgets Care</title>
 
-    <meta name="description" content="Shop laptop bags, storage, memory and computer accessories from Street Gadgets Care.">
+    <meta name="description"
+          content="Shop laptop bags, storage, memory and computer accessories from Street Gadgets Care.">
 
     <style>
 
@@ -147,6 +148,43 @@
             margin-bottom: 18px;
         }
 
+        /* CATEGORY CARD */
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .category-card .product-content {
+            padding: 25px;
+        }
+
+        .category-btn {
+            display: block;
+            margin-top: 18px;
+            padding: 12px 15px;
+            background: #19a7ce;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: #0b8daf;
+            transform: translateY(-2px);
+        }
+
         /* CAPACITY / PRICE LIST */
         .price-list {
             border-top: 1px solid #e5e5e5;
@@ -197,32 +235,21 @@
             transform: translateY(-2px);
         }
 
-        /* CATEGORY BUTTON */
-        .category-btn {
-            display: block;
-            margin-top: 18px;
-            padding: 12px 15px;
-            background: #19a7ce;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 7px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        .category-btn:hover {
-            background: #0b8daf;
-            transform: translateY(-2px);
-        }
-
         /* NOTE */
         .product-note {
             margin-top: 15px;
             font-size: 13px;
             color: #777;
             font-style: italic;
+        }
+
+        /* DIVIDER */
+        .section-divider {
+            width: 90%;
+            max-width: 1200px;
+            height: 1px;
+            background: #e1e5e9;
+            margin: 0 auto 20px;
         }
 
         /* FOOTER */
@@ -324,16 +351,16 @@
     </section>
 
 
-    <!-- LAPTOP BAGS -->
+    <!-- ACCESSORIES CATEGORIES -->
     <section class="products-section">
 
         <div class="section-title">
 
-            <h2>Laptop Bags</h2>
+            <h2>Browse Laptop Accessories</h2>
 
             <p>
-                Carry and protect your laptop with our selection
-                of quality laptop bags available at different prices.
+                Explore our range of laptop bags, storage, memory
+                and computer accessories.
             </p>
 
         </div>
@@ -342,8 +369,8 @@
         <div class="products-grid">
 
 
-            <!-- LAPTOP BAGS CATEGORY CARD -->
-            <div class="product-card">
+            <!-- LAPTOP BAGS CATEGORY -->
+            <div class="category-card">
 
                 <img
                     src="laptop-bag-1.jpg"
@@ -356,19 +383,10 @@
                     <h3>Laptop Bags</h3>
 
                     <p class="product-description">
-                        Explore our selection of laptop bags suitable
-                        for work, school, travel and everyday use.
-                        Choose from different styles and price ranges.
+                        Quality laptop bags suitable for work, school,
+                        travel and everyday use. Choose from different
+                        styles and price ranges.
                     </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">Available Bags</span>
-                            <span class="price">From KES 1,000</span>
-                        </div>
-
-                    </div>
 
                     <a
                         href="laptop-bags.html"
@@ -382,21 +400,87 @@
             </div>
 
 
+            <!-- LAPTOP STORAGE & MEMORY CATEGORY -->
+            <div class="category-card">
+
+                <img
+                    src="nvme-ssd.jpg"
+                    alt="Laptop Storage and Memory"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>Laptop Storage & Memory</h3>
+
+                    <p class="product-description">
+                        Upgrade your laptop or computer with HDDs,
+                        SSDs, RAM, memory cards, flash drives and
+                        other storage solutions.
+                    </p>
+
+                    <a
+                        href="#storage-memory"
+                        class="category-btn"
+                    >
+                        View Storage & Memory ↓
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- LAPTOP & COMPUTER ACCESSORIES CATEGORY -->
+            <div class="category-card">
+
+                <img
+                    src="Logo.png"
+                    alt="Laptop and Computer Accessories"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+
+                    <h3>Laptop & Computer Accessories</h3>
+
+                    <p class="product-description">
+                        Browse useful computer accessories including
+                        laptop keyboards, foam cleaner, wireless mice,
+                        Wi-Fi dongles and Bluetooth dongles.
+                    </p>
+
+                    <a
+                        href="#computer-accessories"
+                        class="category-btn"
+                    >
+                        Coming Soon
+                    </a>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </section>
 
 
+    <div class="section-divider"></div>
+
+
     <!-- LAPTOP STORAGE & MEMORY -->
-    <section class="products-section">
+    <section class="products-section" id="storage-memory">
 
         <div class="section-title">
 
             <h2>Laptop Storage & Memory</h2>
 
             <p>
-                Upgrade your laptop or computer with reliable storage
-                and memory solutions available in different capacities.
+                Reliable storage and memory solutions available
+                in different capacities for compatible laptops
+                and computers.
             </p>
 
         </div>
@@ -442,6 +526,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20an%20Internal%20HDD."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -493,6 +578,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20an%20NVMe%20SSD."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -544,6 +630,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%202.5%20SATA%20SSD."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -596,6 +683,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20an%20External%20HDD."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -657,6 +745,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20RAM%20Memory."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -723,6 +812,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%20Memory%20Card."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -789,6 +879,7 @@
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%20USB%20Flash%20Drive."
                         class="whatsapp-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Inquire on WhatsApp
                     </a>
@@ -797,6 +888,24 @@
 
             </div>
 
+
+        </div>
+
+    </section>
+
+
+    <!-- COMING SOON -->
+    <section class="products-section" id="computer-accessories">
+
+        <div class="section-title">
+
+            <h2>Laptop & Computer Accessories</h2>
+
+            <p>
+                More useful computer accessories are being added.
+                Check back soon for laptop keyboards, foam cleaner,
+                wireless mice, Wi-Fi dongles and Bluetooth dongles.
+            </p>
 
         </div>
 
