@@ -1,687 +1,649 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Products | Street Gadgets Care</title>
-
-<meta name="description" content="Explore phones, laptops, smart devices, chargers, cables, phone protection, replacement batteries and laptop accessories from Street Gadgets Care.">
-
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-    color:#17202a;
-    line-height:1.6;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    background:#0b1220;
-    color:white;
-    padding:14px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-}
-
-.logo a{
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    width:150px;
-    height:55px;
-    object-fit:contain;
-    display:block;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:24px;
-    flex-wrap:wrap;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-    transition:.25s ease;
-}
-
-nav a:hover,
-nav a.active{
-    color:#19a7ce;
-}
-
-/* =========================
-   PAGE HERO
-========================= */
-
-.page-intro{
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(25,167,206,.13),
-            transparent 30%
-        ),
-        #0b1220;
-    color:white;
-    text-align:center;
-    padding:78px 6% 82px;
-    position:relative;
-    overflow:hidden;
-}
-
-.page-intro::after{
-    content:"";
-    position:absolute;
-    width:360px;
-    height:360px;
-    border:1px solid rgba(25,167,206,.08);
-    border-radius:50%;
-    right:-150px;
-    bottom:-180px;
-}
-
-.page-intro small{
-    color:#19a7ce;
-    font-size:12px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-.page-intro h1{
-    font-size:48px;
-    line-height:1.15;
-    margin:10px 0 15px;
-    position:relative;
-    z-index:1;
-}
-
-.page-intro p{
-    max-width:700px;
-    margin:auto;
-    color:#c7d0dc;
-    font-size:16px;
-    position:relative;
-    z-index:1;
-}
-
-/* =========================
-   PRODUCTS SECTION
-========================= */
-
-.products-section{
-    padding:75px 6%;
-}
-
-.products-grid{
-    max-width:1150px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-/* =========================
-   PRODUCT CARD
-========================= */
-
-.product-card{
-    background:white;
-    border:1px solid #e9edf2;
-    border-radius:14px;
-    padding:30px;
-    min-height:325px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    box-shadow:0 6px 25px rgba(11,18,32,.05);
-
-    transition:.3s ease;
-}
-
-.product-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 13px 32px rgba(11,18,32,.10);
-    border-color:#d8edf2;
-}
-
-/* ICON */
-
-.product-icon{
-    width:56px;
-    height:56px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#e7f7fb;
-    color:#19a7ce;
-
-    border-radius:12px;
-
-    font-size:22px;
-
-    margin-bottom:22px;
-}
-
-.product-card h2{
-    color:#0b1220;
-    font-size:21px;
-    line-height:1.3;
-    margin-bottom:10px;
-}
-
-.product-card p{
-    color:#667085;
-    font-size:14px;
-    line-height:1.65;
-}
-
-/* BUTTON */
-
-.product-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-
-    margin-top:25px;
-
-    background:#19a7ce;
-    color:white;
-
-    text-decoration:none;
-
-    padding:12px 17px;
-
-    border-radius:7px;
-
-    font-size:13px;
-    font-weight:700;
-
-    transition:.25s ease;
-}
-
-.product-btn:hover{
-    background:#1287a8;
-    transform:translateY(-1px);
-}
-
-.product-btn i{
-    font-size:11px;
-}
-
-/* =========================
-   PRODUCT NOTE
-========================= */
-
-.product-note{
-    max-width:850px;
-    margin:0 auto 65px;
-
-    text-align:center;
-    background:#eaf8fc;
-    border:1px solid #d5f0f6;
-    border-radius:12px;
-
-    padding:22px 25px;
-}
-
-.product-note strong{
-    display:block;
-    color:#0b1220;
-    margin-bottom:4px;
-    font-size:15px;
-}
-
-.product-note p{
-    color:#667085;
-    font-size:13px;
-}
-
-/* =========================
-   LAPTOP ACCESSORIES FEATURE
-========================= */
-
-.feature-section{
-    padding:0 6% 75px;
-}
-
-.feature-box{
-    max-width:1150px;
-    margin:auto;
-
-    background:#0b1220;
-    color:white;
-
-    border-radius:16px;
-    padding:40px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:35px;
-
-    position:relative;
-    overflow:hidden;
-}
-
-.feature-box::after{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    border:1px solid rgba(25,167,206,.10);
-    border-radius:50%;
-    right:-120px;
-    top:-120px;
-}
-
-.feature-content{
-    max-width:720px;
-    position:relative;
-    z-index:1;
-}
-
-.feature-label{
-    color:#19a7ce;
-    text-transform:uppercase;
-    letter-spacing:1.8px;
-    font-size:11px;
-    font-weight:700;
-}
-
-.feature-box h2{
-    font-size:28px;
-    margin:8px 0 10px;
-}
-
-.feature-box p{
-    color:#b9c2cf;
-    font-size:14px;
-}
-
-.feature-btn{
-    flex-shrink:0;
-
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    background:#19a7ce;
-    color:white;
-
-    text-decoration:none;
-
-    padding:13px 20px;
-
-    border-radius:7px;
-
-    font-size:13px;
-    font-weight:700;
-
-    transition:.25s ease;
-
-    position:relative;
-    z-index:1;
-}
-
-.feature-btn:hover{
-    background:#1287a8;
-    transform:translateY(-2px);
-}
-
-/* =========================
-   CTA
-========================= */
-
-.products-cta{
-    background:#19a7ce;
-    color:white;
-    text-align:center;
-    padding:65px 6%;
-}
-
-.products-cta h2{
-    font-size:34px;
-    margin-bottom:10px;
-}
-
-.products-cta p{
-    max-width:600px;
-    margin:0 auto 23px;
-    font-size:15px;
-}
-
-.cta-buttons{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.cta-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-
-    padding:12px 20px;
-    border-radius:7px;
-
-    text-decoration:none;
-    font-size:13px;
-    font-weight:700;
-
-    transition:.25s ease;
-}
-
-.cta-whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-.cta-contact{
-    background:white;
-    color:#0b1220;
-}
-
-.cta-btn:hover{
-    transform:translateY(-2px);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#070d18;
-    color:#aeb8c5;
-    text-align:center;
-    padding:40px 6%;
-}
-
-footer strong{
-    color:white;
-}
-
-.footer-links{
-    margin-top:16px;
-}
-
-.footer-links a{
-    color:#aeb8c5;
-    text-decoration:none;
-    margin:0 9px;
-    font-size:13px;
-    transition:.2s ease;
-}
-
-.footer-links a:hover{
-    color:#19a7ce;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:900px){
-
-    header{
-        padding:13px 5%;
-    }
-
-    nav{
-        gap:16px;
-    }
-
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .feature-box{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:600px){
-
-    header{
-        flex-direction:column;
-        gap:10px;
-        padding:12px 4%;
-    }
-
-    .logo img{
-        width:140px;
-        height:50px;
-    }
-
-    nav{
-        justify-content:center;
-        gap:12px;
-    }
-
-    nav a{
-        font-size:13px;
-    }
-
-    .page-intro{
-        padding:62px 5% 68px;
-    }
-
-    .page-intro h1{
-        font-size:38px;
-    }
-
-    .page-intro p{
-        font-size:14px;
-    }
-
-    .products-section{
-        padding:55px 5%;
-    }
-
-    .products-grid{
-        grid-template-columns:1fr;
-    }
-
-    .product-card{
-        min-height:300px;
-        padding:27px;
-    }
-
-    .product-note{
-        margin-bottom:45px;
-    }
-
-    .feature-section{
-        padding:0 5% 55px;
-    }
-
-    .feature-box{
-        padding:28px 24px;
-    }
-
-    .feature-box h2{
-        font-size:24px;
-    }
-
-    .feature-btn{
-        width:100%;
-        justify-content:center;
-    }
-
-    .products-cta{
-        padding:55px 5%;
-    }
-
-    .products-cta h2{
-        font-size:29px;
-    }
-
-    .cta-buttons{
-        flex-direction:column;
-    }
-
-    .cta-btn{
-        width:100%;
-    }
-
-    footer{
-        padding:32px 5%;
-    }
-
-    .footer-links{
-        line-height:2;
-    }
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | Street Gadgets Care</title>
+
+    <meta name="description" content="Explore phones, laptops, chargers, cables, phone protection, replacement batteries and laptop accessories from Street Gadgets Care. Based in Nairobi, serving customers across Kenya.">
+
+    <link rel="icon" type="image/png" href="Logo.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #0b1220;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 58px;
+            width: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #19a7ce;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            background:
+                linear-gradient(135deg, #0b1220 0%, #101d32 55%, #0b1220 100%);
+            color: white;
+            padding: 90px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(25, 167, 206, 0.08);
+            top: -180px;
+            right: -100px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(25, 167, 206, 0.05);
+            bottom: -160px;
+            left: -100px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            color: #19a7ce;
+            border: 1px solid rgba(25, 167, 206, 0.5);
+            background: rgba(25, 167, 206, 0.08);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #19a7ce;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+            color: #d6dce5;
+            font-size: 18px;
+        }
+
+        .location-line {
+            margin-top: 25px;
+            color: #b7c1cf;
+            font-size: 14px;
+        }
+
+        .location-line i {
+            color: #19a7ce;
+            margin-right: 6px;
+        }
+
+        /* ================= GENERAL ================= */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 75px 20px;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            color: #0b1220;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #687383;
+            font-size: 16px;
+        }
+
+        /* ================= PRODUCTS GRID ================= */
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px 26px;
+            border: 1px solid #e8edf2;
+            box-shadow: 0 8px 25px rgba(11, 18, 32, 0.06);
+            transition: 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #19a7ce;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.35s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(11, 18, 32, 0.12);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .icon-box {
+            width: 68px;
+            height: 68px;
+            border-radius: 16px;
+            background: rgba(25, 167, 206, 0.1);
+            color: #19a7ce;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .product-card h3 {
+            color: #0b1220;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .product-card p {
+            color: #697586;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .product-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #19a7ce;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .product-link:hover {
+            gap: 13px;
+        }
+
+        /* ================= LAPTOP ACCESSORIES FEATURE ================= */
+
+        .feature-section {
+            padding: 0 20px 75px;
+        }
+
+        .feature-box {
+            max-width: 1200px;
+            margin: auto;
+            background: #0b1220;
+            border-radius: 24px;
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box::after {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            border: 1px solid rgba(25, 167, 206, 0.2);
+            right: -130px;
+            top: -100px;
+        }
+
+        .feature-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-content .small-title {
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .feature-content h2 {
+            color: white;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .feature-content p {
+            color: #c4ccd7;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .feature-list span {
+            background: rgba(255, 255, 255, 0.07);
+            color: #dce3eb;
+            padding: 8px 13px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .feature-icon {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .feature-icon i {
+            font-size: 120px;
+            color: #19a7ce;
+            opacity: 0.85;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 23px;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #19a7ce;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #138eaf;
+            transform: translateY(-2px);
+        }
+
+        /* ================= KENYA NOTE ================= */
+
+        .kenya-note {
+            max-width: 1200px;
+            margin: 0 auto 75px;
+            padding: 0 20px;
+        }
+
+        .kenya-note-box {
+            background: #fff;
+            border-left: 5px solid #19a7ce;
+            border-radius: 14px;
+            padding: 25px 28px;
+            box-shadow: 0 6px 20px rgba(11, 18, 32, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .kenya-note-box i {
+            font-size: 28px;
+            color: #19a7ce;
+        }
+
+        .kenya-note-box h3 {
+            color: #0b1220;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .kenya-note-box p {
+            color: #687383;
+            font-size: 14px;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background: linear-gradient(135deg, #101d32, #0b1220);
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .cta-content {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #c5ced9;
+            margin-bottom: 28px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1db954;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0b1220;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #070d17;
+            color: #aeb8c5;
+            padding: 35px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-weight: 700;
+        }
+
+        .footer-brand span {
+            color: #19a7ce;
+        }
+
+        .footer-text {
+            font-size: 13px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-box {
+                grid-template-columns: 1fr;
+                padding: 45px 35px;
+            }
+
+            .feature-icon {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .logo img {
+                height: 52px;
+            }
+
+            .hero {
+                padding: 70px 20px 65px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .section-heading h2 {
+                font-size: 29px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-box {
+                padding: 38px 25px;
+            }
+
+            .feature-content h2 {
+                font-size: 29px;
+            }
+
+            .kenya-note-box {
+                align-items: flex-start;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
+    <div class="navbar">
 
-    <div class="logo">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo.png" alt="Street Gadgets Care Logo">
+            </a>
+        </div>
 
-        <a href="index.html">
-
-            <img
-                src="Logo.png"
-                alt="Street Gadgets Care Logo">
-
-        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="repairs.html">Repairs</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
     </div>
-
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="services.html">
-            Services
-        </a>
-
-        <a href="repairs.html">
-            Repairs
-        </a>
-
-        <a href="products.html" class="active">
-            Products
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </nav>
-
 </header>
 
 
-<!-- =========================
-     PAGE INTRO
-========================= -->
+<!-- ================= HERO ================= -->
 
-<section class="page-intro">
+<section class="hero">
 
-    <small>
-        Street Gadgets Care
-    </small>
+    <div class="hero-content">
 
-    <h1>
-        Explore Our Products
-    </h1>
+        <div class="hero-badge">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Street Gadgets Care Products
+        </div>
 
-    <p>
-        Discover phones, laptops, gadgets and useful technology
-        accessories selected for everyday use, work and convenience.
-    </p>
+        <h1>
+            Explore Our <span>Products</span>
+        </h1>
+
+        <p>
+            Discover phones, laptops, chargers, cables, protection accessories,
+            replacement batteries and useful laptop accessories for your everyday
+            technology needs.
+        </p>
+
+        <div class="location-line">
+            <i class="fa-solid fa-location-dot"></i>
+            Based in Nairobi • Serving Customers Across Kenya
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
-     PRODUCTS
-========================= -->
+<!-- ================= PRODUCTS ================= -->
 
-<section class="products-section">
+<section class="section">
 
+    <div class="section-heading">
 
-    <div class="product-note">
-
-        <strong>
-            Looking for something specific?
-        </strong>
+        <h2>Browse Our Product Categories</h2>
 
         <p>
-            Browse a category below or contact us if you need help
-            finding a particular device or accessory.
+            Explore our available product categories and find the technology
+            products and accessories you need.
         </p>
 
     </div>
@@ -689,232 +651,143 @@ footer strong{
 
     <div class="products-grid">
 
-
-        <!-- DEVICES -->
-
+        <!-- Phones, Laptops & Smart Devices -->
         <div class="product-card">
 
-            <div>
-
-                <div class="product-icon">
-
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-
-                </div>
-
-                <h2>
-                    Phones, Laptops & Smart Devices
-                </h2>
-
-                <p>
-                    Explore available phones, laptops, smart devices
-                    and other technology products.
-                </p>
-
+            <div class="icon-box">
+                <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
 
-            <a
-                href="devices.html"
-                class="product-btn">
+            <h3>Phones, Laptops & Smart Devices</h3>
 
-                View Devices
+            <p>
+                Explore available phones, laptops and selected smart devices
+                for work, communication, entertainment and everyday use.
+            </p>
 
+            <a href="devices.html" class="product-link">
+                View Products
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
 
 
-        <!-- CHARGERS -->
-
+        <!-- Chargers -->
         <div class="product-card">
 
-            <div>
-
-                <div class="product-icon">
-
-                    <i class="fa-solid fa-bolt"></i>
-
-                </div>
-
-                <h2>
-                    Chargers
-                </h2>
-
-                <p>
-                    Find chargers for phones, laptops and other
-                    compatible electronic devices.
-                </p>
-
+            <div class="icon-box">
+                <i class="fa-solid fa-charging-station"></i>
             </div>
 
-            <a
-                href="chargers.html"
-                class="product-btn">
+            <h3>Chargers</h3>
 
+            <p>
+                Find charging solutions for different phones, laptops and
+                electronic devices.
+            </p>
+
+            <a href="chargers.html" class="product-link">
                 View Chargers
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
 
 
-        <!-- CABLES -->
-
+        <!-- Charging Cables -->
         <div class="product-card">
 
-            <div>
-
-                <div class="product-icon">
-
-                    <i class="fa-solid fa-link"></i>
-
-                </div>
-
-                <h2>
-                    Charging Cables
-                </h2>
-
-                <p>
-                    Browse charging and data cables for different
-                    phones, laptops and other devices.
-                </p>
-
+            <div class="icon-box">
+                <i class="fa-solid fa-plug"></i>
             </div>
 
-            <a
-                href="cables.html"
-                class="product-btn">
+            <h3>Charging Cables</h3>
 
+            <p>
+                Browse charging and data cables for different devices,
+                connectors and everyday charging needs.
+            </p>
+
+            <a href="cables.html" class="product-link">
                 View Cables
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
 
 
-        <!-- PHONE PROTECTION -->
-
+        <!-- Phone Protection -->
         <div class="product-card">
 
-            <div>
-
-                <div class="product-icon">
-
-                    <i class="fa-solid fa-shield-halved"></i>
-
-                </div>
-
-                <h2>
-                    Phone Protection
-                </h2>
-
-                <p>
-                    Protect your phone with screen protectors,
-                    cases and other useful protection accessories.
-                </p>
-
+            <div class="icon-box">
+                <i class="fa-solid fa-shield-halved"></i>
             </div>
 
-            <a
-                href="phone-protection.html"
-                class="product-btn">
+            <h3>Phone Protection</h3>
 
+            <p>
+                Protect your phone with practical accessories designed to
+                help reduce everyday scratches, impact and damage.
+            </p>
+
+            <a href="phone-protection.html" class="product-link">
                 View Protection
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
 
 
-        <!-- BATTERIES -->
-
+        <!-- Replacement Batteries -->
         <div class="product-card">
 
-            <div>
-
-                <div class="product-icon">
-
-                    <i class="fa-solid fa-battery-half"></i>
-
-                </div>
-
-                <h2>
-                    Replacement Batteries
-                </h2>
-
-                <p>
-                    Replacement batteries for selected phones,
-                    laptops and other compatible electronic devices.
-                </p>
-
+            <div class="icon-box">
+                <i class="fa-solid fa-battery-half"></i>
             </div>
 
-            <a
-                href="battery-replacement.html"
-                class="product-btn">
+            <h3>Replacement Batteries</h3>
 
+            <p>
+                Replacement battery options for selected phones and devices
+                experiencing battery-related problems.
+            </p>
+
+            <a href="battery-replacement.html" class="product-link">
                 View Batteries
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
 
 
-        <!-- LAPTOP ACCESSORIES -->
-
+        <!-- Laptop Accessories -->
         <div class="product-card">
 
-            <div>
-
-                <div class="product-icon">
-
-                    <i class="fa-solid fa-laptop"></i>
-
-                </div>
-
-                <h2>
-                    Laptop Accessories
-                </h2>
-
-                <p>
-                    Explore laptop bags, storage and memory,
-                    keyboards, mice, dongles, cleaning products
-                    and other computer accessories.
-                </p>
-
+            <div class="icon-box">
+                <i class="fa-solid fa-laptop"></i>
             </div>
 
-            <a
-                href="laptop-accessories.html"
-                class="product-btn">
+            <h3>Laptop Accessories</h3>
 
-                View Laptop Accessories
+            <p>
+                Explore laptop bags, storage and memory products, keyboards,
+                mice, dongles, cleaning products and more.
+            </p>
 
+            <a href="laptop-accessories.html" class="product-link">
+                Explore Accessories
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     LAPTOP ACCESSORIES FEATURE
-========================= -->
+<!-- ================= LAPTOP ACCESSORIES FEATURE ================= -->
 
 <section class="feature-section">
 
@@ -922,129 +795,159 @@ footer strong{
 
         <div class="feature-content">
 
-            <div class="feature-label">
-                Laptop Accessories
+            <div class="small-title">
+                Featured Category
             </div>
 
-            <h2>
-                Everything Your Laptop Needs
-            </h2>
+            <h2>Everything Your Laptop Needs</h2>
 
             <p>
-                Browse laptop bags, storage and memory solutions,
-                keyboards, wireless mice, Wi-Fi and Bluetooth dongles,
-                foam cleaners and cleaning kits.
+                Our Laptop Accessories section brings together practical
+                accessories and upgrade options for laptops and computers,
+                whether you need storage, memory, protection or everyday
+                computer accessories.
             </p>
+
+            <div class="feature-list">
+
+                <span>
+                    <i class="fa-solid fa-briefcase"></i>
+                    Laptop Bags
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-hard-drive"></i>
+                    HDD & SSD
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-memory"></i>
+                    RAM
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-keyboard"></i>
+                    Keyboards
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-computer-mouse"></i>
+                    Wireless Mouse
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-wifi"></i>
+                    Wi-Fi Dongles
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-broom"></i>
+                    Cleaning Products
+                </span>
+
+            </div>
+
+            <a href="laptop-accessories.html" class="btn btn-primary">
+                Explore Laptop Accessories
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
 
-        <a
-            href="laptop-accessories.html"
-            class="feature-btn">
-
-            Explore Laptop Accessories
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
+        <div class="feature-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     CTA
-========================= -->
+<!-- ================= KENYA SERVICE NOTE ================= -->
 
-<section class="products-cta">
+<section class="kenya-note">
 
-    <h2>
-        Can't Find What You're Looking For?
-    </h2>
+    <div class="kenya-note-box">
 
-    <p>
-        Contact Street Gadgets Care and tell us what device,
-        accessory or gadget you need.
-    </p>
+        <i class="fa-solid fa-truck-fast"></i>
 
+        <div>
 
-    <div class="cta-buttons">
+            <h3>Serving Customers Across Kenya</h3>
 
-        <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20product."
-            target="_blank"
-            rel="noopener"
-            class="cta-btn cta-whatsapp">
+            <p>
+                Street Gadgets Care is based in Nairobi, but you don't have
+                to be in Nairobi to contact us. If you're outside Nairobi,
+                get in touch with us to confirm product availability and
+                discuss available delivery or collection options.
+            </p>
 
-            <i class="fa-brands fa-whatsapp"></i>
-
-            Ask on WhatsApp
-
-        </a>
-
-
-        <a
-            href="contact.html"
-            class="cta-btn cta-contact">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            Contact Us
-
-        </a>
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="cta-content">
+
+        <h2>Can't Find What You're Looking For?</h2>
+
+        <p>
+            Looking for a specific phone, laptop, accessory or gadget?
+            Contact Street Gadgets Care and we'll help you check what's
+            available.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20looking%20for%20a%20product."
+                class="btn btn-whatsapp"
+                target="_blank"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Ask on WhatsApp
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+                <i class="fa-solid fa-envelope"></i>
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <p>
+    <div class="footer-content">
 
-        © 2026
-        <strong>Street Gadgets Care</strong>.
-        All rights reserved.
+        <div class="footer-brand">
+            Street Gadgets <span>Care</span>
+        </div>
 
-    </p>
+        <div class="footer-text">
+            Based in Nairobi, serving customers across Kenya.
+        </div>
 
-
-    <div class="footer-links">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="services.html">
-            Services
-        </a>
-
-        <a href="repairs.html">
-            Repairs
-        </a>
-
-        <a href="products.html">
-            Products
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
+        <div class="footer-text">
+            &copy; 2026 Street Gadgets Care. All rights reserved.
+        </div>
 
     </div>
 
 </footer>
-
 
 </body>
 </html>
