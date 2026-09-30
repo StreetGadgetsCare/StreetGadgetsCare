@@ -19,6 +19,7 @@
             color: #111;
         }
 
+        /* HEADER */
         header {
             background: #0b1220;
             color: white;
@@ -57,6 +58,8 @@
             color: #19a7ce;
         }
 
+
+        /* PAGE HEADER */
         .page-header {
             background: #0b1220;
             color: white;
@@ -69,58 +72,83 @@
             margin-bottom: 10px;
         }
 
-        .products {
-            max-width: 1200px;
-            margin: auto;
-            padding: 60px 6%;
-        }
-        .laptop-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        .page-header p {
+            font-size: 16px;
+            color: #dbe7ef;
         }
 
+
+        /* PRODUCTS SECTION */
+        .products {
+            max-width: 1250px;
+            margin: auto;
+            padding: 60px 5%;
+        }
+
+
+        /* LAPTOP GRID */
+        .laptop-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        /* LAPTOP CARD */
         .laptop-card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
-            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+            transition: 0.3s ease;
         }
 
         .laptop-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
         }
 
+
+        /* LAPTOP IMAGE */
         .laptop-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 250px;
+            object-fit: contain;
+            object-position: center;
             display: block;
+            background: #f8f9fb;
+            padding: 12px;
         }
-      .laptop-info {
-    padding: 18px;
-}
 
-.laptop-info h3 {
-    padding: 0;
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 12px;
-}
 
-.laptop-info p {
-    margin: 7px 0;
-    font-size: 14px;
-    color: #555;
-}
+        /* LAPTOP INFORMATION */
+        .laptop-info {
+            padding: 18px;
+        }
 
-.laptop-info h2 {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #0b1220;
-}
-                .whatsapp-btn {
+        .laptop-info h3 {
+            padding: 0;
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 12px;
+            color: #0b1220;
+        }
+
+        .laptop-info p {
+            margin: 7px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .laptop-info h2 {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #0b1220;
+        }
+
+
+        /* WHATSAPP BUTTON */
+        .whatsapp-btn {
             display: block;
             margin-top: 18px;
             padding: 12px 15px;
@@ -138,22 +166,91 @@
             background: #1ebe5d;
             transform: translateY(-2px);
         }
-        @media (max-width: 900px) {
+
+
+        /* TABLET */
+        @media (max-width: 1000px) {
+
             .laptop-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .laptop-card img {
+                height: 250px;
+            }
+
         }
 
+
+        /* MOBILE */
         @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-header {
+                padding: 45px 6%;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .products {
+                padding: 40px 6%;
+            }
+
             .laptop-grid {
                 grid-template-columns: 1fr;
             }
-        }        
+
+            .laptop-card img {
+                height: 260px;
+            }
+
+        }
+
+
+        /* SMALL PHONES */
+        @media (max-width: 400px) {
+
+            .logo img {
+                width: 135px;
+            }
+
+            .page-header h1 {
+                font-size: 27px;
+            }
+
+            .laptop-card img {
+                height: 240px;
+            }
+
+            .laptop-info {
+                padding: 16px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
+
+<!-- HEADER -->
 <header>
 
     <div class="logo">
@@ -161,17 +258,26 @@
     </div>
 
     <nav>
+
         <a href="index.html">Home</a>
+
         <a href="about.html">About</a>
+
         <a href="services.html">Services</a>
+
         <a href="repairs.html">Repairs</a>
+
         <a href="products.html" class="active">Products</a>
+
         <a href="contact.html">Contact</a>
+
     </nav>
 
 </header>
 
 
+
+<!-- PAGE HEADER -->
 <section class="page-header">
 
     <h1>Laptops</h1>
@@ -183,168 +289,326 @@
 </section>
 
 
+
+<!-- PRODUCTS -->
 <section class="products">
 
     <div class="laptop-grid">
 
+
+        <!-- Lenovo Yoga 11e -->
         <div class="laptop-card">
-            <img src="Lenovo%2011e.jpeg" alt="Lenovo Yoga 11e">
+
+            <img
+                src="Lenovo%2011e.jpeg"
+                alt="Lenovo Yoga 11e"
+            >
 
             <div class="laptop-info">
+
                 <h3>Lenovo Yoga 11e</h3>
 
-                <p><strong>Processor:</strong> Celeron</p>
-                <p><strong>RAM:</strong> 4GB</p>
-                <p><strong>Storage:</strong> 128GB</p>
-                <p><strong>Features:</strong> Touchscreen, 360° Convertible</p>
+                <p>
+                    <strong>Processor:</strong>
+                    Celeron
+                </p>
+
+                <p>
+                    <strong>RAM:</strong>
+                    4GB
+                </p>
+
+                <p>
+                    <strong>Storage:</strong>
+                    128GB
+                </p>
+
+                <p>
+                    <strong>Features:</strong>
+                    Touchscreen, 360° Convertible
+                </p>
 
                 <h2>KSh 15,000</h2>
-               <a class="whatsapp-btn"
-   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Lenovo%20Yoga%2011e."
-   target="_blank">
-    Inquire on WhatsApp
-</a> 
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Lenovo%20Yoga%2011e."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Inquire on WhatsApp
+                </a>
+
             </div>
+
         </div>
+
+
+
+        <!-- Dell Latitude 3190 -->
         <div class="laptop-card">
-           <img src="Dell Latitude 3190.JPG" alt="Dell Latitude 3190">
+
+            <img
+                src="Dell Latitude 3190.JPG"
+                alt="Dell Latitude 3190"
+            >
+
             <div class="laptop-info">
-                <h3>Dell Latitude Laptop</h3>
 
-                <p><strong>Processor:</strong> Intel Core i5</p>
-                <p><strong>RAM:</strong> 8GB</p>
-                <p><strong>Storage:</strong> 256GB SSD</p>
-                <p><strong>Display:</strong> 14-inch</p>
-                <p><strong>Features:</strong> Wi-Fi, Bluetooth, Webcam</p>
+                <h3>Dell Latitude 3190</h3>
 
-                <h2>KSh 25,000</h2>
-                <a class="whatsapp-btn"
-   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Dell%20Latitude%20Laptop."
-   target="_blank">
-    Inquire on WhatsApp
-</a>
+                <p>
+                    <strong>Processor:</strong>
+                    Intel Pentium
+                </p>
+
+                <p>
+                    <strong>RAM:</strong>
+                    4GB
+                </p>
+
+                <p>
+                    <strong>Storage:</strong>
+                    128GB SSD
+                </p>
+
+                <p>
+                    <strong>Display:</strong>
+                    14-inch
+                </p>
+
+                <p>
+                    <strong>Features:</strong>
+                    Wi-Fi, Bluetooth, Webcam
+                </p>
+
+                <h2>KSh 22,000</h2>
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Dell%20Latitude%203190."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Inquire on WhatsApp
+                </a>
+
             </div>
-               </div>
-        <!-- HP EliteBook 745 G6 Ryzen 7 -->
 
+        </div>
+
+
+
+        <!-- HP EliteBook 745 G6 Ryzen 7 -->
         <div class="laptop-card">
 
-            <img src="HP%20745%20G6%20RYZEN%207.JPG"
-                 alt="HP EliteBook 745 G6 Ryzen 7">
+            <img
+                src="HP%20745%20G6%20RYZEN%207.JPG"
+                alt="HP EliteBook 745 G6 Ryzen 7"
+            >
 
             <div class="laptop-info">
 
                 <h3>HP EliteBook 745 G6 Ryzen 7</h3>
 
-                <p><strong>Processor:</strong> AMD Ryzen 7</p>
+                <p>
+                    <strong>Processor:</strong>
+                    AMD Ryzen 7
+                </p>
 
-                <p><strong>RAM:</strong> 16GB</p>
+                <p>
+                    <strong>RAM:</strong>
+                    16GB
+                </p>
 
-                <p><strong>Storage:</strong> 512GB SSD</p>
+                <p>
+                    <strong>Storage:</strong>
+                    512GB SSD
+                </p>
 
-                <p><strong>Features:</strong> Professional business laptop</p>
+                <p>
+                    <strong>Features:</strong>
+                    Professional business laptop
+                </p>
 
-               <h2>KSh 47,500</h2>
-                <a class="whatsapp-btn"
-   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207."
-   target="_blank">
-    Inquire on WhatsApp
-</a>
+                <h2>KSh 47,500</h2>
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Inquire on WhatsApp
+                </a>
 
             </div>
 
         </div>
-                <!-- HP EliteBook 840 G3 -->
 
+
+
+        <!-- HP EliteBook 840 G3 -->
         <div class="laptop-card">
 
-            <img src="HP%20840%20G3.JPG"
-                 alt="HP EliteBook 840 G3">
+            <img
+                src="HP%20840%20G3.JPG"
+                alt="HP EliteBook 840 G3"
+            >
 
             <div class="laptop-info">
 
                 <h3>HP EliteBook 840 G3</h3>
 
-                <p><strong>Processor:</strong> Intel Core i5 6th Generation</p>
+                <p>
+                    <strong>Processor:</strong>
+                    Intel Core i5 6th Generation
+                </p>
 
-                <p><strong>RAM:</strong> 8GB</p>
+                <p>
+                    <strong>RAM:</strong>
+                    8GB
+                </p>
 
-                <p><strong>Storage:</strong> 256GB SSD</p>
+                <p>
+                    <strong>Storage:</strong>
+                    256GB SSD
+                </p>
 
-                <p><strong>Features:</strong> Professional business laptop</p>
+                <p>
+                    <strong>Features:</strong>
+                    Professional business laptop
+                </p>
 
                 <h2>KSh 24,500</h2>
-                <a class="whatsapp-btn"
-   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G3."
-   target="_blank">
-    Inquire on WhatsApp
-</a>
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G3."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Inquire on WhatsApp
+                </a>
 
             </div>
 
         </div>
-           <!-- HP EliteBook 840 G5 -->
 
+
+
+        <!-- HP EliteBook 840 G5 -->
         <div class="laptop-card">
 
-            <img src="HP%20840%20g5.jpeg"
-                 alt="HP EliteBook 840 G5">
+            <img
+                src="HP%20840%20g5.jpeg"
+                alt="HP EliteBook 840 G5"
+            >
 
             <div class="laptop-info">
 
                 <h3>HP EliteBook 840 G5</h3>
 
-                <p><strong>Processor:</strong> Intel Core i5 8th Generation</p>
-                <p><strong>RAM:</strong> 8GB</p>
+                <p>
+                    <strong>Processor:</strong>
+                    Intel Core i5 8th Generation
+                </p>
 
-                <p><strong>Storage:</strong> 256GB SSD</p>
+                <p>
+                    <strong>RAM:</strong>
+                    8GB
+                </p>
 
-                <p><strong>Features:</strong> Professional business laptop</p>
+                <p>
+                    <strong>Storage:</strong>
+                    256GB SSD
+                </p>
+
+                <p>
+                    <strong>Features:</strong>
+                    Professional business laptop
+                </p>
 
                 <h2>KSh 27,500</h2>
-                <a class="whatsapp-btn"
-   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G5."
-   target="_blank">
-    Inquire on WhatsApp
-</a>
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G5."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Inquire on WhatsApp
+                </a>
 
             </div>
 
-        </div> 
-         <!-- HP ProBook 430 G3 -->
+        </div>
 
+
+
+        <!-- HP ProBook 430 G3 -->
         <div class="laptop-card">
 
-            <img src="HP%20Probook%20430%20G3.JPG"
-                 alt="HP ProBook 430 G3">
+            <img
+                src="HP%20Probook%20430%20G3.JPG"
+                alt="HP ProBook 430 G3"
+            >
 
             <div class="laptop-info">
 
                 <h3>HP ProBook 430 G3</h3>
 
-                <p><strong>Processor:</strong> Intel Core i5 6th Generation</p>
+                <p>
+                    <strong>Processor:</strong>
+                    Intel Core i5 6th Generation
+                </p>
 
-                <p><strong>RAM:</strong> 8GB</p>
+                <p>
+                    <strong>RAM:</strong>
+                    8GB
+                </p>
 
-                <p><strong>Storage:</strong> 256GB SSD</p>
-                <p><strong>Features:</strong> Compact and portable business laptop</p>
+                <p>
+                    <strong>Storage:</strong>
+                    256GB SSD
+                </p>
+
+                <p>
+                    <strong>Features:</strong>
+                    Compact and portable business laptop
+                </p>
 
                 <h2>KSh 21,500</h2>
-                <a class="whatsapp-btn"
-   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20ProBook%20430%20G3."
-   target="_blank">
-    Inquire on WhatsApp
-</a>
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20ProBook%20430%20G3."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Inquire on WhatsApp
+                </a>
+
             </div>
 
-        </div>       
+        </div>
+
+
     </div>
 
 </section>
 
+
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 <strong>Street Gadgets Care</strong>. All rights reserved.</p>
+
+    <p>
+        © 2026 <strong>Street Gadgets Care</strong>. All rights reserved.
+    </p>
+
 </footer>
+
 
 </body>
 </html>
