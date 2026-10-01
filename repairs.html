@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Phone & Laptop Repairs Across Kenya | Street Gadgets Care</title>
+    <title>Phone & Laptop Repairs | Street Gadgets Care</title>
 
-    <meta name="description"
-        content="Professional phone and laptop repairs by Street Gadgets Care. Based in Nairobi and serving customers across Kenya with screen replacement, battery replacement, charging repairs, software issues, upgrades and more.">
+    <meta name="description" content="Professional phone repairs and laptop services by Street Gadgets Care. Screen replacement, iPhone back glass, battery replacement, antivirus, Windows installation and laptop servicing. Based in Nairobi, serving customers across Kenya.">
 
     <link rel="icon" type="image/png" href="Logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
@@ -31,8 +30,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #f5f7fa;
-            color: #18202b;
+            background: #f7f9fc;
+            color: #172033;
             line-height: 1.6;
         }
 
@@ -42,109 +41,89 @@
 
         img {
             max-width: 100%;
-            display: block;
         }
 
         /* =========================
            HEADER
-        ========================== */
+        ========================= */
 
         header {
             background: #0b1220;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: auto;
-            min-height: 78px;
-            padding: 10px 20px;
-
+            padding: 14px 25px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
         }
 
         .logo img {
-            width: 170px;
-            height: auto;
+            height: 58px;
+            width: auto;
+            display: block;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 8px;
         }
 
         nav a {
             color: #ffffff;
             font-size: 14px;
             font-weight: 600;
+            padding: 10px 13px;
+            border-radius: 7px;
             transition: 0.3s ease;
-            position: relative;
         }
 
         nav a:hover,
         nav a.active {
             color: #19a7ce;
-        }
-
-        nav a.active::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            width: 100%;
-            height: 2px;
-            background: #19a7ce;
-            border-radius: 5px;
+            background: rgba(25,167,206,0.10);
         }
 
         /* =========================
            HERO
-        ========================== */
+        ========================= */
 
         .hero {
             background:
-                linear-gradient(
-                    135deg,
-                    rgba(11, 18, 32, 0.98),
-                    rgba(11, 18, 32, 0.92)
-                );
+                linear-gradient(135deg, rgba(11,18,32,0.98), rgba(11,18,32,0.90)),
+                radial-gradient(circle at top right, rgba(25,167,206,0.25), transparent 40%);
             color: white;
-            padding: 100px 20px 90px;
+            padding: 95px 20px 90px;
             text-align: center;
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 850px;
             margin: auto;
         }
 
         .hero-badge {
             display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid rgba(25, 167, 206, 0.4);
-            background: rgba(25, 167, 206, 0.1);
             color: #19a7ce;
+            border: 1px solid rgba(25,167,206,0.45);
+            background: rgba(25,167,206,0.08);
+            padding: 8px 16px;
             border-radius: 50px;
             font-size: 13px;
             font-weight: 700;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
             font-size: clamp(38px, 6vw, 64px);
-            line-height: 1.1;
+            line-height: 1.08;
             margin-bottom: 22px;
             font-weight: 800;
         }
@@ -154,19 +133,29 @@
         }
 
         .hero p {
-            max-width: 750px;
+            max-width: 720px;
             margin: auto;
-            color: #d8e0ea;
+            color: #d7deea;
             font-size: 18px;
         }
 
-        .hero-buttons {
-            margin-top: 35px;
+        .hero-location {
+            margin-top: 22px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+        }
 
+        .hero-location i {
+            color: #19a7ce;
+            margin-right: 6px;
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 15px;
+            gap: 14px;
             flex-wrap: wrap;
         }
 
@@ -174,13 +163,11 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
-            padding: 14px 25px;
+            gap: 9px;
+            padding: 14px 22px;
             border-radius: 8px;
-
             font-weight: 700;
             font-size: 14px;
-
             transition: 0.3s ease;
         }
 
@@ -190,37 +177,28 @@
         }
 
         .btn-whatsapp:hover {
-            transform: translateY(-2px);
             background: #1ebe5d;
+            transform: translateY(-2px);
         }
 
         .btn-outline {
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.35);
             color: white;
         }
 
         .btn-outline:hover {
-            background: white;
-            color: #0b1220;
-        }
-
-        .location-line {
-            margin-top: 25px;
-            color: #aeb9c8;
-            font-size: 14px;
+            border-color: #19a7ce;
+            color: #19a7ce;
         }
 
         /* =========================
-           GENERAL SECTIONS
-        ========================== */
+           GENERAL
+        ========================= */
 
-        section {
-            padding: 80px 20px;
-        }
-
-        .container {
+        .section {
             max-width: 1200px;
             margin: auto;
+            padding: 85px 20px;
         }
 
         .section-heading {
@@ -229,159 +207,182 @@
             margin: 0 auto 50px;
         }
 
-        .section-heading span {
+        .section-heading .label {
             color: #19a7ce;
             font-size: 13px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            margin-bottom: 10px;
         }
 
         .section-heading h2 {
             font-size: clamp(30px, 4vw, 44px);
-            margin: 10px 0 15px;
+            line-height: 1.15;
             color: #0b1220;
-            line-height: 1.2;
+            margin-bottom: 15px;
         }
 
         .section-heading p {
-            color: #66717f;
+            color: #647084;
             font-size: 16px;
         }
 
         /* =========================
-           REPAIR CARDS
-        ========================== */
+           SERVICE CARDS
+        ========================= */
 
-        .repair-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
 
-        .repair-card {
+        .service-card {
             background: #ffffff;
-            border-radius: 16px;
-            padding: 35px;
-            border: 1px solid #e8edf2;
-            box-shadow: 0 10px 35px rgba(11, 18, 32, 0.06);
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #e7ebf1;
+            box-shadow: 0 10px 35px rgba(11,18,32,0.07);
+            transition: 0.35s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .repair-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            background: rgba(25, 167, 206, 0.1);
-            color: #19a7ce;
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 45px rgba(11,18,32,0.13);
+        }
 
+        .service-image {
+            height: 245px;
+            background: #eef2f6;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.45s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.04);
+        }
+
+        .service-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: rgba(25,167,206,0.10);
+            color: #19a7ce;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            font-size: 25px;
-            font-weight: 800;
-
-            margin-bottom: 20px;
+            font-size: 19px;
+            margin-bottom: 17px;
         }
 
-        .repair-card h3 {
-            font-size: 23px;
-            margin-bottom: 18px;
+        .service-content h3 {
             color: #0b1220;
+            font-size: 21px;
+            margin-bottom: 11px;
         }
 
-        .repair-card ul {
-            list-style: none;
+        .service-content p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 22px;
         }
 
-        .repair-card li {
-            padding: 8px 0;
-            color: #5e6976;
-            position: relative;
-            padding-left: 22px;
+        .service-link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0b1220;
+            font-weight: 700;
+            font-size: 13px;
         }
 
-        .repair-card li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
+        .service-link i {
             color: #19a7ce;
-            font-weight: 800;
+            transition: 0.3s ease;
+        }
+
+        .service-link:hover i {
+            transform: translateX(4px);
         }
 
         /* =========================
-           COMMON PROBLEMS
-        ========================== */
+           PROBLEMS SECTION
+        ========================= */
 
         .problems-section {
             background: #ffffff;
         }
 
-        .problem-grid {
+        .problems-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 25px;
         }
 
         .problem-card {
-            padding: 30px;
-            border: 1px solid #e6ebf0;
-            border-radius: 14px;
-            background: #f9fafc;
-        }
-
-        .problem-card h3 {
-            margin-bottom: 12px;
-            color: #0b1220;
-            font-size: 20px;
-        }
-
-        .problem-card p {
-            color: #687482;
-            font-size: 15px;
-        }
-
-        /* =========================
-           WHAT WE HANDLE
-        ========================== */
-
-        .handle-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .handle-item {
-            background: #ffffff;
-            padding: 25px 20px;
-            border-radius: 12px;
-            border: 1px solid #e7ecf1;
-            font-weight: 700;
-            color: #26313e;
+            padding: 32px 28px;
+            border-radius: 16px;
+            background: #f7f9fc;
+            border: 1px solid #e5eaf0;
             transition: 0.3s ease;
         }
 
-        .handle-item:hover {
-            transform: translateY(-4px);
-            border-color: #19a7ce;
-            box-shadow: 0 10px 25px rgba(11, 18, 32, 0.07);
+        .problem-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(25,167,206,0.35);
+            box-shadow: 0 12px 30px rgba(11,18,32,0.07);
+        }
+
+        .problem-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: #0b1220;
+            color: #19a7ce;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .problem-card h3 {
+            font-size: 20px;
+            color: #0b1220;
+            margin-bottom: 10px;
+        }
+
+        .problem-card p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.7;
         }
 
         /* =========================
            REPAIR PROCESS
-        ========================== */
+        ========================= */
 
-        .process-section {
-            background: #0b1220;
-            color: white;
-        }
-
-        .process-section .section-heading h2 {
-            color: white;
-        }
-
-        .process-section .section-heading p {
-            color: #aeb9c8;
+        .process {
+            background: #f7f9fc;
         }
 
         .process-grid {
@@ -391,335 +392,232 @@
         }
 
         .process-card {
+            background: white;
+            border: 1px solid #e6eaf0;
             padding: 30px 22px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: rgba(255,255,255,0.03);
-            border-radius: 14px;
+            border-radius: 15px;
             text-align: center;
         }
 
         .process-number {
             width: 45px;
             height: 45px;
-            border-radius: 50%;
             margin: 0 auto 18px;
-
+            border-radius: 50%;
+            background: #19a7ce;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            background: #19a7ce;
-            color: #ffffff;
             font-weight: 800;
         }
 
         .process-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .process-card p {
-            color: #aeb9c8;
-            font-size: 14px;
-        }
-
-        /* =========================
-           BEFORE BRINGING DEVICE
-        ========================== */
-
-        .before-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .before-card {
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 28px 22px;
-            border: 1px solid #e7ecf1;
-        }
-
-        .before-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
             color: #0b1220;
-        }
-
-        .before-card p {
-            color: #687482;
-            font-size: 14px;
-        }
-
-        /* =========================
-           VIDEO SECTION
-        ========================== */
-
-        .videos-section {
-            background: #ffffff;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .video-card {
-            background: #ffffff;
-            border: 1px solid #e3e8ed;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(11, 18, 32, 0.07);
-            transition: 0.3s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 16px 40px rgba(11, 18, 32, 0.12);
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #0b1220;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .video-info {
-            padding: 22px;
-        }
-
-        .video-info h3 {
             font-size: 18px;
-            color: #0b1220;
             margin-bottom: 8px;
         }
 
-        .video-info p {
-            color: #687482;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .watch-link {
-            display: inline-block;
-            color: #19a7ce;
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .youtube-cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 24px;
-            border-radius: 8px;
-            background: #ff0000;
-            color: #ffffff;
-            font-weight: 700;
-            transition: 0.3s ease;
-        }
-
-        .youtube-btn:hover {
-            transform: translateY(-2px);
-            background: #d90000;
+        .process-card p {
+            color: #667085;
+            font-size: 13px;
         }
 
         /* =========================
-           KENYA SERVICE AREA
-        ========================== */
+           KENYA SECTION
+        ========================= */
 
         .kenya-section {
-            background:
-                linear-gradient(
-                    135deg,
-                    #0b1220,
-                    #101d30
-                );
+            background: #0b1220;
             color: white;
         }
 
-        .kenya-box {
-            max-width: 900px;
+        .kenya-content {
+            max-width: 950px;
             margin: auto;
             text-align: center;
         }
 
-        .kenya-box h2 {
+        .kenya-content .label {
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .kenya-content h2 {
             font-size: clamp(30px, 4vw, 44px);
-            margin-bottom: 18px;
+            margin: 12px 0 18px;
         }
 
-        .kenya-box h2 span {
-            color: #19a7ce;
-        }
-
-        .kenya-box p {
-            color: #c1cad5;
+        .kenya-content p {
+            color: #cbd4e2;
             max-width: 760px;
-            margin: 0 auto 18px;
+            margin: auto;
+            font-size: 16px;
         }
 
-        .shipping-note {
+        .kenya-highlight {
             margin: 30px auto;
-            padding: 25px;
+            max-width: 700px;
+            padding: 24px;
+            border: 1px solid rgba(25,167,206,0.3);
+            background: rgba(25,167,206,0.07);
             border-radius: 14px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(25,167,206,0.25);
         }
 
-        .shipping-note strong {
+        .kenya-highlight strong {
             display: block;
-            color: #19a7ce;
-            font-size: 20px;
-            margin-bottom: 8px;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .kenya-highlight span {
+            color: #cbd4e2;
+            font-size: 14px;
         }
 
         /* =========================
            FINAL CTA
-        ========================== */
+        ========================= */
 
-        .final-cta {
+        .cta {
+            max-width: 1000px;
+            margin: auto;
+            padding: 85px 20px;
             text-align: center;
-            background: #f5f7fa;
         }
 
-        .final-cta h2 {
-            font-size: clamp(30px, 4vw, 42px);
+        .cta h2 {
             color: #0b1220;
+            font-size: clamp(30px, 4vw, 42px);
             margin-bottom: 15px;
         }
 
-        .final-cta p {
-            max-width: 650px;
-            margin: 0 auto 25px;
-            color: #66717f;
+        .cta p {
+            color: #667085;
+            max-width: 680px;
+            margin: auto auto 28px;
         }
 
         /* =========================
            FOOTER
-        ========================== */
+        ========================= */
 
         footer {
             background: #0b1220;
-            color: #ffffff;
-            padding: 40px 20px 25px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: auto;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
+            color: #cbd4e2;
+            padding: 35px 20px;
+            text-align: center;
         }
 
         .footer-logo img {
-            width: 160px;
+            height: 55px;
+            margin-bottom: 15px;
         }
 
         .footer-text {
-            color: #9da9b8;
             font-size: 13px;
-            text-align: right;
+            line-height: 1.8;
+        }
+
+        .footer-text strong {
+            color: white;
         }
 
         .footer-bottom {
-            max-width: 1200px;
-            margin: 30px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-
-            text-align: center;
-            color: #788493;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,0.10);
             font-size: 12px;
+            color: #8e9aad;
         }
 
         /* =========================
            RESPONSIVE
-        ========================== */
+        ========================= */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 900px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             nav {
-                gap: 15px;
+                gap: 2px;
             }
 
-            .handle-grid {
-                grid-template-columns: repeat(2, 1fr);
+            nav a {
+                padding: 8px 8px;
+                font-size: 12px;
             }
 
-            .process-grid,
-            .before-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .video-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
-        @media (max-width: 750px) {
+        @media (max-width: 650px) {
 
             .nav-container {
+                padding: 12px 15px;
                 flex-direction: column;
-                padding: 15px 20px;
+                gap: 10px;
+            }
+
+            .logo img {
+                height: 50px;
             }
 
             nav {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 14px;
             }
 
             nav a {
-                font-size: 13px;
+                font-size: 11px;
+                padding: 6px 7px;
             }
 
             .hero {
-                padding: 70px 20px;
+                padding: 70px 18px;
             }
 
-            .repair-grid,
-            .problem-grid,
-            .video-grid {
+            .hero p {
+                font-size: 15px;
+            }
+
+            .section {
+                padding: 65px 16px;
+            }
+
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .handle-grid,
-            .process-grid,
-            .before-grid {
+            .service-image {
+                height: 230px;
+            }
+
+            .process-grid {
                 grid-template-columns: 1fr;
             }
 
-            section {
-                padding: 60px 20px;
-            }
-
-            .footer-container {
+            .hero-buttons {
                 flex-direction: column;
-                text-align: center;
             }
 
-            .footer-text {
-                text-align: center;
+            .hero-buttons .btn {
+                width: 100%;
             }
+
         }
 
     </style>
@@ -729,7 +627,7 @@
 
 <!-- =========================
      HEADER
-========================== -->
+========================= -->
 
 <header>
 
@@ -755,122 +653,200 @@
 
 <!-- =========================
      HERO
-========================== -->
+========================= -->
 
 <section class="hero">
 
     <div class="hero-content">
 
         <div class="hero-badge">
-            STREET GADGETS CARE
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            PROFESSIONAL DEVICE CARE
         </div>
 
         <h1>
-            Professional Phone & Laptop <span>Repairs</span>
+            Professional <span>Phone & Laptop</span> Repairs
         </h1>
 
         <p>
-            Reliable phone and laptop repair services for hardware,
-            software and performance issues. Based in Nairobi and
-            serving customers across Kenya.
+            Reliable device repairs and technology services delivered with
+            careful workmanship, professional attention and a commitment
+            to getting your device back in great working condition.
         </p>
+
+        <div class="hero-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Based in Nairobi • Serving Customers Across Kenya
+        </div>
 
         <div class="hero-buttons">
 
             <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20repair%20service."
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20device%20repair."
                 class="btn btn-whatsapp"
                 target="_blank"
             >
-                WhatsApp Us
+                <i class="fa-brands fa-whatsapp"></i>
+                Chat With Us
             </a>
 
             <a href="#repair-services" class="btn btn-outline">
-                View Repair Services
+                Explore Repair Services
+                <i class="fa-solid fa-arrow-down"></i>
             </a>
 
         </div>
 
-        <div class="location-line">
-            Based in Nairobi • Serving Customers Across Kenya
-        </div>
-
     </div>
 
 </section>
 
 
 <!-- =========================
-     REPAIR SERVICES
-========================== -->
+     PHONE REPAIRS
+========================= -->
 
-<section id="repair-services">
+<section class="section" id="repair-services">
 
-    <div class="container">
+    <div class="section-heading">
 
-        <div class="section-heading">
+        <div class="label">Phone Repairs</div>
 
-            <span>What We Repair</span>
+        <h2>
+            Give Your Phone the Care It Deserves
+        </h2>
 
-            <h2>
-                Phone & Laptop Repair Services
-            </h2>
+        <p>
+            From damaged screens to worn-out batteries, we provide
+            practical phone repair solutions with careful handling
+            and professional attention to detail.
+        </p>
 
-            <p>
-                From damaged screens and charging problems to software
-                issues and performance upgrades, we help get your device
-                working properly again.
-            </p>
-
-        </div>
+    </div>
 
 
-        <div class="repair-grid">
+    <div class="services-grid">
 
-            <div class="repair-card">
 
-                <div class="repair-icon">
-                    📱
+        <!-- PHONE SCREEN -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="phone-screen-repair.jpg"
+                    alt="Phone screen replacement and repair"
+                >
+            </div>
+
+            <div class="service-content">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
 
-                <h3>Phone Repairs</h3>
+                <h3>Screen Replacement</h3>
 
-                <ul>
-                    <li>Screen replacement</li>
-                    <li>Battery replacement</li>
-                    <li>Charging port problems</li>
-                    <li>Liquid damage assessment</li>
-                    <li>Speaker and microphone issues</li>
-                    <li>Camera problems</li>
-                    <li>Software and system issues</li>
-                    <li>Network and connectivity problems</li>
-                </ul>
+                <p>
+                    Bring your phone back to life with a professionally
+                    fitted replacement screen. We handle cracked, damaged
+                    and faulty displays with careful installation and
+                    thorough testing after repair.
+                </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20phone%20screen%20replacement."
+                    class="service-link"
+                    target="_blank"
+                >
+                    Ask About Screen Repair
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
+        </article>
 
-            <div class="repair-card">
 
-                <div class="repair-icon">
-                    💻
+        <!-- IPHONE BACK GLASS -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="iphone-back-glass.jpg"
+                    alt="iPhone back glass replacement"
+                >
+            </div>
+
+            <div class="service-content">
+
+                <div class="service-icon">
+                    <i class="fa-brands fa-apple"></i>
                 </div>
 
-                <h3>Laptop Repairs</h3>
+                <h3>iPhone Back Glass Replacement</h3>
 
-                <ul>
-                    <li>Screen replacement</li>
-                    <li>Keyboard replacement</li>
-                    <li>Battery replacement</li>
-                    <li>Charging and power issues</li>
-                    <li>Windows and software problems</li>
-                    <li>RAM upgrades</li>
-                    <li>SSD and HDD upgrades</li>
-                    <li>Overheating and performance problems</li>
-                </ul>
+                <p>
+                    Restore the clean, premium appearance of your iPhone.
+                    Our back-glass replacement service helps repair
+                    shattered or damaged rear glass while giving your
+                    device a refreshed finish.
+                </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20iPhone%20back%20glass%20replacement."
+                    class="service-link"
+                    target="_blank"
+                >
+                    Ask About Back Glass Repair
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
-        </div>
+        </article>
+
+
+        <!-- BATTERY -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="phone-battery-replacement.jpg"
+                    alt="Phone battery replacement service"
+                >
+            </div>
+
+            <div class="service-content">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-battery-half"></i>
+                </div>
+
+                <h3>Phone Battery Replacement</h3>
+
+                <p>
+                    Tired of constantly charging your phone? Get a
+                    professional battery replacement for devices
+                    experiencing fast drainage, poor battery life or
+                    unexpected shutdowns.
+                </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20phone%20battery%20replacement."
+                    class="service-link"
+                    target="_blank"
+                >
+                    Ask About Battery Repair
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
 
     </div>
 
@@ -878,71 +854,150 @@
 
 
 <!-- =========================
-     COMMON PROBLEMS
-========================== -->
+     LAPTOP SERVICES
+========================= -->
 
-<section class="problems-section">
+<section class="section problems-section">
 
-    <div class="container">
+    <div class="section-heading">
 
-        <div class="section-heading">
+        <div class="label">Laptop Services</div>
 
-            <span>Common Problems</span>
+        <h2>
+            Keep Your Laptop Secure, Fast & Reliable
+        </h2>
 
-            <h2>
-                Problems We Help Solve
-            </h2>
+        <p>
+            From system setup and security to routine servicing,
+            we help keep your laptop ready for work, business,
+            school and everyday use.
+        </p>
 
-            <p>
-                Whether your device has a hardware fault, software issue
-                or performance problem, we can assess the situation and
-                recommend the appropriate solution.
-            </p>
-
-        </div>
+    </div>
 
 
-        <div class="problem-grid">
+    <div class="services-grid">
 
-            <div class="problem-card">
 
-                <h3>Hardware Issues</h3>
+        <!-- ANTIVIRUS -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="laptop-antivirus.jpg"
+                    alt="Laptop antivirus and security service"
+                >
+            </div>
+
+            <div class="service-content">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Antivirus & Security</h3>
 
                 <p>
-                    Broken screens, faulty charging ports, damaged
-                    keyboards, batteries, speakers, cameras and other
-                    hardware-related problems.
+                    Protect your laptop from viruses, malware and unwanted
+                    software. We provide security checks, virus removal
+                    and protection setup to help keep your system safer
+                    and more reliable.
                 </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20antivirus%20or%20laptop%20security."
+                    class="service-link"
+                    target="_blank"
+                >
+                    Ask About Security
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
+        </article>
 
-            <div class="problem-card">
 
-                <h3>Software Issues</h3>
+        <!-- WINDOWS -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="windows-installation.jpg"
+                    alt="Windows installation and setup service"
+                >
+            </div>
+
+            <div class="service-content">
+
+                <div class="service-icon">
+                    <i class="fa-brands fa-windows"></i>
+                </div>
+
+                <h3>Windows Installation</h3>
 
                 <p>
-                    Windows problems, system errors, application issues,
-                    operating system problems and other software-related
-                    challenges.
+                    Get your laptop properly set up with a professional
+                    Windows installation or reinstallation, including
+                    essential drivers, system configuration and
+                    performance checks.
                 </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20Windows%20installation."
+                    class="service-link"
+                    target="_blank"
+                >
+                    Ask About Windows Installation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
+        </article>
 
-            <div class="problem-card">
 
-                <h3>Performance Problems</h3>
+        <!-- SERVICING -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="laptop-servicing.jpg"
+                    alt="Professional laptop servicing and maintenance"
+                >
+            </div>
+
+            <div class="service-content">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+
+                <h3>Laptop Servicing</h3>
 
                 <p>
-                    Slow laptops, storage limitations, insufficient RAM,
-                    overheating and other issues affecting device
-                    performance.
+                    Give your laptop the care it deserves. Our servicing
+                    helps address dust buildup, overheating, sluggish
+                    performance and general maintenance needs to keep
+                    your machine working efficiently.
                 </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20book%20a%20laptop%20servicing."
+                    class="service-link"
+                    target="_blank"
+                >
+                    Book Laptop Servicing
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
-        </div>
+        </article>
+
 
     </div>
 
@@ -950,64 +1005,81 @@
 
 
 <!-- =========================
-     WHAT WE HANDLE
-========================== -->
+     PROBLEMS WE HELP SOLVE
+========================= -->
 
-<section>
+<section class="section">
 
-    <div class="container">
+    <div class="section-heading">
 
-        <div class="section-heading">
+        <div class="label">Common Problems</div>
 
-            <span>Our Repair Solutions</span>
+        <h2>
+            Problems We Help Solve
+        </h2>
 
-            <h2>
-                What We Handle
-            </h2>
+        <p>
+            Not sure what's wrong with your device? Tell us what you're
+            experiencing and we'll assess the situation and help identify
+            the appropriate solution.
+        </p>
+
+    </div>
+
+
+    <div class="problems-grid">
+
+
+        <div class="problem-card">
+
+            <div class="problem-icon">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <h3>Hardware Issues</h3>
 
             <p>
-                Practical repair and upgrade solutions for everyday
-                phones and laptops.
+                Broken screens, faulty batteries, charging problems,
+                damaged components and other hardware-related faults
+                affecting your device.
             </p>
 
         </div>
 
 
-        <div class="handle-grid">
+        <div class="problem-card">
 
-            <div class="handle-item">
-                📱 Screen Replacement
+            <div class="problem-icon">
+                <i class="fa-solid fa-laptop-code"></i>
             </div>
 
-            <div class="handle-item">
-                🔋 Battery Replacement
-            </div>
+            <h3>Software Issues</h3>
 
-            <div class="handle-item">
-                ⚡ Charging Problems
-            </div>
-
-            <div class="handle-item">
-                ⌨️ Keyboard Problems
-            </div>
-
-            <div class="handle-item">
-                💾 Storage Upgrades
-            </div>
-
-            <div class="handle-item">
-                🚀 RAM Upgrades
-            </div>
-
-            <div class="handle-item">
-                🪟 Windows & Software
-            </div>
-
-            <div class="handle-item">
-                🌡️ Overheating Problems
-            </div>
+            <p>
+                Windows problems, viruses, system errors, software
+                issues, operating system problems and configuration
+                challenges.
+            </p>
 
         </div>
+
+
+        <div class="problem-card">
+
+            <div class="problem-icon">
+                <i class="fa-solid fa-gauge-high"></i>
+            </div>
+
+            <h3>Performance Problems</h3>
+
+            <p>
+                Slow laptops, overheating, storage limitations,
+                startup problems and other issues affecting everyday
+                device performance.
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -1016,499 +1088,131 @@
 
 <!-- =========================
      REPAIR PROCESS
-========================== -->
+========================= -->
 
-<section class="process-section">
+<section class="section process">
 
-    <div class="container">
+    <div class="section-heading">
 
-        <div class="section-heading">
-
-            <span>Our Process</span>
-
-            <h2>
-                How We Handle Repairs
-            </h2>
-
-            <p>
-                We keep the repair process straightforward and focused
-                on understanding the actual problem with your device.
-            </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-            <div class="process-card">
-
-                <div class="process-number">1</div>
-
-                <h3>Diagnosis</h3>
-
-                <p>
-                    We assess the device and identify the reported
-                    problem.
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">2</div>
-
-                <h3>Assessment</h3>
-
-                <p>
-                    We explain the repair requirements and available
-                    solution.
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">3</div>
-
-                <h3>Repair</h3>
-
-                <p>
-                    The required repair or upgrade is carried out
-                    carefully.
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">4</div>
-
-                <h3>Testing</h3>
-
-                <p>
-                    We test the device after the repair before handing
-                    it back to you.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     BEFORE BRINGING DEVICE
-========================== -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Before Your Repair</span>
-
-            <h2>
-                Before You Bring Your Device
-            </h2>
-
-            <p>
-                A few simple steps can make the repair process easier
-                and help protect your important information.
-            </p>
-
-        </div>
-
-
-        <div class="before-grid">
-
-            <div class="before-card">
-
-                <h3>Back Up Your Data</h3>
-
-                <p>
-                    Where possible, back up important photos, documents,
-                    contacts and other personal information.
-                </p>
-
-            </div>
-
-
-            <div class="before-card">
-
-                <h3>Bring Relevant Accessories</h3>
-
-                <p>
-                    If necessary, bring your charger, adapter or other
-                    accessories related to the problem.
-                </p>
-
-            </div>
-
-
-            <div class="before-card">
-
-                <h3>Explain The Problem</h3>
-
-                <p>
-                    Tell us what happened and what symptoms you noticed
-                    so we can understand the issue better.
-                </p>
-
-            </div>
-
-
-            <div class="before-card">
-
-                <h3>Don't Worry If It Won't Power On</h3>
-
-                <p>
-                    A device that does not turn on can still be assessed
-                    to determine the possible cause.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     REPAIR VIDEOS
-========================== -->
-
-<section class="videos-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Watch & Learn</span>
-
-            <h2>
-                Repair Videos & Tech Tips
-            </h2>
-
-            <p>
-                Watch Street Gadgets Care repair demonstrations,
-                technology content and practical tips from our YouTube
-                channel.
-            </p>
-
-        </div>
-
-
-        <div class="video-grid">
-
-
-            <!-- VIDEO 1 -->
-
-            <div class="video-card">
-
-                <div class="video-wrapper">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/DXVP_zwtb6k"
-                        title="Street Gadgets Care Repair Video"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Street Gadgets Care Repair Video
-                    </h3>
-
-                    <p>
-                        Watch this video from Street Gadgets Care on
-                        YouTube.
-                    </p>
-
-                    <a
-                        href="https://youtu.be/DXVP_zwtb6k"
-                        target="_blank"
-                        class="watch-link"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 2 -->
-
-            <div class="video-card">
-
-                <div class="video-wrapper">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/VR8dvpx2vgY"
-                        title="Street Gadgets Care Repair Video"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Street Gadgets Care Repair Video
-                    </h3>
-
-                    <p>
-                        Watch this video from Street Gadgets Care on
-                        YouTube.
-                    </p>
-
-                    <a
-                        href="https://youtu.be/VR8dvpx2vgY"
-                        target="_blank"
-                        class="watch-link"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 3 -->
-
-            <div class="video-card">
-
-                <div class="video-wrapper">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/3Eia1pcI59g"
-                        title="Journey into Tech Excellence"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Journey into Tech Excellence
-                    </h3>
-
-                    <p>
-                        Explore Street Gadgets Care and our journey in
-                        technology.
-                    </p>
-
-                    <a
-                        href="https://youtu.be/3Eia1pcI59g"
-                        target="_blank"
-                        class="watch-link"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 4 -->
-
-            <div class="video-card">
-
-                <div class="video-wrapper">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/FzRo8pXfS1U"
-                        title="Street Gadgets Care Repair Video"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Street Gadgets Care Repair Video
-                    </h3>
-
-                    <p>
-                        Watch this video from Street Gadgets Care on
-                        YouTube.
-                    </p>
-
-                    <a
-                        href="https://youtu.be/FzRo8pXfS1U"
-                        target="_blank"
-                        class="watch-link"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 5 -->
-
-            <div class="video-card">
-
-                <div class="video-wrapper">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/Wcvv5hZNxqQ"
-                        title="How to Check Your Computer's Health"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        How to Check Your Computer's Health
-                    </h3>
-
-                    <p>
-                        A practical technology tip from Street Gadgets
-                        Care to help you understand your computer's
-                        condition.
-                    </p>
-
-                    <a
-                        href="https://youtu.be/Wcvv5hZNxqQ"
-                        target="_blank"
-                        class="watch-link"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="youtube-cta">
-
-            <a
-                href="https://www.youtube.com/channel/UCeki6senRutN5Hyqa9FY4xw"
-                target="_blank"
-                class="youtube-btn"
-            >
-                ▶ Visit Street Gadgets Care on YouTube
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KENYA SERVICE AREA
-========================== -->
-
-<section class="kenya-section">
-
-    <div class="container">
-
-        <div class="kenya-box">
-
-            <h2>
-                Serving Customers <span>Across Kenya</span>
-            </h2>
-
-            <p>
-                Street Gadgets Care is based in Nairobi, but you don't
-                have to be in Nairobi to access our services.
-            </p>
-
-            <p>
-                Customers outside Nairobi can contact us to discuss
-                their device and, where applicable, arrange to send it
-                to us for repair.
-            </p>
-
-
-            <div class="shipping-note">
-
-                <strong>
-                    Not in Nairobi? No worries!
-                </strong>
-
-                <p>
-                    Send your device to us and we'll repair it and ship
-                    it back safely.
-                </p>
-
-            </div>
-
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20outside%20Nairobi%20and%20would%20like%20to%20ask%20about%20sending%20my%20device%20for%20repair."
-                class="btn btn-whatsapp"
-                target="_blank"
-            >
-                Ask About Sending Your Device
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FINAL CTA
-========================== -->
-
-<section class="final-cta">
-
-    <div class="container">
+        <div class="label">Our Process</div>
 
         <h2>
-            Need Your Device Repaired?
+            A Simple, Professional Repair Process
         </h2>
 
         <p>
-            Tell us what is wrong with your phone or laptop and let's
-            discuss the best way to get it working again.
+            We keep the process straightforward, communicate clearly
+            and handle your device with care.
         </p>
 
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-number">1</div>
+
+            <h3>Tell Us</h3>
+
+            <p>
+                Contact us and explain the problem with your device.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">2</div>
+
+            <h3>Assessment</h3>
+
+            <p>
+                We assess the issue and discuss the appropriate repair
+                or service with you.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">3</div>
+
+            <h3>Repair</h3>
+
+            <p>
+                We carry out the agreed repair or service carefully
+                and professionally.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">4</div>
+
+            <h3>Testing</h3>
+
+            <p>
+                Your device is checked to ensure the completed service
+                is working as expected.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KENYA-WIDE SERVICE
+========================= -->
+
+<section class="section kenya-section">
+
+    <div class="kenya-content">
+
+        <div class="label">Service Across Kenya</div>
+
+        <h2>
+            Not in Nairobi? No Worries.
+        </h2>
+
+        <p>
+            Street Gadgets Care is based in Nairobi, but you don't have
+            to be in Nairobi to access our services. Customers outside
+            Nairobi can contact us to discuss their device and, where
+            applicable, arrange to send it to us for repair.
+        </p>
+
+
+        <div class="kenya-highlight">
+
+            <strong>
+                Send Your Device to Us
+            </strong>
+
+            <span>
+                We'll repair it and ship it back safely.
+            </span>
+
+        </div>
+
+
         <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20device%20repair."
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20outside%20Nairobi%20and%20would%20like%20to%20ask%20about%20sending%20my%20device%20for%20repair."
             class="btn btn-whatsapp"
             target="_blank"
         >
-            Chat With Us on WhatsApp
+            <i class="fa-brands fa-whatsapp"></i>
+            Ask About Sending Your Device
         </a>
 
     </div>
@@ -1517,33 +1221,61 @@
 
 
 <!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="cta">
+
+    <h2>
+        Need Help With Your Device?
+    </h2>
+
+    <p>
+        Don't let a damaged, slow or unreliable device disrupt your day.
+        Contact Street Gadgets Care and tell us what you're experiencing.
+        We'll help you understand the next step.
+    </p>
+
+    <a
+        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20my%20phone%20or%20laptop."
+        class="btn btn-whatsapp"
+        target="_blank"
+    >
+        <i class="fa-brands fa-whatsapp"></i>
+        Chat With Street Gadgets Care
+    </a>
+
+</section>
+
+
+<!-- =========================
      FOOTER
-========================== -->
+========================= -->
 
 <footer>
 
-    <div class="footer-container">
+    <div class="footer-logo">
+        <img src="Logo.png" alt="Street Gadgets Care">
+    </div>
 
-        <div class="footer-logo">
-            <img src="Logo.png" alt="Street Gadgets Care">
-        </div>
+    <div class="footer-text">
 
-        <div class="footer-text">
-            Phone & Laptop Repairs • Gadgets & Accessories • Graphic Design
-            <br>
-            Based in Nairobi, serving customers across Kenya
-        </div>
+        <strong>
+            Phones & Laptops • Repairs • Gadgets & Accessories • Graphic Design
+        </strong>
+
+        <br>
+
+        Based in Nairobi, serving customers across Kenya.
 
     </div>
 
-
     <div class="footer-bottom">
-
         © 2026 Street Gadgets Care. All Rights Reserved.
-
     </div>
 
 </footer>
+
 
 </body>
 </html>
