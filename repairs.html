@@ -191,6 +191,26 @@
             color: #19a7ce;
         }
 
+        .btn-tiktok {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .btn-tiktok:hover {
+            background: #151515;
+            transform: translateY(-2px);
+        }
+
+        .btn-youtube {
+            background: #ff0000;
+            color: #ffffff;
+        }
+
+        .btn-youtube:hover {
+            background: #d90000;
+            transform: translateY(-2px);
+        }
+
         /* =========================
            GENERAL
         ========================= */
@@ -325,7 +345,7 @@
         }
 
         /* =========================
-           PROBLEMS SECTION
+           PROBLEMS
         ========================= */
 
         .problems-section {
@@ -378,7 +398,110 @@
         }
 
         /* =========================
-           REPAIR PROCESS
+           VIDEO SECTION
+        ========================= */
+
+        .video-section {
+            background: #f7f9fc;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .video-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e4e9ef;
+            box-shadow: 0 10px 30px rgba(11,18,32,0.06);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-title {
+            padding: 18px 20px;
+            color: #0b1220;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .video-button {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        /* =========================
+           SOCIAL SECTION
+        ========================= */
+
+        .social-section {
+            background: #ffffff;
+        }
+
+        .social-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 55px 35px;
+            text-align: center;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #0b1220, #111c31);
+            color: white;
+            box-shadow: 0 18px 45px rgba(11,18,32,0.14);
+        }
+
+        .social-icon {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 20px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 31px;
+        }
+
+        .social-box h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 14px;
+        }
+
+        .social-box p {
+            max-width: 650px;
+            margin: auto;
+            color: #cbd4e2;
+            font-size: 15px;
+        }
+
+        .social-handle {
+            margin: 18px 0 25px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .social-handle i {
+            margin-right: 8px;
+        }
+
+        /* =========================
+           PROCESS
         ========================= */
 
         .process {
@@ -541,7 +664,8 @@
 
         @media (max-width: 900px) {
 
-            .services-grid {
+            .services-grid,
+            .video-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -598,7 +722,8 @@
                 padding: 65px 16px;
             }
 
-            .services-grid {
+            .services-grid,
+            .video-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -618,12 +743,17 @@
                 width: 100%;
             }
 
+            .social-box {
+                padding: 45px 22px;
+            }
+
         }
 
     </style>
 </head>
 
 <body>
+
 
 <!-- =========================
      HEADER
@@ -638,12 +768,19 @@
         </a>
 
         <nav>
+
             <a href="index.html">Home</a>
+
             <a href="about.html">About</a>
+
             <a href="services.html">Services</a>
+
             <a href="repairs.html" class="active">Repairs</a>
+
             <a href="products.html">Products</a>
+
             <a href="contact.html">Contact</a>
+
         </nav>
 
     </div>
@@ -660,24 +797,38 @@
     <div class="hero-content">
 
         <div class="hero-badge">
+
             <i class="fa-solid fa-screwdriver-wrench"></i>
+
             PROFESSIONAL DEVICE CARE
+
         </div>
+
 
         <h1>
+
             Professional <span>Phone & Laptop</span> Repairs
+
         </h1>
 
+
         <p>
-            Reliable device repairs and technology services delivered with
-            careful workmanship, professional attention and a commitment
-            to getting your device back in great working condition.
+
+            Reliable device repairs and technology services delivered
+            with careful workmanship, professional attention and a
+            commitment to getting your device back in great working condition.
+
         </p>
 
+
         <div class="hero-location">
+
             <i class="fa-solid fa-location-dot"></i>
+
             Based in Nairobi • Serving Customers Across Kenya
+
         </div>
+
 
         <div class="hero-buttons">
 
@@ -686,13 +837,20 @@
                 class="btn btn-whatsapp"
                 target="_blank"
             >
+
                 <i class="fa-brands fa-whatsapp"></i>
+
                 Chat With Us
+
             </a>
 
+
             <a href="#repair-services" class="btn btn-outline">
+
                 Explore Repair Services
+
                 <i class="fa-solid fa-arrow-down"></i>
+
             </a>
 
         </div>
@@ -710,16 +868,26 @@
 
     <div class="section-heading">
 
-        <div class="label">Phone Repairs</div>
+        <div class="label">
+
+            Phone Repairs
+
+        </div>
+
 
         <h2>
+
             Give Your Phone the Care It Deserves
+
         </h2>
 
+
         <p>
+
             From damaged screens to worn-out batteries, we provide
             practical phone repair solutions with careful handling
             and professional attention to detail.
+
         </p>
 
     </div>
@@ -733,34 +901,51 @@
         <article class="service-card">
 
             <div class="service-image">
+
                 <img
                     src="phone-screen-repair.jpg"
                     alt="Phone screen replacement and repair"
                 >
+
             </div>
+
 
             <div class="service-content">
 
                 <div class="service-icon">
+
                     <i class="fa-solid fa-mobile-screen-button"></i>
+
                 </div>
 
-                <h3>Screen Replacement</h3>
+
+                <h3>
+
+                    Screen Replacement
+
+                </h3>
+
 
                 <p>
+
                     Bring your phone back to life with a professionally
-                    fitted replacement screen. We handle cracked, damaged
-                    and faulty displays with careful installation and
-                    thorough testing after repair.
+                    fitted replacement screen. We handle cracked,
+                    damaged and faulty displays with careful installation
+                    and thorough testing after repair.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20phone%20screen%20replacement."
                     class="service-link"
                     target="_blank"
                 >
+
                     Ask About Screen Repair
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -773,34 +958,51 @@
         <article class="service-card">
 
             <div class="service-image">
+
                 <img
                     src="iphone-back-glass.jpg"
                     alt="iPhone back glass replacement"
                 >
+
             </div>
+
 
             <div class="service-content">
 
                 <div class="service-icon">
+
                     <i class="fa-brands fa-apple"></i>
+
                 </div>
 
-                <h3>iPhone Back Glass Replacement</h3>
+
+                <h3>
+
+                    iPhone Back Glass Replacement
+
+                </h3>
+
 
                 <p>
+
                     Restore the clean, premium appearance of your iPhone.
                     Our back-glass replacement service helps repair
                     shattered or damaged rear glass while giving your
                     device a refreshed finish.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20iPhone%20back%20glass%20replacement."
                     class="service-link"
                     target="_blank"
                 >
+
                     Ask About Back Glass Repair
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -808,45 +1010,61 @@
         </article>
 
 
-        <!-- BATTERY -->
+        <!-- PHONE BATTERY -->
 
         <article class="service-card">
 
             <div class="service-image">
+
                 <img
                     src="phone-battery-replacement.jpg"
                     alt="Phone battery replacement service"
                 >
+
             </div>
+
 
             <div class="service-content">
 
                 <div class="service-icon">
+
                     <i class="fa-solid fa-battery-half"></i>
+
                 </div>
 
-                <h3>Phone Battery Replacement</h3>
+
+                <h3>
+
+                    Phone Battery Replacement
+
+                </h3>
+
 
                 <p>
+
                     Tired of constantly charging your phone? Get a
                     professional battery replacement for devices
                     experiencing fast drainage, poor battery life or
                     unexpected shutdowns.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20phone%20battery%20replacement."
                     class="service-link"
                     target="_blank"
                 >
+
                     Ask About Battery Repair
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
 
         </article>
-
 
     </div>
 
@@ -861,16 +1079,26 @@
 
     <div class="section-heading">
 
-        <div class="label">Laptop Services</div>
+        <div class="label">
+
+            Laptop Services
+
+        </div>
+
 
         <h2>
+
             Keep Your Laptop Secure, Fast & Reliable
+
         </h2>
 
+
         <p>
+
             From system setup and security to routine servicing,
             we help keep your laptop ready for work, business,
             school and everyday use.
+
         </p>
 
     </div>
@@ -884,34 +1112,51 @@
         <article class="service-card">
 
             <div class="service-image">
+
                 <img
                     src="laptop-antivirus.jpg"
                     alt="Laptop antivirus and security service"
                 >
+
             </div>
+
 
             <div class="service-content">
 
                 <div class="service-icon">
+
                     <i class="fa-solid fa-shield-halved"></i>
+
                 </div>
 
-                <h3>Antivirus & Security</h3>
+
+                <h3>
+
+                    Antivirus & Security
+
+                </h3>
+
 
                 <p>
+
                     Protect your laptop from viruses, malware and unwanted
                     software. We provide security checks, virus removal
                     and protection setup to help keep your system safer
                     and more reliable.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20antivirus%20or%20laptop%20security."
                     class="service-link"
                     target="_blank"
                 >
+
                     Ask About Security
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -919,39 +1164,56 @@
         </article>
 
 
-        <!-- WINDOWS -->
+        <!-- WINDOWS INSTALLATION -->
 
         <article class="service-card">
 
             <div class="service-image">
+
                 <img
                     src="windows-installation.jpg"
                     alt="Windows installation and setup service"
                 >
+
             </div>
+
 
             <div class="service-content">
 
                 <div class="service-icon">
+
                     <i class="fa-brands fa-windows"></i>
+
                 </div>
 
-                <h3>Windows Installation</h3>
+
+                <h3>
+
+                    Windows Installation
+
+                </h3>
+
 
                 <p>
+
                     Get your laptop properly set up with a professional
                     Windows installation or reinstallation, including
                     essential drivers, system configuration and
                     performance checks.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20Windows%20installation."
                     class="service-link"
                     target="_blank"
                 >
+
                     Ask About Windows Installation
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -959,45 +1221,61 @@
         </article>
 
 
-        <!-- SERVICING -->
+        <!-- LAPTOP SERVICING -->
 
         <article class="service-card">
 
             <div class="service-image">
+
                 <img
                     src="laptop-servicing.jpg"
                     alt="Professional laptop servicing and maintenance"
                 >
+
             </div>
+
 
             <div class="service-content">
 
                 <div class="service-icon">
+
                     <i class="fa-solid fa-screwdriver-wrench"></i>
+
                 </div>
 
-                <h3>Laptop Servicing</h3>
+
+                <h3>
+
+                    Laptop Servicing
+
+                </h3>
+
 
                 <p>
+
                     Give your laptop the care it deserves. Our servicing
                     helps address dust buildup, overheating, sluggish
                     performance and general maintenance needs to keep
                     your machine working efficiently.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20book%20a%20laptop%20servicing."
                     class="service-link"
                     target="_blank"
                 >
+
                     Book Laptop Servicing
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
 
         </article>
-
 
     </div>
 
@@ -1012,16 +1290,26 @@
 
     <div class="section-heading">
 
-        <div class="label">Common Problems</div>
+        <div class="label">
+
+            Common Problems
+
+        </div>
+
 
         <h2>
+
             Problems We Help Solve
+
         </h2>
 
+
         <p>
+
             Not sure what's wrong with your device? Tell us what you're
             experiencing and we'll assess the situation and help identify
             the appropriate solution.
+
         </p>
 
     </div>
@@ -1033,15 +1321,25 @@
         <div class="problem-card">
 
             <div class="problem-icon">
+
                 <i class="fa-solid fa-microchip"></i>
+
             </div>
 
-            <h3>Hardware Issues</h3>
+
+            <h3>
+
+                Hardware Issues
+
+            </h3>
+
 
             <p>
+
                 Broken screens, faulty batteries, charging problems,
                 damaged components and other hardware-related faults
                 affecting your device.
+
             </p>
 
         </div>
@@ -1050,15 +1348,25 @@
         <div class="problem-card">
 
             <div class="problem-icon">
+
                 <i class="fa-solid fa-laptop-code"></i>
+
             </div>
 
-            <h3>Software Issues</h3>
+
+            <h3>
+
+                Software Issues
+
+            </h3>
+
 
             <p>
+
                 Windows problems, viruses, system errors, software
                 issues, operating system problems and configuration
                 challenges.
+
             </p>
 
         </div>
@@ -1067,19 +1375,272 @@
         <div class="problem-card">
 
             <div class="problem-icon">
+
                 <i class="fa-solid fa-gauge-high"></i>
+
             </div>
 
-            <h3>Performance Problems</h3>
+
+            <h3>
+
+                Performance Problems
+
+            </h3>
+
 
             <p>
+
                 Slow laptops, overheating, storage limitations,
                 startup problems and other issues affecting everyday
                 device performance.
+
             </p>
 
         </div>
 
+    </div>
+
+</section>
+
+
+<!-- =========================
+     YOUTUBE VIDEOS
+========================= -->
+
+<section class="section video-section">
+
+    <div class="section-heading">
+
+        <div class="label">
+
+            Repair Videos & Tech Tips
+
+        </div>
+
+
+        <h2>
+
+            See Our Work. Learn More About Your Devices.
+
+        </h2>
+
+
+        <p>
+
+            Explore our repair videos and technology content for useful
+            tips, device care information and a closer look at
+            Street Gadgets Care.
+
+        </p>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+
+        <div class="video-card">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube.com/embed/DXVP_zwtb6k"
+                    title="Street Gadgets Care Repair Video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video-title">
+
+                Street Gadgets Care Repair Video
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="video-card">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube.com/embed/VR8dvpx2vgY"
+                    title="Street Gadgets Care Repair Video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video-title">
+
+                Street Gadgets Care Repair Video
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 3 -->
+
+        <div class="video-card">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube.com/embed/3Eia1pcI59g"
+                    title="Journey into Tech Excellence"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video-title">
+
+                Journey into Tech Excellence
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 4 -->
+
+        <div class="video-card">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube.com/embed/FzRo8pXfS1U"
+                    title="Street Gadgets Care Repair Video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video-title">
+
+                Street Gadgets Care Repair Video
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 5 -->
+
+        <div class="video-card">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube.com/embed/Wcvv5hZNxqQ"
+                    title="How to Check Your Computer's Health"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video-title">
+
+                How to Check Your Computer's Health
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="video-button">
+
+        <a
+            href="https://youtu.be/DXVP_zwtb6k"
+            class="btn btn-youtube"
+            target="_blank"
+        >
+
+            <i class="fa-brands fa-youtube"></i>
+
+            Watch Our YouTube Videos
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TIKTOK
+========================= -->
+
+<section class="section social-section">
+
+    <div class="social-box">
+
+        <div class="social-icon">
+
+            <i class="fa-brands fa-tiktok"></i>
+
+        </div>
+
+
+        <h2>
+
+            More Repairs. More Tech Tips.
+
+        </h2>
+
+
+        <p>
+
+            Follow Street Gadgets Care on TikTok for repair tips,
+            device-care advice, technology content, behind-the-scenes
+            work and updates from our shop.
+
+        </p>
+
+
+        <div class="social-handle">
+
+            <i class="fa-brands fa-tiktok"></i>
+
+            @street_gadgets_care
+
+        </div>
+
+
+        <a
+            href="https://www.tiktok.com/@street_gadgets_care"
+            class="btn btn-tiktok"
+            target="_blank"
+        >
+
+            <i class="fa-brands fa-tiktok"></i>
+
+            Follow Us on TikTok
+
+        </a>
 
     </div>
 
@@ -1094,15 +1655,25 @@
 
     <div class="section-heading">
 
-        <div class="label">Our Process</div>
+        <div class="label">
+
+            Our Process
+
+        </div>
+
 
         <h2>
+
             A Simple, Professional Repair Process
+
         </h2>
 
+
         <p>
+
             We keep the process straightforward, communicate clearly
             and handle your device with care.
+
         </p>
 
     </div>
@@ -1113,12 +1684,24 @@
 
         <div class="process-card">
 
-            <div class="process-number">1</div>
+            <div class="process-number">
 
-            <h3>Tell Us</h3>
+                1
+
+            </div>
+
+
+            <h3>
+
+                Tell Us
+
+            </h3>
+
 
             <p>
+
                 Contact us and explain the problem with your device.
+
             </p>
 
         </div>
@@ -1126,13 +1709,25 @@
 
         <div class="process-card">
 
-            <div class="process-number">2</div>
+            <div class="process-number">
 
-            <h3>Assessment</h3>
+                2
+
+            </div>
+
+
+            <h3>
+
+                Assessment
+
+            </h3>
+
 
             <p>
+
                 We assess the issue and discuss the appropriate repair
                 or service with you.
+
             </p>
 
         </div>
@@ -1140,13 +1735,25 @@
 
         <div class="process-card">
 
-            <div class="process-number">3</div>
+            <div class="process-number">
 
-            <h3>Repair</h3>
+                3
+
+            </div>
+
+
+            <h3>
+
+                Repair
+
+            </h3>
+
 
             <p>
+
                 We carry out the agreed repair or service carefully
                 and professionally.
+
             </p>
 
         </div>
@@ -1154,17 +1761,28 @@
 
         <div class="process-card">
 
-            <div class="process-number">4</div>
+            <div class="process-number">
 
-            <h3>Testing</h3>
+                4
+
+            </div>
+
+
+            <h3>
+
+                Testing
+
+            </h3>
+
 
             <p>
+
                 Your device is checked to ensure the completed service
                 is working as expected.
+
             </p>
 
         </div>
-
 
     </div>
 
@@ -1179,28 +1797,43 @@
 
     <div class="kenya-content">
 
-        <div class="label">Service Across Kenya</div>
+        <div class="label">
+
+            Service Across Kenya
+
+        </div>
+
 
         <h2>
+
             Not in Nairobi? No Worries.
+
         </h2>
 
+
         <p>
+
             Street Gadgets Care is based in Nairobi, but you don't have
             to be in Nairobi to access our services. Customers outside
             Nairobi can contact us to discuss their device and, where
             applicable, arrange to send it to us for repair.
+
         </p>
 
 
         <div class="kenya-highlight">
 
             <strong>
+
                 Send Your Device to Us
+
             </strong>
 
+
             <span>
+
                 We'll repair it and ship it back safely.
+
             </span>
 
         </div>
@@ -1211,8 +1844,11 @@
             class="btn btn-whatsapp"
             target="_blank"
         >
+
             <i class="fa-brands fa-whatsapp"></i>
+
             Ask About Sending Your Device
+
         </a>
 
     </div>
@@ -1227,22 +1863,31 @@
 <section class="cta">
 
     <h2>
+
         Need Help With Your Device?
+
     </h2>
 
+
     <p>
+
         Don't let a damaged, slow or unreliable device disrupt your day.
         Contact Street Gadgets Care and tell us what you're experiencing.
         We'll help you understand the next step.
+
     </p>
+
 
     <a
         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20my%20phone%20or%20laptop."
         class="btn btn-whatsapp"
         target="_blank"
     >
+
         <i class="fa-brands fa-whatsapp"></i>
+
         Chat With Street Gadgets Care
+
     </a>
 
 </section>
@@ -1255,13 +1900,21 @@
 <footer>
 
     <div class="footer-logo">
-        <img src="Logo.png" alt="Street Gadgets Care">
+
+        <img
+            src="Logo.png"
+            alt="Street Gadgets Care"
+        >
+
     </div>
+
 
     <div class="footer-text">
 
         <strong>
+
             Phones & Laptops • Repairs • Gadgets & Accessories • Graphic Design
+
         </strong>
 
         <br>
@@ -1270,8 +1923,11 @@
 
     </div>
 
+
     <div class="footer-bottom">
+
         © 2026 Street Gadgets Care. All Rights Reserved.
+
     </div>
 
 </footer>
