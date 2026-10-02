@@ -1,756 +1,1996 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Laptop Storage & Memory | Street Gadgets Care</title>
+  <title>Laptop Storage & Memory | Street Gadgets Care</title>
 
-    <meta name="description" content="Shop HDDs, SSDs, RAM, memory cards and flash drives from Street Gadgets Care.">
+  <meta
+    name="description"
+    content="Shop HDDs, NVMe SSDs, SATA SSDs, external hard drives, RAM, memory cards and flash drives from Street Gadgets Care."
+  >
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* HEADER */
-        header {
-            background: #0b1220;
-            padding: 15px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.6;
+    }
 
-        header img {
-            width: 170px;
-            height: auto;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        nav {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
+    /* =========================
+       HEADER
+    ========================= */
 
-        nav a:hover,
-        nav a.active {
-            color: #19a7ce;
-        }
+    header {
+      background: #0b1220;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
 
-        /* PAGE INTRO */
-        .page-intro {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(to bottom, white, #f5f7fa);
-        }
+    .nav-container {
+      width: 92%;
+      max-width: 1200px;
+      min-height: 78px;
+      margin: auto;
 
-        .page-intro h1 {
-            font-size: 42px;
-            color: #0b1220;
-            margin-bottom: 15px;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
 
-        .page-intro p {
-            max-width: 750px;
-            margin: auto;
-            color: #666;
-            font-size: 17px;
-        }
+    .logo img {
+      width: 170px;
+      max-height: 58px;
+      object-fit: contain;
+    }
 
-        /* SECTION */
-        .products-section {
-            padding: 20px 5% 70px;
-        }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+    nav a {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 12px;
+      border-radius: 7px;
+      transition: 0.25s ease;
+    }
 
-        .section-title h2 {
-            font-size: 32px;
-            color: #0b1220;
-            margin-bottom: 10px;
-        }
+    nav a:hover,
+    nav a.active {
+      color: #19a7ce;
+      background: rgba(25, 167, 206, 0.08);
+    }
 
-        .section-title p {
-            color: #666;
-            max-width: 700px;
-            margin: auto;
-        }
+    .nav-whatsapp {
+      background: #25d366 !important;
+      color: #ffffff !important;
+      padding: 10px 15px !important;
+    }
 
-        /* PRODUCTS GRID */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    .nav-whatsapp:hover {
+      background: #1fb957 !important;
+    }
 
-        /* PRODUCT CARD */
-        .product-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.3s;
-        }
+    /* =========================
+       HERO
+    ========================= */
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        }
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(11, 18, 32, 0.97),
+          rgba(11, 18, 32, 0.89)
+        ),
+        url("nvme-ssd.jpg") center/cover no-repeat;
 
-        /* PRODUCT IMAGE */
-        .product-image {
-            width: 100%;
-            height: 230px;
-            object-fit: contain;
-            display: block;
-            background: #ffffff;
-            padding: 15px;
-        }
+      color: #ffffff;
+      padding: 70px 20px;
+    }
 
-        /* PRODUCT CONTENT */
-        .product-content {
-            padding: 25px;
-        }
+    .hero-container {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
 
-        .product-content h3 {
-            color: #0b1220;
-            font-size: 23px;
-            margin-bottom: 10px;
-        }
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 55px;
+    }
 
-        .product-description {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 18px;
-        }
+    .hero-content {
+      max-width: 650px;
+    }
 
-        /* CAPACITY / PRICE LIST */
-        .price-list {
-            border-top: 1px solid #e5e5e5;
-            padding-top: 15px;
-        }
+    .eyebrow {
+      display: inline-block;
+      color: #19a7ce;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 13px;
+    }
 
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            padding: 9px 0;
-            border-bottom: 1px solid #eeeeee;
-        }
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
 
-        .price-row:last-child {
-            border-bottom: none;
-        }
+    .hero p {
+      color: #d8e2ed;
+      font-size: 17px;
+      max-width: 620px;
+      margin-bottom: 26px;
+    }
 
-        .capacity {
-            font-weight: 600;
-            color: #333;
-        }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-        .price {
-            color: #19a7ce;
-            font-weight: bold;
-            white-space: nowrap;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-        /* WHATSAPP BUTTON */
-        .whatsapp-btn {
-            display: block;
-            margin-top: 18px;
-            padding: 12px 15px;
-            background: #25D366;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 7px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
+      padding: 13px 20px;
+      border-radius: 8px;
 
-        .whatsapp-btn:hover {
-            background: #1ebe5d;
-            transform: translateY(-2px);
-        }
+      font-size: 14px;
+      font-weight: 700;
 
-        /* NOTE */
-        .product-note {
-            margin-top: 15px;
-            font-size: 13px;
-            color: #777;
-            font-style: italic;
-        }
+      transition: 0.25s ease;
+    }
 
-        /* BACK BUTTON */
-        .back-section {
-            text-align: center;
-            padding: 0 20px 50px;
-        }
+    .btn-primary {
+      background: #19a7ce;
+      color: #ffffff;
+    }
 
-        .back-btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #19a7ce;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .btn-primary:hover {
+      background: #148eaf;
+      transform: translateY(-2px);
+    }
 
-        .back-btn:hover {
-            background: #0b1220;
-            transform: translateY(-2px);
-        }
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.04);
+    }
 
-        /* FOOTER */
-        footer {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 30px;
-        }
+    .btn-outline:hover {
+      background: #ffffff;
+      color: #0b1220;
+    }
 
-        footer p {
-            margin: 5px 0;
-            color: #ccc;
-        }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+    }
 
-        /* TABLET */
-        @media (max-width: 900px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    .hero-card {
+      width: 100%;
+      max-width: 410px;
 
-            .page-intro h1 {
-                font-size: 36px;
-            }
-        }
+      padding: 15px;
 
-        /* MOBILE */
-        @media (max-width: 600px) {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
 
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+    }
 
-            nav {
-                justify-content: center;
-                gap: 12px;
-            }
+    .hero-card img {
+      width: 100%;
+      height: 275px;
 
-            .page-intro {
-                padding: 45px 20px;
-            }
+      object-fit: contain;
 
-            .page-intro h1 {
-                font-size: 32px;
-            }
+      background: #ffffff;
+      border-radius: 12px;
+    }
 
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .hero-card-info {
+      padding: 14px 5px 2px;
+    }
+
+    .hero-card-info strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-info span {
+      color: #b9c7d7;
+      font-size: 13px;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 65px 20px 35px;
+      text-align: center;
+    }
+
+    .section-container {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #19a7ce;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .intro h2 {
+      color: #0b1220;
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      max-width: 740px;
+      margin: auto;
+      color: #687386;
+      font-size: 15px;
+    }
+
+    /* =========================
+       CATEGORY NAV
+    ========================= */
+
+    .category-nav {
+      padding: 10px 20px 40px;
+    }
+
+    .category-nav-inner {
+      max-width: 900px;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .category-nav a {
+      background: #ffffff;
+      border: 1px solid #dfe6ee;
+      color: #0b1220;
+
+      padding: 10px 16px;
+      border-radius: 30px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: 0.25s ease;
+    }
+
+    .category-nav a:hover {
+      background: #19a7ce;
+      border-color: #19a7ce;
+      color: #ffffff;
+    }
+
+    /* =========================
+       PRODUCT SECTIONS
+    ========================= */
+
+    .products-section {
+      padding: 20px 20px 75px;
+    }
+
+    .section-heading {
+      width: 92%;
+      max-width: 1120px;
+      margin: 0 auto 30px;
+    }
+
+    .section-heading h2 {
+      color: #0b1220;
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 7px;
+    }
+
+    .section-heading p {
+      color: #687386;
+      font-size: 14px;
+      max-width: 750px;
+    }
+
+    /* =========================
+       PRODUCT GRID
+    ========================= */
+
+    .product-grid {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border: 1px solid #e3e9f0;
+      border-radius: 15px;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+
+      transition: 0.28s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(25, 167, 206, 0.35);
+      box-shadow: 0 15px 32px rgba(11, 18, 32, 0.09);
+    }
+
+    .product-image {
+      height: 225px;
+      background: #f3f5f8;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 18px;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-content {
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-tag {
+      display: inline-block;
+      color: #19a7ce;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .product-content h3 {
+      color: #0b1220;
+      font-size: 19px;
+      line-height: 1.3;
+      margin-bottom: 7px;
+    }
+
+    .product-description {
+      color: #687386;
+      font-size: 13px;
+      margin-bottom: 13px;
+      flex: 1;
+    }
+
+    .price {
+      color: #0b1220;
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .price-list {
+      color: #4f5d70;
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .price-list strong {
+      color: #0b1220;
+    }
+
+    .whatsapp-btn {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      background: #25d366;
+      color: #ffffff;
+
+      padding: 11px 15px;
+      border-radius: 8px;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1fb957;
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       SINGLE WIDE CARD
+    ========================= */
+
+    .wide-card {
+      grid-column: span 2;
+    }
+
+    /* =========================
+       NOTE BOX
+    ========================= */
+
+    .note-section {
+      padding: 0 20px 75px;
+    }
+
+    .note-box {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      background: #eef9fc;
+      border: 1px solid #cceef6;
+      border-radius: 15px;
+
+      padding: 25px 28px;
+    }
+
+    .note-box h3 {
+      color: #0b1220;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .note-box p {
+      color: #5e6b7d;
+      font-size: 13px;
+    }
+
+    /* =========================
+       DARK INFO SECTION
+    ========================= */
+
+    .info-section {
+      padding: 10px 20px 80px;
+    }
+
+    .info-box {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      background: #0b1220;
+      color: #ffffff;
+
+      border-radius: 18px;
+      padding: 38px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .info-box h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .info-box p {
+      color: #c5d0dc;
+      font-size: 14px;
+      max-width: 570px;
+    }
+
+    .info-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-point {
+      padding: 15px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .info-point strong {
+      display: block;
+      color: #ffffff;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .info-point span {
+      color: #aebccc;
+      font-size: 12px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 10px 20px 85px;
+    }
+
+    .cta-box {
+      width: 92%;
+      max-width: 1000px;
+      margin: auto;
+
+      text-align: center;
+
+      background: linear-gradient(135deg, #eaf9fd, #ffffff);
+
+      border: 1px solid #cceef6;
+      border-radius: 18px;
+
+      padding: 43px 30px;
+    }
+
+    .cta-box h2 {
+      color: #0b1220;
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      max-width: 680px;
+      margin: 0 auto 22px;
+
+      color: #687386;
+      font-size: 14px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      background: #25d366;
+      color: #ffffff;
+
+      padding: 13px 22px;
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition: 0.25s ease;
+    }
+
+    .cta-button:hover {
+      background: #1fb957;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b1220;
+      color: #ffffff;
+      padding: 55px 20px 25px;
+    }
+
+    .footer-grid {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-logo img {
+      width: 175px;
+      margin-bottom: 15px;
+    }
+
+    .footer-about {
+      color: #aebbd0;
+      font-size: 14px;
+      max-width: 390px;
+    }
+
+    footer h3 {
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer li a,
+    .footer-contact {
+      color: #aebbd0;
+      font-size: 13px;
+    }
+
+    footer li a:hover {
+      color: #19a7ce;
+    }
+
+    .footer-bottom {
+      width: 92%;
+      max-width: 1120px;
+      margin: 40px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      color: #8190a4;
+      font-size: 12px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+
+      width: 54px;
+      height: 54px;
+
+      border-radius: 50%;
+
+      background: #25d366;
+      color: #ffffff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 24px;
+      font-weight: bold;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+      z-index: 999;
+
+      transition: 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.07);
+      background: #1fb957;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-content {
+        max-width: 720px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .wide-card {
+        grid-column: span 2;
+      }
+
+      .info-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+        padding: 13px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 7px 8px;
+      }
+
+      .logo img {
+        width: 155px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-card img {
+        height: 235px;
+      }
+
+      .intro {
+        padding-top: 50px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .wide-card {
+        grid-column: span 1;
+      }
+
+      .product-image {
+        height: 230px;
+      }
+
+      .info-box {
+        padding: 30px 23px;
+      }
+
+      .info-points {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 35px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-        <a href="index.html">
-            <img src="Logo.png" alt="Street Gadgets Care Logo">
+  <header>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care">
+      </a>
+
+      <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="tech-repairs.html">Tech Repairs</a>
+
+        <a href="shop.html" class="active">Shop</a>
+
+        <a href="creative-studio.html">Creative Studio</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a
+          href="https://wa.me/254114259961"
+          class="nav-whatsapp"
+          target="_blank"
+        >
+          WhatsApp
         </a>
 
-        <nav>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-container">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          LAPTOP STORAGE & MEMORY
+        </span>
+
+        <h1>
+          More storage.<br>
+          Better performance.
+        </h1>
+
+        <p>
+          Upgrade your laptop or computer with HDDs, SSDs, RAM,
+          external storage, memory cards and flash drives.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#ssd" class="btn btn-primary">
+            Explore SSDs
+          </a>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20storage%20or%20RAM."
+            target="_blank"
+            class="btn btn-outline"
+          >
+            Ask for Advice
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-card">
+
+          <img
+            src="nvme-ssd.jpg"
+            alt="NVMe SSD"
+          >
+
+          <div class="hero-card-info">
+
+            <strong>
+              Storage & Memory Upgrades
+            </strong>
+
+            <span>
+              Choose the right capacity for your device
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro">
+
+    <div class="section-container">
+
+      <div class="section-label">
+        STORAGE & MEMORY
+      </div>
+
+      <h2>
+        Upgrade your space. Improve your setup.
+      </h2>
+
+      <p>
+        Whether you're replacing an old drive, adding more storage,
+        increasing RAM or looking for portable storage, explore the
+        available options below.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CATEGORY NAV
+  ========================= -->
+
+  <section class="category-nav">
+
+    <div class="category-nav-inner">
+
+      <a href="#hdd">
+        HDD
+      </a>
+
+      <a href="#ssd">
+        NVMe SSD
+      </a>
+
+      <a href="#sata">
+        SATA SSD
+      </a>
+
+      <a href="#external-hdd">
+        External HDD
+      </a>
+
+      <a href="#ram">
+        RAM
+      </a>
+
+      <a href="#memory">
+        Memory Cards & Flash Drives
+      </a>
+
+      <a href="laptop-accessories.html">
+        Accessories
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INTERNAL HDD
+  ========================= -->
+
+  <section class="products-section" id="hdd">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        INTERNAL HDD
+      </div>
+
+      <h2>
+        Internal Hard Drives
+      </h2>
+
+      <p>
+        Reliable internal storage options for compatible laptops and
+        computers.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="internal-hdd.jpg"
+            alt="Internal HDD"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            HDD Storage
+          </span>
+
+          <h3>
+            Internal HDD
+          </h3>
+
+          <p class="product-description">
+            Internal hard drive storage for compatible laptops and
+            computers.
+          </p>
+
+          <div class="price-list">
+
+            <strong>500GB — KES 2,500</strong><br>
+
+            <strong>1TB — KES 5,500</strong>
+
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20an%20internal%20HDD."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       NVME SSD
+  ========================= -->
+
+  <section class="products-section" id="ssd">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        NVMe SSD
+      </div>
+
+      <h2>
+        NVMe Solid State Drives
+      </h2>
+
+      <p>
+        High-speed storage options for compatible laptops and
+        computers.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="nvme-ssd.jpg"
+            alt="NVMe SSD"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            NVMe SSD
+          </span>
+
+          <h3>
+            NVMe SSD
+          </h3>
+
+          <p class="product-description">
+            Fast solid-state storage for compatible M.2 NVMe systems.
+          </p>
+
+          <div class="price-list">
+
+            <strong>256GB — KES 7,500</strong><br>
+
+            <strong>512GB — KES 15,500</strong><br>
+
+            <strong>1TB — KES 27,000</strong>
+
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20an%20NVMe%20SSD."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SATA SSD
+  ========================= -->
+
+  <section class="products-section" id="sata">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        2.5-INCH SATA SSD
+      </div>
+
+      <h2>
+        2.5" SATA SSD
+      </h2>
+
+      <p>
+        A solid-state storage option for compatible laptops and
+        computers using a 2.5-inch SATA drive connection.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="sata-ssd.jpg"
+            alt="2.5 inch SATA SSD"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            SATA SSD
+          </span>
+
+          <h3>
+            2.5" SATA SSD
+          </h3>
+
+          <p class="product-description">
+            Solid-state storage for compatible 2.5-inch SATA systems.
+          </p>
+
+          <div class="price-list">
+
+            <strong>256GB — KES 7,500</strong><br>
+
+            <strong>512GB — KES 15,500</strong><br>
+
+            <strong>1TB — KES 27,000</strong>
+
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%202.5%20inch%20SATA%20SSD."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EXTERNAL HDD
+  ========================= -->
+
+  <section class="products-section" id="external-hdd">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        EXTERNAL STORAGE
+      </div>
+
+      <h2>
+        External HDD
+      </h2>
+
+      <p>
+        Portable storage for backups, file transfers and keeping your
+        important data with you.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="external-hdd.jpg"
+            alt="External HDD"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            External HDD
+          </span>
+
+          <h3>
+            External Hard Drive
+          </h3>
+
+          <p class="product-description">
+            Portable external storage available in different
+            capacities and brands.
+          </p>
+
+          <div class="price">
+            KES 5,500 – 15,000
+          </div>
+
+          <p class="product-description">
+            Price depends on brand and storage capacity.
+          </p>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20looking%20for%20an%20external%20HDD."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            Check Availability
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       RAM
+  ========================= -->
+
+  <section class="products-section" id="ram">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        RAM MEMORY
+      </div>
+
+      <h2>
+        RAM Upgrades
+      </h2>
+
+      <p>
+        Add memory to compatible systems to support smoother everyday
+        multitasking and workloads.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="ram-memory.jpg"
+            alt="RAM memory"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            RAM
+          </span>
+
+          <h3>
+            4GB RAM
+          </h3>
+
+          <p class="product-description">
+            Memory upgrade for compatible laptops and computers.
+          </p>
+
+          <div class="price">
+            KES 2,000
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%204GB%20RAM."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="ram-memory.jpg"
+            alt="8GB RAM memory"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            RAM
+          </span>
+
+          <h3>
+            8GB RAM
+          </h3>
+
+          <p class="product-description">
+            Memory upgrade for compatible laptops and computers.
+          </p>
+
+          <div class="price">
+            KES 6,200
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%208GB%20RAM."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="ram-memory.jpg"
+            alt="16GB RAM memory"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            RAM
+          </span>
+
+          <h3>
+            16GB RAM
+          </h3>
+
+          <p class="product-description">
+            Higher-capacity memory for compatible systems and heavier
+            multitasking.
+          </p>
+
+          <div class="price">
+            KES 13,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%2016GB%20RAM."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="ram-memory.jpg"
+            alt="32GB RAM memory"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            RAM
+          </span>
+
+          <h3>
+            32GB RAM
+          </h3>
+
+          <p class="product-description">
+            High-capacity memory for compatible systems requiring
+            additional RAM.
+          </p>
+
+          <div class="price">
+            KES 27,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%2032GB%20RAM."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       RAM COMPATIBILITY NOTE
+  ========================= -->
+
+  <section class="note-section">
+
+    <div class="note-box">
+
+      <h3>
+        Need help choosing the right RAM?
+      </h3>
+
+      <p>
+        RAM compatibility depends on your laptop or computer model,
+        generation and memory type. We can help check whether you need
+        PC3 or PC4 memory before you purchase.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MEMORY CARDS & FLASH DRIVES
+  ========================= -->
+
+  <section class="products-section" id="memory">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        PORTABLE MEMORY
+      </div>
+
+      <h2>
+        Memory Cards & Flash Drives
+      </h2>
+
+      <p>
+        Portable storage options in different capacities for phones,
+        cameras, computers and other compatible devices.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <!-- MEMORY CARDS -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="memory-cards.jpg"
+            alt="Memory cards"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Memory Cards
+          </span>
+
+          <h3>
+            Memory Cards
+          </h3>
+
+          <p class="product-description">
+            Available in multiple capacities for compatible phones,
+            cameras and other devices.
+          </p>
+
+          <div class="price-list">
+
+            <strong>16GB — KES 700</strong><br>
+
+            <strong>32GB — KES 1,550</strong><br>
+
+            <strong>64GB — KES 1,800</strong><br>
+
+            <strong>128GB — KES 4,500</strong><br>
+
+            <strong>256GB — KES 9,500</strong><br>
+
+            <strong>512GB — KES 16,500</strong>
+
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20memory%20card."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FLASH DRIVES -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="flash-drives.jpg"
+            alt="Flash drives"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Flash Drives
+          </span>
+
+          <h3>
+            Flash Drives
+          </h3>
+
+          <p class="product-description">
+            Portable USB storage available in multiple capacities.
+          </p>
+
+          <div class="price-list">
+
+            <strong>16GB — KES 700</strong><br>
+
+            <strong>32GB — KES 1,550</strong><br>
+
+            <strong>64GB — KES 1,800</strong><br>
+
+            <strong>128GB — KES 4,500</strong><br>
+
+            <strong>256GB — KES 9,500</strong><br>
+
+            <strong>512GB — KES 16,500</strong>
+
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20flash%20drive."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       COMPATIBILITY INFO
+  ========================= -->
+
+  <section class="info-section">
+
+    <div class="info-box">
+
+      <div>
+
+        <div class="section-label">
+          NOT SURE WHAT FITS?
+        </div>
+
+        <h2>
+          Don't guess your upgrade.
+        </h2>
+
+        <p>
+          Different laptops and computers use different storage
+          interfaces and memory types. Send us your laptop model and
+          we'll help you identify the appropriate upgrade.
+        </p>
+
+      </div>
+
+
+      <div class="info-points">
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20checking%20which%20RAM%20is%20compatible%20with%20my%20laptop."
+          target="_blank"
+          class="info-point"
+        >
+          <strong>
+            RAM Compatibility
+          </strong>
+
+          <span>
+            PC3 / PC4 and capacity
+          </span>
+        </a>
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20checking%20which%20SSD%20fits%20my%20laptop."
+          target="_blank"
+          class="info-point"
+        >
+          <strong>
+            SSD Compatibility
+          </strong>
+
+          <span>
+            NVMe or SATA
+          </span>
+        </a>
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20an%20HDD."
+          target="_blank"
+          class="info-point"
+        >
+          <strong>
+            HDD Options
+          </strong>
+
+          <span>
+            Capacity and compatibility
+          </span>
+        </a>
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20portable%20storage."
+          target="_blank"
+          class="info-point"
+        >
+          <strong>
+            Portable Storage
+          </strong>
+
+          <span>
+            Memory cards and flash drives
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL CTA
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="cta-box">
+
+      <div class="section-label">
+        NEED AN UPGRADE?
+      </div>
+
+      <h2>
+        Tell us what you're working with.
+      </h2>
+
+      <p>
+        Send us your laptop or computer model and tell us what you want
+        to improve — storage, speed, memory or backup capacity.
+      </p>
+
+      <a
+        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20storage%20or%20RAM%20upgrade."
+        target="_blank"
+        class="cta-button"
+      >
+        Ask Us on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <a href="index.html" class="footer-logo">
+          <img src="Logo.png" alt="Street Gadgets Care">
+        </a>
+
+        <p class="footer-about">
+          Technology, repairs, devices, accessories, creative design
+          and practical digital support — all under one brand.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <ul>
+
+          <li>
             <a href="index.html">Home</a>
+          </li>
+
+          <li>
             <a href="about.html">About</a>
+          </li>
+
+          <li>
             <a href="services.html">Services</a>
-            <a href="repairs.html">Repairs</a>
-            <a href="products.html" class="active">Products</a>
+          </li>
+
+          <li>
+            <a href="tech-repairs.html">Tech Repairs</a>
+          </li>
+
+          <li>
+            <a href="shop.html">Shop</a>
+          </li>
+
+          <li>
+            <a href="creative-studio.html">Creative Studio</a>
+          </li>
+
+          <li>
             <a href="contact.html">Contact</a>
-        </nav>
+          </li>
 
-    </header>
+        </ul>
 
+      </div>
 
-    <!-- PAGE INTRO -->
-    <section class="page-intro">
 
-        <h1>Laptop Storage & Memory</h1>
+      <div>
 
-        <p>
-            Upgrade your laptop or computer with reliable storage and
-            memory solutions available in different capacities.
-        </p>
+        <h3>
+          Contact
+        </h3>
 
-    </section>
+        <ul>
 
+          <li>
+            <a href="tel:0114259961">
+              0114 259 961
+            </a>
+          </li>
 
-    <!-- STORAGE & MEMORY PRODUCTS -->
-    <section class="products-section">
+          <li>
+            <a href="mailto:streetgadgetscare@gmail.com">
+              streetgadgetscare@gmail.com
+            </a>
+          </li>
 
-        <div class="section-title">
+          <li>
+            <a
+              href="https://wa.me/254114259961"
+              target="_blank"
+            >
+              WhatsApp Us
+            </a>
+          </li>
 
-            <h2>Storage & Memory Solutions</h2>
+          <li class="footer-contact">
+            Nairobi, Kenya
+          </li>
 
-            <p>
-                Choose from internal and external storage, SSDs, RAM,
-                memory cards and flash drives.
-            </p>
+          <li class="footer-contact">
+            Serving Customers Across Kenya
+          </li>
 
-        </div>
+        </ul>
 
+      </div>
 
-        <div class="products-grid">
+    </div>
 
 
-            <!-- INTERNAL HDD -->
-            <div class="product-card">
+    <div class="footer-bottom">
 
-                <img
-                    src="internal-hdd.jpg"
-                    alt="Internal HDD"
-                    class="product-image"
-                >
+      <span>
+        © 2026 Street Gadgets Care. All rights reserved.
+      </span>
 
-                <div class="product-content">
+      <span>
+        Technology • Repairs • Accessories • Creative Support
+      </span>
 
-                    <h3>Internal HDD</h3>
+    </div>
 
-                    <p class="product-description">
-                        Reliable internal hard disk drives for laptops
-                        and computers. Suitable for additional storage
-                        and everyday data needs.
-                    </p>
+  </footer>
 
-                    <div class="price-list">
 
-                        <div class="price-row">
-                            <span class="capacity">500GB</span>
-                            <span class="price">KES 2,500</span>
-                        </div>
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
 
-                        <div class="price-row">
-                            <span class="capacity">1TB</span>
-                            <span class="price">KES 5,500</span>
-                        </div>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20an%20Internal%20HDD."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- NVME SSD -->
-            <div class="product-card">
-
-                <img
-                    src="nvme-ssd.jpg"
-                    alt="NVMe SSD"
-                    class="product-image"
-                >
-
-                <div class="product-content">
-
-                    <h3>NVMe SSD</h3>
-
-                    <p class="product-description">
-                        High-speed NVMe solid-state drives designed for
-                        faster boot times, quicker file transfers and
-                        improved system performance.
-                    </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">256GB</span>
-                            <span class="price">KES 7,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">512GB</span>
-                            <span class="price">KES 15,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">1TB</span>
-                            <span class="price">KES 27,000</span>
-                        </div>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20an%20NVMe%20SSD."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- 2.5 SATA SSD -->
-            <div class="product-card">
-
-                <img
-                    src="sata-ssd.jpg"
-                    alt="2.5 inch SATA SSD"
-                    class="product-image"
-                >
-
-                <div class="product-content">
-
-                    <h3>2.5&quot; SATA SSD</h3>
-
-                    <p class="product-description">
-                        Fast and reliable 2.5-inch SATA solid-state drives
-                        for compatible laptops and computers. A great
-                        upgrade from traditional hard drives.
-                    </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">256GB</span>
-                            <span class="price">KES 7,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">512GB</span>
-                            <span class="price">KES 15,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">1TB</span>
-                            <span class="price">KES 27,000</span>
-                        </div>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%202.5%20SATA%20SSD."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- EXTERNAL HDD -->
-            <div class="product-card">
-
-                <img
-                    src="external-hdd.jpg"
-                    alt="External HDD"
-                    class="product-image"
-                >
-
-                <div class="product-content">
-
-                    <h3>External HDD</h3>
-
-                    <p class="product-description">
-                        Portable external hard drives for storing,
-                        backing up and transferring your important files
-                        wherever you go.
-                    </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">500GB – 1TB</span>
-                            <span class="price">KES 5,500 – 15,000</span>
-                        </div>
-
-                    </div>
-
-                    <p class="product-note">
-                        Price varies depending on brand and capacity.
-                    </p>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20an%20External%20HDD."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- RAM -->
-            <div class="product-card">
-
-                <img
-                    src="ram-memory.jpg"
-                    alt="RAM Memory"
-                    class="product-image"
-                >
-
-                <div class="product-content">
-
-                    <h3>RAM Memory</h3>
-
-                    <p class="product-description">
-                        Laptop and desktop RAM memory available in
-                        different capacities and compatible with PC3
-                        and PC4 systems.
-                    </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">4GB</span>
-                            <span class="price">KES 2,000</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">8GB</span>
-                            <span class="price">KES 6,200</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">16GB</span>
-                            <span class="price">KES 13,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">32GB</span>
-                            <span class="price">KES 27,500</span>
-                        </div>
-
-                    </div>
-
-                    <p class="product-note">
-                        PC3 and PC4 memory available. Compatibility depends
-                        on the laptop or computer model.
-                    </p>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20RAM%20Memory."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY CARDS -->
-            <div class="product-card">
-
-                <img
-                    src="memory-cards.jpg"
-                    alt="Memory Cards"
-                    class="product-image"
-                >
-
-                <div class="product-content">
-
-                    <h3>Memory Cards</h3>
-
-                    <p class="product-description">
-                        Memory cards available in multiple capacities
-                        for phones, cameras, laptops and other compatible
-                        devices.
-                    </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">16GB</span>
-                            <span class="price">KES 700</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">32GB</span>
-                            <span class="price">KES 1,550</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">64GB</span>
-                            <span class="price">KES 1,800</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">128GB</span>
-                            <span class="price">KES 4,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">256GB</span>
-                            <span class="price">KES 9,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">512GB</span>
-                            <span class="price">KES 16,500</span>
-                        </div>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%20Memory%20Card."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- FLASH DRIVES -->
-            <div class="product-card">
-
-                <img
-                    src="flash-drives.jpg"
-                    alt="USB Flash Drives"
-                    class="product-image"
-                >
-
-                <div class="product-content">
-
-                    <h3>Flash Drives</h3>
-
-                    <p class="product-description">
-                        Portable USB flash drives for convenient storage,
-                        backup and transfer of your files between compatible
-                        devices.
-                    </p>
-
-                    <div class="price-list">
-
-                        <div class="price-row">
-                            <span class="capacity">16GB</span>
-                            <span class="price">KES 700</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">32GB</span>
-                            <span class="price">KES 1,550</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">64GB</span>
-                            <span class="price">KES 1,800</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">128GB</span>
-                            <span class="price">KES 4,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">256GB</span>
-                            <span class="price">KES 9,500</span>
-                        </div>
-
-                        <div class="price-row">
-                            <span class="capacity">512GB</span>
-                            <span class="price">KES 16,500</span>
-                        </div>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%20USB%20Flash%20Drive."
-                        class="whatsapp-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Inquire on WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- BACK BUTTON -->
-    <section class="back-section">
-
-        <a href="laptop-accessories.html" class="back-btn">
-            ← Back to Laptop Accessories
-        </a>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <p>
-            &copy; 2026 Street Gadgets Care. All Rights Reserved.
-        </p>
-
-        <p>
-            Laptop & Phone Repair | Accessories | Graphic Design
-        </p>
-
-    </footer>
+  <a
+    href="https://wa.me/254114259961"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+  >
+    ☎
+  </a>
 
 </body>
 </html>
