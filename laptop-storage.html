@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Laptop Storage & Memory | Street Gadgets Care</title>
+  <title>Storage & Memory | Street Gadgets Care</title>
 
   <meta
     name="description"
-    content="Shop HDDs, NVMe SSDs, SATA SSDs, external hard drives, RAM, memory cards and flash drives from Street Gadgets Care."
+    content="Shop HDDs, SSDs, external hard drives, RAM, memory cards and flash drives from Street Gadgets Care. Based in Nairobi, serving customers across Kenya."
   >
 
   <style>
@@ -167,13 +167,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       padding: 13px 20px;
       border-radius: 8px;
-
       font-size: 14px;
       font-weight: 700;
-
       transition: 0.25s ease;
     }
 
@@ -206,12 +203,9 @@
     .hero-card {
       width: 100%;
       max-width: 410px;
-
       padding: 15px;
-
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(255, 255, 255, 0.14);
-
       border-radius: 18px;
       backdrop-filter: blur(6px);
     }
@@ -219,9 +213,7 @@
     .hero-card img {
       width: 100%;
       height: 275px;
-
       object-fit: contain;
-
       background: #ffffff;
       border-radius: 12px;
     }
@@ -287,7 +279,7 @@
     }
 
     .category-nav-inner {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
 
       display: flex;
@@ -467,11 +459,26 @@
     }
 
     /* =========================
-       SINGLE WIDE CARD
+       PRODUCT GROUP
     ========================= */
 
-    .wide-card {
-      grid-column: span 2;
+    .product-group {
+      width: 92%;
+      max-width: 1120px;
+      margin: 0 auto 45px;
+    }
+
+    .product-group-title {
+      color: #0b1220;
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .product-group-description {
+      color: #687386;
+      font-size: 14px;
+      margin-bottom: 22px;
+      max-width: 760px;
     }
 
     /* =========================
@@ -774,10 +781,6 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .wide-card {
-        grid-column: span 2;
-      }
-
       .info-box {
         grid-template-columns: 1fr;
       }
@@ -826,10 +829,6 @@
       .product-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
-      }
-
-      .wide-card {
-        grid-column: span 1;
       }
 
       .product-image {
@@ -884,17 +883,11 @@
       <nav>
 
         <a href="index.html">Home</a>
-
         <a href="about.html">About</a>
-
         <a href="services.html">Services</a>
-
         <a href="tech-repairs.html">Tech Repairs</a>
-
         <a href="shop.html" class="active">Shop</a>
-
         <a href="creative-studio.html">Creative Studio</a>
-
         <a href="contact.html">Contact</a>
 
         <a
@@ -923,7 +916,7 @@
       <div class="hero-content">
 
         <span class="eyebrow">
-          LAPTOP STORAGE & MEMORY
+          STORAGE & MEMORY
         </span>
 
         <h1>
@@ -1025,11 +1018,7 @@
       </a>
 
       <a href="#ssd">
-        NVMe SSD
-      </a>
-
-      <a href="#sata">
-        SATA SSD
+        SSD
       </a>
 
       <a href="#external-hdd">
@@ -1041,11 +1030,15 @@
       </a>
 
       <a href="#memory">
-        Memory Cards & Flash Drives
+        Memory Cards
       </a>
 
-      <a href="laptop-accessories.html">
-        Accessories
+      <a href="#flash">
+        Flash Disks
+      </a>
+
+      <a href="shop.html">
+        All Shop
       </a>
 
     </div>
@@ -1054,7 +1047,7 @@
 
 
   <!-- =========================
-       INTERNAL HDD
+       HDD
   ========================= -->
 
   <section class="products-section" id="hdd">
@@ -1062,16 +1055,16 @@
     <div class="section-heading">
 
       <div class="section-label">
-        INTERNAL HDD
+        HDD
       </div>
 
       <h2>
-        Internal Hard Drives
+        Hard Disk Drives
       </h2>
 
       <p>
-        Reliable internal storage options for compatible laptops and
-        computers.
+        Reliable hard-drive storage for compatible laptops and
+        computers, available in different capacities.
       </p>
 
     </div>
@@ -1093,7 +1086,7 @@
         <div class="product-content">
 
           <span class="product-tag">
-            HDD Storage
+            Internal Storage
           </span>
 
           <h3>
@@ -1101,15 +1094,21 @@
           </h3>
 
           <p class="product-description">
-            Internal hard drive storage for compatible laptops and
-            computers.
+            A practical storage option for compatible laptops and
+            computers. Choose the capacity that fits your needs.
           </p>
 
           <div class="price-list">
 
-            <strong>500GB — KES 2,500</strong><br>
+            <strong>
+              500GB — KSh 2,500
+            </strong>
 
-            <strong>1TB — KES 5,500</strong>
+            <br>
+
+            <strong>
+              1TB — KSh 5,500
+            </strong>
 
           </div>
 
@@ -1131,7 +1130,7 @@
 
 
   <!-- =========================
-       NVME SSD
+       SSD
   ========================= -->
 
   <section class="products-section" id="ssd">
@@ -1139,65 +1138,91 @@
     <div class="section-heading">
 
       <div class="section-label">
+        SSD
+      </div>
+
+      <h2>
+        Solid State Drives
+      </h2>
+
+      <p>
+        Faster storage options for compatible laptops and computers,
+        with both NVMe and 2.5-inch SATA options available.
+      </p>
+
+    </div>
+
+
+    <!-- NVMe -->
+
+    <div class="product-group">
+
+      <h3 class="product-group-title">
         NVMe SSD
-      </div>
+      </h3>
 
-      <h2>
-        NVMe Solid State Drives
-      </h2>
-
-      <p>
-        High-speed storage options for compatible laptops and
-        computers.
+      <p class="product-group-description">
+        High-speed M.2 NVMe storage for compatible devices, ideal
+        for faster boot times, file access and everyday performance.
       </p>
 
-    </div>
+      <div class="product-grid">
 
+        <div class="product-card">
 
-    <div class="product-grid">
+          <div class="product-image">
 
-      <div class="product-card">
-
-        <div class="product-image">
-
-          <img
-            src="nvme-ssd.jpg"
-            alt="NVMe SSD"
-          >
-
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            NVMe SSD
-          </span>
-
-          <h3>
-            NVMe SSD
-          </h3>
-
-          <p class="product-description">
-            Fast solid-state storage for compatible M.2 NVMe systems.
-          </p>
-
-          <div class="price-list">
-
-            <strong>256GB — KES 7,500</strong><br>
-
-            <strong>512GB — KES 15,500</strong><br>
-
-            <strong>1TB — KES 27,000</strong>
+            <img
+              src="nvme-ssd.jpg"
+              alt="NVMe SSD"
+            >
 
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20an%20NVMe%20SSD."
-            target="_blank"
-            class="whatsapp-btn"
-          >
-            WhatsApp to Order
-          </a>
+          <div class="product-content">
+
+            <span class="product-tag">
+              NVMe
+            </span>
+
+            <h3>
+              NVMe SSD
+            </h3>
+
+            <p class="product-description">
+              Upgrade your compatible laptop or computer with
+              fast solid-state storage.
+            </p>
+
+            <div class="price-list">
+
+              <strong>
+                256GB — KSh 7,500
+              </strong>
+
+              <br>
+
+              <strong>
+                512GB — KSh 15,500
+              </strong>
+
+              <br>
+
+              <strong>
+                1TB — KSh 27,000
+              </strong>
+
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20an%20NVMe%20SSD."
+              target="_blank"
+              class="whatsapp-btn"
+            >
+              WhatsApp to Order
+            </a>
+
+          </div>
 
         </div>
 
@@ -1205,77 +1230,77 @@
 
     </div>
 
-  </section>
 
+    <!-- SATA -->
 
-  <!-- =========================
-       SATA SSD
-  ========================= -->
+    <div class="product-group">
 
-  <section class="products-section" id="sata">
-
-    <div class="section-heading">
-
-      <div class="section-label">
-        2.5-INCH SATA SSD
-      </div>
-
-      <h2>
+      <h3 class="product-group-title">
         2.5" SATA SSD
-      </h2>
+      </h3>
 
-      <p>
-        A solid-state storage option for compatible laptops and
-        computers using a 2.5-inch SATA drive connection.
+      <p class="product-group-description">
+        Reliable solid-state storage for compatible laptops and
+        computers using a 2.5-inch SATA connection.
       </p>
 
-    </div>
+      <div class="product-grid">
 
+        <div class="product-card">
 
-    <div class="product-grid">
+          <div class="product-image">
 
-      <div class="product-card">
-
-        <div class="product-image">
-
-          <img
-            src="sata-ssd.jpg"
-            alt="2.5 inch SATA SSD"
-          >
-
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            SATA SSD
-          </span>
-
-          <h3>
-            2.5" SATA SSD
-          </h3>
-
-          <p class="product-description">
-            Solid-state storage for compatible 2.5-inch SATA systems.
-          </p>
-
-          <div class="price-list">
-
-            <strong>256GB — KES 7,500</strong><br>
-
-            <strong>512GB — KES 15,500</strong><br>
-
-            <strong>1TB — KES 27,000</strong>
+            <img
+              src="sata-ssd.jpg"
+              alt="2.5 inch SATA SSD"
+            >
 
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%202.5%20inch%20SATA%20SSD."
-            target="_blank"
-            class="whatsapp-btn"
-          >
-            WhatsApp to Order
-          </a>
+          <div class="product-content">
+
+            <span class="product-tag">
+              SATA SSD
+            </span>
+
+            <h3>
+              2.5" SATA SSD
+            </h3>
+
+            <p class="product-description">
+              A practical solid-state upgrade for compatible
+              2.5-inch SATA systems.
+            </p>
+
+            <div class="price-list">
+
+              <strong>
+                256GB — KSh 7,500
+              </strong>
+
+              <br>
+
+              <strong>
+                512GB — KSh 15,500
+              </strong>
+
+              <br>
+
+              <strong>
+                1TB — KSh 27,000
+              </strong>
+
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%202.5%20inch%20SATA%20SSD."
+              target="_blank"
+              class="whatsapp-btn"
+            >
+              WhatsApp to Order
+            </a>
+
+          </div>
 
         </div>
 
@@ -1303,8 +1328,8 @@
       </h2>
 
       <p>
-        Portable storage for backups, file transfers and keeping your
-        important data with you.
+        Portable storage for backups, file transfers and keeping
+        your important files with you.
       </p>
 
     </div>
@@ -1334,16 +1359,16 @@
           </h3>
 
           <p class="product-description">
-            Portable external storage available in different
-            capacities and brands.
+            Portable storage available in different brands and
+            capacities for backups and everyday file storage.
           </p>
 
           <div class="price">
-            KES 5,500 – 15,000
+            KSh 5,500 – 15,000
           </div>
 
           <p class="product-description">
-            Price depends on brand and storage capacity.
+            Price depends on brand and capacity.
           </p>
 
           <a
@@ -1380,8 +1405,8 @@
       </h2>
 
       <p>
-        Add memory to compatible systems to support smoother everyday
-        multitasking and workloads.
+        Upgrade compatible laptops and computers with additional
+        memory for smoother multitasking and everyday performance.
       </p>
 
     </div>
@@ -1396,7 +1421,7 @@
 
           <img
             src="ram-memory.jpg"
-            alt="RAM memory"
+            alt="4GB RAM"
           >
 
         </div>
@@ -1412,11 +1437,12 @@
           </h3>
 
           <p class="product-description">
-            Memory upgrade for compatible laptops and computers.
+            A practical memory upgrade for compatible laptops and
+            computers.
           </p>
 
           <div class="price">
-            KES 2,000
+            KSh 2,000
           </div>
 
           <a
@@ -1438,7 +1464,7 @@
 
           <img
             src="ram-memory.jpg"
-            alt="8GB RAM memory"
+            alt="8GB RAM"
           >
 
         </div>
@@ -1454,11 +1480,12 @@
           </h3>
 
           <p class="product-description">
-            Memory upgrade for compatible laptops and computers.
+            Add more memory to compatible systems for smoother
+            everyday multitasking.
           </p>
 
           <div class="price">
-            KES 6,200
+            KSh 6,200
           </div>
 
           <a
@@ -1480,7 +1507,7 @@
 
           <img
             src="ram-memory.jpg"
-            alt="16GB RAM memory"
+            alt="16GB RAM"
           >
 
         </div>
@@ -1496,12 +1523,12 @@
           </h3>
 
           <p class="product-description">
-            Higher-capacity memory for compatible systems and heavier
-            multitasking.
+            Higher-capacity memory for compatible systems and
+            heavier multitasking.
           </p>
 
           <div class="price">
-            KES 13,500
+            KSh 13,500
           </div>
 
           <a
@@ -1523,7 +1550,7 @@
 
           <img
             src="ram-memory.jpg"
-            alt="32GB RAM memory"
+            alt="32GB RAM"
           >
 
         </div>
@@ -1544,7 +1571,7 @@
           </p>
 
           <div class="price">
-            KES 27,500
+            KSh 27,500
           </div>
 
           <a
@@ -1565,7 +1592,7 @@
 
 
   <!-- =========================
-       RAM COMPATIBILITY NOTE
+       RAM NOTE
   ========================= -->
 
   <section class="note-section">
@@ -1588,7 +1615,7 @@
 
 
   <!-- =========================
-       MEMORY CARDS & FLASH DRIVES
+       MEMORY CARDS
   ========================= -->
 
   <section class="products-section" id="memory">
@@ -1596,25 +1623,22 @@
     <div class="section-heading">
 
       <div class="section-label">
-        PORTABLE MEMORY
+        MEMORY CARDS
       </div>
 
       <h2>
-        Memory Cards & Flash Drives
+        Memory Cards
       </h2>
 
       <p>
-        Portable storage options in different capacities for phones,
-        cameras, computers and other compatible devices.
+        Portable storage in different capacities for compatible
+        phones, cameras and other devices.
       </p>
 
     </div>
 
 
     <div class="product-grid">
-
-
-      <!-- MEMORY CARDS -->
 
       <div class="product-card">
 
@@ -1638,23 +1662,18 @@
           </h3>
 
           <p class="product-description">
-            Available in multiple capacities for compatible phones,
-            cameras and other devices.
+            Choose the capacity that suits your storage needs.
+            Compatibility depends on the device.
           </p>
 
           <div class="price-list">
 
-            <strong>16GB — KES 700</strong><br>
-
-            <strong>32GB — KES 1,550</strong><br>
-
-            <strong>64GB — KES 1,800</strong><br>
-
-            <strong>128GB — KES 4,500</strong><br>
-
-            <strong>256GB — KES 9,500</strong><br>
-
-            <strong>512GB — KES 16,500</strong>
+            <strong>16GB — KSh 700</strong><br>
+            <strong>32GB — KSh 1,550</strong><br>
+            <strong>64GB — KSh 1,800</strong><br>
+            <strong>128GB — KSh 4,500</strong><br>
+            <strong>256GB — KSh 9,500</strong><br>
+            <strong>512GB — KSh 16,500</strong>
 
           </div>
 
@@ -1670,8 +1689,36 @@
 
       </div>
 
+    </div>
 
-      <!-- FLASH DRIVES -->
+  </section>
+
+
+  <!-- =========================
+       FLASH DISKS
+  ========================= -->
+
+  <section class="products-section" id="flash">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        FLASH DISKS
+      </div>
+
+      <h2>
+        Flash Disks
+      </h2>
+
+      <p>
+        Portable USB storage for transferring, carrying and backing
+        up your files.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
 
       <div class="product-card">
 
@@ -1679,7 +1726,7 @@
 
           <img
             src="flash-drives.jpg"
-            alt="Flash drives"
+            alt="Flash disks"
           >
 
         </div>
@@ -1687,35 +1734,31 @@
         <div class="product-content">
 
           <span class="product-tag">
-            Flash Drives
+            USB Storage
           </span>
 
           <h3>
-            Flash Drives
+            Flash Disk
           </h3>
 
           <p class="product-description">
-            Portable USB storage available in multiple capacities.
+            Portable USB storage available in multiple capacities
+            for everyday file storage and transfer.
           </p>
 
           <div class="price-list">
 
-            <strong>16GB — KES 700</strong><br>
-
-            <strong>32GB — KES 1,550</strong><br>
-
-            <strong>64GB — KES 1,800</strong><br>
-
-            <strong>128GB — KES 4,500</strong><br>
-
-            <strong>256GB — KES 9,500</strong><br>
-
-            <strong>512GB — KES 16,500</strong>
+            <strong>16GB — KSh 700</strong><br>
+            <strong>32GB — KSh 1,550</strong><br>
+            <strong>64GB — KSh 1,800</strong><br>
+            <strong>128GB — KSh 4,500</strong><br>
+            <strong>256GB — KSh 9,500</strong><br>
+            <strong>512GB — KSh 16,500</strong>
 
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20flash%20drive."
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20flash%20disk."
             target="_blank"
             class="whatsapp-btn"
           >
@@ -1751,8 +1794,8 @@
 
         <p>
           Different laptops and computers use different storage
-          interfaces and memory types. Send us your laptop model and
-          we'll help you identify the appropriate upgrade.
+          interfaces and memory types. Send us your laptop model
+          and we'll help you identify the appropriate upgrade.
         </p>
 
       </div>
@@ -1774,6 +1817,7 @@
           </span>
         </a>
 
+
         <a
           href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20checking%20which%20SSD%20fits%20my%20laptop."
           target="_blank"
@@ -1788,8 +1832,9 @@
           </span>
         </a>
 
+
         <a
-          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20an%20HDD."
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20checking%20which%20HDD%20fits%20my%20laptop."
           target="_blank"
           class="info-point"
         >
@@ -1802,6 +1847,7 @@
           </span>
         </a>
 
+
         <a
           href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20portable%20storage."
           target="_blank"
@@ -1812,7 +1858,7 @@
           </strong>
 
           <span>
-            Memory cards and flash drives
+            Memory cards and flash disks
           </span>
         </a>
 
@@ -1840,8 +1886,8 @@
       </h2>
 
       <p>
-        Send us your laptop or computer model and tell us what you want
-        to improve — storage, speed, memory or backup capacity.
+        Send us your laptop or computer model and tell us what you
+        want to improve — storage, speed, memory or backup capacity.
       </p>
 
       <a
