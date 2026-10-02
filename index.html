@@ -4,37 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Street Gadgets Care | Tech Repairs, Devices & Creative Solutions</title>
+    <title>Street Gadgets Care | Tech Repairs, Laptops, Phones & Creative Services</title>
 
-    <meta name="description" content="Street Gadgets Care provides phone and laptop repairs, devices, accessories, upgrades, graphic design and practical digital solutions in Nairobi and across Kenya.">
-
-    <link rel="icon" type="image/png" href="Logo.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="description" content="Street Gadgets Care provides phone and laptop repairs, laptops, phones, accessories, storage upgrades, graphic design and business support in Nairobi, Kenya.">
+    <meta name="keywords" content="phone repair Nairobi, laptop repair Nairobi, laptops Kenya, phone accessories Nairobi, SSD Nairobi, RAM Nairobi, graphic design Nairobi, Street Gadgets Care">
+    <meta name="author" content="Street Gadgets Care">
 
     <style>
-
-        :root {
-            --navy: #0b1220;
-            --navy-2: #101a2d;
-            --cyan: #19a7ce;
-            --cyan-dark: #1188aa;
-            --white: #ffffff;
-            --light: #f5f8fb;
-            --light-2: #eef3f7;
-            --text: #172033;
-            --muted: #667085;
-            --border: #e4ebf1;
-            --whatsapp: #25d366;
-            --shadow: 0 20px 50px rgba(11, 18, 32, 0.10);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -46,15 +22,10 @@
         }
 
         body {
-            font-family: "Inter", sans-serif;
-            color: var(--text);
-            background: var(--white);
-            line-height: 1.7;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0b1220;
+            background: #ffffff;
+            line-height: 1.6;
         }
 
         a {
@@ -62,131 +33,195 @@
             color: inherit;
         }
 
-        .container {
-            width: min(1180px, 92%);
-            margin: auto;
+        img {
+            max-width: 100%;
         }
 
+        :root {
+            --navy: #0b1220;
+            --navy-light: #121d31;
+            --cyan: #19a7ce;
+            --cyan-dark: #118bad;
+            --green: #25d366;
+            --white: #ffffff;
+            --light: #f5f8fa;
+            --light-blue: #eef8fc;
+            --text: #263445;
+            --muted: #6b7785;
+            --border: #e5ebef;
+        }
 
-        /* ========================================
+        /* =========================
            HEADER
-        ======================================== */
+        ========================= */
 
         header {
-            background: rgba(11, 18, 32, 0.97);
-            backdrop-filter: blur(14px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
+            background: rgba(11, 18, 32, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
-        .nav {
-            min-height: 78px;
+        .nav-container {
+            width: min(1180px, 92%);
+            margin: auto;
+            min-height: 76px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 25px;
+            gap: 30px;
         }
 
-        .logo img {
+        .logo {
             width: 155px;
             height: auto;
+            display: block;
         }
 
-        .nav-links {
+        nav {
             display: flex;
             align-items: center;
             gap: 25px;
         }
 
-        .nav-links a {
-            color: #d9e2eb;
+        nav a {
+            color: #ffffff;
             font-size: 14px;
             font-weight: 600;
             transition: 0.25s ease;
+            white-space: nowrap;
         }
 
-        .nav-links a:hover {
+        nav a:hover {
             color: var(--cyan);
         }
 
         .nav-contact {
             background: var(--cyan);
-            color: white !important;
+            color: #ffffff !important;
             padding: 11px 18px;
-            border-radius: 8px;
+            border-radius: 7px;
         }
 
         .nav-contact:hover {
             background: var(--cyan-dark);
         }
 
+        /* =========================
+           GENERAL
+        ========================= */
 
-        /* ========================================
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 95px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--cyan-dark);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 50px);
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            max-width: 700px;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 22px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: 0.25s ease;
+            border: 1px solid transparent;
+        }
+
+        .button-primary {
+            background: var(--cyan);
+            color: #ffffff;
+        }
+
+        .button-primary:hover {
+            background: var(--cyan-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-dark {
+            background: var(--navy);
+            color: #ffffff;
+        }
+
+        .button-dark:hover {
+            background: #16243a;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border-color: #cfd9df;
+            color: var(--navy);
+            background: #ffffff;
+        }
+
+        .button-outline:hover {
+            border-color: var(--cyan);
+            color: var(--cyan-dark);
+        }
+
+        /* =========================
            HERO
-        ======================================== */
+        ========================= */
 
         .hero {
-            min-height: 700px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
             background:
-                radial-gradient(circle at 78% 35%, rgba(25,167,206,0.18), transparent 30%),
-                linear-gradient(135deg, #080f1c 0%, #0d1728 55%, #101c30 100%);
-            color: white;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 650px;
-            height: 650px;
-            border: 1px solid rgba(25,167,206,0.10);
-            border-radius: 50%;
-            right: -250px;
-            top: -160px;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 50%;
-            right: 40px;
-            bottom: -280px;
+                radial-gradient(circle at 80% 20%, rgba(25,167,206,0.16), transparent 30%),
+                linear-gradient(135deg, #07101e 0%, #0b1220 60%, #101d32 100%);
+            color: #ffffff;
+            padding: 105px 0 90px;
+            overflow: hidden;
         }
 
         .hero-grid {
             display: grid;
             grid-template-columns: 1.05fr 0.95fr;
+            gap: 70px;
             align-items: center;
-            gap: 60px;
-            position: relative;
-            z-index: 2;
         }
 
-        .hero-content {
-            max-width: 680px;
-        }
-
-        .eyebrow {
+        .hero-eyebrow {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            color: var(--cyan);
+            gap: 9px;
+            color: #7dddf5;
             font-size: 12px;
             font-weight: 800;
-            letter-spacing: 1.7px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
-        .eyebrow::before {
+        .hero-eyebrow::before {
             content: "";
             width: 32px;
             height: 2px;
@@ -194,10 +229,10 @@
         }
 
         .hero h1 {
-            font-family: "Manrope", sans-serif;
-            font-size: clamp(45px, 6vw, 76px);
-            line-height: 1.04;
-            letter-spacing: -2.5px;
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            max-width: 700px;
             margin-bottom: 25px;
         }
 
@@ -206,305 +241,393 @@
         }
 
         .hero-description {
-            color: #c4cfdb;
+            color: #c6d1dc;
             font-size: 18px;
-            max-width: 620px;
-            line-height: 1.8;
+            max-width: 650px;
             margin-bottom: 32px;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 13px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 14px 22px;
-            border-radius: 9px;
-            font-size: 14px;
-            font-weight: 700;
-            transition: 0.25s ease;
+        .hero .button-outline {
+            background: transparent;
+            color: #ffffff;
+            border-color: rgba(255,255,255,0.28);
         }
 
-        .btn-primary {
-            background: var(--cyan);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--cyan-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(255,255,255,0.22);
-            color: white;
-        }
-
-        .btn-outline:hover {
+        .hero .button-outline:hover {
             border-color: var(--cyan);
-            color: var(--cyan);
+            color: #7dddf5;
         }
 
-        .hero-note {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 25px;
-            color: #9eacbb;
+        .hero-location {
+            color: #91a0af;
             font-size: 13px;
-        }
-
-        .hero-note i {
-            color: var(--cyan);
         }
 
         .hero-visual {
             position: relative;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .device-frame {
+        .hero-image-box {
             position: relative;
-            width: min(470px, 100%);
-            height: 420px;
-            border-radius: 28px;
-            background:
-                linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.025));
-            border: 1px solid rgba(255,255,255,0.12);
-            box-shadow: 0 35px 90px rgba(0,0,0,0.30);
+            min-height: 500px;
+            border-radius: 18px;
             overflow: hidden;
+            background: #111c2e;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.35);
         }
 
-        .device-frame::before {
+        .hero-image-box img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+            padding: 35px;
+        }
+
+        .hero-image-box::after {
             content: "";
             position: absolute;
-            width: 270px;
-            height: 270px;
-            border-radius: 50%;
-            background: rgba(25,167,206,0.10);
-            right: -80px;
-            top: -80px;
-        }
-
-        .device-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 35px;
-            position: relative;
-            z-index: 2;
+            inset: 0;
+            background: linear-gradient(to top, rgba(5,12,23,0.55), transparent 50%);
+            pointer-events: none;
         }
 
         .floating-label {
             position: absolute;
-            z-index: 5;
-            background: rgba(11,18,32,0.90);
-            border: 1px solid rgba(255,255,255,0.12);
-            backdrop-filter: blur(10px);
-            padding: 12px 16px;
-            border-radius: 10px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            z-index: 2;
+            background: rgba(255,255,255,0.96);
+            color: var(--navy);
+            padding: 12px 17px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 800;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        .floating-label strong {
-            display: block;
-            font-size: 13px;
-            color: white;
-        }
-
-        .floating-label span {
-            display: block;
-            color: #94a3b4;
-            font-size: 11px;
-            margin-top: 2px;
-        }
-
-        .label-one {
+        .floating-label.one {
             left: -25px;
-            bottom: 55px;
+            top: 70px;
         }
 
-        .label-two {
+        .floating-label.two {
             right: -20px;
-            top: 65px;
+            bottom: 65px;
         }
 
-
-        /* ========================================
+        /* =========================
            QUICK PATHS
-        ======================================== */
+        ========================= */
 
         .quick-paths {
-            margin-top: -45px;
+            margin-top: -35px;
             position: relative;
-            z-index: 10;
-            padding-bottom: 85px;
+            z-index: 5;
         }
 
         .quick-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            background: white;
-            border-radius: 18px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            overflow: hidden;
+            gap: 15px;
         }
 
         .quick-card {
-            padding: 30px;
-            border-right: 1px solid var(--border);
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 27px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(11,18,32,0.08);
             transition: 0.25s ease;
         }
 
-        .quick-card:last-child {
-            border-right: none;
-        }
-
         .quick-card:hover {
-            background: #fbfdff;
+            transform: translateY(-5px);
+            border-color: rgba(25,167,206,0.35);
         }
 
-        .quick-card small {
+        .quick-number {
             color: var(--cyan);
-            font-weight: 800;
-            font-size: 11px;
-            letter-spacing: 1.2px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
         .quick-card h3 {
-            font-family: "Manrope", sans-serif;
-            color: var(--navy);
             font-size: 20px;
-            margin: 8px 0 7px;
+            margin-bottom: 8px;
         }
 
         .quick-card p {
             color: var(--muted);
-            font-size: 13px;
-            margin-bottom: 15px;
+            font-size: 14px;
+            margin-bottom: 18px;
         }
 
         .text-link {
-            color: var(--navy);
+            color: var(--cyan-dark);
             font-size: 13px;
             font-weight: 800;
         }
 
         .text-link:hover {
-            color: var(--cyan);
+            color: var(--navy);
         }
 
+        /* =========================
+           TECH REPAIRS
+        ========================= */
 
-        /* ========================================
-           REPAIR SECTION
-        ======================================== */
+        .tech-section {
+            background: #ffffff;
+        }
 
-        .repair-section {
-            padding: 20px 0 105px;
+        .tech-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: end;
+            margin-bottom: 50px;
+        }
+
+        .tech-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .tech-point {
+            padding: 17px 18px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .tech-point::before {
+            content: "✓";
+            color: var(--cyan);
+            margin-right: 9px;
+            font-weight: 900;
         }
 
         .repair-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 75px;
-            align-items: center;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }
 
-        .section-label {
-            color: var(--cyan);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1.7px;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-        }
-
-        .section-heading {
-            font-family: "Manrope", sans-serif;
-            color: var(--navy);
-            font-size: clamp(34px, 4vw, 52px);
-            line-height: 1.12;
-            letter-spacing: -1.3px;
-            margin-bottom: 20px;
-        }
-
-        .section-description {
-            color: var(--muted);
-            font-size: 16px;
-            max-width: 570px;
-            margin-bottom: 28px;
-        }
-
-        .repair-points {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 13px;
-            margin-bottom: 30px;
-        }
-
-        .repair-point {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #344054;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .repair-point i {
-            color: var(--cyan);
-        }
-
-        .repair-image-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .repair-image {
-            height: 225px;
-            border-radius: 16px;
+        .repair-card {
+            border-radius: 12px;
             overflow: hidden;
+            border: 1px solid var(--border);
+            background: #ffffff;
+        }
+
+        .repair-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .repair-card-content {
+            padding: 20px;
+        }
+
+        .repair-card-content h3 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .repair-card-content p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .tech-cta {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        /* =========================
+           SHOP DISCOVERY
+        ========================= */
+
+        .shop-section {
             background: var(--light);
+            position: relative;
+            overflow: hidden;
         }
 
-        .repair-image:first-child {
-            grid-row: span 2;
-            height: 465px;
+        .shop-section::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: rgba(25,167,206,0.06);
+            top: -180px;
+            right: -160px;
         }
 
-        .repair-image img {
+        .shop-heading {
+            position: relative;
+            max-width: 850px;
+            margin-bottom: 45px;
+        }
+
+        .shop-heading h2 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: 18px;
+        }
+
+        .shop-heading p {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 720px;
+        }
+
+        .shop-main-cta {
+            margin-top: 25px;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+            position: relative;
+        }
+
+        .shop-card {
+            position: relative;
+            min-height: 350px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            transition: 0.3s ease;
+        }
+
+        .shop-card:nth-child(1) {
+            grid-column: span 5;
+        }
+
+        .shop-card:nth-child(2) {
+            grid-column: span 7;
+        }
+
+        .shop-card:nth-child(3),
+        .shop-card:nth-child(4),
+        .shop-card:nth-child(5) {
+            grid-column: span 4;
+        }
+
+        .shop-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 45px rgba(11,18,32,0.13);
+        }
+
+        .shop-card-image {
             width: 100%;
             height: 100%;
+            min-height: 350px;
             object-fit: cover;
-            transition: 0.5s ease;
+            display: block;
         }
 
-        .repair-image:hover img {
-            transform: scale(1.04);
+        .shop-card:nth-child(2) .shop-card-image {
+            object-position: center;
         }
 
-
-        /* ========================================
-           SHOP DISCOVERY
-        ======================================== */
-
-        .shop-discovery {
-            background: var(--light);
-            padding: 105px 0;
+        .shop-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(5,12,23,0.94) 0%,
+                rgba(5,12,23,0.55) 45%,
+                rgba(5,12,23,0.03) 80%
+            );
         }
 
-        .shop-intro {
+        .shop-card-content {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 22px;
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        .shop-tag {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: rgba(25,167,206,0.9);
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .shop-card-content h3 {
+            font-size: 24px;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .shop-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.4px;
+            color: #ffffff;
+        }
+
+        .shop-action span {
+            color: #7dddf5;
+            font-size: 16px;
+            transition: 0.25s ease;
+        }
+
+        .shop-card:hover .shop-action span {
+            transform: translateX(5px);
+        }
+
+        .shop-logo-card {
+            background: var(--navy);
+        }
+
+        .shop-logo-card .shop-card-image {
+            object-fit: contain;
+            padding: 55px;
+            opacity: 0.75;
+        }
+
+        /* =========================
+           LAPTOP SPOTLIGHT
+        ========================= */
+
+        .laptop-section {
+            background: #ffffff;
+        }
+
+        .laptop-heading {
             display: flex;
             justify-content: space-between;
             align-items: end;
@@ -512,449 +635,296 @@
             margin-bottom: 45px;
         }
 
-        .shop-intro-copy {
-            max-width: 680px;
-        }
-
-        .shop-intro-copy p {
-            color: var(--muted);
-            max-width: 650px;
-        }
-
-        .shop-grid {
-            display: grid;
-            grid-template-columns: 1.35fr 0.85fr 0.85fr;
-            grid-template-rows: 250px 250px;
-            gap: 17px;
-        }
-
-        .shop-card {
-            position: relative;
-            border-radius: 18px;
-            overflow: hidden;
-            background: var(--navy);
-            color: white;
-            min-height: 200px;
-        }
-
-        .shop-card.large {
-            grid-row: span 2;
-        }
-
-        .shop-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s ease;
-        }
-
-        .shop-card.large img {
-            object-fit: contain;
-            padding: 35px;
-            background: #edf2f6;
-        }
-
-        .shop-card:hover img {
-            transform: scale(1.04);
-        }
-
-        .shop-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(5,10,18,0.90) 0%,
-                rgba(5,10,18,0.25) 55%,
-                rgba(5,10,18,0.05) 100%
-            );
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            padding: 25px;
-        }
-
-        .shop-overlay small {
-            color: #6bd7f4;
-            font-weight: 800;
-            font-size: 11px;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-        }
-
-        .shop-overlay h3 {
-            font-family: "Manrope", sans-serif;
-            font-size: 22px;
-            margin: 5px 0 5px;
-        }
-
-        .shop-overlay p {
-            color: #d3dce5;
-            font-size: 12px;
-            margin-bottom: 12px;
-        }
-
-        .shop-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            width: fit-content;
-            color: white;
-            font-size: 12px;
-            font-weight: 800;
-        }
-
-        .shop-link i {
-            color: var(--cyan);
-            transition: 0.2s ease;
-        }
-
-        .shop-link:hover i {
-            transform: translateX(4px);
-        }
-
-
-        /* ========================================
-           PRODUCT SPOTLIGHT
-        ======================================== */
-
-        .product-section {
-            padding: 105px 0;
-        }
-
-        .product-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            gap: 30px;
-            margin-bottom: 42px;
-        }
-
-        .product-heading p {
-            max-width: 540px;
-            color: var(--muted);
-        }
-
-        .product-grid {
+        .laptop-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
 
-        .product-card {
+        .laptop-card {
             border: 1px solid var(--border);
-            border-radius: 17px;
+            border-radius: 12px;
             overflow: hidden;
-            background: white;
-            transition: 0.3s ease;
+            background: #ffffff;
+            transition: 0.25s ease;
         }
 
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow);
+        .laptop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(11,18,32,0.09);
         }
 
-        .product-image {
-            height: 230px;
-            background: #f6f8fa;
-            overflow: hidden;
-        }
-
-        .product-image img {
+        .laptop-card img {
             width: 100%;
-            height: 100%;
+            height: 230px;
             object-fit: contain;
-            padding: 12px;
-            transition: 0.4s ease;
+            object-position: center;
+            display: block;
+            background: #f8f9fb;
+            padding: 14px;
         }
 
-        .product-card:hover .product-image img {
-            transform: scale(1.04);
+        .laptop-content {
+            padding: 20px;
         }
 
-        .product-info {
-            padding: 21px;
-        }
-
-        .product-info small {
-            color: var(--cyan);
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .product-info h3 {
-            font-family: "Manrope", sans-serif;
-            color: var(--navy);
+        .laptop-content h3 {
             font-size: 17px;
-            margin: 5px 0 3px;
+            line-height: 1.25;
+            margin-bottom: 8px;
         }
 
-        .product-info p {
+        .laptop-spec {
             color: var(--muted);
             font-size: 12px;
-            margin-bottom: 12px;
+            min-height: 40px;
+            margin-bottom: 13px;
         }
 
-        .product-price {
-            font-weight: 800;
-            color: var(--navy);
-            font-size: 14px;
+        .price {
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--cyan-dark);
         }
 
-
-        /* ========================================
-           UPGRADE SECTION
-        ======================================== */
+        /* =========================
+           UPGRADE
+        ========================= */
 
         .upgrade-section {
-            padding: 0 0 105px;
+            padding: 0 0 95px;
         }
 
         .upgrade-box {
-            background: var(--navy);
-            border-radius: 24px;
-            padding: 65px;
-            color: white;
-            display: grid;
-            grid-template-columns: 1fr 0.9fr;
-            gap: 60px;
-            align-items: center;
+            background:
+                radial-gradient(circle at 90% 20%, rgba(25,167,206,0.2), transparent 30%),
+                var(--navy);
+            color: #ffffff;
+            border-radius: 18px;
             overflow: hidden;
-            position: relative;
-        }
-
-        .upgrade-box::after {
-            content: "";
-            position: absolute;
-            width: 380px;
-            height: 380px;
-            border: 1px solid rgba(25,167,206,0.15);
-            border-radius: 50%;
-            right: -180px;
-            top: -150px;
-        }
-
-        .upgrade-box h2 {
-            font-family: "Manrope", sans-serif;
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1.15;
-            margin-bottom: 17px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .upgrade-box p {
-            color: #bdc8d4;
-            max-width: 570px;
-            margin-bottom: 27px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .upgrade-list {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 13px;
-            position: relative;
-            z-index: 2;
+            grid-template-columns: 1fr 0.8fr;
+            min-height: 430px;
         }
 
-        .upgrade-item {
-            border: 1px solid rgba(255,255,255,0.10);
-            background: rgba(255,255,255,0.04);
-            border-radius: 10px;
-            padding: 14px;
-            color: #d9e2ea;
-            font-size: 13px;
-            font-weight: 600;
+        .upgrade-content {
+            padding: 65px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .upgrade-item i {
-            color: var(--cyan);
-            margin-right: 7px;
+        .upgrade-content .section-label {
+            color: #7dddf5;
+        }
+
+        .upgrade-content h2 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+            letter-spacing: -1.5px;
+        }
+
+        .upgrade-content p {
+            color: #b9c6d3;
+            max-width: 560px;
+            margin-bottom: 25px;
+        }
+
+        .upgrade-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 28px;
+        }
+
+        .upgrade-items span {
+            border: 1px solid rgba(255,255,255,0.14);
+            background: rgba(255,255,255,0.05);
+            border-radius: 30px;
+            padding: 8px 13px;
+            font-size: 12px;
+            color: #d7e0e8;
         }
 
         .upgrade-image {
             position: relative;
-            z-index: 2;
-            height: 320px;
-            border-radius: 18px;
-            overflow: hidden;
-            background: #eef3f6;
+            background: #111d30;
         }
 
         .upgrade-image img {
             width: 100%;
             height: 100%;
+            min-height: 430px;
             object-fit: contain;
-            padding: 20px;
+            padding: 35px;
         }
 
-
-        /* ========================================
+        /* =========================
            CREATIVE STUDIO
-        ======================================== */
+        ========================= */
 
         .creative-section {
             background: var(--light);
-            padding: 105px 0;
         }
 
-        .creative-grid {
+        .creative-layout {
             display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
+            grid-template-columns: 0.9fr 1.1fr;
             gap: 70px;
             align-items: center;
         }
 
-        .creative-images {
+        .creative-gallery {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            gap: 12px;
         }
 
-        .creative-image {
-            height: 205px;
-            border-radius: 15px;
-            overflow: hidden;
-            background: white;
-            border: 1px solid var(--border);
-        }
-
-        .creative-image:first-child {
-            grid-column: span 2;
-            height: 245px;
-        }
-
-        .creative-image img {
+        .creative-gallery img {
             width: 100%;
-            height: 100%;
+            height: 220px;
             object-fit: cover;
+            border-radius: 10px;
+            display: block;
         }
 
-        .creative-copy .section-heading {
-            margin-bottom: 17px;
+        .creative-gallery img:first-child {
+            grid-column: span 2;
+            height: 270px;
+        }
+
+        .creative-copy h2 {
+            font-size: clamp(35px, 4vw, 55px);
+            line-height: 1.05;
+            letter-spacing: -1.7px;
+            margin-bottom: 20px;
         }
 
         .creative-copy p {
             color: var(--muted);
-            margin-bottom: 24px;
+            font-size: 17px;
+            margin-bottom: 25px;
         }
 
-        .creative-services {
+        .creative-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 9px;
             margin-bottom: 28px;
         }
 
-        .creative-tag {
-            background: white;
+        .creative-tags span {
+            background: #ffffff;
             border: 1px solid var(--border);
-            border-radius: 30px;
-            padding: 7px 12px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #475467;
+            padding: 9px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
         }
 
-
-        /* ========================================
+        /* =========================
            WHY US
-        ======================================== */
+        ========================= */
 
         .why-section {
-            padding: 105px 0;
+            background: #ffffff;
         }
 
-        .why-header {
+        .why-heading {
             max-width: 700px;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         .why-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 18px;
         }
 
         .why-card {
-            padding: 31px;
+            padding: 32px;
             border: 1px solid var(--border);
-            border-radius: 17px;
-            background: white;
+            border-radius: 12px;
+            background: #ffffff;
         }
 
         .why-number {
+            font-size: 13px;
+            font-weight: 900;
             color: var(--cyan);
-            font-size: 12px;
-            font-weight: 800;
             margin-bottom: 22px;
         }
 
         .why-card h3 {
-            font-family: "Manrope", sans-serif;
-            color: var(--navy);
-            font-size: 20px;
+            font-size: 21px;
             margin-bottom: 10px;
         }
 
         .why-card p {
             color: var(--muted);
-            font-size: 13px;
+            font-size: 14px;
         }
 
-
-        /* ========================================
+        /* =========================
            FINAL CTA
-        ======================================== */
+        ========================= */
 
         .final-cta {
+            padding: 95px 0;
             background:
-                radial-gradient(circle at 50% 0%, rgba(25,167,206,0.15), transparent 35%),
+                radial-gradient(circle at 20% 50%, rgba(25,167,206,0.18), transparent 30%),
                 var(--navy);
-            color: white;
+            color: #ffffff;
             text-align: center;
-            padding: 105px 0;
         }
 
         .final-cta h2 {
-            font-family: "Manrope", sans-serif;
-            font-size: clamp(35px, 5vw, 58px);
-            line-height: 1.1;
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1;
+            letter-spacing: -2px;
             margin-bottom: 18px;
         }
 
         .final-cta p {
-            color: #bdc8d4;
+            color: #b9c6d3;
             max-width: 650px;
-            margin: 0 auto 30px;
+            margin: 0 auto 28px;
         }
 
         .final-buttons {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 13px;
+            gap: 10px;
         }
 
+        .final-cta .button-outline {
+            color: #ffffff;
+            background: transparent;
+            border-color: rgba(255,255,255,0.25);
+        }
 
-        /* ========================================
+        .final-cta .button-outline:hover {
+            border-color: var(--cyan);
+            color: #7dddf5;
+        }
+
+        /* =========================
            FOOTER
-        ======================================== */
+        ========================= */
 
         footer {
-            background: #080e19;
-            color: #9eabb9;
-            padding: 55px 0 25px;
+            background: #070d17;
+            color: #ffffff;
+            padding: 65px 0 25px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 40px;
+            gap: 60px;
+            padding-bottom: 45px;
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
@@ -964,19 +934,21 @@
         }
 
         .footer-brand p {
-            max-width: 400px;
+            color: #8f9baa;
             font-size: 13px;
+            max-width: 360px;
         }
 
         .footer-column h4 {
-            color: white;
-            font-size: 14px;
-            margin-bottom: 17px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
         }
 
         .footer-column a {
             display: block;
-            color: #9eabb9;
+            color: #8f9baa;
             font-size: 13px;
             margin-bottom: 9px;
             transition: 0.2s ease;
@@ -987,33 +959,34 @@
         }
 
         .footer-bottom {
-            padding-top: 22px;
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            flex-wrap: wrap;
+            padding-top: 22px;
+            color: #697584;
             font-size: 12px;
         }
 
-
-        /* ========================================
+        /* =========================
            WHATSAPP
-        ======================================== */
+        ========================= */
 
         .whatsapp-float {
             position: fixed;
             right: 22px;
             bottom: 22px;
-            width: 58px;
-            height: 58px;
-            display: grid;
-            place-items: center;
-            background: var(--whatsapp);
-            color: white;
+            width: 57px;
+            height: 57px;
             border-radius: 50%;
-            font-size: 27px;
-            box-shadow: 0 12px 30px rgba(37,211,102,0.28);
+            background: var(--green);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 900;
             z-index: 999;
+            box-shadow: 0 12px 30px rgba(37,211,102,0.35);
             transition: 0.25s ease;
         }
 
@@ -1021,222 +994,198 @@
             transform: translateY(-4px) scale(1.04);
         }
 
-
-        /* ========================================
+        /* =========================
            RESPONSIVE
-        ======================================== */
+        ========================= */
 
         @media (max-width: 1050px) {
 
-            .nav-links {
-                gap: 15px;
+            nav {
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 12px;
             }
 
             .hero-grid {
-                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            .hero {
-                padding: 80px 0 100px;
-            }
-
-            .hero-content {
-                max-width: 780px;
-            }
-
-            .hero-visual {
-                min-height: 430px;
-            }
-
-            .repair-grid,
-            .creative-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .shop-grid {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 300px 220px;
-            }
-
-            .shop-card.large {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
-            .product-grid {
+            .repair-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .upgrade-box {
-                grid-template-columns: 1fr;
+            .laptop-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .why-grid {
-                grid-template-columns: 1fr 1fr;
+            .shop-card:nth-child(1),
+            .shop-card:nth-child(2) {
+                grid-column: span 6;
+            }
+
+            .shop-card:nth-child(3),
+            .shop-card:nth-child(4),
+            .shop-card:nth-child(5) {
+                grid-column: span 4;
             }
         }
 
+        @media (max-width: 800px) {
 
-        @media (max-width: 760px) {
-
-            .nav {
+            .nav-container {
                 min-height: 70px;
             }
 
-            .logo img {
-                width: 135px;
-            }
-
-            .nav-links {
+            nav {
                 display: none;
             }
 
             .hero {
-                min-height: auto;
-                padding: 70px 0 85px;
+                padding: 75px 0;
             }
 
-            .hero h1 {
-                letter-spacing: -1.5px;
+            .hero-grid,
+            .tech-intro,
+            .creative-layout,
+            .upgrade-box {
+                grid-template-columns: 1fr;
             }
 
-            .hero-description {
-                font-size: 16px;
+            .hero-image-box {
+                min-height: 380px;
             }
 
-            .hero-visual {
-                min-height: 330px;
+            .hero-image-box img {
+                height: 380px;
             }
 
-            .device-frame {
-                height: 310px;
+            .floating-label.one {
+                left: 15px;
             }
 
-            .label-one {
-                left: -5px;
-                bottom: 25px;
-            }
-
-            .label-two {
-                right: -5px;
-                top: 30px;
-            }
-
-            .quick-paths {
-                margin-top: 0;
-                padding: 20px 0 70px;
-                background: var(--light);
+            .floating-label.two {
+                right: 15px;
             }
 
             .quick-grid {
                 grid-template-columns: 1fr;
             }
 
-            .quick-card {
-                border-right: none;
-                border-bottom: 1px solid var(--border);
+            .quick-paths {
+                margin-top: 0;
+                padding-top: 20px;
             }
 
-            .quick-card:last-child {
-                border-bottom: none;
-            }
-
-            .repair-section,
-            .product-section,
-            .why-section {
-                padding: 75px 0;
-            }
-
-            .shop-discovery,
-            .creative-section {
-                padding: 75px 0;
-            }
-
-            .repair-points {
+            .tech-points {
                 grid-template-columns: 1fr;
             }
 
-            .repair-image-grid {
-                grid-template-columns: 1fr 1fr;
+            .shop-card:nth-child(1),
+            .shop-card:nth-child(2),
+            .shop-card:nth-child(3),
+            .shop-card:nth-child(4),
+            .shop-card:nth-child(5) {
+                grid-column: span 6;
             }
 
-            .repair-image {
-                height: 160px;
+            .upgrade-content {
+                padding: 45px 30px;
             }
 
-            .repair-image:first-child {
-                height: 335px;
+            .upgrade-image img {
+                min-height: 330px;
             }
 
-            .shop-intro,
-            .product-heading {
-                display: block;
+            .creative-gallery img {
+                height: 180px;
             }
 
-            .shop-intro .btn,
-            .product-heading .btn {
-                margin-top: 20px;
-            }
-
-            .shop-grid {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 230px 190px 190px;
-            }
-
-            .shop-card.large {
-                grid-column: span 2;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-
-            .product-image {
-                height: 170px;
-            }
-
-            .product-info {
-                padding: 15px;
-            }
-
-            .upgrade-box {
-                padding: 38px 25px;
-                gap: 35px;
-            }
-
-            .upgrade-list {
-                grid-template-columns: 1fr;
-            }
-
-            .upgrade-image {
-                height: 250px;
-            }
-
-            .creative-images {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .creative-image {
-                height: 160px;
-            }
-
-            .creative-image:first-child {
-                height: 190px;
+            .creative-gallery img:first-child {
+                height: 220px;
             }
 
             .why-grid {
                 grid-template-columns: 1fr;
             }
 
-            .final-cta {
-                padding: 75px 0;
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-image-box {
+                min-height: 320px;
+            }
+
+            .hero-image-box img {
+                height: 320px;
+                padding: 20px;
+            }
+
+            .repair-grid,
+            .laptop-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-card:nth-child(1),
+            .shop-card:nth-child(2),
+            .shop-card:nth-child(3),
+            .shop-card:nth-child(4),
+            .shop-card:nth-child(5) {
+                grid-column: auto;
+            }
+
+            .shop-card,
+            .shop-card-image {
+                min-height: 320px;
+            }
+
+            .laptop-heading {
+                display: block;
+            }
+
+            .laptop-heading .button {
+                margin-top: 20px;
+            }
+
+            .creative-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .creative-gallery img:first-child {
+                grid-column: auto;
+            }
+
+            .creative-gallery img,
+            .creative-gallery img:first-child {
+                height: 220px;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 30px;
             }
 
             .footer-bottom {
@@ -1244,159 +1193,80 @@
             }
 
             .whatsapp-float {
-                width: 54px;
-                height: 54px;
-                right: 16px;
-                bottom: 16px;
-                font-size: 25px;
+                width: 52px;
+                height: 52px;
+                right: 15px;
+                bottom: 15px;
             }
         }
-
-
-        @media (max-width: 480px) {
-
-            .hero-buttons,
-            .final-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .shop-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: 250px 210px 210px 210px;
-            }
-
-            .shop-card.large {
-                grid-column: span 1;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-image {
-                height: 220px;
-            }
-
-            .repair-image-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .repair-image,
-            .repair-image:first-child {
-                height: 230px;
-                grid-row: auto;
-            }
-
-        }
-
     </style>
 </head>
 
-
 <body>
 
-
-<!-- ========================================
+<!-- =========================
      HEADER
-======================================== -->
+========================= -->
 
 <header>
-
-    <div class="container nav">
+    <div class="nav-container">
 
         <a href="index.html">
             <img src="Logo.png" alt="Street Gadgets Care" class="logo">
         </a>
 
-        <nav class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="tech-repairs.html">
-                Tech Repairs
-            </a>
-
-            <a href="shop.html">
-                Shop
-            </a>
-
-            <a href="creative-studio.html">
-                Creative Studio
-            </a>
-
-            <a href="contact.html" class="nav-contact">
-                Let's Talk
-            </a>
-
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="tech-repairs.html">Tech Repairs</a>
+            <a href="shop.html">Shop</a>
+            <a href="creative-studio.html">Creative Studio</a>
+            <a href="contact.html" class="nav-contact">Let's Talk</a>
         </nav>
 
     </div>
-
 </header>
 
 
-
-<!-- ========================================
+<!-- =========================
      HERO
-======================================== -->
+========================= -->
 
 <section class="hero">
 
     <div class="container hero-grid">
 
-        <div class="hero-content">
+        <div>
 
-            <div class="eyebrow">
+            <div class="hero-eyebrow">
                 Technology • Design • Digital Solutions
             </div>
 
             <h1>
-                Technology that
-                <span>works for you.</span>
+                Technology that <span>works for you.</span>
             </h1>
 
             <p class="hero-description">
-                From repairing the device in your hand to helping you find
-                the right laptop, upgrade your setup or bring your business
-                ideas to life — Street Gadgets Care brings practical
-                technology and creative solutions together.
+                From repairing the device in your hand to helping you find your next laptop,
+                upgrade your storage, design your brand or prepare your business documents —
+                Street Gadgets Care brings practical technology and creative solutions together.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="tech-repairs.html" class="btn btn-primary">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    Let's Fix It
+                <a href="tech-repairs.html" class="button button-primary">
+                    Let's Fix It →
                 </a>
 
-                <a href="shop.html" class="btn btn-outline">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    See What We Have
+                <a href="shop.html" class="button button-outline">
+                    Browse Our Tech →
                 </a>
 
             </div>
 
-            <div class="hero-note">
-
-                <i class="fa-solid fa-location-dot"></i>
-
+            <div class="hero-location">
                 Based in Nairobi • Serving Customers Across Kenya
-
             </div>
 
         </div>
@@ -1404,35 +1274,19 @@
 
         <div class="hero-visual">
 
-            <div class="device-frame">
+            <div class="hero-image-box">
 
                 <img
                     src="HP%20745%20G6%20RYZEN%207.JPG"
                     alt="HP EliteBook laptop from Street Gadgets Care"
                 >
 
-                <div class="floating-label label-one">
-
-                    <strong>
-                        Devices
-                    </strong>
-
-                    <span>
-                        Laptops & more
-                    </span>
-
+                <div class="floating-label one">
+                    DEVICES & UPGRADES
                 </div>
 
-                <div class="floating-label label-two">
-
-                    <strong>
-                        Repairs
-                    </strong>
-
-                    <span>
-                        Phones & laptops
-                    </span>
-
+                <div class="floating-label two">
+                    REPAIR • CARE • SUPPORT
                 </div>
 
             </div>
@@ -1444,10 +1298,9 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      QUICK CUSTOMER PATHS
-======================================== -->
+========================= -->
 
 <section class="quick-paths">
 
@@ -1455,75 +1308,58 @@
 
         <div class="quick-grid">
 
+            <a href="tech-repairs.html" class="quick-card">
 
-            <div class="quick-card">
+                <div class="quick-number">01 / REPAIR</div>
 
-                <small>
-                    01 / REPAIR
-                </small>
-
-                <h3>
-                    Something went wrong?
-                </h3>
+                <h3>Something went wrong?</h3>
 
                 <p>
-                    Phone, laptop, charging, battery, software or performance
-                    problems — let's get it working again.
+                    Phone, laptop, screen, battery, software or performance problem?
+                    Let's find the solution.
                 </p>
 
-                <a href="tech-repairs.html" class="text-link">
-                    Let's Fix It
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <span class="text-link">
+                    Let's Fix It →
+                </span>
 
-            </div>
+            </a>
 
 
-            <div class="quick-card">
+            <a href="shop.html" class="quick-card">
 
-                <small>
-                    02 / SHOP
-                </small>
+                <div class="quick-number">02 / SHOP</div>
 
-                <h3>
-                    Looking for something new?
-                </h3>
+                <h3>Looking for a device or gadget?</h3>
 
                 <p>
-                    Discover laptops, devices, accessories, storage and other
-                    technology essentials.
+                    Laptops, phones, storage, accessories and more —
+                    see what we have available.
                 </p>
 
-                <a href="shop.html" class="text-link">
-                    See What We Have
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <span class="text-link">
+                    Browse Our Tech →
+                </span>
 
-            </div>
+            </a>
 
 
-            <div class="quick-card">
+            <a href="creative-studio.html" class="quick-card">
 
-                <small>
-                    03 / CREATIVE
-                </small>
+                <div class="quick-number">03 / CREATIVE</div>
 
-                <h3>
-                    Have an idea to build?
-                </h3>
+                <h3>Have an idea to build?</h3>
 
                 <p>
-                    From branding and graphic design to CVs and company
-                    profiles, let's make it look professional.
+                    Logos, flyers, CVs, company profiles, invitations
+                    and practical business support.
                 </p>
 
-                <a href="creative-studio.html" class="text-link">
-                    Bring Your Idea to Life
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <span class="text-link">
+                    Bring Your Idea to Life →
+                </span>
 
-            </div>
-
+            </a>
 
         </div>
 
@@ -1532,17 +1368,15 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      TECH REPAIRS
-======================================== -->
+========================= -->
 
-<section class="repair-section">
+<section class="section tech-section">
 
     <div class="container">
 
-        <div class="repair-grid">
-
+        <div class="tech-intro">
 
             <div>
 
@@ -1550,100 +1384,102 @@
                     Technology First
                 </div>
 
-                <h2 class="section-heading">
+                <h2 class="section-title">
                     Something wrong with your device?
                 </h2>
 
-                <p class="section-description">
-                    Your phone or laptop shouldn't become a daily headache.
-                    We diagnose, repair, service and upgrade devices with
-                    practical solutions focused on getting you back to work,
-                    study and everyday life.
+                <p class="section-text">
+                    Your device is part of your daily life. We help diagnose,
+                    repair, maintain and upgrade phones and laptops so you can
+                    get back to what matters.
                 </p>
 
-
-                <div class="repair-points">
-
-                    <div class="repair-point">
-                        <i class="fa-solid fa-check"></i>
-                        Phone Repairs
-                    </div>
-
-                    <div class="repair-point">
-                        <i class="fa-solid fa-check"></i>
-                        Laptop Repairs
-                    </div>
-
-                    <div class="repair-point">
-                        <i class="fa-solid fa-check"></i>
-                        Screen Replacement
-                    </div>
-
-                    <div class="repair-point">
-                        <i class="fa-solid fa-check"></i>
-                        Battery Replacement
-                    </div>
-
-                    <div class="repair-point">
-                        <i class="fa-solid fa-check"></i>
-                        Software Support
-                    </div>
-
-                    <div class="repair-point">
-                        <i class="fa-solid fa-check"></i>
-                        Laptop Upgrades
-                    </div>
-
-                </div>
-
-
-                <a href="tech-repairs.html" class="btn btn-primary">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    Let's Fix It
-                </a>
-
             </div>
 
 
-            <div class="repair-image-grid">
+            <div class="tech-points">
 
-                <div class="repair-image">
-
-                    <img
-                        src="phone-screen-repair.jpg"
-                        alt="Phone screen repair at Street Gadgets Care"
-                    >
-
-                </div>
-
-                <div class="repair-image">
-
-                    <img
-                        src="iphone-back-glass.jpg"
-                        alt="iPhone back glass repair"
-                    >
-
-                </div>
-
-                <div class="repair-image">
-
-                    <img
-                        src="phone-battery-replacement.jpg"
-                        alt="Phone battery replacement"
-                    >
-
-                </div>
-
-                <div class="repair-image">
-
-                    <img
-                        src="laptop-servicing.jpg"
-                        alt="Laptop servicing"
-                    >
-
-                </div>
+                <div class="tech-point">Phone Repairs</div>
+                <div class="tech-point">Laptop Repairs</div>
+                <div class="tech-point">Screen Replacement</div>
+                <div class="tech-point">Battery Replacement</div>
+                <div class="tech-point">Software Support</div>
+                <div class="tech-point">Laptop Upgrades</div>
 
             </div>
+
+        </div>
+
+
+        <div class="repair-grid">
+
+            <article class="repair-card">
+
+                <img
+                    src="phone-screen-repair.jpg"
+                    alt="Phone screen repair"
+                >
+
+                <div class="repair-card-content">
+                    <h3>Screen Replacement</h3>
+                    <p>Cracked or damaged screen? We can help.</p>
+                </div>
+
+            </article>
+
+
+            <article class="repair-card">
+
+                <img
+                    src="iphone-back-glass.jpg"
+                    alt="iPhone back glass repair"
+                >
+
+                <div class="repair-card-content">
+                    <h3>Back Glass Repair</h3>
+                    <p>Professional care for damaged phone backs.</p>
+                </div>
+
+            </article>
+
+
+            <article class="repair-card">
+
+                <img
+                    src="phone-battery-replacement.jpg"
+                    alt="Phone battery replacement"
+                >
+
+                <div class="repair-card-content">
+                    <h3>Battery Replacement</h3>
+                    <p>Restore battery performance and reliability.</p>
+                </div>
+
+            </article>
+
+
+            <article class="repair-card">
+
+                <img
+                    src="laptop-servicing.jpg"
+                    alt="Laptop servicing"
+                >
+
+                <div class="repair-card-content">
+                    <h3>Laptop Servicing</h3>
+                    <p>Maintenance, troubleshooting and performance care.</p>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="tech-cta">
+
+            <a href="tech-repairs.html" class="button button-dark">
+                View All Tech Repairs →
+            </a>
 
         </div>
 
@@ -1652,75 +1488,165 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      SHOP DISCOVERY
-======================================== -->
+========================= -->
 
-<section class="shop-discovery">
+<section class="section shop-section">
 
     <div class="container">
 
+        <div class="shop-heading">
 
-        <div class="shop-intro">
-
-            <div class="shop-intro-copy">
-
-                <div class="section-label">
-                    More Than Repairs
-                </div>
-
-                <h2 class="section-heading">
-                    You came for a repair.
-                    You might leave with an upgrade.
-                </h2>
-
-                <p>
-                    Need a new laptop? More storage? RAM? A laptop bag?
-                    Charger? Cable? We also help you find the technology
-                    and accessories you need.
-                </p>
-
+            <div class="section-label">
+                Your Next Tech Could Be Here
             </div>
 
-            <a href="shop.html" class="btn btn-primary">
-                <i class="fa-solid fa-bag-shopping"></i>
-                See What We Have
-            </a>
+            <h2>
+                Looking for a laptop, phone, accessory or upgrade?
+            </h2>
+
+            <p>
+                Don't just repair your setup — discover what can make it better.
+                Browse laptops, phones and devices, storage, computer accessories,
+                laptop bags and more.
+            </p>
+
+            <div class="shop-main-cta">
+
+                <a href="shop.html" class="button button-primary">
+                    Browse Laptops, Gadgets & Accessories →
+                </a>
+
+            </div>
 
         </div>
 
 
         <div class="shop-grid">
 
-
             <!-- LAPTOPS -->
 
-            <a href="laptops.html" class="shop-card large">
+            <a href="laptops.html" class="shop-card">
 
                 <img
                     src="HP%20840%20g5.jpeg"
-                    alt="HP EliteBook laptop"
+                    alt="Laptop available from Street Gadgets Care"
+                    class="shop-card-image"
                 >
 
-                <div class="shop-overlay">
+                <div class="shop-card-overlay"></div>
 
-                    <small>
+                <div class="shop-card-content">
+
+                    <span class="shop-tag">
                         Devices
-                    </small>
+                    </span>
 
                     <h3>
-                        Looking for a new laptop?
+                        Need a Laptop?
                     </h3>
 
-                    <p>
-                        Business, study, work and everyday machines.
-                    </p>
+                    <div class="shop-action">
+                        View Available Laptops
+                        <span>→</span>
+                    </div>
 
-                    <span class="shop-link">
-                        See What's Available
-                        <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </a>
+
+
+            <!-- PHONES & DEVICES -->
+
+            <a href="devices.html" class="shop-card shop-logo-card">
+
+                <img
+                    src="Logo.png"
+                    alt="Phones and smart devices"
+                    class="shop-card-image"
+                >
+
+                <div class="shop-card-overlay"></div>
+
+                <div class="shop-card-content">
+
+                    <span class="shop-tag">
+                        Phones & Devices
                     </span>
+
+                    <h3>
+                        Looking for a Phone or Device?
+                    </h3>
+
+                    <div class="shop-action">
+                        Browse Phones & Devices
+                        <span>→</span>
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- STORAGE -->
+
+            <a href="laptop-storage.html" class="shop-card">
+
+                <img
+                    src="nvme-ssd.jpg"
+                    alt="SSD storage upgrade"
+                    class="shop-card-image"
+                >
+
+                <div class="shop-card-overlay"></div>
+
+                <div class="shop-card-content">
+
+                    <span class="shop-tag">
+                        Storage
+                    </span>
+
+                    <h3>
+                        Need More Space or Speed?
+                    </h3>
+
+                    <div class="shop-action">
+                        Browse SSDs, HDDs & RAM
+                        <span>→</span>
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- COMPUTER ACCESSORIES -->
+
+            <a href="computer-accessories.html" class="shop-card">
+
+                <img
+                    src="wireless-mouse.jpg"
+                    alt="Computer accessories"
+                    class="shop-card-image"
+                >
+
+                <div class="shop-card-overlay"></div>
+
+                <div class="shop-card-content">
+
+                    <span class="shop-tag">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        Complete Your Setup
+                    </h3>
+
+                    <div class="shop-action">
+                        Browse Computer Accessories
+                        <span>→</span>
+                    </div>
 
                 </div>
 
@@ -1734,131 +1660,29 @@
                 <img
                     src="laptop-bag-1.jpg"
                     alt="Laptop bag"
+                    class="shop-card-image"
                 >
 
-                <div class="shop-overlay">
+                <div class="shop-card-overlay"></div>
 
-                    <small>
+                <div class="shop-card-content">
+
+                    <span class="shop-tag">
                         Protection
-                    </small>
+                    </span>
 
                     <h3>
                         Protect Your Laptop
                     </h3>
 
-                    <p>
-                        Bags for work, school and everyday use.
-                    </p>
-
-                    <span class="shop-link">
-                        Find a Bag
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                    <div class="shop-action">
+                        Browse Laptop Bags
+                        <span>→</span>
+                    </div>
 
                 </div>
 
             </a>
-
-
-            <!-- STORAGE -->
-
-            <a href="laptop-storage.html" class="shop-card">
-
-                <img
-                    src="nvme-ssd.jpg"
-                    alt="NVMe SSD storage"
-                >
-
-                <div class="shop-overlay">
-
-                    <small>
-                        Storage
-                    </small>
-
-                    <h3>
-                        Running Out of Space?
-                    </h3>
-
-                    <p>
-                        SSDs, HDDs, RAM and more.
-                    </p>
-
-                    <span class="shop-link">
-                        Get More Storage
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <!-- COMPUTER ACCESSORIES -->
-
-            <a href="computer-accessories.html" class="shop-card">
-
-                <img
-                    src="wireless-mouse.jpg"
-                    alt="Wireless computer mouse"
-                >
-
-                <div class="shop-overlay">
-
-                    <small>
-                        Accessories
-                    </small>
-
-                    <h3>
-                        Upgrade Your Setup
-                    </h3>
-
-                    <p>
-                        Mouse, keyboards, Wi-Fi, Bluetooth and more.
-                    </p>
-
-                    <span class="shop-link">
-                        Find What You Need
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <!-- DEVICES -->
-
-            <a href="devices.html" class="shop-card">
-
-                <img
-                    src="Logo.png"
-                    alt="Street Gadgets Care devices"
-                    style="object-fit: contain; padding: 35px; background: #0b1220;"
-                >
-
-                <div class="shop-overlay">
-
-                    <small>
-                        Phones & Smart Devices
-                    </small>
-
-                    <h3>
-                        Find Your Next Device
-                    </h3>
-
-                    <p>
-                        Ask us what's available.
-                    </p>
-
-                    <span class="shop-link">
-                        Take a Look
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-            </a>
-
 
         </div>
 
@@ -1867,17 +1691,15 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      LAPTOP SPOTLIGHT
-======================================== -->
+========================= -->
 
-<section class="product-section">
+<section class="section laptop-section">
 
     <div class="container">
 
-
-        <div class="product-heading">
+        <div class="laptop-heading">
 
             <div>
 
@@ -1885,168 +1707,128 @@
                     Available Technology
                 </div>
 
-                <h2 class="section-heading">
+                <h2 class="section-title">
                     Need a laptop?
                 </h2>
 
-            </div>
-
-            <div>
-
-                <p>
-                    Here are a few of the laptops available through
-                    Street Gadgets Care. Availability can change, so
-                    contact us to confirm what is currently available.
+                <p class="section-text">
+                    Here are some examples of laptops available through Street Gadgets Care.
+                    Availability changes, so contact us to confirm the latest options.
                 </p>
 
-                <a href="laptops.html" class="btn btn-primary" style="margin-top:18px;">
-                    See What's Available
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
             </div>
+
+            <a href="laptops.html" class="button button-outline">
+                View All Laptops →
+            </a>
 
         </div>
 
 
-        <div class="product-grid">
+        <div class="laptop-grid">
 
+            <article class="laptop-card">
 
-            <a href="laptops.html" class="product-card">
+                <img
+                    src="Lenovo%2011e.jpeg"
+                    alt="Lenovo Yoga 11e"
+                >
 
-                <div class="product-image">
-
-                    <img
-                        src="Lenovo%2011e.jpeg"
-                        alt="Lenovo Yoga 11e"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <small>
-                        Laptop
-                    </small>
+                <div class="laptop-content">
 
                     <h3>
                         Lenovo Yoga 11e
                     </h3>
 
-                    <p>
+                    <p class="laptop-spec">
                         Celeron • 4GB • 128GB • Touchscreen
                     </p>
 
-                    <div class="product-price">
+                    <div class="price">
                         KSh 15,000
                     </div>
 
                 </div>
 
-            </a>
+            </article>
 
 
-            <a href="laptops.html" class="product-card">
+            <article class="laptop-card">
 
-                <div class="product-image">
+                <img
+                    src="HP%20840%20G3.JPG"
+                    alt="HP EliteBook 840 G3"
+                >
 
-                    <img
-                        src="HP%20840%20G3.JPG"
-                        alt="HP EliteBook 840 G3"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <small>
-                        Laptop
-                    </small>
+                <div class="laptop-content">
 
                     <h3>
                         HP EliteBook 840 G3
                     </h3>
 
-                    <p>
+                    <p class="laptop-spec">
                         Core i5 6th Gen • 8GB • 256GB SSD
                     </p>
 
-                    <div class="product-price">
+                    <div class="price">
                         KSh 24,500
                     </div>
 
                 </div>
 
-            </a>
+            </article>
 
 
-            <a href="laptops.html" class="product-card">
+            <article class="laptop-card">
 
-                <div class="product-image">
+                <img
+                    src="HP%20840%20g5.jpeg"
+                    alt="HP EliteBook 840 G5"
+                >
 
-                    <img
-                        src="HP%20840%20g5.jpeg"
-                        alt="HP EliteBook 840 G5"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <small>
-                        Laptop
-                    </small>
+                <div class="laptop-content">
 
                     <h3>
                         HP EliteBook 840 G5
                     </h3>
 
-                    <p>
+                    <p class="laptop-spec">
                         Core i5 8th Gen • 8GB • 256GB SSD
                     </p>
 
-                    <div class="product-price">
+                    <div class="price">
                         KSh 27,500
                     </div>
 
                 </div>
 
-            </a>
+            </article>
 
 
-            <a href="laptops.html" class="product-card">
+            <article class="laptop-card">
 
-                <div class="product-image">
+                <img
+                    src="HP%20745%20G6%20RYZEN%207.JPG"
+                    alt="HP EliteBook 745 G6 Ryzen 7"
+                >
 
-                    <img
-                        src="HP%20745%20G6%20RYZEN%207.JPG"
-                        alt="HP EliteBook 745 G6 Ryzen 7"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <small>
-                        Laptop
-                    </small>
+                <div class="laptop-content">
 
                     <h3>
                         HP EliteBook 745 G6 Ryzen 7
                     </h3>
 
-                    <p>
+                    <p class="laptop-spec">
                         Ryzen 7 • 16GB • 512GB SSD
                     </p>
 
-                    <div class="product-price">
+                    <div class="price">
                         KSh 47,500
                     </div>
 
                 </div>
 
-            </a>
-
+            </article>
 
         </div>
 
@@ -2055,10 +1837,9 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      UPGRADE YOUR SETUP
-======================================== -->
+========================= -->
 
 <section class="upgrade-section">
 
@@ -2066,55 +1847,36 @@
 
         <div class="upgrade-box">
 
-
-            <div>
+            <div class="upgrade-content">
 
                 <div class="section-label">
                     Upgrade Your Setup
                 </div>
 
                 <h2>
-                    Make your laptop faster,
-                    bigger and more useful.
+                    Make your laptop faster, bigger and more useful.
                 </h2>
 
                 <p>
-                    Sometimes you don't need a new laptop. A good upgrade
-                    can make a huge difference. We provide storage, RAM
-                    and other accessories and can also help with installation.
+                    If your laptop feels slow, runs out of space or needs better
+                    performance, the right upgrade can make a big difference.
                 </p>
 
+                <div class="upgrade-items">
 
-                <div class="upgrade-list">
-
-                    <div class="upgrade-item">
-                        <i class="fa-solid fa-hard-drive"></i>
-                        SSD & HDD
-                    </div>
-
-                    <div class="upgrade-item">
-                        <i class="fa-solid fa-memory"></i>
-                        RAM Memory
-                    </div>
-
-                    <div class="upgrade-item">
-                        <i class="fa-solid fa-sd-card"></i>
-                        Memory Cards
-                    </div>
-
-                    <div class="upgrade-item">
-                        <i class="fa-solid fa-briefcase"></i>
-                        Laptop Bags
-                    </div>
+                    <span>SSD & HDD</span>
+                    <span>RAM Memory</span>
+                    <span>Memory Cards</span>
+                    <span>Flash Drives</span>
+                    <span>Laptop Bags</span>
 
                 </div>
 
-                <a href="laptop-storage.html"
-                   class="btn btn-primary"
-                   style="margin-top:27px;">
-                    Get More Storage
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <div>
+                    <a href="laptop-storage.html" class="button button-primary">
+                        Browse Storage & Upgrades →
+                    </a>
+                </div>
 
             </div>
 
@@ -2128,7 +1890,6 @@
 
             </div>
 
-
         </div>
 
     </div>
@@ -2136,107 +1897,63 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      CREATIVE STUDIO
-======================================== -->
+========================= -->
 
-<section class="creative-section">
+<section class="section creative-section">
 
-    <div class="container">
+    <div class="container creative-layout">
 
-        <div class="creative-grid">
+        <div class="creative-gallery">
+
+            <img
+                src="logo-design.jpg"
+                alt="Logo design by Street Gadgets Care"
+            >
+
+            <img
+                src="restaurant-menu-design.jpg"
+                alt="Restaurant menu design"
+            >
+
+            <img
+                src="business-card-design.jpg"
+                alt="Business card design"
+            >
+
+        </div>
 
 
-            <div class="creative-images">
+        <div class="creative-copy">
 
-                <div class="creative-image">
+            <div class="section-label">
+                Creative Studio
+            </div>
 
-                    <img
-                        src="logo-design.jpg"
-                        alt="Logo design by Street Gadgets Care"
-                    >
+            <h2>
+                Your business deserves more than just a logo.
+            </h2>
 
-                </div>
+            <p>
+                Build a professional presence with practical design work
+                for your business, brand, events and personal projects.
+            </p>
 
-                <div class="creative-image">
+            <div class="creative-tags">
 
-                    <img
-                        src="restaurant-menu-design.jpg"
-                        alt="Restaurant menu design"
-                    >
-
-                </div>
-
-                <div class="creative-image">
-
-                    <img
-                        src="business-card-design.jpg"
-                        alt="Business card design"
-                    >
-
-                </div>
+                <span>Logo & Branding</span>
+                <span>Flyers & Posters</span>
+                <span>Business Cards</span>
+                <span>Invitations</span>
+                <span>CV & Resume</span>
+                <span>Company Profiles</span>
 
             </div>
 
-
-            <div class="creative-copy">
-
-                <div class="section-label">
-                    Creative Studio
-                </div>
-
-                <h2 class="section-heading">
-                    Your business deserves more than just a logo.
-                </h2>
-
-                <p>
-                    We also create professional visual materials that help
-                    businesses, events and individuals present themselves
-                    properly — from branding and promotional designs to
-                    CVs, company profiles and business documents.
-                </p>
-
-
-                <div class="creative-services">
-
-                    <span class="creative-tag">
-                        Logo & Branding
-                    </span>
-
-                    <span class="creative-tag">
-                        Flyers & Posters
-                    </span>
-
-                    <span class="creative-tag">
-                        Business Cards
-                    </span>
-
-                    <span class="creative-tag">
-                        Invitations
-                    </span>
-
-                    <span class="creative-tag">
-                        CV & Resume
-                    </span>
-
-                    <span class="creative-tag">
-                        Company Profiles
-                    </span>
-
-                </div>
-
-
-                <a href="creative-studio.html"
-                   class="btn btn-primary">
-
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    Bring Your Idea to Life
-
-                </a>
-
-            </div>
-
+            <a href="creative-studio.html" class="button button-dark">
+                Visit Creative Studio →
+            </a>
 
         </div>
 
@@ -2245,30 +1962,28 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      WHY STREET GADGETS CARE
-======================================== -->
+========================= -->
 
-<section class="why-section">
+<section class="section why-section">
 
     <div class="container">
 
-
-        <div class="why-header">
+        <div class="why-heading">
 
             <div class="section-label">
                 Why Street Gadgets Care
             </div>
 
-            <h2 class="section-heading">
+            <h2 class="section-title">
                 Practical help. Real solutions. One place.
             </h2>
 
-            <p class="section-description">
-                We bring technical work, technology products and creative
-                support together so you don't have to look everywhere for
-                the next solution.
+            <p class="section-text">
+                Technology, repairs, products, creative work and business support
+                don't have to feel disconnected. We bring them together around
+                what you actually need.
             </p>
 
         </div>
@@ -2276,11 +1991,10 @@
 
         <div class="why-grid">
 
-
-            <div class="why-card">
+            <article class="why-card">
 
                 <div class="why-number">
-                    01 / TECHNOLOGY
+                    01
                 </div>
 
                 <h3>
@@ -2288,17 +2002,17 @@
                 </h3>
 
                 <p>
-                    Repairs, maintenance, upgrades and technical support
-                    remain at the heart of what we do.
+                    Our foundation is technical. We repair, maintain and
+                    improve the devices people depend on every day.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="why-card">
+            <article class="why-card">
 
                 <div class="why-number">
-                    02 / PRACTICAL
+                    02
                 </div>
 
                 <h3>
@@ -2306,17 +2020,17 @@
                 </h3>
 
                 <p>
-                    We focus on understanding what you actually need before
-                    recommending a solution.
+                    We focus on practical options that match the problem,
+                    the device and what you actually need.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="why-card">
+            <article class="why-card">
 
                 <div class="why-number">
-                    03 / CONNECTED
+                    03
                 </div>
 
                 <h3>
@@ -2324,12 +2038,12 @@
                 </h3>
 
                 <p>
-                    Repair your laptop, upgrade it, find an accessory or
-                    get professional creative work — all under one brand.
+                    Repair your laptop, upgrade it, buy an accessory,
+                    design your business materials and handle other needs
+                    in one place.
                 </p>
 
-            </div>
-
+            </article>
 
         </div>
 
@@ -2338,10 +2052,9 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      FINAL CTA
-======================================== -->
+========================= -->
 
 <section class="final-cta">
 
@@ -2352,26 +2065,22 @@
         </h2>
 
         <p>
-            Whether your device needs attention, you're looking for
-            something to buy, or you have a creative project in mind,
-            let's get started.
+            Whether something needs fixing, you're looking for new technology,
+            or you have a business idea that needs to look professional,
+            let's talk.
         </p>
-
 
         <div class="final-buttons">
 
-            <a href="tech-repairs.html" class="btn btn-primary">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
+            <a href="tech-repairs.html" class="button button-primary">
                 Let's Fix It
             </a>
 
-            <a href="shop.html" class="btn btn-outline">
-                <i class="fa-solid fa-bag-shopping"></i>
-                See What We Have
+            <a href="shop.html" class="button button-outline">
+                Browse Our Tech
             </a>
 
-            <a href="contact.html" class="btn btn-outline">
-                <i class="fa-solid fa-comments"></i>
+            <a href="contact.html" class="button button-outline">
                 Let's Talk
             </a>
 
@@ -2382,17 +2091,15 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- =========================
      FOOTER
-======================================== -->
+========================= -->
 
 <footer>
 
     <div class="container">
 
         <div class="footer-grid">
-
 
             <div class="footer-brand">
 
@@ -2402,9 +2109,8 @@
                 >
 
                 <p>
-                    Technology, repairs, devices, accessories, creative
-                    design and practical digital solutions — based in
-                    Nairobi and serving customers across Kenya.
+                    Technology, repairs, devices, accessories, creative design
+                    and practical business support — all under one roof.
                 </p>
 
             </div>
@@ -2416,29 +2122,13 @@
                     Explore
                 </h4>
 
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="tech-repairs.html">
-                    Tech Repairs
-                </a>
-
-                <a href="shop.html">
-                    Shop
-                </a>
-
-                <a href="creative-studio.html">
-                    Creative Studio
-                </a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="tech-repairs.html">Tech Repairs</a>
+                <a href="shop.html">Shop</a>
+                <a href="creative-studio.html">Creative Studio</a>
+                <a href="contact.html">Contact</a>
 
             </div>
 
@@ -2446,27 +2136,26 @@
             <div class="footer-column">
 
                 <h4>
-                    Get In Touch
+                    Contact
                 </h4>
 
-                <a href="https://wa.me/254114259961" target="_blank">
-                    WhatsApp
+                <a href="tel:0114259961">
+                    0114 259 961
                 </a>
 
-                <a href="tel:0114259961">
-                    0114259961
+                <a href="https://wa.me/254114259961">
+                    WhatsApp Us
                 </a>
 
                 <a href="mailto:streetgadgetscare@gmail.com">
                     streetgadgetscare@gmail.com
                 </a>
 
-                <a href="contact.html">
-                    Contact Us
+                <a href="#">
+                    Nairobi, Kenya
                 </a>
 
             </div>
-
 
         </div>
 
@@ -2488,20 +2177,18 @@
 </footer>
 
 
-
-<!-- ========================================
+<!-- =========================
      FLOATING WHATSAPP
-======================================== -->
+========================= -->
 
 <a
     href="https://wa.me/254114259961"
     class="whatsapp-float"
-    target="_blank"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
+    title="Chat with us on WhatsApp"
 >
-    <i class="fa-brands fa-whatsapp"></i>
+    ☎
 </a>
-
 
 </body>
 </html>
