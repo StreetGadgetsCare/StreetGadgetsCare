@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Computer Accessories | Street Gadgets Care</title>
-  <meta name="description" content="Shop computer and laptop accessories including wireless mice, keyboards, Wi-Fi dongles, Bluetooth dongles, foam cleaners and cleaning kits from Street Gadgets Care.">
-
-  <link rel="icon" type="image/png" href="Logo.png">
+  <meta name="description" content="Shop keyboards, wireless mice, Wi-Fi dongles, Bluetooth dongles, foam cleaners and cleaning kits from Street Gadgets Care. Delivery available across Kenya.">
 
   <style>
     * {
@@ -22,8 +20,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7f9fb;
-      color: #18202a;
+      background: #f5f7fa;
+      color: #172033;
       line-height: 1.6;
     }
 
@@ -43,36 +41,51 @@
 
     header {
       background: #0b1220;
-      color: white;
+      color: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
     }
 
     .nav-container {
-      max-width: 1200px;
+      width: min(1180px, 92%);
       margin: auto;
-      padding: 14px 22px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 25px;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
     .logo img {
-      width: 185px;
-      height: auto;
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 25px;
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
       font-size: 14px;
       font-weight: 600;
       transition: 0.25s ease;
@@ -83,15 +96,15 @@
       color: #19a7ce;
     }
 
-    .nav-btn {
+    .nav-shop {
       background: #19a7ce;
-      color: white !important;
-      padding: 10px 16px;
-      border-radius: 7px;
+      padding: 10px 17px;
+      border-radius: 8px;
     }
 
-    .nav-btn:hover {
-      background: #148cae;
+    .nav-shop:hover {
+      color: #fff;
+      background: #148db0;
     }
 
     /* =========================
@@ -100,23 +113,23 @@
 
     .hero {
       background:
-        linear-gradient(135deg, rgba(11,18,32,0.98), rgba(11,18,32,0.90)),
+        linear-gradient(120deg, rgba(11, 18, 32, 0.96), rgba(11, 18, 32, 0.88)),
         url("wireless-mouse.jpg") center/cover no-repeat;
-      color: white;
-      padding: 75px 22px;
+      color: #fff;
+      padding: 72px 0;
     }
 
     .hero-container {
-      max-width: 1150px;
+      width: min(1180px, 92%);
       margin: auto;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.1fr 0.9fr;
       align-items: center;
       gap: 55px;
     }
 
     .hero-content {
-      max-width: 620px;
+      max-width: 650px;
     }
 
     .eyebrow {
@@ -125,56 +138,58 @@
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 1.5px;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 5vw, 58px);
+      font-size: clamp(38px, 5vw, 60px);
       line-height: 1.08;
       margin-bottom: 20px;
     }
 
     .hero p {
-      color: #d8e1e9;
       font-size: 17px;
-      max-width: 570px;
+      color: #d9e2ee;
+      max-width: 610px;
       margin-bottom: 28px;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 13px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 7px;
-      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border-radius: 8px;
       font-weight: 700;
+      font-size: 14px;
       transition: 0.25s ease;
     }
 
     .btn-primary {
       background: #19a7ce;
-      color: white;
+      color: #fff;
     }
 
     .btn-primary:hover {
-      background: #148cae;
+      background: #148db0;
       transform: translateY(-2px);
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.4);
-      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
     }
 
     .btn-outline:hover {
-      border-color: #19a7ce;
-      color: #19a7ce;
+      background: #fff;
+      color: #0b1220;
     }
 
     .hero-image {
@@ -183,14 +198,25 @@
       align-items: center;
     }
 
+    .hero-image-box {
+      width: 100%;
+      max-width: 430px;
+      min-height: 300px;
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+
     .hero-image img {
       width: 100%;
-      max-width: 390px;
-      height: 285px;
+      max-height: 260px;
       object-fit: contain;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      padding: 18px;
+      border-radius: 12px;
     }
 
     /* =========================
@@ -198,36 +224,42 @@
     ========================= */
 
     .category-bar {
-      background: white;
-      border-bottom: 1px solid #e5e9ed;
+      background: #fff;
+      border-bottom: 1px solid #e5e9ef;
+      position: sticky;
+      top: 78px;
+      z-index: 900;
     }
 
     .category-container {
-      max-width: 1150px;
+      width: min(1180px, 92%);
       margin: auto;
-      padding: 17px 22px;
       display: flex;
-      align-items: center;
       gap: 10px;
       overflow-x: auto;
-      scrollbar-width: thin;
+      padding: 12px 0;
+      scrollbar-width: none;
     }
 
-    .category-container a {
-      white-space: nowrap;
-      padding: 9px 14px;
-      border-radius: 20px;
-      background: #f0f4f7;
-      color: #34404c;
+    .category-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-link {
+      flex-shrink: 0;
+      padding: 9px 15px;
+      border-radius: 7px;
+      background: #f1f4f7;
+      color: #3b4657;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       transition: 0.25s ease;
     }
 
-    .category-container a:hover,
-    .category-container a.active {
+    .category-link:hover,
+    .category-link.active {
       background: #19a7ce;
-      color: white;
+      color: #fff;
     }
 
     /* =========================
@@ -235,20 +267,29 @@
     ========================= */
 
     .intro {
-      max-width: 900px;
+      width: min(900px, 92%);
       margin: auto;
-      padding: 65px 22px 35px;
       text-align: center;
+      padding: 65px 0 30px;
+    }
+
+    .section-label {
+      color: #19a7ce;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
 
     .intro h2 {
-      font-size: 34px;
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 14px;
       color: #0b1220;
-      margin-bottom: 13px;
     }
 
     .intro p {
-      color: #66717d;
+      color: #657084;
       font-size: 16px;
       max-width: 720px;
       margin: auto;
@@ -259,40 +300,40 @@
     ========================= */
 
     .products-section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 25px 22px 70px;
+      width: min(1180px, 92%);
+      margin: 35px auto 75px;
     }
 
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 25px;
     }
 
     .product-card {
-      background: white;
-      border: 1px solid #e5e9ed;
-      border-radius: 14px;
+      background: #fff;
+      border: 1px solid #e5e9ef;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 8px 28px rgba(11,18,32,0.06);
-      transition: 0.3s ease;
       display: flex;
       flex-direction: column;
+      transition: 0.3s ease;
+      box-shadow: 0 7px 22px rgba(11, 18, 32, 0.05);
     }
 
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 14px 35px rgba(11,18,32,0.11);
+      box-shadow: 0 14px 32px rgba(11, 18, 32, 0.10);
     }
 
     .product-image {
-      height: 235px;
-      background: #f4f6f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 220px;
       padding: 18px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #edf0f4;
     }
 
     .product-image img {
@@ -308,201 +349,165 @@
       flex: 1;
     }
 
-    .product-tag {
-      display: inline-block;
-      color: #19a7ce;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-
     .product-content h3 {
+      font-size: 20px;
       color: #0b1220;
-      font-size: 21px;
       margin-bottom: 8px;
     }
 
-    .product-content p {
-      color: #69747f;
+    .product-description {
+      color: #667085;
       font-size: 14px;
       margin-bottom: 15px;
+      flex: 1;
     }
 
     .price {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 800;
-      color: #0b1220;
+      color: #19a7ce;
       margin-bottom: 17px;
     }
 
-    .order-btn {
-      margin-top: auto;
-      display: block;
+    .product-button {
+      width: 100%;
       text-align: center;
       background: #25d366;
-      color: white;
-      padding: 12px 15px;
-      border-radius: 7px;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       transition: 0.25s ease;
     }
 
-    .order-btn:hover {
-      background: #1faa52;
-      transform: translateY(-2px);
+    .product-button:hover {
+      background: #1fb858;
+      transform: translateY(-1px);
     }
 
     /* =========================
-       FEATURE SECTION
+       INFO SECTION
     ========================= */
 
-    .features {
+    .info-section {
       background: #0b1220;
-      color: white;
-      padding: 70px 22px;
+      color: #fff;
+      padding: 70px 0;
     }
 
-    .features-container {
-      max-width: 1100px;
+    .info-container {
+      width: min(1100px, 92%);
       margin: auto;
     }
 
-    .features-heading {
+    .info-heading {
       text-align: center;
-      max-width: 700px;
-      margin: auto auto 40px;
+      max-width: 750px;
+      margin: 0 auto 42px;
     }
 
-    .features-heading span {
+    .info-heading .section-label {
       color: #19a7ce;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
     }
 
-    .features-heading h2 {
-      font-size: 34px;
-      margin: 10px 0 12px;
+    .info-heading h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 13px;
     }
 
-    .features-heading p {
-      color: #b9c5cf;
+    .info-heading p {
+      color: #c4cedc;
       font-size: 15px;
     }
 
-    .features-grid {
+    .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
-    .feature-card {
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.035);
-      border-radius: 12px;
-      padding: 26px;
+    .info-card {
+      padding: 27px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.04);
     }
 
-    .feature-number {
-      color: #19a7ce;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .feature-card h3 {
-      font-size: 20px;
+    .info-card h3 {
+      font-size: 18px;
       margin-bottom: 9px;
     }
 
-    .feature-card p {
-      color: #b9c5cf;
+    .info-card p {
+      color: #b9c4d3;
       font-size: 14px;
     }
 
     /* =========================
-       HELP SECTION
+       CTA
     ========================= */
 
-    .help-section {
-      max-width: 1050px;
-      margin: auto;
-      padding: 75px 22px;
-    }
-
-    .help-box {
-      background: linear-gradient(135deg, #eef9fc, #ffffff);
-      border: 1px solid #d9edf2;
-      border-radius: 16px;
-      padding: 45px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 35px;
+    .cta {
+      width: min(1100px, 92%);
+      margin: 70px auto;
+      background: linear-gradient(135deg, #19a7ce, #117e9d);
+      border-radius: 18px;
+      padding: 50px;
+      color: #fff;
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    .help-box h2 {
-      color: #0b1220;
-      font-size: 32px;
-      margin-bottom: 12px;
+    .cta-content {
+      max-width: 650px;
     }
 
-    .help-box p {
-      color: #5f6b76;
+    .cta h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.88);
       font-size: 15px;
-      margin-bottom: 20px;
     }
 
-    .help-list {
-      display: grid;
-      gap: 9px;
+    .cta .btn {
+      background: #fff;
+      color: #0b1220;
+      flex-shrink: 0;
     }
 
-    .help-list div {
-      font-size: 14px;
-      font-weight: 600;
-      color: #26323e;
-    }
-
-    .help-list div::before {
-      content: "✓";
-      color: #19a7ce;
-      font-weight: 900;
-      margin-right: 9px;
-    }
-
-    .help-action {
-      text-align: center;
-    }
-
-    .help-action p {
-      font-size: 13px;
-      margin-bottom: 13px;
+    .cta .btn:hover {
+      background: #f0f4f7;
     }
 
     /* =========================
        DELIVERY STRIP
     ========================= */
 
-    .delivery {
-      background: #19a7ce;
-      color: white;
-      padding: 20px 22px;
+    .delivery-strip {
+      background: #eef8fb;
+      border-top: 1px solid #d9f0f6;
+      border-bottom: 1px solid #d9f0f6;
+      padding: 25px 0;
       text-align: center;
     }
 
-    .delivery strong {
-      font-size: 15px;
+    .delivery-strip strong {
+      color: #0b1220;
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
     }
 
-    .delivery span {
+    .delivery-strip span {
+      color: #667085;
       font-size: 14px;
-      margin-left: 8px;
-      opacity: 0.95;
     }
 
     /* =========================
@@ -510,55 +515,68 @@
     ========================= */
 
     footer {
-      background: #080e19;
-      color: white;
-      padding: 55px 22px 25px;
+      background: #0b1220;
+      color: #fff;
+      padding: 55px 0 25px;
     }
 
     .footer-container {
-      max-width: 1150px;
+      width: min(1180px, 92%);
       margin: auto;
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
+      grid-template-columns: 1.3fr 1fr 1fr;
       gap: 45px;
-      padding-bottom: 35px;
     }
 
-    .footer-logo img {
-      width: 190px;
-      margin-bottom: 15px;
+    .footer-brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      margin-bottom: 13px;
     }
 
-    .footer-about p {
-      color: #aeb8c2;
-      font-size: 14px;
-      max-width: 360px;
-    }
-
-    .footer-column h3 {
-      font-size: 15px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    .footer-column a,
-    .footer-column p {
-      display: block;
-      color: #aeb8c2;
-      font-size: 14px;
+    .footer-brand h3 {
+      font-size: 20px;
       margin-bottom: 9px;
     }
 
-    .footer-column a:hover {
+    .footer-brand p {
+      color: #aeb9c9;
+      font-size: 14px;
+      max-width: 400px;
+    }
+
+    footer h4 {
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: #19a7ce;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-links a,
+    .footer-contact p {
+      color: #b8c2d0;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .footer-links a:hover {
       color: #19a7ce;
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.09);
+      width: min(1180px, 92%);
+      margin: 40px auto 0;
       padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       text-align: center;
-      color: #7f8a95;
-      font-size: 12px;
+      color: #8490a2;
+      font-size: 13px;
     }
 
     /* =========================
@@ -569,37 +587,45 @@
       position: fixed;
       right: 20px;
       bottom: 20px;
-      width: 54px;
-      height: 54px;
+      width: 55px;
+      height: 55px;
       background: #25d366;
-      color: white;
+      color: #fff;
       border-radius: 50%;
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 25px;
-      font-weight: bold;
-      box-shadow: 0 7px 20px rgba(0,0,0,0.2);
-      z-index: 999;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+      z-index: 1200;
       transition: 0.25s ease;
     }
 
     .whatsapp-float:hover {
       transform: scale(1.08);
-      background: #1faa52;
+      background: #1fb858;
     }
 
     /* =========================
        RESPONSIVE
     ========================= */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
+      .nav-container {
+        min-height: 70px;
+      }
+
       nav {
-        gap: 13px;
+        gap: 14px;
       }
 
       nav a {
-        font-size: 12px;
+        font-size: 13px;
+      }
+
+      .category-bar {
+        top: 70px;
       }
 
       .hero-container {
@@ -615,60 +641,60 @@
         justify-content: center;
       }
 
-      .hero-image {
-        order: -1;
-      }
-
-      .hero-image img {
-        max-width: 330px;
-        height: 230px;
+      .hero-image-box {
+        max-width: 390px;
+        margin: auto;
       }
 
       .products-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .help-box {
+      .info-grid {
         grid-template-columns: 1fr;
-      }
-
-      .help-action {
-        text-align: left;
       }
 
       .footer-container {
         grid-template-columns: 1fr 1fr;
       }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 680px) {
       .nav-container {
-        padding: 12px 16px;
+        min-height: 65px;
+      }
+
+      .logo-text {
+        font-size: 15px;
       }
 
       .logo img {
-        width: 145px;
+        width: 42px;
+        height: 42px;
       }
 
       nav {
-        gap: 9px;
+        gap: 10px;
       }
 
-      nav a:not(.nav-btn) {
+      nav a:not(.nav-shop) {
         display: none;
       }
 
-      .nav-btn {
-        padding: 8px 12px;
-        font-size: 12px !important;
+      .nav-shop {
+        padding: 9px 13px;
+      }
+
+      .category-bar {
+        top: 65px;
       }
 
       .hero {
-        padding: 55px 18px;
+        padding: 55px 0;
       }
 
       .hero h1 {
@@ -679,48 +705,37 @@
         font-size: 15px;
       }
 
-      .intro {
-        padding: 50px 18px 25px;
+      .hero-image-box {
+        min-height: 240px;
+        padding: 15px;
       }
 
-      .intro h2 {
-        font-size: 29px;
+      .hero-image img {
+        max-height: 205px;
+      }
+
+      .intro {
+        padding-top: 50px;
       }
 
       .products-section {
-        padding: 20px 18px 55px;
+        margin-bottom: 55px;
       }
 
       .products-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .product-image {
-        height: 240px;
+        height: 230px;
       }
 
-      .features {
-        padding: 55px 18px;
-      }
-
-      .features-heading h2 {
-        font-size: 29px;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .help-section {
-        padding: 55px 18px;
-      }
-
-      .help-box {
-        padding: 30px 24px;
-      }
-
-      .help-box h2 {
-        font-size: 28px;
+      .cta {
+        padding: 35px 25px;
+        margin: 50px auto;
+        flex-direction: column;
+        text-align: center;
       }
 
       .footer-container {
@@ -728,9 +743,15 @@
         gap: 30px;
       }
 
-      .delivery span {
-        display: block;
-        margin: 4px 0 0;
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
       }
     }
   </style>
@@ -746,7 +767,8 @@
     <div class="nav-container">
 
       <a href="index.html" class="logo">
-        <img src="Logo.png" alt="Street Gadgets Care">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+        <span class="logo-text">Street Gadgets Care</span>
       </a>
 
       <nav>
@@ -754,9 +776,9 @@
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="tech-repairs.html">Tech Repairs</a>
-        <a href="shop.html" class="active">Shop</a>
+        <a href="shop.html" class="nav-shop active">Shop</a>
         <a href="creative-studio.html">Creative Studio</a>
-        <a href="contact.html" class="nav-btn">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
     </div>
@@ -773,13 +795,14 @@
 
       <div class="hero-content">
 
-        <span class="eyebrow">COMPUTER & LAPTOP ACCESSORIES</span>
+        <span class="eyebrow">Computer Accessories</span>
 
-        <h1>Small upgrades. Big difference.</h1>
+        <h1>Small accessories. Big convenience.</h1>
 
         <p>
-          Get the everyday accessories that make your laptop and computer
-          easier to use, better connected and properly maintained.
+          Upgrade your workspace, connect your devices and keep your
+          computer equipment clean with practical accessories from
+          Street Gadgets Care.
         </p>
 
         <div class="hero-buttons">
@@ -788,7 +811,7 @@
           </a>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20would%20like%20to%20ask%20about%20computer%20accessories."
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20your%20computer%20accessories."
             class="btn btn-outline"
             target="_blank"
           >
@@ -798,11 +821,16 @@
 
       </div>
 
+
       <div class="hero-image">
-        <img
-          src="wireless-mouse.jpg"
-          alt="Wireless Mouse"
-        >
+
+        <div class="hero-image-box">
+          <img
+            src="wireless-mouse.jpg"
+            alt="Wireless Mouse"
+          >
+        </div>
+
       </div>
 
     </div>
@@ -811,30 +839,34 @@
 
 
   <!-- =========================
-       CATEGORY NAVIGATION
+       CATEGORY NAV
   ========================= -->
 
   <div class="category-bar">
 
     <div class="category-container">
 
-      <a href="laptop-accessories.html">
-        Laptop Accessories
+      <a href="devices.html" class="category-link">
+        Devices
       </a>
 
-      <a href="laptop-bags.html">
+      <a href="laptop-bags.html" class="category-link">
         Laptop Bags
       </a>
 
-      <a href="laptop-storage.html">
+      <a href="laptop-storage.html" class="category-link">
         Storage & Memory
       </a>
 
-      <a href="computer-accessories.html" class="active">
+      <a href="computer-accessories.html" class="category-link active">
         Computer Accessories
       </a>
 
-      <a href="shop.html">
+      <a href="laptop-accessories.html" class="category-link">
+        Laptop Accessories
+      </a>
+
+      <a href="shop.html" class="category-link">
         All Shop
       </a>
 
@@ -849,14 +881,16 @@
 
   <section class="intro">
 
-    <span class="eyebrow">EVERYDAY ESSENTIALS</span>
+    <div class="section-label">
+      Practical Accessories
+    </div>
 
-    <h2>Accessories that keep you connected</h2>
+    <h2>Everything you need around your computer.</h2>
 
     <p>
-      From wireless mice and keyboards to connectivity dongles and
-      cleaning products, find practical accessories for your laptop,
-      desktop and everyday computer setup.
+      From wireless mice and keyboards to connectivity tools and
+      cleaning products, find useful accessories for your laptop,
+      desktop and everyday workspace.
     </p>
 
   </section>
@@ -884,15 +918,11 @@
 
         <div class="product-content">
 
-          <span class="product-tag">
-            COMPUTER ACCESSORY
-          </span>
-
           <h3>Wireless Mouse</h3>
 
-          <p>
-            Enjoy comfortable navigation without the restriction of
-            a wired mouse. Suitable for laptops, desktops and everyday work.
+          <p class="product-description">
+            A convenient wireless mouse for everyday laptop and
+            computer use. Ideal for work, study and general browsing.
           </p>
 
           <div class="price">
@@ -900,8 +930,8 @@
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20a%20Wireless%20Mouse.%20Please%20share%20the%20available%20options."
-            class="order-btn"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Wireless%20Mouse%20from%20KSh%20800."
+            class="product-button"
             target="_blank"
           >
             Order on WhatsApp
@@ -925,13 +955,9 @@
 
         <div class="product-content">
 
-          <span class="product-tag">
-            CONNECTIVITY
-          </span>
-
           <h3>Bluetooth Dongle</h3>
 
-          <p>
+          <p class="product-description">
             Add Bluetooth connectivity to compatible computers and
             connect supported wireless devices with ease.
           </p>
@@ -941,8 +967,8 @@
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20a%20Bluetooth%20Dongle.%20Please%20confirm%20availability."
-            class="order-btn"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Bluetooth%20Dongle%20from%20KSh%20650."
+            class="product-button"
             target="_blank"
           >
             Order on WhatsApp
@@ -966,15 +992,11 @@
 
         <div class="product-content">
 
-          <span class="product-tag">
-            CONNECTIVITY
-          </span>
-
           <h3>Wi-Fi Dongle</h3>
 
-          <p>
-            A practical way to add or improve wireless network
-            connectivity on compatible computers.
+          <p class="product-description">
+            A practical option for adding wireless network connectivity
+            to compatible desktop computers and other devices.
           </p>
 
           <div class="price">
@@ -982,8 +1004,8 @@
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20a%20Wi-Fi%20Dongle.%20Please%20confirm%20availability."
-            class="order-btn"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Wi-Fi%20Dongle%20from%20KSh%20650."
+            class="product-button"
             target="_blank"
           >
             Order on WhatsApp
@@ -1001,21 +1023,18 @@
         <div class="product-image">
           <img
             src="keyboard.jpg"
-            alt="Laptop Keyboard"
+            alt="Computer Keyboard"
           >
         </div>
 
         <div class="product-content">
 
-          <span class="product-tag">
-            LAPTOP ACCESSORY
-          </span>
-
           <h3>Keyboard</h3>
 
-          <p>
-            Replacement keyboards for compatible laptop models.
-            Availability and pricing depend on the specific model and type.
+          <p class="product-description">
+            Replacement and external keyboards for compatible laptops
+            and computer setups. Availability and price may vary by
+            model and type.
           </p>
 
           <div class="price">
@@ -1023,11 +1042,11 @@
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20need%20a%20laptop%20keyboard.%20I%20would%20like%20to%20share%20my%20laptop%20model%20for%20availability%20and%20pricing."
-            class="order-btn"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%20Keyboard%20from%20KSh%203%2C500.%20Please%20help%20me%20confirm%20compatibility."
+            class="product-button"
             target="_blank"
           >
-            Check Your Keyboard
+            Check Availability
           </a>
 
         </div>
@@ -1048,15 +1067,11 @@
 
         <div class="product-content">
 
-          <span class="product-tag">
-            CLEANING
-          </span>
-
           <h3>Foam Cleaner</h3>
 
-          <p>
-            Keep compatible computer surfaces and equipment looking
-            cleaner with a practical foam cleaning solution.
+          <p class="product-description">
+            Cleaning foam for maintaining computer equipment,
+            accessories and suitable surfaces.
           </p>
 
           <div class="price">
@@ -1064,8 +1079,8 @@
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20Foam%20Cleaner.%20Please%20confirm%20availability."
-            class="order-btn"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Foam%20Cleaner%20from%20KSh%20400."
+            class="product-button"
             target="_blank"
           >
             Order on WhatsApp
@@ -1089,15 +1104,11 @@
 
         <div class="product-content">
 
-          <span class="product-tag">
-            CLEANING
-          </span>
-
           <h3>Cleaning Kit</h3>
 
-          <p>
-            A practical cleaning option for maintaining your computer
-            and keeping your setup neat and well cared for.
+          <p class="product-description">
+            A practical cleaning kit for keeping your laptop,
+            computer accessories and workspace looking neat.
           </p>
 
           <div class="price">
@@ -1105,8 +1116,8 @@
           </div>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Computer%20Cleaning%20Kit.%20Please%20confirm%20availability."
-            class="order-btn"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Computer%20Cleaning%20Kit%20for%20KSh%201%2C500."
+            class="product-button"
             target="_blank"
           >
             Order on WhatsApp
@@ -1122,68 +1133,54 @@
 
 
   <!-- =========================
-       FEATURES
+       INFO SECTION
   ========================= -->
 
-  <section class="features">
+  <section class="info-section">
 
-    <div class="features-container">
+    <div class="info-container">
 
-      <div class="features-heading">
+      <div class="info-heading">
 
-        <span>WHY THESE ACCESSORIES MATTER</span>
+        <div class="section-label">
+          Choose What You Need
+        </div>
 
-        <h2>Complete your setup</h2>
+        <h2>Accessories for work, study and everyday use.</h2>
 
         <p>
-          The right accessory can make your computer more convenient,
-          connected and easier to maintain.
+          Not sure which accessory is right for your computer?
+          Tell us what device you have and what you want to achieve,
+          and we can help you check compatibility.
         </p>
 
       </div>
 
 
-      <div class="features-grid">
+      <div class="info-grid">
 
-        <div class="feature-card">
-
-          <div class="feature-number">01</div>
-
-          <h3>Work More Comfortably</h3>
-
-          <p>
-            Add practical accessories such as wireless mice and
-            keyboards to improve your everyday computer experience.
-          </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <div class="feature-number">02</div>
-
+        <div class="info-card">
           <h3>Stay Connected</h3>
-
           <p>
-            Wi-Fi and Bluetooth dongles provide convenient connectivity
-            options for compatible computers and devices.
+            Wi-Fi and Bluetooth dongles can help compatible computers
+            connect to wireless networks and devices.
           </p>
-
         </div>
 
+        <div class="info-card">
+          <h3>Work Comfortably</h3>
+          <p>
+            A good mouse and keyboard can make everyday computer work
+            more comfortable and convenient.
+          </p>
+        </div>
 
-        <div class="feature-card">
-
-          <div class="feature-number">03</div>
-
+        <div class="info-card">
           <h3>Keep It Clean</h3>
-
           <p>
-            Regular cleaning helps you keep your computer setup looking
-            neat and properly maintained.
+            Cleaning products help you maintain your computer,
+            accessories and workspace.
           </p>
-
         </div>
 
       </div>
@@ -1194,68 +1191,45 @@
 
 
   <!-- =========================
-       HELP / COMPATIBILITY
+       CTA
   ========================= -->
 
-  <section class="help-section">
+  <section class="cta">
 
-    <div class="help-box">
+    <div class="cta-content">
 
-      <div>
+      <h2>Not sure what accessory you need?</h2>
 
-        <span class="eyebrow">NOT SURE WHAT YOU NEED?</span>
-
-        <h2>Let's find the right accessory.</h2>
-
-        <p>
-          If you're looking for a keyboard, dongle, mouse or another
-          computer accessory, send us your laptop or computer model
-          and we'll help you identify the right option.
-        </p>
-
-        <div class="help-list">
-
-          <div>Share your laptop or computer model</div>
-          <div>Tell us what accessory you need</div>
-          <div>We'll confirm available options</div>
-          <div>Arrange collection or delivery</div>
-
-        </div>
-
-      </div>
-
-
-      <div class="help-action">
-
-        <p>
-          Need help choosing an accessory?
-        </p>
-
-        <a
-          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20need%20help%20choosing%20a%20computer%20accessory."
-          class="btn btn-primary"
-          target="_blank"
-        >
-          Talk to Us on WhatsApp
-        </a>
-
-      </div>
+      <p>
+        Send us your laptop or computer model and tell us what you
+        are looking for. We will help you check the available options.
+      </p>
 
     </div>
+
+    <a
+      href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20computer%20accessory."
+      class="btn"
+      target="_blank"
+    >
+      Ask Us on WhatsApp
+    </a>
 
   </section>
 
 
   <!-- =========================
-       DELIVERY
+       DELIVERY STRIP
   ========================= -->
 
-  <section class="delivery">
+  <section class="delivery-strip">
 
-    <strong>Order From Street Gadgets Care</strong>
+    <strong>
+      Order From Street Gadgets Care
+    </strong>
 
     <span>
-      Delivery available across Kenya.
+      Delivery available across Kenya • Nairobi-based
     </span>
 
   </section>
@@ -1269,55 +1243,61 @@
 
     <div class="footer-container">
 
-      <div class="footer-about">
+      <div class="footer-brand">
 
-        <a href="index.html" class="footer-logo">
-          <img src="Logo.png" alt="Street Gadgets Care">
-        </a>
+        <img
+          src="Logo.png"
+          alt="Street Gadgets Care Logo"
+        >
+
+        <h3>Street Gadgets Care</h3>
 
         <p>
-          Technology, repairs, devices, accessories and creative
-          support — helping you keep moving forward.
+          Technology repairs, devices, accessories, creative design
+          and practical digital support — all under one brand.
         </p>
 
       </div>
 
 
-      <div class="footer-column">
+      <div>
 
-        <h3>Quick Links</h3>
+        <h4>Quick Links</h4>
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="tech-repairs.html">Tech Repairs</a>
-        <a href="shop.html">Shop</a>
-        <a href="creative-studio.html">Creative Studio</a>
-        <a href="contact.html">Contact</a>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="tech-repairs.html">Tech Repairs</a>
+          <a href="shop.html">Shop</a>
+          <a href="creative-studio.html">Creative Studio</a>
+          <a href="contact.html">Contact</a>
+        </div>
 
       </div>
 
 
-      <div class="footer-column">
+      <div>
 
-        <h3>Contact</h3>
+        <h4>Contact Us</h4>
 
-        <p>Nairobi, Kenya</p>
+        <div class="footer-contact">
 
-        <a href="tel:0114259961">
-          0114259961
-        </a>
+          <p>📍 Nairobi, Kenya</p>
+          <p>📞 0114259961</p>
+          <p>✉️ streetgadgetscare@gmail.com</p>
 
-        <a href="mailto:streetgadgetscare@gmail.com">
-          streetgadgetscare@gmail.com
-        </a>
+          <p style="margin-top: 10px;">
+            <a
+              href="https://wa.me/254114259961"
+              target="_blank"
+              style="color:#25d366; font-weight:700;"
+            >
+              WhatsApp Us
+            </a>
+          </p>
 
-        <a
-          href="https://wa.me/254114259961"
-          target="_blank"
-        >
-          WhatsApp Us
-        </a>
+        </div>
 
       </div>
 
@@ -1325,9 +1305,7 @@
 
 
     <div class="footer-bottom">
-
-      © 2026 Street Gadgets Care. All Rights Reserved.
-
+      © 2026 Street Gadgets Care. All rights reserved.
     </div>
 
   </footer>
@@ -1338,7 +1316,7 @@
   ========================= -->
 
   <a
-    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20would%20like%20to%20make%20an%20inquiry."
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
     class="whatsapp-float"
     target="_blank"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
