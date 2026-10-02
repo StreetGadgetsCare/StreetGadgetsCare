@@ -6,18 +6,17 @@
 
     <title>Services | Street Gadgets Care</title>
 
-    <meta name="description"
-        content="Explore Street Gadgets Care services including phone and laptop repairs, device upgrades, graphic design, CVs, company profiles, business plans and digital solutions.">
+    <meta
+        name="description"
+        content="Explore Street Gadgets Care services including phone and laptop repairs, technology support, creative design and practical business and digital support in Nairobi and across Kenya."
+    >
 
-    <link rel="icon" href="Logo.png">
+    <meta
+        name="keywords"
+        content="Street Gadgets Care services, phone repair Nairobi, laptop repair Nairobi, graphic design Nairobi, business support Kenya, technology services Kenya"
+    >
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <meta name="author" content="Street Gadgets Care">
 
     <style>
 
@@ -32,668 +31,1054 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: #111827;
-            background: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0b1220;
+            background: #ffffff;
             line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
         a {
             text-decoration: none;
+            color: inherit;
         }
 
         :root {
             --navy: #0b1220;
-            --navy-light: #111c30;
+            --navy-light: #121d31;
             --cyan: #19a7ce;
             --cyan-dark: #118bad;
-            --white: #fff;
-            --light: #f5f8fa;
-            --grey: #667085;
-            --border: #e5eaee;
             --green: #25d366;
+            --white: #ffffff;
+            --light: #f5f8fa;
+            --text: #263445;
+            --muted: #6b7785;
+            --border: #e3e9ee;
         }
 
         /* =========================
            HEADER
-        ========================== */
+        ========================= */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(11,18,32,.96);
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(255,255,255,.08);
+
+            background: rgba(11, 18, 32, 0.97);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
-        .navbar {
-            max-width: 1250px;
-            height: 78px;
+        .nav-container {
+            width: min(1180px, 92%);
+            min-height: 76px;
+
             margin: auto;
-            padding: 0 25px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            gap: 30px;
         }
 
-        .logo img {
-            width: 150px;
+        .logo {
+            width: 155px;
         }
 
-        .nav-links {
-            list-style: none;
+        nav {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 25px;
         }
 
-        .nav-links a {
-            color: rgba(255,255,255,.82);
+        nav a {
+            color: #ffffff;
+
             font-size: 14px;
             font-weight: 600;
-            transition: .3s;
+
+            white-space: nowrap;
+
+            transition: 0.25s ease;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+        nav a:hover {
             color: var(--cyan);
+        }
+
+        .nav-active {
+            color: var(--cyan) !important;
         }
 
         .nav-contact {
             background: var(--cyan);
-            color: white !important;
+
             padding: 11px 18px;
+
             border-radius: 7px;
+
+            color: #ffffff !important;
         }
 
         .nav-contact:hover {
             background: var(--cyan-dark);
         }
 
-        .menu-toggle {
-            display: none;
-            color: white;
-            font-size: 25px;
-            cursor: pointer;
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+
+            margin-bottom: 13px;
+
+            color: var(--cyan-dark);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 3.8vw, 49px);
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 18px;
+        }
+
+        .section-text {
+            max-width: 720px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 13px 21px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            transition: 0.25s ease;
+        }
+
+        .button-primary {
+            background: var(--cyan);
+
+            color: #ffffff;
+        }
+
+        .button-primary:hover {
+            background: var(--cyan-dark);
+
+            transform: translateY(-2px);
+        }
+
+        .button-dark {
+            background: var(--navy);
+
+            color: #ffffff;
+        }
+
+        .button-dark:hover {
+            background: #17243a;
+
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid #cbd5dc;
+
+            background: #ffffff;
+
+            color: var(--navy);
+        }
+
+        .button-outline:hover {
+            border-color: var(--cyan);
+
+            color: var(--cyan-dark);
         }
 
         /* =========================
            HERO
-        ========================== */
+        ========================= */
 
-        .hero {
+        .services-hero {
             background:
                 radial-gradient(
-                    circle at 85% 20%,
-                    rgba(25,167,206,.17),
+                    circle at 82% 20%,
+                    rgba(25,167,206,0.14),
                     transparent 30%
                 ),
-                var(--navy);
+                linear-gradient(
+                    135deg,
+                    #07101e 0%,
+                    #0b1220 65%,
+                    #111e33 100%
+                );
 
-            color: white;
-            padding: 110px 25px 100px;
-            position: relative;
-            overflow: hidden;
+            color: #ffffff;
+
+            padding: 92px 0 86px;
         }
 
-        .hero::after {
-            content: "SERVICES";
-            position: absolute;
-            right: -40px;
-            bottom: -55px;
+        .services-hero-grid {
+            display: grid;
 
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 150px;
-            font-weight: 700;
+            grid-template-columns: 1.08fr 0.92fr;
 
-            color: rgba(255,255,255,.025);
+            gap: 65px;
+
+            align-items: center;
         }
 
-        .hero-container {
-            max-width: 1250px;
-            margin: auto;
-            position: relative;
-            z-index: 2;
-        }
+        .hero-label {
+            display: flex;
+            align-items: center;
 
-        .eyebrow {
-            color: var(--cyan);
+            gap: 10px;
+
+            color: #7dddf5;
+
             font-size: 11px;
             font-weight: 800;
+
             letter-spacing: 1.8px;
+
             text-transform: uppercase;
-            margin-bottom: 15px;
+
+            margin-bottom: 20px;
         }
 
-        .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(48px, 6vw, 75px);
-            line-height: .98;
-            letter-spacing: -3px;
-            max-width: 850px;
-            margin-bottom: 25px;
+        .hero-label::before {
+            content: "";
+
+            width: 30px;
+            height: 2px;
+
+            background: var(--cyan);
         }
 
-        .hero h1 span {
+        .services-hero h1 {
+            max-width: 670px;
+
+            font-size: clamp(44px, 5.2vw, 66px);
+
+            line-height: 1.02;
+
+            letter-spacing: -2.6px;
+
+            margin-bottom: 22px;
+        }
+
+        .services-hero h1 span {
             color: var(--cyan);
         }
 
-        .hero p {
-            max-width: 670px;
-            color: rgba(255,255,255,.65);
-            font-size: 17px;
+        .hero-description {
+            max-width: 630px;
+
+            color: #c4ced9;
+
+            font-size: 16px;
+
             line-height: 1.8;
+
+            margin-bottom: 27px;
         }
 
         .hero-location {
-            margin-top: 25px;
-            color: rgba(255,255,255,.48);
-            font-size: 13px;
+            color: #8d9aaa;
+
+            font-size: 12px;
         }
 
-        .hero-location i {
-            color: var(--cyan);
-            margin-right: 7px;
+        .services-hero-visual {
+            display: flex;
+
+            justify-content: center;
+        }
+
+        .service-visual-box {
+            position: relative;
+
+            width: 100%;
+            max-width: 470px;
+
+            min-height: 380px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(25,167,206,0.13),
+                    transparent 60%
+                ),
+                #101a2b;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            box-shadow:
+                0 25px 55px rgba(0,0,0,0.25);
+        }
+
+        .service-visual-box img {
+            width: 88%;
+
+            height: 350px;
+
+            object-fit: contain;
+
+            padding: 18px;
+        }
+
+        .visual-badge {
+            position: absolute;
+
+            background: rgba(255,255,255,0.96);
+
+            color: var(--navy);
+
+            padding: 10px 13px;
+
+            border-radius: 7px;
+
+            font-size: 9px;
+            font-weight: 900;
+
+            letter-spacing: 0.7px;
+
+            box-shadow:
+                0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .visual-badge.one {
+            left: -13px;
+            top: 40px;
+        }
+
+        .visual-badge.two {
+            right: -13px;
+            bottom: 40px;
         }
 
         /* =========================
            INTRO
-        ========================== */
+        ========================= */
 
-        .intro {
-            padding: 90px 25px 60px;
-        }
-
-        .container {
-            max-width: 1250px;
-            margin: auto;
+        .intro-section {
+            background: #ffffff;
         }
 
         .intro-grid {
             display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 80px;
-            align-items: start;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
         }
 
-        .section-label {
-            color: var(--cyan);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.7px;
-            text-transform: uppercase;
+        .intro-heading h2 {
+            max-width: 520px;
+
+            font-size: clamp(34px, 4vw, 50px);
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
         }
 
-        .intro h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            color: var(--navy);
-            font-size: clamp(35px, 4vw, 53px);
-            line-height: 1.05;
-            letter-spacing: -1.7px;
-            margin-top: 13px;
-        }
+        .intro-copy p {
+            max-width: 670px;
 
-        .intro-copy {
-            color: var(--grey);
-            line-height: 1.85;
+            color: var(--muted);
+
             font-size: 15px;
-        }
 
-        .intro-copy strong {
-            color: var(--navy);
+            line-height: 1.85;
+
+            margin-bottom: 16px;
         }
 
         /* =========================
-           SERVICE SECTIONS
-        ========================== */
+           TECHNOLOGY
+        ========================= */
 
-        .service-section {
-            padding: 85px 25px;
-        }
-
-        .service-section.light {
+        .technology-section {
             background: var(--light);
         }
 
-        .service-section.dark {
-            background: var(--navy);
-            color: white;
-        }
-
-        .service-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            gap: 50px;
-            margin-bottom: 45px;
-        }
-
-        .service-number {
-            color: var(--cyan);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .service-header h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(37px, 4vw, 57px);
-            line-height: 1;
-            letter-spacing: -1.8px;
-        }
-
-        .service-header p {
-            max-width: 470px;
-            color: var(--grey);
-            font-size: 14px;
-        }
-
-        .dark .service-header p {
-            color: rgba(255,255,255,.58);
-        }
-
-        /* =========================
-           SERVICE CARDS
-        ========================== */
-
-        .service-grid {
+        .service-main-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .service-copy h2 {
+            max-width: 570px;
+
+            font-size: clamp(34px, 4vw, 49px);
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 17px;
+        }
+
+        .service-copy > p {
+            max-width: 620px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+        .service-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 9px;
+
+            margin-bottom: 25px;
+        }
+
+        .service-list div {
+            padding: 12px 14px;
+
+            border-radius: 7px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .service-list div::before {
+            content: "✓";
+
+            color: var(--cyan);
+
+            font-weight: 900;
+
+            margin-right: 7px;
         }
 
         .service-card {
-            padding: 28px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 13px;
-            min-height: 245px;
-            transition: .3s;
-        }
+            padding: 38px;
 
-        .dark .service-card {
-            background: rgba(255,255,255,.045);
-            border-color: rgba(255,255,255,.08);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(25,167,206,.45);
-            box-shadow: 0 18px 45px rgba(11,18,32,.08);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-
-            background: rgba(25,167,206,.10);
-            color: var(--cyan);
+            min-height: 370px;
 
             display: flex;
-            align-items: center;
+
+            flex-direction: column;
+
             justify-content: center;
 
-            font-size: 19px;
-            margin-bottom: 24px;
+            border-radius: 15px;
+
+            background: var(--navy);
+
+            color: #ffffff;
+
+            overflow: hidden;
+
+            position: relative;
         }
 
-        .service-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            color: var(--navy);
-            font-size: 20px;
-            margin-bottom: 9px;
+        .service-card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+            height: 280px;
+
+            right: -130px;
+            bottom: -140px;
+
+            border-radius: 50%;
+
+            background: rgba(25,167,206,0.12);
         }
 
-        .dark .service-card h3 {
-            color: white;
-        }
+        .service-card-label {
+            position: relative;
+            z-index: 1;
 
-        .service-card p {
-            color: var(--grey);
-            font-size: 13px;
-            line-height: 1.7;
-        }
+            color: #7dddf5;
 
-        .dark .service-card p {
-            color: rgba(255,255,255,.52);
-        }
+            font-size: 10px;
+            font-weight: 900;
 
-        /* =========================
-           SERVICE LIST
-        ========================== */
-
-        .included {
-            margin-top: 45px;
-            padding-top: 35px;
-            border-top: 1px solid var(--border);
-        }
-
-        .dark .included {
-            border-color: rgba(255,255,255,.08);
-        }
-
-        .included-title {
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--cyan);
+
+            text-transform: uppercase;
+
             margin-bottom: 18px;
         }
 
-        .included-list {
+        .service-card h3 {
+            position: relative;
+            z-index: 1;
+
+            max-width: 450px;
+
+            font-size: 31px;
+
+            line-height: 1.12;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            position: relative;
+            z-index: 1;
+
+            max-width: 470px;
+
+            color: #aebdca;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card-link {
+            position: relative;
+            z-index: 1;
+
+            color: #7dddf5;
+
+            font-size: 12px;
+
+            font-weight: 900;
+        }
+
+        /* =========================
+           SUPPORT TAGS
+        ========================= */
+
+        .support-section {
+            background: #ffffff;
+        }
+
+        .support-heading {
+            max-width: 700px;
+
+            margin-bottom: 38px;
+        }
+
+        .support-grid {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 9px;
         }
 
-        .included-list span {
-            padding: 9px 13px;
-            background: white;
+        .support-tag {
+            padding: 11px 15px;
+
             border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #586474;
+
+            border-radius: 7px;
+
+            color: var(--text);
+
+            background: #ffffff;
+
+            font-size: 12px;
+
+            font-weight: 700;
         }
 
-        .dark .included-list span {
-            background: rgba(255,255,255,.04);
-            border-color: rgba(255,255,255,.08);
-            color: rgba(255,255,255,.62);
-        }
+        .support-tag::before {
+            content: "•";
 
-        /* =========================
-           TECHNOLOGY FEATURE
-        ========================== */
-
-        .tech-highlight {
-            margin-top: 55px;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .tech-box {
-            padding: 28px;
-            border-radius: 13px;
-            background: var(--navy);
-            color: white;
-        }
-
-        .tech-box:nth-child(2) {
-            background: #eaf7fb;
-            color: var(--navy);
-        }
-
-        .tech-box h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 22px;
-            margin-bottom: 9px;
-        }
-
-        .tech-box p {
-            font-size: 13px;
-            color: rgba(255,255,255,.55);
-        }
-
-        .tech-box:nth-child(2) p {
-            color: var(--grey);
-        }
-
-        /* =========================
-           CREATIVE INTRO
-        ========================== */
-
-        .creative-statement {
-            margin-bottom: 45px;
-            padding: 30px;
-            border-left: 3px solid var(--cyan);
-            background: rgba(25,167,206,.05);
-        }
-
-        .creative-statement h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 26px;
-            margin-bottom: 8px;
-        }
-
-        .creative-statement p {
-            color: var(--grey);
-            font-size: 14px;
-            max-width: 800px;
-        }
-
-        /* =========================
-           BUSINESS SECTION
-        ========================== */
-
-        .business-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-        }
-
-        .business-card {
-            padding: 30px;
-            border: 1px solid var(--border);
-            border-radius: 13px;
-            background: white;
-            display: flex;
-            gap: 20px;
-            transition: .3s;
-        }
-
-        .business-card:hover {
-            border-color: rgba(25,167,206,.4);
-            transform: translateY(-4px);
-        }
-
-        .business-icon {
-            flex-shrink: 0;
-
-            width: 48px;
-            height: 48px;
-            border-radius: 11px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: rgba(25,167,206,.10);
             color: var(--cyan);
+
+            margin-right: 7px;
         }
 
-        .business-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 19px;
-            margin-bottom: 7px;
-        }
+        .shipping-note {
+            margin-top: 32px;
 
-        .business-card p {
-            color: var(--grey);
+            padding: 21px 23px;
+
+            border-left: 3px solid var(--cyan);
+
+            background: var(--light);
+
+            color: var(--muted);
+
             font-size: 13px;
+
             line-height: 1.7;
         }
 
+        .shipping-note strong {
+            color: var(--navy);
+        }
+
         /* =========================
-           PROCESS
-        ========================== */
+           CREATIVE
+        ========================= */
 
-        .process {
-            padding: 90px 25px;
-            background: #f5f8fa;
+        .creative-section {
+            background: var(--navy);
+
+            color: #ffffff;
         }
 
-        .process-header {
-            max-width: 650px;
-            margin-bottom: 45px;
+        .creative-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
         }
 
-        .process-header h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(35px, 4vw, 52px);
-            line-height: 1.05;
+        .creative-copy h2 {
+            max-width: 570px;
+
+            font-size: clamp(34px, 4vw, 49px);
+
+            line-height: 1.08;
+
             letter-spacing: -1.5px;
-            margin-top: 10px;
+
+            margin-bottom: 17px;
+        }
+
+        .creative-copy > p {
+            max-width: 620px;
+
+            color: #aebdca;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 26px;
+        }
+
+        .creative-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .creative-list div {
+            padding: 12px 14px;
+
+            border-radius: 7px;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            color: #d6dfe7;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .creative-list div::before {
+            content: "✓";
+
+            color: var(--cyan);
+
+            margin-right: 7px;
+        }
+
+        .creative-visual {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+        }
+
+        .creative-visual img {
+            width: 100%;
+
+            height: 205px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .creative-visual img:first-child {
+            grid-column: span 2;
+
+            height: 230px;
+        }
+
+        /* =========================
+           BUSINESS
+        ========================= */
+
+        .business-section {
+            background: #ffffff;
+        }
+
+        .business-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .business-copy h2 {
+            max-width: 570px;
+
+            font-size: clamp(34px, 4vw, 49px);
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 17px;
+        }
+
+        .business-copy > p {
+            max-width: 620px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+        .business-list {
+            display: grid;
+
+            gap: 10px;
+        }
+
+        .business-item {
+            padding: 15px 17px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            background: var(--light);
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+        .business-item::before {
+            content: "→";
+
+            color: var(--cyan);
+
+            margin-right: 9px;
+        }
+
+        .business-panel {
+            padding: 40px;
+
+            border-radius: 15px;
+
+            background: var(--light);
+
+            border: 1px solid var(--border);
+        }
+
+        .business-panel-label {
+            color: var(--cyan-dark);
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 17px;
+        }
+
+        .business-panel h3 {
+            font-size: 30px;
+
+            line-height: 1.15;
+
+            margin-bottom: 13px;
+        }
+
+        .business-panel p {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           HOW WE WORK
+        ========================= */
+
+        .process-section {
+            background: var(--light);
+        }
+
+        .process-heading {
+            max-width: 700px;
+
+            margin-bottom: 42px;
         }
 
         .process-grid {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: var(--border);
-            border: 1px solid var(--border);
+
+            gap: 14px;
         }
 
         .process-card {
-            background: white;
-            padding: 30px 25px;
-            min-height: 210px;
+            padding: 27px 22px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
         }
 
         .process-number {
             color: var(--cyan);
-            font-size: 12px;
-            font-weight: 800;
-            margin-bottom: 25px;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            margin-bottom: 17px;
         }
 
         .process-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 19px;
+            font-size: 17px;
+
             margin-bottom: 8px;
         }
 
         .process-card p {
-            color: var(--grey);
+            color: var(--muted);
+
             font-size: 12px;
+
             line-height: 1.7;
         }
 
         /* =========================
-           CTA
-        ========================== */
+           FINAL CTA
+        ========================= */
 
-        .cta {
-            padding: 100px 25px;
-            background: var(--navy);
-            color: white;
+        .final-cta {
+            background:
+                radial-gradient(
+                    circle at 20% 50%,
+                    rgba(25,167,206,0.16),
+                    transparent 30%
+                ),
+                var(--navy);
+
+            color: #ffffff;
+
+            padding: 90px 0;
+
             text-align: center;
         }
 
-        .cta-content {
-            max-width: 750px;
-            margin: auto;
+        .final-cta h2 {
+            font-size: clamp(36px, 4.7vw, 56px);
+
+            line-height: 1.02;
+
+            letter-spacing: -1.7px;
+
+            margin-bottom: 17px;
         }
 
-        .cta h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(38px, 5vw, 60px);
-            line-height: 1;
-            letter-spacing: -2px;
-            margin-bottom: 18px;
+        .final-cta p {
+            max-width: 640px;
+
+            margin: 0 auto 27px;
+
+            color: #b7c4d1;
+
+            font-size: 15px;
         }
 
-        .cta p {
-            color: rgba(255,255,255,.58);
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .buttons {
+        .final-buttons {
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
-            gap: 12px;
+
+            gap: 10px;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
+        .final-cta .button-outline {
+            color: #ffffff;
 
-            padding: 14px 22px;
-            border-radius: 7px;
+            background: transparent;
 
-            font-size: 14px;
-            font-weight: 700;
-
-            transition: .3s;
+            border-color: rgba(255,255,255,0.25);
         }
 
-        .btn-primary {
-            background: var(--cyan);
-            color: white;
-        }
+        .final-cta .button-outline:hover {
+            color: #7dddf5;
 
-        .btn-primary:hover {
-            background: var(--cyan-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            color: white;
-            border: 1px solid rgba(255,255,255,.2);
-        }
-
-        .btn-outline:hover {
             border-color: var(--cyan);
-            color: var(--cyan);
         }
 
         /* =========================
            FOOTER
-        ========================== */
+        ========================= */
 
         footer {
             background: #070d17;
-            color: white;
-            padding: 65px 25px 25px;
+
+            color: #ffffff;
+
+            padding: 60px 0 24px;
         }
 
-        .footer-container {
-            max-width: 1250px;
-            margin: auto;
-        }
-
-        .footer-top {
+        .footer-grid {
             display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 45px;
+
+            grid-template-columns: 1.5fr 1fr 1fr;
+
+            gap: 55px;
+
+            padding-bottom: 42px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
         }
 
         .footer-brand img {
-            width: 160px;
-            margin-bottom: 18px;
+            width: 155px;
+
+            margin-bottom: 17px;
         }
 
         .footer-brand p {
-            max-width: 320px;
-            color: rgba(255,255,255,.45);
-            font-size: 13px;
-            line-height: 1.8;
+            max-width: 350px;
+
+            color: #8f9baa;
+
+            font-size: 12px;
+
+            line-height: 1.7;
         }
 
         .footer-column h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 14px;
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
             margin-bottom: 17px;
         }
 
         .footer-column a {
             display: block;
-            color: rgba(255,255,255,.48);
+
+            color: #8f9baa;
+
             font-size: 12px;
-            margin-bottom: 10px;
-            transition: .3s;
+
+            margin-bottom: 8px;
+
+            transition: 0.2s ease;
         }
 
         .footer-column a:hover {
@@ -701,75 +1086,72 @@
         }
 
         .footer-bottom {
-            padding-top: 22px;
-            border-top: 1px solid rgba(255,255,255,.08);
-
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
 
-            color: rgba(255,255,255,.32);
+            padding-top: 20px;
+
+            color: #697584;
+
             font-size: 11px;
         }
 
         /* =========================
            WHATSAPP
-        ========================== */
+        ========================= */
 
-        .whatsapp {
+        .whatsapp-float {
             position: fixed;
-            right: 22px;
-            bottom: 22px;
 
-            width: 55px;
-            height: 55px;
+            right: 21px;
+            bottom: 21px;
 
-            background: var(--green);
-            color: white;
+            width: 56px;
+            height: 56px;
 
             border-radius: 50%;
 
+            background: var(--green);
+
+            color: #ffffff;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            font-size: 25px;
-
-            box-shadow: 0 10px 30px rgba(37,211,102,.3);
+            font-size: 22px;
 
             z-index: 999;
 
-            transition: .3s;
+            box-shadow:
+                0 12px 28px rgba(37,211,102,0.35);
+
+            transition: 0.25s ease;
         }
 
-        .whatsapp:hover {
+        .whatsapp-float:hover {
             transform: translateY(-4px) scale(1.04);
         }
 
         /* =========================
            RESPONSIVE
-        ========================== */
+        ========================= */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1050px) {
 
-            .nav-links {
-                gap: 17px;
+            nav {
+                gap: 14px;
             }
 
-            .intro-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
+            nav a {
+                font-size: 12px;
             }
 
-            .service-header {
-                display: block;
-            }
-
-            .service-header p {
-                margin-top: 18px;
-            }
-
-            .service-grid {
+            .identity-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -777,223 +1159,267 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .footer-top {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
-        @media (max-width: 760px) {
+        @media (max-width: 800px) {
 
-            .navbar {
-                height: 70px;
-            }
-
-            .logo img {
-                width: 135px;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-
-                background: var(--navy);
-
+            nav {
                 display: none;
-                flex-direction: column;
-                align-items: stretch;
-
-                padding: 18px 25px 25px;
-                gap: 0;
-
-                border-top: 1px solid rgba(255,255,255,.08);
             }
 
-            .nav-links.show {
-                display: flex;
+            .services-hero {
+                padding: 70px 0;
             }
 
-            .nav-links li {
-                border-bottom: 1px solid rgba(255,255,255,.06);
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 14px 0;
-            }
-
-            .nav-contact {
-                text-align: center;
-                margin-top: 8px;
-            }
-
-            .hero {
-                padding: 75px 20px 70px;
-            }
-
-            .hero h1 {
-                font-size: 48px;
-                letter-spacing: -2px;
-            }
-
-            .intro,
-            .service-section,
-            .process,
-            .cta {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tech-highlight {
-                grid-template-columns: 1fr;
-            }
-
+            .services-hero-grid,
+            .intro-grid,
+            .service-main-grid,
+            .creative-grid,
             .business-grid {
                 grid-template-columns: 1fr;
             }
 
+            .service-visual-box {
+                max-width: 520px;
+
+                min-height: 340px;
+
+                margin: 5px auto 0;
+            }
+
+            .service-visual-box img {
+                height: 315px;
+            }
+
+            .visual-badge.one {
+                left: 8px;
+            }
+
+            .visual-badge.two {
+                right: 8px;
+            }
+
+            .creative-visual {
+                max-width: 650px;
+
+                margin: auto;
+            }
+
+            .identity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 38px;
+            }
+
+        }
+
+        @media (max-width: 560px) {
+
+            .section {
+                padding: 68px 0;
+            }
+
+            .services-hero h1 {
+                font-size: 45px;
+
+                letter-spacing: -2px;
+            }
+
+            .service-visual-box {
+                min-height: 300px;
+            }
+
+            .service-visual-box img {
+                width: 92%;
+
+                height: 280px;
+
+                padding: 13px;
+            }
+
+            .visual-badge {
+                padding: 8px 10px;
+
+                font-size: 8px;
+            }
+
+            .service-list,
+            .creative-list {
+                grid-template-columns: 1fr;
+            }
+
+            .creative-visual {
+                grid-template-columns: 1fr;
+            }
+
+            .creative-visual img,
+            .creative-visual img:first-child {
+                grid-column: auto;
+
+                height: 230px;
+            }
+
+            .business-panel {
+                padding: 30px;
+            }
+
             .process-grid {
                 grid-template-columns: 1fr;
             }
 
-            .footer-top {
+            .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
             }
 
             .footer-bottom {
                 flex-direction: column;
             }
-        }
 
-        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
 
-            .hero h1 {
-                font-size: 42px;
+                right: 14px;
+                bottom: 14px;
             }
 
-            .cta h2 {
-                font-size: 40px;
-            }
-
-            .buttons {
-                flex-direction: column;
-            }
-
-            .buttons .btn {
-                width: 100%;
-            }
         }
 
     </style>
 </head>
+
 
 <body>
 
 
 <!-- =========================
      HEADER
-========================== -->
+========================= -->
 
 <header>
 
-    <nav class="navbar">
+    <div class="nav-container">
 
-        <a href="index.html" class="logo">
-            <img src="Logo.png" alt="Street Gadgets Care">
+        <a href="index.html">
+
+            <img
+                src="Logo.png"
+                alt="Street Gadgets Care"
+                class="logo"
+            >
+
         </a>
 
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
 
-        <ul class="nav-links" id="navLinks">
+        <nav>
 
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
+            <a href="index.html">
+                Home
+            </a>
 
-            <li>
-                <a href="about.html">
-                    About
-                </a>
-            </li>
+            <a href="about.html">
+                About
+            </a>
 
-            <li>
-                <a href="services.html" class="active">
-                    Services
-                </a>
-            </li>
+            <a
+                href="services.html"
+                class="nav-active"
+            >
+                Services
+            </a>
 
-            <li>
-                <a href="tech-repairs.html">
-                    Tech Repairs
-                </a>
-            </li>
+            <a href="tech-repairs.html">
+                Tech Repairs
+            </a>
 
-            <li>
-                <a href="shop.html">
-                    Shop
-                </a>
-            </li>
+            <a href="shop.html">
+                Shop
+            </a>
 
-            <li>
-                <a href="creative-studio.html">
-                    Creative Studio
-                </a>
-            </li>
+            <a href="creative-studio.html">
+                Creative Studio
+            </a>
 
-            <li>
-                <a href="contact.html" class="nav-contact">
-                    Contact
-                </a>
-            </li>
+            <a
+                href="contact.html"
+                class="nav-contact"
+            >
+                Let's Talk
+            </a>
 
-        </ul>
+        </nav>
 
-    </nav>
+    </div>
 
 </header>
 
 
 <!-- =========================
      HERO
-========================== -->
+========================= -->
 
-<section class="hero">
+<section class="services-hero">
 
-    <div class="hero-container">
+    <div class="container services-hero-grid">
 
-        <div class="eyebrow">
-            What We Do
+
+        <div>
+
+            <div class="hero-label">
+                Street Gadgets Care Services
+            </div>
+
+
+            <h1>
+                Services built around
+                <span>real needs.</span>
+            </h1>
+
+
+            <p class="hero-description">
+
+                From fixing the device in your hand to helping
+                your business look professional, Street Gadgets Care
+                brings technology, creativity and practical digital
+                support together under one brand.
+
+            </p>
+
+
+            <div class="hero-location">
+                Based in Nairobi • Serving Customers Across Kenya
+            </div>
+
         </div>
 
-        <h1>
-            Services built around
-            <span>real needs.</span>
-        </h1>
 
-        <p>
-            From fixing the device in your hand to helping your business
-            look professional, Street Gadgets Care brings technology,
-            creativity and practical digital support together under one brand.
-        </p>
+        <div class="services-hero-visual">
 
-        <div class="hero-location">
-            <i class="fas fa-location-dot"></i>
-            Based in Nairobi • Serving Customers Across Kenya
+            <div class="service-visual-box">
+
+                <img
+                    src="laptop-servicing.jpg"
+                    alt="Technology service at Street Gadgets Care"
+                >
+
+
+                <div class="visual-badge one">
+                    TECHNOLOGY FIRST
+                </div>
+
+
+                <div class="visual-badge two">
+                    REPAIR • CREATE • SUPPORT
+                </div>
+
+            </div>
+
         </div>
+
 
     </div>
 
@@ -1002,48 +1428,49 @@
 
 <!-- =========================
      INTRO
-========================== -->
+========================= -->
 
-<section class="intro">
+<section class="section intro-section">
 
-    <div class="container">
+    <div class="container intro-grid">
 
-        <div class="intro-grid">
 
-            <div>
+        <div class="intro-heading">
 
-                <div class="section-label">
-                    One Business. Multiple Solutions.
-                </div>
-
-                <h2>
-                    More than a
-                    repair shop.
-                </h2>
-
+            <div class="section-label">
+                What We Offer
             </div>
 
-            <div class="intro-copy">
 
-                <p>
-                    Street Gadgets Care started from a simple idea:
-                    <strong>technology should make life easier, not become
-                    another problem to solve.</strong>
-                </p>
-
-                <br>
-
-                <p>
-                    That is why our services are built around three
-                    connected areas — technology, creative work and
-                    business support. You can come to us with a device
-                    problem, a design project or a business need and
-                    get practical help from one place.
-                </p>
-
-            </div>
+            <h2>
+                One brand. Several practical ways to help.
+            </h2>
 
         </div>
+
+
+        <div class="intro-copy">
+
+            <p>
+
+                Street Gadgets Care is built around the things
+                people and businesses regularly need: working
+                technology, useful devices, professional design
+                and practical digital support.
+
+            </p>
+
+
+            <p>
+
+                Our services are organised into three main areas,
+                making it easier to find exactly what you are
+                looking for.
+
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -1051,428 +1478,184 @@
 
 
 <!-- =========================
-     01 TECHNOLOGY
-========================== -->
+     TECHNOLOGY
+========================= -->
 
-<section class="service-section light">
+<section class="section technology-section">
 
-    <div class="container">
+    <div class="container service-main-grid">
 
-        <div class="service-header">
 
-            <div>
+        <div class="service-copy">
 
-                <div class="service-number">
-                    01 / TECHNOLOGY
-                </div>
-
-                <h2>
-                    Repair.<br>
-                    Upgrade.<br>
-                    Protect.
-                </h2>
-
+            <div class="section-label">
+                01 / Technology
             </div>
 
+
+            <h2>
+                Repair. Upgrade. Protect.
+            </h2>
+
+
             <p>
-                Our core technical services are focused on keeping your
-                phones and laptops working properly — from diagnosis and
-                repairs to upgrades, maintenance and software support.
+
+                When your phone or laptop has a problem, our
+                technology services help you get it working again,
+                improve its performance and keep it useful.
+
             </p>
 
-        </div>
 
+            <div class="service-list">
 
-        <div class="service-grid">
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-mobile-screen-button"></i>
-                </div>
-
-                <h3>
+                <div>
                     Phone Repairs
-                </h3>
-
-                <p>
-                    Professional support for common phone problems,
-                    including screens, batteries, charging, software
-                    and other hardware issues.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-laptop"></i>
                 </div>
 
-                <h3>
+                <div>
                     Laptop Repairs
-                </h3>
-
-                <p>
-                    Troubleshooting and repair for laptop hardware,
-                    software, operating system and performance problems.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-display"></i>
                 </div>
 
-                <h3>
+                <div>
                     Screen Replacement
-                </h3>
-
-                <p>
-                    Screen replacement for supported phones and laptops,
-                    depending on the model and availability of the required
-                    part.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-battery-half"></i>
                 </div>
 
-                <h3>
+                <div>
                     Battery Replacement
-                </h3>
-
-                <p>
-                    Battery replacement for supported devices when
-                    reduced battery life, swelling or battery failure
-                    becomes a problem.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-hard-drive"></i>
                 </div>
 
-                <h3>
+                <div>
                     Device Upgrades
-                </h3>
-
-                <p>
-                    Improve compatible laptops with SSD and RAM upgrades
-                    to increase storage capacity and overall performance.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-gears"></i>
                 </div>
 
-                <h3>
+                <div>
                     Software & Maintenance
-                </h3>
-
-                <p>
-                    Windows installation, software support, servicing,
-                    security setup and performance optimization.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="included">
-
-            <div class="included-title">
-                Technical Support Includes
-            </div>
-
-            <div class="included-list">
-
-                <span>
-                    Charging Problems
-                </span>
-
-                <span>
-                    Liquid Damage
-                </span>
-
-                <span>
-                    Software Problems
-                </span>
-
-                <span>
-                    Network Issues
-                </span>
-
-                <span>
-                    Windows Installation
-                </span>
-
-                <span>
-                    Laptop Servicing
-                </span>
-
-                <span>
-                    Antivirus & Security
-                </span>
-
-                <span>
-                    Performance Issues
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="tech-highlight">
-
-            <div class="tech-box">
-
-                <h3>
-                    Need Technical Help?
-                </h3>
-
-                <p>
-                    Tell us what is wrong with your phone or laptop and
-                    we can guide you on the next step.
-                </p>
-
-                <br>
-
-                <a
-                    href="tech-repairs.html"
-                    class="btn btn-primary">
-
-                    Explore Tech Repairs
-                    <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
-
-            <div class="tech-box">
-
-                <h3>
-                    Not in Nairobi?
-                </h3>
-
-                <p>
-                    No worries. Send your device to us and we'll repair
-                    it and ship it back safely.
-                </p>
-
-                <br>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20not%20in%20Nairobi%20and%20I%20would%20like%20to%20ask%20about%20sending%20my%20device%20for%20repair."
-                    target="_blank"
-                    class="btn"
-                    style="border:1px solid rgba(11,18,32,.15);color:#0b1220;">
-
-                    Ask About Sending Your Device
-                    <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     02 CREATIVE
-========================== -->
-
-<section class="service-section">
-
-    <div class="container">
-
-        <div class="service-header">
-
-            <div>
-
-                <div class="service-number">
-                    02 / CREATIVE STUDIO
                 </div>
 
-                <h2>
-                    Design.<br>
-                    Brand.<br>
-                    Stand Out.
-                </h2>
-
             </div>
 
-            <p>
-                Professional visual communication for businesses,
-                individuals and events — designed to help your ideas
-                look clear, credible and memorable.
-            </p>
+
+            <a
+                href="tech-repairs.html"
+                class="button button-dark"
+            >
+                Explore Tech Repairs →
+            </a>
 
         </div>
 
 
-        <div class="creative-statement">
+        <div class="service-card">
+
+            <div class="service-card-label">
+                Technology Support
+            </div>
+
 
             <h3>
-                Your business deserves more than a logo.
+                Your device has a problem. Let's find the solution.
             </h3>
 
+
             <p>
-                We create the visual materials around your brand —
-                from identity and promotional designs to professional
-                documents and event stationery.
+
+                We work with phones, laptops and everyday technology
+                problems — from hardware issues to software and
+                performance concerns.
+
+            </p>
+
+
+            <a
+                href="tech-repairs.html"
+                class="service-card-link"
+            >
+                See Detailed Repair Services →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMMON PROBLEMS
+========================= -->
+
+<section class="section support-section">
+
+    <div class="container">
+
+
+        <div class="support-heading">
+
+            <div class="section-label">
+                Technology Support
+            </div>
+
+
+            <h2 class="section-title">
+                Problems we can help you with.
+            </h2>
+
+
+            <p class="section-text">
+
+                Not sure which repair service you need?
+                Start by telling us what your device is doing.
+
             </p>
 
         </div>
 
 
-        <div class="service-grid">
+        <div class="support-grid">
 
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-pen-nib"></i>
-                </div>
-
-                <h3>
-                    Logo & Brand Identity
-                </h3>
-
-                <p>
-                    Professional logos, brand identity designs and
-                    supporting visual materials for businesses and brands.
-                </p>
-
+            <div class="support-tag">
+                Charging Problems
             </div>
 
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-bullhorn"></i>
-                </div>
-
-                <h3>
-                    Flyers & Posters
-                </h3>
-
-                <p>
-                    Promotional designs created to showcase products,
-                    services, offers, events and announcements.
-                </p>
-
+            <div class="support-tag">
+                Liquid Damage
             </div>
 
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-
-                <h3>
-                    Menus & Business Materials
-                </h3>
-
-                <p>
-                    Professional menus, business cards, stationery
-                    and other branded business materials.
-                </p>
-
+            <div class="support-tag">
+                Software Problems
             </div>
 
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-envelope-open-text"></i>
-                </div>
-
-                <h3>
-                    Invitations & Events
-                </h3>
-
-                <p>
-                    Wedding invitations, event cards and personalized
-                    designs for special occasions.
-                </p>
-
+            <div class="support-tag">
+                Network Issues
             </div>
 
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-file-user"></i>
-                </div>
-
-                <h3>
-                    CV & Resume Design
-                </h3>
-
-                <p>
-                    Clean, professional CV and resume layouts designed
-                    to present your experience clearly.
-                </p>
-
+            <div class="support-tag">
+                Windows Installation
             </div>
 
+            <div class="support-tag">
+                Laptop Servicing
+            </div>
 
-            <div class="service-card">
+            <div class="support-tag">
+                Antivirus & Security
+            </div>
 
-                <div class="service-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-
-                <h3>
-                    Company Profiles
-                </h3>
-
-                <p>
-                    Professional company profile documents that help
-                    businesses introduce their services and identity.
-                </p>
-
+            <div class="support-tag">
+                Performance Issues
             </div>
 
         </div>
 
 
-        <div style="margin-top:40px;">
+        <div class="shipping-note">
 
-            <a
-                href="creative-studio.html"
-                class="btn btn-primary">
+            <strong>Not in Nairobi?</strong>
 
-                Explore Creative Studio
-                <i class="fas fa-arrow-right"></i>
-
-            </a>
+            No worries. Send your device to us and we'll repair it
+            and ship it back safely.
 
         </div>
 
@@ -1482,186 +1665,190 @@
 
 
 <!-- =========================
-     03 BUSINESS & DIGITAL
-========================== -->
+     CREATIVE STUDIO
+========================= -->
 
-<section class="service-section light">
+<section class="section creative-section">
 
-    <div class="container">
+    <div class="container creative-grid">
 
-        <div class="service-header">
 
-            <div>
+        <div class="creative-copy">
 
-                <div class="service-number">
-                    03 / BUSINESS & DIGITAL
-                </div>
-
-                <h2>
-                    Build.<br>
-                    Present.<br>
-                    Grow.
-                </h2>
-
+            <div class="section-label">
+                02 / Creative Studio
             </div>
+
+
+            <h2>
+                Design. Brand. Stand Out.
+            </h2>
+
 
             <p>
-                Practical digital and business support for people
-                starting, running or growing a business.
+
+                Your business deserves to look as professional
+                as the work you do. Our Creative Studio helps
+                turn your ideas into polished visual materials.
+
             </p>
 
-        </div>
 
+            <div class="creative-list">
 
-        <div class="business-grid">
-
-            <div class="business-card">
-
-                <div class="business-icon">
-                    <i class="fas fa-file-lines"></i>
+                <div>
+                    Logo & Brand Identity
                 </div>
 
                 <div>
+                    Flyers & Posters
+                </div>
 
-                    <h3>
-                        Business Plans
-                    </h3>
+                <div>
+                    Menus & Business Materials
+                </div>
 
-                    <p>
-                        Structured business plan documents that help
-                        organise your business idea, goals, operations
-                        and financial direction.
-                    </p>
+                <div>
+                    Invitations & Events
+                </div>
 
+                <div>
+                    CV & Resume Design
+                </div>
+
+                <div>
+                    Company Profiles
                 </div>
 
             </div>
 
-
-            <div class="business-card">
-
-                <div class="business-icon">
-                    <i class="fas fa-id-card"></i>
-                </div>
-
-                <div>
-
-                    <h3>
-                        CV & Resume Support
-                    </h3>
-
-                    <p>
-                        Professional CV and resume preparation with
-                        clear structure and presentation.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="business-card">
-
-                <div class="business-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-
-                <div>
-
-                    <h3>
-                        Company Profile Design
-                    </h3>
-
-                    <p>
-                        Professional company profiles that communicate
-                        what your business does and what it offers.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="business-card">
-
-                <div class="business-icon">
-                    <i class="fas fa-file-signature"></i>
-                </div>
-
-                <div>
-
-                    <h3>
-                        Business Documents
-                    </h3>
-
-                    <p>
-                        Professionally structured digital documents
-                        prepared around your specific business needs.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="business-card">
-
-                <div class="business-icon">
-                    <i class="fas fa-registered"></i>
-                </div>
-
-                <div>
-
-                    <h3>
-                        Business Name Registration
-                    </h3>
-
-                    <p>
-                        Assistance with the process of registering a
-                        business name and getting started officially.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="business-card">
-
-                <div class="business-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-
-                <div>
-
-                    <h3>
-                        Digital Support
-                    </h3>
-
-                    <p>
-                        Practical digital assistance for everyday
-                        business and technology-related needs.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div style="margin-top:40px;">
 
             <a
                 href="creative-studio.html"
-                class="btn btn-primary">
-
-                Explore Business & Digital Services
-                <i class="fas fa-arrow-right"></i>
-
+                class="button button-primary"
+            >
+                Visit Creative Studio →
             </a>
 
         </div>
+
+
+        <div class="creative-visual">
+
+            <img
+                src="logo-design.jpg"
+                alt="Logo design by Street Gadgets Care"
+            >
+
+            <img
+                src="restaurant-menu-design.jpg"
+                alt="Restaurant menu design by Street Gadgets Care"
+            >
+
+            <img
+                src="business-card-design.jpg"
+                alt="Business card design by Street Gadgets Care"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BUSINESS & DIGITAL
+========================= -->
+
+<section class="section business-section">
+
+    <div class="container business-grid">
+
+
+        <div class="business-copy">
+
+            <div class="section-label">
+                03 / Business & Digital
+            </div>
+
+
+            <h2>
+                Build. Present. Grow.
+            </h2>
+
+
+            <p>
+
+                We also help individuals and businesses with
+                practical documents, registrations and digital
+                support that make everyday business tasks easier.
+
+            </p>
+
+
+            <div class="business-list">
+
+                <div class="business-item">
+                    Business Plans
+                </div>
+
+                <div class="business-item">
+                    CV & Resume Support
+                </div>
+
+                <div class="business-item">
+                    Company Profile Design
+                </div>
+
+                <div class="business-item">
+                    Professional Business Documents
+                </div>
+
+                <div class="business-item">
+                    Business Name Registration Support
+                </div>
+
+                <div class="business-item">
+                    Digital & General Business Support
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="business-panel">
+
+            <div class="business-panel-label">
+                Practical Business Support
+            </div>
+
+
+            <h3>
+                Need help turning an idea into something professional?
+            </h3>
+
+
+            <p>
+
+                Whether you are starting a business, preparing
+                documents or improving how your business presents
+                itself, we can help you organise the next step.
+
+            </p>
+
+
+            <a
+                href="creative-studio.html"
+                class="button button-dark"
+            >
+                Explore Business Support →
+            </a>
+
+        </div>
+
 
     </div>
 
@@ -1670,26 +1857,37 @@
 
 <!-- =========================
      HOW WE WORK
-========================== -->
+========================= -->
 
-<section class="process">
+<section class="section process-section">
 
     <div class="container">
 
-        <div class="process-header">
+
+        <div class="process-heading">
 
             <div class="section-label">
                 How We Work
             </div>
 
-            <h2>
-                Simple, clear and focused on the result.
+
+            <h2 class="section-title">
+                Simple from start to finish.
             </h2>
+
+
+            <p class="section-text">
+
+                Whatever service you need, we keep the process
+                straightforward.
+
+            </p>
 
         </div>
 
 
         <div class="process-grid">
+
 
             <div class="process-card">
 
@@ -1697,13 +1895,17 @@
                     01
                 </div>
 
+
                 <h3>
                     Tell Us What You Need
                 </h3>
 
+
                 <p>
-                    Contact us through WhatsApp, phone, email or our
-                    contact form and explain what you need.
+
+                    Explain the problem, request or project
+                    you have in mind.
+
                 </p>
 
             </div>
@@ -1715,13 +1917,17 @@
                     02
                 </div>
 
+
                 <h3>
                     We Understand
                 </h3>
 
+
                 <p>
-                    We look at the problem or project and determine
+
+                    We look at what you need and identify
                     the practical next step.
+
                 </p>
 
             </div>
@@ -1733,13 +1939,17 @@
                     03
                 </div>
 
+
                 <h3>
                     We Get to Work
                 </h3>
 
+
                 <p>
-                    Whether it is a repair, design or digital project,
-                    we work toward the agreed solution.
+
+                    We carry out the repair, design, support
+                    or service required.
+
                 </p>
 
             </div>
@@ -1751,16 +1961,21 @@
                     04
                 </div>
 
+
                 <h3>
                     You Get the Result
                 </h3>
 
+
                 <p>
-                    Your repaired device, completed design or requested
-                    digital service is delivered back to you.
+
+                    We complete the work and help you move
+                    forward with the result.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1770,45 +1985,58 @@
 
 
 <!-- =========================
-     CTA
-========================== -->
+     FINAL CTA
+========================= -->
 
-<section class="cta">
+<section class="final-cta">
 
-    <div class="cta-content">
+    <div class="container">
 
-        <div class="eyebrow">
-            Street Gadgets Care
-        </div>
 
         <h2>
-            Let's work on what you need.
+            What do you need help with?
         </h2>
 
+
         <p>
-            Have a device problem, design project or business need?
-            Talk to us and let's figure out the right solution.
+
+            Whether it is a repair, a device, a design project
+            or business support, tell us what you need.
+
         </p>
 
-        <div class="buttons">
+
+        <div class="final-buttons">
 
             <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20your%20services."
-                class="btn btn-primary"
-                target="_blank">
-
-                <i class="fab fa-whatsapp"></i>
-                Chat on WhatsApp
-
+                href="tech-repairs.html"
+                class="button button-primary"
+            >
+                Tech Repairs
             </a>
+
+
+            <a
+                href="shop.html"
+                class="button button-outline"
+            >
+                Visit Shop
+            </a>
+
+
+            <a
+                href="creative-studio.html"
+                class="button button-outline"
+            >
+                Creative Studio
+            </a>
+
 
             <a
                 href="contact.html"
-                class="btn btn-outline">
-
-                Contact Us
-                <i class="fas fa-arrow-right"></i>
-
+                class="button button-outline"
+            >
+                Let's Talk
             </a>
 
         </div>
@@ -1820,23 +2048,30 @@
 
 <!-- =========================
      FOOTER
-========================== -->
+========================= -->
 
 <footer>
 
-    <div class="footer-container">
+    <div class="container">
 
-        <div class="footer-top">
+
+        <div class="footer-grid">
+
 
             <div class="footer-brand">
 
                 <img
                     src="Logo.png"
-                    alt="Street Gadgets Care">
+                    alt="Street Gadgets Care"
+                >
+
 
                 <p>
-                    Technology, creative design and digital solutions
-                    built around the needs of people and businesses.
+
+                    Technology, repairs, devices, accessories,
+                    creative design and practical business support
+                    — all under one roof.
+
                 </p>
 
             </div>
@@ -1848,77 +2083,83 @@
                     Explore
                 </h4>
 
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
 
-            </div>
+                <a href="index.html">
+                    Home
+                </a>
 
+                <a href="about.html">
+                    About
+                </a>
 
-            <div class="footer-column">
-
-                <h4>
-                    Technology
-                </h4>
+                <a href="services.html">
+                    Services
+                </a>
 
                 <a href="tech-repairs.html">
                     Tech Repairs
-                </a>
-
-                <a href="tech-repairs.html">
-                    Phone Repairs
-                </a>
-
-                <a href="tech-repairs.html">
-                    Laptop Repairs
                 </a>
 
                 <a href="shop.html">
                     Shop
                 </a>
 
+                <a href="creative-studio.html">
+                    Creative Studio
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </div>
 
 
             <div class="footer-column">
 
                 <h4>
-                    Creative
+                    Contact
                 </h4>
 
-                <a href="creative-studio.html">
-                    Graphic Design
+
+                <a href="tel:0114259961">
+                    0114 259 961
                 </a>
 
-                <a href="creative-studio.html">
-                    CV & Resume
+
+                <a href="https://wa.me/254114259961">
+                    WhatsApp Us
                 </a>
 
-                <a href="creative-studio.html">
-                    Company Profiles
+
+                <a href="mailto:streetgadgetscare@gmail.com">
+                    streetgadgetscare@gmail.com
                 </a>
 
-                <a href="creative-studio.html">
-                    Business Documents
+
+                <a href="#">
+                    Nairobi, Kenya
                 </a>
 
             </div>
+
 
         </div>
 
 
         <div class="footer-bottom">
 
-            <span>
+            <div>
                 © 2026 Street Gadgets Care. All Rights Reserved.
-            </span>
+            </div>
 
-            <span>
-                Nairobi, Kenya • Serving Customers Across Kenya
-            </span>
+
+            <div>
+                Based in Nairobi • Serving Customers Across Kenya
+            </div>
 
         </div>
+
 
     </div>
 
@@ -1927,40 +2168,17 @@
 
 <!-- =========================
      WHATSAPP
-========================== -->
+========================= -->
 
 <a
-    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20some%20help."
-    class="whatsapp"
-    target="_blank"
-    aria-label="Chat with Street Gadgets Care on WhatsApp">
-
-    <i class="fab fa-whatsapp"></i>
-
+    href="https://wa.me/254114259961"
+    class="whatsapp-float"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+    title="Chat with us on WhatsApp"
+>
+    ☎
 </a>
 
-
-<script>
-
-    function toggleMenu() {
-
-        const nav = document.getElementById("navLinks");
-
-        nav.classList.toggle("show");
-
-    }
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            document.getElementById("navLinks").classList.remove("show");
-
-        });
-
-    });
-
-</script>
 
 </body>
 </html>
