@@ -6,15 +6,50 @@
 
     <title>Contact | Street Gadgets Care</title>
 
-    <meta name="description" content="Contact Street Gadgets Care for phone and laptop repairs, gadgets, accessories, graphic design and technology services. Based in Nairobi, serving customers across Kenya.">
+    <meta
+        name="description"
+        content="Contact Street Gadgets Care for phone and laptop repairs, gadgets, accessories, graphic design, CVs, business documents and digital solutions. Based in Nairobi, serving customers across Kenya."
+    >
+
+    <meta
+        name="keywords"
+        content="Street Gadgets Care contact, phone repair Nairobi, laptop repair Nairobi, graphic design Nairobi, gadgets Kenya"
+    >
 
     <link rel="icon" type="image/png" href="Logo.png">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <style>
+
+        :root {
+            --navy: #0b1220;
+            --navy-light: #111c2f;
+            --cyan: #19a7ce;
+            --cyan-dark: #1088aa;
+            --green: #25d366;
+            --white: #ffffff;
+            --light: #f6f8fa;
+            --soft: #eef2f5;
+            --text: #182231;
+            --muted: #697586;
+            --border: #e2e7ec;
+            --shadow: 0 18px 50px rgba(11, 18, 32, 0.08);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -26,10 +61,10 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
         }
 
         a {
@@ -37,310 +72,409 @@
             color: inherit;
         }
 
-        /* ================= HEADER ================= */
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
 
         header {
-            background: #0b1220;
+            background: rgba(11, 18, 32, 0.97);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(14px);
         }
 
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 12px 20px;
+        .nav {
+            min-height: 76px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 30px;
         }
 
         .logo img {
-            height: 58px;
-            width: auto;
+            width: 175px;
             display: block;
         }
 
-        nav {
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 26px;
+            gap: 24px;
         }
 
-        nav a {
-            color: #fff;
-            font-size: 15px;
+        .nav-links a {
+            color: #dce4ee;
+            font-size: 14px;
             font-weight: 600;
             transition: 0.3s ease;
+            position: relative;
         }
 
-        nav a:hover,
-        nav a.active {
-            color: #19a7ce;
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--cyan);
         }
 
-        /* ================= HERO ================= */
+        .nav-links a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -8px;
+            height: 2px;
+            background: var(--cyan);
+            border-radius: 5px;
+        }
+
+        .nav-cta {
+            background: var(--cyan);
+            color: white !important;
+            padding: 10px 16px;
+            border-radius: 10px;
+        }
+
+        .nav-cta:hover {
+            background: var(--cyan-dark);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
 
         .hero {
             background:
-                linear-gradient(135deg, #0b1220 0%, #101d32 55%, #0b1220 100%);
+                radial-gradient(circle at 85% 20%, rgba(25,167,206,0.18), transparent 32%),
+                linear-gradient(135deg, #09101d, #101d31);
             color: white;
-            padding: 85px 20px 75px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 95px 0 90px;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            background: rgba(25, 167, 206, 0.08);
-            top: -190px;
-            right: -100px;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            gap: 70px;
+            align-items: center;
         }
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: rgba(25, 167, 206, 0.05);
-            bottom: -150px;
-            left: -100px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            color: #19a7ce;
-            border: 1px solid rgba(25, 167, 206, 0.5);
-            background: rgba(25, 167, 206, 0.08);
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 700;
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: #7ddcf4;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
             margin-bottom: 22px;
-            letter-spacing: 0.5px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 2px;
+            background: var(--cyan);
         }
 
         .hero h1 {
-            font-size: 48px;
-            line-height: 1.15;
-            margin-bottom: 18px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(45px, 6vw, 70px);
+            line-height: 1;
+            letter-spacing: -2.8px;
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
-            color: #19a7ce;
+            color: var(--cyan);
         }
 
         .hero p {
-            color: #d6dce5;
+            max-width: 650px;
+            color: #b9c5d3;
             font-size: 18px;
-            max-width: 720px;
-            margin: auto;
+            line-height: 1.8;
+            margin-bottom: 30px;
         }
 
-        .location-line {
-            margin-top: 24px;
-            color: #b7c1cf;
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 21px;
+            border-radius: 11px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--cyan-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .hero-contact-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 24px;
+            padding: 30px;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-contact-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 17px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .hero-contact-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .hero-contact-item i {
+            color: var(--cyan);
+            width: 22px;
+            margin-top: 5px;
+        }
+
+        .hero-contact-item strong {
+            display: block;
+            font-size: 13px;
+            color: #8e9caf;
+            margin-bottom: 2px;
+        }
+
+        .hero-contact-item span {
+            color: #e1e7ef;
             font-size: 14px;
         }
 
-        .location-line i {
-            color: #19a7ce;
-            margin-right: 6px;
-        }
-
-        /* ================= MAIN ================= */
+        /* =========================
+           MAIN CONTACT
+        ========================== */
 
         .section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 75px 20px;
+            padding: 95px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-number {
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(35px, 5vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -1.8px;
+            margin-bottom: 16px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-            gap: 30px;
-            align-items: stretch;
+            grid-template-columns: 0.82fr 1.18fr;
+            gap: 35px;
+            align-items: start;
         }
 
-        /* ================= CONTACT INFO ================= */
+        /* =========================
+           CONTACT OPTIONS
+        ========================== */
 
-        .contact-info {
-            background: #0b1220;
-            color: white;
-            border-radius: 22px;
-            padding: 38px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info::after {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border: 1px solid rgba(25, 167, 206, 0.18);
-            border-radius: 50%;
-            right: -160px;
-            bottom: -150px;
-        }
-
-        .contact-info-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact-info h2 {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-
-        .contact-info > p {
-            color: #bfc8d4;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 23px;
-        }
-
-        .contact-icon {
-            min-width: 45px;
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            background: rgba(25, 167, 206, 0.12);
-            color: #19a7ce;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        .contact-item h3 {
-            font-size: 14px;
-            color: #fff;
-            margin-bottom: 2px;
-        }
-
-        .contact-item p,
-        .contact-item a {
-            color: #bdc6d2;
-            font-size: 14px;
-        }
-
-        .contact-item a:hover {
-            color: #19a7ce;
-        }
-
-        /* ================= QUICK ACTIONS ================= */
-
-        .quick-actions {
+        .contact-options {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 30px;
+            gap: 16px;
         }
 
-        .quick-action {
-            padding: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 10px;
-            text-align: center;
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
+        .contact-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
             transition: 0.3s ease;
         }
 
-        .quick-action:hover {
-            background: rgba(25, 167, 206, 0.12);
-            border-color: rgba(25, 167, 206, 0.4);
+        .contact-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(25,167,206,0.35);
+            box-shadow: var(--shadow);
         }
 
-        .quick-action i {
-            color: #19a7ce;
-            margin-right: 5px;
+        .contact-icon {
+            width: 47px;
+            height: 47px;
+            border-radius: 13px;
+            background: rgba(25,167,206,0.1);
+            color: var(--cyan-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 17px;
+            font-size: 18px;
         }
 
-        /* ================= FORM ================= */
-
-        .contact-form-box {
-            background: #fff;
-            border-radius: 22px;
-            padding: 38px;
-            border: 1px solid #e7ebef;
-            box-shadow: 0 10px 30px rgba(11, 18, 32, 0.07);
+        .contact-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            margin-bottom: 5px;
         }
 
-        .contact-form-box h2 {
-            color: #0b1220;
-            font-size: 28px;
-            margin-bottom: 8px;
+        .contact-card p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 12px;
         }
 
-        .contact-form-box > p {
-            color: #697586;
+        .contact-card a {
+            color: var(--cyan-dark);
             font-size: 14px;
-            margin-bottom: 27px;
+            font-weight: 800;
         }
 
-        .form-row {
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .whatsapp-card {
+            background: #effcf4;
+            border-color: #c8efd7;
+        }
+
+        .whatsapp-card .contact-icon {
+            background: rgba(37,211,102,0.13);
+            color: #1aaf51;
+        }
+
+        .whatsapp-card a {
+            color: #159344;
+        }
+
+        /* =========================
+           FORM
+        ========================== */
+
+        .form-wrapper {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 15px 45px rgba(11,18,32,0.05);
+        }
+
+        .form-header {
+            margin-bottom: 28px;
+        }
+
+        .form-header h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .form-header p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .form-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 18px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
         }
 
         .form-group label {
-            display: block;
-            color: #263244;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 7px;
+            font-size: 12px;
+            font-weight: 800;
+            color: #394554;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
+            border: 1px solid var(--border);
+            background: #fbfcfd;
+            border-radius: 10px;
             padding: 13px 14px;
-            border: 1px solid #dce2e8;
-            border-radius: 9px;
-            font-family: inherit;
-            font-size: 14px;
-            color: #222;
+            color: var(--text);
             outline: none;
-            transition: 0.3s ease;
-            background: #fff;
+            transition: 0.25s ease;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: #19a7ce;
-            box-shadow: 0 0 0 3px rgba(25, 167, 206, 0.08);
+        .form-group input,
+        .form-group select {
+            height: 48px;
         }
 
         .form-group textarea {
@@ -348,268 +482,480 @@
             resize: vertical;
         }
 
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--cyan);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(25,167,206,0.08);
+        }
+
+        .form-note {
+            color: var(--muted);
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
         .submit-btn {
+            margin-top: 20px;
             width: 100%;
-            border: none;
-            cursor: pointer;
-            padding: 14px 20px;
-            border-radius: 9px;
-            background: #19a7ce;
-            color: white;
-            font-family: inherit;
-            font-size: 15px;
-            font-weight: 700;
-            transition: 0.3s ease;
         }
 
-        .submit-btn:hover {
-            background: #138eaf;
-            transform: translateY(-2px);
+        /* =========================
+           SERVICE PATHS
+        ========================== */
+
+        .paths-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        /* ================= KENYA SECTION ================= */
-
-        .kenya-section {
-            background: #fff;
-            border-top: 1px solid #e8edf2;
-            border-bottom: 1px solid #e8edf2;
-        }
-
-        .kenya-content {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .kenya-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 18px;
-            border-radius: 18px;
-            background: rgba(25, 167, 206, 0.1);
-            color: #19a7ce;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 29px;
-        }
-
-        .kenya-content h2 {
-            color: #0b1220;
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .kenya-content p {
-            color: #697586;
-            max-width: 760px;
-            margin: 0 auto 22px;
-            font-size: 15px;
-        }
-
-        .kenya-highlight {
-            display: inline-block;
-            background: #0b1220;
-            color: white;
-            border-radius: 12px;
-            padding: 16px 25px;
-            font-weight: 700;
-            font-size: 15px;
-        }
-
-        .kenya-highlight i {
-            color: #19a7ce;
-            margin-right: 7px;
-        }
-
-        /* ================= REPAIR CTA ================= */
-
-        .repair-strip {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px 75px;
-        }
-
-        .repair-box {
-            background: linear-gradient(135deg, #101d32, #0b1220);
+        .path-card {
+            padding: 30px;
+            background: white;
+            border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 35px 40px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .repair-box h2 {
-            font-size: 25px;
-            margin-bottom: 6px;
-        }
-
-        .repair-box p {
-            color: #bdc6d2;
-            font-size: 14px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 13px 23px;
-            border-radius: 9px;
-            font-weight: 700;
-            font-size: 14px;
             transition: 0.3s ease;
-            white-space: nowrap;
         }
 
-        .btn-whatsapp {
-            background: #25d366;
+        .path-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .path-number {
+            color: rgba(25,167,206,0.35);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .path-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            margin-bottom: 9px;
+        }
+
+        .path-card p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .path-card a {
+            color: var(--cyan-dark);
+            font-size: 13px;
+            font-weight: 800;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* =========================
+           LOCATION / SHIPPING
+        ========================== */
+
+        .service-area {
+            background: var(--navy);
             color: white;
         }
 
-        .btn-whatsapp:hover {
-            background: #1db954;
+        .service-area-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-area h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: 18px;
+        }
+
+        .service-area p {
+            color: #b5c0ce;
+            font-size: 15px;
+        }
+
+        .area-card {
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.04);
+            border-radius: 20px;
+            padding: 28px;
+        }
+
+        .area-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 17px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .area-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .area-item i {
+            color: var(--cyan);
+            margin-top: 5px;
+        }
+
+        .area-item strong {
+            display: block;
+            font-size: 14px;
+            color: white;
+            margin-bottom: 3px;
+        }
+
+        .area-item span {
+            color: #9facbc;
+            font-size: 13px;
+        }
+
+        /* =========================
+           FINAL CTA
+        ========================== */
+
+        .cta {
+            padding: 85px 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(25,167,206,0.15), transparent 30%),
+                linear-gradient(135deg, #0b1220, #132238);
+            color: white;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .cta h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.05;
+            letter-spacing: -1.8px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #b6c2d1;
+            margin-bottom: 27px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .whatsapp-btn {
+            background: var(--green);
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1eb956;
             transform: translateY(-2px);
         }
 
-        /* ================= FOOTER ================= */
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
             background: #070d17;
             color: #aeb8c5;
-            padding: 35px 20px;
+            padding: 55px 0 25px;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 45px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
-        .footer-brand {
+        .footer-logo img {
+            width: 175px;
+            margin-bottom: 18px;
+        }
+
+        .footer-about {
+            max-width: 400px;
+            font-size: 14px;
+        }
+
+        footer h3 {
             color: white;
-            font-weight: 700;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 15px;
+            margin-bottom: 16px;
         }
 
-        .footer-brand span {
-            color: #19a7ce;
+        .footer-links {
+            display: grid;
+            gap: 9px;
         }
 
-        .footer-text {
+        .footer-links a {
+            font-size: 13px;
+            transition: 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-contact {
+            display: grid;
+            gap: 10px;
             font-size: 13px;
         }
 
-        /* ================= RESPONSIVE ================= */
-
-        @media (max-width: 900px) {
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .repair-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
+        .footer-contact div {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
         }
 
-        @media (max-width: 700px) {
+        .footer-contact i {
+            color: var(--cyan);
+            margin-top: 5px;
+        }
 
-            .navbar {
-                flex-direction: column;
-                gap: 12px;
+        .copyright {
+            text-align: center;
+            padding-top: 22px;
+            font-size: 12px;
+            color: #667282;
+        }
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================== */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 57px;
+            height: 57px;
+            border-radius: 50%;
+            background: var(--green);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            box-shadow: 0 12px 30px rgba(37,211,102,0.35);
+            z-index: 999;
+            transition: 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1050px) {
+
+            .nav-links {
+                gap: 15px;
             }
 
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 14px;
+            .nav-links a {
+                font-size: 12px;
             }
 
-            .logo img {
-                height: 52px;
+            .hero-grid,
+            .contact-grid,
+            .service-area-grid {
+                gap: 40px;
             }
 
-            .hero {
-                padding: 70px 20px 60px;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 55px 20px;
-            }
-
-            .contact-info,
-            .contact-form-box {
-                padding: 28px 22px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .quick-actions {
+            .paths-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
-            .kenya-content h2 {
-                font-size: 28px;
-            }
-
-            .repair-strip {
-                padding: 0 20px 55px;
-            }
-
-            .repair-box {
-                padding: 30px 25px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
         }
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-grid,
+            .contact-grid,
+            .service-area-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-contact-card {
+                max-width: 600px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(92%, 520px);
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .section-heading h2,
+            .service-area h2,
+            .cta h2 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            .form-wrapper {
+                padding: 23px;
+                border-radius: 18px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .paths-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .floating-whatsapp {
+                width: 52px;
+                height: 52px;
+                right: 15px;
+                bottom: 15px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================== -->
 
 <header>
 
-    <div class="navbar">
+    <div class="container nav">
 
-        <div class="logo">
+        <a href="index.html" class="logo">
+            <img
+                src="Logo.png"
+                alt="Street Gadgets Care Logo">
+        </a>
+
+        <nav class="nav-links">
+
             <a href="index.html">
-                <img src="Logo.png" alt="Street Gadgets Care Logo">
+                Home
             </a>
-        </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="repairs.html">Repairs</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="tech-repairs.html">
+                Tech Repairs
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="creative-studio.html">
+                Creative Studio
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+            <a
+                href="https://wa.me/254114259961"
+                target="_blank"
+                class="nav-cta">
+                WhatsApp
+            </a>
+
         </nav>
 
     </div>
@@ -617,438 +963,928 @@
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================== -->
 
 <section class="hero">
 
-    <div class="hero-content">
-
-        <div class="hero-badge">
-            <i class="fa-solid fa-comments"></i>
-            Get In Touch
-        </div>
-
-        <h1>
-            Let's Talk <span>Technology</span>
-        </h1>
-
-        <p>
-            Have a repair, product enquiry, accessory request or technology
-            service in mind? Get in touch with Street Gadgets Care and let's
-            find the right solution for you.
-        </p>
-
-        <div class="location-line">
-            <i class="fa-solid fa-location-dot"></i>
-            Based in Nairobi • Serving Customers Across Kenya
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT SECTION ================= -->
-
-<section class="section">
-
-    <div class="contact-grid">
-
-        <!-- CONTACT INFORMATION -->
-
-        <div class="contact-info">
-
-            <div class="contact-info-content">
-
-                <h2>Contact Details</h2>
-
-                <p>
-                    Reach us directly through any of the channels below.
-                    We're ready to assist with your technology needs.
-                </p>
-
-
-                <!-- Phone -->
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-
-                    <div>
-                        <h3>Phone</h3>
-
-                        <a href="tel:0114259961">
-                            0114259961
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <!-- Email -->
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-
-                    <div>
-                        <h3>Email</h3>
-
-                        <a href="mailto:streetgadgetscare@gmail.com">
-                            streetgadgetscare@gmail.com
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <!-- Location -->
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-
-                    <div>
-                        <h3>Location</h3>
-
-                        <p>
-                            Nairobi, Kenya
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- Service Area -->
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </div>
-
-                    <div>
-                        <h3>Service Area</h3>
-
-                        <p>
-                            Serving customers across Kenya
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- Quick Actions -->
-
-                <div class="quick-actions">
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27d%20like%20to%20make%20an%20enquiry."
-                        class="quick-action"
-                        target="_blank"
-                    >
-                        <i class="fa-brands fa-whatsapp"></i>
-                        WhatsApp
-                    </a>
-
-                    <a
-                        href="tel:0114259961"
-                        class="quick-action"
-                    >
-                        <i class="fa-solid fa-phone"></i>
-                        Call Us
-                    </a>
-
-                    <a
-                        href="mailto:streetgadgetscare@gmail.com"
-                        class="quick-action"
-                    >
-                        <i class="fa-solid fa-envelope"></i>
-                        Email Us
-                    </a>
-
-                    <a
-                        href="https://www.google.com/maps/search/?api=1&query=Nairobi%2C%20Kenya"
-                        class="quick-action"
-                        target="_blank"
-                    >
-                        <i class="fa-solid fa-location-dot"></i>
-                        Nairobi
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- CONTACT FORM -->
-
-        <div class="contact-form-box">
-
-            <h2>Send Us a Message</h2>
-
-            <p>
-                Tell us what you need and we'll get back to you.
-            </p>
-
-
-            <form
-                action="https://formsubmit.co/streetgadgetscare@gmail.com"
-                method="POST"
-            >
-
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="New Website Enquiry - Street Gadgets Care"
-                >
-
-                <input
-                    type="hidden"
-                    name="_captcha"
-                    value="false"
-                >
-
-                <input
-                    type="hidden"
-                    name="_next"
-                    value="https://streetgadgetscare.github.io/StreetGadgetsCare/contact.html"
-                >
-
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="name">
-                            Your Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your name"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="phone">
-                            Phone Number
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="Enter your phone number"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="service">
-                        What Can We Help You With?
-                    </label>
-
-                    <select
-                        id="service"
-                        name="service"
-                        required
-                    >
-
-                        <option value="">
-                            Select a service
-                        </option>
-
-                        <option value="Phone Repair">
-                            Phone Repair
-                        </option>
-
-                        <option value="Laptop Repair">
-                            Laptop Repair
-                        </option>
-
-                        <option value="Laptop Accessories">
-                            Laptop Accessories
-                        </option>
-
-                        <option value="Phone Accessories">
-                            Phone Accessories
-                        </option>
-
-                        <option value="Laptop / Device Purchase">
-                            Laptop / Device Purchase
-                        </option>
-
-                        <option value="Graphic Design">
-                            Graphic Design
-                        </option>
-
-                        <option value="Business / Digital Services">
-                            Business / Digital Services
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Your Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell us what you need help with..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="submit-btn"
-                >
-                    <i class="fa-solid fa-paper-plane"></i>
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= KENYA SERVICE AREA ================= -->
-
-<section class="kenya-section">
-
-    <div class="section">
-
-        <div class="kenya-content">
-
-            <div class="kenya-icon">
-                <i class="fa-solid fa-map-location-dot"></i>
-            </div>
-
-            <h2>Serving Customers Across Kenya</h2>
-
-            <p>
-                Street Gadgets Care is based in Nairobi, but our customers
-                don't have to be in Nairobi to reach us. Whether you're
-                looking for a device, accessory, repair or technology
-                service, contact us to discuss your needs.
-            </p>
-
-            <div class="kenya-highlight">
-                <i class="fa-solid fa-location-dot"></i>
-                Based in Nairobi • Serving Customers Across Kenya
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= REPAIR CTA ================= -->
-
-<section class="repair-strip">
-
-    <div class="repair-box">
+    <div class="container hero-grid">
 
         <div>
 
-            <h2>Need a Phone or Laptop Repair?</h2>
+            <div class="eyebrow">
+                CONTACT STREET GADGETS CARE
+            </div>
+
+            <h1>
+                Let's talk about
+                <span>what you need.</span>
+            </h1>
 
             <p>
-                Tell us about the problem with your device and we'll guide
-                you on the next step.
+                Need a device repaired, looking for a gadget or accessory,
+                or have a design or business project in mind? Reach out and
+                let's figure out the best way to help.
             </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    <i class="fab fa-whatsapp"></i>
+                    Chat on WhatsApp
+
+                </a>
+
+                <a
+                    href="tel:0114259961"
+                    class="btn btn-outline">
+
+                    <i class="fas fa-phone"></i>
+                    Call Us
+
+                </a>
+
+            </div>
 
         </div>
 
-        <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20phone%20or%20laptop%20repair."
-            class="btn btn-whatsapp"
-            target="_blank"
-        >
-            <i class="fa-brands fa-whatsapp"></i>
-            Chat on WhatsApp
-        </a>
+
+        <div class="hero-contact-card">
+
+            <h3>
+                Quick Contact
+            </h3>
+
+            <div class="hero-contact-item">
+
+                <i class="fas fa-phone"></i>
+
+                <div>
+
+                    <strong>
+                        Phone
+                    </strong>
+
+                    <span>
+                        0114259961
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-contact-item">
+
+                <i class="fab fa-whatsapp"></i>
+
+                <div>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <span>
+                        0114259961
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-contact-item">
+
+                <i class="fas fa-envelope"></i>
+
+                <div>
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <span>
+                        streetgadgetscare@gmail.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-contact-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <div>
+
+                    <strong>
+                        Location
+                    </strong>
+
+                    <span>
+                        Nairobi, Kenya
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     CONTACT SECTION
+========================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                01 / GET IN TOUCH
+            </div>
+
+            <h2>
+                Choose the easiest
+                way to reach us.
+            </h2>
+
+            <p>
+                For quick questions and repair enquiries, WhatsApp is the
+                fastest option. You can also call, email or use the enquiry
+                form below.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <!-- CONTACT OPTIONS -->
+
+            <div class="contact-options">
+
+                <div class="contact-card whatsapp-card">
+
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        The easiest way to ask about repairs, products,
+                        availability or creative projects.
+                    </p>
+
+                    <a
+                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+                        target="_blank">
+
+                        Start a WhatsApp Chat
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+
+                    <h3>
+                        Call Us
+                    </h3>
+
+                    <p>
+                        Have something you would rather discuss directly?
+                        Give us a call.
+                    </p>
+
+                    <a href="tel:0114259961">
+
+                        0114259961
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        Send us detailed information about your project,
+                        device or business requirement.
+                    </p>
+
+                    <a href="mailto:streetgadgetscare@gmail.com">
+
+                        streetgadgetscare@gmail.com
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+
+                    <h3>
+                        Nairobi
+                    </h3>
+
+                    <p>
+                        Street Gadgets Care is based in Nairobi and serves
+                        customers across Kenya.
+                    </p>
+
+                    <a href="#service-area">
+
+                        Service Area
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="form-wrapper">
+
+                <div class="form-header">
+
+                    <h2>
+                        Send an enquiry
+                    </h2>
+
+                    <p>
+                        Tell us what you need and we'll get back to you.
+                    </p>
+
+                </div>
+
+
+                <form
+                    action="https://formsubmit.co/streetgadgetscare@gmail.com"
+                    method="POST">
+
+                    <!-- FormSubmit settings -->
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Street Gadgets Care Website Enquiry">
+
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false">
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table">
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://streetgadgetscare.github.io/StreetGadgetsCare/contact.html">
+
+                    <input
+                        type="hidden"
+                        name="_url"
+                        value="https://streetgadgetscare.github.io/StreetGadgetsCare/contact.html">
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Your Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="e.g. 07XXXXXXXX"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="service">
+                                What do you need?
+                            </label>
+
+                            <select
+                                id="service"
+                                name="service">
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="Phone Repair">
+                                    Phone Repair
+                                </option>
+
+                                <option value="Laptop Repair">
+                                    Laptop Repair
+                                </option>
+
+                                <option value="Screen Replacement">
+                                    Screen Replacement
+                                </option>
+
+                                <option value="Battery Replacement">
+                                    Battery Replacement
+                                </option>
+
+                                <option value="Software / Windows">
+                                    Software / Windows
+                                </option>
+
+                                <option value="Laptop Accessories">
+                                    Laptop Accessories
+                                </option>
+
+                                <option value="Phones / Laptops / Gadgets">
+                                    Phones / Laptops / Gadgets
+                                </option>
+
+                                <option value="Graphic Design">
+                                    Graphic Design
+                                </option>
+
+                                <option value="CV / Resume">
+                                    CV / Resume
+                                </option>
+
+                                <option value="Company Profile">
+                                    Company Profile
+                                </option>
+
+                                <option value="Business Plan">
+                                    Business Plan
+                                </option>
+
+                                <option value="Business Name Registration">
+                                    Business Name Registration
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="message">
+                                Tell us what you need *
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Describe your repair, product request, design project or business need..."
+                                required></textarea>
+
+                            <span class="form-note">
+                                Please include useful details such as the
+                                device model, problem, design requirements
+                                or product you're looking for.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary submit-btn">
+
+                        <i class="fas fa-paper-plane"></i>
+                        Send Enquiry
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICE PATHS
+========================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                02 / WHAT CAN WE HELP WITH?
+            </div>
+
+            <h2>
+                Start with what
+                you need.
+            </h2>
+
+            <p>
+                Not sure which service fits your situation? These are the
+                three main areas of Street Gadgets Care.
+            </p>
+
+        </div>
+
+
+        <div class="paths-grid">
+
+            <div class="path-card">
+
+                <div class="path-number">
+                    01
+                </div>
+
+                <h3>
+                    Technology
+                </h3>
+
+                <p>
+                    Phone and laptop repairs, screen and battery
+                    replacement, software support, servicing, upgrades
+                    and technical assistance.
+                </p>
+
+                <a href="tech-repairs.html">
+
+                    Explore Tech Repairs
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="path-card">
+
+                <div class="path-number">
+                    02
+                </div>
+
+                <h3>
+                    Shop
+                </h3>
+
+                <p>
+                    Phones, laptops, accessories, storage, memory,
+                    chargers, cables, protection and other technology
+                    products.
+                </p>
+
+                <a href="shop.html">
+
+                    Explore Shop
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="path-card">
+
+                <div class="path-number">
+                    03
+                </div>
+
+                <h3>
+                    Creative Studio
+                </h3>
+
+                <p>
+                    Logo design, flyers, posters, business cards,
+                    invitations, CVs, company profiles, business plans
+                    and professional documents.
+                </p>
+
+                <a href="creative-studio.html">
+
+                    Explore Creative Studio
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICE AREA
+========================== -->
+
+<section class="section service-area" id="service-area">
+
+    <div class="container service-area-grid">
+
+        <div>
+
+            <div class="section-number">
+                03 / SERVICE AREA
+            </div>
+
+            <h2>
+                Based in Nairobi.
+                Serving customers
+                across Kenya.
+            </h2>
+
+            <p>
+                Our physical base is in Nairobi, but you don't have to be
+                in Nairobi to work with Street Gadgets Care.
+            </p>
+
+        </div>
+
+
+        <div class="area-card">
+
+            <div class="area-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <div>
+
+                    <strong>
+                        Nairobi
+                    </strong>
+
+                    <span>
+                        Street Gadgets Care is based in Nairobi.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="area-item">
+
+                <i class="fas fa-mobile-screen-button"></i>
+
+                <div>
+
+                    <strong>
+                        Repairs
+                    </strong>
+
+                    <span>
+                        If you're outside Nairobi, contact us to discuss
+                        sending your device to us.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="area-item">
+
+                <i class="fas fa-truck-fast"></i>
+
+                <div>
+
+                    <strong>
+                        Delivery & Shipping
+                    </strong>
+
+                    <span>
+                        Product and repair arrangements can be discussed
+                        with customers across Kenya.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="area-item">
+
+                <i class="fas fa-comments"></i>
+
+                <div>
+
+                    <strong>
+                        Start With a Message
+                    </strong>
+
+                    <span>
+                        Tell us what you need and we'll guide you on the
+                        next step.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <h2>
+                Whatever you need,
+                let's talk.
+            </h2>
+
+            <p>
+                A broken phone. A laptop problem. A new gadget. A logo.
+                A CV. A business document. Start with a simple message
+                and we'll take it from there.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+                    target="_blank"
+                    class="btn whatsapp-btn">
+
+                    <i class="fab fa-whatsapp"></i>
+                    Chat on WhatsApp
+
+                </a>
+
+
+                <a
+                    href="tel:0114259961"
+                    class="btn btn-outline">
+
+                    <i class="fas fa-phone"></i>
+                    Call 0114259961
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
 
 <footer>
 
-    <div class="footer-content">
+    <div class="container">
 
-        <div class="footer-brand">
-            Street Gadgets <span>Care</span>
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <img
+                        src="Logo.png"
+                        alt="Street Gadgets Care">
+
+                </div>
+
+                <p class="footer-about">
+                    Technology, repairs, gadgets and creative digital
+                    solutions from Street Gadgets Care. Based in Nairobi,
+                    serving customers across Kenya.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="services.html">
+                        Services
+                    </a>
+
+                    <a href="tech-repairs.html">
+                        Tech Repairs
+                    </a>
+
+                    <a href="shop.html">
+                        Shop
+                    </a>
+
+                    <a href="creative-studio.html">
+                        Creative Studio
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <div class="footer-contact">
+
+                    <div>
+
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            0114259961
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            streetgadgetscare@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            Nairobi, Kenya
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fas fa-truck-fast"></i>
+
+                        <span>
+                            Serving customers across Kenya
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="footer-text">
-            Based in Nairobi, serving customers across Kenya.
-        </div>
 
-        <div class="footer-text">
-            &copy; 2026 Street Gadgets Care. All rights reserved.
+        <div class="copyright">
+
+            © 2026 Street Gadgets Care. All Rights Reserved.
+
         </div>
 
     </div>
 
 </footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================== -->
+
+<a
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Chat with Street Gadgets Care on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
 
 </body>
 </html>
