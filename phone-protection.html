@@ -3,186 +3,759 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Phone Protection | Street Gadgets Care</title>
+
+    <meta name="description" content="Protect your phone with quality screen protectors and phone covers from Street Gadgets Care. Nairobi based, serving customers across Kenya.">
 
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
+            line-height: 1.6;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #0b1220;
-            padding: 15px 30px;
+            color: white;
+            padding: 14px 5%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            gap: 25px;
         }
 
-        header img {
+        .logo img {
             width: 170px;
-            height: auto;
+            max-height: 58px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 15px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a.active {
             color: #19a7ce;
         }
 
-        .page-header {
-            background: linear-gradient(135deg, #0b1220, #16263d);
+        .whatsapp-nav {
+            background: #25d366;
+            color: #fff !important;
+            padding: 10px 16px;
+            border-radius: 7px;
+            font-weight: 700 !important;
+        }
+
+        .whatsapp-nav:hover {
+            background: #1ebe5d;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(11, 18, 32, 0.78), rgba(11, 18, 32, 0.88)),
+                url("phone-protection.jpg") center/cover no-repeat;
             color: white;
-            text-align: center;
-            padding: 60px 20px;
         }
 
-        .page-header h1 {
-            margin: 0;
-            font-size: 38px;
+        .hero-container {
+            max-width: 1200px;
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+            padding: 70px 0;
         }
 
-        .page-header p {
-            margin-top: 12px;
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
             font-size: 17px;
-            opacity: 0.9;
+            color: #dbe4ef;
+            max-width: 620px;
+            margin-bottom: 28px;
         }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 21px;
+            border-radius: 7px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #19a7ce;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #148caf;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.96);
+            color: #172033;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            max-width: 400px;
+            width: 100%;
+            justify-self: end;
+        }
+
+        .hero-card h3 {
+            font-size: 21px;
+            margin-bottom: 17px;
+            color: #0b1220;
+        }
+
+        .hero-card-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #e8edf3;
+        }
+
+        .hero-card-item:last-child {
+            border-bottom: none;
+        }
+
+        .hero-card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #e8f8fc;
+            color: #19a7ce;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .hero-card-item strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        .hero-card-item span {
+            font-size: 13px;
+            color: #647083;
+        }
+
+        /* =========================
+           CATEGORY NAV
+        ========================= */
+
+        .category-nav {
+            background: white;
+            border-bottom: 1px solid #e5eaf0;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .category-nav-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-nav a {
+            padding: 9px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #475467;
+            background: #f3f6f9;
+            transition: 0.3s ease;
+        }
+
+        .category-nav a:hover,
+        .category-nav a.active {
+            background: #19a7ce;
+            color: white;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 75px 20px 45px;
+        }
+
+        .section-label {
+            color: #19a7ce;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .intro h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+            color: #0b1220;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #667085;
+            max-width: 720px;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        /* =========================
+           CATEGORY CARDS
+        ========================= */
 
         .categories {
             max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 10px 20px 70px;
+        }
+
+        .category-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            gap: 28px;
         }
 
         .category-card {
             background: white;
-            padding: 40px 30px;
-            border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e6ebf1;
+            box-shadow: 0 8px 25px rgba(11, 18, 32, 0.06);
             transition: 0.3s ease;
         }
 
         .category-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(11, 18, 32, 0.11);
         }
 
-        .category-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
+        .category-image {
+            height: 270px;
+            background: #f4f7fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
         }
 
-        .category-card h2 {
-            margin: 10px 0;
-            font-size: 25px;
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .category-content {
+            padding: 25px;
+        }
+
+        .category-content h3 {
             color: #0b1220;
-        }
-
-        .category-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .category-btn {
-            display: inline-block;
-            padding: 12px 22px;
-            background: #19a7ce;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        .category-btn:hover {
-            background: #1289aa;
-            transform: translateY(-2px);
-        }
-
-        .info-section {
-            max-width: 900px;
-            margin: 20px auto 50px;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .info-section h2 {
-            color: #0b1220;
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .info-section p {
-            color: #666;
-            line-height: 1.7;
+        .category-content p {
+            color: #667085;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
-        .back-link {
-            display: block;
-            text-align: center;
-            margin: 30px 0 50px;
+        .category-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0b1220;
+            color: white;
+            padding: 11px 17px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s ease;
         }
 
-        .back-link a {
+        .category-link:hover {
+            background: #19a7ce;
+        }
+
+        /* =========================
+           GUIDANCE SECTION
+        ========================= */
+
+        .guidance {
+            background: #0b1220;
+            color: white;
+            padding: 75px 5%;
+        }
+
+        .guidance-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .guidance-heading {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .guidance-heading .section-label {
             color: #19a7ce;
-            text-decoration: none;
-            font-weight: bold;
         }
+
+        .guidance-heading h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .guidance-heading p {
+            color: #c8d2df;
+        }
+
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guidance-card {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .guidance-number {
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .guidance-card h3 {
+            font-size: 19px;
+            margin-bottom: 9px;
+        }
+
+        .guidance-card p {
+            color: #b9c5d4;
+            font-size: 14px;
+        }
+
+        /* =========================
+           INFO BOX
+        ========================= */
+
+        .info-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #eaf8fc, #f7fbfd);
+            border: 1px solid #c9edf5;
+            border-radius: 15px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .info-box h2 {
+            color: #0b1220;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #596579;
+            max-width: 650px;
+            font-size: 14px;
+        }
+
+        /* =========================
+           DELIVERY STRIP
+        ========================= */
+
+        .delivery-strip {
+            background: #19a7ce;
+            color: white;
+            padding: 22px 5%;
+        }
+
+        .delivery-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .delivery-inner strong {
+            font-size: 16px;
+        }
+
+        .delivery-inner span {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .final-cta {
+            text-align: center;
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .final-cta h2 {
+            color: #0b1220;
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 13px;
+        }
+
+        .final-cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #667085;
+        }
+
+        .final-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #0b1220;
             color: white;
-            text-align: center;
-            padding: 25px 15px;
-            margin-top: 40px;
+            padding: 55px 5% 25px;
         }
 
-        footer p {
-            margin: 5px 0;
-            font-size: 14px;
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 45px;
         }
+
+        .footer-brand h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: #b9c5d4;
+            font-size: 14px;
+            max-width: 350px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #b9c5d4;
+            font-size: 13px;
+            margin-bottom: 9px;
+        }
+
+        .footer-column a:hover {
+            color: #19a7ce;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: #8995a5;
+            font-size: 12px;
+        }
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+            background: #1ebe5d;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 900px) {
-            .categories {
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero-container {
                 grid-template-columns: 1fr;
+                padding: 60px 0;
+            }
+
+            .hero-card {
+                justify-self: start;
+                max-width: 500px;
+            }
+
+            .guidance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+
             header {
-                padding: 12px 15px;
-                flex-direction: column;
-                gap: 10px;
+                padding: 12px 4%;
+            }
+
+            nav {
+                gap: 12px;
             }
 
             nav a {
-                margin: 0 7px;
-                font-size: 13px;
+                font-size: 12px;
             }
 
-            .page-header h1 {
-                font-size: 30px;
+            .hero {
+                min-height: auto;
             }
 
-            .category-card {
-                padding: 30px 20px;
+            .hero-container {
+                width: 92%;
+                padding: 50px 0;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .category-nav {
+                position: static;
+            }
+
+            .category-nav-inner {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 3px;
+            }
+
+            .category-nav a {
+                white-space: nowrap;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-image {
+                height: 250px;
+            }
+
+            .info-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .delivery-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .logo img {
+                width: 150px;
+            }
+
+            nav {
+                gap: 9px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-card {
+                padding: 22px;
+            }
+
+            .intro {
+                padding-top: 55px;
+            }
+
+            .guidance {
+                padding: 60px 5%;
+            }
+
+            .info-box {
+                padding: 25px;
+            }
+
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                right: 15px;
+                bottom: 15px;
             }
         }
     </style>
@@ -190,77 +763,515 @@
 
 <body>
 
-<header>
-    <a href="index.html">
-        <img src="Logo.png" alt="Street Gadgets Care">
-    </a>
+<!-- =========================
+     HEADER
+========================= -->
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<header>
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Street Gadgets Care">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="tech-repairs.html">Tech Repairs</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="creative-studio.html">Creative Studio</a>
+            <a href="contact.html">Contact</a>
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20phone%20protection."
+                class="whatsapp-nav"
+                target="_blank"
+            >
+                WhatsApp
+            </a>
+        </nav>
+
+    </div>
 </header>
 
-<section class="page-header">
-    <h1>Phone Protection</h1>
-    <p>Protect your phone with quality screen protectors and phone covers.</p>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-label">Phone Protection</span>
+
+            <h1>Protect your phone before damage happens.</h1>
+
+            <p>
+                Keep your phone protected with quality screen protectors
+                and stylish covers designed for everyday use.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#protection-options" class="btn btn-primary">
+                    Explore Protection
+                </a>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20phone%20protection%20for%20my%20phone."
+                    class="btn btn-whatsapp"
+                    target="_blank"
+                >
+                    Find My Protection
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h3>Protect the things that matter.</h3>
+
+            <div class="hero-card-item">
+
+                <div class="hero-card-icon">1</div>
+
+                <div>
+                    <strong>Screen Protection</strong>
+                    <span>Help protect your display from everyday scratches and damage.</span>
+                </div>
+
+            </div>
+
+            <div class="hero-card-item">
+
+                <div class="hero-card-icon">2</div>
+
+                <div>
+                    <strong>Phone Covers</strong>
+                    <span>Add protection while keeping your phone looking good.</span>
+                </div>
+
+            </div>
+
+            <div class="hero-card-item">
+
+                <div class="hero-card-icon">3</div>
+
+                <div>
+                    <strong>Model Matching</strong>
+                    <span>Tell us your exact phone model and we'll help you find the right fit.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     CATEGORY NAV
+========================= -->
+
+<div class="category-nav">
+
+    <div class="category-nav-inner">
+
+        <a href="shop.html">All Shop</a>
+
+        <a href="chargers.html">Chargers</a>
+
+        <a href="cables.html">Charging Cables</a>
+
+        <a href="phone-protection.html" class="active">
+            Phone Protection
+        </a>
+
+        <a href="laptop-accessories.html">
+            Laptop Accessories
+        </a>
+
+        <a href="devices.html">
+            Devices
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro" id="protection-options">
+
+    <div class="section-label">
+        Choose Your Protection
+    </div>
+
+    <h2>Protection that matches your phone.</h2>
+
+    <p>
+        Start with the part of your phone you want to protect.
+        Whether you need screen protection or a complete phone cover,
+        we can help you find an option that fits your model and style.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     CATEGORY CARDS
+========================= -->
 
 <section class="categories">
 
-    <div class="category-card">
-        <div class="category-icon">🛡️</div>
+    <div class="category-grid">
 
-        <h2>Screen Protectors</h2>
+        <!-- SCREEN PROTECTORS -->
 
-        <p>
-            Quality screen protectors designed to help protect your phone
-            display from scratches, impacts and everyday wear.
-        </p>
+        <div class="category-card">
 
-        <a href="screen-protectors.html" class="category-btn">
-            View Screen Protectors
-        </a>
-    </div>
+            <div class="category-image">
+                <div style="
+                    width:90px;
+                    height:90px;
+                    border-radius:22px;
+                    background:#eaf8fc;
+                    color:#19a7ce;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:42px;
+                    font-weight:700;
+                ">
+                    🛡
+                </div>
+            </div>
 
-    <div class="category-card">
-        <div class="category-icon">📱</div>
+            <div class="category-content">
 
-        <h2>Phone Covers</h2>
+                <h3>Screen Protectors</h3>
 
-        <p>
-            Browse phone covers and cases available for different phone
-            models and styles.
-        </p>
+                <p>
+                    Tempered glass, privacy protection, curved-screen
+                    options and full-glue protectors for different phone models.
+                </p>
 
-        <a href="phone-covers.html" class="category-btn">
-            View Phone Covers
-        </a>
+                <a href="screen-protectors.html" class="category-link">
+                    View Screen Protectors →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHONE COVERS -->
+
+        <div class="category-card">
+
+            <div class="category-image">
+                <div style="
+                    width:90px;
+                    height:90px;
+                    border-radius:22px;
+                    background:#eaf8fc;
+                    color:#19a7ce;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:42px;
+                    font-weight:700;
+                ">
+                    📱
+                </div>
+            </div>
+
+            <div class="category-content">
+
+                <h3>Phone Covers</h3>
+
+                <p>
+                    Silicone, leather and MagSafe-style cases for selected
+                    Samsung, iPhone, Tecno, Redmi and other compatible models.
+                </p>
+
+                <a href="phone-covers.html" class="category-link">
+                    View Phone Covers →
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
 </section>
+
+
+<!-- =========================
+     GUIDANCE
+========================= -->
+
+<section class="guidance">
+
+    <div class="guidance-container">
+
+        <div class="guidance-heading">
+
+            <div class="section-label">
+                Before You Order
+            </div>
+
+            <h2>Choose the right protection for your phone.</h2>
+
+            <p>
+                Phone accessories are model-specific. A little information
+                before ordering can help make sure you get the right product.
+            </p>
+
+        </div>
+
+
+        <div class="guidance-grid">
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    01 — SCREEN
+                </div>
+
+                <h3>Protect the Screen</h3>
+
+                <p>
+                    Choose from standard, privacy, matte, curved and
+                    full-glue screen protection depending on your display.
+                </p>
+
+            </div>
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    02 — BODY
+                </div>
+
+                <h3>Protect the Body</h3>
+
+                <p>
+                    A suitable phone cover can help protect the back,
+                    sides and corners during everyday use.
+                </p>
+
+            </div>
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    03 — MODEL
+                </div>
+
+                <h3>Match Your Model</h3>
+
+                <p>
+                    Always confirm your exact phone model before ordering.
+                    Different models can have different dimensions and camera layouts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INFO BOX
+========================= -->
 
 <section class="info-section">
-    <h2>Keep Your Phone Protected</h2>
 
-    <p>
-        Choose the right protection for your device, whether you need a
-        screen protector, phone cover, or both.
-    </p>
+    <div class="info-box">
+
+        <div>
+
+            <h2>Not sure which protection fits your phone?</h2>
+
+            <p>
+                Send us your phone model or a clear photo of the phone.
+                We'll help you identify the suitable screen protector or cover
+                before you order.
+            </p>
+
+        </div>
+
+        <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20the%20right%20phone%20protection.%20My%20phone%20model%20is%3A"
+            class="btn btn-whatsapp"
+            target="_blank"
+        >
+            Ask on WhatsApp
+        </a>
+
+    </div>
+
 </section>
 
-<div class="back-link">
-    <a href="products.html">← Back to Products & Accessories</a>
-</div>
+
+<!-- =========================
+     DELIVERY STRIP
+========================= -->
+
+<section class="delivery-strip">
+
+    <div class="delivery-inner">
+
+        <strong>
+            Order From Street Gadgets Care
+        </strong>
+
+        <span>
+            Nairobi based • Delivery available across Kenya
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final-cta">
+
+    <h2>Protect your phone. Shop with confidence.</h2>
+
+    <p>
+        Browse our screen protectors and phone covers, or contact us
+        if you need help finding the right option for your device.
+    </p>
+
+    <div class="final-buttons">
+
+        <a href="screen-protectors.html" class="btn btn-primary">
+            Screen Protectors
+        </a>
+
+        <a href="phone-covers.html" class="btn btn-primary">
+            Phone Covers
+        </a>
+
+        <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20phone%20protection."
+            class="btn btn-whatsapp"
+            target="_blank"
+        >
+            Chat on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
-    <p>Phone & Laptop Repair | Accessories | Graphic Design</p>
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h3>Street Gadgets Care</h3>
+
+            <p>
+                Laptop & Phone Repair • Accessories • Graphic Design
+            </p>
+
+            <p style="margin-top:10px;">
+                Nairobi, Kenya • Serving Customers Across Kenya
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="tech-repairs.html">Tech Repairs</a>
+            <a href="shop.html">Shop</a>
+            <a href="creative-studio.html">Creative Studio</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Contact</h4>
+
+            <a href="tel:0114259961">
+                0114259961
+            </a>
+
+            <a href="mailto:streetgadgetscare@gmail.com">
+                streetgadgetscare@gmail.com
+            </a>
+
+            <a
+                href="https://wa.me/254114259961"
+                target="_blank"
+            >
+                WhatsApp Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Street Gadgets Care. All Rights Reserved.
+
+    </div>
+
 </footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20phone%20protection."
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+>
+    ☎
+</a>
 
 </body>
 </html>
