@@ -1,377 +1,1848 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Laptop Accessories | Street Gadgets Care</title>
+  <title>Laptop Accessories | Street Gadgets Care</title>
 
-    <meta name="description" content="Explore laptop bags, storage, memory and computer accessories from Street Gadgets Care.">
+  <meta
+    name="description"
+    content="Shop laptop bags, keyboards, wireless mice, Wi-Fi dongles, Bluetooth dongles, cleaning products and other computer accessories from Street Gadgets Care."
+  >
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.6;
+    }
 
-        /* HEADER */
-        header {
-            background: #0b1220;
-            padding: 15px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .logo {
-            height: 55px;
-            width: auto;
-        }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-        nav {
-            display: flex;
-            gap: 22px;
-            flex-wrap: wrap;
-        }
+    /* =========================
+       HEADER
+    ========================= */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+    header {
+      background: #0b1220;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
 
-        nav a:hover,
-        nav a.active {
-            color: #19a7ce;
-        }
+    .nav-container {
+      width: 92%;
+      max-width: 1200px;
+      min-height: 78px;
+      margin: auto;
 
-        /* PAGE INTRO */
-        .page-intro {
-            text-align: center;
-            padding: 60px 20px 35px;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
 
-        .page-intro h1 {
-            font-size: 38px;
-            color: #0b1220;
-            margin-bottom: 12px;
-        }
+    .logo img {
+      width: 170px;
+      max-height: 58px;
+      object-fit: contain;
+    }
 
-        .page-intro h1 span {
-            color: #19a7ce;
-        }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
 
-        .page-intro p {
-            max-width: 750px;
-            margin: auto;
-            color: #666;
-            font-size: 17px;
-        }
+    nav a {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 12px;
+      border-radius: 7px;
+      transition: 0.25s ease;
+    }
 
-        /* CATEGORY SECTION */
-        .accessories-section {
-            padding: 20px 6% 70px;
-        }
+    nav a:hover,
+    nav a.active {
+      color: #19a7ce;
+      background: rgba(25, 167, 206, 0.08);
+    }
 
-        .accessories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    .nav-whatsapp {
+      background: #25d366 !important;
+      color: #ffffff !important;
+      padding: 10px 15px !important;
+    }
 
-        /* CATEGORY CARD */
-        .category-card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e9edf2;
-        }
+    .nav-whatsapp:hover {
+      background: #1fb957 !important;
+    }
 
-        .category-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        }
+    /* =========================
+       HERO
+    ========================= */
 
-        /* ICON */
-        .category-icon {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 22px;
-            border-radius: 50%;
-            background: #e9f8fc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(11, 18, 32, 0.97),
+          rgba(11, 18, 32, 0.88)
+        ),
+        url("laptop-bag-1.jpg") center/cover no-repeat;
 
-        .category-icon i {
-            font-size: 42px;
-            color: #19a7ce;
-        }
+      color: #ffffff;
+      padding: 70px 20px;
+    }
 
-        .category-card h2 {
-            color: #0b1220;
-            font-size: 23px;
-            margin-bottom: 12px;
-        }
+    .hero-container {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
 
-        .category-card p {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 25px;
-            min-height: 70px;
-        }
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 55px;
+    }
 
-        /* BUTTON */
-        .category-btn {
-            display: inline-block;
-            background: #19a7ce;
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .hero-content {
+      max-width: 650px;
+    }
 
-        .category-btn:hover {
-            background: #0b1220;
-            transform: translateY(-2px);
-        }
+    .eyebrow {
+      display: inline-block;
+      color: #19a7ce;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 13px;
+    }
 
-        /* INFORMATION SECTION */
-        .info-section {
-            background: white;
-            padding: 45px 6%;
-            text-align: center;
-        }
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
 
-        .info-section h2 {
-            color: #0b1220;
-            margin-bottom: 15px;
-            font-size: 28px;
-        }
+    .hero p {
+      color: #d8e2ed;
+      font-size: 17px;
+      max-width: 620px;
+      margin-bottom: 26px;
+    }
 
-        .info-section p {
-            max-width: 800px;
-            margin: auto;
-            color: #666;
-        }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-        /* FOOTER */
-        footer {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-        footer p {
-            margin: 5px 0;
-        }
+      padding: 13px 20px;
+      border-radius: 8px;
 
-        footer a {
-            color: #19a7ce;
-            text-decoration: none;
-        }
+      font-size: 14px;
+      font-weight: 700;
 
-        /* TABLET */
-        @media (max-width: 900px) {
-            .accessories-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+      transition: 0.25s ease;
+    }
 
-        /* MOBILE */
-        @media (max-width: 600px) {
+    .btn-primary {
+      background: #19a7ce;
+      color: #ffffff;
+    }
 
-            header {
-                justify-content: center;
-                gap: 15px;
-            }
+    .btn-primary:hover {
+      background: #148eaf;
+      transform: translateY(-2px);
+    }
 
-            nav {
-                justify-content: center;
-                gap: 14px;
-            }
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.04);
+    }
 
-            .page-intro {
-                padding: 45px 20px 25px;
-            }
+    .btn-outline:hover {
+      background: #ffffff;
+      color: #0b1220;
+    }
 
-            .page-intro h1 {
-                font-size: 30px;
-            }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+    }
 
-            .accessories-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero-card {
+      width: 100%;
+      max-width: 410px;
 
-            .category-card p {
-                min-height: auto;
-            }
-        }
-    </style>
+      padding: 15px;
+
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 275px;
+
+      object-fit: contain;
+
+      background: #ffffff;
+      border-radius: 12px;
+    }
+
+    .hero-card-info {
+      padding: 14px 5px 2px;
+    }
+
+    .hero-card-info strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-info span {
+      color: #b9c7d7;
+      font-size: 13px;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 65px 20px 35px;
+      text-align: center;
+    }
+
+    .section-container {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #19a7ce;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .intro h2 {
+      color: #0b1220;
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: auto;
+      color: #687386;
+      font-size: 15px;
+    }
+
+    /* =========================
+       CATEGORY NAV
+    ========================= */
+
+    .category-nav {
+      padding: 10px 20px 40px;
+    }
+
+    .category-nav-inner {
+      max-width: 800px;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .category-nav a {
+      background: #ffffff;
+      border: 1px solid #dfe6ee;
+      color: #0b1220;
+
+      padding: 10px 17px;
+      border-radius: 30px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: 0.25s ease;
+    }
+
+    .category-nav a:hover {
+      background: #19a7ce;
+      border-color: #19a7ce;
+      color: #ffffff;
+    }
+
+    /* =========================
+       PRODUCT SECTIONS
+    ========================= */
+
+    .products-section {
+      padding: 20px 20px 75px;
+    }
+
+    .section-heading {
+      width: 92%;
+      max-width: 1120px;
+      margin: 0 auto 30px;
+    }
+
+    .section-heading h2 {
+      color: #0b1220;
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 7px;
+    }
+
+    .section-heading p {
+      color: #687386;
+      font-size: 14px;
+      max-width: 700px;
+    }
+
+    /* =========================
+       PRODUCT GRID
+    ========================= */
+
+    .product-grid {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border: 1px solid #e3e9f0;
+      border-radius: 15px;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+
+      transition: 0.28s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(25, 167, 206, 0.35);
+      box-shadow: 0 15px 32px rgba(11, 18, 32, 0.09);
+    }
+
+    .product-image {
+      height: 245px;
+      background: #f3f5f8;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 15px;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-content {
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-tag {
+      display: inline-block;
+      color: #19a7ce;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .product-content h3 {
+      color: #0b1220;
+      font-size: 19px;
+      line-height: 1.3;
+      margin-bottom: 7px;
+    }
+
+    .product-description {
+      color: #687386;
+      font-size: 13px;
+      margin-bottom: 13px;
+      flex: 1;
+    }
+
+    .price {
+      color: #0b1220;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .price span {
+      color: #7b8797;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .whatsapp-btn {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      background: #25d366;
+      color: #ffffff;
+
+      padding: 11px 15px;
+      border-radius: 8px;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1fb957;
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       INFO STRIP
+    ========================= */
+
+    .info-section {
+      padding: 10px 20px 80px;
+    }
+
+    .info-box {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      background: #0b1220;
+      color: #ffffff;
+
+      border-radius: 18px;
+      padding: 38px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .info-box h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .info-box p {
+      color: #c5d0dc;
+      font-size: 14px;
+      max-width: 570px;
+    }
+
+    .info-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-point {
+      padding: 15px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .info-point strong {
+      display: block;
+      color: #ffffff;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .info-point span {
+      color: #aebccc;
+      font-size: 12px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 10px 20px 85px;
+    }
+
+    .cta-box {
+      width: 92%;
+      max-width: 1000px;
+      margin: auto;
+
+      text-align: center;
+
+      background: linear-gradient(135deg, #eaf9fd, #ffffff);
+
+      border: 1px solid #cceef6;
+      border-radius: 18px;
+
+      padding: 43px 30px;
+    }
+
+    .cta-box h2 {
+      color: #0b1220;
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      max-width: 680px;
+      margin: 0 auto 22px;
+
+      color: #687386;
+      font-size: 14px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      background: #25d366;
+      color: #ffffff;
+
+      padding: 13px 22px;
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition: 0.25s ease;
+    }
+
+    .cta-button:hover {
+      background: #1fb957;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b1220;
+      color: #ffffff;
+      padding: 55px 20px 25px;
+    }
+
+    .footer-grid {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-logo img {
+      width: 175px;
+      margin-bottom: 15px;
+    }
+
+    .footer-about {
+      color: #aebbd0;
+      font-size: 14px;
+      max-width: 390px;
+    }
+
+    footer h3 {
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer li a,
+    .footer-contact {
+      color: #aebbd0;
+      font-size: 13px;
+    }
+
+    footer li a:hover {
+      color: #19a7ce;
+    }
+
+    .footer-bottom {
+      width: 92%;
+      max-width: 1120px;
+      margin: 40px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      color: #8190a4;
+      font-size: 12px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+
+      width: 54px;
+      height: 54px;
+
+      border-radius: 50%;
+
+      background: #25d366;
+      color: #ffffff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 24px;
+      font-weight: bold;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+      z-index: 999;
+
+      transition: 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.07);
+      background: #1fb957;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-content {
+        max-width: 720px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+        padding: 13px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 7px 8px;
+      }
+
+      .logo img {
+        width: 155px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-card img {
+        height: 235px;
+      }
+
+      .intro {
+        padding-top: 50px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .product-image {
+        height: 240px;
+      }
+
+      .info-box {
+        padding: 30px 23px;
+      }
+
+      .info-points {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 35px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-        <a href="index.html">
-            <img src="Logo.png" alt="Street Gadgets Care Logo" class="logo">
+  <header>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care">
+      </a>
+
+      <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="tech-repairs.html">Tech Repairs</a>
+
+        <a href="shop.html" class="active">Shop</a>
+
+        <a href="creative-studio.html">Creative Studio</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a
+          href="https://wa.me/254114259961"
+          class="nav-whatsapp"
+          target="_blank"
+        >
+          WhatsApp
         </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="repairs.html">Repairs</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      </nav>
 
-    </header>
+    </div>
+
+  </header>
 
 
-    <!-- PAGE INTRO -->
-    <section class="page-intro">
+  <!-- =========================
+       HERO
+  ========================= -->
 
-        <h1>Laptop <span>Accessories</span></h1>
+  <section class="hero">
+
+    <div class="hero-container">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          LAPTOP & COMPUTER ACCESSORIES
+        </span>
+
+        <h1>
+          Equip your laptop.<br>
+          Protect your setup.
+        </h1>
 
         <p>
-            Explore quality laptop bags, storage and memory solutions,
-            plus essential computer accessories from Street Gadgets Care.
+          From laptop bags to wireless mice, keyboards, dongles and
+          cleaning products, find practical accessories for your
+          everyday technology.
         </p>
 
-    </section>
+        <div class="hero-buttons">
 
+          <a href="#laptop-bags" class="btn btn-primary">
+            Shop Laptop Bags
+          </a>
 
-    <!-- CATEGORY SECTION -->
-    <section class="accessories-section">
-
-        <div class="accessories-grid">
-
-
-            <!-- LAPTOP BAGS -->
-            <div class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-solid fa-briefcase"></i>
-                </div>
-
-                <h2>Laptop Bags</h2>
-
-                <p>
-                    Protect and carry your laptop safely with our range
-                    of quality laptop bags in different sizes and styles.
-                </p>
-
-                <a href="laptop-bags.html" class="category-btn">
-                    View Laptop Bags
-                </a>
-
-            </div>
-
-
-            <!-- LAPTOP STORAGE & MEMORY -->
-            <div class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-solid fa-hard-drive"></i>
-                </div>
-
-                <h2>Laptop Storage & Memory</h2>
-
-                <p>
-                    Find HDDs, SSDs, RAM, memory cards, flash drives
-                    and other storage solutions for your computer.
-                </p>
-
-                <a href="laptop-storage.html" class="category-btn">
-                    View Storage & Memory
-                </a>
-
-            </div>
-
-
-            <!-- COMPUTER ACCESSORIES -->
-            <div class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-solid fa-computer"></i>
-                </div>
-
-                <h2>Laptop & Computer Accessories</h2>
-
-                <p>
-                    Get essential computer accessories including keyboards,
-                    wireless mice, dongles, cleaners and more.
-                </p>
-
-                <a href="computer-accessories.html" class="category-btn">
-                    View Accessories
-                </a>
-
-            </div>
-
+          <a href="#computer-accessories" class="btn btn-outline">
+            Computer Accessories
+          </a>
 
         </div>
 
-    </section>
+      </div>
 
 
-    <!-- INFORMATION -->
-    <section class="info-section">
+      <div class="hero-visual">
 
-        <h2>Quality Accessories for Your Computer</h2>
+        <div class="hero-card">
+
+          <img
+            src="laptop-bag-1.jpg"
+            alt="Laptop bag"
+          >
+
+          <div class="hero-card-info">
+
+            <strong>
+              Laptop Bags & Computer Accessories
+            </strong>
+
+            <span>
+              Practical products for work, school and everyday use
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro">
+
+    <div class="section-container">
+
+      <div class="section-label">
+        SHOP ACCESSORIES
+      </div>
+
+      <h2>
+        Useful accessories for the technology you use every day.
+      </h2>
+
+      <p>
+        Choose from laptop bags, computer accessories and cleaning
+        products. If you are unsure which accessory is compatible with
+        your device, contact us before ordering.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CATEGORY NAV
+  ========================= -->
+
+  <section class="category-nav">
+
+    <div class="category-nav-inner">
+
+      <a href="#laptop-bags">
+        Laptop Bags
+      </a>
+
+      <a href="#computer-accessories">
+        Computer Accessories
+      </a>
+
+      <a href="laptop-storage.html">
+        Storage & Memory
+      </a>
+
+      <a href="shop.html">
+        Back to Shop
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       LAPTOP BAGS
+  ========================= -->
+
+  <section class="products-section" id="laptop-bags">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        LAPTOP BAGS
+      </div>
+
+      <h2>
+        Carry your laptop with confidence.
+      </h2>
+
+      <p>
+        Choose from our available laptop bags in different sizes,
+        designs and price ranges.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <!-- BAG 1 -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="laptop-bag-1.jpg"
+            alt="Laptop Bag 1"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Laptop Bag
+          </span>
+
+          <h3>
+            Laptop Bag 1
+          </h3>
+
+          <p class="product-description">
+            Stylish laptop bag suitable for carrying your laptop and
+            everyday essentials.
+          </p>
+
+          <div class="price">
+            KES 5,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20Laptop%20Bag%201%20priced%20at%20KES%205%2C500."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BAG 2 -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="laptop-bag-2.jpg"
+            alt="Laptop Bag 2"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Laptop Bag
+          </span>
+
+          <h3>
+            Laptop Bag 2
+          </h3>
+
+          <p class="product-description">
+            Practical laptop bag designed for everyday carrying and
+            protection.
+          </p>
+
+          <div class="price">
+            KES 4,000
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20Laptop%20Bag%202%20priced%20at%20KES%204%2C000."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BAG 3 -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="laptop-bag-3.jpg"
+            alt="Laptop Bag 3"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Laptop Bag
+          </span>
+
+          <h3>
+            Laptop Bag 3
+          </h3>
+
+          <p class="product-description">
+            Compact and practical option for carrying your laptop
+            around town, work or school.
+          </p>
+
+          <div class="price">
+            KES 2,200
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20Laptop%20Bag%203%20priced%20at%20KES%202%2C200."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BAG 4 -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="laptop-bag-4.jpg"
+            alt="Laptop Bag 4"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Laptop Bag
+          </span>
+
+          <h3>
+            Laptop Bag 4
+          </h3>
+
+          <p class="product-description">
+            Affordable everyday laptop bag for convenient carrying and
+            basic protection.
+          </p>
+
+          <div class="price">
+            KES 1,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20Laptop%20Bag%204%20priced%20at%20KES%201%2C500."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BAG 5 -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="laptop-bag-5.jpg"
+            alt="Laptop Bag 5"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Laptop Bag
+          </span>
+
+          <h3>
+            Laptop Bag 5
+          </h3>
+
+          <p class="product-description">
+            Practical laptop carrying option suitable for everyday use.
+          </p>
+
+          <div class="price">
+            KES 1,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20Laptop%20Bag%205%20priced%20at%20KES%201%2C500."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BAG 6 -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="laptop-bag-6.jpg"
+            alt="Laptop Bag 6"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Laptop Bag
+          </span>
+
+          <h3>
+            Laptop Bag 6
+          </h3>
+
+          <p class="product-description">
+            Budget-friendly laptop bag for simple everyday protection
+            and carrying.
+          </p>
+
+          <div class="price">
+            KES 1,000
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20Laptop%20Bag%206%20priced%20at%20KES%201%2C000."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       COMPUTER ACCESSORIES
+  ========================= -->
+
+  <section
+    class="products-section"
+    id="computer-accessories"
+  >
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        LAPTOP & COMPUTER ACCESSORIES
+      </div>
+
+      <h2>
+        Small accessories. Big convenience.
+      </h2>
+
+      <p>
+        Useful accessories for connecting, controlling, cleaning and
+        getting more from your computer.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <!-- KEYBOARD -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="keyboard.jpg"
+            alt="Laptop keyboard"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Keyboard
+          </span>
+
+          <h3>
+            Laptop Keyboard
+          </h3>
+
+          <p class="product-description">
+            Replacement laptop keyboards available for different
+            laptop models and keyboard types.
+          </p>
+
+          <div class="price">
+            From KES 3,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20looking%20for%20a%20replacement%20laptop%20keyboard."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            Check Compatibility
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOAM CLEANER -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="foam-cleaner.jpg"
+            alt="Foam cleaner"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Cleaning
+          </span>
+
+          <h3>
+            Foam Cleaner
+          </h3>
+
+          <p class="product-description">
+            Cleaning solution for helping keep compatible computer
+            surfaces and equipment clean.
+          </p>
+
+          <div class="price">
+            From KES 400
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20foam%20cleaner."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- WIRELESS MOUSE -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="wireless-mouse.jpg"
+            alt="Wireless mouse"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Wireless
+          </span>
+
+          <h3>
+            Wireless Mouse
+          </h3>
+
+          <p class="product-description">
+            Convenient wireless mouse for laptops, desktops and
+            everyday computer use.
+          </p>
+
+          <div class="price">
+            From KES 800
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20wireless%20mouse."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- WIFI DONGLE -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="wifi-dongle.jpg"
+            alt="Wi-Fi dongle"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Connectivity
+          </span>
+
+          <h3>
+            Wi-Fi Dongle
+          </h3>
+
+          <p class="product-description">
+            Compact Wi-Fi adapter for compatible computers that need
+            wireless network connectivity.
+          </p>
+
+          <div class="price">
+            From KES 650
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20Wi-Fi%20dongle."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BLUETOOTH DONGLE -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="bluetooth-dongle.jpg"
+            alt="Bluetooth dongle"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Connectivity
+          </span>
+
+          <h3>
+            Bluetooth Dongle
+          </h3>
+
+          <p class="product-description">
+            Add Bluetooth connectivity to compatible computers and
+            connect supported wireless devices.
+          </p>
+
+          <div class="price">
+            From KES 650
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20a%20Bluetooth%20dongle."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CLEANING KIT -->
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="cleaning-kit.jpg"
+            alt="Computer cleaning kit"
+          >
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="product-tag">
+            Cleaning
+          </span>
+
+          <h3>
+            Cleaning Kit
+          </h3>
+
+          <p class="product-description">
+            A practical cleaning kit for maintaining your laptop,
+            computer and accessories.
+          </p>
+
+          <div class="price">
+            KES 1,500
+          </div>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20computer%20cleaning%20kit."
+            target="_blank"
+            class="whatsapp-btn"
+          >
+            WhatsApp to Order
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STORAGE CROSS-LINK
+  ========================= -->
+
+  <section class="info-section">
+
+    <div class="info-box">
+
+      <div>
+
+        <div class="section-label">
+          NEED MORE?
+        </div>
+
+        <h2>
+          Upgrade what's inside your laptop too.
+        </h2>
 
         <p>
-            Whether you need a protective laptop bag, additional storage,
-            more memory or everyday computer accessories, Street Gadgets Care
-            has you covered. Contact us for availability and current prices.
+          We also have storage and memory options including HDDs,
+          NVMe SSDs, SATA SSDs, RAM, external HDDs, memory cards and
+          flash drives.
         </p>
 
-    </section>
+      </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+      <div class="info-points">
 
-        <p>
-            &copy; 2026 Street Gadgets Care. All Rights Reserved.
+        <a href="laptop-storage.html" class="info-point">
+
+          <strong>
+            HDD & SSD
+          </strong>
+
+          <span>
+            Storage upgrades
+          </span>
+
+        </a>
+
+        <a href="laptop-storage.html" class="info-point">
+
+          <strong>
+            RAM Memory
+          </strong>
+
+          <span>
+            4GB to 32GB options
+          </span>
+
+        </a>
+
+        <a href="laptop-storage.html" class="info-point">
+
+          <strong>
+            External HDD
+          </strong>
+
+          <span>
+            Portable storage options
+          </span>
+
+        </a>
+
+        <a href="laptop-storage.html" class="info-point">
+
+          <strong>
+            Memory Cards
+          </strong>
+
+          <span>
+            Multiple capacities available
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL CTA
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="cta-box">
+
+      <div class="section-label">
+        NOT SURE WHAT YOU NEED?
+      </div>
+
+      <h2>
+        Send us your laptop model.
+      </h2>
+
+      <p>
+        If you're looking for a keyboard, accessory or compatible
+        product and you're not sure what to choose, send us your
+        laptop model or a photo and we'll help you check.
+      </p>
+
+      <a
+        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20laptop%20accessory."
+        target="_blank"
+        class="cta-button"
+      >
+        Ask Us on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <a href="index.html" class="footer-logo">
+          <img src="Logo.png" alt="Street Gadgets Care">
+        </a>
+
+        <p class="footer-about">
+          Technology, repairs, devices, accessories, creative design
+          and practical digital support — all under one brand.
         </p>
 
-        <p>
-            Laptop & Phone Repair | Accessories | Graphic Design
-        </p>
+      </div>
 
-        <p>
-            <a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">
-                WhatsApp: 0114259961
+
+      <div>
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <ul>
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <a href="services.html">Services</a>
+          </li>
+
+          <li>
+            <a href="tech-repairs.html">Tech Repairs</a>
+          </li>
+
+          <li>
+            <a href="shop.html">Shop</a>
+          </li>
+
+          <li>
+            <a href="creative-studio.html">Creative Studio</a>
+          </li>
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <ul>
+
+          <li>
+            <a href="tel:0114259961">
+              0114 259 961
             </a>
-        </p>
+          </li>
 
-    </footer>
+          <li>
+            <a href="mailto:streetgadgetscare@gmail.com">
+              streetgadgetscare@gmail.com
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://wa.me/254114259961"
+              target="_blank"
+            >
+              WhatsApp Us
+            </a>
+          </li>
+
+          <li class="footer-contact">
+            Nairobi, Kenya
+          </li>
+
+          <li class="footer-contact">
+            Serving Customers Across Kenya
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Street Gadgets Care. All rights reserved.
+      </span>
+
+      <span>
+        Technology • Repairs • Accessories • Creative Support
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
+
+  <a
+    href="https://wa.me/254114259961"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+  >
+    ☎
+  </a>
 
 </body>
 </html>
