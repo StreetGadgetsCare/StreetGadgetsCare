@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Other Gadgets | Smart Watches | Street Gadgets Care</title>
+
+  <meta
+    name="description"
+    content="Shop smart watches and other gadgets from Street Gadgets Care. Browse available smart watches and order through WhatsApp with delivery across Kenya."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #0b1220;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-container {
+      width: min(1200px, 94%);
+      margin: auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo img {
+      width: 170px;
+      max-height: 58px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    nav a:hover {
+      color: #19a7ce;
+    }
+
+    nav a.active {
+      color: #19a7ce;
+    }
+
+    .nav-whatsapp {
+      background: #25d366;
+      color: #fff !important;
+      padding: 10px 15px;
+      border-radius: 7px;
+    }
+
+    .nav-whatsapp:hover {
+      background: #1fb957;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(rgba(11, 18, 32, 0.84), rgba(11, 18, 32, 0.84)),
+        url("laptop-servicing.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 80px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #19a7ce;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.08;
+      margin-bottom: 22px;
+      max-width: 620px;
+    }
+
+    .hero p {
+      color: #dce5ef;
+      font-size: 17px;
+      max-width: 610px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #19a7ce;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #138cad;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1fb957;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 430px;
+      max-height: 360px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
+    }
+
+    /* =========================
+       CATEGORY BAR
+    ========================= */
+
+    .category-bar {
+      background: #fff;
+      border-bottom: 1px solid #e6eaf0;
+      position: sticky;
+      top: 78px;
+      z-index: 900;
+    }
+
+    .category-inner {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 14px 0;
+      scrollbar-width: thin;
+    }
+
+    .category-inner a {
+      white-space: nowrap;
+      padding: 9px 15px;
+      border-radius: 30px;
+      background: #f1f4f8;
+      color: #273449;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .category-inner a:hover,
+    .category-inner a.active {
+      background: #19a7ce;
+      color: #fff;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 75px 0 45px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: #19a7ce;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .intro h2 {
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+      color: #0b1220;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: auto;
+      color: #657084;
+      font-size: 16px;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products-section {
+      padding: 30px 0 75px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: 31px;
+      color: #0b1220;
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: #687386;
+      max-width: 700px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 13px;
+      overflow: hidden;
+      border: 1px solid #e6eaf0;
+      box-shadow: 0 8px 25px rgba(11, 18, 32, 0.06);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(11, 18, 32, 0.1);
+    }
+
+    .product-image {
+      height: 280px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-content h3 {
+      color: #0b1220;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .price {
+      color: #0b1220;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .product-btn {
+      display: inline-block;
+      background: #19a7ce;
+      color: #fff;
+      text-align: center;
+      padding: 11px 15px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .product-btn:hover {
+      background: #138cad;
+    }
+
+    /* =========================
+       INFO SECTION
+    ========================= */
+
+    .info-section {
+      background: #0b1220;
+      color: #fff;
+      padding: 75px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .info-content .section-label {
+      color: #19a7ce;
+    }
+
+    .info-content h2 {
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 17px;
+    }
+
+    .info-content p {
+      color: #c8d1dd;
+      margin-bottom: 22px;
+      max-width: 570px;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      color: #d7dfe8;
+    }
+
+    .info-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #19a7ce;
+      font-weight: 800;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 32px;
+    }
+
+    .info-card h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: #c8d1dd;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section {
+      padding: 75px 0;
+      background: #fff;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(29px, 4vw, 43px);
+      color: #0b1220;
+      margin-bottom: 13px;
+    }
+
+    .cta-section p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #687386;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       DELIVERY STRIP
+    ========================= */
+
+    .delivery-strip {
+      background: #eef9fc;
+      padding: 25px 0;
+      border-top: 1px solid #dceff4;
+      border-bottom: 1px solid #dceff4;
+    }
+
+    .delivery-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .delivery-inner strong {
+      color: #0b1220;
+      font-size: 17px;
+    }
+
+    .delivery-inner span {
+      color: #596779;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b1220;
+      color: #fff;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand img {
+      width: 165px;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      color: #aeb9c7;
+      font-size: 14px;
+      max-width: 310px;
+    }
+
+    footer h3 {
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 9px;
+    }
+
+    footer li a {
+      color: #aeb9c7;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    footer li a:hover {
+      color: #19a7ce;
+    }
+
+    .footer-contact p {
+      color: #aeb9c7;
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 22px;
+      text-align: center;
+      color: #8995a5;
+      font-size: 13px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      z-index: 2000;
+      transition: 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
+      background: #1fb957;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .hero-image img {
+        max-width: 390px;
+        max-height: 320px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav-container {
+        min-height: 70px;
+      }
+
+      .logo img {
+        width: 140px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a:not(.nav-whatsapp) {
+        display: none;
+      }
+
+      .nav-whatsapp {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .category-bar {
+        top: 70px;
+      }
+
+      .hero {
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 270px;
+      }
+
+      .delivery-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn,
+      .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .product-content {
+        padding: 18px;
+      }
+
+      .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care">
+      </a>
+
+      <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="tech-repairs.html">Tech Repairs</a>
+
+        <a href="shop.html" class="active">Shop</a>
+
+        <a href="creative-studio.html">Creative Studio</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20your%20smart%20watches."
+          class="nav-whatsapp"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">OTHER GADGETS</span>
+
+        <h1>Smart technology for everyday life.</h1>
+
+        <p>
+          Explore our available smart watches and other everyday gadgets.
+          Choose a style that fits your routine, then contact us to confirm
+          availability and place your order.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#smart-watches"
+            class="btn btn-primary"
+          >
+            Explore Smart Watches
+          </a>
+
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20your%20smart%20watches."
+            class="btn btn-whatsapp"
+            target="_blank"
+          >
+            Ask What's Available
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="Oraimo%206%20Lite.jpeg"
+          alt="Oraimo 6 Lite Smart Watch"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CATEGORY BAR
+  ========================= -->
+
+  <div class="category-bar">
+
+    <div class="container category-inner">
+
+      <a href="#smart-watches" class="active">
+        Smart Watches
+      </a>
+
+      <a href="devices.html">
+        Laptops & Button Phones
+      </a>
+
+      <a href="laptop-accessories.html">
+        Laptop Accessories
+      </a>
+
+      <a href="laptop-storage.html">
+        Storage & Memory
+      </a>
+
+      <a href="computer-accessories.html">
+        Computer Accessories
+      </a>
+
+      <a href="shop.html">
+        All Shop
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro">
+
+    <div class="container">
+
+      <div class="section-label">
+        SMART GADGETS
+      </div>
+
+      <h2>Smart watches to match your everyday routine</h2>
+
+      <p>
+        Browse our current smart watch selection below. Prices are shown
+        clearly, and you can contact us through WhatsApp to confirm
+        availability before ordering.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SMART WATCHES
+  ========================= -->
+
+  <section
+    class="products-section"
+    id="smart-watches"
+  >
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          SMART WATCHES
+        </div>
+
+        <h2>Available Smart Watches</h2>
+
+        <p>
+          Choose from our currently available smart watch models.
+        </p>
+
+      </div>
+
+
+      <div class="product-grid">
+
+
+        <!-- ORAIMO 6 LITE -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="Oraimo%206%20Lite.jpeg"
+              alt="Oraimo 6 Lite Smart Watch"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <h3>Oraimo 6 Lite</h3>
+
+            <p class="product-description">
+              Smart watch suitable for everyday use and personal technology needs.
+            </p>
+
+            <div class="price">
+              KSh 3,500
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%206%20Lite%20smart%20watch%20at%20KSh%203%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ORAIMO 5 LITE -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="Oraimo%205%20Lite.jpeg"
+              alt="Oraimo 5 Lite Smart Watch"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <h3>Oraimo 5 Lite</h3>
+
+            <p class="product-description">
+              Practical smart watch option for everyday use.
+            </p>
+
+            <div class="price">
+              KSh 3,500
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%205%20Lite%20smart%20watch%20at%20KSh%203%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ORAIMO MUSE 2 LITE -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="Oraimo%20Muse%202%20Lite.jpeg"
+              alt="Oraimo Muse 2 Lite Smart Watch"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <h3>Oraimo Muse 2 Lite</h3>
+
+            <p class="product-description">
+              Stylish smart watch option for everyday technology and convenience.
+            </p>
+
+            <div class="price">
+              KSh 3,500
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Muse%202%20Lite%20smart%20watch%20at%20KSh%203%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- AMAYA PREMIUM -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="Amaya%20Premium.jpeg"
+              alt="Amaya Premium Smart Watch"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <h3>Amaya Premium</h3>
+
+            <p class="product-description">
+              Smart watch designed for everyday use with a modern look.
+            </p>
+
+            <div class="price">
+              KSh 3,000
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20Premium%20smart%20watch%20at%20KSh%203%2C000."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- W008 -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="W008.jpeg"
+              alt="W008 Smart Watch"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <h3>W008</h3>
+
+            <p class="product-description">
+              Affordable smart watch option for everyday use.
+            </p>
+
+            <div class="price">
+              KSh 2,500
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20W008%20smart%20watch%20at%20KSh%202%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- i90 -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="i90.jpeg"
+              alt="i90 Smart Watch"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <h3>i90</h3>
+
+            <p class="product-description">
+              Budget-friendly smart watch for everyday use.
+            </p>
+
+            <div class="price">
+              KSh 2,100
+            </div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20i90%20smart%20watch%20at%20KSh%202%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INFO SECTION
+  ========================= -->
+
+  <section class="info-section">
+
+    <div class="container info-grid">
+
+      <div class="info-content">
+
+        <div class="section-label">
+          SMART GADGETS
+        </div>
+
+        <h2>Looking for a specific smart watch?</h2>
+
+        <p>
+          Availability can change, so if you already have a particular model
+          in mind, contact us before ordering. We can confirm whether it is
+          currently available and help you with the next step.
+        </p>
+
+        <ul class="info-list">
+
+          <li>
+            Confirm availability before ordering
+          </li>
+
+          <li>
+            Ask about the model you are interested in
+          </li>
+
+          <li>
+            Order through WhatsApp
+          </li>
+
+          <li>
+            Delivery available across Kenya
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="info-card">
+
+        <h3>Need help choosing?</h3>
+
+        <p>
+          Tell us which smart watch you are considering and what you are
+          looking for. We'll help you check the available option.
+        </p>
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20smart%20watch."
+          class="btn btn-whatsapp"
+          target="_blank"
+        >
+          Ask on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================= -->
+
+  <section class="cta-section">
+
+    <div class="container">
+
+      <h2>Find your smart gadget.</h2>
+
+      <p>
+        Choose from the available smart watches or contact us if you need
+        help finding a particular model.
+      </p>
+
+      <div class="cta-buttons">
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20order%20a%20smart%20watch."
+          class="btn btn-whatsapp"
+          target="_blank"
+        >
+          Order via WhatsApp
+        </a>
+
+        <a
+          href="shop.html"
+          class="btn btn-primary"
+        >
+          Back to Shop
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DELIVERY STRIP
+  ========================= -->
+
+  <section class="delivery-strip">
+
+    <div class="container delivery-inner">
+
+      <strong>
+        Order From Street Gadgets Care
+      </strong>
+
+      <span>
+        Delivery available across Kenya.
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+
+      <div class="footer-brand">
+
+        <img
+          src="Logo.png"
+          alt="Street Gadgets Care"
+        >
+
+        <p>
+          Technology, repairs, devices, accessories and creative support
+          from Street Gadgets Care — based in Nairobi and serving customers
+          across Kenya.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="tech-repairs.html">
+              Tech Repairs
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html">
+              Shop
+            </a>
+          </li>
+
+          <li>
+            <a href="creative-studio.html">
+              Creative Studio
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Shop</h3>
+
+        <ul>
+
+          <li>
+            <a href="devices.html">
+              Laptops & Button Phones
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop-accessories.html">
+              Laptop Accessories
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop-bags.html">
+              Laptop Bags
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop-storage.html">
+              Storage & Memory
+            </a>
+          </li>
+
+          <li>
+            <a href="computer-accessories.html">
+              Computer Accessories
+            </a>
+          </li>
+
+          <li>
+            <a href="other-gadgets.html">
+              Smart Gadgets
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <h3>Contact</h3>
+
+        <p>
+          Nairobi, Kenya
+        </p>
+
+        <p>
+          0114259961
+        </p>
+
+        <p>
+          streetgadgetscare@gmail.com
+        </p>
+
+        <p>
+          <a
+            href="https://wa.me/254114259961"
+            target="_blank"
+          >
+            WhatsApp Us
+          </a>
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      © 2026 Street Gadgets Care. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
+
+  <a
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20your%20smart%20watches."
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    ☎
+  </a>
+
+</body>
+</html>
