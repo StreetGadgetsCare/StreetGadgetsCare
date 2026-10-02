@@ -19,6 +19,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
         :root {
             --navy: #0b1220;
             --navy-2: #101a2d;
@@ -361,7 +362,7 @@
         }
 
         /* =========================
-           WHAT WE ARE
+           IDENTITY
         ========================= */
 
         .identity {
@@ -513,6 +514,17 @@
             margin: 0 auto 55px;
         }
 
+        .values-header .section-label {
+            margin-bottom: 12px;
+        }
+
+        .values-header h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.15;
+            color: var(--navy);
+        }
+
         .values-header p {
             color: var(--muted);
             margin-top: 16px;
@@ -525,3 +537,1063 @@
         }
 
         .value {
+            text-align: center;
+            padding: 35px 25px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: white;
+            transition: 0.3s ease;
+        }
+
+        .value:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-icon {
+            width: 62px;
+            height: 62px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #eaf8fc;
+            color: var(--cyan);
+            font-size: 22px;
+        }
+
+        .value h3 {
+            font-family: "Manrope", sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--navy);
+        }
+
+        .value p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           BRAND STATEMENT
+        ========================= */
+
+        .statement {
+            padding: 0 0 100px;
+        }
+
+        .statement-box {
+            background:
+                linear-gradient(135deg, rgba(25,167,206,0.10), rgba(25,167,206,0.02)),
+                #f5f8fb;
+            border: 1px solid #e2edf2;
+            border-radius: 24px;
+            padding: 65px;
+            text-align: center;
+        }
+
+        .statement-box i {
+            color: var(--cyan);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .statement-box h2 {
+            font-family: "Manrope", sans-serif;
+            max-width: 850px;
+            margin: auto;
+            color: var(--navy);
+            font-size: clamp(28px, 4vw, 44px);
+            line-height: 1.25;
+        }
+
+        .statement-box p {
+            max-width: 680px;
+            margin: 20px auto 0;
+            color: var(--muted);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: var(--navy);
+            padding: 90px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(32px, 4vw, 50px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #bdc8d4;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 23px;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--cyan-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.22);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080e19;
+            color: #9eabb9;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand img {
+            width: 155px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            max-width: 390px;
+            font-size: 14px;
+        }
+
+        .footer-column h4 {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #9eabb9;
+            font-size: 13px;
+            margin-bottom: 9px;
+            transition: 0.2s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 12px;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            font-size: 27px;
+            box-shadow: 0 12px 30px rgba(37,211,102,0.28);
+            z-index: 999;
+            transition: 0.25s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .intro-grid,
+            .story-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .identity-grid,
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 760px) {
+
+            .nav {
+                min-height: 70px;
+            }
+
+            .logo img {
+                width: 135px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 0 70px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .intro,
+            .story,
+            .identity,
+            .approach,
+            .values {
+                padding: 70px 0;
+            }
+
+            .identity-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-panel {
+                padding: 30px;
+            }
+
+            .statement {
+                padding-bottom: 70px;
+            }
+
+            .statement-box {
+                padding: 40px 24px;
+            }
+
+            .cta {
+                padding: 70px 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .whatsapp-float {
+                width: 54px;
+                height: 54px;
+                right: 16px;
+                bottom: 16px;
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Street Gadgets Care">
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html" class="active">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="tech-repairs.html">
+                Tech Repairs
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="creative-studio.html">
+                Creative Studio
+            </a>
+
+            <a href="contact.html" class="nav-cta">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                About Street Gadgets Care
+            </div>
+
+            <h1>
+                Technology with
+                <span>care.</span>
+            </h1>
+
+            <p>
+                Street Gadgets Care is a Nairobi-based technology and
+                creative business helping people and businesses repair,
+                maintain, upgrade, present and make better use of their
+                technology.
+            </p>
+
+            <div class="hero-meta">
+
+                <div class="meta-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Nairobi, Kenya
+                </div>
+
+                <div class="meta-item">
+                    <i class="fa-solid fa-truck"></i>
+                    Serving Customers Across Kenya
+                </div>
+
+                <div class="meta-item">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    Technology First
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div>
+
+                <div class="section-label">
+                    Who We Are
+                </div>
+
+                <h2>
+                    More than fixing devices.
+                </h2>
+
+            </div>
+
+            <div class="intro-text">
+
+                <p>
+                    Street Gadgets Care was built around a simple idea:
+                    technology should make life easier, not become another
+                    problem to deal with.
+                </p>
+
+                <p>
+                    We work with phones, laptops, accessories and other
+                    technology while also helping individuals and businesses
+                    with creative design and practical digital support.
+                </p>
+
+                <p>
+                    Our main focus is technology. From a device that has
+                    stopped working to a laptop that needs an upgrade, we
+                    approach every job with attention to detail and a focus
+                    on finding a practical solution.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STORY
+========================= -->
+
+<section class="story">
+
+    <div class="container">
+
+        <div class="story-grid">
+
+            <div class="story-copy">
+
+                <div class="section-label">
+                    Our Story
+                </div>
+
+                <h2>
+                    We take care of the technology you depend on.
+                </h2>
+
+                <p>
+                    Technology has become part of almost everything we do.
+                    We rely on phones to communicate, laptops to work and
+                    study, and digital tools to run businesses.
+                </p>
+
+                <p>
+                    When those tools stop working, need improvement or need
+                    to be presented professionally, having someone you can
+                    turn to makes a difference.
+                </p>
+
+                <p>
+                    That is where Street Gadgets Care comes in — combining
+                    technical knowledge, practical service and creative
+                    solutions under one brand.
+                </p>
+
+                <div class="story-highlight">
+                    "Technology should work for you, not become a daily headache."
+                </div>
+
+            </div>
+
+
+            <div class="story-panel">
+
+                <small>
+                    Street Gadgets Care
+                </small>
+
+                <h3>
+                    Repair it. Improve it. Use it better.
+                </h3>
+
+                <p>
+                    From everyday device problems to creative business needs,
+                    our goal is to provide useful solutions that customers
+                    can understand and use.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHAT WE DO
+========================= -->
+
+<section class="identity">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h2>
+                Three areas. One connected business.
+            </h2>
+
+            <p>
+                Our services are connected by one purpose: helping people
+                solve practical technology, creative and digital needs.
+            </p>
+
+        </div>
+
+
+        <div class="identity-grid">
+
+
+            <div class="identity-card">
+
+                <div class="card-number">
+                    01 / TECHNOLOGY
+                </div>
+
+                <div class="identity-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <h3>
+                    Technology & Repairs
+                </h3>
+
+                <p>
+                    Phone and laptop repairs, screen and battery replacement,
+                    software support, Windows installation, servicing,
+                    upgrades and other device-related solutions.
+                </p>
+
+            </div>
+
+
+            <div class="identity-card">
+
+                <div class="card-number">
+                    02 / SHOP
+                </div>
+
+                <div class="identity-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <h3>
+                    Devices & Accessories
+                </h3>
+
+                <p>
+                    We also help customers find useful devices, laptop
+                    accessories, storage, memory, chargers, cables,
+                    protection and other technology essentials.
+                </p>
+
+            </div>
+
+
+            <div class="identity-card">
+
+                <div class="card-number">
+                    03 / CREATIVE
+                </div>
+
+                <div class="identity-icon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+
+                <h3>
+                    Creative & Digital Support
+                </h3>
+
+                <p>
+                    Graphic design, branding materials, CVs, company
+                    profiles, business plans, business documents and other
+                    practical digital support for individuals and businesses.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OUR APPROACH
+========================= -->
+
+<section class="approach">
+
+    <div class="container">
+
+        <div class="approach-grid">
+
+            <div>
+
+                <div class="section-label">
+                    Our Approach
+                </div>
+
+                <h2>
+                    Good service starts with understanding the problem.
+                </h2>
+
+                <p class="approach-intro">
+                    Whether you bring us a damaged phone, a slow laptop,
+                    a device that needs an upgrade or a business project
+                    that needs professional presentation, we start by
+                    understanding what you actually need.
+                </p>
+
+            </div>
+
+
+            <div class="principles">
+
+
+                <div class="principle">
+
+                    <div class="principle-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Listen First
+                        </h3>
+
+                        <p>
+                            We begin by understanding the problem, requirement
+                            or goal before deciding on the solution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Practical Solutions
+                        </h3>
+
+                        <p>
+                            We focus on solutions that make sense for the
+                            customer's actual situation and needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Careful Work
+                        </h3>
+
+                        <p>
+                            Devices, designs and business projects all receive
+                            attention to detail throughout the process.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Clear Communication
+                        </h3>
+
+                        <p>
+                            We keep the process straightforward so customers
+                            know what is happening and what to expect.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VALUES
+========================= -->
+
+<section class="values">
+
+    <div class="container">
+
+        <div class="values-header">
+
+            <div class="section-label">
+                What Matters To Us
+            </div>
+
+            <h2>
+                The way we want customers to experience our work.
+            </h2>
+
+            <p>
+                Our brand is built around practical service, attention to
+                detail and treating every customer interaction seriously.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>
+                    Care
+                </h3>
+
+                <p>
+                    We handle customer devices, projects and information
+                    with the attention they deserve.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>
+                    Attention to Detail
+                </h3>
+
+                <p>
+                    Small details matter, whether we are working on a device
+                    or preparing a professional design.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+
+                <h3>
+                    Customer Focus
+                </h3>
+
+                <p>
+                    We aim to understand the customer's actual need and
+                    provide a clear, useful way forward.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BRAND STATEMENT
+========================= -->
+
+<section class="statement">
+
+    <div class="container">
+
+        <div class="statement-box">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <h2>
+                Technology should work for you,
+                not become a daily headache.
+            </h2>
+
+            <p>
+                That idea sits at the heart of Street Gadgets Care —
+                from technical repairs and accessories to creative work
+                and practical digital support.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Let's take care of what you need.
+        </h2>
+
+        <p>
+            Whether it is a device that needs attention, something you need
+            to buy, or a creative project you want to bring to life,
+            Street Gadgets Care is ready to help.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="tech-repairs.html" class="btn btn-primary">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Tech Repairs
+            </a>
+
+            <a href="shop.html" class="btn btn-outline">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Visit Shop
+            </a>
+
+            <a href="creative-studio.html" class="btn btn-outline">
+                <i class="fa-solid fa-pen-nib"></i>
+                Creative Studio
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <img src="Logo.png" alt="Street Gadgets Care">
+
+                <p>
+                    Technology, repairs, gadgets, creative design and
+                    practical digital solutions — based in Nairobi and
+                    serving customers across Kenya.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="tech-repairs.html">
+                    Tech Repairs
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="creative-studio.html">
+                    Creative Studio
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Get In Touch
+                </h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="https://wa.me/254114259961" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a href="tel:0114259961">
+                    0114259961
+                </a>
+
+                <a href="mailto:streetgadgetscare@gmail.com">
+                    Email Us
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 Street Gadgets Care. All Rights Reserved.
+            </div>
+
+            <div>
+                Based in Nairobi • Serving Customers Across Kenya
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/254114259961"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+>
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+</body>
+</html>
