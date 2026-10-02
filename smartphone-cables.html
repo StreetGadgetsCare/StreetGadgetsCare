@@ -6,6 +6,9 @@
 
     <title>Smartphone Charging Cables | Street Gadgets Care</title>
 
+    <meta name="description"
+          content="Shop smartphone charging and data cables from Street Gadgets Care, including USB-C, Micro USB, Lightning and multi-purpose cables. Nairobi based, serving customers across Kenya.">
+
     <style>
         * {
             box-sizing: border-box;
@@ -14,88 +17,247 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
             color: #222;
+            line-height: 1.6;
         }
 
-        /* HEADER */
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #0b1220;
             color: white;
-            padding: 15px 5%;
+            padding: 14px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
         .logo img {
-            height: 55px;
-            width: auto;
+            width: 170px;
+            max-height: 58px;
+            object-fit: contain;
+            display: block;
         }
 
         nav {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: flex-end;
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
+            transition: 0.25s ease;
         }
 
         nav a:hover {
-            color: #25D366;
+            color: #19a7ce;
         }
 
-        /* PAGE HEADER */
-        .page-header {
-            background: #111827;
-            color: white;
+        .nav-whatsapp {
+            background: #25d366;
+            color: white !important;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .nav-whatsapp:hover {
+            background: #1fb957;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(rgba(11, 18, 32, 0.87), rgba(11, 18, 32, 0.9)),
+                url("Samsung%201.8m%20C-C.jpeg") center/cover no-repeat;
+
+            min-height: 410px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 55px 20px;
+            padding: 65px 20px;
+            color: white;
         }
 
-        .page-header h1 {
-            font-size: 38px;
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            color: #7edcf5;
+            background: rgba(25, 167, 206, 0.14);
+            border: 1px solid rgba(25, 167, 206, 0.4);
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 43px;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #19a7ce;
+        }
+
+        .hero p {
+            color: #d7e0ea;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto 27px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: #19a7ce;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #128dad;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fb957;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           CATEGORY NAV
+        ========================= */
+
+        .category-nav {
+            background: white;
+            border-bottom: 1px solid #e5e9ef;
+            padding: 16px 5%;
+        }
+
+        .category-nav-inner {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-nav a {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 8px 13px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .category-nav a:hover,
+        .category-nav a.active {
+            background: #19a7ce;
+            color: white;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .section-label {
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .intro h2 {
+            color: #0b1220;
+            font-size: 31px;
             margin-bottom: 10px;
         }
 
-        .page-header p {
-            font-size: 16px;
-            color: #d1d5db;
+        .intro p {
+            color: #64748b;
+            font-size: 15px;
+            max-width: 700px;
+            margin: auto;
         }
 
-        /* PRODUCTS */
+        /* =========================
+           PRODUCTS
+        ========================= */
+
         .products {
-            padding: 50px 5%;
+            max-width: 1120px;
+            margin: auto;
+            padding: 25px 20px 65px;
         }
 
         .cable-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            max-width: 1200px;
-            margin: auto;
         }
 
         .cable-card {
             background: white;
-            border-radius: 12px;
+            border: 1px solid #e5e9ef;
+            border-radius: 13px;
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 7px 24px rgba(11, 18, 32, 0.07);
             transition: 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -103,17 +265,16 @@
 
         .cable-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 14px 32px rgba(11, 18, 32, 0.12);
         }
 
         .cable-image {
-            width: 100%;
-            height: 280px;
-            background: #f1f3f5;
+            height: 245px;
+            background: #f7f9fb;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 18px;
         }
 
         .cable-image img {
@@ -130,141 +291,238 @@
         }
 
         .cable-content h3 {
-            font-size: 20px;
+            color: #0b1220;
+            font-size: 19px;
+            line-height: 1.35;
             margin-bottom: 10px;
-            color: #111827;
         }
 
         .cable-content p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 15px;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 13px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef8fb;
+            color: #0b7fa0;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            width: fit-content;
         }
 
         .price {
+            color: #19a7ce;
             font-size: 20px;
             font-weight: bold;
-            color: #111827;
+            line-height: 1.55;
             margin-bottom: 15px;
         }
 
         .price span {
             display: block;
-            font-size: 14px;
-            font-weight: normal;
-            margin-top: 5px;
-            color: #555;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #eef2ff;
-            color: #374151;
-            padding: 6px 10px;
-            border-radius: 20px;
+            color: #64748b;
             font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            width: fit-content;
+            font-weight: normal;
+            line-height: 1.5;
         }
 
-        /* WHATSAPP BUTTON */
+        .warranty {
+            display: inline-block;
+            color: #168447;
+            background: #edf9f1;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 4px;
+            margin-bottom: 10px;
+        }
+
         .whatsapp-btn {
             display: block;
             margin-top: auto;
-            padding: 12px 15px;
-            background: #25D366;
+            background: #25d366;
             color: white;
             text-align: center;
-            text-decoration: none;
+            padding: 11px 14px;
             border-radius: 7px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
-            transition: 0.3s ease;
+            transition: 0.25s ease;
         }
 
         .whatsapp-btn:hover {
-            background: #1ebe5d;
+            background: #1fb957;
             transform: translateY(-2px);
         }
 
-        /* INFO SECTION */
+        /* =========================
+           INFO SECTION
+        ========================= */
+
         .info-section {
-            max-width: 1000px;
-            margin: 10px auto 50px;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
+            max-width: 950px;
+            margin: 0 auto 65px;
+            padding: 35px 25px;
+            background: #0b1220;
+            color: white;
+            border-radius: 13px;
             text-align: center;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
         }
 
         .info-section h2 {
-            margin-bottom: 12px;
-            color: #111827;
+            font-size: 27px;
+            margin-bottom: 10px;
         }
 
         .info-section p {
-            color: #555;
-            line-height: 1.7;
+            color: #cbd5e1;
+            max-width: 720px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           DELIVERY STRIP
+        ========================= */
+
+        .delivery-strip {
+            background: #eef8fb;
+            border-top: 1px solid #d9f0f6;
+            border-bottom: 1px solid #d9f0f6;
+            text-align: center;
+            padding: 22px 20px;
+        }
+
+        .delivery-strip strong {
+            color: #0b1220;
             font-size: 15px;
         }
 
-        .back-link {
-            display: block;
-            width: fit-content;
-            margin: 0 auto 50px;
-            color: #111827;
-            text-decoration: none;
-            font-weight: bold;
+        .delivery-strip p {
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 3px;
         }
 
-        .back-link:hover {
-            color: #25D366;
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .final-cta {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px 25px;
+            text-align: center;
         }
 
-        /* FOOTER */
+        .final-cta h2 {
+            color: #0b1220;
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+
+        .final-cta p {
+            color: #64748b;
+            font-size: 15px;
+            max-width: 650px;
+            margin: 0 auto 23px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 15px;
-            font-size: 14px;
+            padding: 35px 20px;
+        }
+
+        .footer-brand {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 7px;
         }
 
         footer p {
+            color: #aeb8c6;
+            font-size: 13px;
             margin: 5px 0;
         }
 
-        /* TABLET */
-        @media (max-width: 900px) {
-            .cable-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            nav {
-                gap: 12px;
-            }
+        .footer-contact {
+            color: #dce5ee !important;
         }
 
-        /* MOBILE */
-        @media (max-width: 600px) {
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+            z-index: 999;
+            transition: 0.25s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+            background: #1fb957;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
             header {
                 flex-direction: column;
-                gap: 12px;
+                align-items: center;
             }
 
             nav {
                 justify-content: center;
             }
 
-            .page-header h1 {
-                font-size: 30px;
+            .cable-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .hero {
+                min-height: 370px;
+                padding: 55px 18px;
             }
 
-            .products {
-                padding: 35px 5%;
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 15px;
             }
 
             .cable-grid {
@@ -272,7 +530,66 @@
             }
 
             .cable-image {
-                height: 300px;
+                height: 270px;
+            }
+
+            .intro h2 {
+                font-size: 27px;
+            }
+
+            .info-section {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 12px 4%;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .nav-whatsapp {
+                padding: 8px 11px;
+            }
+
+            .category-nav-inner {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+
+            .category-nav a {
+                white-space: nowrap;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 270px;
+            }
+
+            .floating-whatsapp {
+                right: 15px;
+                bottom: 15px;
+                width: 48px;
+                height: 48px;
             }
         }
     </style>
@@ -280,52 +597,177 @@
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-    <div class="logo">
-        <img src="Logo.png" alt="Street Gadgets Care Logo">
-    </div>
+    <a href="index.html">
+        <img
+            src="Logo.png"
+            alt="Street Gadgets Care Logo"
+            class="logo"
+        >
+    </a>
 
     <nav>
+
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="shop.html">Shop</a>
+        <a href="creative-studio.html">Creative Studio</a>
         <a href="contact.html">Contact</a>
+
+        <a
+            href="https://wa.me/254114259961"
+            class="nav-whatsapp"
+            target="_blank"
+            rel="noopener"
+        >
+            WhatsApp
+        </a>
+
     </nav>
 
 </header>
 
 
-<section class="page-header">
+<!-- =========================
+     HERO
+========================= -->
 
-    <h1>Smartphone Charging Cables</h1>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            SMARTPHONE CABLES
+        </div>
+
+        <h1>
+            Charge. Connect. <span>Keep Going.</span>
+        </h1>
+
+        <p>
+            Find charging and data cables for smartphones, tablets
+            and other mobile devices, from everyday options to
+            higher-power USB-C cables.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#smartphone-cables"
+                class="btn btn-primary"
+            >
+                View Cables
+            </a>
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20smartphone%20charging%20cable."
+                class="btn btn-whatsapp"
+                target="_blank"
+                rel="noopener"
+            >
+                Ask About a Cable
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORY NAV
+========================= -->
+
+<div class="category-nav">
+
+    <div class="category-nav-inner">
+
+        <a href="shop.html">
+            All Shop
+        </a>
+
+        <a href="chargers.html">
+            Chargers
+        </a>
+
+        <a href="cables.html" class="active">
+            Charging Cables
+        </a>
+
+        <a href="smartphone-cables.html" class="active">
+            Smartphone Cables
+        </a>
+
+        <a href="laptop-cables.html">
+            Laptop Cables
+        </a>
+
+        <a href="phone-protection.html">
+            Phone Protection
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="section-label">
+        SMARTPHONE CABLES
+    </div>
+
+    <h2>
+        Find the connection your device needs.
+    </h2>
 
     <p>
-        Quality charging and data cables for smartphones and other mobile devices.
+        From everyday charging cables to higher-power USB-C options,
+        choose the cable that matches your device and charging setup.
     </p>
 
 </section>
 
 
-<section class="products">
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products" id="smartphone-cables">
 
     <div class="cable-grid">
 
 
         <!-- 1. SAMSUNG 1.8M C-C -->
 
-        <div class="cable-card">
+        <article class="cable-card">
 
             <div class="cable-image">
-                <img src="Samsung%201.8m%20C-C.jpeg"
-                     alt="Samsung 1.8m USB-C to USB-C 5A Cable">
+
+                <img
+                    src="Samsung%201.8m%20C-C.jpeg"
+                    alt="Samsung 1.8m USB-C to USB-C 5A Cable"
+                >
+
             </div>
 
             <div class="cable-content">
 
-                <h3>Samsung 1.8m USB-C to USB-C 5A</h3>
+                <h3>
+                    Samsung 1.8m USB-C to USB-C 5A
+                </h3>
 
                 <p>
                     1.8m USB-C to USB-C cable with 5A charging support,
@@ -340,29 +782,38 @@
                     KSh 250
                 </div>
 
-                <a class="whatsapp-btn"
-                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%201.8m%20USB-C%20to%20USB-C%205A%20cable."
-                   target="_blank">
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%201.8m%20USB-C%20to%20USB-C%205A%20cable."
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Inquire on WhatsApp
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
 
         <!-- 2. ORAIMO DIGILINE -->
 
-        <div class="cable-card">
+        <article class="cable-card">
 
             <div class="cable-image">
-                <img src="Oraimo%20Digiline%20100W.jpeg"
-                     alt="Oraimo Digiline 100W USB-C to USB-C Cable">
+
+                <img
+                    src="Oraimo%20Digiline%20100W.jpeg"
+                    alt="Oraimo Digiline 100W USB-C to USB-C Cable"
+                >
+
             </div>
 
             <div class="cable-content">
 
-                <h3>Oraimo Digiline 100W USB-C to USB-C</h3>
+                <h3>
+                    Oraimo Digiline 100W USB-C to USB-C
+                </h3>
 
                 <p>
                     1.2m USB-C to USB-C cable with 100W fast charging,
@@ -376,32 +827,44 @@
 
                 <div class="price">
                     KSh 1,250
-                    <span>180 Days Warranty</span>
                 </div>
 
-                <a class="whatsapp-btn"
-                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Digiline%20100W%20USB-C%20to%20USB-C%20cable."
-                   target="_blank">
+                <span class="warranty">
+                    180 Days Warranty
+                </span>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Digiline%20100W%20USB-C%20to%20USB-C%20cable."
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Inquire on WhatsApp
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
 
         <!-- 3. BUDI PD 240W -->
 
-        <div class="cable-card">
+        <article class="cable-card">
 
             <div class="cable-image">
-                <img src="Budi%20PD%20240W.jpeg"
-                     alt="Budi PD 240W 1.8m USB-C to USB-C Cable">
+
+                <img
+                    src="Budi%20PD%20240W.jpeg"
+                    alt="Budi PD 240W 1.8m USB-C to USB-C Cable"
+                >
+
             </div>
 
             <div class="cable-content">
 
-                <h3>Budi PD 240W 1.8m USB-C to USB-C</h3>
+                <h3>
+                    Budi PD 240W 1.8m USB-C to USB-C
+                </h3>
 
                 <p>
                     1.8m USB-C to USB-C cable supporting up to 240W
@@ -416,34 +879,42 @@
                     KSh 450
                 </div>
 
-                <a class="whatsapp-btn"
-                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Budi%20PD%20240W%201.8m%20USB-C%20to%20USB-C%20cable."
-                   target="_blank">
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Budi%20PD%20240W%201.8m%20USB-C%20to%20USB-C%20cable."
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Inquire on WhatsApp
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
 
         <!-- 4. AMAYA FAST CHARGING & DATA -->
 
-        <div class="cable-card">
+        <article class="cable-card">
 
             <div class="cable-image">
-                <img src="Amaya%20Fast%20Charging.jpeg"
-                     alt="Amaya Fast Charging and Data Cable">
+
+                <img
+                    src="Amaya%20Fast%20Charging.jpeg"
+                    alt="Amaya Fast Charging and Data Cable"
+                >
+
             </div>
 
             <div class="cable-content">
 
-                <h3>Amaya Fast Charging & Data Cable</h3>
+                <h3>
+                    Amaya Fast Charging & Data Cable
+                </h3>
 
                 <p>
-                    Enjoy fast charging, quick data transfer and
-                    long-lasting durability. Available in different
-                    connector options.
+                    Fast charging and data cable available in different
+                    connector options for compatible mobile devices.
                 </p>
 
                 <span class="tag">
@@ -457,34 +928,43 @@
                     <span>4-in-1 — KSh 1,550</span>
                 </div>
 
-                <a class="whatsapp-btn"
-                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20Fast%20Charging%20%26%20Data%20Cable."
-                   target="_blank">
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20Fast%20Charging%20%26%20Data%20Cable."
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Inquire on WhatsApp
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
 
         <!-- 5. AMAYA C-C -->
 
-        <div class="cable-card">
+        <article class="cable-card">
 
             <div class="cable-image">
-                <img src="Amaya%20C-C.jpeg"
-                     alt="Amaya USB-C to USB-C Cable">
+
+                <img
+                    src="Amaya%20C-C.jpeg"
+                    alt="Amaya USB-C to USB-C Cable"
+                >
+
             </div>
 
             <div class="cable-content">
 
-                <h3>Amaya USB-C to USB-C</h3>
+                <h3>
+                    Amaya USB-C to USB-C
+                </h3>
 
                 <p>
                     USB-C to USB-C cable designed for charging and
-                    data transfer on compatible smartphones and other
-                    USB-C devices.
+                    data transfer on compatible smartphones and
+                    other USB-C devices.
                 </p>
 
                 <span class="tag">
@@ -495,29 +975,38 @@
                     KSh 450
                 </div>
 
-                <a class="whatsapp-btn"
-                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20USB-C%20to%20USB-C%20cable."
-                   target="_blank">
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Amaya%20USB-C%20to%20USB-C%20cable."
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Inquire on WhatsApp
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
 
         <!-- 6. ORAIMO USB-C -->
 
-        <div class="cable-card">
+        <article class="cable-card">
 
             <div class="cable-image">
-                <img src="Oraimo%20USB-C.jpeg"
-                     alt="Oraimo USB-C Cable">
+
+                <img
+                    src="Oraimo%20USB-C.jpeg"
+                    alt="Oraimo USB-C Cable"
+                >
+
             </div>
 
             <div class="cable-content">
 
-                <h3>Oraimo USB-C Cable</h3>
+                <h3>
+                    Oraimo USB-C Cable
+                </h3>
 
                 <p>
                     Durable USB-C charging and data cable for compatible
@@ -532,15 +1021,18 @@
                     KSh 450
                 </div>
 
-                <a class="whatsapp-btn"
-                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20USB-C%20cable."
-                   target="_blank">
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20USB-C%20cable."
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Inquire on WhatsApp
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
 
     </div>
@@ -548,41 +1040,102 @@
 </section>
 
 
+<!-- =========================
+     INFO
+========================= -->
+
 <section class="info-section">
 
-    <h2>Need the Right Cable?</h2>
+    <h2>
+        Need Help Choosing a Cable?
+    </h2>
 
     <p>
-        We stock charging and data cables for different smartphones,
-        tablets and other mobile devices. If you're not sure which
-        cable you need, contact Street Gadgets Care and we'll help
-        you choose the right one.
+        Different devices use different connectors and charging
+        requirements. If you're unsure whether you need USB-C,
+        Micro USB, Lightning or another option, send us your device
+        model and we'll help you choose the right cable.
     </p>
 
 </section>
 
 
-<a href="cables.html" class="back-link">
-    ← Back to Charging Cable Categories
-</a>
+<!-- =========================
+     DELIVERY
+========================= -->
 
+<section class="delivery-strip">
+
+    <strong>
+        Nairobi based • Serving customers across Kenya
+    </strong>
+
+    <p>
+        Need a cable from outside Nairobi? Contact us and we'll
+        help arrange delivery.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final-cta">
+
+    <h2>
+        Ready to get connected?
+    </h2>
+
+    <p>
+        Tell us the phone or device you're using and we'll help you
+        find the right charging or data cable.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20smartphone%20charging%20cable."
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener"
+        >
+            Ask on WhatsApp
+        </a>
+
+        <a
+            href="cables.html"
+            class="btn btn-primary"
+        >
+            ← Back to Cables
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
+    <div class="footer-brand">
+        Street Gadgets Care
+    </div>
+
     <p>
-        <strong>Street Gadgets Care</strong>
+        Laptop & Phone Repair • Accessories • Graphic Design
     </p>
 
     <p>
-        Phone & Laptop Repair • Accessories • Graphic Design
+        Nairobi, Kenya • Serving Customers Across Kenya
     </p>
 
-    <p>
-        Nairobi, Kenya
-    </p>
-
-    <p>
-        WhatsApp: 0114259961
+    <p class="footer-contact">
+        0114259961 • streetgadgetscare@gmail.com
     </p>
 
     <p>
@@ -590,6 +1143,21 @@
     </p>
 
 </footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20smartphone%20charging%20cable."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+>
+    ☎
+</a>
 
 </body>
 </html>
