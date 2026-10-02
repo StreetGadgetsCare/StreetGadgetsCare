@@ -6,6 +6,9 @@
 
     <title>Charging Cables | Street Gadgets Care</title>
 
+    <meta name="description"
+          content="Shop charging and data cables for smartphones, tablets and laptops from Street Gadgets Care. Nairobi based, serving customers across Kenya.">
+
     <style>
         * {
             box-sizing: border-box;
@@ -14,208 +17,657 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
             color: #222;
+            line-height: 1.6;
         }
 
-        /* HEADER */
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #0b1220;
             color: white;
-            padding: 15px 5%;
+            padding: 14px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
         .logo img {
-            height: 55px;
-            width: auto;
+            width: 170px;
+            max-height: 58px;
+            object-fit: contain;
+            display: block;
         }
 
         nav {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: flex-end;
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
+            transition: 0.25s ease;
         }
 
         nav a:hover {
-            color: #25D366;
+            color: #19a7ce;
         }
 
-        /* PAGE HEADER */
-        .page-header {
-            background: #111827;
-            color: white;
+        .nav-whatsapp {
+            background: #25d366;
+            color: white !important;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .nav-whatsapp:hover {
+            background: #1fb957;
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
+            color: white;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(11, 18, 32, 0.86), rgba(11, 18, 32, 0.88)),
+                url("charging-cable.jpg") center/cover no-repeat;
         }
 
-        .page-header h1 {
-            font-size: 40px;
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(25, 167, 206, 0.16);
+            border: 1px solid rgba(25, 167, 206, 0.45);
+            color: #7edcf5;
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            color: #19a7ce;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 28px;
+            color: #dbe4ee;
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: #19a7ce;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #128dad;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fb957;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           CATEGORY NAV
+        ========================= */
+
+        .category-nav {
+            background: white;
+            border-bottom: 1px solid #e5e9ef;
+            padding: 16px 5%;
+        }
+
+        .category-nav-inner {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-nav a {
+            color: #334155;
+            background: #f1f5f9;
+            padding: 8px 13px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .category-nav a:hover,
+        .category-nav a.active {
+            background: #19a7ce;
+            color: white;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .section-label {
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .intro h2 {
+            color: #0b1220;
+            font-size: 32px;
             margin-bottom: 12px;
         }
 
-        .page-header p {
-            font-size: 16px;
-            color: #d1d5db;
+        .intro p {
+            color: #64748b;
+            max-width: 700px;
+            margin: auto;
+            font-size: 15px;
         }
 
-        /* CATEGORY SECTION */
+        /* =========================
+           CATEGORY CARDS
+        ========================= */
+
         .categories {
-            padding: 60px 5%;
+            padding: 25px 5% 65px;
         }
 
         .category-grid {
+            max-width: 1050px;
+            margin: auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 1000px;
-            margin: auto;
+            gap: 28px;
         }
 
         .category-card {
             background: white;
-            padding: 45px 30px;
             border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #e6eaf0;
+            box-shadow: 0 7px 25px rgba(11, 18, 32, 0.07);
             transition: 0.3s ease;
         }
 
         .category-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 14px 35px rgba(11, 18, 32, 0.12);
         }
 
-        .category-icon {
-            font-size: 65px;
-            margin-bottom: 20px;
+        .category-image {
+            height: 230px;
+            background: #f4f7fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
         }
 
-        .category-card h2 {
-            font-size: 25px;
-            color: #111827;
-            margin-bottom: 15px;
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
-        .category-card p {
-            color: #555;
+        .category-content {
+            padding: 28px;
+            text-align: center;
+        }
+
+        .category-content h3 {
+            color: #0b1220;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .category-content p {
+            color: #64748b;
+            font-size: 14px;
             line-height: 1.7;
-            font-size: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .category-btn {
             display: inline-block;
-            padding: 13px 22px;
-            background: #111827;
+            background: #0b1220;
             color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-size: 14px;
+            padding: 11px 18px;
+            border-radius: 6px;
+            font-size: 13px;
             font-weight: bold;
-            transition: 0.3s ease;
+            transition: 0.25s ease;
         }
 
         .category-btn:hover {
-            background: #25D366;
+            background: #19a7ce;
             transform: translateY(-2px);
         }
 
-        /* INFO SECTION */
-        .info-section {
-            max-width: 1000px;
-            margin: 0 auto 50px;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        /* =========================
+           GUIDANCE SECTION
+        ========================= */
+
+        .guidance {
+            background: #0b1220;
+            color: white;
+            padding: 65px 5%;
         }
 
-        .info-section h2 {
-            margin-bottom: 12px;
-            color: #111827;
+        .guidance-inner {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 45px;
+            align-items: center;
         }
 
-        .info-section p {
-            color: #555;
-            line-height: 1.7;
+        .guidance h2 {
+            font-size: 31px;
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .guidance h2 span {
+            color: #19a7ce;
+        }
+
+        .guidance p {
+            color: #cbd5e1;
             font-size: 15px;
+            line-height: 1.8;
         }
 
-        .back-link {
+        .guidance-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .guidance-item {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 9px;
+            padding: 16px 18px;
+        }
+
+        .guidance-item strong {
             display: block;
-            width: fit-content;
-            margin: 0 auto 50px;
-            color: #111827;
-            text-decoration: none;
+            color: white;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .guidance-item span {
+            color: #aebdcd;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ORDER SECTION
+        ========================= */
+
+        .order-section {
+            max-width: 1000px;
+            margin: 65px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .order-section h2 {
+            color: #0b1220;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .order-section > p {
+            color: #64748b;
+            font-size: 15px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .order-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid #e5e9ef;
+            border-radius: 10px;
+            padding: 25px 18px;
+        }
+
+        .step-number {
+            width: 38px;
+            height: 38px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #19a7ce;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
         }
 
-        .back-link:hover {
-            color: #25D366;
+        .step h3 {
+            color: #0b1220;
+            font-size: 16px;
+            margin-bottom: 6px;
         }
 
-        /* FOOTER */
+        .step p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           DELIVERY STRIP
+        ========================= */
+
+        .delivery-strip {
+            background: #eef8fb;
+            border-top: 1px solid #d9f0f6;
+            border-bottom: 1px solid #d9f0f6;
+            text-align: center;
+            padding: 22px 20px;
+        }
+
+        .delivery-strip strong {
+            color: #0b1220;
+            font-size: 15px;
+        }
+
+        .delivery-strip p {
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 3px;
+        }
+
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .final-cta {
+            max-width: 1050px;
+            margin: 65px auto;
+            padding: 45px 30px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e4e9ef;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(11, 18, 32, 0.06);
+        }
+
+        .final-cta h2 {
+            color: #0b1220;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .final-cta p {
+            color: #64748b;
+            max-width: 650px;
+            margin: 0 auto 23px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 15px;
-            font-size: 14px;
+            padding: 35px 20px;
+        }
+
+        footer .footer-brand {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 7px;
         }
 
         footer p {
+            color: #aeb8c6;
+            font-size: 13px;
             margin: 5px 0;
         }
 
-        /* MOBILE */
-        @media (max-width: 900px) {
-            .category-grid {
-                grid-template-columns: 1fr;
-                max-width: 600px;
-            }
+        footer .footer-contact {
+            color: #dce5ee;
         }
 
-        @media (max-width: 600px) {
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+            z-index: 999;
+            transition: 0.25s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+            background: #1fb957;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
             header {
                 flex-direction: column;
-                gap: 12px;
+                align-items: center;
             }
 
             nav {
                 justify-content: center;
             }
 
-            .page-header h1 {
-                font-size: 32px;
+            .guidance-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .hero {
+                min-height: 390px;
+                padding: 60px 18px;
             }
 
-            .categories {
-                padding: 40px 5%;
+            .hero h1 {
+                font-size: 34px;
             }
 
-            .category-card {
-                padding: 35px 22px;
+            .hero p {
+                font-size: 15px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .order-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .intro h2,
+            .guidance h2,
+            .order-section h2,
+            .final-cta h2 {
+                font-size: 27px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 12px 4%;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            nav {
+                gap: 11px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .nav-whatsapp {
+                padding: 8px 11px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 260px;
+            }
+
+            .category-nav-inner {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 3px;
+            }
+
+            .category-nav a {
+                white-space: nowrap;
+            }
+
+            .category-image {
+                height: 205px;
+            }
+
+            .category-content {
+                padding: 23px 20px;
+            }
+
+            .guidance {
+                padding: 50px 20px;
+            }
+
+            .final-cta {
+                margin: 50px 20px;
+                padding: 35px 20px;
+            }
+
+            .floating-whatsapp {
+                right: 15px;
+                bottom: 15px;
+                width: 48px;
+                height: 48px;
             }
         }
     </style>
@@ -223,83 +675,223 @@
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-    <div class="logo">
+    <a href="index.html" class="logo">
         <img src="Logo.png" alt="Street Gadgets Care Logo">
-    </div>
+    </a>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="shop.html">Shop</a>
+        <a href="creative-studio.html">Creative Studio</a>
         <a href="contact.html">Contact</a>
+
+        <a
+            href="https://wa.me/254114259961"
+            class="nav-whatsapp"
+            target="_blank"
+            rel="noopener"
+        >
+            WhatsApp
+        </a>
     </nav>
 
 </header>
 
 
-<section class="page-header">
+<!-- =========================
+     HERO
+========================= -->
 
-    <h1>Charging Cables</h1>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            CHARGING & DATA CABLES
+        </div>
+
+        <h1>
+            The right cable for <span>your device.</span>
+        </h1>
+
+        <p>
+            Shop charging and data cables for smartphones, tablets,
+            laptops and other everyday devices — with help available
+            when you're not sure what you need.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#cable-categories" class="btn btn-primary">
+                Explore Cables
+            </a>
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20charging%20cable."
+                class="btn btn-whatsapp"
+                target="_blank"
+                rel="noopener"
+            >
+                Ask About a Cable
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORY NAV
+========================= -->
+
+<div class="category-nav">
+
+    <div class="category-nav-inner">
+
+        <a href="shop.html">
+            All Shop
+        </a>
+
+        <a href="chargers.html">
+            Chargers
+        </a>
+
+        <a href="cables.html" class="active">
+            Charging Cables
+        </a>
+
+        <a href="phone-protection.html">
+            Phone Protection
+        </a>
+
+        <a href="battery-replacement.html">
+            Replacement Batteries
+        </a>
+
+        <a href="laptop-accessories.html">
+            Laptop Accessories
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="section-label">
+        CHOOSE YOUR CABLE
+    </div>
+
+    <h2>
+        Find the connection you need.
+    </h2>
 
     <p>
-        Quality charging and data cables for smartphones, tablets and laptops.
+        Whether you need a replacement phone cable or a compatible
+        laptop charging solution, start with the category that matches
+        your device.
     </p>
 
 </section>
 
 
-<section class="categories">
+<!-- =========================
+     CABLE CATEGORIES
+========================= -->
+
+<section class="categories" id="cable-categories">
 
     <div class="category-grid">
 
 
         <!-- SMARTPHONE CABLES -->
 
-        <div class="category-card">
+        <article class="category-card">
 
-            <div class="category-icon">
-                📱
+            <div class="category-image">
+
+                <img
+                    src="charging-cable.jpg"
+                    alt="Smartphone charging cables"
+                >
+
             </div>
 
-            <h2>Smartphone Charging Cables</h2>
+            <div class="category-content">
 
-            <p>
-                Find quality charging and data cables for smartphones,
-                tablets and other mobile devices, including USB-C,
-                Micro USB, Lightning and multi-purpose cables.
-            </p>
+                <h3>
+                    Smartphone Cables
+                </h3>
 
-            <a href="smartphone-cables.html" class="category-btn">
-                View Smartphone Cables →
-            </a>
+                <p>
+                    Charging and data cables for smartphones, tablets
+                    and other mobile devices, including USB-C,
+                    Micro USB, Lightning and multi-purpose options.
+                </p>
 
-        </div>
+                <a
+                    href="smartphone-cables.html"
+                    class="category-btn"
+                >
+                    View Smartphone Cables →
+                </a>
+
+            </div>
+
+        </article>
 
 
         <!-- LAPTOP CABLES -->
 
-        <div class="category-card">
+        <article class="category-card">
 
-            <div class="category-icon">
-                💻
+            <div class="category-image">
+
+                <img
+                    src="Lenovo%2065W%20USB%20Pin.jpeg"
+                    alt="Laptop charging cable"
+                >
+
             </div>
 
-            <h2>Laptop Charging Cables</h2>
+            <div class="category-content">
 
-            <p>
-                Browse charging cables and compatible power solutions
-                for different laptop models and charging requirements.
-            </p>
+                <h3>
+                    Laptop Cables
+                </h3>
 
-            <a href="laptop-cables.html" class="category-btn">
-                View Laptop Cables →
-            </a>
+                <p>
+                    Browse compatible laptop charging cables and
+                    power solutions for different laptop models,
+                    connectors and charging requirements.
+                </p>
 
-        </div>
+                <a
+                    href="laptop-cables.html"
+                    class="category-btn"
+                >
+                    View Laptop Cables →
+                </a>
+
+            </div>
+
+        </article>
 
 
     </div>
@@ -307,40 +899,214 @@
 </section>
 
 
-<section class="info-section">
+<!-- =========================
+     GUIDANCE
+========================= -->
 
-    <h2>Need the Right Cable?</h2>
+<section class="guidance">
+
+    <div class="guidance-inner">
+
+        <div>
+
+            <div class="section-label">
+                BUY WITH CONFIDENCE
+            </div>
+
+            <h2>
+                Not sure which cable <span>fits?</span>
+            </h2>
+
+            <p>
+                Charging cables can look similar while having different
+                connectors, charging capabilities and data functions.
+                If you're unsure, send us your device model or a photo
+                of the port and we'll help you identify the right option.
+            </p>
+
+        </div>
+
+        <div class="guidance-list">
+
+            <div class="guidance-item">
+                <strong>Check Your Connector</strong>
+                <span>USB-C, Lightning, Micro USB and other connector types.</span>
+            </div>
+
+            <div class="guidance-item">
+                <strong>Check Charging Requirements</strong>
+                <span>Make sure the cable is suitable for your device and charger.</span>
+            </div>
+
+            <div class="guidance-item">
+                <strong>Need Help?</strong>
+                <span>Send us your device model and we'll guide you.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ORDER PROCESS
+========================= -->
+
+<section class="order-section">
+
+    <h2>
+        Ordering is simple.
+    </h2>
 
     <p>
-        Not sure which cable you need? Contact Street Gadgets Care
-        and we'll help you find the right charging or data cable
-        for your device.
+        Find your cable, confirm availability and arrange collection
+        or delivery.
+    </p>
+
+    <div class="order-steps">
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Choose Your Cable
+            </h3>
+
+            <p>
+                Select the cable category that matches your device.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Confirm Availability
+            </h3>
+
+            <p>
+                Contact us to confirm the exact cable and current stock.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Arrange Delivery
+            </h3>
+
+            <p>
+                Collect in Nairobi or arrange delivery across Kenya.
+            </p>
+
+        </div>
+
+    </div>
+
+    <a
+        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20order%20a%20charging%20cable."
+        class="btn btn-whatsapp"
+        target="_blank"
+        rel="noopener"
+    >
+        Order on WhatsApp
+    </a>
+
+</section>
+
+
+<!-- =========================
+     DELIVERY
+========================= -->
+
+<section class="delivery-strip">
+
+    <strong>
+        Nairobi based • Serving customers across Kenya
+    </strong>
+
+    <p>
+        Need a cable from outside Nairobi? Contact us and we'll
+        help arrange delivery.
     </p>
 
 </section>
 
 
-<a href="products.html" class="back-link">
-    ← Back to Products & Accessories
-</a>
+<!-- =========================
+     FINAL CTA
+========================= -->
 
+<section class="final-cta">
+
+    <h2>
+        Need the right cable?
+    </h2>
+
+    <p>
+        Tell us your device model or what connector you need,
+        and we'll help you find the right option.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20the%20right%20charging%20cable."
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener"
+        >
+            Talk to Us on WhatsApp
+        </a>
+
+        <a
+            href="shop.html"
+            class="btn btn-primary"
+        >
+            Back to Shop
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
+    <div class="footer-brand">
+        Street Gadgets Care
+    </div>
+
     <p>
-        <strong>Street Gadgets Care</strong>
+        Laptop & Phone Repair • Accessories • Graphic Design
     </p>
 
     <p>
-        Phone & Laptop Repair • Accessories • Graphic Design
+        Nairobi, Kenya • Serving Customers Across Kenya
     </p>
 
-    <p>
-        Nairobi, Kenya
-    </p>
-
-    <p>
-        WhatsApp: 0114259961
+    <p class="footer-contact">
+        0114259961 • streetgadgetscare@gmail.com
     </p>
 
     <p>
@@ -348,6 +1114,21 @@
     </p>
 
 </footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20charging%20cable."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+>
+    ☎
+</a>
 
 </body>
 </html>
