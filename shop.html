@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | Phones, Laptops & Accessories | Street Gadgets Care</title>
+
+    <meta name="description"
+        content="Shop phones, laptops, chargers, cables, phone protection, batteries, laptop accessories, storage and gadgets from Street Gadgets Care. Based in Nairobi, serving customers across Kenya.">
+
+    <meta name="keywords"
+        content="phones Nairobi, laptops Nairobi, phone accessories Kenya, laptop accessories Nairobi, chargers Kenya, SSD Nairobi, RAM Nairobi, Street Gadgets Care">
+
+    <meta name="author" content="Street Gadgets Care">
+
+    <link rel="icon" href="Logo.png">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+            background: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        :root {
+            --navy: #0b1220;
+            --navy-light: #111c30;
+            --cyan: #19a7ce;
+            --cyan-dark: #118bad;
+            --light: #f5f8fa;
+            --grey: #667085;
+            --border: #e5eaee;
+            --green: #25d366;
+            --white: #ffffff;
+        }
+
+
+        /* ================================================
+           HEADER
+        ================================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(11,18,32,0.96);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            height: 78px;
+
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .nav-links {
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.82);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--cyan);
+        }
+
+        .nav-contact {
+            background: var(--cyan);
+
+            color: white !important;
+
+            padding: 11px 18px;
+
+            border-radius: 7px;
+        }
+
+        .nav-contact:hover {
+            background: var(--cyan-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+
+            color: white;
+
+            font-size: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* ================================================
+           HERO
+        ================================================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(25,167,206,0.18),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 10% 85%,
+                    rgba(25,167,206,0.08),
+                    transparent 30%
+                ),
+                var(--navy);
+
+            color: white;
+
+            padding: 105px 25px 95px;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            right: -260px;
+            top: -240px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.13);
+        }
+
+        .hero::after {
+            content: "SHOP";
+
+            position: absolute;
+
+            right: -10px;
+            bottom: -65px;
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: 190px;
+            font-weight: 700;
+
+            color: rgba(255,255,255,0.025);
+        }
+
+        .hero-container {
+            max-width: 1250px;
+            margin: auto;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: clamp(48px, 6vw, 76px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--cyan);
+        }
+
+        .hero-description {
+            max-width: 680px;
+
+            color: rgba(255,255,255,0.66);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-location {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: rgba(255,255,255,0.48);
+
+            font-size: 13px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-location i {
+            color: var(--cyan);
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        /* ================================================
+           BUTTONS
+        ================================================= */
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 14px 22px;
+
+            border-radius: 7px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--cyan-dark);
+
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.22);
+
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--cyan);
+
+            color: var(--cyan);
+        }
+
+
+        /* ================================================
+           SHOP INTRO
+        ================================================= */
+
+        .intro {
+            padding: 85px 25px 35px;
+
+            background: white;
+        }
+
+        .container {
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .intro-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: end;
+        }
+
+        .section-label {
+            color: var(--cyan);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.7px;
+
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+
+            color: var(--navy);
+
+            font-size: clamp(36px, 4vw, 55px);
+
+            line-height: 1.04;
+
+            letter-spacing: -1.7px;
+
+            margin-top: 12px;
+        }
+
+        .intro-text {
+            color: var(--grey);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+
+        /* ================================================
+           CATEGORY SECTION
+        ================================================= */
+
+        .categories {
+            padding: 60px 25px 100px;
+
+            background: white;
+        }
+
+        .category-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 16px;
+
+            margin-top: 45px;
+        }
+
+        .category-card {
+            position: relative;
+
+            min-height: 290px;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            background: var(--light);
+
+            border: 1px solid var(--border);
+
+            transition: 0.35s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(25,167,206,0.35);
+
+            box-shadow:
+                0 22px 55px rgba(11,18,32,0.10);
+        }
+
+        .category-number {
+            position: absolute;
+
+            top: 20px;
+            right: 22px;
+
+            color: rgba(11,18,32,0.18);
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .category-icon {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 14px;
+
+            background: white;
+
+            color: var(--cyan);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 21px;
+
+            box-shadow: 0 8px 20px rgba(11,18,32,0.06);
+
+            margin-bottom: 55px;
+        }
+
+        .category-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            color: var(--navy);
+
+            font-size: 23px;
+
+            margin-bottom: 8px;
+        }
+
+        .category-card p {
+            color: var(--grey);
+
+            font-size: 12px;
+
+            line-height: 1.75;
+
+            max-width: 330px;
+        }
+
+        .category-link {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--cyan);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            margin-top: 18px;
+        }
+
+        .category-link i {
+            transition: 0.3s ease;
+        }
+
+        .category-card:hover .category-link i {
+            transform: translateX(5px);
+        }
+
+
+        /* ================================================
+           FEATURED SHOP AREA
+        ================================================= */
+
+        .featured {
+            padding: 95px 25px;
+
+            background: var(--light);
+        }
+
+        .featured-box {
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            min-height: 430px;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .featured-content {
+            padding: 65px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .featured-content .section-title {
+            color: white;
+
+            margin-bottom: 18px;
+        }
+
+        .featured-content p {
+            color: rgba(255,255,255,0.58);
+
+            font-size: 14px;
+
+            line-height: 1.85;
+
+            max-width: 540px;
+
+            margin-bottom: 25px;
+        }
+
+        .featured-list {
+            list-style: none;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+
+            margin-bottom: 30px;
+        }
+
+        .featured-list li {
+            color: rgba(255,255,255,0.72);
+
+            font-size: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+        }
+
+        .featured-list i {
+            color: var(--cyan);
+        }
+
+        .featured-visual {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(25,167,206,0.22),
+                    rgba(11,18,32,0.9)
+                );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .featured-visual::before {
+            content: "";
+
+            width: 310px;
+            height: 310px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.22);
+
+            position: absolute;
+        }
+
+        .featured-icon {
+            position: relative;
+            z-index: 2;
+
+            width: 150px;
+            height: 150px;
+
+            border-radius: 35px;
+
+            background: rgba(255,255,255,0.06);
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 70px;
+
+            color: var(--cyan);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        /* ================================================
+           HOW ORDERING WORKS
+        ================================================= */
+
+        .ordering {
+            padding: 95px 25px;
+
+            background: white;
+        }
+
+        .ordering-header {
+            max-width: 650px;
+
+            margin-bottom: 45px;
+        }
+
+        .order-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 1px;
+
+            background: var(--border);
+
+            border: 1px solid var(--border);
+        }
+
+        .order-card {
+            background: white;
+
+            padding: 35px 30px;
+
+            min-height: 230px;
+        }
+
+        .order-number {
+            color: var(--cyan);
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 30px;
+        }
+
+        .order-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            color: var(--navy);
+
+            font-size: 21px;
+
+            margin-bottom: 9px;
+        }
+
+        .order-card p {
+            color: var(--grey);
+
+            font-size: 12px;
+
+            line-height: 1.75;
+        }
+
+
+        /* ================================================
+           AVAILABILITY
+        ================================================= */
+
+        .availability {
+            padding: 85px 25px;
+
+            background: #eaf8fc;
+        }
+
+        .availability-box {
+            max-width: 950px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .availability-icon {
+            width: 60px;
+            height: 60px;
+
+            flex-shrink: 0;
+
+            border-radius: 15px;
+
+            background: var(--cyan);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 23px;
+        }
+
+        .availability-content {
+            flex: 1;
+        }
+
+        .availability-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            color: var(--navy);
+
+            font-size: 29px;
+
+            margin-bottom: 6px;
+        }
+
+        .availability-content p {
+            color: var(--grey);
+
+            font-size: 13px;
+
+            line-height: 1.75;
+        }
+
+
+        /* ================================================
+           FINAL CTA
+        ================================================= */
+
+        .final-cta {
+            padding: 105px 25px;
+
+            background: var(--navy);
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .final-content {
+            max-width: 760px;
+
+            margin: auto;
+        }
+
+        .final-cta h2 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: clamp(38px, 5vw, 60px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 18px;
+        }
+
+        .final-cta p {
+            color: rgba(255,255,255,0.58);
+
+            max-width: 620px;
+
+            margin: 0 auto 30px;
+        }
+
+        .final-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        /* ================================================
+           FOOTER
+        ================================================= */
+
+        footer {
+            background: #070d17;
+
+            color: white;
+
+            padding: 65px 25px 25px;
+        }
+
+        .footer-container {
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .footer-top {
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+            padding-bottom: 45px;
+        }
+
+        .footer-brand img {
+            width: 160px;
+
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            max-width: 320px;
+
+            color: rgba(255,255,255,0.45);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .footer-column h4 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: 14px;
+
+            margin-bottom: 17px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: rgba(255,255,255,0.48);
+
+            font-size: 12px;
+
+            margin-bottom: 10px;
+
+            transition: 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+
+            border-top: 1px solid rgba(255,255,255,0.08);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: rgba(255,255,255,0.32);
+
+            font-size: 11px;
+        }
+
+
+        /* ================================================
+           WHATSAPP
+        ================================================= */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 55px;
+            height: 55px;
+
+            background: var(--green);
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(37,211,102,0.3);
+
+            z-index: 999;
+
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+
+        /* ================================================
+           RESPONSIVE
+        ================================================= */
+
+        @media (max-width: 1050px) {
+
+            .nav-links {
+                gap: 17px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-top {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .featured-box {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-visual {
+                min-height: 300px;
+            }
+
+            .availability-box {
+                flex-wrap: wrap;
+            }
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .navbar {
+                height: 70px;
+            }
+
+            .logo img {
+                width: 135px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+
+                top: 70px;
+                left: 0;
+                right: 0;
+
+                background: var(--navy);
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                padding: 18px 25px 25px;
+
+                gap: 0;
+
+                border-top: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+
+            .nav-links a {
+                display: block;
+
+                padding: 14px 0;
+            }
+
+            .nav-contact {
+                text-align: center;
+
+                margin-top: 8px;
+            }
+
+            .hero {
+                padding: 75px 20px 70px;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .intro,
+            .categories,
+            .featured,
+            .ordering,
+            .availability,
+            .final-cta {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .order-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-content {
+                padding: 40px 28px;
+            }
+
+            .featured-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .hero h1 {
+                font-size: 41px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .category-card {
+                min-height: 260px;
+            }
+
+            .final-buttons {
+                flex-direction: column;
+            }
+
+            .final-buttons .btn {
+                width: 100%;
+            }
+
+            .availability-box {
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="Logo.png"
+                alt="Street Gadgets Care">
+
+        </a>
+
+
+        <div
+            class="menu-toggle"
+            onclick="toggleMenu()">
+
+            <i class="fas fa-bars"></i>
+
+        </div>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="tech-repairs.html">
+                    Tech Repairs
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="shop.html"
+                    class="active">
+
+                    Shop
+
+                </a>
+            </li>
+
+            <li>
+                <a href="creative-studio.html">
+                    Creative Studio
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="contact.html"
+                    class="nav-contact">
+
+                    Contact
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div class="eyebrow">
+            Street Gadgets Care Shop
+        </div>
+
+        <h1>
+            Technology you need.
+            <span>Without the hassle.</span>
+        </h1>
+
+        <p class="hero-description">
+            Explore phones, laptops, accessories, storage, chargers
+            and everyday gadgets. Don't see what you're looking for?
+            Tell us what you need and we'll check availability for you.
+        </p>
+
+        <div class="hero-location">
+
+            <i class="fas fa-location-dot"></i>
+
+            Based in Nairobi • Serving Customers Across Kenya
+
+        </div>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#shop-categories"
+                class="btn btn-primary">
+
+                Explore the Shop
+
+                <i class="fas fa-arrow-down"></i>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20product."
+                class="btn btn-outline"
+                target="_blank">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Ask for a Product
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     INTRO
+================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div>
+
+                <div class="section-label">
+                    What We Offer
+                </div>
+
+                <h2 class="section-title">
+                    Your tech essentials,
+                    all in one place.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p class="intro-text">
+                    Whether you're replacing a charger, upgrading your
+                    laptop storage, looking for a phone, or searching
+                    for a useful gadget, Street Gadgets Care can help
+                    you find the right option.
+                </p>
+
+                <p class="intro-text" style="margin-top:15px;">
+                    We are based in Nairobi and serve customers across
+                    Kenya. Product availability and pricing may vary,
+                    so contact us to confirm what is currently available.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SHOP CATEGORIES
+================================================== -->
+
+<section
+    class="categories"
+    id="shop-categories">
+
+    <div class="container">
+
+        <div class="section-label">
+            01 / Shop Categories
+        </div>
+
+        <h2 class="section-title">
+            Explore what we offer.
+        </h2>
+
+
+        <div class="category-grid">
+
+
+            <!-- DEVICES -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    01
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-laptop-mobile"></i>
+                </div>
+
+                <h3>
+                    Phones, Laptops & Smart Devices
+                </h3>
+
+                <p>
+                    Browse available phones, laptops and selected
+                    smart devices for work, school and everyday use.
+                </p>
+
+                <a
+                    href="devices.html"
+                    class="category-link">
+
+                    Explore Devices
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- CHARGERS -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    02
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+
+                <h3>
+                    Chargers
+                </h3>
+
+                <p>
+                    Charging solutions for phones, laptops and other
+                    compatible devices.
+                </p>
+
+                <a
+                    href="chargers.html"
+                    class="category-link">
+
+                    Explore Chargers
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- CABLES -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    03
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+
+                <h3>
+                    Charging Cables
+                </h3>
+
+                <p>
+                    USB and charging cables for compatible phones,
+                    laptops and other devices.
+                </p>
+
+                <a
+                    href="cables.html"
+                    class="category-link">
+
+                    Explore Cables
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- PHONE PROTECTION -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    04
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-shield"></i>
+                </div>
+
+                <h3>
+                    Phone Protection
+                </h3>
+
+                <p>
+                    Protective accessories designed to help keep
+                    your phone safer from everyday damage.
+                </p>
+
+                <a
+                    href="phone-protection.html"
+                    class="category-link">
+
+                    Explore Protection
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- BATTERIES -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    05
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-battery-half"></i>
+                </div>
+
+                <h3>
+                    Replacement Batteries
+                </h3>
+
+                <p>
+                    Replacement battery options for supported phones
+                    and other compatible devices.
+                </p>
+
+                <a
+                    href="battery-replacement.html"
+                    class="category-link">
+
+                    Explore Batteries
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- LAPTOP ACCESSORIES -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    06
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+
+                <h3>
+                    Laptop Accessories
+                </h3>
+
+                <p>
+                    Laptop bags, storage, memory, keyboards, mice,
+                    dongles, cleaning products and more.
+                </p>
+
+                <a
+                    href="laptop-accessories.html"
+                    class="category-link">
+
+                    Explore Laptop Accessories
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- STORAGE -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    07
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-hard-drive"></i>
+                </div>
+
+                <h3>
+                    Storage & Memory
+                </h3>
+
+                <p>
+                    HDDs, SSDs, RAM, memory cards, flash drives and
+                    other storage solutions.
+                </p>
+
+                <a
+                    href="laptop-storage.html"
+                    class="category-link">
+
+                    Explore Storage
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- COMPUTER ACCESSORIES -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    08
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-computer"></i>
+                </div>
+
+                <h3>
+                    Computer Accessories
+                </h3>
+
+                <p>
+                    Keyboards, wireless mice, Wi-Fi dongles, Bluetooth
+                    dongles, foam cleaners and cleaning kits.
+                </p>
+
+                <a
+                    href="computer-accessories.html"
+                    class="category-link">
+
+                    Explore Accessories
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- OTHER GADGETS -->
+
+            <article class="category-card">
+
+                <div class="category-number">
+                    09
+                </div>
+
+                <div class="category-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+
+                <h3>
+                    Other Gadgets
+                </h3>
+
+                <p>
+                    Useful everyday technology and accessories. If you
+                    need something specific, ask us to check availability.
+                </p>
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20gadget%20that%20is%20not%20listed%20on%20your%20website."
+                    class="category-link"
+                    target="_blank">
+
+                    Ask About a Gadget
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SHOP + REPAIR CONNECTION
+================================================== -->
+
+<section class="featured">
+
+    <div class="container">
+
+        <div class="featured-box">
+
+
+            <div class="featured-content">
+
+                <div class="section-label">
+                    Technology That Works Together
+                </div>
+
+                <h2 class="section-title">
+                    Buy it.
+                    Upgrade it.
+                    Keep it working.
+                </h2>
+
+                <p>
+                    Street Gadgets Care is more than a place to buy
+                    accessories. We also repair and maintain phones
+                    and laptops, helping you get more value from your
+                    technology.
+                </p>
+
+
+                <ul class="featured-list">
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Phones & Laptops
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Chargers & Cables
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        SSD & HDD Storage
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        RAM & Memory
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Laptop Accessories
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Repair & Upgrades
+                    </li>
+
+                </ul>
+
+
+                <div>
+
+                    <a
+                        href="tech-repairs.html"
+                        class="btn btn-primary">
+
+                        Explore Tech Repairs
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="featured-visual">
+
+                <div class="featured-icon">
+
+                    <i class="fas fa-microchip"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     HOW ORDERING WORKS
+================================================== -->
+
+<section class="ordering">
+
+    <div class="container">
+
+        <div class="ordering-header">
+
+            <div class="section-label">
+                02 / How It Works
+            </div>
+
+            <h2 class="section-title">
+                Looking for something?
+                Keep it simple.
+            </h2>
+
+        </div>
+
+
+        <div class="order-grid">
+
+
+            <div class="order-card">
+
+                <div class="order-number">
+                    01 / TELL US
+                </div>
+
+                <h3>
+                    Tell Us What You Need
+                </h3>
+
+                <p>
+                    Send us the product name, model, specifications
+                    or even a photo of what you're looking for.
+                </p>
+
+            </div>
+
+
+            <div class="order-card">
+
+                <div class="order-number">
+                    02 / CONFIRM
+                </div>
+
+                <h3>
+                    We Confirm Availability
+                </h3>
+
+                <p>
+                    We'll check availability and provide the relevant
+                    product details and current price.
+                </p>
+
+            </div>
+
+
+            <div class="order-card">
+
+                <div class="order-number">
+                    03 / DELIVERY
+                </div>
+
+                <h3>
+                    Arrange Delivery
+                </h3>
+
+                <p>
+                    Once everything is confirmed, we'll arrange the
+                    appropriate delivery or collection option.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SOMETHING NOT LISTED
+================================================== -->
+
+<section class="availability">
+
+    <div class="availability-box">
+
+        <div class="availability-icon">
+
+            <i class="fas fa-magnifying-glass"></i>
+
+        </div>
+
+
+        <div class="availability-content">
+
+            <h2>
+                Can't find what you're looking for?
+            </h2>
+
+            <p>
+                Don't assume we don't have it. Tell us what you need
+                and we'll check availability for you. Product
+                availability and pricing may vary.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20product%20that%20is%20not%20listed%20on%20your%20website."
+            class="btn btn-primary"
+            target="_blank">
+
+            Ask Us
+
+            <i class="fab fa-whatsapp"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FINAL CTA
+================================================== -->
+
+<section class="final-cta">
+
+    <div class="final-content">
+
+        <div class="eyebrow">
+            Shop With Street Gadgets Care
+        </div>
+
+        <h2>
+            Find the technology
+            you need.
+        </h2>
+
+        <p>
+            Browse our categories or contact us directly for a
+            product you're looking for. We're happy to check
+            availability for you.
+        </p>
+
+
+        <div class="final-buttons">
+
+            <a
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20product."
+                class="btn btn-primary"
+                target="_blank">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Ask About a Product
+
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="btn btn-outline">
+
+                Contact Us
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="Logo.png"
+                    alt="Street Gadgets Care">
+
+                <p>
+                    Technology, creative design and digital solutions
+                    built around the needs of people and businesses.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Technology
+                </h4>
+
+                <a href="tech-repairs.html">
+                    Tech Repairs
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="laptop-accessories.html">
+                    Laptop Accessories
+                </a>
+
+                <a href="laptop-storage.html">
+                    Storage & Memory
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Creative
+                </h4>
+
+                <a href="creative-studio.html">
+                    Graphic Design
+                </a>
+
+                <a href="creative-studio.html">
+                    CV & Resume
+                </a>
+
+                <a href="creative-studio.html">
+                    Company Profiles
+                </a>
+
+                <a href="creative-studio.html">
+                    Business Documents
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Street Gadgets Care. All Rights Reserved.
+            </span>
+
+            <span>
+                Nairobi, Kenya • Serving Customers Across Kenya
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==================================================
+     FLOATING WHATSAPP
+================================================== -->
+
+<a
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20product."
+    class="whatsapp"
+    target="_blank"
+    aria-label="Chat with Street Gadgets Care on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+    function toggleMenu() {
+
+        const nav =
+            document.getElementById("navLinks");
+
+        nav.classList.toggle("show");
+
+    }
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("show");
+
+            });
+
+        });
+
+</script>
+
+
+</body>
+</html>
