@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Phone Batteries | Street Gadgets Care</title>
+    <title>Phone Battery Replacement | Street Gadgets Care</title>
 
     <meta name="description"
           content="Phone battery replacement and original battery options for OPPO, Samsung, iPhone, Nokia, Tecno, Infinix and Xiaomi phones from Street Gadgets Care.">
@@ -19,39 +19,55 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
+            background: #f7f9fc;
             color: #222;
             line-height: 1.6;
         }
 
-        /* HEADER */
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #0b1220;
-            padding: 15px 5%;
+            padding: 14px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
+            gap: 25px;
+            position: relative;
+            z-index: 10;
         }
 
-        header img {
+        .logo {
+            display: block;
+        }
+
+        .logo img {
             width: 170px;
-            max-width: 100%;
+            max-height: 58px;
+            object-fit: contain;
+            display: block;
         }
 
         nav {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
+            color: #fff;
+            font-size: 13px;
             font-weight: 600;
             transition: 0.3s ease;
+            white-space: nowrap;
         }
 
         nav a:hover,
@@ -59,112 +75,271 @@
             color: #19a7ce;
         }
 
-
-        /* PAGE INTRO */
-
-        .page-intro {
-            text-align: center;
-            padding: 55px 20px 40px;
-            background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+        .nav-whatsapp {
+            background: #25d366;
+            color: #fff !important;
+            padding: 9px 14px;
+            border-radius: 6px;
         }
 
-        .page-intro h1 {
-            font-size: 35px;
+        .nav-whatsapp:hover {
+            background: #1ebe5d;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 430px;
+            background:
+                linear-gradient(rgba(11,18,32,0.82), rgba(11,18,32,0.82)),
+                url("phone-battery-replacement.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 60px 5%;
+        }
+
+        .hero-inner {
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .hero-content {
+            color: #fff;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            max-width: 650px;
+        }
+
+        .hero p {
+            color: #d8dee8;
+            font-size: 16px;
+            max-width: 610px;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #19a7ce;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #128eaf;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.96);
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 390px;
+            margin-left: auto;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.22);
+        }
+
+        .hero-card h3 {
             color: #0b1220;
+            margin-bottom: 12px;
+            font-size: 19px;
+        }
+
+        .hero-card ul {
+            list-style: none;
+        }
+
+        .hero-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e8edf2;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .hero-card li:last-child {
+            border-bottom: none;
+        }
+
+        .hero-card strong {
+            color: #0b1220;
+        }
+
+
+        /* =========================
+           CATEGORY NAVIGATION
+        ========================= */
+
+        .category-bar {
+            background: #fff;
+            border-bottom: 1px solid #e7ebef;
+            padding: 14px 5%;
+        }
+
+        .category-inner {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-inner a {
+            color: #555;
+            background: #f4f6f8;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .category-inner a:hover,
+        .category-inner a.active {
+            background: #19a7ce;
+            color: #fff;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            padding: 60px 20px 35px;
+        }
+
+        .section-label {
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            margin-bottom: 9px;
+        }
+
+        .intro h2 {
+            color: #0b1220;
+            font-size: 31px;
             margin-bottom: 12px;
         }
 
-        .page-intro p {
-            max-width: 850px;
-            margin: auto;
-            color: #555;
-            font-size: 16px;
+        .intro p {
+            color: #666;
+            font-size: 15px;
         }
 
 
-        /* BATTERY GRID */
+        /* =========================
+           BATTERY PRODUCTS
+        ========================= */
 
         .battery-grid {
             width: 90%;
-            max-width: 1200px;
-            margin: 35px auto 70px;
+            max-width: 1150px;
+            margin: 15px auto 70px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-
-            /* IMPORTANT:
-               Prevent shorter cards from stretching
-               to match the tallest card in the row.
-            */
+            gap: 25px;
             align-items: start;
         }
 
-
-        /* BATTERY CARD */
-
         .battery-card {
-            background: white;
+            background: #fff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+            border: 1px solid #edf0f3;
             transition: 0.3s ease;
-
-            display: flex;
-            flex-direction: column;
         }
 
         .battery-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.11);
         }
 
+        .battery-image {
+            height: 220px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+        }
 
-        /* BATTERY IMAGE */
-
-        .battery-card img {
+        .battery-image img {
             width: 100%;
-            height: 230px;
-            object-fit: cover;
+            height: 100%;
+            object-fit: contain;
             display: block;
         }
 
-
-        /* BATTERY CONTENT */
-
         .battery-content {
-            padding: 25px;
+            padding: 23px;
         }
 
         .battery-content h2 {
             color: #0b1220;
-            font-size: 23px;
-            margin-bottom: 15px;
+            font-size: 21px;
+            margin-bottom: 17px;
         }
-
-        .battery-content h3 {
-            color: #0b1220;
-            font-size: 16px;
-            margin-bottom: 7px;
-        }
-
-        .battery-content p {
-            color: #555;
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-
-        /* PRICE BOX */
 
         .price-box {
             border-left: 4px solid #19a7ce;
-            padding: 12px 15px;
-            margin-bottom: 14px;
             background: #f8fafc;
+            padding: 13px 14px;
+            margin-bottom: 13px;
         }
 
         .price-box h3 {
-            margin-bottom: 5px;
+            color: #0b1220;
+            font-size: 15px;
+            margin-bottom: 4px;
         }
 
         .price {
@@ -174,44 +349,43 @@
             margin-bottom: 5px;
         }
 
-
-        /* INFORMATION BOX */
+        .price-box p {
+            color: #666;
+            font-size: 13px;
+            margin: 0;
+        }
 
         .info-box {
-            background: #f8fafc;
+            background: #f1f7fa;
             border-left: 4px solid #19a7ce;
-            padding: 15px;
-            margin-top: 18px;
-            border-radius: 5px;
+            padding: 13px 14px;
+            margin-top: 15px;
+            border-radius: 4px;
         }
 
         .info-box h3 {
-            font-size: 15px;
-            margin-bottom: 8px;
-            color: #222;
+            color: #0b1220;
+            font-size: 14px;
+            margin-bottom: 6px;
         }
 
         .info-box p {
+            color: #666;
             font-size: 13px;
-            margin-bottom: 0;
-            color: #555;
+            margin: 0;
         }
-
-
-        /* WHATSAPP BUTTON */
 
         .whatsapp-btn {
             display: block;
             width: 100%;
             text-align: center;
             padding: 12px 15px;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-size: 14px;
+            margin-top: 18px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 13px;
             font-weight: bold;
-            margin-top: 20px;
             transition: 0.3s ease;
         }
 
@@ -221,130 +395,366 @@
         }
 
 
-        /* GLOBAL INFORMATION */
+        /* =========================
+           GUIDANCE
+        ========================= */
+
+        .guidance {
+            background: #0b1220;
+            color: #fff;
+            padding: 65px 5%;
+        }
+
+        .guidance-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .guidance-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 35px;
+        }
+
+        .guidance-heading .section-label {
+            color: #19a7ce;
+        }
+
+        .guidance-heading h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .guidance-heading p {
+            color: #bfc8d5;
+            font-size: 14px;
+        }
+
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guidance-card {
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 24px;
+            background: rgba(255,255,255,0.035);
+        }
+
+        .guidance-number {
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .guidance-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .guidance-card p {
+            color: #bfc8d5;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           GENERAL INFORMATION
+        ========================= */
 
         .battery-info {
             width: 90%;
             max-width: 1000px;
-            margin: 0 auto 70px;
-            background: white;
+            margin: 65px auto;
+            background: #fff;
             border-radius: 12px;
             padding: 35px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 22px rgba(0,0,0,0.07);
         }
 
         .battery-info h2 {
-            text-align: center;
             color: #0b1220;
-            font-size: 26px;
-            margin-bottom: 18px;
+            font-size: 27px;
+            margin-bottom: 15px;
         }
 
         .battery-info p {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 15px;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 14px;
         }
 
         .battery-info ul {
             margin: 10px 0 20px 20px;
-            color: #555;
+            color: #666;
         }
 
         .battery-info li {
-            margin-bottom: 8px;
-        }
-
-        .highlight {
-            text-align: center;
-            font-weight: bold;
-            color: #19a7ce;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-
-
-        /* FOOTER */
-
-        footer {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
+            margin-bottom: 9px;
             font-size: 14px;
         }
 
+        .highlight {
+            border-top: 1px solid #e7ebef;
+            padding-top: 18px;
+            color: #19a7ce !important;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           DELIVERY STRIP
+        ========================= */
+
+        .delivery-strip {
+            background: #eef8fb;
+            padding: 22px 5%;
+            text-align: center;
+            border-top: 1px solid #dceff4;
+            border-bottom: 1px solid #dceff4;
+        }
+
+        .delivery-strip strong {
+            color: #0b1220;
+        }
+
+        .delivery-strip span {
+            color: #19a7ce;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .final-cta {
+            padding: 70px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .final-cta h2 {
+            color: #0b1220;
+            font-size: 31px;
+            margin-bottom: 10px;
+        }
+
+        .final-cta p {
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 23px;
+            font-size: 15px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1220;
+            color: #fff;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer .footer-brand {
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
         footer p {
+            color: #bfc8d5;
+            font-size: 13px;
             margin: 4px 0;
         }
 
 
-        /* TABLET */
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
 
-        @media (max-width: 900px) {
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            background: #1ebe5d;
+            transform: scale(1.06);
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            header {
+                justify-content: center;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero-card {
+                margin: 0;
+                max-width: 520px;
+            }
 
             .battery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guidance-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
         }
 
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
 
             header {
-                justify-content: center;
-                gap: 15px;
+                padding: 13px 4%;
             }
 
-            header img {
+            .logo img {
                 width: 150px;
             }
 
             nav {
-                justify-content: center;
-                gap: 12px;
+                gap: 10px;
             }
 
             nav a {
-                font-size: 13px;
+                font-size: 12px;
             }
 
-            .page-intro {
-                padding: 40px 18px 25px;
+            .nav-whatsapp {
+                padding: 8px 11px;
             }
 
-            .page-intro h1 {
-                font-size: 28px;
+            .hero {
+                min-height: auto;
+                padding: 50px 6%;
             }
 
-            .page-intro p {
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
                 font-size: 14px;
+            }
+
+            .hero-card {
+                padding: 20px;
+            }
+
+            .category-bar {
+                padding: 12px 4%;
+            }
+
+            .category-inner {
+                gap: 7px;
+            }
+
+            .category-inner a {
+                font-size: 11px;
+                padding: 7px 10px;
+            }
+
+            .intro {
+                padding: 45px 20px 25px;
+            }
+
+            .intro h2 {
+                font-size: 27px;
             }
 
             .battery-grid {
                 width: 92%;
                 grid-template-columns: 1fr;
                 gap: 22px;
+                margin-bottom: 55px;
             }
 
-            .battery-card img {
-                height: 220px;
+            .battery-image {
+                height: 230px;
             }
 
             .battery-content {
-                padding: 22px;
+                padding: 21px;
+            }
+
+            .guidance {
+                padding: 50px 6%;
+            }
+
+            .guidance-heading h2 {
+                font-size: 26px;
+            }
+
+            .guidance-grid {
+                grid-template-columns: 1fr;
             }
 
             .battery-info {
                 width: 92%;
                 padding: 25px 20px;
+                margin: 50px auto;
             }
 
             .battery-info h2 {
-                font-size: 23px;
+                font-size: 24px;
+            }
+
+            .final-cta {
+                padding: 55px 20px;
+            }
+
+            .final-cta h2 {
+                font-size: 27px;
+            }
+
+            .floating-whatsapp {
+                width: 48px;
+                height: 48px;
+                right: 15px;
+                bottom: 15px;
             }
 
         }
@@ -359,7 +769,7 @@
 
 <header>
 
-    <a href="index.html">
+    <a href="index.html" class="logo">
         <img src="Logo.png" alt="Street Gadgets Care Logo">
     </a>
 
@@ -371,33 +781,163 @@
 
         <a href="services.html">Services</a>
 
-        <a href="repairs.html">Repairs</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
 
-        <a href="products.html" class="active">Products</a>
+        <a href="shop.html" class="active">Shop</a>
+
+        <a href="creative-studio.html">Creative Studio</a>
 
         <a href="contact.html">Contact</a>
+
+        <a href="https://wa.me/254114259961"
+           class="nav-whatsapp"
+           target="_blank">
+            WhatsApp
+        </a>
 
     </nav>
 
 </header>
 
 
+<!-- HERO -->
 
-<!-- PAGE INTRO -->
+<section class="hero">
 
-<section class="page-intro">
+    <div class="hero-inner">
 
-    <h1>Phone Batteries</h1>
+        <div class="hero-content">
 
-    <p>
-        Get reliable replacement and original battery options for
-        popular smartphone brands. Choose the right battery for your
-        exact phone model and have it professionally installed by
-        Street Gadgets Care.
-    </p>
+            <div class="hero-label">
+                PHONE BATTERY REPLACEMENT
+            </div>
+
+            <h1>
+                Bring your phone's battery life back.
+            </h1>
+
+            <p>
+                Get reliable replacement and original battery options
+                for popular smartphone brands. We help you choose the
+                right battery for your exact model and have it
+                professionally installed.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#batteries"
+                   class="btn btn-primary">
+                    Explore Batteries
+                </a>
+
+                <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20phone%20battery%20replacement."
+                   class="btn btn-whatsapp"
+                   target="_blank">
+                    Ask on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h3>
+                Phone Battery Options
+            </h3>
+
+            <ul>
+
+                <li>
+                    <strong>OPPO</strong> — Replacement & Original
+                </li>
+
+                <li>
+                    <strong>Samsung</strong> — Replacement & Original
+                </li>
+
+                <li>
+                    <strong>iPhone</strong> — Replacement & Original
+                </li>
+
+                <li>
+                    <strong>Nokia</strong> — Replacement & Original
+                </li>
+
+                <li>
+                    <strong>Tecno & Infinix</strong> — Replacement & Original
+                </li>
+
+                <li>
+                    <strong>Xiaomi</strong> — Replacement & Original
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
 
 </section>
 
+
+<!-- CATEGORY NAVIGATION -->
+
+<div class="category-bar">
+
+    <div class="category-inner">
+
+        <a href="battery-replacement.html">
+            All Batteries
+        </a>
+
+        <a href="laptop-batteries.html">
+            Laptop Batteries
+        </a>
+
+        <a href="phone-batteries.html"
+           class="active">
+            Phone Batteries
+        </a>
+
+        <a href="devices.html">
+            Devices
+        </a>
+
+        <a href="laptop-storage.html">
+            Storage & Memory
+        </a>
+
+        <a href="shop.html">
+            All Shop
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="batteries">
+
+    <div class="section-label">
+        PHONE BATTERY OPTIONS
+    </div>
+
+    <h2>
+        Choose the right battery for your phone.
+    </h2>
+
+    <p>
+        Battery prices depend on the exact phone model, battery type
+        and availability. If you're not sure which battery your phone
+        needs, send us your phone model or a photo and we'll help you
+        identify the right option.
+    </p>
+
+</section>
 
 
 <!-- BATTERY PRODUCTS -->
@@ -409,17 +949,24 @@
 
     <div class="battery-card">
 
-        <img
-            src="OPPO%20Batteries.jpeg"
-            alt="OPPO Phone Batteries">
+        <div class="battery-image">
+
+            <img src="OPPO%20Batteries.jpeg"
+                 alt="OPPO Phone Batteries">
+
+        </div>
 
         <div class="battery-content">
 
-            <h2>OPPO Batteries</h2>
+            <h2>
+                OPPO Batteries
+            </h2>
 
             <div class="price-box">
 
-                <h3>Replacement Battery</h3>
+                <h3>
+                    Replacement Battery
+                </h3>
 
                 <div class="price">
                     KSh 1,500
@@ -432,10 +979,11 @@
 
             </div>
 
-
             <div class="price-box">
 
-                <h3>Original Battery</h3>
+                <h3>
+                    Original Battery
+                </h3>
 
                 <div class="price">
                     From KSh 2,500
@@ -448,10 +996,11 @@
 
             </div>
 
-
             <div class="info-box">
 
-                <h3>Why is there a price difference?</h3>
+                <h3>
+                    Why is there a price difference?
+                </h3>
 
                 <p>
                     The final price depends on the exact OPPO model,
@@ -461,11 +1010,9 @@
 
             </div>
 
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20OPPO%20battery."
-                class="whatsapp-btn"
-                target="_blank">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20OPPO%20battery."
+               class="whatsapp-btn"
+               target="_blank">
                 💬 Ask About OPPO Battery
             </a>
 
@@ -474,22 +1021,28 @@
     </div>
 
 
-
     <!-- SAMSUNG -->
 
     <div class="battery-card">
 
-        <img
-            src="Samsung%20Batteries.jpeg"
-            alt="Samsung Phone Batteries">
+        <div class="battery-image">
+
+            <img src="Samsung%20Batteries.jpeg"
+                 alt="Samsung Phone Batteries">
+
+        </div>
 
         <div class="battery-content">
 
-            <h2>Samsung Batteries</h2>
+            <h2>
+                Samsung Batteries
+            </h2>
 
             <div class="price-box">
 
-                <h3>Replacement Battery</h3>
+                <h3>
+                    Replacement Battery
+                </h3>
 
                 <div class="price">
                     KSh 1,500
@@ -502,10 +1055,11 @@
 
             </div>
 
-
             <div class="price-box">
 
-                <h3>Original Battery</h3>
+                <h3>
+                    Original Battery
+                </h3>
 
                 <div class="price">
                     From KSh 2,500
@@ -518,10 +1072,11 @@
 
             </div>
 
-
             <div class="info-box">
 
-                <h3>Why is there a price difference?</h3>
+                <h3>
+                    Why is there a price difference?
+                </h3>
 
                 <p>
                     Samsung models use different batteries. Price can
@@ -531,11 +1086,9 @@
 
             </div>
 
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Samsung%20battery."
-                class="whatsapp-btn"
-                target="_blank">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Samsung%20battery."
+               class="whatsapp-btn"
+               target="_blank">
                 💬 Ask About Samsung Battery
             </a>
 
@@ -544,25 +1097,28 @@
     </div>
 
 
-
     <!-- IPHONE -->
 
     <div class="battery-card">
 
-        <img
-            src="iPhone%20Batteries.jpeg"
-            alt="iPhone Batteries">
+        <div class="battery-image">
+
+            <img src="iPhone%20Batteries.jpeg"
+                 alt="iPhone Batteries">
+
+        </div>
 
         <div class="battery-content">
 
-            <h2>iPhone Batteries</h2>
-
-
-            <!-- IPHONE X AND ABOVE - REPLACEMENT -->
+            <h2>
+                iPhone Batteries
+            </h2>
 
             <div class="price-box">
 
-                <h3>iPhone X & Above — Replacement</h3>
+                <h3>
+                    iPhone X & Above — Replacement
+                </h3>
 
                 <div class="price">
                     From KSh 4,500
@@ -575,12 +1131,11 @@
 
             </div>
 
-
-            <!-- IPHONE X AND ABOVE - ORIGINAL -->
-
             <div class="price-box">
 
-                <h3>iPhone X & Above — Original</h3>
+                <h3>
+                    iPhone X & Above — Original
+                </h3>
 
                 <div class="price">
                     From KSh 6,000
@@ -593,12 +1148,11 @@
 
             </div>
 
-
-            <!-- IPHONE 6 TO 8 PLUS - REPLACEMENT -->
-
             <div class="price-box">
 
-                <h3>iPhone 6 to 8 Plus — Replacement</h3>
+                <h3>
+                    iPhone 6 to 8 Plus — Replacement
+                </h3>
 
                 <div class="price">
                     KSh 1,500
@@ -612,12 +1166,11 @@
 
             </div>
 
-
-            <!-- IPHONE 6 TO 8 PLUS - ORIGINAL -->
-
             <div class="price-box">
 
-                <h3>iPhone 6 to 8 Plus — Original</h3>
+                <h3>
+                    iPhone 6 to 8 Plus — Original
+                </h3>
 
                 <div class="price">
                     KSh 3,500
@@ -630,9 +1183,6 @@
                 </p>
 
             </div>
-
-
-            <!-- WHY NEWER IPHONES COST MORE -->
 
             <div class="info-box">
 
@@ -650,11 +1200,9 @@
 
             </div>
 
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20iPhone%20battery."
-                class="whatsapp-btn"
-                target="_blank">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20an%20iPhone%20battery."
+               class="whatsapp-btn"
+               target="_blank">
                 💬 Ask About iPhone Battery
             </a>
 
@@ -663,22 +1211,28 @@
     </div>
 
 
-
     <!-- NOKIA -->
 
     <div class="battery-card">
 
-        <img
-            src="Nokia%20Batteries.jpeg"
-            alt="Nokia Phone Batteries">
+        <div class="battery-image">
+
+            <img src="Nokia%20Batteries.jpeg"
+                 alt="Nokia Phone Batteries">
+
+        </div>
 
         <div class="battery-content">
 
-            <h2>Nokia Batteries</h2>
+            <h2>
+                Nokia Batteries
+            </h2>
 
             <div class="price-box">
 
-                <h3>Replacement Battery</h3>
+                <h3>
+                    Replacement Battery
+                </h3>
 
                 <div class="price">
                     KSh 1,500
@@ -691,10 +1245,11 @@
 
             </div>
 
-
             <div class="price-box">
 
-                <h3>Original Battery</h3>
+                <h3>
+                    Original Battery
+                </h3>
 
                 <div class="price">
                     From KSh 2,500
@@ -707,10 +1262,11 @@
 
             </div>
 
-
             <div class="info-box">
 
-                <h3>Why is there a price difference?</h3>
+                <h3>
+                    Why is there a price difference?
+                </h3>
 
                 <p>
                     The price can vary depending on the exact Nokia
@@ -720,11 +1276,9 @@
 
             </div>
 
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Nokia%20battery."
-                class="whatsapp-btn"
-                target="_blank">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Nokia%20battery."
+               class="whatsapp-btn"
+               target="_blank">
                 💬 Ask About Nokia Battery
             </a>
 
@@ -733,22 +1287,28 @@
     </div>
 
 
-
     <!-- TECNO & INFINIX -->
 
     <div class="battery-card">
 
-        <img
-            src="Tecno%20Infinix%20Batteries.jpeg"
-            alt="Tecno and Infinix Phone Batteries">
+        <div class="battery-image">
+
+            <img src="Tecno%20Infinix%20Batteries.jpeg"
+                 alt="Tecno and Infinix Phone Batteries">
+
+        </div>
 
         <div class="battery-content">
 
-            <h2>Tecno & Infinix Batteries</h2>
+            <h2>
+                Tecno & Infinix Batteries
+            </h2>
 
             <div class="price-box">
 
-                <h3>Replacement Battery</h3>
+                <h3>
+                    Replacement Battery
+                </h3>
 
                 <div class="price">
                     KSh 1,500
@@ -761,10 +1321,11 @@
 
             </div>
 
-
             <div class="price-box">
 
-                <h3>Original Battery</h3>
+                <h3>
+                    Original Battery
+                </h3>
 
                 <div class="price">
                     From KSh 2,500
@@ -777,10 +1338,11 @@
 
             </div>
 
-
             <div class="info-box">
 
-                <h3>Why is there a price difference?</h3>
+                <h3>
+                    Why is there a price difference?
+                </h3>
 
                 <p>
                     Different models use different battery capacities
@@ -790,11 +1352,9 @@
 
             </div>
 
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Tecno%20or%20Infinix%20battery."
-                class="whatsapp-btn"
-                target="_blank">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Tecno%20or%20Infinix%20battery."
+               class="whatsapp-btn"
+               target="_blank">
                 💬 Ask About Tecno/Infinix Battery
             </a>
 
@@ -803,22 +1363,28 @@
     </div>
 
 
-
     <!-- XIAOMI -->
 
     <div class="battery-card">
 
-        <img
-            src="Xiaomi%20Batteries.jpeg"
-            alt="Xiaomi Phone Batteries">
+        <div class="battery-image">
+
+            <img src="Xiaomi%20Batteries.jpeg"
+                 alt="Xiaomi Phone Batteries">
+
+        </div>
 
         <div class="battery-content">
 
-            <h2>Xiaomi Batteries</h2>
+            <h2>
+                Xiaomi Batteries
+            </h2>
 
             <div class="price-box">
 
-                <h3>Replacement Battery</h3>
+                <h3>
+                    Replacement Battery
+                </h3>
 
                 <div class="price">
                     KSh 1,500
@@ -831,10 +1397,11 @@
 
             </div>
 
-
             <div class="price-box">
 
-                <h3>Original Battery</h3>
+                <h3>
+                    Original Battery
+                </h3>
 
                 <div class="price">
                     From KSh 2,500
@@ -847,10 +1414,11 @@
 
             </div>
 
-
             <div class="info-box">
 
-                <h3>Why is there a price difference?</h3>
+                <h3>
+                    Why is there a price difference?
+                </h3>
 
                 <p>
                     Xiaomi models use different battery types and
@@ -861,11 +1429,9 @@
 
             </div>
 
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Xiaomi%20battery."
-                class="whatsapp-btn"
-                target="_blank">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20Xiaomi%20battery."
+               class="whatsapp-btn"
+               target="_blank">
                 💬 Ask About Xiaomi Battery
             </a>
 
@@ -876,12 +1442,106 @@
 </section>
 
 
+<!-- GUIDANCE -->
 
-<!-- GENERAL BATTERY INFORMATION -->
+<section class="guidance">
+
+    <div class="guidance-inner">
+
+        <div class="guidance-heading">
+
+            <div class="section-label">
+                BEFORE YOU ORDER
+            </div>
+
+            <h2>
+                The exact phone model matters.
+            </h2>
+
+            <p>
+                Phone batteries are not universal. Before buying or
+                installing a battery, make sure the battery matches
+                your exact phone model.
+            </p>
+
+        </div>
+
+
+        <div class="guidance-grid">
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    01
+                </div>
+
+                <h3>
+                    Know Your Model
+                </h3>
+
+                <p>
+                    Tell us the exact phone model. Different versions
+                    of the same phone family can use different batteries.
+                </p>
+
+            </div>
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    02
+                </div>
+
+                <h3>
+                    Choose Your Option
+                </h3>
+
+                <p>
+                    Where available, choose between a replacement
+                    battery and an original battery based on your
+                    needs and budget.
+                </p>
+
+            </div>
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    03
+                </div>
+
+                <h3>
+                    Let Us Help
+                </h3>
+
+                <p>
+                    Not sure which battery you need? Send us your
+                    phone model or a clear photo and we'll help you
+                    identify the correct option.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GENERAL INFORMATION -->
 
 <section class="battery-info">
 
-    <h2>Why We Offer Replacement & Original Batteries</h2>
+    <div class="section-label">
+        BATTERY OPTIONS
+    </div>
+
+    <h2>
+        Why we offer replacement & original batteries
+    </h2>
 
     <p>
         We understand that customers have different budgets and
@@ -921,20 +1581,93 @@
 </section>
 
 
+<!-- DELIVERY -->
+
+<section class="delivery-strip">
+
+    <strong>
+        Need a battery replacement?
+    </strong>
+
+    &nbsp;
+
+    <span>
+        Nairobi based • Serving Customers Across Kenya
+    </span>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+    <div class="section-label">
+        NEED HELP?
+    </div>
+
+    <h2>
+        Not sure which battery fits your phone?
+    </h2>
+
+    <p>
+        Send us your phone model or a photo of the device and we'll
+        help you find the right battery option.
+    </p>
+
+    <div class="cta-buttons">
+
+        <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20the%20right%20battery%20for%20my%20phone."
+           class="btn btn-whatsapp"
+           target="_blank">
+            Ask on WhatsApp
+        </a>
+
+        <a href="battery-replacement.html"
+           class="btn btn-primary">
+            Back to Batteries
+        </a>
+
+    </div>
+
+</section>
+
 
 <!-- FOOTER -->
 
 <footer>
 
+    <div class="footer-brand">
+        Street Gadgets Care
+    </div>
+
+    <p>
+        Laptop & Phone Repair • Accessories • Graphic Design
+    </p>
+
+    <p>
+        Nairobi, Kenya • Serving Customers Across Kenya
+    </p>
+
+    <p>
+        0114259961 | streetgadgetscare@gmail.com
+    </p>
+
     <p>
         © 2026 Street Gadgets Care. All Rights Reserved.
     </p>
 
-    <p>
-        Phone & Laptop Repair • Accessories • Graphic Design
-    </p>
-
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/254114259961"
+   class="floating-whatsapp"
+   target="_blank"
+   aria-label="Chat with Street Gadgets Care on WhatsApp">
+    ☎
+</a>
 
 
 </body>
