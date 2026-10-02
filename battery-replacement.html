@@ -7,7 +7,7 @@
     <title>Battery Replacement | Street Gadgets Care</title>
 
     <meta name="description"
-          content="Choose phone or laptop battery replacement options from Street Gadgets Care.">
+          content="Find phone and laptop battery replacement options from Street Gadgets Care. Based in Nairobi, serving customers across Kenya.">
 
     <style>
 
@@ -19,36 +19,42 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
+            background: #f7f9fc;
             color: #222;
             line-height: 1.6;
         }
 
-
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #0b1220;
-            padding: 15px 5%;
+            padding: 14px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         header img {
             width: 170px;
             max-width: 100%;
+            max-height: 58px;
+            object-fit: contain;
         }
 
         nav {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
@@ -60,107 +66,262 @@
             color: #19a7ce;
         }
 
-
-        /* PAGE INTRO */
-
-        .page-intro {
-            text-align: center;
-            padding: 55px 20px 40px;
-            background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+        .nav-whatsapp {
+            background: #25d366;
+            color: #ffffff !important;
+            padding: 9px 14px;
+            border-radius: 6px;
         }
 
-        .page-intro h1 {
-            font-size: 35px;
-            color: #0b1220;
+        .nav-whatsapp:hover {
+            background: #1ebe5d;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            min-height: 430px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(11, 18, 32, 0.94),
+                    rgba(11, 18, 32, 0.76),
+                    rgba(11, 18, 32, 0.38)
+                ),
+                url("phone-battery-replacement.jpg") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            padding: 70px 5%;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+            color: #ffffff;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
             margin-bottom: 12px;
         }
 
-        .page-intro p {
-            max-width: 800px;
-            margin: auto;
-            color: #555;
-            font-size: 16px;
+        .hero h1 {
+            font-size: 46px;
+            line-height: 1.12;
+            margin-bottom: 18px;
         }
 
+        .hero p {
+            max-width: 620px;
+            color: #e7edf4;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 26px;
+        }
 
-        /* CATEGORY GRID */
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn.primary {
+            background: #19a7ce;
+            color: #ffffff;
+        }
+
+        .hero-btn.primary:hover {
+            background: #1288a8;
+            transform: translateY(-2px);
+        }
+
+        .hero-btn.secondary {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            color: #ffffff;
+        }
+
+        .hero-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* =========================
+           CATEGORY NAV
+        ========================= */
+
+        .category-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e6eaf0;
+            padding: 14px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-nav a {
+            text-decoration: none;
+            color: #444;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 13px;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        .category-nav a:hover,
+        .category-nav a.active {
+            background: #e9f8fc;
+            color: #19a7ce;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .intro h2 {
+            color: #0b1220;
+            font-size: 31px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            max-width: 720px;
+            margin: auto;
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* =========================
+           CATEGORY CARDS
+        ========================= */
 
         .battery-grid {
             width: 90%;
-            max-width: 1000px;
-            margin: 35px auto 70px;
+            max-width: 1050px;
+            margin: 25px auto 65px;
 
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 28px;
-
-            align-items: start;
         }
 
-
-        /* CATEGORY CARD */
-
         .battery-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 25px;
-            text-align: center;
-
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
+            background: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+            border: 1px solid #edf0f4;
             transition: 0.3s ease;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .battery-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.11);
         }
 
-
-        /* ICON */
-
-        .battery-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
+        .battery-image {
+            height: 245px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
         }
 
+        .battery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-        /* CARD TEXT */
+        .battery-content {
+            padding: 27px 27px 30px;
+        }
 
-        .battery-card h2 {
+        .battery-tag {
+            display: inline-block;
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+
+        .battery-card h3 {
             color: #0b1220;
             font-size: 23px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .battery-card p {
-            color: #555;
+            color: #666;
             font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .battery-points {
+            list-style: none;
             margin-bottom: 22px;
         }
 
+        .battery-points li {
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 8px;
+            padding-left: 19px;
+            position: relative;
+        }
 
-        /* BUTTON */
+        .battery-points li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #19a7ce;
+            font-weight: bold;
+        }
 
         .battery-btn {
             display: inline-block;
-
-            padding: 12px 20px;
-
             background: #19a7ce;
-            color: white;
-
+            color: #ffffff;
             text-decoration: none;
-
+            padding: 11px 18px;
             border-radius: 7px;
-
-            font-size: 14px;
-            font-weight: bold;
-
+            font-size: 13px;
+            font-weight: 700;
             transition: 0.3s ease;
         }
 
@@ -169,90 +330,273 @@
             transform: translateY(-2px);
         }
 
+        /* =========================
+           GUIDANCE SECTION
+        ========================= */
 
-        /* INFORMATION SECTION */
-
-        .battery-info {
-            width: 90%;
-            max-width: 1000px;
-
-            margin: 0 auto 70px;
-
-            background: white;
-
-            border-radius: 12px;
-
-            padding: 35px;
-
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        .guidance {
+            background: #0b1220;
+            color: #ffffff;
+            padding: 65px 5%;
         }
 
-        .battery-info h2 {
+        .guidance-inner {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .guidance-heading {
             text-align: center;
+            max-width: 700px;
+            margin: 0 auto 38px;
+        }
 
+        .guidance-heading span {
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .guidance-heading h2 {
+            font-size: 29px;
+            margin: 8px 0 10px;
+        }
+
+        .guidance-heading p {
+            color: #c9d2df;
+            font-size: 14px;
+        }
+
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guidance-card {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        .guidance-number {
+            color: #19a7ce;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .guidance-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .guidance-card p {
+            color: #c9d2df;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           INFO BOX
+        ========================= */
+
+        .info-section {
+            width: 90%;
+            max-width: 1050px;
+            margin: 65px auto;
+        }
+
+        .info-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid #e8edf2;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .info-box h2 {
             color: #0b1220;
-
-            font-size: 26px;
-
-            margin-bottom: 18px;
+            font-size: 23px;
+            margin-bottom: 8px;
         }
 
-        .battery-info p {
-            color: #555;
+        .info-box p {
+            color: #666;
+            font-size: 14px;
+            max-width: 680px;
+        }
 
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25d366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           DELIVERY STRIP
+        ========================= */
+
+        .delivery-strip {
+            background: #eaf8fc;
+            border-top: 1px solid #d7f0f7;
+            border-bottom: 1px solid #d7f0f7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .delivery-strip strong {
+            color: #0b1220;
             font-size: 15px;
-
-            margin-bottom: 15px;
         }
 
-        .battery-info ul {
-            margin: 10px 0 20px 20px;
-
+        .delivery-strip span {
             color: #555;
+            font-size: 14px;
         }
 
-        .battery-info li {
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .final-cta {
+            text-align: center;
+            padding: 65px 20px;
+            background: #ffffff;
+        }
+
+        .final-cta h2 {
+            color: #0b1220;
+            font-size: 31px;
             margin-bottom: 10px;
         }
 
+        .final-cta p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
 
-        /* FOOTER */
+        .final-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #0b1220;
-
-            color: white;
-
+            color: #ffffff;
             text-align: center;
-
-            padding: 25px 15px;
-
+            padding: 32px 15px;
             font-size: 14px;
         }
 
         footer p {
-            margin: 4px 0;
+            margin: 5px 0;
         }
 
+        footer .footer-business {
+            color: #19a7ce;
+            font-weight: 700;
+            font-size: 16px;
+        }
 
-        /* TABLET */
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #19a7ce;
+        }
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            background: #25d366;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+            background: #1ebe5d;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
 
         @media (max-width: 900px) {
 
-            .battery-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero {
+                min-height: 390px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .guidance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
         }
 
+        /* =========================
+           MOBILE
+        ========================= */
 
-        /* MOBILE */
-
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
 
             header {
                 justify-content: center;
-                gap: 15px;
+                padding: 14px 4%;
             }
 
             header img {
@@ -260,43 +604,101 @@
             }
 
             nav {
-                justify-content: center;
-                gap: 12px;
+                gap: 10px 13px;
             }
 
             nav a {
-                font-size: 13px;
+                font-size: 12px;
             }
 
-            .page-intro {
-                padding: 40px 18px 25px;
+            .nav-whatsapp {
+                padding: 8px 11px;
             }
 
-            .page-intro h1 {
-                font-size: 28px;
+            .hero {
+                min-height: 390px;
+                padding: 55px 6%;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(11, 18, 32, 0.93),
+                        rgba(11, 18, 32, 0.75)
+                    ),
+                    url("phone-battery-replacement.jpg") center/cover no-repeat;
             }
 
-            .page-intro p {
-                font-size: 14px;
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .category-nav {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding: 12px 4%;
+            }
+
+            .category-nav a {
+                white-space: nowrap;
+            }
+
+            .intro {
+                padding: 50px 18px 25px;
+            }
+
+            .intro h2 {
+                font-size: 27px;
             }
 
             .battery-grid {
                 width: 92%;
                 grid-template-columns: 1fr;
                 gap: 22px;
+                margin-bottom: 50px;
             }
 
-            .battery-card {
-                padding: 28px 22px;
+            .battery-image {
+                height: 220px;
             }
 
-            .battery-info {
+            .battery-content {
+                padding: 24px 21px 26px;
+            }
+
+            .guidance {
+                padding: 50px 6%;
+            }
+
+            .guidance-heading h2 {
+                font-size: 26px;
+            }
+
+            .info-section {
                 width: 92%;
+                margin: 50px auto;
+            }
+
+            .info-box {
                 padding: 25px 20px;
             }
 
-            .battery-info h2 {
-                font-size: 23px;
+            .final-cta {
+                padding: 50px 20px;
+            }
+
+            .final-cta h2 {
+                font-size: 27px;
+            }
+
+            .floating-whatsapp {
+                width: 48px;
+                height: 48px;
+                right: 15px;
+                bottom: 15px;
             }
 
         }
@@ -307,18 +709,17 @@
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <a href="index.html">
-
         <img
             src="Logo.png"
             alt="Street Gadgets Care Logo">
-
     </a>
-
 
     <nav>
 
@@ -334,17 +735,31 @@
             Services
         </a>
 
-        <a href="repairs.html">
-            Repairs
+        <a href="tech-repairs.html">
+            Tech Repairs
         </a>
 
-        <a href="products.html"
+        <a href="shop.html"
            class="active">
-            Products
+            Shop
+        </a>
+
+        <a href="creative-studio.html">
+            Creative Studio
         </a>
 
         <a href="contact.html">
             Contact
+        </a>
+
+        <a
+            href="https://wa.me/254114259961"
+            class="nav-whatsapp"
+            target="_blank"
+            rel="noopener">
+
+            WhatsApp
+
         </a>
 
     </nav>
@@ -352,91 +767,436 @@
 </header>
 
 
+<!-- =========================
+     HERO
+========================= -->
 
-<!-- PAGE INTRO -->
+<section class="hero">
 
-<section class="page-intro">
+    <div class="hero-content">
 
-    <h1>Battery Replacement</h1>
+        <div class="hero-text">
+
+            <span class="hero-label">
+                Battery Replacement
+            </span>
+
+            <h1>
+                Bring your device back to life.
+            </h1>
+
+            <p>
+                A weak battery can slow you down. Find the right
+                replacement battery for your phone or laptop and
+                get back to reliable everyday use.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#battery-options"
+                    class="hero-btn primary">
+
+                    Explore Battery Options
+
+                </a>
+
+                <a
+                    href="https://wa.me/254114259961"
+                    class="hero-btn secondary"
+                    target="_blank"
+                    rel="noopener">
+
+                    Ask About Your Battery
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORY NAV
+========================= -->
+
+<div class="category-nav">
+
+    <a href="shop.html">
+        All Shop
+    </a>
+
+    <a href="devices.html">
+        Devices
+    </a>
+
+    <a href="chargers.html">
+        Chargers
+    </a>
+
+    <a href="cables.html">
+        Charging Cables
+    </a>
+
+    <a href="phone-protection.html">
+        Phone Protection
+    </a>
+
+    <a href="battery-replacement.html"
+       class="active">
+
+        Battery Replacement
+
+    </a>
+
+    <a href="laptop-accessories.html">
+        Laptop Accessories
+    </a>
+
+</div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro"
+         id="battery-options">
+
+    <h2>
+        Choose Your Battery Type
+    </h2>
 
     <p>
-        Give your device a new lease of life with the right battery.
-        Choose between phone and laptop battery options and find a
-        suitable solution for your device.
+        Whether your phone no longer holds a charge or your laptop
+        battery has started losing performance, start by choosing
+        the type of device you need a battery for.
     </p>
 
 </section>
 
 
-
-<!-- BATTERY CATEGORIES -->
+<!-- =========================
+     BATTERY CATEGORIES
+========================= -->
 
 <section class="battery-grid">
 
 
-    <!-- PHONE BATTERIES -->
+    <!-- PHONE BATTERY -->
 
-    <div class="battery-card">
+    <article class="battery-card">
 
-        <div>
+        <div class="battery-image">
 
-            <div class="battery-icon">
-                📱
-            </div>
+            <img
+                src="phone-battery-replacement.jpg"
+                alt="Phone battery replacement">
+
+        </div>
+
+        <div class="battery-content">
+
+            <span class="battery-tag">
+                Phone Battery Replacement
+            </span>
+
+            <h3>
+                Phone Batteries
+            </h3>
+
+            <p>
+                Explore battery replacement options for selected
+                phone brands and models. We can help you identify
+                the suitable battery for your device.
+            </p>
+
+            <ul class="battery-points">
+
+                <li>
+                    Replacement battery options
+                </li>
+
+                <li>
+                    Original battery options where available
+                </li>
+
+                <li>
+                    Model-specific compatibility
+                </li>
+
+                <li>
+                    Battery replacement assistance
+                </li>
+
+            </ul>
+
+            <a
+                href="phone-batteries.html"
+                class="battery-btn">
+
+                View Phone Batteries →
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- LAPTOP BATTERY -->
+
+    <article class="battery-card">
+
+        <div class="battery-image">
+
+            <img
+                src="HP%20Laptop%20Batteries.jpeg"
+                alt="Laptop battery replacement">
+
+        </div>
+
+        <div class="battery-content">
+
+            <span class="battery-tag">
+                Laptop Battery Replacement
+            </span>
+
+            <h3>
+                Laptop Batteries
+            </h3>
+
+            <p>
+                Find replacement and original battery options for
+                popular laptop brands including HP, Lenovo, Dell,
+                Acer and Toshiba.
+            </p>
+
+            <ul class="battery-points">
+
+                <li>
+                    HP, Lenovo and Dell batteries
+                </li>
+
+                <li>
+                    Acer and Toshiba options
+                </li>
+
+                <li>
+                    Replacement and original options
+                </li>
+
+                <li>
+                    External laptop batteries available
+                </li>
+
+            </ul>
+
+            <a
+                href="laptop-batteries.html"
+                class="battery-btn">
+
+                View Laptop Batteries →
+
+            </a>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- =========================
+     GUIDANCE
+========================= -->
+
+<section class="guidance">
+
+    <div class="guidance-inner">
+
+        <div class="guidance-heading">
+
+            <span>
+                Before You Order
+            </span>
 
             <h2>
-                Phone Batteries
+                The right battery starts with the right model.
             </h2>
 
             <p>
-                Explore replacement and original battery options for
-                popular phone brands including OPPO, Samsung, iPhone,
-                Nokia, Tecno, Infinix and Xiaomi.
+                Batteries are not universal. A few details about
+                your device can help us identify the correct option.
             </p>
 
         </div>
 
+
+        <div class="guidance-grid">
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    01
+                </div>
+
+                <h3>
+                    Know Your Model
+                </h3>
+
+                <p>
+                    Send us the exact phone or laptop model.
+                    This helps us check compatibility before
+                    you purchase a battery.
+                </p>
+
+            </div>
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    02
+                </div>
+
+                <h3>
+                    Choose Your Option
+                </h3>
+
+                <p>
+                    Depending on the device, you may have a
+                    choice between replacement and original
+                    battery options.
+                </p>
+
+            </div>
+
+
+            <div class="guidance-card">
+
+                <div class="guidance-number">
+                    03
+                </div>
+
+                <h3>
+                    Get Help If Needed
+                </h3>
+
+                <p>
+                    Not sure which battery you need? Send us
+                    your device model or a photo and we can
+                    help you identify the suitable option.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INFORMATION BOX
+========================= -->
+
+<section class="info-section">
+
+    <div class="info-box">
+
+        <div>
+
+            <h2>
+                Not sure which battery fits your device?
+            </h2>
+
+            <p>
+                Send us your phone or laptop model through WhatsApp.
+                We'll help you check the suitable battery option
+                before you place your order.
+            </p>
+
+        </div>
+
+        <a
+            href="https://wa.me/254114259961"
+            class="whatsapp-btn"
+            target="_blank"
+            rel="noopener">
+
+            Ask on WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DELIVERY
+========================= -->
+
+<section class="delivery-strip">
+
+    <strong>
+        Nairobi Based
+    </strong>
+
+    <span>
+        • Delivery available across Kenya
+    </span>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final-cta">
+
+    <h2>
+        Ready to replace your battery?
+    </h2>
+
+    <p>
+        Choose your device type or talk to us if you need help
+        identifying the right battery.
+    </p>
+
+    <div class="final-buttons">
 
         <a
             href="phone-batteries.html"
             class="battery-btn">
 
-            View Phone Batteries →
+            Phone Batteries
 
         </a>
-
-    </div>
-
-
-
-    <!-- LAPTOP BATTERIES -->
-
-    <div class="battery-card">
-
-        <div>
-
-            <div class="battery-icon">
-                💻
-            </div>
-
-            <h2>
-                Laptop Batteries
-            </h2>
-
-            <p>
-                Find original and replacement battery options for
-                popular laptop brands including HP, Lenovo, Dell,
-                Acer, Toshiba and external multi-brand laptop batteries.
-            </p>
-
-        </div>
-
 
         <a
             href="laptop-batteries.html"
             class="battery-btn">
 
-            View Laptop Batteries →
+            Laptop Batteries
+
+        </a>
+
+        <a
+            href="https://wa.me/254114259961"
+            class="whatsapp-btn"
+            target="_blank"
+            rel="noopener">
+
+            WhatsApp Us
 
         </a>
 
@@ -445,69 +1205,55 @@
 </section>
 
 
-
-<!-- INFORMATION -->
-
-<section class="battery-info">
-
-    <h2>
-        Choose the Right Battery for Your Device
-    </h2>
-
-
-    <p>
-        Battery replacement is an important part of keeping your
-        phone or laptop reliable and ready for everyday use. At
-        Street Gadgets Care, we provide different battery options
-        to suit different devices, budgets and customer preferences.
-    </p>
-
-
-    <ul>
-
-        <li>
-            <strong>Phone Batteries:</strong>
-            Replacement and original battery options are available
-            for selected phone brands and models.
-        </li>
-
-        <li>
-            <strong>Laptop Batteries:</strong>
-            Original and replacement options are available for
-            various laptop brands and models.
-        </li>
-
-        <li>
-            <strong>Exact model matters:</strong>
-            Batteries are not universal. Always provide your exact
-            device model so the correct battery can be identified.
-        </li>
-
-        <li>
-            <strong>Professional installation:</strong>
-            We can help you identify the suitable battery and
-            professionally install it for your device.
-        </li>
-
-    </ul>
-
-</section>
-
-
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
+
+    <p class="footer-business">
+        Street Gadgets Care
+    </p>
+
+    <p>
+        Laptop & Phone Repair • Accessories • Graphic Design
+    </p>
+
+    <p>
+        Nairobi, Kenya • Serving Customers Across Kenya
+    </p>
+
+    <p>
+        <a href="tel:0114259961">
+            0114259961
+        </a>
+        |
+        <a href="mailto:streetgadgetscare@gmail.com">
+            streetgadgetscare@gmail.com
+        </a>
+    </p>
 
     <p>
         © 2026 Street Gadgets Care. All Rights Reserved.
     </p>
 
-    <p>
-        Phone & Laptop Repair • Accessories • Graphic Design
-    </p>
-
 </footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/254114259961"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Street Gadgets Care on WhatsApp">
+
+    ☎
+
+</a>
 
 
 </body>
