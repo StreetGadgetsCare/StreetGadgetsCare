@@ -1,961 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Shop | Street Gadgets Care</title>
-
-    <meta name="description"
-          content="Shop laptops, button phones, laptop bags, storage, memory, chargers, cables, phone protection, batteries and other gadgets from Street Gadgets Care. Based in Nairobi, serving customers across Kenya.">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f9fc;
-            color: #172033;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: #0b1220;
-            color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .logo img {
-            width: 170px;
-            max-height: 58px;
-            object-fit: contain;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: #19a7ce;
-        }
-
-        .whatsapp-nav {
-            background: #25d366;
-            color: #ffffff !important;
-            padding: 9px 15px;
-            border-radius: 7px;
-        }
-
-        .whatsapp-nav:hover {
-            background: #1ebe5d;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 520px;
-            background:
-                linear-gradient(rgba(11,18,32,0.82), rgba(11,18,32,0.82)),
-                url("laptop-servicing.jpg") center/cover no-repeat;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            padding: 70px 20px;
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 55px;
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 650px;
-        }
-
-        .eyebrow {
-            color: #19a7ce;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
-        }
-
-        .hero h1 {
-            font-size: clamp(38px, 5vw, 62px);
-            line-height: 1.08;
-            margin-bottom: 22px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #e5eaf2;
-            max-width: 620px;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 20px;
-            border-radius: 7px;
-            font-weight: 700;
-            transition: 0.3s ease;
-        }
-
-        .btn-primary {
-            background: #19a7ce;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background: #1189aa;
-            transform: translateY(-2px);
-        }
-
-        .btn-light {
-            background: #ffffff;
-            color: #0b1220;
-        }
-
-        .btn-light:hover {
-            background: #eaf0f5;
-            transform: translateY(-2px);
-        }
-
-        .hero-product {
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-card {
-            width: 100%;
-            max-width: 430px;
-            background: rgba(255,255,255,0.10);
-            border: 1px solid rgba(255,255,255,0.18);
-            border-radius: 18px;
-            padding: 18px;
-            backdrop-filter: blur(5px);
-        }
-
-        .hero-card img {
-            width: 100%;
-            height: 290px;
-            object-fit: contain;
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 15px;
-        }
-
-        .hero-card-text {
-            padding: 16px 4px 3px;
-        }
-
-        .hero-card-text strong {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 4px;
-        }
-
-        .hero-card-text span {
-            color: #d6e0eb;
-            font-size: 14px;
-        }
-
-        /* =========================
-           INTRO
-        ========================= */
-
-        .intro {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            padding: 75px 20px 45px;
-        }
-
-        .intro .eyebrow {
-            margin-bottom: 10px;
-        }
-
-        .intro h2 {
-            font-size: 38px;
-            line-height: 1.2;
-            color: #0b1220;
-            margin-bottom: 15px;
-        }
-
-        .intro p {
-            color: #667085;
-            font-size: 17px;
-        }
-
-        /* =========================
-           SHOP GRID
-        ========================= */
-
-        .shop-section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 10px 20px 80px;
-        }
-
-        .shop-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .shop-card {
-            background: #ffffff;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #e7ebf0;
-            box-shadow: 0 8px 25px rgba(11,18,32,0.06);
-            transition: 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .shop-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(11,18,32,0.12);
-        }
-
-        .shop-image {
-            height: 220px;
-            background: #f4f7fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px;
-        }
-
-        .shop-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .shop-content {
-            padding: 23px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .shop-content h3 {
-            font-size: 22px;
-            color: #0b1220;
-            margin-bottom: 9px;
-        }
-
-        .shop-content p {
-            color: #687386;
-            font-size: 15px;
-            margin-bottom: 20px;
-            flex: 1;
-        }
-
-        .shop-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #0b1220;
-            color: #ffffff;
-            padding: 11px 15px;
-            border-radius: 7px;
-            font-weight: 700;
-            transition: 0.3s ease;
-        }
-
-        .shop-link:hover {
-            background: #19a7ce;
-        }
-
-        /* =========================
-           SHOP GUIDANCE
-        ========================= */
-
-        .guidance {
-            background: #0b1220;
-            color: #ffffff;
-            padding: 75px 20px;
-        }
-
-        .guidance-container {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .guidance-heading {
-            text-align: center;
-            max-width: 750px;
-            margin: auto auto 45px;
-        }
-
-        .guidance-heading .eyebrow {
-            color: #19a7ce;
-        }
-
-        .guidance-heading h2 {
-            font-size: 36px;
-            line-height: 1.2;
-            margin-bottom: 14px;
-        }
-
-        .guidance-heading p {
-            color: #cbd5e1;
-        }
-
-        .guidance-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .guidance-item {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.10);
-            border-radius: 13px;
-            padding: 25px 20px;
-        }
-
-        .guidance-number {
-            color: #19a7ce;
-            font-size: 14px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .guidance-item h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .guidance-item p {
-            color: #bfc9d7;
-            font-size: 14px;
-        }
-
-        /* =========================
-           HOW TO ORDER
-        ========================= */
-
-        .order-section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 75px 20px;
-        }
-
-        .order-heading {
-            text-align: center;
-            margin-bottom: 42px;
-        }
-
-        .order-heading h2 {
-            font-size: 36px;
-            color: #0b1220;
-            margin-bottom: 10px;
-        }
-
-        .order-heading p {
-            color: #687386;
-        }
-
-        .order-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .order-card {
-            background: #ffffff;
-            border: 1px solid #e6ebf0;
-            border-radius: 14px;
-            padding: 28px;
-            text-align: center;
-        }
-
-        .order-card span {
-            width: 45px;
-            height: 45px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: #e8f8fc;
-            color: #19a7ce;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-        }
-
-        .order-card h3 {
-            color: #0b1220;
-            margin-bottom: 8px;
-        }
-
-        .order-card p {
-            color: #687386;
-            font-size: 14px;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            background: linear-gradient(135deg, #19a7ce, #087fa2);
-            color: #ffffff;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        .cta-container {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .cta h2 {
-            font-size: 40px;
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            color: #e9faff;
-            font-size: 17px;
-            margin-bottom: 25px;
-        }
-
-        .cta .btn {
-            background: #0b1220;
-            color: #ffffff;
-        }
-
-        .cta .btn:hover {
-            background: #ffffff;
-            color: #0b1220;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #080e19;
-            color: #ffffff;
-            padding: 55px 20px 25px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
-            gap: 50px;
-        }
-
-        .footer-logo img {
-            width: 170px;
-            margin-bottom: 15px;
-        }
-
-        .footer-about p {
-            color: #aeb8c7;
-            font-size: 14px;
-            max-width: 400px;
-        }
-
-        .footer-column h3 {
-            font-size: 17px;
-            margin-bottom: 15px;
-        }
-
-        .footer-column a {
-            display: block;
-            color: #aeb8c7;
-            font-size: 14px;
-            margin-bottom: 9px;
-            transition: 0.3s ease;
-        }
-
-        .footer-column a:hover {
-            color: #19a7ce;
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.10);
-            text-align: center;
-            color: #7f8a9b;
-            font-size: 13px;
-        }
-
-        /* =========================
-           FLOATING WHATSAPP
-        ========================= */
-
-        .floating-whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #25d366;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            font-weight: bold;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.20);
-            z-index: 999;
-            transition: 0.3s ease;
-        }
-
-        .floating-whatsapp:hover {
-            transform: scale(1.08);
-            background: #1ebe5d;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 1000px) {
-
-            .nav-container {
-                flex-direction: column;
-            }
-
-            nav {
-                justify-content: center;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-content {
-                margin: auto;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-product {
-                margin-top: 10px;
-            }
-
-            .shop-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .guidance-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 650px) {
-
-            .nav-container {
-                padding: 10px 15px;
-            }
-
-            .logo img {
-                width: 150px;
-            }
-
-            nav {
-                gap: 11px;
-            }
-
-            nav a {
-                font-size: 13px;
-            }
-
-            .hero {
-                min-height: auto;
-            }
-
-            .hero-container {
-                padding: 55px 18px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .hero-card img {
-                height: 230px;
-            }
-
-            .intro {
-                padding: 55px 18px 35px;
-            }
-
-            .intro h2,
-            .guidance-heading h2,
-            .order-heading h2 {
-                font-size: 30px;
-            }
-
-            .shop-section {
-                padding: 10px 15px 60px;
-            }
-
-            .shop-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .shop-image {
-                height: 230px;
-            }
-
-            .guidance-grid,
-            .order-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .cta h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shop | Street Gadgets Care</title>
+
+  <meta name="description" content="Shop laptops, phones, chargers, cables, phone protection, batteries, laptop accessories, storage, computer accessories and smart gadgets from Street Gadgets Care. Delivery available across Kenya.">
+
+  <link rel="icon" type="image/png" href="Logo.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #0b1220;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #0b1220;
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #19a7ce;
+    }
+
+    .nav-cta {
+      background: #19a7ce;
+      color: #ffffff !important;
+      padding: 10px 17px;
+      border-radius: 8px;
+    }
+
+    .nav-cta:hover {
+      background: #148caf;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(11, 18, 32, 0.97), rgba(11, 18, 32, 0.86)),
+        url("nvme-ssd.jpg") center/cover no-repeat;
+      color: #ffffff;
+      padding: 85px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero-content {
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      color: #19a7ce;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d7e1ea;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #19a7ce;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #148caf;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #ffffff;
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+      color: #0b1220;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 430px;
+      height: 330px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      padding: 20px;
+    }
+
+    /* =========================
+       SHOP INTRO
+    ========================= */
+
+    .section {
+      padding: 80px 20px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: #667085;
+      font-size: 16px;
+    }
+
+    /* =========================
+       CATEGORY GRID
+    ========================= */
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .shop-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e7ebef;
+      box-shadow: 0 8px 25px rgba(11, 18, 32, 0.06);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shop-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(11, 18, 32, 0.12);
+    }
+
+    .card-image {
+      height: 235px;
+      background: #f0f3f6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: 0.4s ease;
+    }
+
+    .shop-card:hover .card-image img {
+      transform: scale(1.04);
+    }
+
+    .card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-content h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .card-content p {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .card-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #0b1220;
+      color: #ffffff;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .card-button:hover {
+      background: #19a7ce;
+    }
+
+    /* =========================
+       FEATURE STRIP
+    ========================= */
+
+    .feature-strip {
+      background: #0b1220;
+      color: #ffffff;
+      padding: 65px 20px;
+    }
+
+    .feature-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(25, 167, 206, 0.13);
+      color: #19a7ce;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .feature h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #b9c5d0;
+      font-size: 14px;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section {
+      padding: 85px 20px;
+      background: #ffffff;
+    }
+
+    .cta-box {
+      max-width: 1100px;
+      margin: auto;
+      background: linear-gradient(135deg, #0b1220, #16263b);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta-content {
+      max-width: 680px;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .cta-content p {
+      color: #c6d2dd;
+      font-size: 15px;
+    }
+
+    /* =========================
+       DELIVERY
+    ========================= */
+
+    .delivery-strip {
+      background: #19a7ce;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #080e19;
+      color: #ffffff;
+      padding: 60px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+    }
+
+    .footer-brand img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p,
+    footer li,
+    footer a {
+      color: #aebbc8;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 9px;
+    }
+
+    footer a:hover {
+      color: #19a7ce;
+    }
+
+    .footer-title {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 45px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      color: #7f8b98;
+      font-size: 13px;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================= */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      font-weight: 800;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content {
+        margin: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        margin-top: 10px;
+      }
+
+      .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 65px 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cta-box {
+        padding: 35px 25px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<header>
+  <header>
     <div class="nav-container">
 
-        <a href="index.html" class="logo">
-            <img src="Logo.png" alt="Street Gadgets Care">
-        </a>
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+        <span class="logo-text">Street Gadgets Care</span>
+      </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="tech-repairs.html">Tech Repairs</a>
-            <a href="shop.html" class="active">Shop</a>
-            <a href="creative-studio.html">Creative Studio</a>
-            <a href="contact.html">Contact</a>
-
-            <a
-                href="https://wa.me/254114259961"
-                class="whatsapp-nav"
-                target="_blank"
-            >
-                WhatsApp
-            </a>
-        </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="creative-studio.html">Creative Studio</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
 
     </div>
-</header>
+  </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<section class="hero">
+  <section class="hero">
 
-    <div class="hero-container">
+    <div class="hero-inner">
 
-        <div class="hero-content">
+      <div class="hero-content">
 
-            <div class="eyebrow">
-                STREET GADGETS CARE SHOP
-            </div>
+        <div class="eyebrow">Street Gadgets Care Shop</div>
 
-            <h1>
-                Technology you need. Without the hassle.
-            </h1>
+        <h1>Technology you need. All in one place.</h1>
 
-            <p>
-                Browse laptops, phones, accessories, storage, chargers,
-                protection products, batteries and smart gadgets — all in
-                one place, with practical guidance when you need it.
-            </p>
+        <p>
+          Shop laptops, phones, chargers, cables, protection accessories,
+          storage, batteries and everyday computer accessories from
+          Street Gadgets Care.
+        </p>
 
-            <div class="hero-buttons">
+        <div class="hero-buttons">
+          <a href="#shop-categories" class="btn btn-primary">
+            Explore Shop
+          </a>
 
-                <a href="#shop" class="btn btn-primary">
-                    Explore the Shop
-                </a>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20product."
-                    class="btn btn-light"
-                    target="_blank"
-                >
-                    Ask About a Product
-                </a>
-
-            </div>
-
+          <a href="https://wa.me/254114259961" class="btn btn-outline">
+            Ask on WhatsApp
+          </a>
         </div>
 
+      </div>
 
-        <div class="hero-product">
-
-            <div class="hero-card">
-
-                <img
-                    src="HP%20745%20G6%20RYZEN%207.JPG"
-                    alt="HP EliteBook 745 G6 Ryzen 7"
-                >
-
-                <div class="hero-card-text">
-
-                    <strong>
-                        Devices, accessories & more
-                    </strong>
-
-                    <span>
-                        Nairobi based • Serving customers across Kenya
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
+      <div class="hero-image">
+        <img src="nvme-ssd.jpg" alt="Storage and laptop accessories">
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+  <!-- =========================
+       SHOP CATEGORIES
+  ========================= -->
 
-<section class="intro">
+  <section class="section" id="shop-categories">
 
-    <div class="eyebrow">
-        SHOP BY CATEGORY
-    </div>
+    <div class="section-inner">
 
-    <h2>
-        Find what you need. Choose where to start.
-    </h2>
+      <div class="section-heading">
 
-    <p>
-        We've organised the shop into clear categories so you can go
-        directly to the products you're looking for.
-    </p>
+        <div class="eyebrow">Shop by Category</div>
 
-</section>
+        <h2>Find what you need.</h2>
+
+        <p>
+          Explore our product categories and choose the technology,
+          accessory or replacement part that fits your needs.
+        </p>
+
+      </div>
 
 
-<!-- =========================
-     SHOP CATEGORIES
-========================= -->
-
-<section class="shop-section" id="shop">
-
-    <div class="shop-grid">
-
+      <div class="shop-grid">
 
         <!-- DEVICES -->
 
         <article class="shop-card">
 
-            <div class="shop-image">
-                <img
-                    src="HP%20745%20G6%20RYZEN%207.JPG"
-                    alt="Laptops and button phones"
-                >
-            </div>
+          <div class="card-image">
+            <img
+              src="HP%20745%20G6%20RYZEN%207.JPG"
+              alt="Laptops and phones from Street Gadgets Care"
+            >
+          </div>
 
-            <div class="shop-content">
+          <div class="card-content">
 
-                <h3>
-                    Laptops & Button Phones
-                </h3>
+            <h3>Devices</h3>
 
-                <p>
-                    Browse available laptops and simple everyday
-                    button phones for work, school and daily use.
-                </p>
+            <p>
+              Browse available laptops and button phones, with practical
+              options for work, school, business and everyday use.
+            </p>
 
-                <a href="devices.html" class="shop-link">
-                    View Devices →
-                </a>
+            <a href="devices.html" class="card-button">
+              View Devices
+            </a>
 
-            </div>
-
-        </article>
-
-
-        <!-- LAPTOP BAGS -->
-
-        <article class="shop-card">
-
-            <div class="shop-image">
-                <img
-                    src="laptop-bag-1.jpg"
-                    alt="Laptop bags"
-                >
-            </div>
-
-            <div class="shop-content">
-
-                <h3>
-                    Laptop Bags
-                </h3>
-
-                <p>
-                    Carry and protect your laptop with practical
-                    laptop bags in different styles and price ranges.
-                </p>
-
-                <a href="laptop-bags.html" class="shop-link">
-                    View Laptop Bags →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- STORAGE & MEMORY -->
-
-        <article class="shop-card">
-
-            <div class="shop-image">
-                <img
-                    src="nvme-ssd.jpg"
-                    alt="Storage and memory"
-                >
-            </div>
-
-            <div class="shop-content">
-
-                <h3>
-                    Storage & Memory
-                </h3>
-
-                <p>
-                    Shop HDDs, SSDs, external drives, RAM, memory cards
-                    and flash drives for storage and upgrades.
-                </p>
-
-                <a href="laptop-storage.html" class="shop-link">
-                    View Storage & Memory →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- COMPUTER ACCESSORIES -->
-
-        <article class="shop-card">
-
-            <div class="shop-image">
-                <img
-                    src="wireless-mouse.jpg"
-                    alt="Computer accessories"
-                >
-            </div>
-
-            <div class="shop-content">
-
-                <h3>
-                    Computer Accessories
-                </h3>
-
-                <p>
-                    Find wireless mice, keyboards, Wi-Fi dongles,
-                    Bluetooth dongles, cleaners and other computer essentials.
-                </p>
-
-                <a href="computer-accessories.html" class="shop-link">
-                    View Computer Accessories →
-                </a>
-
-            </div>
+          </div>
 
         </article>
 
@@ -964,60 +726,56 @@
 
         <article class="shop-card">
 
-            <div class="shop-image">
-                <img
-                    src="charger.jpg"
-                    alt="Phone and laptop chargers"
-                >
-            </div>
+          <div class="card-image">
+            <img
+              src="charger.jpg"
+              alt="Phone and laptop chargers"
+            >
+          </div>
 
-            <div class="shop-content">
+          <div class="card-content">
 
-                <h3>
-                    Chargers
-                </h3>
+            <h3>Chargers</h3>
 
-                <p>
-                    Smartphone and laptop chargers for different
-                    brands, power ratings and charging needs.
-                </p>
+            <p>
+              Find smartphone and laptop chargers, including fast chargers,
+              USB-C options and replacement laptop adapters.
+            </p>
 
-                <a href="chargers.html" class="shop-link">
-                    View Chargers →
-                </a>
+            <a href="chargers.html" class="card-button">
+              View Chargers
+            </a>
 
-            </div>
+          </div>
 
         </article>
 
 
-        <!-- CABLES -->
+        <!-- CHARGING CABLES -->
 
         <article class="shop-card">
 
-            <div class="shop-image">
-                <img
-                    src="charging-cable.jpg"
-                    alt="Charging cables"
-                >
-            </div>
+          <div class="card-image">
+            <img
+              src="charging-cable.jpg"
+              alt="Charging cables"
+            >
+          </div>
 
-            <div class="shop-content">
+          <div class="card-content">
 
-                <h3>
-                    Charging Cables
-                </h3>
+            <h3>Charging Cables</h3>
 
-                <p>
-                    USB-C, Lightning, Micro USB and laptop power
-                    cables for charging and everyday connectivity.
-                </p>
+            <p>
+              Shop charging and data cables for smartphones and laptops,
+              including USB-C, Micro USB and laptop power cables.
+            </p>
 
-                <a href="cables.html" class="shop-link">
-                    View Charging Cables →
-                </a>
+            <a href="cables.html" class="card-button">
+              View Cables
+            </a>
 
-            </div>
+          </div>
 
         </article>
 
@@ -1026,29 +784,27 @@
 
         <article class="shop-card">
 
-            <div class="shop-image">
-                <img
-                    src="phone-protection.jpg"
-                    alt="Phone protection"
-                >
-            </div>
+          <div class="card-image">
+            <img
+              src="phone-protection.jpg"
+              alt="Phone protection accessories"
+            >
+          </div>
 
-            <div class="shop-content">
+          <div class="card-content">
 
-                <h3>
-                    Phone Protection
-                </h3>
+            <h3>Phone Protection</h3>
 
-                <p>
-                    Screen protectors and phone covers designed to
-                    help protect your device from everyday damage.
-                </p>
+            <p>
+              Protect your phone with screen protectors, privacy glass,
+              curved glass and protective phone covers.
+            </p>
 
-                <a href="phone-protection.html" class="shop-link">
-                    View Phone Protection →
-                </a>
+            <a href="phone-protection.html" class="card-button">
+              View Protection
+            </a>
 
-            </div>
+          </div>
 
         </article>
 
@@ -1057,29 +813,114 @@
 
         <article class="shop-card">
 
-            <div class="shop-image">
-                <img
-                    src="phone-battery-replacement.jpg"
-                    alt="Replacement batteries"
-                >
-            </div>
+          <div class="card-image">
+            <img
+              src="phone-battery-replacement.jpg"
+              alt="Phone and laptop replacement batteries"
+            >
+          </div>
 
-            <div class="shop-content">
+          <div class="card-content">
 
-                <h3>
-                    Replacement Batteries
-                </h3>
+            <h3>Replacement Batteries</h3>
 
-                <p>
-                    Replacement batteries for phones and laptops,
-                    with options available for different brands and models.
-                </p>
+            <p>
+              Replacement and original battery options for selected phones
+              and laptops, depending on model and availability.
+            </p>
 
-                <a href="battery-replacement.html" class="shop-link">
-                    View Replacement Batteries →
-                </a>
+            <a href="battery-replacement.html" class="card-button">
+              View Batteries
+            </a>
 
-            </div>
+          </div>
+
+        </article>
+
+
+        <!-- LAPTOP ACCESSORIES -->
+
+        <article class="shop-card">
+
+          <div class="card-image">
+            <img
+              src="laptop-bag-1.jpg"
+              alt="Laptop accessories"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>Laptop Accessories</h3>
+
+            <p>
+              Explore laptop bags, storage and memory, plus computer and
+              laptop accessories for your everyday setup.
+            </p>
+
+            <a href="laptop-accessories.html" class="card-button">
+              Explore Laptop Accessories
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- STORAGE & MEMORY -->
+
+        <article class="shop-card">
+
+          <div class="card-image">
+            <img
+              src="nvme-ssd.jpg"
+              alt="Laptop storage and memory"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>Storage &amp; Memory</h3>
+
+            <p>
+              Shop HDDs, NVMe SSDs, 2.5-inch SATA SSDs, external HDDs,
+              RAM, memory cards and flash drives.
+            </p>
+
+            <a href="laptop-storage.html" class="card-button">
+              View Storage &amp; Memory
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- COMPUTER / LAPTOP ACCESSORIES -->
+
+        <article class="shop-card">
+
+          <div class="card-image">
+            <img
+              src="wireless-mouse.jpg"
+              alt="Computer and laptop accessories"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>Computer / Laptop Accessories</h3>
+
+            <p>
+              Find wireless mice, keyboards, Wi-Fi and Bluetooth dongles,
+              foam cleaners and cleaning kits.
+            </p>
+
+            <a href="computer-accessories.html" class="card-button">
+              View Accessories
+            </a>
+
+          </div>
 
         </article>
 
@@ -1088,379 +929,232 @@
 
         <article class="shop-card">
 
-            <div class="shop-image">
-                <img
-                    src="Oraimo%206%20Lite.jpeg"
-                    alt="Smart watches and other gadgets"
-                >
-            </div>
+          <div class="card-image">
+            <img
+              src="Logo.png"
+              alt="Other gadgets from Street Gadgets Care"
+            >
+          </div>
 
-            <div class="shop-content">
+          <div class="card-content">
 
-                <h3>
-                    Other Gadgets
-                </h3>
+            <h3>Other Gadgets</h3>
 
-                <p>
-                    Explore smart watches and other useful gadgets
-                    available from Street Gadgets Care.
-                </p>
+            <p>
+              Explore other useful gadgets and everyday technology products
+              available from Street Gadgets Care.
+            </p>
 
-                <a href="other-gadgets.html" class="shop-link">
-                    View Other Gadgets →
-                </a>
+            <a href="other-gadgets.html" class="card-button">
+              View Other Gadgets
+            </a>
 
-            </div>
+          </div>
 
         </article>
 
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- =========================
-     SHOP GUIDANCE
-========================= -->
+  <!-- =========================
+       FEATURES
+  ========================= -->
 
-<section class="guidance">
+  <section class="feature-strip">
 
-    <div class="guidance-container">
+    <div class="feature-grid">
 
-        <div class="guidance-heading">
+      <div class="feature">
 
-            <div class="eyebrow">
-                WHY SHOP WITH US
-            </div>
+        <div class="feature-icon">01</div>
 
-            <h2>
-                Buy the right technology — not just any technology.
-            </h2>
-
-            <p>
-                We understand technology because we also repair,
-                service and work with it every day.
-            </p>
-
-        </div>
-
-
-        <div class="guidance-grid">
-
-            <div class="guidance-item">
-
-                <div class="guidance-number">
-                    01
-                </div>
-
-                <h3>
-                    Practical Guidance
-                </h3>
-
-                <p>
-                    Not sure what you need? Ask us before you buy.
-                </p>
-
-            </div>
-
-
-            <div class="guidance-item">
-
-                <div class="guidance-number">
-                    02
-                </div>
-
-                <h3>
-                    Repair Knowledge
-                </h3>
-
-                <p>
-                    Our repair experience helps us understand
-                    real-world device needs.
-                </p>
-
-            </div>
-
-
-            <div class="guidance-item">
-
-                <div class="guidance-number">
-                    03
-                </div>
-
-                <h3>
-                    Useful Accessories
-                </h3>
-
-                <p>
-                    Find everyday technology accessories alongside
-                    your devices.
-                </p>
-
-            </div>
-
-
-            <div class="guidance-item">
-
-                <div class="guidance-number">
-                    04
-                </div>
-
-                <h3>
-                    Kenya-Wide Service
-                </h3>
-
-                <p>
-                    Based in Nairobi and serving customers across Kenya.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     HOW TO ORDER
-========================= -->
-
-<section class="order-section">
-
-    <div class="order-heading">
-
-        <h2>
-            How to Order
-        </h2>
+        <h3>Practical Products</h3>
 
         <p>
-            Getting your product is simple.
+          Products selected around real everyday technology needs.
         </p>
 
-    </div>
+      </div>
 
 
-    <div class="order-grid">
+      <div class="feature">
 
-        <div class="order-card">
+        <div class="feature-icon">02</div>
 
-            <span>1</span>
-
-            <h3>
-                Find What You Need
-            </h3>
-
-            <p>
-                Browse the category that matches the product
-                you're looking for.
-            </p>
-
-        </div>
-
-
-        <div class="order-card">
-
-            <span>2</span>
-
-            <h3>
-                Confirm Availability
-            </h3>
-
-            <p>
-                Contact us through WhatsApp to confirm the
-                model, price and availability.
-            </p>
-
-        </div>
-
-
-        <div class="order-card">
-
-            <span>3</span>
-
-            <h3>
-                Arrange Delivery
-            </h3>
-
-            <p>
-                Once confirmed, arrange collection or delivery
-                depending on your location.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta">
-
-    <div class="cta-container">
-
-        <h2>
-            Let's help you find it.
-        </h2>
+        <h3>Need Help Choosing?</h3>
 
         <p>
-            Can't find what you're looking for? Tell us what you need
-            and we'll help you check the available options.
+          Not sure which product, specification or accessory fits your device?
+          Ask us before ordering.
         </p>
 
-        <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20product."
-            class="btn"
-            target="_blank"
-        >
-            Ask Us on WhatsApp →
-        </a>
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">03</div>
+
+        <h3>Delivery Across Kenya</h3>
+
+        <p>
+          Based in Nairobi and serving customers across Kenya.
+        </p>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+  <!-- =========================
+       CTA
+  ========================= -->
 
-<footer>
+  <section class="cta-section">
 
-    <div class="footer-container">
+    <div class="cta-box">
+
+      <div class="cta-content">
+
+        <h2>Not sure what you need?</h2>
+
+        <p>
+          Tell us your device model or what you are looking for.
+          We'll help you identify the right product or accessory.
+        </p>
+
+      </div>
+
+      <a
+        href="https://wa.me/254114259961"
+        class="btn btn-primary"
+        target="_blank"
+      >
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
 
 
-        <div class="footer-about">
+  <!-- =========================
+       DELIVERY STRIP
+  ========================= -->
 
-            <div class="footer-logo">
-                <img
-                    src="Logo.png"
-                    alt="Street Gadgets Care"
-                >
-            </div>
-
-            <p>
-                Street Gadgets Care provides laptop and phone repairs,
-                technology products, accessories, graphic design and
-                practical digital support.
-            </p>
-
-        </div>
+  <div class="delivery-strip">
+    Based in Nairobi • Serving customers across Kenya • Delivery available
+  </div>
 
 
-        <div class="footer-column">
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-            <h3>
-                Shop
-            </h3>
+  <footer>
 
-            <a href="devices.html">
-                Laptops & Button Phones
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
+
+        <h3>Street Gadgets Care</h3>
+
+        <p>
+          Laptop and phone repair, devices, accessories, graphic design
+          and practical digital support.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">Quick Links</div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tech-repairs.html">Tech Repairs</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="creative-studio.html">Creative Studio</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">Shop</div>
+
+        <ul>
+          <li><a href="devices.html">Devices</a></li>
+          <li><a href="chargers.html">Chargers</a></li>
+          <li><a href="cables.html">Charging Cables</a></li>
+          <li><a href="phone-protection.html">Phone Protection</a></li>
+          <li><a href="battery-replacement.html">Replacement Batteries</a></li>
+          <li><a href="laptop-accessories.html">Laptop Accessories</a></li>
+          <li><a href="laptop-storage.html">Storage &amp; Memory</a></li>
+          <li><a href="computer-accessories.html">Computer / Laptop Accessories</a></li>
+          <li><a href="other-gadgets.html">Other Gadgets</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">Contact</div>
+
+        <ul>
+          <li>
+            <a href="https://wa.me/254114259961" target="_blank">
+              WhatsApp: 0114259961
             </a>
+          </li>
 
-            <a href="laptop-bags.html">
-                Laptop Bags
-            </a>
-
-            <a href="laptop-storage.html">
-                Storage & Memory
-            </a>
-
-            <a href="computer-accessories.html">
-                Computer Accessories
-            </a>
-
-            <a href="chargers.html">
-                Chargers
-            </a>
-
-            <a href="cables.html">
-                Charging Cables
-            </a>
-
-            <a href="phone-protection.html">
-                Phone Protection
-            </a>
-
-            <a href="battery-replacement.html">
-                Replacement Batteries
-            </a>
-
-            <a href="other-gadgets.html">
-                Other Gadgets
-            </a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>
-                Contact
-            </h3>
-
-            <a href="tech-repairs.html">
-                Tech Repairs
-            </a>
-
-            <a href="creative-studio.html">
-                Creative Studio
-            </a>
-
-            <a href="contact.html">
-                Contact Us
-            </a>
-
-            <a href="tel:0114259961">
-                0114 259 961
-            </a>
-
+          <li>
             <a href="mailto:streetgadgetscare@gmail.com">
-                streetgadgetscare@gmail.com
+              streetgadgetscare@gmail.com
             </a>
+          </li>
 
-            <a
-                href="https://wa.me/254114259961"
-                target="_blank"
-            >
-                WhatsApp Us
-            </a>
+          <li>Nairobi, Kenya</li>
+          <li>Serving customers across Kenya</li>
+        </ul>
 
-        </div>
-
+      </div>
 
     </div>
 
 
     <div class="footer-bottom">
-
-        © 2026 Street Gadgets Care. All Rights Reserved.
-        <br>
-        Based in Nairobi • Serving Customers Across Kenya
-
+      © 2026 Street Gadgets Care. All rights reserved.
     </div>
 
-</footer>
+  </footer>
 
 
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
 
-<a
-    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
-    class="floating-whatsapp"
+  <a
+    href="https://wa.me/254114259961"
+    class="whatsapp-float"
     target="_blank"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
->
+  >
     ☎
-</a>
+  </a>
 
 </body>
 </html>
