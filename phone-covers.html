@@ -6,6 +6,8 @@
 
     <title>Phone Covers | Street Gadgets Care</title>
 
+    <meta name="description" content="Shop phone covers from Street Gadgets Care, including Samsung, iPhone, Tecno and Redmi cases. Nairobi based, serving customers across Kenya.">
+
     <style>
         * {
             box-sizing: border-box;
@@ -13,106 +15,325 @@
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* HEADER */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #0b1220;
-            padding: 15px 30px;
+            padding: 12px 25px;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
         }
 
         .header-container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
         }
 
         .logo {
-            height: 55px;
-            width: auto;
+            width: 170px;
+            max-height: 58px;
+            object-fit: contain;
+            display: block;
         }
 
         nav {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
+            color: #ffffff;
+            font-size: 13px;
             font-weight: bold;
+            transition: 0.25s ease;
         }
 
         nav a:hover {
             color: #19a7ce;
         }
 
-        /* PAGE HEADER */
-        .page-header {
-            background: #0b1220;
-            color: white;
-            text-align: center;
-            padding: 55px 20px;
+        .nav-whatsapp {
+            background: #25d366;
+            padding: 9px 14px;
+            border-radius: 6px;
+            color: #ffffff !important;
         }
 
-        .page-header h1 {
-            font-size: 38px;
+        .nav-whatsapp:hover {
+            background: #1ebe5d;
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            min-height: 400px;
+            background:
+                linear-gradient(rgba(11,18,32,0.84), rgba(11,18,32,0.90)),
+                url("phone-protection.jpg") center/cover no-repeat;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1180px;
+            min-height: 400px;
+            margin: auto;
+            padding: 55px 25px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.12;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            color: #dbe5ee;
+            font-size: 16px;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 12px 19px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .hero-btn.primary {
+            background: #19a7ce;
+            color: white;
+        }
+
+        .hero-btn.primary:hover {
+            background: #128bab;
+            transform: translateY(-2px);
+        }
+
+        .hero-btn.secondary {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            background: rgba(255,255,255,0.07);
+        }
+
+        .hero-btn.secondary:hover {
+            background: rgba(255,255,255,0.14);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 16px;
+            padding: 25px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: #dbe5ee;
+        }
+
+        .hero-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .hero-point {
+            background: rgba(255,255,255,0.07);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+            color: #eef5fa;
+        }
+
+        /* =========================
+           CATEGORY NAV
+        ========================= */
+
+        .category-bar {
+            background: white;
+            border-bottom: 1px solid #e5eaf0;
+            padding: 13px 20px;
+            position: sticky;
+            top: 82px;
+            z-index: 900;
+        }
+
+        .category-nav {
+            max-width: 1180px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-nav a {
+            color: #44515e;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 8px 13px;
+            border-radius: 6px;
+            transition: 0.2s ease;
+        }
+
+        .category-nav a:hover {
+            background: #eef7fa;
+            color: #0b7fa0;
+        }
+
+        .category-nav a.active {
+            background: #19a7ce;
+            color: white;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            max-width: 1050px;
+            margin: 50px auto 25px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .intro-label {
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .intro h2 {
+            color: #0b1220;
+            font-size: 30px;
+            line-height: 1.2;
             margin-bottom: 12px;
         }
 
-        .page-header p {
-            font-size: 16px;
-            color: #d9e2ec;
+        .intro p {
+            max-width: 760px;
+            margin: auto;
+            color: #5c6670;
+            font-size: 15px;
         }
 
-        /* PRODUCTS */
+        /* =========================
+           PRODUCTS
+        ========================= */
+
         .products {
-            max-width: 1200px;
-            margin: 50px auto;
+            max-width: 1150px;
+            margin: 35px auto 60px;
             padding: 0 20px;
         }
 
         .cover-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 24px;
         }
 
         .cover-card {
             background: white;
-            border-radius: 12px;
+            border: 1px solid #e7ebef;
+            border-radius: 13px;
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-            transition: 0.3s ease;
+            box-shadow: 0 5px 20px rgba(11,18,32,0.06);
+            transition: 0.28s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .cover-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 28px rgba(11,18,32,0.11);
         }
 
-        /* IMAGE */
         .cover-image {
             width: 100%;
-            height: 300px;
+            height: 245px;
             background: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            overflow: hidden;
+            padding: 18px;
+            border-bottom: 1px solid #edf0f3;
         }
 
         .cover-image img {
@@ -122,55 +343,64 @@
             display: block;
         }
 
-        /* CONTENT */
         .cover-content {
-            padding: 22px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .cover-content h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
             color: #0b1220;
+            font-size: 18px;
+            line-height: 1.3;
+            margin-bottom: 10px;
         }
 
         .cover-content p {
-            font-size: 14px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 21px;
-            font-weight: bold;
-            color: #19a7ce;
-            margin-bottom: 15px;
+            color: #5d6670;
+            font-size: 13px;
+            line-height: 1.65;
+            margin-bottom: 14px;
         }
 
         .tag {
             display: inline-block;
+            align-self: flex-start;
             background: #eef7fa;
             color: #0b7fa0;
-            padding: 6px 10px;
+            padding: 5px 9px;
             border-radius: 5px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 14px;
         }
 
-        /* WHATSAPP */
+        .price {
+            color: #19a7ce;
+            font-size: 21px;
+            font-weight: bold;
+            margin-top: auto;
+            margin-bottom: 4px;
+        }
+
+        .price-label {
+            color: #7a858f;
+            font-size: 11px;
+            margin-bottom: 12px;
+        }
+
         .whatsapp-btn {
             display: block;
-            margin-top: 18px;
-            padding: 12px 15px;
-            background: #25D366;
+            width: 100%;
+            padding: 11px 14px;
+            background: #25d366;
             color: white;
             text-align: center;
-            text-decoration: none;
             border-radius: 7px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
-            transition: 0.3s ease;
+            transition: 0.25s ease;
         }
 
         .whatsapp-btn:hover {
@@ -178,106 +408,481 @@
             transform: translateY(-2px);
         }
 
-        /* INFO */
-        .info-section {
-            max-width: 1000px;
-            margin: 20px auto 50px;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
+        /* =========================
+           GUIDANCE
+        ========================= */
+
+        .guidance {
+            background: #0b1220;
+            color: white;
+            padding: 55px 20px;
+            margin-top: 10px;
+        }
+
+        .guidance-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .guidance-heading {
             text-align: center;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+            margin-bottom: 32px;
+        }
+
+        .guidance-heading span {
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .guidance-heading h2 {
+            font-size: 30px;
+            margin-top: 7px;
+        }
+
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .guidance-card {
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.045);
+            border-radius: 11px;
+            padding: 22px;
+        }
+
+        .guidance-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .guidance-card p {
+            color: #cbd6df;
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        /* =========================
+           INFO BOX
+        ========================= */
+
+        .info-section {
+            max-width: 900px;
+            margin: 55px auto;
+            padding: 32px 25px;
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 13px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(11,18,32,0.05);
         }
 
         .info-section h2 {
             color: #0b1220;
-            margin-bottom: 12px;
+            font-size: 25px;
+            margin-bottom: 10px;
         }
 
         .info-section p {
-            color: #555;
+            color: #5d6670;
+            font-size: 14px;
             line-height: 1.7;
+            max-width: 730px;
+            margin: auto;
         }
 
-        .back-link {
-            display: block;
-            text-align: center;
-            margin: 30px auto 50px;
-            color: #19a7ce;
-            text-decoration: none;
+        .info-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #19a7ce;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 7px;
+            font-size: 13px;
             font-weight: bold;
+            transition: 0.25s ease;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .info-btn:hover {
+            background: #128bab;
+            transform: translateY(-2px);
         }
 
-        /* FOOTER */
+        /* =========================
+           DELIVERY STRIP
+        ========================= */
+
+        .delivery-strip {
+            background: #eef7fa;
+            border-top: 1px solid #d9edf3;
+            border-bottom: 1px solid #d9edf3;
+            padding: 22px 20px;
+            text-align: center;
+        }
+
+        .delivery-strip strong {
+            color: #0b1220;
+            font-size: 15px;
+        }
+
+        .delivery-strip span {
+            color: #52606c;
+            font-size: 13px;
+            margin-left: 8px;
+        }
+
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .final-cta {
+            max-width: 950px;
+            margin: 55px auto;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: #0b1220;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .final-cta p {
+            color: #5c6670;
+            font-size: 15px;
+            max-width: 650px;
+            margin: auto auto 22px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 19px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .cta-btn.primary {
+            background: #25d366;
+            color: white;
+        }
+
+        .cta-btn.primary:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        .cta-btn.secondary {
+            background: #0b1220;
+            color: white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: #162238;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #0b1220;
             color: white;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 50px;
+            padding: 35px 20px 25px;
         }
 
-        footer p {
-            font-size: 14px;
+        .footer-container {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        .footer-brand h3 {
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+
+        .footer-brand p,
+        .footer-column p {
             color: #c9d2dc;
+            font-size: 13px;
+            line-height: 1.7;
         }
 
-        /* TABLET */
-        @media (max-width: 900px) {
+        .footer-column h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #c9d2dc;
+            font-size: 13px;
+            margin-bottom: 7px;
+            transition: 0.2s ease;
+        }
+
+        .footer-column a:hover {
+            color: #19a7ce;
+        }
+
+        .copyright {
+            max-width: 1150px;
+            margin: 28px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: #8f9ba8;
+            font-size: 12px;
+        }
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            font-weight: bold;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            z-index: 1200;
+            transition: 0.25s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.06);
+            background: #1ebe5d;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .header-container {
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 13px;
+            }
+
+            .category-bar {
+                position: static;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: 50px 25px;
+            }
+
+            .hero-content {
+                max-width: 750px;
+                text-align: center;
+                margin: auto;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-card {
+                max-width: 600px;
+                width: 100%;
+                margin: auto;
+            }
+
             .cover-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .page-header h1 {
-                font-size: 32px;
+            .guidance-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            nav {
-                gap: 12px;
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 600px) {
+
             header {
-                padding: 12px 15px;
+                padding: 10px 15px;
             }
 
             .header-container {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .logo {
-                height: 48px;
-            }
-
-            nav {
                 gap: 10px;
             }
 
+            .logo {
+                width: 155px;
+                max-height: 52px;
+            }
+
+            nav {
+                gap: 9px 12px;
+            }
+
             nav a {
-                font-size: 13px;
+                font-size: 12px;
             }
 
-            .page-header {
-                padding: 40px 15px;
+            .nav-whatsapp {
+                padding: 8px 11px;
             }
 
-            .page-header h1 {
-                font-size: 28px;
+            .hero-container {
+                padding: 42px 18px;
+                gap: 28px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-card {
+                padding: 20px;
+            }
+
+            .hero-card h3 {
+                font-size: 18px;
+            }
+
+            .hero-points {
+                grid-template-columns: 1fr;
+            }
+
+            .category-bar {
+                padding: 10px 12px;
+            }
+
+            .category-nav {
+                gap: 5px;
+            }
+
+            .category-nav a {
+                font-size: 11px;
+                padding: 7px 9px;
+            }
+
+            .intro {
+                margin-top: 38px;
+            }
+
+            .intro h2 {
+                font-size: 25px;
+            }
+
+            .intro p {
+                font-size: 14px;
+            }
+
+            .products {
+                margin-top: 28px;
+                padding: 0 15px;
             }
 
             .cover-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .cover-image {
-                height: 320px;
+                height: 270px;
+            }
+
+            .cover-content {
+                padding: 18px;
+            }
+
+            .guidance {
+                padding: 42px 18px;
+            }
+
+            .guidance-heading h2 {
+                font-size: 25px;
+            }
+
+            .guidance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-section {
+                margin: 40px 15px;
+                padding: 27px 20px;
+            }
+
+            .info-section h2 {
+                font-size: 23px;
+            }
+
+            .delivery-strip span {
+                display: block;
+                margin: 5px 0 0;
+            }
+
+            .final-cta {
+                margin: 35px auto;
+                padding: 35px 18px;
+            }
+
+            .final-cta h2 {
+                font-size: 25px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .floating-whatsapp {
+                width: 48px;
+                height: 48px;
+                right: 15px;
+                bottom: 15px;
+                font-size: 21px;
             }
         }
     </style>
@@ -285,53 +890,215 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <header>
+
         <div class="header-container">
 
-            <a href="index.html">
+            <a href="index.html" class="logo-link">
                 <img src="Logo.png"
                      alt="Street Gadgets Care Logo"
                      class="logo">
             </a>
 
             <nav>
+
                 <a href="index.html">Home</a>
+
                 <a href="about.html">About</a>
+
                 <a href="services.html">Services</a>
-                <a href="repairs.html">Repairs</a>
-                <a href="products.html">Products</a>
+
+                <a href="tech-repairs.html">Tech Repairs</a>
+
+                <a href="shop.html">Shop</a>
+
+                <a href="creative-studio.html">Creative Studio</a>
+
                 <a href="contact.html">Contact</a>
+
+                <a href="https://wa.me/254114259961"
+                   target="_blank"
+                   class="nav-whatsapp">
+                    WhatsApp
+                </a>
+
             </nav>
 
         </div>
+
     </header>
 
 
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-        <h1>Phone Covers</h1>
-        <p>Quality phone covers for protection and style.</p>
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    Phone Protection
+                </span>
+
+                <h1>
+                    Protect your phone. Keep your style.
+                </h1>
+
+                <p>
+                    Choose from silicone, leather and MagSafe-style
+                    phone covers for different smartphone models.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#covers"
+                       class="hero-btn primary">
+                        Explore Phone Covers
+                    </a>
+
+                    <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20phone%20cover%20for%20my%20phone."
+                       target="_blank"
+                       class="hero-btn secondary">
+                        Find My Cover
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <h3>
+                    Have a specific phone model?
+                </h3>
+
+                <p>
+                    Phone covers are model-specific. Send us your
+                    exact phone model and we'll help you check
+                    compatibility and availability.
+                </p>
+
+                <div class="hero-points">
+
+                    <div class="hero-point">
+                        Samsung Covers
+                    </div>
+
+                    <div class="hero-point">
+                        iPhone Covers
+                    </div>
+
+                    <div class="hero-point">
+                        Tecno Covers
+                    </div>
+
+                    <div class="hero-point">
+                        Redmi Covers
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- PRODUCTS -->
-    <section class="products">
+    <!-- =========================
+         CATEGORY NAV
+    ========================= -->
+
+    <div class="category-bar">
+
+        <div class="category-nav">
+
+            <a href="shop.html">
+                All Shop
+            </a>
+
+            <a href="chargers.html">
+                Chargers
+            </a>
+
+            <a href="cables.html">
+                Charging Cables
+            </a>
+
+            <a href="phone-protection.html">
+                Phone Protection
+            </a>
+
+            <a href="screen-protectors.html">
+                Screen Protectors
+            </a>
+
+            <a href="phone-covers.html"
+               class="active">
+                Phone Covers
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+        <div class="intro-label">
+            Phone Covers
+        </div>
+
+        <h2>
+            Protection that matches your phone.
+        </h2>
+
+        <p>
+            Choose from different cover styles and materials.
+            Because phone cases are model-specific, always confirm
+            your exact phone model before ordering.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section class="products" id="covers">
 
         <div class="cover-grid">
 
 
-            <!-- 1. SAMSUNG MAGSAFE -->
+            <!-- PRODUCT 1 -->
+
             <div class="cover-card">
 
                 <div class="cover-image">
+
                     <img src="Samsung%20MagSafe.jpeg"
                          alt="Samsung MagSafe Phone Case">
+
                 </div>
 
                 <div class="cover-content">
 
-                    <h3>Samsung MagSafe Case</h3>
+                    <h3>
+                        Samsung MagSafe Case
+                    </h3>
 
                     <p>
                         Stylish MagSafe-compatible case designed for
@@ -340,10 +1107,16 @@
                         compatibility.
                     </p>
 
-                    <span class="tag">Samsung S & Note Series</span>
+                    <span class="tag">
+                        Samsung S & Note Series
+                    </span>
 
                     <div class="price">
                         KSh 1,550
+                    </div>
+
+                    <div class="price-label">
+                        Phone cover
                     </div>
 
                     <a class="whatsapp-btn"
@@ -353,20 +1126,26 @@
                     </a>
 
                 </div>
+
             </div>
 
 
-            <!-- 2. SAMSUNG LEATHER -->
+            <!-- PRODUCT 2 -->
+
             <div class="cover-card">
 
                 <div class="cover-image">
+
                     <img src="Samsung%20Leather.jpeg"
                          alt="Samsung Leather Phone Case">
+
                 </div>
 
                 <div class="cover-content">
 
-                    <h3>Samsung Leather Case</h3>
+                    <h3>
+                        Samsung Leather Case
+                    </h3>
 
                     <p>
                         Premium-style leather phone case designed for
@@ -375,10 +1154,16 @@
                         compatibility.
                     </p>
 
-                    <span class="tag">Samsung S & Note Series</span>
+                    <span class="tag">
+                        Samsung S & Note Series
+                    </span>
 
                     <div class="price">
                         KSh 1,550
+                    </div>
+
+                    <div class="price-label">
+                        Phone cover
                     </div>
 
                     <a class="whatsapp-btn"
@@ -388,20 +1173,26 @@
                     </a>
 
                 </div>
+
             </div>
 
 
-            <!-- 3. SAMSUNG SILICONE -->
+            <!-- PRODUCT 3 -->
+
             <div class="cover-card">
 
                 <div class="cover-image">
+
                     <img src="Samsung%20Silicone.jpeg"
                          alt="Samsung Silicone Phone Case">
+
                 </div>
 
                 <div class="cover-content">
 
-                    <h3>Samsung Silicone Case</h3>
+                    <h3>
+                        Samsung Silicone Case
+                    </h3>
 
                     <p>
                         Soft-touch silicone case available for various
@@ -410,10 +1201,16 @@
                         exact phone model to confirm compatibility.
                     </p>
 
-                    <span class="tag">Samsung</span>
+                    <span class="tag">
+                        Samsung
+                    </span>
 
                     <div class="price">
                         KSh 1,050
+                    </div>
+
+                    <div class="price-label">
+                        Phone cover
                     </div>
 
                     <a class="whatsapp-btn"
@@ -423,32 +1220,44 @@
                     </a>
 
                 </div>
+
             </div>
 
 
-            <!-- 4. IPHONE SILICONE -->
+            <!-- PRODUCT 4 -->
+
             <div class="cover-card">
 
                 <div class="cover-image">
+
                     <img src="iPhone%20Silicone.jpeg"
                          alt="iPhone Silicone Phone Case">
+
                 </div>
 
                 <div class="cover-content">
 
-                    <h3>iPhone Silicone Case</h3>
+                    <h3>
+                        iPhone Silicone Case
+                    </h3>
 
                     <p>
-                        Smooth silicone case available for various iPhone
-                        models. Available in different colors depending
-                        on stock. Contact us with your exact iPhone model
-                        to confirm compatibility.
+                        Smooth silicone case available for various
+                        iPhone models. Available in different colors
+                        depending on stock. Contact us with your exact
+                        iPhone model to confirm compatibility.
                     </p>
 
-                    <span class="tag">iPhone</span>
+                    <span class="tag">
+                        iPhone
+                    </span>
 
                     <div class="price">
                         KSh 1,050
+                    </div>
+
+                    <div class="price-label">
+                        Phone cover
                     </div>
 
                     <a class="whatsapp-btn"
@@ -458,20 +1267,26 @@
                     </a>
 
                 </div>
+
             </div>
 
 
-            <!-- 5. TECNO SILICONE -->
+            <!-- PRODUCT 5 -->
+
             <div class="cover-card">
 
                 <div class="cover-image">
+
                     <img src="Tecno%20Silicone.jpeg"
                          alt="Tecno Silicone Phone Case">
+
                 </div>
 
                 <div class="cover-content">
 
-                    <h3>Tecno Silicone Case</h3>
+                    <h3>
+                        Tecno Silicone Case
+                    </h3>
 
                     <p>
                         Soft-touch silicone case available for various
@@ -480,10 +1295,16 @@
                         phone model to confirm compatibility.
                     </p>
 
-                    <span class="tag">Tecno</span>
+                    <span class="tag">
+                        Tecno
+                    </span>
 
                     <div class="price">
                         KSh 1,050
+                    </div>
+
+                    <div class="price-label">
+                        Phone cover
                     </div>
 
                     <a class="whatsapp-btn"
@@ -493,20 +1314,26 @@
                     </a>
 
                 </div>
+
             </div>
 
 
-            <!-- 6. REDMI SILICONE -->
+            <!-- PRODUCT 6 -->
+
             <div class="cover-card">
 
                 <div class="cover-image">
+
                     <img src="Redmi%20Silicone.jpeg"
                          alt="Redmi Silicone Phone Case">
+
                 </div>
 
                 <div class="cover-content">
 
-                    <h3>Redmi Silicone Case</h3>
+                    <h3>
+                        Redmi Silicone Case
+                    </h3>
 
                     <p>
                         Soft-touch silicone case available for various
@@ -515,10 +1342,16 @@
                         phone model to confirm compatibility.
                     </p>
 
-                    <span class="tag">Redmi</span>
+                    <span class="tag">
+                        Redmi
+                    </span>
 
                     <div class="price">
                         KSh 1,050
+                    </div>
+
+                    <div class="price-label">
+                        Phone cover
                     </div>
 
                     <a class="whatsapp-btn"
@@ -528,6 +1361,7 @@
                     </a>
 
                 </div>
+
             </div>
 
 
@@ -536,35 +1370,238 @@
     </section>
 
 
-    <!-- INFO -->
-    <section class="info-section">
+    <!-- =========================
+         GUIDANCE
+    ========================= -->
 
-        <h2>Find the Right Cover for Your Phone</h2>
+    <section class="guidance">
 
-        <p>
-            We stock silicone, leather and MagSafe-style phone covers
-            for different smartphone models. Since phone cases are
-            model-specific, send us your exact phone model before
-            ordering so we can confirm availability and compatibility.
-        </p>
+        <div class="guidance-container">
+
+            <div class="guidance-heading">
+
+                <span>
+                    Choose the right cover
+                </span>
+
+                <h2>
+                    What should you check before ordering?
+                </h2>
+
+            </div>
+
+
+            <div class="guidance-grid">
+
+                <div class="guidance-card">
+
+                    <h3>
+                        Know Your Model
+                    </h3>
+
+                    <p>
+                        Phone covers are model-specific. Always provide
+                        the exact phone model so we can check whether
+                        the cover is compatible.
+                    </p>
+
+                </div>
+
+
+                <div class="guidance-card">
+
+                    <h3>
+                        Choose Your Style
+                    </h3>
+
+                    <p>
+                        Choose between silicone, leather and
+                        MagSafe-style options depending on the look
+                        and features you prefer.
+                    </p>
+
+                </div>
+
+
+                <div class="guidance-card">
+
+                    <h3>
+                        Confirm Availability
+                    </h3>
+
+                    <p>
+                        Colours and specific models can vary depending
+                        on available stock. Contact us before ordering
+                        to confirm what is currently available.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
 
-    <!-- BACK LINK -->
-    <a href="phone-protection.html" class="back-link">
-        ← Back to Phone Protection
-    </a>
+    <!-- =========================
+         INFO BOX
+    ========================= -->
 
+    <section class="info-section">
 
-    <!-- FOOTER -->
-    <footer>
+        <h2>
+            Not sure which cover fits your phone?
+        </h2>
 
         <p>
-            © 2026 Street Gadgets Care. All Rights Reserved.
+            Send us your exact phone model or a clear photo of the
+            phone. We'll help you check the available cover options
+            before you place your order.
         </p>
 
+        <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20phone%20cover.%20My%20phone%20model%20is%3A"
+           target="_blank"
+           class="info-btn">
+            Ask Us on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         DELIVERY
+    ========================= -->
+
+    <section class="delivery-strip">
+
+        <strong>
+            Order From Street Gadgets Care
+        </strong>
+
+        <span>
+            Nairobi based • Delivery available across Kenya
+        </span>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================= -->
+
+    <section class="final-cta">
+
+        <h2>
+            Give your phone the protection it deserves.
+        </h2>
+
+        <p>
+            Choose a cover from the options above or contact us
+            with your phone model and we'll help you find a suitable
+            option.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="screen-protectors.html"
+               class="cta-btn secondary">
+                View Screen Protectors
+            </a>
+
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20phone%20covers."
+               target="_blank"
+               class="cta-btn primary">
+                Chat on WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Street Gadgets Care
+                </h3>
+
+                <p>
+                    Laptop & Phone Repair • Accessories • Graphic Design
+                </p>
+
+                <p>
+                    Nairobi, Kenya • Serving Customers Across Kenya
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="tech-repairs.html">Tech Repairs</a>
+                <a href="phone-protection.html">Phone Protection</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    0114259961
+                </p>
+
+                <p>
+                    streetgadgetscare@gmail.com
+                </p>
+
+                <a href="https://wa.me/254114259961"
+                   target="_blank">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Street Gadgets Care. All Rights Reserved.
+
+        </div>
+
     </footer>
+
+
+    <!-- =========================
+         FLOATING WHATSAPP
+    ========================= -->
+
+    <a href="https://wa.me/254114259961"
+       target="_blank"
+       class="floating-whatsapp"
+       aria-label="Chat with Street Gadgets Care on WhatsApp">
+        ☎
+    </a>
 
 </body>
 </html>
