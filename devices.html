@@ -4,20 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Devices | Street Gadgets Care</title>
+  <title>Laptops & Button Phones | Street Gadgets Care</title>
 
-  <meta
-    name="description"
-    content="Shop laptops and button phones from Street Gadgets Care. Browse available devices and order through WhatsApp with delivery across Kenya."
-  >
-
-  <link rel="icon" type="image/png" href="Logo.png">
+  <meta name="description" content="Shop laptops and button phones from Street Gadgets Care. Browse available devices and order through WhatsApp with delivery across Kenya.">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -27,7 +22,7 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f9fb;
-      color: #18202a;
+      color: #172033;
       line-height: 1.6;
     }
 
@@ -41,23 +36,28 @@
       display: block;
     }
 
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
     /* =========================
        HEADER
     ========================= */
 
     header {
       background: #0b1220;
-      color: white;
+      color: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
     }
 
     .nav-container {
-      max-width: 1200px;
+      width: min(1200px, 94%);
       margin: auto;
-      padding: 14px 22px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -65,37 +65,43 @@
     }
 
     .logo img {
-      width: 185px;
-      height: auto;
+      width: 170px;
+      max-height: 58px;
+      object-fit: contain;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       font-size: 14px;
       font-weight: 600;
       transition: 0.25s ease;
     }
 
-    nav a:hover,
+    nav a:hover {
+      color: #19a7ce;
+    }
+
     nav a.active {
       color: #19a7ce;
     }
 
-    .nav-btn {
-      background: #19a7ce;
-      color: white !important;
-      padding: 10px 16px;
+    .nav-whatsapp {
+      background: #25d366;
+      color: #fff !important;
+      padding: 10px 15px;
       border-radius: 7px;
     }
 
-    .nav-btn:hover {
-      background: #148cae;
+    .nav-whatsapp:hover {
+      background: #1fb957;
     }
 
     /* =========================
@@ -104,28 +110,17 @@
 
     .hero {
       background:
-        linear-gradient(
-          135deg,
-          rgba(11,18,32,0.97),
-          rgba(11,18,32,0.88)
-        ),
-        url("HP%20745%20G6%20RYZEN%207.JPG") center/cover no-repeat;
-
-      color: white;
-      padding: 75px 22px;
+        linear-gradient(rgba(11, 18, 32, 0.84), rgba(11, 18, 32, 0.84)),
+        url("laptop-servicing.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 85px 0;
     }
 
-    .hero-container {
-      max-width: 1150px;
-      margin: auto;
+    .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
       gap: 55px;
-    }
-
-    .hero-content {
-      max-width: 620px;
+      align-items: center;
     }
 
     .eyebrow {
@@ -135,55 +130,55 @@
       font-weight: 800;
       letter-spacing: 1.5px;
       margin-bottom: 15px;
-      text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 5vw, 58px);
+      font-size: clamp(36px, 5vw, 58px);
       line-height: 1.08;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      max-width: 650px;
     }
 
     .hero p {
-      color: #d8e1e9;
+      color: #dce5ef;
       font-size: 17px;
-      max-width: 570px;
-      margin-bottom: 28px;
+      max-width: 620px;
+      margin-bottom: 30px;
     }
 
     .hero-buttons {
       display: flex;
+      gap: 13px;
       flex-wrap: wrap;
-      gap: 12px;
     }
 
     .btn {
       display: inline-block;
-      padding: 13px 20px;
+      padding: 13px 21px;
       border-radius: 7px;
-      font-size: 14px;
       font-weight: 700;
+      font-size: 14px;
       transition: 0.25s ease;
     }
 
     .btn-primary {
       background: #19a7ce;
-      color: white;
+      color: #fff;
     }
 
     .btn-primary:hover {
-      background: #148cae;
+      background: #138cad;
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,0.4);
-      color: white;
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
     }
 
-    .btn-outline:hover {
-      border-color: #19a7ce;
-      color: #19a7ce;
+    .btn-whatsapp:hover {
+      background: #1fb957;
+      transform: translateY(-2px);
     }
 
     .hero-image {
@@ -194,12 +189,12 @@
 
     .hero-image img {
       width: 100%;
-      max-width: 410px;
-      height: 300px;
+      max-width: 470px;
+      max-height: 390px;
       object-fit: contain;
       border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      padding: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
     }
 
     /* =========================
@@ -207,35 +202,36 @@
     ========================= */
 
     .category-bar {
-      background: white;
-      border-bottom: 1px solid #e5e9ed;
+      background: #fff;
+      border-bottom: 1px solid #e6eaf0;
+      position: sticky;
+      top: 78px;
+      z-index: 900;
     }
 
-    .category-container {
-      max-width: 1150px;
-      margin: auto;
-      padding: 17px 22px;
+    .category-inner {
       display: flex;
       gap: 10px;
       overflow-x: auto;
+      padding: 14px 0;
       scrollbar-width: thin;
     }
 
-    .category-container a {
+    .category-inner a {
       white-space: nowrap;
-      padding: 9px 14px;
-      border-radius: 20px;
-      background: #f0f4f7;
-      color: #34404c;
+      padding: 9px 15px;
+      border-radius: 30px;
+      background: #f1f4f8;
+      color: #273449;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       transition: 0.25s ease;
     }
 
-    .category-container a:hover,
-    .category-container a.active {
+    .category-inner a:hover,
+    .category-inner a.active {
       background: #19a7ce;
-      color: white;
+      color: #fff;
     }
 
     /* =========================
@@ -243,78 +239,67 @@
     ========================= */
 
     .intro {
-      max-width: 900px;
-      margin: auto;
-      padding: 65px 22px 35px;
+      padding: 75px 0 45px;
       text-align: center;
     }
 
-    .intro h2 {
-      font-size: 34px;
-      color: #0b1220;
-      margin-bottom: 13px;
-    }
-
-    .intro p {
-      color: #66717d;
-      font-size: 16px;
-      max-width: 720px;
-      margin: auto;
-    }
-
-    /* =========================
-       SECTION HEADINGS
-    ========================= */
-
-    .section-heading {
-      max-width: 1150px;
-      margin: auto;
-      padding: 35px 22px 25px;
-    }
-
-    .section-heading span {
+    .section-label {
       color: #19a7ce;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .intro h2 {
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+      color: #0b1220;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: auto;
+      color: #657084;
+      font-size: 16px;
+    }
+
+    /* =========================
+       PRODUCT SECTIONS
+    ========================= */
+
+    .products-section {
+      padding: 30px 0 75px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
     }
 
     .section-heading h2 {
+      font-size: 31px;
       color: #0b1220;
-      font-size: 34px;
-      margin-top: 7px;
       margin-bottom: 8px;
     }
 
     .section-heading p {
-      color: #68737e;
-      font-size: 15px;
+      color: #687386;
       max-width: 700px;
     }
 
-    /* =========================
-       PRODUCTS
-    ========================= */
-
-    .products-section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 0 22px 70px;
-    }
-
-    .products-grid {
+    .product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
     .product-card {
-      background: white;
-      border: 1px solid #e5e9ed;
-      border-radius: 14px;
+      background: #fff;
+      border-radius: 13px;
       overflow: hidden;
-      box-shadow: 0 8px 28px rgba(11,18,32,0.06);
+      border: 1px solid #e6eaf0;
+      box-shadow: 0 8px 25px rgba(11, 18, 32, 0.06);
       transition: 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -322,16 +307,16 @@
 
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 14px 35px rgba(11,18,32,0.11);
+      box-shadow: 0 15px 35px rgba(11, 18, 32, 0.1);
     }
 
     .product-image {
       height: 250px;
-      background: #f4f6f8;
+      background: #fff;
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 18px;
+      justify-content: center;
+      padding: 15px;
     }
 
     .product-image img {
@@ -347,130 +332,79 @@
       flex: 1;
     }
 
-    .product-tag {
-      display: inline-block;
-      color: #19a7ce;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-
     .product-content h3 {
       color: #0b1220;
-      font-size: 20px;
-      margin-bottom: 8px;
+      font-size: 19px;
+      margin-bottom: 10px;
     }
 
     .product-description {
-      color: #69747f;
+      color: #667085;
       font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    .specs {
-      list-style: none;
-      margin-bottom: 14px;
-    }
-
-    .specs li {
-      color: #69747f;
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
-
-    .specs li::before {
-      content: "•";
-      color: #19a7ce;
-      font-weight: bold;
-      margin-right: 7px;
+      margin-bottom: 16px;
+      flex: 1;
     }
 
     .price {
       color: #0b1220;
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 800;
-      margin-top: auto;
-      margin-bottom: 17px;
+      margin-bottom: 16px;
     }
 
-    .order-btn {
-      display: block;
+    .product-btn {
+      display: inline-block;
+      background: #19a7ce;
+      color: #fff;
       text-align: center;
-      background: #25d366;
-      color: white;
-      padding: 12px 15px;
+      padding: 11px 15px;
       border-radius: 7px;
       font-size: 14px;
       font-weight: 700;
       transition: 0.25s ease;
     }
 
-    .order-btn:hover {
-      background: #1faa52;
-      transform: translateY(-2px);
+    .product-btn:hover {
+      background: #138cad;
     }
-
-    /* =========================
-       PHONE NOTE
-    ========================= */
 
     .phone-note {
-      max-width: 1150px;
-      margin: 0 auto 25px;
-      padding: 0 22px;
-    }
-
-    .note-box {
       background: #eef9fc;
-      border: 1px solid #d4edf3;
-      border-radius: 12px;
-      padding: 20px 22px;
-      color: #51606c;
+      border-left: 4px solid #19a7ce;
+      padding: 15px 18px;
+      margin: 0 0 28px;
+      border-radius: 6px;
+      color: #415063;
       font-size: 14px;
-    }
-
-    .note-box strong {
-      color: #0b1220;
     }
 
     /* =========================
        BUYING GUIDE
     ========================= */
 
-    .guide {
+    .guide-section {
       background: #0b1220;
-      color: white;
-      padding: 70px 22px;
-    }
-
-    .guide-container {
-      max-width: 1100px;
-      margin: auto;
+      color: #fff;
+      padding: 75px 0;
     }
 
     .guide-heading {
       text-align: center;
       max-width: 700px;
-      margin: auto auto 40px;
+      margin: 0 auto 40px;
     }
 
-    .guide-heading span {
+    .guide-heading .section-label {
       color: #19a7ce;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.4px;
     }
 
     .guide-heading h2 {
-      font-size: 34px;
-      margin: 10px 0;
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 12px;
     }
 
     .guide-heading p {
-      color: #b9c5cf;
-      font-size: 15px;
+      color: #c8d1dd;
     }
 
     .guide-grid {
@@ -480,26 +414,31 @@
     }
 
     .guide-card {
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
-      padding: 27px;
+      padding: 28px;
     }
 
     .guide-number {
-      color: #19a7ce;
-      font-size: 13px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #19a7ce;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 800;
-      margin-bottom: 13px;
+      margin-bottom: 18px;
     }
 
     .guide-card h3 {
-      font-size: 20px;
-      margin-bottom: 9px;
+      margin-bottom: 10px;
+      font-size: 19px;
     }
 
     .guide-card p {
-      color: #b9c5cf;
+      color: #c7d0dc;
       font-size: 14px;
     }
 
@@ -507,44 +446,57 @@
        CTA
     ========================= */
 
-    .cta {
-      max-width: 1000px;
-      margin: auto;
-      padding: 75px 22px;
+    .cta-section {
+      padding: 75px 0;
+      background: #fff;
       text-align: center;
     }
 
-    .cta h2 {
+    .cta-section h2 {
+      font-size: clamp(29px, 4vw, 43px);
       color: #0b1220;
-      font-size: 35px;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
-    .cta p {
-      color: #68737e;
+    .cta-section p {
       max-width: 650px;
-      margin: 0 auto 23px;
-      font-size: 15px;
+      margin: 0 auto 25px;
+      color: #687386;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     /* =========================
-       DELIVERY
+       DELIVERY STRIP
     ========================= */
 
-    .delivery {
-      background: #19a7ce;
-      color: white;
-      padding: 20px 22px;
-      text-align: center;
+    .delivery-strip {
+      background: #eef9fc;
+      padding: 25px 0;
+      border-top: 1px solid #dceff4;
+      border-bottom: 1px solid #dceff4;
     }
 
-    .delivery strong {
-      font-size: 15px;
+    .delivery-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
     }
 
-    .delivery span {
+    .delivery-inner strong {
+      color: #0b1220;
+      font-size: 17px;
+    }
+
+    .delivery-inner span {
+      color: #596779;
       font-size: 14px;
-      margin-left: 8px;
     }
 
     /* =========================
@@ -552,109 +504,106 @@
     ========================= */
 
     footer {
-      background: #080e19;
-      color: white;
-      padding: 55px 22px 25px;
+      background: #0b1220;
+      color: #fff;
+      padding: 55px 0 25px;
     }
 
-    .footer-container {
-      max-width: 1150px;
-      margin: auto;
+    .footer-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 45px;
-      padding-bottom: 35px;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
     }
 
-    .footer-logo img {
-      width: 190px;
+    .footer-brand img {
+      width: 165px;
       margin-bottom: 15px;
     }
 
-    .footer-about p {
-      color: #aeb8c2;
+    .footer-brand p {
+      color: #aeb9c7;
       font-size: 14px;
-      max-width: 360px;
+      max-width: 310px;
     }
 
-    .footer-column h3 {
+    footer h3 {
       font-size: 15px;
       margin-bottom: 15px;
+      color: #fff;
     }
 
-    .footer-column a,
-    .footer-column p {
-      display: block;
-      color: #aeb8c2;
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 9px;
+    }
+
+    footer li a {
+      color: #aeb9c7;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    footer li a:hover {
+      color: #19a7ce;
+    }
+
+    .footer-contact p {
+      color: #aeb9c7;
       font-size: 14px;
       margin-bottom: 9px;
     }
 
-    .footer-column a:hover {
-      color: #19a7ce;
-    }
-
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.09);
-      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 22px;
       text-align: center;
-      color: #7f8a95;
-      font-size: 12px;
+      color: #8995a5;
+      font-size: 13px;
     }
 
     /* =========================
-       WHATSAPP FLOAT
+       FLOATING WHATSAPP
     ========================= */
 
-    .whatsapp-float {
+    .floating-whatsapp {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 54px;
-      height: 54px;
-      background: #25d366;
-      color: white;
+      right: 22px;
+      bottom: 22px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
+      background: #25d366;
+      color: #fff;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       font-size: 25px;
-      font-weight: bold;
-      box-shadow: 0 7px 20px rgba(0,0,0,0.2);
-      z-index: 999;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      z-index: 2000;
       transition: 0.25s ease;
     }
 
-    .whatsapp-float:hover {
+    .floating-whatsapp:hover {
       transform: scale(1.08);
-      background: #1faa52;
+      background: #1fb957;
     }
 
     /* =========================
        RESPONSIVE
     ========================= */
 
-    @media (max-width: 900px) {
-
-      nav {
-        gap: 13px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .hero-container {
+    @media (max-width: 1000px) {
+      .hero-grid {
         grid-template-columns: 1fr;
-        text-align: center;
       }
 
-      .hero-content {
-        margin: auto;
-      }
-
-      .hero-buttons {
-        justify-content: center;
+      .hero {
+        padding: 65px 0;
       }
 
       .hero-image {
@@ -662,48 +611,51 @@
       }
 
       .hero-image img {
-        max-width: 340px;
-        height: 240px;
+        max-width: 400px;
+        max-height: 320px;
       }
 
-      .products-grid {
+      .product-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .guide-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
-      .footer-container {
-        grid-template-columns: 1fr 1fr;
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 650px) {
-
+    @media (max-width: 700px) {
       .nav-container {
-        padding: 12px 16px;
+        min-height: 70px;
       }
 
       .logo img {
-        width: 145px;
+        width: 140px;
       }
 
       nav {
-        gap: 9px;
+        gap: 10px;
       }
 
-      nav a:not(.nav-btn) {
+      nav a:not(.nav-whatsapp) {
         display: none;
       }
 
-      .nav-btn {
-        padding: 8px 12px;
-        font-size: 12px !important;
+      .nav-whatsapp {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .category-bar {
+        top: 70px;
       }
 
       .hero {
-        padding: 55px 18px;
+        padding: 50px 0;
       }
 
       .hero h1 {
@@ -714,59 +666,55 @@
         font-size: 15px;
       }
 
-      .intro {
-        padding: 50px 18px 25px;
-      }
-
-      .intro h2,
-      .section-heading h2 {
-        font-size: 29px;
-      }
-
-      .section-heading {
-        padding: 30px 18px 20px;
-      }
-
-      .products-section {
-        padding: 0 18px 55px;
-      }
-
-      .products-grid {
+      .product-grid {
         grid-template-columns: 1fr;
       }
 
       .product-image {
-        height: 250px;
+        height: 240px;
       }
 
-      .guide {
-        padding: 55px 18px;
+      .delivery-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
       }
 
-      .guide-heading h2 {
-        font-size: 29px;
-      }
-
-      .guide-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta {
-        padding: 55px 18px;
-      }
-
-      .cta h2 {
-        font-size: 29px;
-      }
-
-      .footer-container {
+      .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
       }
+    }
 
-      .delivery span {
-        display: block;
-        margin: 4px 0 0;
+    @media (max-width: 480px) {
+      .container {
+        width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn,
+      .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .product-content {
+        padding: 18px;
+      }
+
+      .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
       }
     }
   </style>
@@ -779,50 +727,31 @@
   ========================= -->
 
   <header>
-
     <div class="nav-container">
 
       <a href="index.html" class="logo">
-        <img
-          src="Logo.png"
-          alt="Street Gadgets Care"
-        >
+        <img src="Logo.png" alt="Street Gadgets Care">
       </a>
 
       <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="creative-studio.html">Creative Studio</a>
+        <a href="contact.html">Contact</a>
 
-        <a href="index.html">
-          Home
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20a%20device."
+          class="nav-whatsapp"
+          target="_blank"
+        >
+          WhatsApp
         </a>
-
-        <a href="about.html">
-          About
-        </a>
-
-        <a href="services.html">
-          Services
-        </a>
-
-        <a href="tech-repairs.html">
-          Tech Repairs
-        </a>
-
-        <a href="shop.html" class="active">
-          Shop
-        </a>
-
-        <a href="creative-studio.html">
-          Creative Studio
-        </a>
-
-        <a href="contact.html" class="nav-btn">
-          Contact
-        </a>
-
       </nav>
 
     </div>
-
   </header>
 
 
@@ -831,57 +760,44 @@
   ========================= -->
 
   <section class="hero">
-
-    <div class="hero-container">
+    <div class="container hero-grid">
 
       <div class="hero-content">
 
-        <span class="eyebrow">
-          DEVICES & TECHNOLOGY
-        </span>
+        <span class="eyebrow">LAPTOPS & BUTTON PHONES</span>
 
-        <h1>
-          Find the right device for what you do.
-        </h1>
+        <h1>Find the right device for what you do.</h1>
 
         <p>
-          Browse laptops and button phones available from Street Gadgets
-          Care. Whether you need a reliable work machine, a student laptop
-          or a simple everyday phone, let's find an option that fits your needs.
+          Browse laptops and button phones available from Street Gadgets Care.
+          Whether you need a reliable work machine, a student laptop or a
+          simple everyday phone, let's find an option that fits your needs.
         </p>
 
         <div class="hero-buttons">
-
-          <a
-            href="#laptops"
-            class="btn btn-primary"
-          >
+          <a href="#laptops" class="btn btn-primary">
             Browse Laptops
           </a>
 
           <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20looking%20for%20a%20device.%20Please%20share%20what%20is%20currently%20available."
-            class="btn btn-outline"
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20what%20devices%20are%20currently%20available."
+            class="btn btn-whatsapp"
             target="_blank"
           >
             Ask What's Available
           </a>
-
         </div>
 
       </div>
 
       <div class="hero-image">
-
         <img
           src="HP%20745%20G6%20RYZEN%207.JPG"
           alt="HP EliteBook 745 G6 Ryzen 7"
         >
-
       </div>
 
     </div>
-
   </section>
 
 
@@ -890,22 +806,14 @@
   ========================= -->
 
   <div class="category-bar">
+    <div class="container category-inner">
 
-    <div class="category-container">
-
-      <a
-        href="#laptops"
-        class="active"
-      >
+      <a href="#laptops" class="active">
         Laptops
       </a>
 
       <a href="#button-phones">
         Button Phones
-      </a>
-
-      <a href="smart-watches.html">
-        Smart Watches
       </a>
 
       <a href="laptop-accessories.html">
@@ -920,12 +828,15 @@
         Computer Accessories
       </a>
 
+      <a href="other-gadgets.html">
+        Smart Gadgets
+      </a>
+
       <a href="shop.html">
         All Shop
       </a>
 
     </div>
-
   </div>
 
 
@@ -934,628 +845,444 @@
   ========================= -->
 
   <section class="intro">
+    <div class="container">
 
-    <span class="eyebrow">
-      SHOP DEVICES
-    </span>
+      <div class="section-label">SHOP DEVICES</div>
 
-    <h2>
-      Technology for work, school and everyday life
-    </h2>
+      <h2>Technology for work, school and everyday life</h2>
 
-    <p>
-      We focus on practical devices with useful specifications and
-      straightforward pricing. If you need help choosing, send us your
-      requirements and we'll help you find a suitable option.
-    </p>
+      <p>
+        We focus on practical devices that give you the features you need
+        without making the buying process complicated. Browse what is
+        currently available, then contact us to confirm availability and
+        arrange your order.
+      </p>
 
+    </div>
   </section>
 
 
   <!-- =========================
-       LAPTOPS HEADING
+       LAPTOPS
   ========================= -->
 
-  <div
-    class="section-heading"
-    id="laptops"
-  >
+  <section class="products-section" id="laptops">
+    <div class="container">
 
-    <span>
-      LAPTOPS
-    </span>
+      <div class="section-heading">
 
-    <h2>
-      Available Laptops
-    </h2>
+        <div class="section-label">LAPTOPS</div>
 
-    <p>
-      From affordable everyday machines to higher-performance business
-      laptops, browse our current laptop selection.
-    </p>
+        <h2>Available Laptops</h2>
 
-  </div>
+        <p>
+          From affordable everyday machines to higher-performance business
+          laptops, browse our current laptop selection.
+        </p>
+
+      </div>
 
 
-  <!-- =========================
-       LAPTOP PRODUCTS
-  ========================= -->
+      <div class="product-grid">
 
-  <section class="products-section">
+        <!-- 1 -->
+        <article class="product-card">
 
-    <div class="products-grid">
-
-      <!-- Lenovo Yoga 11e -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="Lenovo%2011e.jpeg"
-            alt="Lenovo Yoga 11e"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            LENOVO
-          </span>
-
-          <h3>
-            Lenovo Yoga 11e
-          </h3>
-
-          <ul class="specs">
-
-            <li>Celeron Processor</li>
-            <li>4GB RAM</li>
-            <li>128GB Storage</li>
-            <li>Touchscreen</li>
-            <li>360° Convertible</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 15,000
+          <div class="product-image">
+            <img
+              src="Lenovo%2011e.jpeg"
+              alt="Lenovo Yoga 11e"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Lenovo%20Yoga%2011e%20priced%20at%20KSh%2015,000."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>Lenovo Yoga 11e</h3>
 
-      </article>
+            <p class="product-description">
+              Celeron processor, 4GB RAM, 128GB storage,
+              touchscreen and 360° convertible design.
+            </p>
+
+            <div class="price">KSh 15,000</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Lenovo%20Yoga%2011e%20at%20KSh%2015%2C000."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- Dell Latitude 3190 -->
+        <!-- 2 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="Dell%20Latitude%203190.JPG"
-            alt="Dell Latitude 3190"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            DELL
-          </span>
-
-          <h3>
-            Dell Latitude 3190
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Pentium</li>
-            <li>4GB RAM</li>
-            <li>128GB SSD</li>
-            <li>14-inch Display</li>
-            <li>Wi-Fi & Bluetooth</li>
-            <li>Webcam</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 22,000
+          <div class="product-image">
+            <img
+              src="Dell%20Latitude%203190.JPG"
+              alt="Dell Latitude 3190"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Dell%20Latitude%203190%20priced%20at%20KSh%2022,000."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>Dell Latitude 3190</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Pentium, 4GB RAM, 128GB SSD, 14-inch display,
+              Wi-Fi, Bluetooth and webcam.
+            </p>
+
+            <div class="price">KSh 22,000</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Dell%20Latitude%203190%20at%20KSh%2022%2C000."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- HP EliteBook 745 G6 Ryzen 7 -->
+        <!-- 3 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="HP%20745%20G6%20RYZEN%207.JPG"
-            alt="HP EliteBook 745 G6 Ryzen 7"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            HP ELITEBOOK
-          </span>
-
-          <h3>
-            HP EliteBook 745 G6 Ryzen 7
-          </h3>
-
-          <ul class="specs">
-
-            <li>AMD Ryzen 7</li>
-            <li>16GB RAM</li>
-            <li>512GB SSD</li>
-            <li>Business-Class Laptop</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 47,500
+          <div class="product-image">
+            <img
+              src="HP%20745%20G6%20RYZEN%207.JPG"
+              alt="HP EliteBook 745 G6 Ryzen 7"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207%20priced%20at%20KSh%2047,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>HP EliteBook 745 G6 Ryzen 7</h3>
 
-      </article>
+            <p class="product-description">
+              AMD Ryzen 7, 16GB RAM, 512GB SSD.
+              Business-class laptop for demanding everyday work.
+            </p>
+
+            <div class="price">KSh 47,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207%20at%20KSh%2047%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- HP EliteBook 840 G3 -->
+        <!-- 4 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="HP%20840%20G3.JPG"
-            alt="HP EliteBook 840 G3"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            HP ELITEBOOK
-          </span>
-
-          <h3>
-            HP EliteBook 840 G3
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5 6th Gen</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 24,500
+          <div class="product-image">
+            <img
+              src="HP%20840%20G3.JPG"
+              alt="HP EliteBook 840 G3"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G3%20priced%20at%20KSh%2024,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>HP EliteBook 840 G3</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5 6th Gen, 8GB RAM, 256GB SSD
+              and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 24,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G3%20at%20KSh%2024%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- HP EliteBook 840 G5 -->
+        <!-- 5 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="HP%20840%20g5.jpeg"
-            alt="HP EliteBook 840 G5"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            HP ELITEBOOK
-          </span>
-
-          <h3>
-            HP EliteBook 840 G5
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5 8th Gen</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 27,500
+          <div class="product-image">
+            <img
+              src="HP%20840%20g5.jpeg"
+              alt="HP EliteBook 840 G5"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G5%20priced%20at%20KSh%2027,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>HP EliteBook 840 G5</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5 8th Gen, 8GB RAM, 256GB SSD
+              and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 27,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G5%20at%20KSh%2027%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- HP ProBook 430 G3 -->
+        <!-- 6 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="HP%20Probook%20430%20G3.JPG"
-            alt="HP ProBook 430 G3"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            HP PROBOOK
-          </span>
-
-          <h3>
-            HP ProBook 430 G3
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5 6th Gen</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 21,500
+          <div class="product-image">
+            <img
+              src="HP%20Probook%20430%20G3.JPG"
+              alt="HP ProBook 430 G3"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20ProBook%20430%20G3%20priced%20at%20KSh%2021,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>HP ProBook 430 G3</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5 6th Gen, 8GB RAM, 256GB SSD
+              and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 21,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20ProBook%20430%20G3%20at%20KSh%2021%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- HP EliteBook 830 G6 -->
+        <!-- 7 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="hp-elitebook-830-g6.jpg"
-            alt="HP EliteBook 830 G6"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            HP ELITEBOOK
-          </span>
-
-          <h3>
-            HP EliteBook 830 G6
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 26,500
+          <div class="product-image">
+            <img
+              src="hp-elitebook-830-g6.jpg"
+              alt="HP EliteBook 830 G6"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20HP%20EliteBook%20830%20G6%20priced%20at%20KSh%2026,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>HP EliteBook 830 G6</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5, 8GB RAM, 256GB SSD
+              and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 26,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20830%20G6%20at%20KSh%2026%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- Lenovo ThinkPad T480s -->
+        <!-- 8 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="lenovo-thinkpad-t480s.jpg"
-            alt="Lenovo ThinkPad T480s"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            LENOVO THINKPAD
-          </span>
-
-          <h3>
-            Lenovo ThinkPad T480s
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5 8th Gen</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 25,500
+          <div class="product-image">
+            <img
+              src="lenovo-thinkpad-t480s.jpg"
+              alt="Lenovo ThinkPad T480s"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Lenovo%20ThinkPad%20T480s%20priced%20at%20KSh%2025,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>Lenovo ThinkPad T480s</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5 8th Gen, 8GB RAM, 256GB SSD
+              and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 25,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Lenovo%20ThinkPad%20T480s%20at%20KSh%2025%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- Dell Latitude 5300 -->
+        <!-- 9 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="dell-latitude-5300.jpg"
-            alt="Dell Latitude 5300"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            DELL LATITUDE
-          </span>
-
-          <h3>
-            Dell Latitude 5300
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5 8th Gen</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Type-C</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 32,000
+          <div class="product-image">
+            <img
+              src="dell-latitude-5300.jpg"
+              alt="Dell Latitude 5300"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Dell%20Latitude%205300%20priced%20at%20KSh%2032,000."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>Dell Latitude 5300</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5 8th Gen, 8GB RAM, 256GB SSD,
+              Type-C and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 32,000</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Dell%20Latitude%205300%20at%20KSh%2032%2C000."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- Toshiba Dynabook -->
+        <!-- 10 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="toshiba-dynabook.jpg"
-            alt="Toshiba Dynabook"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            TOSHIBA
-          </span>
-
-          <h3>
-            Toshiba Dynabook
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i5 11th Gen</li>
-            <li>16GB RAM</li>
-            <li>256GB SSD</li>
-            <li>Backlit Keyboard</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 28,500
+          <div class="product-image">
+            <img
+              src="toshiba-dynabook.jpg"
+              alt="Toshiba Dynabook"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Toshiba%20Dynabook%20priced%20at%20KSh%2028,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>Toshiba Dynabook</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i5 11th Gen, 16GB RAM, 256GB SSD
+              and backlit keyboard.
+            </p>
+
+            <div class="price">KSh 28,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Toshiba%20Dynabook%20at%20KSh%2028%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- ASUS ZenBook 13 -->
+        <!-- 11 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="asus-zenbook-13.jpg"
-            alt="ASUS ZenBook 13"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            ASUS
-          </span>
-
-          <h3>
-            ASUS ZenBook 13
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i7 11th Gen</li>
-            <li>16GB RAM</li>
-            <li>512GB SSD</li>
-            <li>Sleek & Ultra-Portable</li>
-            <li>Ideal for Professionals & Creators</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 55,000
+          <div class="product-image">
+            <img
+              src="asus-zenbook-13.jpg"
+              alt="ASUS ZenBook 13"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20ASUS%20ZenBook%2013%20priced%20at%20KSh%2055,000."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>ASUS ZenBook 13</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i7 11th Gen, 16GB RAM, 512GB SSD.
+              Sleek and ultra-portable, ideal for professionals and creators.
+            </p>
+
+            <div class="price">KSh 55,000</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20ASUS%20ZenBook%2013%20at%20KSh%2055%2C000."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
 
 
-      <!-- Lenovo X13 -->
+        <!-- 12 -->
+        <article class="product-card">
 
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="lenovo-x13.jpg"
-            alt="Lenovo X13"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            LENOVO
-          </span>
-
-          <h3>
-            Lenovo X13
-          </h3>
-
-          <ul class="specs">
-
-            <li>Intel Core i7 11th Gen</li>
-            <li>32GB RAM</li>
-            <li>512GB SSD</li>
-            <li>X360 Touch</li>
-            <li>Stylus Pen</li>
-
-          </ul>
-
-          <div class="price">
-            KSh 33,500
+          <div class="product-image">
+            <img
+              src="lenovo-x13.jpg"
+              alt="Lenovo X13"
+            >
           </div>
 
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Lenovo%20X13%20priced%20at%20KSh%2033,500."
-            class="order-btn"
-            target="_blank"
-          >
-            Inquire on WhatsApp
-          </a>
+          <div class="product-content">
 
-        </div>
+            <h3>Lenovo X13</h3>
 
-      </article>
+            <p class="product-description">
+              Intel Core i7 11th Gen, 32GB RAM, 512GB SSD,
+              X360 touch and stylus pen.
+            </p>
+
+            <div class="price">KSh 33,500</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Lenovo%20X13%20at%20KSh%2033%2C500."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+      </div>
 
     </div>
-
   </section>
 
 
@@ -1563,305 +1290,224 @@
        BUTTON PHONES
   ========================= -->
 
-  <div
-    class="section-heading"
-    id="button-phones"
-  >
+  <section class="products-section" id="button-phones">
+    <div class="container">
 
-    <span>
-      PHONES
-    </span>
+      <div class="section-heading">
 
-    <h2>
-      Button Phones
-    </h2>
+        <div class="section-label">BUTTON PHONES</div>
 
-    <p>
-      Simple, practical phones for everyday communication.
-    </p>
+        <h2>Simple Phones for Everyday Use</h2>
 
-  </div>
+        <p>
+          Simple, practical phones for everyday communication.
+        </p>
+
+      </div>
+
+      <div class="phone-note">
+        <strong>Button phones — KSh 1,100 each.</strong>
+        We currently have six models available. Contact us to confirm your
+        preferred model before ordering.
+      </div>
 
 
-  <div class="phone-note">
+      <div class="product-grid">
 
-    <div class="note-box">
+        <!-- 1 -->
+        <article class="product-card">
 
-      <strong>
-        Button phones — KSh 1,100 each.
-      </strong>
+          <div class="product-image">
+            <img
+              src="Raeno%20R1280.jpeg"
+              alt="Raeno R1280 Button Phone"
+            >
+          </div>
 
-      &nbsp;
+          <div class="product-content">
 
-      We currently have six models available.
-      Contact us to confirm your preferred model before ordering.
+            <h3>Raeno R1280</h3>
+
+            <p class="product-description">
+              Practical button phone for everyday communication.
+            </p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Raeno%20R1280%20button%20phone%20at%20KSh%201%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+
+        <!-- 2 -->
+        <article class="product-card">
+
+          <div class="product-image">
+            <img
+              src="Q-Seven%20Q2163.jpeg"
+              alt="Q-Seven Q2163 Button Phone"
+            >
+          </div>
+
+          <div class="product-content">
+
+            <h3>Q-Seven Q2163</h3>
+
+            <p class="product-description">
+              Simple and practical button phone for everyday use.
+            </p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Q-Seven%20Q2163%20button%20phone%20at%20KSh%201%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+
+        <!-- 3 -->
+        <article class="product-card">
+
+          <div class="product-image">
+            <img
+              src="Visiontel%20V2160.jpeg"
+              alt="Visiontel V2160 Button Phone"
+            >
+          </div>
+
+          <div class="product-content">
+
+            <h3>Visiontel V2160</h3>
+
+            <p class="product-description">
+              Straightforward button phone for everyday communication.
+            </p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Visiontel%20V2160%20button%20phone%20at%20KSh%201%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+
+        <!-- 4 -->
+        <article class="product-card">
+
+          <div class="product-image">
+            <img
+              src="Momofly%20M312E.jpeg"
+              alt="Momofly M312E Button Phone"
+            >
+          </div>
+
+          <div class="product-content">
+
+            <h3>Momofly M312E</h3>
+
+            <p class="product-description">
+              Practical button phone designed for simple everyday use.
+            </p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Momofly%20M312E%20button%20phone%20at%20KSh%201%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+
+        <!-- 5 -->
+        <article class="product-card">
+
+          <div class="product-image">
+            <img
+              src="itel%20it8010.jpeg"
+              alt="itel it8010 Button Phone"
+            >
+          </div>
+
+          <div class="product-content">
+
+            <h3>itel it8010</h3>
+
+            <p class="product-description">
+              Simple and practical itel button phone for everyday communication.
+            </p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20itel%20it8010%20button%20phone%20at%20KSh%201%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+
+        <!-- 6 -->
+        <article class="product-card">
+
+          <div class="product-image">
+            <img
+              src="itel%20it2166.jpeg"
+              alt="itel it2166 Button Phone"
+            >
+          </div>
+
+          <div class="product-content">
+
+            <h3>itel it2166</h3>
+
+            <p class="product-description">
+              Practical button phone for simple everyday communication.
+            </p>
+
+            <div class="price">KSh 1,100</div>
+
+            <a
+              href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20itel%20it2166%20button%20phone%20at%20KSh%201%2C100."
+              class="product-btn"
+              target="_blank"
+            >
+              Order via WhatsApp
+            </a>
+
+          </div>
+        </article>
+
+      </div>
 
     </div>
-
-  </div>
-
-
-  <!-- =========================
-       BUTTON PHONE PRODUCTS
-  ========================= -->
-
-  <section class="products-section">
-
-    <div class="products-grid">
-
-      <!-- Raeno R1280 -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="Raeno%20R1280.jpeg"
-            alt="Raeno R1280 Button Phone"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            BUTTON PHONE
-          </span>
-
-          <h3>
-            Raeno R1280
-          </h3>
-
-          <p class="product-description">
-            A simple and practical button phone for everyday communication.
-          </p>
-
-          <div class="price">
-            KSh 1,100
-          </div>
-
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Raeno%20R1280%20button%20phone%20priced%20at%20KSh%201,100."
-            class="order-btn"
-            target="_blank"
-          >
-            Order on WhatsApp
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- Q-Seven Q2163 -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="Q-Seven%20Q2163.jpeg"
-            alt="Q-Seven Q2163 Button Phone"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            BUTTON PHONE
-          </span>
-
-          <h3>
-            Q-Seven Q2163
-          </h3>
-
-          <p class="product-description">
-            A straightforward button phone for everyday calls and communication.
-          </p>
-
-          <div class="price">
-            KSh 1,100
-          </div>
-
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Q-Seven%20Q2163%20button%20phone%20priced%20at%20KSh%201,100."
-            class="order-btn"
-            target="_blank"
-          >
-            Order on WhatsApp
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- Visiontel V2160 -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="Visiontel%20V2160.jpeg"
-            alt="Visiontel V2160 Button Phone"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            BUTTON PHONE
-          </span>
-
-          <h3>
-            Visiontel V2160
-          </h3>
-
-          <p class="product-description">
-            A practical feature phone for simple everyday communication.
-          </p>
-
-          <div class="price">
-            KSh 1,100
-          </div>
-
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Visiontel%20V2160%20button%20phone%20priced%20at%20KSh%201,100."
-            class="order-btn"
-            target="_blank"
-          >
-            Order on WhatsApp
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- Momofly M312E -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="Momofly%20M312E.jpeg"
-            alt="Momofly M312E Button Phone"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            BUTTON PHONE
-          </span>
-
-          <h3>
-            Momofly M312E
-          </h3>
-
-          <p class="product-description">
-            A compact and practical button phone for everyday use.
-          </p>
-
-          <div class="price">
-            KSh 1,100
-          </div>
-
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20Momofly%20M312E%20button%20phone%20priced%20at%20KSh%201,100."
-            class="order-btn"
-            target="_blank"
-          >
-            Order on WhatsApp
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- itel it8010 -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="itel%20it8010.jpeg"
-            alt="itel it8010 Button Phone"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            ITEL
-          </span>
-
-          <h3>
-            itel it8010
-          </h3>
-
-          <p class="product-description">
-            A practical itel button phone for reliable everyday communication.
-          </p>
-
-          <div class="price">
-            KSh 1,100
-          </div>
-
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20itel%20it8010%20button%20phone%20priced%20at%20KSh%201,100."
-            class="order-btn"
-            target="_blank"
-          >
-            Order on WhatsApp
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- itel it2166 -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="itel%20it2166.jpeg"
-            alt="itel it2166 Button Phone"
-          >
-        </div>
-
-        <div class="product-content">
-
-          <span class="product-tag">
-            ITEL
-          </span>
-
-          <h3>
-            itel it2166
-          </h3>
-
-          <p class="product-description">
-            A simple and dependable button phone for everyday communication.
-          </p>
-
-          <div class="price">
-            KSh 1,100
-          </div>
-
-          <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20interested%20in%20the%20itel%20it2166%20button%20phone%20priced%20at%20KSh%201,100."
-            class="order-btn"
-            target="_blank"
-          >
-            Order on WhatsApp
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
   </section>
 
 
@@ -1869,44 +1515,35 @@
        BUYING GUIDE
   ========================= -->
 
-  <section class="guide">
+  <section class="guide-section">
 
-    <div class="guide-container">
+    <div class="container">
 
       <div class="guide-heading">
 
-        <span>
-          BEFORE YOU BUY
-        </span>
+        <div class="section-label">BUYING GUIDE</div>
 
-        <h2>
-          Choose a device that fits your needs.
-        </h2>
+        <h2>Let's find the right device for you.</h2>
 
         <p>
-          Not every laptop is designed for the same kind of work.
-          Tell us what you need the device to handle and we can help
-          you narrow down the available options.
+          Not sure which device fits your needs? Tell us what you plan to do
+          with it and we'll help you narrow down the available options.
         </p>
 
       </div>
+
 
       <div class="guide-grid">
 
         <div class="guide-card">
 
-          <div class="guide-number">
-            01
-          </div>
+          <div class="guide-number">1</div>
 
-          <h3>
-            Tell Us What You Do
-          </h3>
+          <h3>Tell Us What You Do</h3>
 
           <p>
-            Whether it's school, office work, business, browsing,
-            programming or creative work, start with what you need
-            the device to handle.
+            Let us know whether you need the device for school, business,
+            office work, browsing, entertainment or other everyday tasks.
           </p>
 
         </div>
@@ -1914,17 +1551,13 @@
 
         <div class="guide-card">
 
-          <div class="guide-number">
-            02
-          </div>
+          <div class="guide-number">2</div>
 
-          <h3>
-            Set Your Budget
-          </h3>
+          <h3>Set Your Budget</h3>
 
           <p>
-            Let us know your budget and we'll show you the available
-            options within that range.
+            Give us your budget and we'll help you identify options that
+            fit within it.
           </p>
 
         </div>
@@ -1932,17 +1565,13 @@
 
         <div class="guide-card">
 
-          <div class="guide-number">
-            03
-          </div>
+          <div class="guide-number">3</div>
 
-          <h3>
-            Confirm Before Ordering
-          </h3>
+          <h3>Confirm Before Ordering</h3>
 
           <p>
-            Stock can change. Contact us to confirm availability,
-            specifications and the current price before making your order.
+            Product availability can change, so contact us to confirm the
+            exact device and availability before making your order.
           </p>
 
         </div>
@@ -1958,45 +1587,56 @@
        CTA
   ========================= -->
 
-  <section class="cta">
+  <section class="cta-section">
 
-    <span class="eyebrow">
-      NEED HELP CHOOSING?
-    </span>
+    <div class="container">
 
-    <h2>
-      Tell us what you're looking for.
-    </h2>
+      <h2>Tell us what you're looking for.</h2>
 
-    <p>
-      Send us your budget, intended use and preferred device type.
-      We'll help you explore the available options.
-    </p>
+      <p>
+        Share the type of device you need, what you'll use it for and your
+        budget. We'll help you check the available options.
+      </p>
 
-    <a
-      href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20am%20looking%20for%20a%20device.%20My%20budget%20is%20and%20I%20need%20it%20for."
-      class="btn btn-primary"
-      target="_blank"
-    >
-      Talk to Us on WhatsApp
-    </a>
+      <div class="cta-buttons">
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20device.%20My%20budget%20is%20KSh%20____%20and%20I%20will%20mainly%20use%20it%20for%20____."
+          class="btn btn-whatsapp"
+          target="_blank"
+        >
+          Ask on WhatsApp
+        </a>
+
+        <a
+          href="shop.html"
+          class="btn btn-primary"
+        >
+          Back to Shop
+        </a>
+
+      </div>
+
+    </div>
 
   </section>
 
 
   <!-- =========================
-       DELIVERY
+       DELIVERY STRIP
   ========================= -->
 
-  <section class="delivery">
+  <section class="delivery-strip">
 
-    <strong>
-      Order From Street Gadgets Care
-    </strong>
+    <div class="container delivery-inner">
 
-    <span>
-      Delivery available across Kenya.
-    </span>
+      <strong>Order From Street Gadgets Care</strong>
+
+      <span>
+        Delivery available across Kenya.
+      </span>
+
+    </div>
 
   </section>
 
@@ -2007,100 +1647,114 @@
 
   <footer>
 
-    <div class="footer-container">
+    <div class="container footer-grid">
 
-      <div class="footer-about">
+      <div class="footer-brand">
 
-        <a
-          href="index.html"
-          class="footer-logo"
+        <img
+          src="Logo.png"
+          alt="Street Gadgets Care"
         >
 
-          <img
-            src="Logo.png"
-            alt="Street Gadgets Care"
+        <p>
+          Technology, repairs, devices, accessories and creative support
+          from Street Gadgets Care — based in Nairobi and serving customers
+          across Kenya.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tech-repairs.html">Tech Repairs</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="creative-studio.html">Creative Studio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Shop</h3>
+
+        <ul>
+          <li>
+            <a href="devices.html">
+              Laptops & Button Phones
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop-accessories.html">
+              Laptop Accessories
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop-bags.html">
+              Laptop Bags
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop-storage.html">
+              Storage & Memory
+            </a>
+          </li>
+
+          <li>
+            <a href="computer-accessories.html">
+              Computer Accessories
+            </a>
+          </li>
+
+          <li>
+            <a href="other-gadgets.html">
+              Smart Gadgets
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <h3>Contact</h3>
+
+        <p>Nairobi, Kenya</p>
+
+        <p>0114259961</p>
+
+        <p>streetgadgetscare@gmail.com</p>
+
+        <p>
+          <a
+            href="https://wa.me/254114259961"
+            target="_blank"
           >
-
-        </a>
-
-        <p>
-          Technology, repairs, devices, accessories and creative
-          support — helping you keep moving forward.
+            WhatsApp Us
+          </a>
         </p>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>
-          Shop
-        </h3>
-
-        <a href="devices.html">
-          Devices
-        </a>
-
-        <a href="smart-watches.html">
-          Smart Watches
-        </a>
-
-        <a href="laptop-accessories.html">
-          Laptop Accessories
-        </a>
-
-        <a href="laptop-bags.html">
-          Laptop Bags
-        </a>
-
-        <a href="laptop-storage.html">
-          Storage & Memory
-        </a>
-
-        <a href="computer-accessories.html">
-          Computer Accessories
-        </a>
-
-        <a href="shop.html">
-          All Shop
-        </a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>
-          Contact
-        </h3>
-
-        <p>
-          Nairobi, Kenya
-        </p>
-
-        <a href="tel:0114259961">
-          0114259961
-        </a>
-
-        <a href="mailto:streetgadgetscare@gmail.com">
-          streetgadgetscare@gmail.com
-        </a>
-
-        <a
-          href="https://wa.me/254114259961"
-          target="_blank"
-        >
-          WhatsApp Us
-        </a>
 
       </div>
 
     </div>
 
 
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
 
-      © 2026 Street Gadgets Care. All Rights Reserved.
+      © 2026 Street Gadgets Care. All rights reserved.
 
     </div>
 
@@ -2112,10 +1766,11 @@
   ========================= -->
 
   <a
-    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care,%20I%20would%20like%20to%20make%20an%20inquiry."
-    class="whatsapp-float"
+    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20device."
+    class="floating-whatsapp"
     target="_blank"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
+    title="Chat on WhatsApp"
   >
     ☎
   </a>
