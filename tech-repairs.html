@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,8 @@
   <title>Tech Repairs | Street Gadgets Care</title>
 
   <meta name="description" content="Professional phone and laptop repairs in Nairobi. Screen replacement, battery replacement, charging repairs, software support, laptop servicing and more at Street Gadgets Care.">
+
+  <meta name="keywords" content="phone repair Nairobi, laptop repair Nairobi, screen replacement, battery replacement, laptop servicing, phone repair Kenya, Street Gadgets Care">
 
   <link rel="icon" type="image/png" href="Logo.png">
 
@@ -48,7 +51,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.14);
     }
 
     .nav-container {
@@ -84,11 +87,23 @@
       font-size: 14px;
       font-weight: 600;
       transition: 0.25s ease;
+      position: relative;
     }
 
     nav a:hover,
     nav a.active {
       color: #19a7ce;
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 2px;
+      background: #19a7ce;
+      border-radius: 5px;
     }
 
     .nav-cta {
@@ -100,6 +115,10 @@
 
     .nav-cta:hover {
       background: #148cac;
+    }
+
+    .nav-cta::after {
+      display: none !important;
     }
 
     /* =========================
@@ -117,7 +136,7 @@
       max-width: 1200px;
       min-height: 470px;
       margin: auto;
-      padding: 65px 22px;
+      padding: 68px 22px;
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
@@ -163,11 +182,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 44px;
       padding: 12px 19px;
       border-radius: 7px;
       font-weight: 700;
       font-size: 14px;
       transition: 0.25s ease;
+      border: 1px solid transparent;
     }
 
     .btn-primary {
@@ -178,19 +199,22 @@
     .btn-primary:hover {
       background: #148cac;
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(25,167,206,0.22);
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.45);
+      border-color: rgba(255,255,255,0.45);
       color: white;
+      background: transparent;
     }
 
     .btn-outline:hover {
       border-color: #19a7ce;
       color: #19a7ce;
+      transform: translateY(-2px);
     }
 
-    /* HERO IMAGE - REDUCED */
+    /* HERO IMAGE */
 
     .hero-visual {
       display: flex;
@@ -202,11 +226,11 @@
       width: 100%;
       max-width: 390px;
       padding: 16px;
-      border-radius: 16px;
+      border-radius: 17px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.16);
-      backdrop-filter: blur(5px);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
     }
 
     .hero-card img {
@@ -214,6 +238,7 @@
       height: 245px;
       object-fit: contain;
       border-radius: 10px;
+      background: rgba(0,0,0,0.08);
     }
 
     /* =========================
@@ -248,6 +273,7 @@
       display: block;
       font-size: 13px;
       color: #0b1220;
+      margin-bottom: 2px;
     }
 
     .quick-item span {
@@ -260,7 +286,7 @@
     ========================== */
 
     .section {
-      padding: 75px 22px;
+      padding: 78px 22px;
     }
 
     .section-light {
@@ -302,6 +328,7 @@
     .section-heading p {
       color: #687385;
       font-size: 15px;
+      line-height: 1.75;
     }
 
     .section-dark .section-heading p {
@@ -323,26 +350,27 @@
     .repair-card {
       background: white;
       border: 1px solid #e4e8ee;
-      border-radius: 13px;
+      border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 7px 22px rgba(11,18,32,0.05);
       transition: 0.3s ease;
     }
 
     .repair-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(11,18,32,0.10);
+      transform: translateY(-5px);
+      box-shadow: 0 17px 34px rgba(11,18,32,0.11);
+      border-color: #d7e0e8;
     }
-
-    /* REDUCED IMAGE SIZE */
 
     .repair-image {
       height: 175px;
-      background: #eef2f6;
+      background:
+        linear-gradient(135deg, #eef2f6, #f8fafc);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      border-bottom: 1px solid #e6ebf0;
     }
 
     .repair-image img {
@@ -350,10 +378,15 @@
       height: 100%;
       object-fit: contain;
       padding: 10px;
+      transition: 0.3s ease;
+    }
+
+    .repair-card:hover .repair-image img {
+      transform: scale(1.03);
     }
 
     .repair-content {
-      padding: 20px;
+      padding: 21px;
     }
 
     .repair-content h3 {
@@ -365,7 +398,7 @@
     .repair-content p {
       color: #687385;
       font-size: 13px;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* =========================
@@ -381,14 +414,15 @@
       align-items: center;
     }
 
-    /* REDUCED LAPTOP IMAGE */
-
     .laptop-image {
-      background: #eef2f6;
-      border-radius: 15px;
+      background:
+        linear-gradient(135deg, #eef2f6, #f8fafc);
+      border-radius: 16px;
       overflow: hidden;
       max-width: 440px;
       margin: auto;
+      border: 1px solid #e4e8ee;
+      box-shadow: 0 12px 30px rgba(11,18,32,0.06);
     }
 
     .laptop-image img {
@@ -405,10 +439,17 @@
     }
 
     .service-item {
-      padding: 16px;
+      padding: 17px;
       background: #f7f9fb;
       border: 1px solid #e4e8ee;
-      border-radius: 9px;
+      border-radius: 10px;
+      transition: 0.25s ease;
+    }
+
+    .service-item:hover {
+      border-color: #bfe5ef;
+      background: #f4fbfd;
+      transform: translateY(-2px);
     }
 
     .service-item strong {
@@ -421,6 +462,7 @@
     .service-item span {
       color: #687385;
       font-size: 12px;
+      line-height: 1.55;
     }
 
     /* =========================
@@ -436,10 +478,17 @@
     }
 
     .problem {
-      padding: 19px 16px;
+      padding: 20px 17px;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.045);
-      border-radius: 9px;
+      border-radius: 10px;
+      transition: 0.25s ease;
+    }
+
+    .problem:hover {
+      background: rgba(25,167,206,0.08);
+      border-color: rgba(25,167,206,0.28);
+      transform: translateY(-2px);
     }
 
     .problem strong {
@@ -452,6 +501,7 @@
     .problem span {
       color: #aeb9c8;
       font-size: 11px;
+      line-height: 1.55;
     }
 
     /* =========================
@@ -461,14 +511,15 @@
     .shipping-box {
       max-width: 1050px;
       margin: 35px auto 0;
-      padding: 23px 25px;
-      border-radius: 12px;
+      padding: 24px 25px;
+      border-radius: 13px;
       background: linear-gradient(135deg, #eefaff, #fff);
       border: 1px solid #ccecf5;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+      box-shadow: 0 8px 24px rgba(25,167,206,0.05);
     }
 
     .shipping-box h3 {
@@ -495,10 +546,16 @@
     }
 
     .process-card {
-      padding: 24px 19px;
+      padding: 25px 19px;
       background: #fff;
       border: 1px solid #e4e8ee;
       border-radius: 11px;
+      transition: 0.25s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(11,18,32,0.07);
     }
 
     .process-number {
@@ -513,6 +570,7 @@
       font-weight: 800;
       font-size: 13px;
       margin-bottom: 17px;
+      box-shadow: 0 5px 14px rgba(25,167,206,0.20);
     }
 
     .process-card h3 {
@@ -524,6 +582,7 @@
     .process-card p {
       color: #687385;
       font-size: 12px;
+      line-height: 1.65;
     }
 
     /* =========================
@@ -540,17 +599,20 @@
 
     .video-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 13px;
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0,0,0,0.06);
       border: 1px solid #e4e8ee;
+      transition: 0.25s ease;
     }
 
-    /* CONTROLLED VIDEO SIZE */
+    .video-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.09);
+    }
 
     .video-frame {
       width: 100%;
-      max-height: 270px;
       aspect-ratio: 16 / 9;
       background: #000;
       overflow: hidden;
@@ -563,7 +625,7 @@
     }
 
     .video-info {
-      padding: 15px 18px;
+      padding: 16px 18px;
     }
 
     .video-info h3 {
@@ -582,7 +644,7 @@
     ========================== */
 
     .cta {
-      padding: 70px 22px;
+      padding: 75px 22px;
       background: linear-gradient(135deg, #0b1220, #101d31);
       color: white;
       text-align: center;
@@ -590,6 +652,7 @@
 
     .cta h2 {
       font-size: clamp(29px, 3.5vw, 40px);
+      line-height: 1.15;
       margin-bottom: 13px;
     }
 
@@ -598,6 +661,7 @@
       margin: 0 auto 25px;
       color: #c7d0dc;
       font-size: 15px;
+      line-height: 1.7;
     }
 
     .cta-buttons {
@@ -691,6 +755,7 @@
 
     .whatsapp:hover {
       transform: scale(1.08);
+      box-shadow: 0 10px 28px rgba(37,211,102,0.28);
     }
 
     /* =========================
@@ -709,7 +774,7 @@
 
       .hero-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
       }
 
       .hero-visual {
@@ -749,6 +814,10 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 11px 14px;
+      }
+
+      nav a.active::after {
+        bottom: -5px;
       }
 
       .logo img {
@@ -826,6 +895,10 @@
         align-items: flex-start;
       }
 
+      .shipping-box .btn {
+        width: 100%;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -843,18 +916,6 @@
         font-size: 34px;
       }
 
-      .quick-container {
-        grid-template-columns: 1fr;
-      }
-
-      .quick-item {
-        border-right: none;
-      }
-
-      .problem-grid {
-        grid-template-columns: 1fr;
-      }
-
       .hero-buttons,
       .cta-buttons {
         flex-direction: column;
@@ -863,6 +924,31 @@
 
       .btn {
         width: 100%;
+      }
+
+      .quick-container {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-item {
+        border-right: none;
+        border-bottom: 1px solid #e7ebf0;
+        padding-bottom: 12px;
+      }
+
+      .quick-item:last-child {
+        border-bottom: none;
+      }
+
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .whatsapp {
+        right: 15px;
+        bottom: 15px;
+        width: 52px;
+        height: 52px;
       }
     }
   </style>
@@ -880,14 +966,16 @@
         <img src="Logo.png" alt="Street Gadgets Care">
       </a>
 
-      <nav>
+      <nav aria-label="Main navigation">
+
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="tech-repairs.html" class="active">Tech Repairs</a>
+        <a href="tech-repairs.html" class="active" aria-current="page">Tech Repairs</a>
         <a href="shop.html">Shop</a>
         <a href="creative-studio.html">Creative Studio</a>
         <a href="contact.html" class="nav-cta">Contact</a>
+
       </nav>
 
     </div>
@@ -924,7 +1012,8 @@
           <a
             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20repair."
             class="btn btn-primary"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             Get Repair Help
           </a>
 
@@ -943,7 +1032,8 @@
 
           <img
             src="phone-screen-repair.jpg"
-            alt="Phone screen repair at Street Gadgets Care">
+            alt="Phone screen repair at Street Gadgets Care"
+            fetchpriority="high">
 
         </div>
 
@@ -967,7 +1057,7 @@
 
       <div class="quick-item">
         <strong>Laptop Repairs</strong>
-        <span>Hardware & software</span>
+        <span>Hardware &amp; software</span>
       </div>
 
       <div class="quick-item">
@@ -1011,9 +1101,12 @@
         <div class="repair-card">
 
           <div class="repair-image">
+
             <img
               src="phone-screen-repair.jpg"
-              alt="Phone screen replacement">
+              alt="Phone screen replacement"
+              loading="lazy">
+
           </div>
 
           <div class="repair-content">
@@ -1034,9 +1127,12 @@
         <div class="repair-card">
 
           <div class="repair-image">
+
             <img
               src="iphone-back-glass.jpg"
-              alt="iPhone back glass repair">
+              alt="iPhone back glass repair"
+              loading="lazy">
+
           </div>
 
           <div class="repair-content">
@@ -1057,9 +1153,12 @@
         <div class="repair-card">
 
           <div class="repair-image">
+
             <img
               src="phone-battery-replacement.jpg"
-              alt="Phone battery replacement">
+              alt="Phone battery replacement"
+              loading="lazy">
+
           </div>
 
           <div class="repair-content">
@@ -1095,7 +1194,8 @@
 
           <img
             src="laptop-servicing.jpg"
-            alt="Laptop servicing at Street Gadgets Care">
+            alt="Laptop servicing at Street Gadgets Care"
+            loading="lazy">
 
         </div>
 
@@ -1130,7 +1230,7 @@
             </div>
 
             <div class="service-item">
-              <strong>Antivirus & Security</strong>
+              <strong>Antivirus &amp; Security</strong>
               <span>Security setup and malware-related support.</span>
             </div>
 
@@ -1241,7 +1341,8 @@
         <a
           href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20send%20a%20device%20for%20repair."
           class="btn btn-primary"
-          target="_blank">
+          target="_blank"
+          rel="noopener noreferrer">
           Ask About Shipping
         </a>
 
@@ -1343,7 +1444,7 @@
 
       <div class="section-heading">
 
-        <span class="eyebrow">Repair Videos & Tech Tips</span>
+        <span class="eyebrow">Repair Videos &amp; Tech Tips</span>
 
         <h2>See some of our technology content.</h2>
 
@@ -1360,12 +1461,14 @@
         <div class="video-card">
 
           <div class="video-frame">
+
             <iframe
               src="https://www.youtube.com/embed/DXVP_zwtb6k"
               title="Street Gadgets Care repair video"
               loading="lazy"
               allowfullscreen>
             </iframe>
+
           </div>
 
           <div class="video-info">
@@ -1379,16 +1482,18 @@
         <div class="video-card">
 
           <div class="video-frame">
+
             <iframe
               src="https://www.youtube.com/embed/VR8dvpx2vgY"
               title="Street Gadgets Care technology video"
               loading="lazy"
               allowfullscreen>
             </iframe>
+
           </div>
 
           <div class="video-info">
-            <h3>Technology & Repairs</h3>
+            <h3>Technology &amp; Repairs</h3>
             <p>More technology content from Street Gadgets Care.</p>
           </div>
 
@@ -1398,12 +1503,14 @@
         <div class="video-card">
 
           <div class="video-frame">
+
             <iframe
               src="https://www.youtube.com/embed/3Eia1pcI59g"
               title="Journey into Tech Excellence"
               loading="lazy"
               allowfullscreen>
             </iframe>
+
           </div>
 
           <div class="video-info">
@@ -1417,16 +1524,18 @@
         <div class="video-card">
 
           <div class="video-frame">
+
             <iframe
               src="https://www.youtube.com/embed/FzRo8pXfS1U"
               title="Street Gadgets Care technology video"
               loading="lazy"
               allowfullscreen>
             </iframe>
+
           </div>
 
           <div class="video-info">
-            <h3>Tech Tips & Repairs</h3>
+            <h3>Tech Tips &amp; Repairs</h3>
             <p>Useful technology information from our channel.</p>
           </div>
 
@@ -1436,12 +1545,14 @@
         <div class="video-card">
 
           <div class="video-frame">
+
             <iframe
               src="https://www.youtube.com/embed/Wcvv5hZNxqQ"
               title="How to check your computer health"
               loading="lazy"
               allowfullscreen>
             </iframe>
+
           </div>
 
           <div class="video-info">
@@ -1474,7 +1585,8 @@
       <a
         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20device%20repair."
         class="btn btn-primary"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
         WhatsApp Us
       </a>
 
@@ -1496,7 +1608,10 @@
       <div class="footer-about">
 
         <div class="footer-logo">
-          <img src="Logo.png" alt="Street Gadgets Care">
+          <img
+            src="Logo.png"
+            alt="Street Gadgets Care"
+            loading="lazy">
         </div>
 
         <p>
@@ -1515,7 +1630,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="tech-repairs.html" aria-current="page">Tech Repairs</a>
         <a href="shop.html">Shop</a>
 
       </div>
@@ -1527,9 +1642,14 @@
 
         <a href="creative-studio.html">Creative Studio</a>
         <a href="contact.html">Contact</a>
-        <a href="https://wa.me/254114259961" target="_blank">
+
+        <a
+          href="https://wa.me/254114259961"
+          target="_blank"
+          rel="noopener noreferrer">
           WhatsApp
         </a>
+
         <a href="mailto:streetgadgetscare@gmail.com">
           Email Us
         </a>
@@ -1541,13 +1661,16 @@
 
         <h3>Contact</h3>
 
-        <a href="tel:0114259961">0114259961</a>
+        <a href="tel:0114259961">0114 259 961</a>
 
         <a href="mailto:streetgadgetscare@gmail.com">
           streetgadgetscare@gmail.com
         </a>
 
-        <a href="https://wa.me/254114259961" target="_blank">
+        <a
+          href="https://wa.me/254114259961"
+          target="_blank"
+          rel="noopener noreferrer">
           WhatsApp Us
         </a>
 
@@ -1581,9 +1704,12 @@
     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20repair%20assistance."
     class="whatsapp"
     target="_blank"
-    aria-label="Chat with Street Gadgets Care on WhatsApp">
+    rel="noopener noreferrer"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+    title="Chat with Street Gadgets Care on WhatsApp">
     ☎
   </a>
 
 </body>
 </html>
+```
