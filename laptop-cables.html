@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +48,11 @@
       gap: 25px;
     }
 
+    .logo {
+      display: block;
+      flex-shrink: 0;
+    }
+
     .logo img {
       width: 170px;
       max-height: 58px;
@@ -83,6 +89,7 @@
 
     .whatsapp-nav:hover {
       background: #1ebe5d;
+      transform: translateY(-1px);
     }
 
     /* HERO */
@@ -335,6 +342,7 @@
 
     .order-btn:hover {
       background: #1ebe5d;
+      transform: translateY(-1px);
     }
 
     /* GUIDANCE */
@@ -455,6 +463,20 @@
       margin: 0 auto 25px;
       color: #667180;
       font-size: 15px;
+    }
+
+    .final-cta .hero-buttons {
+      justify-content: center;
+    }
+
+    .btn-dark {
+      background: #0b1220;
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #18243a;
+      transform: translateY(-2px);
     }
 
     /* FOOTER */
@@ -634,7 +656,7 @@
     <div class="nav-container">
 
       <a href="index.html" class="logo">
-        <img src="Logo.png" alt="Street Gadgets Care">
+        <img src="Logo.png" alt="Street Gadgets Care Logo">
       </a>
 
       <nav>
@@ -651,6 +673,7 @@
           href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20a%20laptop%20power%20cable."
           class="whatsapp-nav"
           target="_blank"
+          rel="noopener"
         >
           WhatsApp
         </a>
@@ -689,6 +712,7 @@
             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20laptop%20power%20cable."
             class="btn btn-whatsapp"
             target="_blank"
+            rel="noopener"
           >
             Ask About a Cable
           </a>
@@ -802,6 +826,7 @@
           <img
             src="Flower%202%20Pin.jpeg"
             alt="Flower 2 Pin Laptop Cable"
+            loading="lazy"
           >
 
         </div>
@@ -825,6 +850,7 @@
             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Flower%202%20Pin%20Laptop%20Cable%20at%20KSh%20200."
             class="order-btn"
             target="_blank"
+            rel="noopener"
           >
             Order on WhatsApp
           </a>
@@ -842,6 +868,7 @@
           <img
             src="Flower%203%20Pin.jpeg"
             alt="Flower 3 Pin Laptop Cable"
+            loading="lazy"
           >
 
         </div>
@@ -865,6 +892,7 @@
             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Flower%203%20Pin%20Laptop%20Cable%20at%20KSh%20200."
             class="order-btn"
             target="_blank"
+            rel="noopener"
           >
             Order on WhatsApp
           </a>
@@ -882,6 +910,7 @@
           <img
             src="Flower%203%20Pin%20Original.jpeg"
             alt="Original Flower 3 Pin Laptop Cable"
+            loading="lazy"
           >
 
         </div>
@@ -905,6 +934,7 @@
             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Original%20Flower%203%20Pin%20Laptop%20Cable%20at%20KSh%20450."
             class="order-btn"
             target="_blank"
+            rel="noopener"
           >
             Order on WhatsApp
           </a>
@@ -922,6 +952,7 @@
           <img
             src="XUK%20Laptop%20Cable.jpeg"
             alt="XUK Laptop Cable"
+            loading="lazy"
           >
 
         </div>
@@ -945,6 +976,7 @@
             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20XUK%20Laptop%20Cable%20at%20KSh%20450."
             class="order-btn"
             target="_blank"
+            rel="noopener"
           >
             Order on WhatsApp
           </a>
@@ -952,7 +984,6 @@
         </div>
 
       </div>
-
 
     </div>
 
@@ -1079,12 +1110,11 @@
       you're unsure which cable is suitable for your charger.
     </p>
 
-    <div class="hero-buttons" style="justify-content:center;">
+    <div class="hero-buttons">
 
       <a
         href="cables.html"
-        class="btn"
-        style="background:#0b1220;color:#fff;"
+        class="btn btn-dark"
       >
         All Charging Cables
       </a>
@@ -1100,6 +1130,7 @@
         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20laptop%20power%20cable."
         class="btn btn-whatsapp"
         target="_blank"
+        rel="noopener"
       >
         WhatsApp Us
       </a>
@@ -1165,6 +1196,7 @@
         <a
           href="https://wa.me/254114259961"
           target="_blank"
+          rel="noopener"
           style="color:#25d366;font-weight:700;margin-top:8px;"
         >
           Chat on WhatsApp →
@@ -1189,6 +1221,7 @@
     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20a%20laptop%20power%20cable."
     class="floating-whatsapp"
     target="_blank"
+    rel="noopener"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
   >
     ☎
@@ -1196,3 +1229,4 @@
 
 </body>
 </html>
+```
