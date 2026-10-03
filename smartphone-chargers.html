@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +7,33 @@
 
     <title>Smartphone Chargers | Street Gadgets Care</title>
 
+    <meta name="description"
+          content="Shop smartphone chargers from Street Gadgets Care, including Samsung, iPhone, Tecno, Infinix and Oraimo charging options. Based in Nairobi and serving customers across Kenya.">
+
     <style>
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
             color: #222;
         }
 
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #0b1220;
-            padding: 15px 30px;
+            padding: 14px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -35,15 +48,18 @@
         }
 
         .logo img {
-            width: 55px;
-            height: 55px;
+            width: 170px;
+            max-height: 58px;
             object-fit: contain;
+            display: block;
         }
 
         nav {
             display: flex;
-            gap: 22px;
+            gap: 20px;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         nav a {
@@ -51,33 +67,138 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
+            transition: 0.3s ease;
         }
 
         nav a:hover {
-            opacity: 0.75;
+            color: #19a7ce;
         }
 
+        nav .active {
+            color: #19a7ce;
+        }
+
+        .nav-whatsapp {
+            background: #25d366;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .nav-whatsapp:hover {
+            color: white;
+            background: #1ebe5d;
+        }
+
+
+        /* =========================
+           SHOP CATEGORY NAVIGATION
+        ========================= */
+
+        .shop-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e8edf2;
+            padding: 12px 20px;
+            overflow-x: auto;
+        }
+
+        .shop-nav-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            min-width: max-content;
+        }
+
+        .shop-nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 8px 13px;
+            border-radius: 20px;
+            transition: 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .shop-nav a:hover {
+            color: #19a7ce;
+            background: #f0f9fc;
+        }
+
+        .shop-nav a.active {
+            background: #19a7ce;
+            color: white;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
         .page-header {
-            background: white;
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f4f8fb 100%
+                );
             text-align: center;
-            padding: 55px 20px 35px;
+            padding: 60px 20px 45px;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .page-label {
+            display: inline-block;
+            color: #19a7ce;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
         }
 
         .page-header h1 {
-            margin: 0 0 10px;
-            font-size: 36px;
+            margin: 0 0 12px;
+            font-size: 40px;
+            line-height: 1.15;
+            color: #0b1220;
         }
 
         .page-header p {
-            margin: 0;
+            max-width: 700px;
+            margin: 0 auto;
             color: #666;
             font-size: 16px;
+            line-height: 1.7;
         }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
 
         .products {
             max-width: 1200px;
-            margin: 45px auto;
+            margin: 50px auto 65px;
             padding: 0 20px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 10px;
+            color: #0b1220;
+            font-size: 28px;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
         }
 
         .charger-grid {
@@ -88,25 +209,28 @@
 
         .charger-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 22px rgba(11, 18, 32, 0.08);
+            border: 1px solid #edf0f4;
             transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .charger-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 28px rgba(11, 18, 32, 0.13);
         }
 
         .charger-image {
             width: 100%;
             height: 260px;
-            background: #f8f8f8;
+            background: #f5f7fa;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 18px;
         }
 
         .charger-image img {
@@ -116,38 +240,54 @@
         }
 
         .charger-content {
-            padding: 20px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .charger-tag {
+            color: #19a7ce;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
         }
 
         .charger-content h3 {
             margin: 0 0 10px;
             font-size: 20px;
+            line-height: 1.35;
+            color: #0b1220;
         }
 
         .charger-content p {
             color: #666;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.65;
             margin: 0 0 12px;
         }
 
         .price {
+            color: #0b1220;
             font-size: 21px;
             font-weight: bold;
-            margin: 15px 0;
+            margin: 12px 0;
         }
 
         .price-options {
+            color: #0b1220;
             font-size: 15px;
-            line-height: 1.8;
-            margin: 12px 0;
+            line-height: 1.9;
+            margin: 8px 0 12px;
         }
 
         .whatsapp-btn {
             display: block;
-            margin-top: 18px;
+            margin-top: auto;
             padding: 12px 15px;
-            background: #25D366;
+            background: #25d366;
             color: white;
             text-align: center;
             text-decoration: none;
@@ -162,73 +302,238 @@
             transform: translateY(-2px);
         }
 
-        .info-section {
-            max-width: 900px;
-            margin: 55px auto;
-            padding: 0 20px;
+
+        /* =========================
+           HELP SECTION
+        ========================= */
+
+        .help-section {
+            background: #0b1220;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .help-inner {
+            max-width: 950px;
+            margin: auto;
             text-align: center;
         }
 
-        .info-section h2 {
-            margin-bottom: 15px;
+        .help-inner h2 {
+            margin: 0 0 12px;
+            font-size: 30px;
         }
 
-        .info-section p {
-            color: #666;
+        .help-inner p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #cdd3dd;
             line-height: 1.7;
+            font-size: 15px;
         }
 
-        .back-link {
-            text-align: center;
-            margin: 30px 0 50px;
-        }
-
-        .back-link a {
-            color: #0b1220;
+        .help-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #25d366;
+            color: white;
             text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
             font-weight: bold;
+            transition: 0.3s ease;
         }
+
+        .help-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           BACK / SHOP LINKS
+        ========================= */
+
+        .page-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 45px 20px 60px;
+        }
+
+        .page-link {
+            display: inline-block;
+            padding: 11px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            background: #0b1220;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .page-link:hover {
+            background: #19a7ce;
+            transform: translateY(-2px);
+        }
+
+        .page-link.secondary {
+            background: #eaf7fb;
+            color: #0b1220;
+        }
+
+        .page-link.secondary:hover {
+            background: #19a7ce;
+            color: white;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #0b1220;
             color: white;
             text-align: center;
-            padding: 25px 15px;
-            margin-top: 50px;
+            padding: 30px 20px;
         }
 
         footer p {
-            margin: 5px 0;
+            margin: 6px 0;
             font-size: 14px;
         }
 
+        footer a {
+            color: #19a7ce;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+            z-index: 999;
+            transition: 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: translateY(-3px) scale(1.04);
+            background: #1ebe5d;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
         @media (max-width: 900px) {
+
+            header {
+                padding: 13px 20px;
+            }
+
+            .logo img {
+                width: 145px;
+            }
+
+            nav {
+                gap: 11px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
             .charger-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            nav {
-                gap: 12px;
+            .page-header h1 {
+                font-size: 36px;
             }
         }
 
-        @media (max-width: 600px) {
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
             header {
                 padding: 12px 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo img {
+                width: 150px;
+                max-height: 50px;
             }
 
             nav {
-                gap: 9px;
-                flex-wrap: wrap;
-                justify-content: flex-end;
+                justify-content: center;
+                gap: 9px 12px;
             }
 
             nav a {
                 font-size: 12px;
             }
 
+            .nav-whatsapp {
+                padding: 7px 10px;
+            }
+
+            .shop-nav {
+                padding: 10px 12px;
+            }
+
+            .shop-nav-inner {
+                justify-content: flex-start;
+            }
+
+            .shop-nav a {
+                font-size: 12px;
+                padding: 7px 11px;
+            }
+
+            .page-header {
+                padding: 45px 20px 35px;
+            }
+
             .page-header h1 {
-                font-size: 28px;
+                font-size: 30px;
+            }
+
+            .page-header p {
+                font-size: 15px;
+            }
+
+            .products {
+                margin-top: 40px;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
             }
 
             .charger-grid {
@@ -238,51 +543,169 @@
             .charger-image {
                 height: 280px;
             }
+
+            .charger-content {
+                padding: 21px;
+            }
+
+            .help-section {
+                padding: 45px 20px;
+            }
+
+            .help-inner h2 {
+                font-size: 25px;
+            }
+
+            .floating-whatsapp {
+                width: 48px;
+                height: 48px;
+                right: 15px;
+                bottom: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <div class="logo">
+
+    <a href="index.html" class="logo">
         <img src="Logo.png" alt="Street Gadgets Care Logo">
-    </div>
+    </a>
 
     <nav>
+
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="products.html">Products</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="creative-studio.html">Creative Studio</a>
         <a href="contact.html">Contact</a>
+
+        <a
+            href="https://wa.me/254114259961"
+            target="_blank"
+            class="nav-whatsapp"
+        >
+            WhatsApp
+        </a>
+
     </nav>
+
 </header>
 
 
+<!-- =========================
+     SHOP CATEGORY NAVIGATION
+========================= -->
+
+<div class="shop-nav">
+
+    <div class="shop-nav-inner">
+
+        <a href="devices.html">
+            Devices
+        </a>
+
+        <a href="laptop-bags.html">
+            Laptop Bags
+        </a>
+
+        <a href="laptop-storage.html">
+            Storage &amp; Memory
+        </a>
+
+        <a href="computer-accessories.html">
+            Computer / Laptop Accessories
+        </a>
+
+        <a href="shop.html">
+            All Shop
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+
 <section class="page-header">
-    <h1>Smartphone Chargers</h1>
-    <p>Quality chargers for different smartphone brands and charging needs.</p>
+
+    <div class="page-label">
+        PHONE ACCESSORIES
+    </div>
+
+    <h1>
+        Smartphone Chargers
+    </h1>
+
+    <p>
+        Quality charging options for popular smartphone brands,
+        with different power options available for compatible devices.
+    </p>
+
 </section>
 
 
+<!-- =========================
+     PRODUCTS
+========================= -->
+
 <section class="products">
+
+    <div class="section-heading">
+
+        <h2>
+            Available Smartphone Chargers
+        </h2>
+
+        <p>
+            Choose a charger below or contact us if you need help
+            confirming compatibility with your phone.
+        </p>
+
+    </div>
+
 
     <div class="charger-grid">
 
+
         <!-- Samsung 25W -->
+
         <div class="charger-card">
 
             <div class="charger-image">
-                <img src="Samsung%2025W.jpeg" alt="Samsung 25W Fast Charger">
+
+                <img
+                    src="Samsung%2025W.jpeg"
+                    alt="Samsung 25W Fast Charger"
+                >
+
             </div>
 
             <div class="charger-content">
-                <h3>Samsung 25W Fast Charger</h3>
+
+                <div class="charger-tag">
+                    Samsung
+                </div>
+
+                <h3>
+                    Samsung 25W Fast Charger
+                </h3>
 
                 <p>
-                    Fast charging adapter suitable for compatible Samsung
-                    smartphones.
+                    Fast charging adapter suitable for compatible
+                    Samsung smartphones.
                 </p>
 
                 <div class="price">
@@ -291,28 +714,43 @@
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%2025W%20Fast%20Charger%20at%20KSh%20950."
+                    target="_blank"
                     class="whatsapp-btn"
                 >
                     Order on WhatsApp
                 </a>
+
             </div>
 
         </div>
 
 
         <!-- Samsung 45W -->
+
         <div class="charger-card">
 
             <div class="charger-image">
-                <img src="Samsung%2045W.jpeg" alt="Samsung 45W Fast Charger">
+
+                <img
+                    src="Samsung%2045W.jpeg"
+                    alt="Samsung 45W Fast Charger"
+                >
+
             </div>
 
             <div class="charger-content">
-                <h3>Samsung 45W Fast Charger</h3>
+
+                <div class="charger-tag">
+                    Samsung
+                </div>
+
+                <h3>
+                    Samsung 45W Fast Charger
+                </h3>
 
                 <p>
-                    High-power charging adapter for compatible Samsung
-                    smartphones and devices.
+                    High-power charging adapter for compatible
+                    Samsung smartphones and devices.
                 </p>
 
                 <div class="price">
@@ -321,57 +759,91 @@
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Samsung%2045W%20Fast%20Charger%20at%20KSh%201500."
+                    target="_blank"
                     class="whatsapp-btn"
                 >
                     Order on WhatsApp
                 </a>
+
             </div>
 
         </div>
 
 
         <!-- iPhone -->
+
         <div class="charger-card">
 
             <div class="charger-image">
-                <img src="iPhone%20Chargers.jpeg" alt="iPhone USB-C Power Adapter">
+
+                <img
+                    src="iPhone%20Chargers.jpeg"
+                    alt="iPhone USB-C Power Adapter"
+                >
+
             </div>
 
             <div class="charger-content">
-                <h3>iPhone USB-C Power Adapter</h3>
+
+                <div class="charger-tag">
+                    iPhone
+                </div>
+
+                <h3>
+                    iPhone USB-C Power Adapter
+                </h3>
 
                 <p>
-                    USB-C power adapters available in two power options.
+                    USB-C power adapters available in two power options
+                    for compatible devices.
                 </p>
 
                 <div class="price-options">
+
                     <strong>25W — KSh 1,500</strong><br>
                     <strong>55W — KSh 2,500</strong>
+
                 </div>
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20iPhone%20USB-C%20Power%20Adapter.%20Please%20confirm%20availability%20of%20the%2025W%20or%2055W%20option."
+                    target="_blank"
                     class="whatsapp-btn"
                 >
                     Order on WhatsApp
                 </a>
+
             </div>
 
         </div>
 
 
         <!-- Tecno -->
+
         <div class="charger-card">
 
             <div class="charger-image">
-                <img src="Tecno%20Charger.jpeg" alt="Tecno Fast Charger">
+
+                <img
+                    src="Tecno%20Charger.jpeg"
+                    alt="Tecno Fast Charger"
+                >
+
             </div>
 
             <div class="charger-content">
-                <h3>Tecno Fast Charger</h3>
+
+                <div class="charger-tag">
+                    Tecno
+                </div>
+
+                <h3>
+                    Tecno Fast Charger
+                </h3>
 
                 <p>
-                    Reliable fast charger for compatible Tecno smartphones.
+                    Reliable fast charger for compatible Tecno
+                    smartphones.
                 </p>
 
                 <div class="price">
@@ -380,27 +852,43 @@
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Tecno%20Fast%20Charger%20at%20KSh%20950."
+                    target="_blank"
                     class="whatsapp-btn"
                 >
                     Order on WhatsApp
                 </a>
+
             </div>
 
         </div>
 
 
         <!-- Infinix -->
+
         <div class="charger-card">
 
             <div class="charger-image">
-                <img src="Infinix%2033W.jpeg" alt="Infinix 33W Fast Charger">
+
+                <img
+                    src="Infinix%2033W.jpeg"
+                    alt="Infinix 33W Fast Charger"
+                >
+
             </div>
 
             <div class="charger-content">
-                <h3>Infinix 33W Fast Charger</h3>
+
+                <div class="charger-tag">
+                    Infinix
+                </div>
+
+                <h3>
+                    Infinix 33W Fast Charger
+                </h3>
 
                 <p>
-                    Fast charging adapter for compatible Infinix smartphones.
+                    Fast charging adapter for compatible Infinix
+                    smartphones.
                 </p>
 
                 <div class="price">
@@ -409,24 +897,39 @@
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Infinix%2033W%20Fast%20Charger%20at%20KSh%201500."
+                    target="_blank"
                     class="whatsapp-btn"
                 >
                     Order on WhatsApp
                 </a>
+
             </div>
 
         </div>
 
 
         <!-- Oraimo -->
+
         <div class="charger-card">
 
             <div class="charger-image">
-                <img src="Oraimo%2010W.jpeg" alt="Oraimo 10W PowerMate 101">
+
+                <img
+                    src="Oraimo%2010W.jpeg"
+                    alt="Oraimo 10W PowerMate 101"
+                >
+
             </div>
 
             <div class="charger-content">
-                <h3>Oraimo 10W PowerMate 101</h3>
+
+                <div class="charger-tag">
+                    Oraimo
+                </div>
+
+                <h3>
+                    Oraimo 10W PowerMate 101
+                </h3>
 
                 <p>
                     Compact Oraimo charger with Micro-USB cable for
@@ -439,41 +942,120 @@
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%2010W%20PowerMate%20101%20at%20KSh%201250."
+                    target="_blank"
                     class="whatsapp-btn"
                 >
                     Order on WhatsApp
                 </a>
+
             </div>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<section class="info-section">
-    <h2>Need Help Choosing a Charger?</h2>
+<!-- =========================
+     HELP SECTION
+========================= -->
 
-    <p>
-        Not sure which charger is suitable for your phone?
-        Contact Street Gadgets Care and we can help you choose the
-        right charger for your device.
-    </p>
+<section class="help-section">
+
+    <div class="help-inner">
+
+        <h2>
+            Need Help Choosing a Charger?
+        </h2>
+
+        <p>
+            Not sure which charger is suitable for your phone?
+            Send us your phone model and we can help you identify
+            a suitable charging option before you order.
+        </p>
+
+        <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20choosing%20a%20smartphone%20charger."
+            target="_blank"
+            class="help-btn"
+        >
+            Ask on WhatsApp
+        </a>
+
+    </div>
+
 </section>
 
 
-<div class="back-link">
-    <a href="chargers.html">← Back to Chargers</a>
+<!-- =========================
+     PAGE LINKS
+========================= -->
+
+<div class="page-links">
+
+    <a
+        href="chargers.html"
+        class="page-link"
+    >
+        ← Back to Chargers
+    </a>
+
+    <a
+        href="laptop-chargers.html"
+        class="page-link secondary"
+    >
+        View Laptop Chargers →
+    </a>
+
 </div>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    <p><strong>Street Gadgets Care</strong></p>
-    <p>Phone & Laptop Repair • Accessories • Graphic Design</p>
-    <p>📞 0114259961 | ✉ streetgadgetscare@gmail.com</p>
-    <p>© 2026 Street Gadgets Care. All Rights Reserved.</p>
+
+    <p>
+        <strong>Street Gadgets Care</strong>
+    </p>
+
+    <p>
+        Laptop &amp; Phone Repair • Accessories • Graphic Design
+    </p>
+
+    <p>
+        Nairobi, Kenya • Serving Customers Across Kenya
+    </p>
+
+    <p>
+        📞 0114259961 |
+        ✉ streetgadgetscare@gmail.com
+    </p>
+
+    <p>
+        © 2026 Street Gadgets Care. All Rights Reserved.
+    </p>
+
 </footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/254114259961"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Chat with Street Gadgets Care on WhatsApp"
+>
+    ☎
+</a>
+
 
 </body>
 </html>
+```
