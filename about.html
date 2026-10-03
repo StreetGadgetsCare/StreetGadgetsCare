@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +36,7 @@
             color: #0b1220;
             background: #ffffff;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         img {
@@ -72,15 +74,14 @@
             background: rgba(11, 18, 32, 0.97);
 
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
 
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         .nav-container {
             width: min(1180px, 92%);
-
             min-height: 76px;
-
             margin: auto;
 
             display: flex;
@@ -109,7 +110,7 @@
 
             white-space: nowrap;
 
-            transition: 0.25s ease;
+            transition: color 0.25s ease;
         }
 
         nav a:hover {
@@ -128,10 +129,15 @@
             border-radius: 7px;
 
             color: #ffffff !important;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
         }
 
         .nav-contact:hover {
             background: var(--cyan-dark);
+            transform: translateY(-1px);
         }
 
         /* =========================
@@ -158,7 +164,6 @@
             font-weight: 800;
 
             letter-spacing: 1.8px;
-
             text-transform: uppercase;
         }
 
@@ -176,7 +181,6 @@
             color: var(--muted);
 
             font-size: 15px;
-
             line-height: 1.8;
         }
 
@@ -195,30 +199,30 @@
             font-size: 13px;
             font-weight: 800;
 
-            transition: 0.25s ease;
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
         }
 
         .button-primary {
             background: var(--cyan);
-
             color: #ffffff;
         }
 
         .button-primary:hover {
             background: var(--cyan-dark);
-
             transform: translateY(-2px);
         }
 
         .button-dark {
             background: var(--navy);
-
             color: #ffffff;
         }
 
         .button-dark:hover {
             background: #17243a;
-
             transform: translateY(-2px);
         }
 
@@ -226,14 +230,13 @@
             border: 1px solid #cbd5dc;
 
             color: var(--navy);
-
             background: #ffffff;
         }
 
         .button-outline:hover {
             border-color: var(--cyan);
-
             color: var(--cyan-dark);
+            transform: translateY(-2px);
         }
 
         /* =========================
@@ -241,6 +244,8 @@
         ========================= */
 
         .about-hero {
+            position: relative;
+
             background:
                 radial-gradient(
                     circle at 80% 20%,
@@ -261,7 +266,27 @@
             overflow: hidden;
         }
 
+        .about-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            right: -230px;
+            bottom: -280px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.12);
+            pointer-events: none;
+        }
+
         .about-hero-grid {
+            position: relative;
+            z-index: 1;
+
             display: grid;
 
             grid-template-columns: 1.05fr 0.95fr;
@@ -283,7 +308,6 @@
             font-weight: 800;
 
             letter-spacing: 1.8px;
-
             text-transform: uppercase;
 
             margin-bottom: 20px;
@@ -320,7 +344,6 @@
             color: #c4ced9;
 
             font-size: 16px;
-
             line-height: 1.8;
 
             margin-bottom: 27px;
@@ -328,7 +351,6 @@
 
         .hero-location {
             color: #8d9aaa;
-
             font-size: 12px;
         }
 
@@ -336,7 +358,6 @@
 
         .about-visual {
             display: flex;
-
             justify-content: center;
         }
 
@@ -345,7 +366,6 @@
 
             width: 100%;
             max-width: 480px;
-
             min-height: 390px;
 
             display: flex;
@@ -367,21 +387,39 @@
 
             box-shadow:
                 0 25px 55px rgba(0,0,0,0.25);
+
+            overflow: hidden;
+        }
+
+        .about-visual-box::before {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.12);
         }
 
         .about-visual-box img {
-            width: 86%;
+            position: relative;
+            z-index: 1;
 
+            width: 86%;
             height: 360px;
 
             object-fit: contain;
 
             padding: 18px;
+
+            filter: saturate(0.98);
         }
 
         .visual-badge {
             position: absolute;
-
             z-index: 2;
 
             background: rgba(255,255,255,0.96);
@@ -447,20 +485,55 @@
             color: var(--muted);
 
             font-size: 15px;
-
             line-height: 1.85;
 
             margin-bottom: 17px;
         }
 
+        .who-copy p:last-child {
+            margin-bottom: 0;
+        }
+
         .who-highlight {
-            padding: 28px;
+            position: relative;
+
+            padding: 32px;
 
             border-radius: 12px;
 
-            background: var(--light);
+            background:
+                linear-gradient(
+                    145deg,
+                    #f8fbfc,
+                    #f1f6f8
+                );
 
             border: 1px solid var(--border);
+
+            overflow: hidden;
+        }
+
+        .who-highlight::after {
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            right: -70px;
+            bottom: -80px;
+
+            border-radius: 50%;
+
+            background: rgba(25,167,206,0.08);
+        }
+
+        .who-highlight-label,
+        .who-highlight h3,
+        .who-highlight p {
+            position: relative;
+            z-index: 1;
         }
 
         .who-highlight-label {
@@ -470,7 +543,6 @@
             font-weight: 900;
 
             letter-spacing: 1.2px;
-
             text-transform: uppercase;
 
             margin-bottom: 12px;
@@ -488,7 +560,6 @@
             color: var(--muted);
 
             font-size: 13px;
-
             line-height: 1.75;
 
             margin: 0;
@@ -530,7 +601,6 @@
             color: var(--muted);
 
             font-size: 15px;
-
             line-height: 1.85;
 
             margin-bottom: 15px;
@@ -554,7 +624,6 @@
             color: var(--text);
 
             font-size: 13px;
-
             font-weight: 700;
         }
 
@@ -595,11 +664,35 @@
 
             border-radius: 15px;
 
-            background: var(--navy);
+            background:
+                linear-gradient(
+                    145deg,
+                    #0b1220,
+                    #121d31
+                );
 
             color: #ffffff;
 
             overflow: hidden;
+
+            box-shadow:
+                0 18px 45px rgba(11,18,32,0.10);
+        }
+
+        .story-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 190px;
+            height: 190px;
+
+            top: -95px;
+            right: -65px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.14);
         }
 
         .story-card::after {
@@ -628,7 +721,6 @@
             font-weight: 900;
 
             letter-spacing: 1.5px;
-
             text-transform: uppercase;
 
             margin-bottom: 17px;
@@ -658,7 +750,6 @@
             color: #aebdca;
 
             font-size: 14px;
-
             line-height: 1.8;
         }
 
@@ -672,7 +763,6 @@
 
         .identity-heading {
             max-width: 720px;
-
             margin-bottom: 43px;
         }
 
@@ -685,13 +775,36 @@
         }
 
         .identity-card {
+            position: relative;
+
             padding: 31px;
 
             border: 1px solid var(--border);
 
             border-radius: 12px;
 
-            transition: 0.25s ease;
+            background: #ffffff;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .identity-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 42px;
+            height: 3px;
+
+            background: var(--cyan);
+
+            border-radius: 12px 0 0 0;
         }
 
         .identity-card:hover {
@@ -726,7 +839,6 @@
             color: var(--muted);
 
             font-size: 13px;
-
             line-height: 1.75;
 
             margin-bottom: 19px;
@@ -736,8 +848,13 @@
             color: var(--cyan-dark);
 
             font-size: 12px;
-
             font-weight: 900;
+
+            transition: color 0.2s ease;
+        }
+
+        .identity-link:hover {
+            color: var(--cyan);
         }
 
         /* =========================
@@ -750,7 +867,6 @@
 
         .approach-heading {
             max-width: 700px;
-
             margin-bottom: 42px;
         }
 
@@ -770,6 +886,17 @@
             border: 1px solid var(--border);
 
             border-radius: 10px;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .approach-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 28px rgba(11,18,32,0.06);
         }
 
         .approach-number {
@@ -783,7 +910,6 @@
 
         .approach-card h3 {
             font-size: 17px;
-
             margin-bottom: 8px;
         }
 
@@ -791,7 +917,6 @@
             color: var(--muted);
 
             font-size: 12px;
-
             line-height: 1.7;
         }
 
@@ -831,13 +956,11 @@
             color: var(--muted);
 
             font-size: 15px;
-
             line-height: 1.8;
         }
 
         .values-list {
             display: grid;
-
             gap: 13px;
         }
 
@@ -853,19 +976,28 @@
             border: 1px solid var(--border);
 
             border-radius: 10px;
+
+            transition:
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .value-item:hover {
+            border-color: rgba(25,167,206,0.30);
+
+            box-shadow:
+                0 10px 25px rgba(11,18,32,0.05);
         }
 
         .value-number {
             color: var(--cyan);
 
             font-size: 12px;
-
             font-weight: 900;
         }
 
         .value-item h3 {
             font-size: 18px;
-
             margin-bottom: 5px;
         }
 
@@ -873,7 +1005,6 @@
             color: var(--muted);
 
             font-size: 12px;
-
             line-height: 1.7;
         }
 
@@ -882,13 +1013,23 @@
         ========================= */
 
         .brand-statement {
-            background: var(--navy);
+            position: relative;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(25,167,206,0.10),
+                    transparent 38%
+                ),
+                var(--navy);
 
             color: #ffffff;
 
             padding: 86px 0;
 
             text-align: center;
+
+            overflow: hidden;
         }
 
         .brand-statement-label {
@@ -898,7 +1039,6 @@
             font-weight: 900;
 
             letter-spacing: 1.8px;
-
             text-transform: uppercase;
 
             margin-bottom: 18px;
@@ -928,7 +1068,6 @@
             color: #aebdca;
 
             font-size: 15px;
-
             line-height: 1.8;
         }
 
@@ -1001,7 +1140,6 @@
 
         .footer-brand img {
             width: 155px;
-
             margin-bottom: 17px;
         }
 
@@ -1011,7 +1149,6 @@
             color: #8f9baa;
 
             font-size: 12px;
-
             line-height: 1.7;
         }
 
@@ -1019,7 +1156,6 @@
             font-size: 12px;
 
             letter-spacing: 1px;
-
             text-transform: uppercase;
 
             margin-bottom: 17px;
@@ -1034,7 +1170,7 @@
 
             margin-bottom: 8px;
 
-            transition: 0.2s ease;
+            transition: color 0.2s ease;
         }
 
         .footer-column a:hover {
@@ -1071,7 +1207,6 @@
             border-radius: 50%;
 
             background: var(--green);
-
             color: #ffffff;
 
             display: flex;
@@ -1086,11 +1221,16 @@
             box-shadow:
                 0 12px 28px rgba(37,211,102,0.35);
 
-            transition: 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .whatsapp-float:hover {
             transform: translateY(-4px) scale(1.04);
+
+            box-shadow:
+                0 16px 32px rgba(37,211,102,0.42);
         }
 
         /* =========================
@@ -1172,7 +1312,6 @@
 
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
-
                 gap: 38px;
             }
 
@@ -1186,31 +1325,31 @@
 
             .about-hero h1 {
                 font-size: 45px;
-
                 letter-spacing: -2px;
+            }
+
+            .about-hero-text {
+                font-size: 15px;
             }
 
             .about-visual-box {
                 min-height: 300px;
+                border-radius: 14px;
             }
 
             .about-visual-box img {
                 width: 92%;
-
                 height: 285px;
-
                 padding: 13px;
             }
 
             .visual-badge {
                 padding: 8px 10px;
-
                 font-size: 8px;
             }
 
             .story-card {
                 padding: 31px;
-
                 min-height: 310px;
             }
 
@@ -1263,7 +1402,7 @@
 
     <div class="nav-container">
 
-        <a href="index.html">
+        <a href="index.html" aria-label="Street Gadgets Care Home">
 
             <img
                 src="Logo.png"
@@ -1274,7 +1413,7 @@
         </a>
 
 
-        <nav>
+        <nav aria-label="Main navigation">
 
             <a href="index.html">
                 Home
@@ -1283,6 +1422,7 @@
             <a
                 href="about.html"
                 class="nav-active"
+                aria-current="page"
             >
                 About
             </a>
@@ -1362,7 +1502,8 @@
 
                 <img
                     src="laptop-servicing.jpg"
-                    alt="Technology servicing at Street Gadgets Care"
+                    alt="Laptop servicing at Street Gadgets Care"
+                    loading="eager"
                 >
 
 
@@ -2041,6 +2182,7 @@
                 <img
                     src="Logo.png"
                     alt="Street Gadgets Care"
+                    loading="lazy"
                 >
 
 
@@ -2105,7 +2247,11 @@
                 </a>
 
 
-                <a href="https://wa.me/254114259961">
+                <a
+                    href="https://wa.me/254114259961"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     WhatsApp Us
                 </a>
 
@@ -2151,6 +2297,8 @@
 <a
     href="https://wa.me/254114259961"
     class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
     title="Chat with us on WhatsApp"
 >
@@ -2160,3 +2308,4 @@
 
 </body>
 </html>
+```
