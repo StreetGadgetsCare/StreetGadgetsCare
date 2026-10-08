@@ -9,12 +9,12 @@
 
     <meta
         name="description"
-        content="Creative design and business document services from Street Gadgets Care including logo design, flyers, posters, menus, business cards, invitations, CVs, company profiles, business plans and professional business documents."
+        content="Professional graphic design, CV and resume design, company profiles, business plans and business name registration support from Street Gadgets Care in Nairobi."
     >
 
     <meta
         name="keywords"
-        content="graphic design Nairobi, logo design Kenya, flyer design Nairobi, poster design, business card design, CV design Kenya, company profile design, invitation cards Nairobi, business plan Kenya"
+        content="graphic design Nairobi, CV design Kenya, resume design Nairobi, company profile design Kenya, business plan Kenya, logo design Nairobi, flyer design, poster design, business card design"
     >
 
     <link rel="icon" type="image/png" href="Logo.png">
@@ -78,10 +78,15 @@
             color: inherit;
         }
 
+        button {
+            font-family: inherit;
+        }
+
         .container {
             width: min(1180px, 92%);
             margin: auto;
         }
+
 
         /* =========================
            HEADER
@@ -107,6 +112,7 @@
         .logo {
             display: flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .logo img {
@@ -156,6 +162,23 @@
             background: var(--cyan-dark);
         }
 
+        /* MOBILE MENU BUTTON */
+
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+
         /* =========================
            HERO
         ========================== */
@@ -163,6 +186,7 @@
         .hero {
             background:
                 radial-gradient(circle at 80% 20%, rgba(25,167,206,0.18), transparent 32%),
+                radial-gradient(circle at 10% 80%, rgba(25,167,206,0.08), transparent 28%),
                 linear-gradient(135deg, #09101d, #101d31);
             color: white;
             padding: 105px 0 100px;
@@ -171,7 +195,7 @@
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
+            grid-template-columns: 1.12fr 0.88fr;
             gap: 70px;
             align-items: center;
         }
@@ -197,10 +221,11 @@
 
         .hero h1 {
             font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(45px, 6vw, 78px);
+            font-size: clamp(45px, 6vw, 76px);
             line-height: 0.98;
             letter-spacing: -3px;
             margin-bottom: 26px;
+            max-width: 760px;
         }
 
         .hero h1 span {
@@ -231,6 +256,8 @@
             font-weight: 700;
             font-size: 14px;
             transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -246,6 +273,7 @@
         .btn-outline {
             border: 1px solid rgba(255,255,255,0.2);
             color: white;
+            background: transparent;
         }
 
         .btn-outline:hover {
@@ -332,6 +360,7 @@
             font-weight: 700;
         }
 
+
         /* =========================
            SECTIONS
         ========================== */
@@ -363,7 +392,8 @@
             margin-bottom: 12px;
         }
 
-        .section-heading h2 {
+        .section-heading h2,
+        .intro-heading {
             font-family: "Space Grotesk", sans-serif;
             font-size: clamp(34px, 5vw, 54px);
             line-height: 1.05;
@@ -375,6 +405,7 @@
             color: var(--muted);
             font-size: 17px;
         }
+
 
         /* =========================
            INTRO
@@ -396,6 +427,7 @@
         .intro-highlight {
             border-left: 3px solid var(--cyan);
             padding: 8px 0 8px 25px;
+            margin-top: 26px;
             font-family: "Space Grotesk", sans-serif;
             font-size: 26px;
             line-height: 1.35;
@@ -414,6 +446,13 @@
             background: white;
             border: 1px solid var(--border);
             border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .intro-point:hover {
+            transform: translateX(4px);
+            border-color: rgba(25,167,206,0.3);
+            box-shadow: 0 12px 30px rgba(11,18,32,0.05);
         }
 
         .intro-point i {
@@ -431,6 +470,7 @@
             color: var(--muted);
             font-size: 14px;
         }
+
 
         /* =========================
            PORTFOLIO
@@ -527,6 +567,7 @@
             transform: translateX(5px);
         }
 
+
         /* =========================
            SERVICES
         ========================== */
@@ -576,6 +617,7 @@
             font-size: 13px;
         }
 
+
         /* =========================
            BUSINESS SUPPORT
         ========================== */
@@ -623,6 +665,13 @@
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 13px;
             background: rgba(255,255,255,0.035);
+            transition: 0.3s ease;
+        }
+
+        .business-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(25,167,206,0.3);
+            transform: translateX(4px);
         }
 
         .business-item i {
@@ -635,6 +684,49 @@
             font-size: 14px;
             font-weight: 600;
         }
+
+
+        /* =========================
+           WHO WE HELP
+        ========================== */
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .audience-card {
+            padding: 30px 25px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: white;
+            transition: 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(11,18,32,0.07);
+            border-color: rgba(25,167,206,0.3);
+        }
+
+        .audience-card i {
+            color: var(--cyan);
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .audience-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .audience-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
 
         /* =========================
            PROCESS
@@ -673,6 +765,7 @@
             color: var(--muted);
             font-size: 13px;
         }
+
 
         /* =========================
            CTA
@@ -722,6 +815,7 @@
             background: #1eb956;
             transform: translateY(-2px);
         }
+
 
         /* =========================
            FOOTER
@@ -796,6 +890,7 @@
             color: #667282;
         }
 
+
         /* =========================
            FLOATING WHATSAPP
         ========================== */
@@ -821,6 +916,7 @@
         .floating-whatsapp:hover {
             transform: scale(1.08);
         }
+
 
         /* =========================
            RESPONSIVE
@@ -852,14 +948,58 @@
 
         }
 
+
         @media (max-width: 850px) {
 
             .nav {
                 min-height: 70px;
             }
 
+            /* MOBILE HAMBURGER */
+
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #0b1220;
+                border-top: 1px solid rgba(255,255,255,0.08);
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+                padding: 18px 4%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 13px 10px;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+
+            .nav-links a:hover {
+                background: rgba(255,255,255,0.05);
+            }
+
+            .nav-links a.active::after {
+                display: none;
+            }
+
+            .nav-links .nav-cta {
+                text-align: center;
+                margin-top: 8px;
+                padding: 12px 16px;
             }
 
             .hero {
@@ -881,6 +1021,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .cta-buttons {
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -891,6 +1035,7 @@
             }
 
         }
+
 
         @media (max-width: 600px) {
 
@@ -930,10 +1075,15 @@
             }
 
             .section-heading h2,
+            .intro-heading,
             .business-section h2,
             .cta h2 {
                 font-size: 36px;
                 letter-spacing: -1px;
+            }
+
+            .intro-highlight {
+                font-size: 22px;
             }
 
             .portfolio-image {
@@ -945,7 +1095,8 @@
             }
 
             .service-grid,
-            .process-grid {
+            .process-grid,
+            .audience-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -970,7 +1121,9 @@
     </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -981,33 +1134,65 @@
     <div class="container nav">
 
         <a href="index.html" class="logo">
-            <img src="Logo.png" alt="Street Gadgets Care Logo">
+            <img
+                src="Logo.png"
+                alt="Street Gadgets Care Logo">
         </a>
 
-        <nav class="nav-links">
 
-            <a href="index.html">Home</a>
+        <!-- MOBILE MENU BUTTON -->
 
-            <a href="about.html">About</a>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mainNavigation">
 
-            <a href="services.html">Services</a>
+            <i class="fas fa-bars"></i>
 
-            <a href="tech-repairs.html">Tech Repairs</a>
+        </button>
 
-            <a href="shop.html">Shop</a>
+
+        <nav class="nav-links" id="mainNavigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="tech-repairs.html">
+                Tech Repairs
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
 
             <a href="creative-studio.html" class="active">
                 Creative Studio
             </a>
 
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">
+                Contact
+            </a>
 
             <a
                 href="https://wa.me/254114259961"
                 target="_blank"
                 rel="noopener"
                 class="nav-cta">
+
+                <i class="fab fa-whatsapp"></i>
                 WhatsApp
+
             </a>
 
         </nav>
@@ -1032,32 +1217,37 @@
             </div>
 
             <h1>
-                Design that gives your
-                <span>business a presence.</span>
+                Build your brand.
+                <span>Present it better.</span>
             </h1>
 
             <p>
-                From logos and promotional designs to professional business
-                documents, Street Gadgets Care helps turn your ideas into
-                clear, polished and professional visual materials.
+                Professional graphic design and business document services
+                for individuals, startups and established businesses.
+                We turn your ideas and information into clear,
+                polished and professional materials.
             </p>
 
             <div class="hero-buttons">
 
                 <a
-                    href="#portfolio"
+                    href="#services"
                     class="btn btn-primary">
-                    <i class="fas fa-images"></i>
-                    View Our Work
+
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    Explore Services
+
                 </a>
 
                 <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20start%20a%20design%20project."
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20start%20a%20creative%20project."
                     target="_blank"
                     rel="noopener"
                     class="btn btn-outline">
+
                     <i class="fab fa-whatsapp"></i>
                     Start a Project
+
                 </a>
 
             </div>
@@ -1079,6 +1269,7 @@
 
                 </div>
 
+
                 <div class="visual-lines">
 
                     <div class="visual-line short"></div>
@@ -1086,6 +1277,7 @@
                     <div class="visual-line medium"></div>
 
                 </div>
+
 
                 <div class="visual-boxes">
 
@@ -1130,21 +1322,22 @@
                 01 / THE STUDIO
             </div>
 
-            <h2 class="section-heading" style="margin-bottom:25px;">
-                Good design should
-                make your business easier
+            <h2 class="intro-heading">
+                Good design should make
+                your business easier
                 to understand.
             </h2>
 
             <p>
-                Your logo, flyer, business card, invitation or company
-                profile is often one of the first things people see.
+                Your logo, flyer, business card, CV or company profile
+                may be the first thing someone sees about you or your
+                business.
             </p>
 
             <p>
-                We create practical design materials that help you present
-                your business, promote what you offer and communicate with
-                your customers professionally.
+                We create practical design materials that help you
+                present your business, promote what you offer and
+                communicate professionally.
             </p>
 
             <div class="intro-highlight">
@@ -1163,7 +1356,9 @@
 
                 <div>
 
-                    <strong>Creative Design</strong>
+                    <strong>
+                        Creative Design
+                    </strong>
 
                     <span>
                         Professional visual materials built around your
@@ -1181,11 +1376,13 @@
 
                 <div>
 
-                    <strong>Business Communication</strong>
+                    <strong>
+                        Business Communication
+                    </strong>
 
                     <span>
-                        Materials that help customers understand what you
-                        offer and communicate your message clearly.
+                        Materials that help customers understand what
+                        you offer and communicate your message clearly.
                     </span>
 
                 </div>
@@ -1199,7 +1396,9 @@
 
                 <div>
 
-                    <strong>Professional Documents</strong>
+                    <strong>
+                        Professional Documents
+                    </strong>
 
                     <span>
                         CVs, company profiles, business plans and other
@@ -1217,11 +1416,14 @@
 
                 <div>
 
-                    <strong>One Creative Partner</strong>
+                    <strong>
+                        One Creative Partner
+                    </strong>
 
                     <span>
-                        From a single poster to a complete set of business
-                        materials, we can help bring the pieces together.
+                        From a single design to a complete set of
+                        business materials, we can help bring the pieces
+                        together.
                     </span>
 
                 </div>
@@ -1239,7 +1441,9 @@
      PORTFOLIO
 ========================== -->
 
-<section class="section section-light" id="portfolio">
+<section
+    class="section section-light"
+    id="portfolio">
 
     <div class="container">
 
@@ -1250,20 +1454,21 @@
             </div>
 
             <h2>
-                A few things we've
-                created.
+                Design work that
+                communicates.
             </h2>
 
             <p>
-                A selection of our creative work. As the studio grows,
-                this section can become a larger collection of real
-                projects and client work.
+                Explore some of the creative services we provide.
+                Your project can be tailored to your brand, audience
+                and purpose.
             </p>
 
         </div>
 
 
         <div class="portfolio">
+
 
             <!-- LOGO DESIGN -->
 
@@ -1282,6 +1487,7 @@
 
                 </div>
 
+
                 <div class="portfolio-info">
 
                     <h3>
@@ -1289,18 +1495,18 @@
                     </h3>
 
                     <p>
-                        Professional logos, brand identity designs and
-                        branding materials created to give your business
-                        a clear and memorable visual identity.
+                        Professional logos and visual identity concepts
+                        designed to give your business a clear,
+                        memorable and professional appearance.
                     </p>
 
                     <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20logo%20and%20branding%20design."
+                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20ask%20about%20logo%20design."
                         class="portfolio-link"
                         target="_blank"
                         rel="noopener">
 
-                        Start a Branding Project
+                        Start a Logo Project
 
                         <i class="fas fa-arrow-right"></i>
 
@@ -1328,6 +1534,7 @@
 
                 </div>
 
+
                 <div class="portfolio-info">
 
                     <h3>
@@ -1335,9 +1542,9 @@
                     </h3>
 
                     <p>
-                        Creative flyers, posters, restaurant menus and
-                        promotional designs created to showcase your
-                        products, services or special offers.
+                        Promotional designs created to showcase your
+                        products, services, offers, restaurant menu
+                        or important business message.
                     </p>
 
                     <a
@@ -1374,6 +1581,7 @@
 
                 </div>
 
+
                 <div class="portfolio-info">
 
                     <h3>
@@ -1381,9 +1589,9 @@
                     </h3>
 
                     <p>
-                        Professional business cards, company stationery and
-                        branded business materials designed to present your
-                        business clearly and professionally.
+                        Professional business cards, stationery and
+                        branded business materials designed to help
+                        your business make a strong impression.
                     </p>
 
                     <a
@@ -1420,16 +1628,17 @@
 
                 </div>
 
+
                 <div class="portfolio-info">
 
                     <h3>
-                        Invitation & Event Cards
+                        Invitations & Event Cards
                     </h3>
 
                     <p>
-                        Elegant invitation cards, wedding stationery,
-                        event invitations and personalized designs for
-                        weddings, parties and special occasions.
+                        Elegant invitation cards and personalized
+                        designs for weddings, parties, celebrations
+                        and special occasions.
                     </p>
 
                     <a
@@ -1448,6 +1657,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1459,7 +1669,9 @@
      CREATIVE SERVICES
 ========================== -->
 
-<section class="section">
+<section
+    class="section"
+    id="services">
 
     <div class="container">
 
@@ -1475,15 +1687,16 @@
             </h2>
 
             <p>
-                Whether you are starting a business, promoting a product,
-                preparing for an event or applying for a job, we can help
-                you present yourself professionally.
+                From building your visual identity to preparing
+                professional business documents, we help you present
+                yourself and your business with confidence.
             </p>
 
         </div>
 
 
         <div class="service-grid">
+
 
             <div class="service-card">
 
@@ -1492,12 +1705,30 @@
                 </div>
 
                 <h3>
-                    Brand Identity
+                    Graphic Design
                 </h3>
 
                 <p>
-                    Logo design, brand concepts, visual identity and
-                    supporting branding materials.
+                    Professional graphics for businesses, events,
+                    promotions, social media and personal projects.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+
+                <h3>
+                    Logo Design
+                </h3>
+
+                <p>
+                    Clean and memorable logo concepts designed to give
+                    your business its own visual identity.
                 </p>
 
             </div>
@@ -1510,12 +1741,12 @@
                 </div>
 
                 <h3>
-                    Promotional Design
+                    Flyers & Posters
                 </h3>
 
                 <p>
-                    Flyers, posters, menus, social media graphics and
-                    promotional materials.
+                    Promotional designs for products, services, offers,
+                    events and business announcements.
                 </p>
 
             </div>
@@ -1528,30 +1759,12 @@
                 </div>
 
                 <h3>
-                    Business Materials
+                    Business Cards
                 </h3>
 
                 <p>
-                    Business cards, stationery, branded documents and
-                    other professional business materials.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-champagne-glasses"></i>
-                </div>
-
-                <h3>
-                    Events & Invitations
-                </h3>
-
-                <p>
-                    Wedding invitations, event cards, party invitations
-                    and special occasion designs.
+                    Professional business cards and stationery that
+                    present your business clearly.
                 </p>
 
             </div>
@@ -1568,8 +1781,8 @@
                 </h3>
 
                 <p>
-                    Clean, professional CV and resume layouts designed to
-                    present your experience clearly.
+                    Clean, professional CV and resume layouts designed
+                    to present your skills and experience clearly.
                 </p>
 
             </div>
@@ -1582,12 +1795,12 @@
                 </div>
 
                 <h3>
-                    Company Profiles
+                    Company Profile Design
                 </h3>
 
                 <p>
-                    Professional company profile documents that explain
-                    your business, services and capabilities.
+                    Professional company profiles that explain your
+                    business, services and capabilities.
                 </p>
 
             </div>
@@ -1600,7 +1813,7 @@
                 </div>
 
                 <h3>
-                    Business Plans
+                    Business Plan
                 </h3>
 
                 <p>
@@ -1618,15 +1831,16 @@
                 </div>
 
                 <h3>
-                    Business Documents
+                    Business Name Registration
                 </h3>
 
                 <p>
-                    Professional document preparation and digital support
-                    for different business needs.
+                    Support with the process of preparing and submitting
+                    your business name registration details.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1650,19 +1864,20 @@
             </div>
 
             <h2>
-                From an idea
-                to a professional
-                presentation.
+                Turn your business
+                idea into a
+                professional presence.
             </h2>
 
             <p class="intro-text">
-                Sometimes you do not just need a design. You need help
-                putting your business information together in a clear,
-                professional way.
+                Sometimes you need more than a design. You need your
+                business information organized and presented in a way
+                that customers, partners and potential clients can
+                understand.
             </p>
 
             <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20business%20document."
+                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20business%20project."
                 target="_blank"
                 rel="noopener"
                 class="btn btn-primary">
@@ -1677,12 +1892,13 @@
 
         <div class="business-list">
 
+
             <div class="business-item">
 
                 <i class="fas fa-file-circle-check"></i>
 
                 <span>
-                    CV & Resume Support
+                    CV & Resume Design
                 </span>
 
             </div>
@@ -1712,17 +1928,6 @@
 
             <div class="business-item">
 
-                <i class="fas fa-file-lines"></i>
-
-                <span>
-                    Professional Business Documents
-                </span>
-
-            </div>
-
-
-            <div class="business-item">
-
                 <i class="fas fa-signature"></i>
 
                 <span>
@@ -1734,13 +1939,159 @@
 
             <div class="business-item">
 
-                <i class="fas fa-laptop-code"></i>
+                <i class="fas fa-file-lines"></i>
 
                 <span>
-                    Digital & General Business Support
+                    Professional Business Documents
                 </span>
 
             </div>
+
+
+            <div class="business-item">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <span>
+                    Digital Business Support
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHO WE HELP
+========================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <div class="section-number">
+                05 / WHO WE HELP
+            </div>
+
+            <h2>
+                Built for people
+                building something.
+            </h2>
+
+            <p>
+                Whether you are building a business, growing a brand,
+                applying for a job or planning an event, we can help
+                you present your idea professionally.
+            </p>
+
+        </div>
+
+
+        <div class="audience-grid">
+
+
+            <div class="audience-card">
+
+                <i class="fas fa-store"></i>
+
+                <h3>
+                    Small Businesses
+                </h3>
+
+                <p>
+                    Get professional logos, promotional materials,
+                    business cards and documents for your business.
+                </p>
+
+            </div>
+
+
+            <div class="audience-card">
+
+                <i class="fas fa-rocket"></i>
+
+                <h3>
+                    Startups & New Businesses
+                </h3>
+
+                <p>
+                    Build a professional presence from the beginning
+                    with the right visual and business materials.
+                </p>
+
+            </div>
+
+
+            <div class="audience-card">
+
+                <i class="fas fa-user-tie"></i>
+
+                <h3>
+                    Job Seekers
+                </h3>
+
+                <p>
+                    Present your skills and experience through a clean,
+                    professional CV or resume.
+                </p>
+
+            </div>
+
+
+            <div class="audience-card">
+
+                <i class="fas fa-calendar-days"></i>
+
+                <h3>
+                    Events & Celebrations
+                </h3>
+
+                <p>
+                    Create invitations and event designs that match
+                    the occasion and make a memorable impression.
+                </p>
+
+            </div>
+
+
+            <div class="audience-card">
+
+                <i class="fas fa-chart-line"></i>
+
+                <h3>
+                    Growing Businesses
+                </h3>
+
+                <p>
+                    Improve how your business presents its services,
+                    information and capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="audience-card">
+
+                <i class="fas fa-lightbulb"></i>
+
+                <h3>
+                    Individuals & Creators
+                </h3>
+
+                <p>
+                    Bring personal ideas, projects and creative concepts
+                    to life with professional design support.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1760,7 +2111,7 @@
         <div class="section-heading center">
 
             <div class="section-number">
-                05 / HOW IT WORKS
+                06 / HOW IT WORKS
             </div>
 
             <h2>
@@ -1769,14 +2120,15 @@
             </h2>
 
             <p>
-                Tell us what you need. We take care of the creative work
-                and keep you involved throughout the process.
+                Tell us what you need. We handle the creative work and
+                keep you involved throughout the process.
             </p>
 
         </div>
 
 
         <div class="process-grid">
+
 
             <div class="process-card">
 
@@ -1789,8 +2141,8 @@
                 </h3>
 
                 <p>
-                    Send us your idea, project requirements or the type of
-                    design or document you need.
+                    Send us your idea, project requirements or the type
+                    of design or document you need.
                 </p>
 
             </div>
@@ -1849,6 +2201,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1873,8 +2226,8 @@
 
             <p>
                 Whether it is a logo, flyer, CV, company profile,
-                invitation or business document, tell us what you need
-                and let's discuss the project.
+                business plan, invitation or another business design,
+                tell us what you need and let's discuss the project.
             </p>
 
         </div>
@@ -1920,6 +2273,7 @@
 
         <div class="footer-grid">
 
+
             <div>
 
                 <div class="footer-logo">
@@ -1947,21 +2301,33 @@
 
                 <div class="footer-links">
 
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        Home
+                    </a>
 
-                    <a href="about.html">About</a>
+                    <a href="about.html">
+                        About
+                    </a>
 
-                    <a href="services.html">Services</a>
+                    <a href="services.html">
+                        Services
+                    </a>
 
-                    <a href="tech-repairs.html">Tech Repairs</a>
+                    <a href="tech-repairs.html">
+                        Tech Repairs
+                    </a>
 
-                    <a href="shop.html">Shop</a>
+                    <a href="shop.html">
+                        Shop
+                    </a>
 
                     <a href="creative-studio.html">
                         Creative Studio
                     </a>
 
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
 
                 </div>
 
@@ -2023,6 +2389,7 @@
 
             </div>
 
+
         </div>
 
 
@@ -2051,6 +2418,99 @@
     <i class="fab fa-whatsapp"></i>
 
 </a>
+
+
+<!-- =========================
+     MOBILE NAVIGATION SCRIPT
+========================== -->
+
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    menuToggle.addEventListener("click", function () {
+
+        const isOpen = mainNavigation.classList.toggle("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+
+    });
+
+
+    /* Close menu after clicking a navigation link */
+
+    mainNavigation.querySelectorAll("a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            mainNavigation.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fas fa-bars"></i>';
+
+        });
+
+    });
+
+
+    /* Close menu when clicking outside */
+
+    document.addEventListener("click", function(event) {
+
+        if (
+            !mainNavigation.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            mainNavigation.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fas fa-bars"></i>';
+
+        }
+
+    });
+
+
+    /* Reset mobile menu when returning to desktop */
+
+    window.addEventListener("resize", function() {
+
+        if (window.innerWidth > 850) {
+
+            mainNavigation.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fas fa-bars"></i>';
+
+        }
+
+    });
+
+</script>
 
 
 </body>
