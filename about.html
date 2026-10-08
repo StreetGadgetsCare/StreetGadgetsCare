@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,6 +21,10 @@
     <meta name="author" content="Street Gadgets Care">
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
 
         * {
             margin: 0;
@@ -62,6 +67,7 @@
             --border: #e3e9ee;
         }
 
+
         /* =========================
            HEADER
         ========================= */
@@ -88,7 +94,7 @@
             align-items: center;
             justify-content: space-between;
 
-            gap: 30px;
+            gap: 25px;
         }
 
         .logo {
@@ -99,7 +105,7 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 24px;
         }
 
         nav a {
@@ -139,6 +145,59 @@
             background: var(--cyan-dark);
             transform: translateY(-1px);
         }
+
+
+        /* =========================
+           MOBILE MENU BUTTON
+        ========================= */
+
+        .menu-toggle {
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+            gap: 5px;
+
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 8px;
+
+            background: rgba(255,255,255,0.05);
+
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+
+            width: 21px;
+            height: 2px;
+
+            border-radius: 10px;
+
+            background: #ffffff;
+
+            transition:
+                transform 0.25s ease,
+                opacity 0.25s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
 
         /* =========================
            GENERAL
@@ -239,8 +298,9 @@
             transform: translateY(-2px);
         }
 
+
         /* =========================
-           PAGE HERO
+           HERO
         ========================= */
 
         .about-hero {
@@ -266,6 +326,24 @@
             overflow: hidden;
         }
 
+        .about-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            right: -280px;
+            top: -280px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.10);
+
+            pointer-events: none;
+        }
+
         .about-hero::after {
             content: "";
 
@@ -274,12 +352,13 @@
             width: 420px;
             height: 420px;
 
-            right: -230px;
-            bottom: -280px;
+            left: -300px;
+            bottom: -320px;
 
             border-radius: 50%;
 
-            border: 1px solid rgba(25,167,206,0.12);
+            border: 1px solid rgba(255,255,255,0.05);
+
             pointer-events: none;
         }
 
@@ -349,12 +428,42 @@
             margin-bottom: 27px;
         }
 
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-button-light {
+            border: 1px solid rgba(255,255,255,0.20);
+
+            color: #ffffff;
+
+            background: rgba(255,255,255,0.05);
+        }
+
+        .hero-button-light:hover {
+            border-color: var(--cyan);
+
+            background: rgba(25,167,206,0.10);
+
+            transform: translateY(-2px);
+        }
+
         .hero-location {
             color: #8d9aaa;
+
             font-size: 12px;
         }
 
-        /* HERO VISUAL */
+
+        /* =========================
+           HERO VISUAL
+        ========================= */
 
         .about-visual {
             display: flex;
@@ -414,8 +523,6 @@
             object-fit: contain;
 
             padding: 18px;
-
-            filter: saturate(0.98);
         }
 
         .visual-badge {
@@ -448,6 +555,7 @@
             right: -13px;
             bottom: 40px;
         }
+
 
         /* =========================
            WHO WE ARE
@@ -497,9 +605,9 @@
         .who-highlight {
             position: relative;
 
-            padding: 32px;
+            padding: 38px;
 
-            border-radius: 12px;
+            border-radius: 14px;
 
             background:
                 linear-gradient(
@@ -513,16 +621,30 @@
             overflow: hidden;
         }
 
+        .who-highlight::before {
+            content: "";
+
+            position: absolute;
+
+            width: 5px;
+            height: 100%;
+
+            left: 0;
+            top: 0;
+
+            background: var(--cyan);
+        }
+
         .who-highlight::after {
             content: "";
 
             position: absolute;
 
-            width: 150px;
-            height: 150px;
+            width: 170px;
+            height: 170px;
 
-            right: -70px;
-            bottom: -80px;
+            right: -80px;
+            bottom: -90px;
 
             border-radius: 50%;
 
@@ -549,21 +671,22 @@
         }
 
         .who-highlight h3 {
-            font-size: 25px;
+            font-size: 27px;
 
             line-height: 1.2;
 
-            margin-bottom: 11px;
+            margin-bottom: 12px;
         }
 
         .who-highlight p {
             color: var(--muted);
 
             font-size: 13px;
-            line-height: 1.75;
+            line-height: 1.8;
 
             margin: 0;
         }
+
 
         /* =========================
            STORY
@@ -753,6 +876,7 @@
             line-height: 1.8;
         }
 
+
         /* =========================
            THREE AREAS
         ========================= */
@@ -857,6 +981,7 @@
             color: var(--cyan);
         }
 
+
         /* =========================
            APPROACH
         ========================= */
@@ -919,6 +1044,7 @@
             font-size: 12px;
             line-height: 1.7;
         }
+
 
         /* =========================
            VALUES
@@ -1008,6 +1134,102 @@
             line-height: 1.7;
         }
 
+
+        /* =========================
+           KENYA SERVICE MESSAGE
+        ========================= */
+
+        .kenya-section {
+            background: var(--light);
+
+            padding: 72px 0;
+        }
+
+        .kenya-box {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns: 1fr auto;
+
+            gap: 35px;
+
+            align-items: center;
+
+            padding: 38px 42px;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f2f7f9
+                );
+
+            border: 1px solid var(--border);
+
+            overflow: hidden;
+        }
+
+        .kenya-box::after {
+            content: "";
+
+            position: absolute;
+
+            width: 210px;
+            height: 210px;
+
+            right: -105px;
+            top: -105px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(25,167,206,0.12);
+        }
+
+        .kenya-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .kenya-label {
+            color: var(--cyan-dark);
+
+            font-size: 10px;
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 9px;
+        }
+
+        .kenya-box h2 {
+            font-size: clamp(26px, 3vw, 37px);
+
+            line-height: 1.1;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 10px;
+        }
+
+        .kenya-box p {
+            max-width: 690px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .kenya-action {
+            position: relative;
+            z-index: 1;
+        }
+
+
         /* =========================
            BRAND STATEMENT
         ========================= */
@@ -1071,6 +1293,7 @@
             line-height: 1.8;
         }
 
+
         /* =========================
            FINAL CTA
         ========================= */
@@ -1113,6 +1336,7 @@
             gap: 10px;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
@@ -1140,6 +1364,7 @@
 
         .footer-brand img {
             width: 155px;
+
             margin-bottom: 17px;
         }
 
@@ -1191,8 +1416,9 @@
             font-size: 11px;
         }
 
+
         /* =========================
-           WHATSAPP
+           WHATSAPP FLOAT
         ========================= */
 
         .whatsapp-float {
@@ -1233,8 +1459,9 @@
                 0 16px 32px rgba(37,211,102,0.42);
         }
 
+
         /* =========================
-           RESPONSIVE
+           TABLET
         ========================= */
 
         @media (max-width: 1050px) {
@@ -1261,11 +1488,93 @@
 
         }
 
+
+        /* =========================
+           MOBILE NAV
+        ========================= */
+
         @media (max-width: 800px) {
 
-            nav {
-                display: none;
+            .nav-container {
+                min-height: 70px;
             }
+
+            .logo {
+                width: 145px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: absolute;
+
+                top: 70px;
+                left: 0;
+
+                width: 100%;
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                padding: 10px 4% 16px;
+
+                background: rgba(7,13,23,0.98);
+
+                border-top: 1px solid rgba(255,255,255,0.07);
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+
+                box-shadow:
+                    0 18px 35px rgba(0,0,0,0.22);
+
+                opacity: 0;
+                visibility: hidden;
+
+                transform: translateY(-10px);
+
+                transition:
+                    opacity 0.25s ease,
+                    visibility 0.25s ease,
+                    transform 0.25s ease;
+            }
+
+            nav.nav-open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            nav a {
+                display: block;
+
+                width: 100%;
+
+                padding: 13px 12px;
+
+                font-size: 14px;
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.05);
+            }
+
+            nav a:last-child {
+                margin-top: 8px;
+
+                border-bottom: 0;
+
+                text-align: center;
+            }
+
+            .nav-contact {
+                padding: 13px 18px;
+            }
+
 
             .about-hero {
                 padding: 70px 0;
@@ -1310,12 +1619,26 @@
                 grid-template-columns: 1fr;
             }
 
+            .kenya-box {
+                grid-template-columns: 1fr;
+
+                gap: 22px;
+
+                padding: 32px;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
+
                 gap: 38px;
             }
 
         }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
 
         @media (max-width: 560px) {
 
@@ -1323,8 +1646,13 @@
                 padding: 68px 0;
             }
 
+            .about-hero {
+                padding: 62px 0 68px;
+            }
+
             .about-hero h1 {
                 font-size: 45px;
+
                 letter-spacing: -2px;
             }
 
@@ -1332,24 +1660,51 @@
                 font-size: 15px;
             }
 
+            .hero-buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .hero-buttons .button {
+                width: 100%;
+            }
+
             .about-visual-box {
                 min-height: 300px;
+
                 border-radius: 14px;
             }
 
             .about-visual-box img {
                 width: 92%;
+
                 height: 285px;
+
                 padding: 13px;
             }
 
             .visual-badge {
                 padding: 8px 10px;
+
                 font-size: 8px;
+            }
+
+            .visual-badge.one {
+                top: 20px;
+            }
+
+            .visual-badge.two {
+                bottom: 20px;
+            }
+
+            .who-highlight {
+                padding: 30px;
             }
 
             .story-card {
                 padding: 31px;
+
                 min-height: 310px;
             }
 
@@ -1367,6 +1722,18 @@
                 gap: 12px;
 
                 padding: 18px;
+            }
+
+            .kenya-section {
+                padding: 60px 0;
+            }
+
+            .kenya-box {
+                padding: 28px 24px;
+            }
+
+            .kenya-action .button {
+                width: 100%;
             }
 
             .footer-grid {
@@ -1388,6 +1755,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -1402,7 +1770,11 @@
 
     <div class="nav-container">
 
-        <a href="index.html" aria-label="Street Gadgets Care Home">
+
+        <a
+            href="index.html"
+            aria-label="Street Gadgets Care Home"
+        >
 
             <img
                 src="Logo.png"
@@ -1413,7 +1785,26 @@
         </a>
 
 
-        <nav aria-label="Main navigation">
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mainNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            id="mainNavigation"
+            aria-label="Main navigation"
+        >
 
             <a href="index.html">
                 Home
@@ -1487,6 +1878,26 @@
                 and present themselves professionally.
 
             </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="tech-repairs.html"
+                    class="button button-primary"
+                >
+                    Explore Tech Repairs →
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="button hero-button-light"
+                >
+                    Talk To Us
+                </a>
+
+            </div>
 
 
             <div class="hero-location">
@@ -1805,9 +2216,9 @@
 
                 <p>
 
-                    Graphic design, branding, CVs, company profiles,
-                    business plans, business documents and other
-                    practical support.
+                    Graphic design, CVs, company profiles,
+                    business plans, business documents and
+                    business name registration support.
 
                 </p>
 
@@ -2080,12 +2491,68 @@
 
 
 <!-- =========================
+     KENYA-WIDE SERVICE
+========================= -->
+
+<section class="kenya-section">
+
+    <div class="container">
+
+        <div class="kenya-box">
+
+
+            <div class="kenya-content">
+
+                <div class="kenya-label">
+                    Nairobi Based • Kenya Wide
+                </div>
+
+
+                <h2>
+                    Not in Nairobi? No worries.
+                </h2>
+
+
+                <p>
+
+                    You don't have to be in Nairobi to work with
+                    Street Gadgets Care. Send your device to us and
+                    we'll repair it and ship it back safely.
+
+                </p>
+
+            </div>
+
+
+            <div class="kenya-action">
+
+                <a
+                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20not%20in%20Nairobi%20and%20I%27d%20like%20to%20know%20how%20to%20send%20my%20device%20for%20repair."
+                    class="button button-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Ask About Shipping →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
      BRAND STATEMENT
 ========================= -->
 
 <section class="brand-statement">
 
     <div class="container">
+
 
         <div class="brand-statement-label">
             Our Philosophy
@@ -2105,6 +2572,7 @@
             Gadgets Care is here to help you move forward.
 
         </p>
+
 
     </div>
 
@@ -2148,6 +2616,14 @@
                 class="button button-outline"
             >
                 Visit Shop
+            </a>
+
+
+            <a
+                href="creative-studio.html"
+                class="button button-outline"
+            >
+                Creative Studio
             </a>
 
 
@@ -2291,7 +2767,7 @@
 
 
 <!-- =========================
-     WHATSAPP
+     WHATSAPP FLOAT
 ========================= -->
 
 <a
@@ -2304,6 +2780,117 @@
 >
     ☎
 </a>
+
+
+<!-- =========================
+     MOBILE MENU SCRIPT
+========================= -->
+
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    menuToggle.addEventListener("click", function () {
+
+        const isOpen =
+            mainNavigation.classList.toggle("nav-open");
+
+        menuToggle.classList.toggle("active", isOpen);
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+
+    /* Close menu after selecting a page */
+
+    mainNavigation.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mainNavigation.classList.remove("nav-open");
+
+            menuToggle.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        });
+
+    });
+
+
+    /* Close menu when clicking outside */
+
+    document.addEventListener("click", function (event) {
+
+        if (
+            !mainNavigation.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            mainNavigation.classList.remove("nav-open");
+
+            menuToggle.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
+
+
+    /* Reset navigation when returning to desktop */
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 800) {
+
+            mainNavigation.classList.remove("nav-open");
+
+            menuToggle.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
+
+</script>
 
 
 </body>
