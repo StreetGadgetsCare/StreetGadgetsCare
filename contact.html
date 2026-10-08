@@ -42,15 +42,25 @@
             --cyan: #19a7ce;
             --cyan-dark: #1088aa;
             --green: #25d366;
+            --green-dark: #1eb956;
+
             --white: #ffffff;
             --light: #f6f8fa;
             --soft: #eef2f5;
+
             --text: #182231;
             --muted: #697586;
+
             --border: #e2e7ec;
+
             --shadow: 0 18px 50px rgba(11, 18, 32, 0.08);
             --shadow-hover: 0 22px 55px rgba(11, 18, 32, 0.12);
         }
+
+
+        /* =========================
+           RESET
+        ========================== */
 
         * {
             margin: 0;
@@ -107,10 +117,13 @@
             align-items: center;
             justify-content: space-between;
             gap: 30px;
+            position: relative;
         }
 
         .logo {
             flex-shrink: 0;
+            position: relative;
+            z-index: 1002;
         }
 
         .logo img {
@@ -118,15 +131,20 @@
             display: block;
         }
 
+
+        /* =========================
+           DESKTOP NAVIGATION
+        ========================== */
+
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 23px;
         }
 
         .nav-links a {
             color: #dce4ee;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: 0.3s ease;
             position: relative;
@@ -157,12 +175,59 @@
         }
 
         .nav-cta::after {
-            display: none;
+            display: none !important;
         }
 
         .nav-cta:hover {
             background: var(--cyan-dark);
             transform: translateY(-1px);
+        }
+
+
+        /* =========================
+           MOBILE MENU BUTTON
+        ========================== */
+
+        .menu-toggle {
+            display: none;
+            width: 46px;
+            height: 46px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.05);
+            border-radius: 11px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            position: relative;
+            z-index: 1002;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 21px;
+            height: 2px;
+            background: white;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            border-color: rgba(25,167,206,0.5);
+            background: rgba(25,167,206,0.08);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
 
 
@@ -174,11 +239,32 @@
             position: relative;
             overflow: hidden;
             background:
-                radial-gradient(circle at 85% 20%, rgba(25,167,206,0.18), transparent 32%),
-                radial-gradient(circle at 10% 90%, rgba(25,167,206,0.08), transparent 30%),
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(25,167,206,0.18),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(25,167,206,0.08),
+                    transparent 30%
+                ),
                 linear-gradient(135deg, #09101d, #101d31);
+
             color: white;
             padding: 100px 0 95px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 560px;
+            height: 560px;
+            border: 1px solid rgba(255,255,255,0.035);
+            border-radius: 50%;
+            right: -250px;
+            top: -250px;
+            pointer-events: none;
         }
 
         .hero::after {
@@ -196,6 +282,7 @@
         .hero-grid {
             position: relative;
             z-index: 1;
+
             display: grid;
             grid-template-columns: 1fr 0.8fr;
             gap: 70px;
@@ -206,11 +293,14 @@
             display: inline-flex;
             align-items: center;
             gap: 9px;
+
             color: #7ddcf4;
+
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 1.8px;
             text-transform: uppercase;
+
             margin-bottom: 22px;
         }
 
@@ -224,9 +314,11 @@
 
         .hero h1 {
             font-family: "Space Grotesk", sans-serif;
+
             font-size: clamp(45px, 6vw, 70px);
             line-height: 1;
             letter-spacing: -2.8px;
+
             margin-bottom: 25px;
             max-width: 720px;
         }
@@ -238,9 +330,12 @@
 
         .hero p {
             max-width: 650px;
+
             color: #b9c5d3;
+
             font-size: 18px;
             line-height: 1.8;
+
             margin-bottom: 30px;
         }
 
@@ -250,16 +345,26 @@
             gap: 13px;
         }
 
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+
             padding: 14px 21px;
+
             border-radius: 11px;
+
             font-weight: 700;
             font-size: 14px;
+
             transition: 0.3s ease;
+
             border: none;
             cursor: pointer;
         }
@@ -267,13 +372,18 @@
         .btn-primary {
             background: var(--cyan);
             color: white;
-            box-shadow: 0 10px 25px rgba(25,167,206,0.18);
+
+            box-shadow:
+                0 10px 25px rgba(25,167,206,0.18);
         }
 
         .btn-primary:hover {
             background: var(--cyan-dark);
+
             transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(25,167,206,0.24);
+
+            box-shadow:
+                0 14px 30px rgba(25,167,206,0.24);
         }
 
         .btn-outline {
@@ -285,42 +395,89 @@
         .btn-outline:hover {
             background: rgba(255,255,255,0.08);
             border-color: rgba(255,255,255,0.3);
+
             transform: translateY(-2px);
         }
 
+        .whatsapp-btn {
+            background: var(--green);
+            color: white;
+
+            box-shadow:
+                0 10px 25px rgba(37,211,102,0.18);
+        }
+
+        .whatsapp-btn:hover {
+            background: var(--green-dark);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 30px rgba(37,211,102,0.24);
+        }
+
+
+        /* =========================
+           HERO CONTACT CARD
+        ========================== */
+
         .hero-contact-card {
             position: relative;
+
             background: rgba(255,255,255,0.06);
+
             border: 1px solid rgba(255,255,255,0.12);
+
             border-radius: 24px;
+
             padding: 30px;
+
             backdrop-filter: blur(12px);
-            box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.18);
         }
 
         .hero-contact-card::before {
             content: "";
+
             position: absolute;
+
             top: 0;
             left: 30px;
             right: 30px;
+
             height: 2px;
-            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--cyan),
+                    transparent
+                );
+
             opacity: 0.8;
         }
 
         .hero-contact-card h3 {
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 24px;
+
             margin-bottom: 20px;
         }
 
         .hero-contact-item {
             display: flex;
             align-items: flex-start;
+
             gap: 15px;
+
             padding: 17px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
         }
 
         .hero-contact-item:last-child {
@@ -330,22 +487,39 @@
 
         .hero-contact-item i {
             color: var(--cyan);
+
             width: 22px;
+
             margin-top: 5px;
+
             font-size: 16px;
         }
 
         .hero-contact-item strong {
             display: block;
+
             font-size: 13px;
+
             color: #8e9caf;
+
             margin-bottom: 2px;
         }
 
         .hero-contact-item span {
             color: #e1e7ef;
+
             font-size: 14px;
+
             overflow-wrap: anywhere;
+        }
+
+        .hero-contact-item a {
+            color: #e1e7ef;
+            transition: 0.25s ease;
+        }
+
+        .hero-contact-item a:hover {
+            color: var(--cyan);
         }
 
 
@@ -359,33 +533,47 @@
 
         .section-light {
             background:
-                linear-gradient(180deg, #f8fafb 0%, #f4f7f9 100%);
+                linear-gradient(
+                    180deg,
+                    #f8fafb 0%,
+                    #f4f7f9 100%
+                );
         }
 
         .section-number {
             color: var(--cyan);
+
             font-size: 12px;
             font-weight: 800;
+
             letter-spacing: 2px;
+
             margin-bottom: 12px;
         }
 
         .section-heading {
             max-width: 700px;
+
             margin-bottom: 45px;
         }
 
         .section-heading h2 {
             font-family: "Space Grotesk", sans-serif;
+
             font-size: clamp(35px, 5vw, 54px);
+
             line-height: 1.05;
+
             letter-spacing: -1.8px;
+
             margin-bottom: 16px;
         }
 
         .section-heading p {
             color: var(--muted);
+
             font-size: 16px;
+
             max-width: 650px;
         }
 
@@ -396,8 +584,12 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 0.82fr 1.18fr;
+
+            grid-template-columns:
+                0.82fr 1.18fr;
+
             gap: 35px;
+
             align-items: start;
         }
 
@@ -413,30 +605,46 @@
 
         .contact-card {
             position: relative;
+
             overflow: hidden;
+
             background: white;
+
             border: 1px solid var(--border);
+
             border-radius: 18px;
+
             padding: 24px;
+
             transition: 0.3s ease;
         }
 
         .contact-card::before {
             content: "";
+
             position: absolute;
+
             top: 0;
             left: 0;
+
             width: 100%;
             height: 3px;
+
             background: var(--cyan);
+
             transform: scaleX(0);
+
             transform-origin: left;
+
             transition: 0.3s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(25,167,206,0.35);
+
+            border-color:
+                rgba(25,167,206,0.35);
+
             box-shadow: var(--shadow-hover);
         }
 
@@ -447,30 +655,42 @@
         .contact-icon {
             width: 47px;
             height: 47px;
+
             border-radius: 13px;
-            background: rgba(25,167,206,0.1);
+
+            background:
+                rgba(25,167,206,0.1);
+
             color: var(--cyan-dark);
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             margin-bottom: 17px;
+
             font-size: 18px;
         }
 
         .contact-card h3 {
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 20px;
+
             margin-bottom: 5px;
         }
 
         .contact-card p {
             color: var(--muted);
+
             font-size: 13px;
+
             margin-bottom: 12px;
         }
 
         .contact-card a {
             color: var(--cyan-dark);
+
             font-size: 14px;
             font-weight: 800;
         }
@@ -489,7 +709,9 @@
         }
 
         .whatsapp-card .contact-icon {
-            background: rgba(37,211,102,0.13);
+            background:
+                rgba(37,211,102,0.13);
+
             color: #1aaf51;
         }
 
@@ -504,10 +726,15 @@
 
         .form-wrapper {
             background: white;
+
             border: 1px solid var(--border);
+
             border-radius: 24px;
+
             padding: 35px;
-            box-shadow: 0 15px 45px rgba(11,18,32,0.05);
+
+            box-shadow:
+                0 15px 45px rgba(11,18,32,0.05);
         }
 
         .form-header {
@@ -516,24 +743,32 @@
 
         .form-header h2 {
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 30px;
+
             margin-bottom: 7px;
         }
 
         .form-header p {
             color: var(--muted);
+
             font-size: 14px;
         }
 
         .form-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 18px;
         }
 
         .form-group {
             display: flex;
+
             flex-direction: column;
+
             gap: 7px;
         }
 
@@ -543,7 +778,9 @@
 
         .form-group label {
             font-size: 12px;
+
             font-weight: 800;
+
             color: #394554;
         }
 
@@ -551,12 +788,19 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
+
             border: 1px solid var(--border);
+
             background: #fbfcfd;
+
             border-radius: 10px;
+
             padding: 13px 14px;
+
             color: var(--text);
+
             outline: none;
+
             transition: 0.25s ease;
         }
 
@@ -572,6 +816,7 @@
 
         .form-group textarea {
             min-height: 145px;
+
             resize: vertical;
         }
 
@@ -579,19 +824,26 @@
         .form-group select:focus,
         .form-group textarea:focus {
             border-color: var(--cyan);
+
             background: white;
-            box-shadow: 0 0 0 3px rgba(25,167,206,0.08);
+
+            box-shadow:
+                0 0 0 3px rgba(25,167,206,0.08);
         }
 
         .form-note {
             color: var(--muted);
+
             font-size: 11px;
+
             margin-top: 5px;
+
             line-height: 1.6;
         }
 
         .submit-btn {
             margin-top: 20px;
+
             width: 100%;
         }
 
@@ -602,65 +854,98 @@
 
         .paths-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .path-card {
             position: relative;
+
             overflow: hidden;
+
             padding: 30px;
+
             background: white;
+
             border: 1px solid var(--border);
+
             border-radius: 20px;
+
             transition: 0.3s ease;
         }
 
         .path-card::after {
             content: "";
+
             position: absolute;
+
             width: 100px;
             height: 100px;
-            border: 1px solid rgba(25,167,206,0.08);
+
+            border:
+                1px solid rgba(25,167,206,0.08);
+
             border-radius: 50%;
+
             right: -50px;
             bottom: -50px;
+
             pointer-events: none;
         }
 
         .path-card:hover {
             transform: translateY(-5px);
+
             box-shadow: var(--shadow-hover);
-            border-color: rgba(25,167,206,0.3);
+
+            border-color:
+                rgba(25,167,206,0.3);
         }
 
         .path-number {
-            color: rgba(25,167,206,0.35);
+            color:
+                rgba(25,167,206,0.35);
+
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 40px;
             font-weight: 700;
+
             line-height: 1;
+
             margin-bottom: 20px;
         }
 
         .path-card h3 {
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 22px;
+
             margin-bottom: 9px;
         }
 
         .path-card p {
             color: var(--muted);
+
             font-size: 13px;
+
             margin-bottom: 18px;
         }
 
         .path-card a {
             color: var(--cyan-dark);
+
             font-size: 13px;
+
             font-weight: 800;
+
             display: inline-flex;
+
             gap: 8px;
+
             align-items: center;
         }
 
@@ -674,88 +959,171 @@
 
 
         /* =========================
-           LOCATION / SHIPPING
+           SERVICE AREA
         ========================== */
 
         .service-area {
             position: relative;
+
             overflow: hidden;
+
             background: var(--navy);
+
             color: white;
         }
 
         .service-area::before {
             content: "";
+
             position: absolute;
+
             width: 430px;
             height: 430px;
-            border: 1px solid rgba(25,167,206,0.08);
+
+            border:
+                1px solid rgba(25,167,206,0.08);
+
             border-radius: 50%;
+
             left: -240px;
             top: -220px;
+
             pointer-events: none;
         }
 
         .service-area-grid {
             position: relative;
+
             z-index: 1;
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 60px;
+
             align-items: center;
         }
 
         .service-area h2 {
             font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(34px, 5vw, 52px);
+
+            font-size:
+                clamp(34px, 5vw, 52px);
+
             line-height: 1.05;
+
             letter-spacing: -1.5px;
+
             margin-bottom: 18px;
         }
 
         .service-area p {
             color: #b5c0ce;
+
             font-size: 15px;
+
             max-width: 560px;
         }
 
         .area-card {
-            border: 1px solid rgba(255,255,255,0.1);
-            background: rgba(255,255,255,0.04);
+            border:
+                1px solid rgba(255,255,255,0.1);
+
+            background:
+                rgba(255,255,255,0.04);
+
             border-radius: 20px;
+
             padding: 28px;
-            box-shadow: 0 20px 55px rgba(0,0,0,0.12);
+
+            box-shadow:
+                0 20px 55px rgba(0,0,0,0.12);
         }
 
         .area-item {
             display: flex;
+
             align-items: flex-start;
+
             gap: 14px;
+
             padding: 17px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
         }
 
         .area-item:last-child {
             border-bottom: none;
+
             padding-bottom: 0;
         }
 
         .area-item i {
             color: var(--cyan);
+
             margin-top: 5px;
+
             width: 18px;
         }
 
         .area-item strong {
             display: block;
+
             font-size: 14px;
+
             color: white;
+
             margin-bottom: 3px;
         }
 
         .area-item span {
             color: #9facbc;
+
             font-size: 13px;
+        }
+
+
+        /* =========================
+           SHIPPING MESSAGE
+        ========================== */
+
+        .shipping-message {
+            margin-top: 25px;
+
+            padding: 20px 22px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(25,167,206,0.08);
+
+            border:
+                1px solid rgba(25,167,206,0.15);
+        }
+
+        .shipping-message strong {
+            display: block;
+
+            color: #7ddcf4;
+
+            font-size: 13px;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 5px;
+        }
+
+        .shipping-message span {
+            display: block;
+
+            color: #b9c5d3;
+
+            font-size: 13px;
+
+            line-height: 1.7;
         }
 
 
@@ -765,53 +1133,87 @@
 
         .cta {
             position: relative;
+
             overflow: hidden;
+
             padding: 85px 0;
+
             background:
-                radial-gradient(circle at 20% 50%, rgba(25,167,206,0.15), transparent 30%),
-                radial-gradient(circle at 90% 20%, rgba(25,167,206,0.08), transparent 25%),
-                linear-gradient(135deg, #0b1220, #132238);
+                radial-gradient(
+                    circle at 20% 50%,
+                    rgba(25,167,206,0.15),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(25,167,206,0.08),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0b1220,
+                    #132238
+                );
+
             color: white;
+        }
+
+        .cta::before {
+            content: "";
+
+            position: absolute;
+
+            width: 320px;
+            height: 320px;
+
+            border:
+                1px solid rgba(255,255,255,0.035);
+
+            border-radius: 50%;
+
+            right: -150px;
+            bottom: -160px;
         }
 
         .cta-content {
             position: relative;
+
             z-index: 1;
+
             max-width: 800px;
+
             text-align: center;
+
             margin: auto;
         }
 
         .cta h2 {
             font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(35px, 5vw, 55px);
+
+            font-size:
+                clamp(35px, 5vw, 55px);
+
             line-height: 1.05;
+
             letter-spacing: -1.8px;
+
             margin-bottom: 15px;
         }
 
         .cta p {
             color: #b6c2d1;
+
             margin-bottom: 27px;
         }
 
         .cta-buttons {
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
             gap: 13px;
-        }
-
-        .whatsapp-btn {
-            background: var(--green);
-            color: white;
-            box-shadow: 0 10px 25px rgba(37,211,102,0.18);
-        }
-
-        .whatsapp-btn:hover {
-            background: #1eb956;
-            transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(37,211,102,0.24);
         }
 
 
@@ -821,42 +1223,57 @@
 
         footer {
             background: #070d17;
+
             color: #aeb8c5;
+
             padding: 55px 0 25px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
+
+            grid-template-columns:
+                1.4fr 1fr 1fr;
+
             gap: 45px;
+
             padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
         }
 
         .footer-logo img {
             width: 175px;
+
             margin-bottom: 18px;
         }
 
         .footer-about {
             max-width: 400px;
+
             font-size: 14px;
         }
 
         footer h3 {
             color: white;
+
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 15px;
+
             margin-bottom: 16px;
         }
 
         .footer-links {
             display: grid;
+
             gap: 9px;
         }
 
         .footer-links a {
             font-size: 13px;
+
             transition: 0.25s ease;
         }
 
@@ -866,26 +1283,39 @@
 
         .footer-contact {
             display: grid;
+
             gap: 10px;
+
             font-size: 13px;
         }
 
         .footer-contact div {
             display: flex;
+
             gap: 10px;
+
             align-items: flex-start;
         }
 
         .footer-contact i {
             color: var(--cyan);
+
             margin-top: 5px;
+
             width: 15px;
+        }
+
+        .footer-contact a:hover {
+            color: var(--cyan);
         }
 
         .copyright {
             text-align: center;
+
             padding-top: 22px;
+
             font-size: 12px;
+
             color: #667282;
         }
 
@@ -896,19 +1326,32 @@
 
         .floating-whatsapp {
             position: fixed;
+
             right: 20px;
             bottom: 20px;
+
             width: 57px;
             height: 57px;
+
             border-radius: 50%;
+
             background: var(--green);
+
             color: white;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             font-size: 25px;
-            box-shadow: 0 12px 30px rgba(37,211,102,0.35);
+
+            box-shadow:
+                0 12px 30px rgba(37,211,102,0.35);
+
             z-index: 999;
+
             transition: 0.3s ease;
         }
 
@@ -918,7 +1361,7 @@
 
 
         /* =========================
-           RESPONSIVE
+           TABLET
         ========================== */
 
         @media (max-width: 1050px) {
@@ -938,16 +1381,114 @@
             }
 
             .paths-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
 
         }
 
 
+        /* =========================
+           MOBILE NAV
+        ========================== */
+
         @media (max-width: 850px) {
 
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
+                position: absolute;
+
+                top: calc(100% + 1px);
+
+                left: 0;
+                right: 0;
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                background:
+                    rgba(11,18,32,0.99);
+
+                border-top:
+                    1px solid rgba(255,255,255,0.07);
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.08);
+
+                padding: 10px 4% 16px;
+
+                opacity: 0;
+
+                visibility: hidden;
+
+                transform:
+                    translateY(-10px);
+
+                transition:
+                    opacity 0.25s ease,
+                    transform 0.25s ease,
+                    visibility 0.25s ease;
+
+                box-shadow:
+                    0 20px 35px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.nav-open {
+                opacity: 1;
+
+                visibility: visible;
+
+                transform:
+                    translateY(0);
+            }
+
+            .nav-links a {
+                display: flex;
+
+                align-items: center;
+
+                min-height: 48px;
+
+                padding: 7px 4px;
+
+                font-size: 14px;
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.05);
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a.active::after {
                 display: none;
+            }
+
+            .nav-links a.active {
+                color: var(--cyan);
+            }
+
+            .nav-cta {
+                justify-content: center;
+
+                margin-top: 12px;
+
+                min-height: 46px !important;
+
+                border-bottom: none !important;
+
+                border-radius: 10px;
+
+                padding: 10px 16px !important;
             }
 
             .hero {
@@ -965,11 +1506,16 @@
             }
 
             .footer-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
 
         }
 
+
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 600px) {
 
@@ -985,17 +1531,24 @@
                 width: 150px;
             }
 
+            .menu-toggle {
+                width: 44px;
+                height: 44px;
+            }
+
             .hero {
                 padding: 62px 0;
             }
 
             .eyebrow {
                 font-size: 10px;
+
                 letter-spacing: 1.4px;
             }
 
             .hero h1 {
                 font-size: 47px;
+
                 letter-spacing: -2px;
             }
 
@@ -1017,6 +1570,7 @@
 
             .hero-contact-card {
                 padding: 24px;
+
                 border-radius: 20px;
             }
 
@@ -1032,11 +1586,21 @@
             .service-area h2,
             .cta h2 {
                 font-size: 36px;
+
                 letter-spacing: -1px;
+            }
+
+            .contact-grid {
+                gap: 25px;
+            }
+
+            .contact-card {
+                padding: 22px;
             }
 
             .form-wrapper {
                 padding: 23px;
+
                 border-radius: 18px;
             }
 
@@ -1056,6 +1620,18 @@
                 padding: 26px;
             }
 
+            .service-area-grid {
+                gap: 35px;
+            }
+
+            .area-card {
+                padding: 22px;
+            }
+
+            .shipping-message {
+                padding: 18px;
+            }
+
             .cta {
                 padding: 70px 0;
             }
@@ -1070,14 +1646,17 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+
                 gap: 30px;
             }
 
             .floating-whatsapp {
                 width: 52px;
                 height: 52px;
+
                 right: 15px;
                 bottom: 15px;
+
                 font-size: 23px;
             }
 
@@ -1086,7 +1665,9 @@
     </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -1096,13 +1677,40 @@
 
     <div class="container nav">
 
-        <a href="index.html" class="logo">
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="Street Gadgets Care Home">
+
             <img
                 src="Logo.png"
                 alt="Street Gadgets Care Logo">
+
         </a>
 
-        <nav class="nav-links">
+
+        <!-- Mobile Menu Button -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mainNavigation">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- Navigation -->
+
+        <nav
+            class="nav-links"
+            id="mainNavigation">
 
             <a href="index.html">
                 Home
@@ -1128,8 +1736,13 @@
                 Creative Studio
             </a>
 
-            <a href="contact.html" class="active" aria-current="page">
+            <a
+                href="contact.html"
+                class="active"
+                aria-current="page">
+
                 Contact
+
             </a>
 
             <a
@@ -1137,7 +1750,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="nav-cta">
+
+                <i class="fab fa-whatsapp"></i>
                 WhatsApp
+
             </a>
 
         </nav>
@@ -1155,22 +1771,34 @@
 
     <div class="container hero-grid">
 
+
         <div>
 
             <div class="eyebrow">
                 CONTACT STREET GADGETS CARE
             </div>
 
+
             <h1>
+
                 Let's talk about
-                <span>what you need.</span>
+
+                <span>
+                    what you need.
+                </span>
+
             </h1>
 
+
             <p>
-                Need a device repaired, looking for a gadget or accessory,
-                or have a design or business project in mind? Reach out and
-                let's figure out the best way to help.
+
+                Need a device repaired, looking for a gadget or
+                accessory, or have a design or business project in mind?
+
+                Reach out and let's figure out the best way to help.
+
             </p>
+
 
             <div class="hero-actions">
 
@@ -1181,15 +1809,18 @@
                     class="btn btn-primary">
 
                     <i class="fab fa-whatsapp"></i>
+
                     Chat on WhatsApp
 
                 </a>
+
 
                 <a
                     href="tel:0114259961"
                     class="btn btn-outline">
 
                     <i class="fas fa-phone"></i>
+
                     Call Us
 
                 </a>
@@ -1199,11 +1830,14 @@
         </div>
 
 
+        <!-- QUICK CONTACT -->
+
         <div class="hero-contact-card">
 
             <h3>
                 Quick Contact
             </h3>
+
 
             <div class="hero-contact-item">
 
@@ -1216,7 +1850,11 @@
                     </strong>
 
                     <span>
-                        0114259961
+
+                        <a href="tel:0114259961">
+                            0114259961
+                        </a>
+
                     </span>
 
                 </div>
@@ -1235,7 +1873,16 @@
                     </strong>
 
                     <span>
-                        0114259961
+
+                        <a
+                            href="https://wa.me/254114259961"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            0114259961
+
+                        </a>
+
                     </span>
 
                 </div>
@@ -1254,7 +1901,13 @@
                     </strong>
 
                     <span>
-                        streetgadgetscare@gmail.com
+
+                        <a href="mailto:streetgadgetscare@gmail.com">
+
+                            streetgadgetscare@gmail.com
+
+                        </a>
+
                     </span>
 
                 </div>
@@ -1295,21 +1948,28 @@
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <div class="section-number">
                 01 / GET IN TOUCH
             </div>
 
+
             <h2>
+
                 Choose the easiest
                 way to reach us.
+
             </h2>
 
+
             <p>
-                For quick questions and repair enquiries, WhatsApp is the
-                fastest option. You can also call, email or use the enquiry
-                form below.
+
+                For quick questions and repair enquiries, WhatsApp is
+                the fastest option. You can also call, email or use the
+                enquiry form below.
+
             </p>
 
         </div>
@@ -1317,24 +1977,35 @@
 
         <div class="contact-grid">
 
+
             <!-- CONTACT OPTIONS -->
 
             <div class="contact-options">
 
+
+                <!-- WHATSAPP -->
+
                 <div class="contact-card whatsapp-card">
 
                     <div class="contact-icon">
+
                         <i class="fab fa-whatsapp"></i>
+
                     </div>
+
 
                     <h3>
                         WhatsApp
                     </h3>
 
+
                     <p>
+
                         The easiest way to ask about repairs, products,
                         availability or creative projects.
+
                     </p>
+
 
                     <a
                         href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
@@ -1342,6 +2013,7 @@
                         rel="noopener noreferrer">
 
                         Start a WhatsApp Chat
+
                         <i class="fas fa-arrow-right"></i>
 
                     </a>
@@ -1349,24 +2021,34 @@
                 </div>
 
 
+                <!-- PHONE -->
+
                 <div class="contact-card">
 
                     <div class="contact-icon">
+
                         <i class="fas fa-phone"></i>
+
                     </div>
+
 
                     <h3>
                         Call Us
                     </h3>
 
+
                     <p>
+
                         Have something you would rather discuss directly?
                         Give us a call.
+
                     </p>
+
 
                     <a href="tel:0114259961">
 
                         0114259961
+
                         <i class="fas fa-arrow-right"></i>
 
                     </a>
@@ -1374,24 +2056,34 @@
                 </div>
 
 
+                <!-- EMAIL -->
+
                 <div class="contact-card">
 
                     <div class="contact-icon">
+
                         <i class="fas fa-envelope"></i>
+
                     </div>
+
 
                     <h3>
                         Email
                     </h3>
 
+
                     <p>
+
                         Send us detailed information about your project,
                         device or business requirement.
+
                     </p>
+
 
                     <a href="mailto:streetgadgetscare@gmail.com">
 
                         streetgadgetscare@gmail.com
+
                         <i class="fas fa-arrow-right"></i>
 
                     </a>
@@ -1399,24 +2091,34 @@
                 </div>
 
 
+                <!-- LOCATION -->
+
                 <div class="contact-card">
 
                     <div class="contact-icon">
+
                         <i class="fas fa-location-dot"></i>
+
                     </div>
+
 
                     <h3>
                         Nairobi
                     </h3>
 
+
                     <p>
+
                         Street Gadgets Care is based in Nairobi and serves
                         customers across Kenya.
+
                     </p>
+
 
                     <a href="#service-area">
 
                         Service Area
+
                         <i class="fas fa-arrow-right"></i>
 
                     </a>
@@ -1426,15 +2128,19 @@
             </div>
 
 
-            <!-- CONTACT FORM -->
+            <!-- =========================
+                 CONTACT FORM
+            ========================== -->
 
             <div class="form-wrapper">
+
 
                 <div class="form-header">
 
                     <h2>
                         Send an enquiry
                     </h2>
+
 
                     <p>
                         Tell us what you need and we'll get back to you.
@@ -1447,27 +2153,32 @@
                     action="https://formsubmit.co/streetgadgetscare@gmail.com"
                     method="POST">
 
-                    <!-- FormSubmit settings -->
+
+                    <!-- FormSubmit Settings -->
 
                     <input
                         type="hidden"
                         name="_subject"
                         value="New Street Gadgets Care Website Enquiry">
 
+
                     <input
                         type="hidden"
                         name="_captcha"
                         value="false">
+
 
                     <input
                         type="hidden"
                         name="_template"
                         value="table">
 
+
                     <input
                         type="hidden"
                         name="_next"
                         value="https://streetgadgetscare.github.io/StreetGadgetsCare/contact.html">
+
 
                     <input
                         type="hidden"
@@ -1477,11 +2188,15 @@
 
                     <div class="form-grid">
 
+
+                        <!-- NAME -->
+
                         <div class="form-group">
 
                             <label for="name">
                                 Your Name *
                             </label>
+
 
                             <input
                                 type="text"
@@ -1494,11 +2209,14 @@
                         </div>
 
 
+                        <!-- PHONE -->
+
                         <div class="form-group">
 
                             <label for="phone">
                                 Phone Number *
                             </label>
+
 
                             <input
                                 type="tel"
@@ -1511,11 +2229,14 @@
                         </div>
 
 
+                        <!-- EMAIL -->
+
                         <div class="form-group">
 
                             <label for="email">
                                 Email Address
                             </label>
+
 
                             <input
                                 type="email"
@@ -1527,11 +2248,14 @@
                         </div>
 
 
+                        <!-- SERVICE -->
+
                         <div class="form-group">
 
                             <label for="service">
                                 What do you need?
                             </label>
+
 
                             <select
                                 id="service"
@@ -1598,11 +2322,14 @@
                         </div>
 
 
+                        <!-- MESSAGE -->
+
                         <div class="form-group full">
 
                             <label for="message">
                                 Tell us what you need *
                             </label>
+
 
                             <textarea
                                 id="message"
@@ -1610,10 +2337,13 @@
                                 placeholder="Describe your repair, product request, design project or business need..."
                                 required></textarea>
 
+
                             <span class="form-note">
+
                                 Please include useful details such as the
                                 device model, problem, design requirements
                                 or product you're looking for.
+
                             </span>
 
                         </div>
@@ -1626,6 +2356,7 @@
                         class="btn btn-primary submit-btn">
 
                         <i class="fas fa-paper-plane"></i>
+
                         Send Enquiry
 
                     </button>
@@ -1649,20 +2380,27 @@
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <div class="section-number">
                 02 / WHAT CAN WE HELP WITH?
             </div>
 
+
             <h2>
+
                 Start with what
                 you need.
+
             </h2>
 
+
             <p>
-                Not sure which service fits your situation? These are the
-                three main areas of Street Gadgets Care.
+
+                Not sure which service fits your situation?
+                These are the three main areas of Street Gadgets Care.
+
             </p>
 
         </div>
@@ -1670,31 +2408,42 @@
 
         <div class="paths-grid">
 
+
+            <!-- TECHNOLOGY -->
+
             <div class="path-card">
 
                 <div class="path-number">
                     01
                 </div>
 
+
                 <h3>
                     Technology
                 </h3>
 
+
                 <p>
+
                     Phone and laptop repairs, screen and battery
                     replacement, software support, servicing, upgrades
                     and technical assistance.
+
                 </p>
+
 
                 <a href="tech-repairs.html">
 
                     Explore Tech Repairs
+
                     <i class="fas fa-arrow-right"></i>
 
                 </a>
 
             </div>
 
+
+            <!-- SHOP -->
 
             <div class="path-card">
 
@@ -1702,19 +2451,25 @@
                     02
                 </div>
 
+
                 <h3>
                     Shop
                 </h3>
 
+
                 <p>
+
                     Phones, laptops, accessories, storage, memory,
                     chargers, cables, protection and other technology
                     products.
+
                 </p>
+
 
                 <a href="shop.html">
 
                     Explore Shop
+
                     <i class="fas fa-arrow-right"></i>
 
                 </a>
@@ -1722,25 +2477,33 @@
             </div>
 
 
+            <!-- CREATIVE -->
+
             <div class="path-card">
 
                 <div class="path-number">
                     03
                 </div>
 
+
                 <h3>
                     Creative Studio
                 </h3>
 
+
                 <p>
+
                     Logo design, flyers, posters, business cards,
                     invitations, CVs, company profiles, business plans
                     and professional documents.
+
                 </p>
+
 
                 <a href="creative-studio.html">
 
                     Explore Creative Studio
+
                     <i class="fas fa-arrow-right"></i>
 
                 </a>
@@ -1758,9 +2521,12 @@
      SERVICE AREA
 ========================== -->
 
-<section class="section service-area" id="service-area">
+<section
+    class="section service-area"
+    id="service-area">
 
     <div class="container service-area-grid">
+
 
         <div>
 
@@ -1768,21 +2534,44 @@
                 03 / SERVICE AREA
             </div>
 
+
             <h2>
+
                 Based in Nairobi.
                 Serving customers
                 across Kenya.
+
             </h2>
 
+
             <p>
-                Our physical base is in Nairobi, but you don't have to be
-                in Nairobi to work with Street Gadgets Care.
+
+                Our physical base is in Nairobi, but you don't have to
+                be in Nairobi to work with Street Gadgets Care.
+
             </p>
+
+
+            <div class="shipping-message">
+
+                <strong>
+                    NOT IN NAIROBI? NO WORRIES!
+                </strong>
+
+                <span>
+
+                    Send your device to us and we'll repair & ship it
+                    back safely.
+
+                </span>
+
+            </div>
 
         </div>
 
 
         <div class="area-card">
+
 
             <div class="area-item">
 
@@ -1795,7 +2584,9 @@
                     </strong>
 
                     <span>
+
                         Street Gadgets Care is based in Nairobi.
+
                     </span>
 
                 </div>
@@ -1814,8 +2605,10 @@
                     </strong>
 
                     <span>
+
                         If you're outside Nairobi, contact us to discuss
                         sending your device to us.
+
                     </span>
 
                 </div>
@@ -1834,8 +2627,10 @@
                     </strong>
 
                     <span>
+
                         Product and repair arrangements can be discussed
                         with customers across Kenya.
+
                     </span>
 
                 </div>
@@ -1854,8 +2649,10 @@
                     </strong>
 
                     <span>
+
                         Tell us what you need and we'll guide you on the
                         next step.
+
                     </span>
 
                 </div>
@@ -1877,20 +2674,28 @@
 
     <div class="container">
 
+
         <div class="cta-content">
 
             <h2>
+
                 Whatever you need,
                 let's talk.
+
             </h2>
 
+
             <p>
+
                 A broken phone. A laptop problem. A new gadget. A logo.
                 A CV. A business document. Start with a simple message
                 and we'll take it from there.
+
             </p>
 
+
             <div class="cta-buttons">
+
 
                 <a
                     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20inquiry."
@@ -1899,6 +2704,7 @@
                     class="btn whatsapp-btn">
 
                     <i class="fab fa-whatsapp"></i>
+
                     Chat on WhatsApp
 
                 </a>
@@ -1909,6 +2715,7 @@
                     class="btn btn-outline">
 
                     <i class="fas fa-phone"></i>
+
                     Call 0114259961
 
                 </a>
@@ -1930,7 +2737,11 @@
 
     <div class="container">
 
+
         <div class="footer-grid">
+
+
+            <!-- ABOUT -->
 
             <div>
 
@@ -1942,20 +2753,26 @@
 
                 </div>
 
+
                 <p class="footer-about">
+
                     Technology, repairs, gadgets and creative digital
                     solutions from Street Gadgets Care. Based in Nairobi,
                     serving customers across Kenya.
+
                 </p>
 
             </div>
 
+
+            <!-- LINKS -->
 
             <div>
 
                 <h3>
                     Quick Links
                 </h3>
+
 
                 <div class="footer-links">
 
@@ -1983,8 +2800,12 @@
                         Creative Studio
                     </a>
 
-                    <a href="contact.html" aria-current="page">
+                    <a
+                        href="contact.html"
+                        aria-current="page">
+
                         Contact
+
                     </a>
 
                 </div>
@@ -1992,20 +2813,28 @@
             </div>
 
 
+            <!-- CONTACT -->
+
             <div>
 
                 <h3>
                     Contact
                 </h3>
 
+
                 <div class="footer-contact">
+
 
                     <div>
 
                         <i class="fas fa-phone"></i>
 
                         <span>
-                            0114259961
+
+                            <a href="tel:0114259961">
+                                0114259961
+                            </a>
+
                         </span>
 
                     </div>
@@ -2016,7 +2845,13 @@
                         <i class="fas fa-envelope"></i>
 
                         <span>
-                            streetgadgetscare@gmail.com
+
+                            <a href="mailto:streetgadgetscare@gmail.com">
+
+                                streetgadgetscare@gmail.com
+
+                            </a>
+
                         </span>
 
                     </div>
@@ -2076,6 +2911,123 @@
     <i class="fab fa-whatsapp"></i>
 
 </a>
+
+
+<!-- =========================
+     MOBILE NAVIGATION SCRIPT
+========================== -->
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNavigation =
+        document.getElementById("mainNavigation");
+
+
+    function closeMenu() {
+
+        mainNavigation.classList.remove("nav-open");
+
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+    }
+
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                mainNavigation.classList.toggle(
+                    "nav-open"
+                );
+
+            menuToggle.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+    );
+
+
+    /* Close menu when navigation link is clicked */
+
+    mainNavigation
+        .querySelectorAll("a")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    closeMenu();
+
+                }
+            );
+
+        });
+
+
+    /* Close when clicking outside navigation */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                !mainNavigation.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+
+    /* Close mobile menu when returning to desktop */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            if (window.innerWidth > 850) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+</script>
 
 
 </body>
