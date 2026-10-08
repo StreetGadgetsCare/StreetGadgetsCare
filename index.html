@@ -1,24 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Street Gadgets Care | Phone & Laptop Repairs, Devices & Creative Solutions</title>
 
 <meta name="description"
-      content="Street Gadgets Care provides phone and laptop repairs, devices, accessories, storage, batteries and creative business solutions in Nairobi and across Kenya.">
+      content="Street Gadgets Care provides phone and laptop repairs, devices, accessories, storage and creative business solutions in Nairobi and across Kenya.">
 
 <meta name="keywords"
       content="phone repair Nairobi, laptop repair Nairobi, laptop sales Kenya, phone accessories Nairobi, laptop accessories Kenya, graphic design Nairobi, Street Gadgets Care">
 
-<meta name="author"
-      content="Street Gadgets Care">
-
-<meta name="theme-color"
-      content="#0b1220">
+<meta name="author" content="Street Gadgets Care">
+<meta name="theme-color" content="#0b1220">
 
 <link rel="icon" type="image/png" href="Logo.png">
 
@@ -74,13 +71,13 @@ button {
     --cyan-light: #eaf9fd;
     --green: #25d366;
     --white: #ffffff;
-    --light: #f6f9fb;
-    --light-2: #eef4f7;
+    --light: #f5f8fa;
+    --light-2: #edf3f6;
     --text: #0b1220;
     --muted: #647180;
     --border: #e1e8ed;
-    --shadow: 0 18px 45px rgba(11,18,32,0.08);
-    --shadow-lg: 0 28px 70px rgba(11,18,32,0.13);
+    --shadow: 0 18px 45px rgba(11,18,32,.08);
+    --shadow-lg: 0 28px 70px rgba(11,18,32,.13);
     --radius: 18px;
     --max: 1180px;
 }
@@ -113,26 +110,26 @@ section {
 
 .eyebrow::before {
     content: "";
-    width: 24px;
+    width: 25px;
     height: 2px;
     background: var(--cyan);
 }
 
 .section-heading {
-    max-width: 760px;
-    margin-bottom: 48px;
+    max-width: 780px;
+    margin-bottom: 45px;
 }
 
 .section-heading h2 {
     font-size: clamp(32px, 4vw, 50px);
     line-height: 1.08;
-    letter-spacing: -1.7px;
+    letter-spacing: -1.8px;
     margin-bottom: 16px;
 }
 
 .section-heading p {
+    max-width: 710px;
     color: var(--muted);
-    max-width: 700px;
     font-size: 15px;
     line-height: 1.8;
 }
@@ -220,15 +217,11 @@ section {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255,255,255,.07);
-    transition:
-        background .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
+    transition: .25s ease;
 }
 
 .site-header.scrolled {
     background: rgba(8,14,25,.98);
-    border-bottom-color: rgba(255,255,255,.10);
     box-shadow: 0 12px 35px rgba(0,0,0,.18);
 }
 
@@ -239,9 +232,6 @@ section {
     justify-content: space-between;
     gap: 28px;
 }
-
-
-/* LOGO */
 
 .logo-link {
     display: inline-flex;
@@ -256,16 +246,8 @@ section {
     height: 54px;
     object-fit: contain;
     object-position: left center;
-
-    /*
-       The logo itself is allowed to remain transparent.
-       We deliberately do NOT place a background behind it.
-    */
     background: transparent;
 }
-
-
-/* DESKTOP NAV */
 
 .nav-links {
     display: flex;
@@ -281,9 +263,7 @@ section {
     font-size: 12px;
     font-weight: 800;
     white-space: nowrap;
-    transition:
-        color .2s ease,
-        opacity .2s ease;
+    transition: color .2s ease;
 }
 
 .nav-links a:hover,
@@ -309,9 +289,6 @@ section {
     width: 100%;
 }
 
-
-/* WHATSAPP NAV BUTTON */
-
 .nav-whatsapp {
     display: inline-flex;
     align-items: center;
@@ -325,24 +302,17 @@ section {
     font-size: 11px !important;
     font-weight: 900 !important;
     box-shadow: 0 8px 20px rgba(37,211,102,.15);
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        box-shadow .2s ease;
+    transition: .2s ease;
 }
 
 .nav-whatsapp:hover {
     background: #20bd5a;
     transform: translateY(-1px);
-    box-shadow: 0 11px 24px rgba(37,211,102,.20);
 }
 
 .nav-whatsapp::after {
     display: none !important;
 }
-
-
-/* MOBILE TOGGLE */
 
 .mobile-toggle {
     display: none;
@@ -353,21 +323,9 @@ section {
     background: rgba(255,255,255,.05);
     color: #ffffff;
     cursor: pointer;
+    place-items: center;
     font-size: 20px;
     line-height: 1;
-    transition:
-        background .2s ease,
-        border-color .2s ease,
-        transform .2s ease;
-}
-
-.mobile-toggle:hover {
-    background: rgba(255,255,255,.10);
-    border-color: rgba(25,167,206,.45);
-}
-
-.mobile-toggle:active {
-    transform: scale(.96);
 }
 
 
@@ -377,11 +335,11 @@ section {
 
 .hero {
     position: relative;
-    min-height: 680px;
+    min-height: 700px;
     display: flex;
     align-items: center;
     background:
-        radial-gradient(circle at 80% 25%, rgba(25,167,206,.18), transparent 30%),
+        radial-gradient(circle at 82% 22%, rgba(25,167,206,.19), transparent 29%),
         linear-gradient(135deg, #08101d 0%, #0b1220 48%, #111d30 100%);
     color: #ffffff;
     overflow: hidden;
@@ -390,21 +348,21 @@ section {
 .hero::before {
     content: "";
     position: absolute;
-    width: 550px;
-    height: 550px;
-    right: -250px;
-    top: -230px;
-    border: 1px solid rgba(25,167,206,.16);
+    width: 560px;
+    height: 560px;
+    right: -270px;
+    top: -250px;
+    border: 1px solid rgba(25,167,206,.17);
     border-radius: 50%;
 }
 
 .hero::after {
     content: "";
     position: absolute;
-    width: 700px;
-    height: 700px;
-    right: -330px;
-    top: -300px;
+    width: 720px;
+    height: 720px;
+    right: -350px;
+    top: -320px;
     border: 1px solid rgba(25,167,206,.07);
     border-radius: 50%;
 }
@@ -419,7 +377,7 @@ section {
 }
 
 .hero-copy {
-    max-width: 650px;
+    max-width: 660px;
 }
 
 .hero-kicker {
@@ -441,10 +399,10 @@ section {
 }
 
 .hero h1 {
-    max-width: 650px;
-    font-size: clamp(45px, 6vw, 76px);
-    line-height: .98;
-    letter-spacing: -3.8px;
+    max-width: 660px;
+    font-size: clamp(46px, 6vw, 78px);
+    line-height: .97;
+    letter-spacing: -4px;
     margin-bottom: 25px;
 }
 
@@ -454,7 +412,7 @@ section {
 }
 
 .hero-text {
-    max-width: 610px;
+    max-width: 620px;
     color: rgba(255,255,255,.72);
     font-size: 16px;
     line-height: 1.8;
@@ -464,14 +422,14 @@ section {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 30px;
+    gap: 11px;
+    margin-bottom: 29px;
 }
 
 .hero-note {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px 25px;
+    gap: 12px 22px;
     color: rgba(255,255,255,.62);
     font-size: 11px;
     font-weight: 700;
@@ -501,10 +459,10 @@ section {
 
 .hero-image-wrap {
     position: relative;
-    max-width: 530px;
+    max-width: 535px;
     margin-left: auto;
-    border-radius: 22px;
     padding: 10px;
+    border-radius: 22px;
     background: linear-gradient(
         135deg,
         rgba(255,255,255,.14),
@@ -515,7 +473,7 @@ section {
 
 .hero-image {
     width: 100%;
-    height: 480px;
+    height: 490px;
     object-fit: contain;
     object-position: center;
     border-radius: 16px;
@@ -526,7 +484,7 @@ section {
     position: absolute;
     left: -24px;
     bottom: 32px;
-    max-width: 230px;
+    max-width: 235px;
     padding: 16px 18px;
     border-radius: 12px;
     background: rgba(11,18,32,.95);
@@ -553,9 +511,6 @@ section {
 ========================================================= */
 
 .trust-strip {
-    position: relative;
-    z-index: 5;
-    margin-top: -1px;
     background: #ffffff;
     border-bottom: 1px solid var(--border);
 }
@@ -584,12 +539,12 @@ section {
     place-items: center;
     width: 35px;
     height: 35px;
+    flex-shrink: 0;
     border-radius: 9px;
     background: var(--cyan-light);
     color: var(--cyan-dark);
-    font-weight: 900;
     font-size: 14px;
-    flex-shrink: 0;
+    font-weight: 900;
 }
 
 .trust-item strong {
@@ -606,7 +561,7 @@ section {
 
 
 /* =========================================================
-   CUSTOMER PATHS
+   THREE MAIN PATHS
 ========================================================= */
 
 .paths-section {
@@ -621,7 +576,7 @@ section {
 
 .path-card {
     position: relative;
-    min-height: 330px;
+    min-height: 335px;
     padding: 31px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -641,8 +596,8 @@ section {
     position: absolute;
     right: -70px;
     bottom: -70px;
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     background: rgba(25,167,206,.07);
 }
@@ -652,19 +607,19 @@ section {
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 1px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .path-icon {
-    width: 48px;
-    height: 48px;
+    width: 49px;
+    height: 49px;
     display: grid;
     place-items: center;
     border-radius: 12px;
     background: var(--navy);
     color: #ffffff;
     font-size: 18px;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
 }
 
 .path-card h3 {
@@ -674,7 +629,7 @@ section {
 }
 
 .path-card p {
-    max-width: 340px;
+    max-width: 345px;
     color: var(--muted);
     font-size: 13px;
     line-height: 1.7;
@@ -682,6 +637,8 @@ section {
 }
 
 .path-link {
+    position: relative;
+    z-index: 2;
     color: var(--cyan-dark);
     font-size: 12px;
     font-weight: 900;
@@ -689,49 +646,49 @@ section {
 
 
 /* =========================================================
-   FEATURED TECHNOLOGY
+   SHOP PREVIEW
 ========================================================= */
 
-.featured-section {
+.shop-preview {
     background: var(--light);
 }
 
-.featured-layout {
+.shop-layout {
     display: grid;
-    grid-template-columns: .92fr 1.08fr;
-    gap: 65px;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 60px;
     align-items: center;
 }
 
-.featured-image-box {
+.shop-image-box {
     position: relative;
-    border-radius: 20px;
     padding: 14px;
-    background: #111d30;
+    border-radius: 20px;
+    background: var(--navy);
     box-shadow: var(--shadow-lg);
 }
 
-.featured-image-box img {
+.shop-image-box img {
     width: 100%;
-    height: 430px;
+    height: 400px;
     object-fit: contain;
     border-radius: 12px;
 }
 
-.featured-tag {
+.shop-tag {
     position: absolute;
     left: 28px;
     bottom: 28px;
     padding: 9px 12px;
     border-radius: 7px;
-    background: rgba(11,18,32,.92);
+    background: rgba(11,18,32,.93);
     color: #ffffff;
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 1px;
 }
 
-.featured-copy h2 {
+.shop-copy h2 {
     max-width: 650px;
     font-size: clamp(34px, 4vw, 52px);
     line-height: 1.05;
@@ -739,7 +696,7 @@ section {
     margin-bottom: 18px;
 }
 
-.featured-copy > p {
+.shop-copy > p {
     max-width: 650px;
     color: var(--muted);
     font-size: 15px;
@@ -747,14 +704,14 @@ section {
     margin-bottom: 25px;
 }
 
-.check-list {
+.shop-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-bottom: 28px;
 }
 
-.check-item {
+.shop-list-item {
     padding: 13px 15px;
     border: 1px solid var(--border);
     border-radius: 9px;
@@ -763,7 +720,7 @@ section {
     font-weight: 800;
 }
 
-.check-item::before {
+.shop-list-item::before {
     content: "✓";
     margin-right: 8px;
     color: var(--cyan);
@@ -771,7 +728,7 @@ section {
 
 
 /* =========================================================
-   REPAIR SECTION
+   REPAIRS
 ========================================================= */
 
 .repair-section {
@@ -897,7 +854,7 @@ section {
     gap: 12px;
 }
 
-.creative-visual .creative-image {
+.creative-image {
     position: relative;
     overflow: hidden;
     min-height: 210px;
@@ -905,7 +862,7 @@ section {
     background: #dfe7eb;
 }
 
-.creative-visual .creative-image:first-child {
+.creative-image:first-child {
     grid-row: span 2;
     min-height: 432px;
 }
@@ -963,11 +920,11 @@ section {
 
 
 /* =========================================================
-   KENYA STRIP
+   KENYA SERVICE
 ========================================================= */
 
 .kenya-section {
-    padding: 70px 0;
+    padding: 72px 0;
     background:
         radial-gradient(circle at 85% 50%, rgba(25,167,206,.17), transparent 28%),
         var(--navy);
@@ -982,7 +939,7 @@ section {
 }
 
 .kenya-copy {
-    max-width: 700px;
+    max-width: 720px;
 }
 
 .kenya-copy .eyebrow {
@@ -1054,7 +1011,7 @@ section {
 .cta-content {
     position: relative;
     z-index: 2;
-    max-width: 720px;
+    max-width: 730px;
 }
 
 .cta-content h2 {
@@ -1201,7 +1158,7 @@ footer {
     }
 
     .hero-grid,
-    .featured-layout,
+    .shop-layout,
     .creative-layout {
         grid-template-columns: 1fr;
     }
@@ -1220,7 +1177,7 @@ footer {
         margin: auto;
     }
 
-    .featured-image-box {
+    .shop-image-box {
         max-width: 650px;
         margin: auto;
     }
@@ -1261,7 +1218,7 @@ footer {
 
 
 /* =========================================================
-   MOBILE NAVIGATION
+   MOBILE NAV
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -1276,8 +1233,7 @@ footer {
     }
 
     .mobile-toggle {
-        display: inline-grid;
-        place-items: center;
+        display: grid;
     }
 
     .nav-links {
@@ -1307,8 +1263,7 @@ footer {
 
         border-top: 1px solid rgba(255,255,255,.07);
 
-        box-shadow:
-            0 25px 50px rgba(0,0,0,.28);
+        box-shadow: 0 25px 50px rgba(0,0,0,.28);
 
         transition:
             max-height .35s ease,
@@ -1329,9 +1284,7 @@ footer {
         align-items: center;
         min-height: 52px;
         padding: 0 5px;
-
         border-bottom: 1px solid rgba(255,255,255,.06);
-
         color: rgba(255,255,255,.82);
         font-size: 13px;
     }
@@ -1361,7 +1314,7 @@ footer {
 
 
 /* =========================================================
-   MOBILE CONTENT
+   MOBILE
 ========================================================= */
 
 @media (max-width: 760px) {
@@ -1376,7 +1329,7 @@ footer {
 
     .hero {
         min-height: auto;
-        padding: 70px 0 78px;
+        padding: 68px 0 78px;
     }
 
     .hero-grid {
@@ -1423,11 +1376,11 @@ footer {
         min-height: 285px;
     }
 
-    .featured-image-box img {
+    .shop-image-box img {
         height: 320px;
     }
 
-    .check-list {
+    .shop-list {
         grid-template-columns: 1fr;
     }
 
@@ -1441,11 +1394,11 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-    .creative-visual .creative-image {
+    .creative-image {
         min-height: 150px;
     }
 
-    .creative-visual .creative-image:first-child {
+    .creative-image:first-child {
         min-height: 310px;
     }
 
@@ -1506,8 +1459,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .creative-visual .creative-image,
-    .creative-visual .creative-image:first-child {
+    .creative-image,
+    .creative-image:first-child {
         min-height: 230px;
         grid-row: auto;
     }
@@ -1548,7 +1501,6 @@ footer {
 </style>
 </head>
 
-
 <body>
 
 <!-- =====================================================
@@ -1559,17 +1511,14 @@ footer {
 
     <div class="container navbar">
 
-        <a
-            href="index.html"
-            class="logo-link"
-            aria-label="Street Gadgets Care Home">
+        <a href="index.html"
+           class="logo-link"
+           aria-label="Street Gadgets Care Home">
 
-            <img
-                src="Logo.png"
-                alt="Street Gadgets Care">
+            <img src="Logo.png"
+                 alt="Street Gadgets Care">
 
         </a>
-
 
         <button
             class="mobile-toggle"
@@ -1583,24 +1532,17 @@ footer {
 
         </button>
 
-
         <nav
             class="nav-links"
             id="navLinks"
             aria-label="Main navigation">
 
             <a href="index.html" class="active">Home</a>
-
             <a href="about.html">About</a>
-
             <a href="services.html">Services</a>
-
             <a href="tech-repairs.html">Tech Repairs</a>
-
             <a href="shop.html">Shop</a>
-
             <a href="creative-studio.html">Creative Studio</a>
-
             <a href="contact.html">Contact</a>
 
             <a
@@ -1620,11 +1562,11 @@ footer {
 </header>
 
 
+<main>
+
 <!-- =====================================================
      HERO
 ===================================================== -->
-
-<main>
 
 <section class="hero">
 
@@ -1634,7 +1576,7 @@ footer {
 
             <div class="hero-kicker">
                 <span></span>
-                Technology • Repairs • Creative Solutions
+                Repair • Shop • Create
             </div>
 
             <h1>
@@ -1643,24 +1585,22 @@ footer {
             </h1>
 
             <p class="hero-text">
-                Street Gadgets Care brings together reliable device repairs,
-                useful technology, accessories and creative business solutions
-                — helping you fix problems, find what you need and move forward.
+                Street Gadgets Care helps you keep your technology
+                working, find the devices and accessories you need,
+                and present your business professionally.
             </p>
 
             <div class="hero-actions">
 
-                <a
-                    href="tech-repairs.html"
-                    class="btn btn-primary">
+                <a href="tech-repairs.html"
+                   class="btn btn-primary">
 
                     I Need a Repair →
 
                 </a>
 
-                <a
-                    href="shop.html"
-                    class="btn btn-outline">
+                <a href="shop.html"
+                   class="btn btn-outline">
 
                     Browse the Shop →
 
@@ -1681,9 +1621,7 @@ footer {
             <div class="hero-note">
 
                 <span>Based in Nairobi</span>
-
                 <span>Serving customers across Kenya</span>
-
                 <span>Practical solutions</span>
 
             </div>
@@ -1697,7 +1635,7 @@ footer {
 
                 <img
                     src="HP%20745%20G6%20RYZEN%207.JPG"
-                    alt="HP EliteBook laptop from Street Gadgets Care"
+                    alt="HP EliteBook laptop available from Street Gadgets Care"
                     class="hero-image">
 
             </div>
@@ -1739,7 +1677,6 @@ footer {
 
         </div>
 
-
         <div class="trust-item">
 
             <div class="trust-icon">⚙</div>
@@ -1751,7 +1688,6 @@ footer {
 
         </div>
 
-
         <div class="trust-item">
 
             <div class="trust-icon">▣</div>
@@ -1762,7 +1698,6 @@ footer {
             </div>
 
         </div>
-
 
         <div class="trust-item">
 
@@ -1781,7 +1716,7 @@ footer {
 
 
 <!-- =====================================================
-     WHAT WE DO
+     THREE MAIN PATHS
 ===================================================== -->
 
 <section class="paths-section">
@@ -1790,17 +1725,18 @@ footer {
 
         <div class="section-heading">
 
-            <div class="eyebrow">Start here</div>
+            <div class="eyebrow">What we do</div>
 
             <h2>
-                Whatever you're trying to accomplish,
-                there's a place to start.
+                Start with what you need.
+                We'll help with the rest.
             </h2>
 
             <p>
-                You don't need to know the technical terms or exactly
-                which service you need. Start with what you are trying
-                to accomplish and we'll help you find the right direction.
+                Whether your device needs attention, you're looking
+                for technology or you want your business to look more
+                professional, Street Gadgets Care gives you a clear
+                place to start.
             </p>
 
         </div>
@@ -1810,20 +1746,22 @@ footer {
 
             <article class="path-card">
 
-                <div class="path-number">01 / TECHNOLOGY</div>
+                <div class="path-number">
+                    01 / TECH REPAIRS
+                </div>
 
                 <div class="path-icon">⚙</div>
 
                 <h3>Fix Your Technology</h3>
 
                 <p>
-                    Phone or laptop problems, screen damage, battery issues,
-                    charging faults, software problems, servicing and upgrades.
+                    Phone and laptop repairs, screen replacement,
+                    battery replacement, charging problems, software
+                    support, servicing and upgrades.
                 </p>
 
-                <a
-                    href="tech-repairs.html"
-                    class="path-link">
+                <a href="tech-repairs.html"
+                   class="path-link">
 
                     Explore Tech Repairs →
 
@@ -1834,20 +1772,22 @@ footer {
 
             <article class="path-card">
 
-                <div class="path-number">02 / SHOP</div>
+                <div class="path-number">
+                    02 / SHOP
+                </div>
 
                 <div class="path-icon">▣</div>
 
-                <h3>Find Your Next Device</h3>
+                <h3>Shop Technology</h3>
 
                 <p>
-                    Browse laptops, button phones, smart devices, storage,
-                    chargers, cables, protection and useful accessories.
+                    Browse laptops, phones, smart gadgets, storage,
+                    chargers, cables, protection and useful computer
+                    accessories.
                 </p>
 
-                <a
-                    href="shop.html"
-                    class="path-link">
+                <a href="shop.html"
+                   class="path-link">
 
                     Browse Our Shop →
 
@@ -1858,20 +1798,22 @@ footer {
 
             <article class="path-card">
 
-                <div class="path-number">03 / CREATIVE</div>
+                <div class="path-number">
+                    03 / CREATIVE STUDIO
+                </div>
 
                 <div class="path-icon">✦</div>
 
                 <h3>Build Your Brand</h3>
 
                 <p>
-                    Logos, flyers, business cards, CVs, company profiles,
-                    business plans and professional business materials.
+                    Logo design, flyers, business cards, CVs,
+                    company profiles, business plans and professional
+                    business materials.
                 </p>
 
-                <a
-                    href="creative-studio.html"
-                    class="path-link">
+                <a href="creative-studio.html"
+                   class="path-link">
 
                     Visit Creative Studio →
 
@@ -1887,64 +1829,85 @@ footer {
 
 
 <!-- =====================================================
-     FEATURED TECHNOLOGY
+     SHOP PREVIEW
 ===================================================== -->
 
-<section class="featured-section">
+<section class="shop-preview">
 
-    <div class="container featured-layout">
+    <div class="container shop-layout">
 
-        <div class="featured-image-box">
+        <div class="shop-image-box">
 
             <img
-                src="laptop-servicing.jpg"
-                alt="Laptop servicing at Street Gadgets Care">
+                src="HP%20745%20G6%20RYZEN%207.JPG"
+                alt="HP EliteBook laptop available at Street Gadgets Care">
 
-            <div class="featured-tag">
-                REPAIRS • SERVICING • UPGRADES
+            <div class="shop-tag">
+                DEVICES • ACCESSORIES • STORAGE
             </div>
 
         </div>
 
 
-        <div class="featured-copy">
+        <div class="shop-copy">
 
-            <div class="eyebrow">Technology first</div>
+            <div class="eyebrow">
+                Shop technology
+            </div>
 
             <h2>
-                When your technology stops working,
-                we're here.
+                Find the technology
+                you actually need.
             </h2>
 
             <p>
-                From a phone that won't charge to a laptop that has become
-                painfully slow, we help identify the problem, explain the
-                practical solution and get your device working properly again.
+                From laptops and phones to storage, chargers,
+                cables and computer accessories, our shop is built
+                around useful technology for everyday work and life.
             </p>
 
 
-            <div class="check-list">
+            <div class="shop-list">
 
-                <div class="check-item">Phone Repairs</div>
+                <div class="shop-list-item">
+                    Laptops
+                </div>
 
-                <div class="check-item">Laptop Repairs</div>
+                <div class="shop-list-item">
+                    Phones & Gadgets
+                </div>
 
-                <div class="check-item">Screen Replacement</div>
+                <div class="shop-list-item">
+                    Chargers
+                </div>
 
-                <div class="check-item">Battery Replacement</div>
+                <div class="shop-list-item">
+                    Charging Cables
+                </div>
 
-                <div class="check-item">Software Support</div>
+                <div class="shop-list-item">
+                    Storage & Memory
+                </div>
 
-                <div class="check-item">Laptop Upgrades</div>
+                <div class="shop-list-item">
+                    Phone Protection
+                </div>
+
+                <div class="shop-list-item">
+                    Laptop Bags
+                </div>
+
+                <div class="shop-list-item">
+                    Computer Accessories
+                </div>
 
             </div>
 
 
-            <a
-                href="tech-repairs.html"
-                class="btn btn-dark">
+            <a href="shop.html"
+               class="btn btn-dark">
 
-                Explore Repair Services →
+                Explore the Shop →
 
             </a>
 
@@ -1956,7 +1919,7 @@ footer {
 
 
 <!-- =====================================================
-     REPAIR TYPES
+     REPAIR SUPPORT
 ===================================================== -->
 
 <section class="repair-section">
@@ -1965,7 +1928,9 @@ footer {
 
         <div class="section-heading">
 
-            <div class="eyebrow">Repair support</div>
+            <div class="eyebrow">
+                Tech repairs
+            </div>
 
             <h2>
                 We help with the problems
@@ -1974,8 +1939,8 @@ footer {
 
             <p>
                 Not sure what's wrong with your device?
-                That's okay. Tell us what is happening and we'll help
-                you figure out where to start.
+                That's okay. Tell us what is happening and we'll
+                help you figure out where to start.
             </p>
 
         </div>
@@ -2033,7 +1998,7 @@ footer {
 
                 <p>
                     Windows installation, software setup, driver support,
-                    troubleshooting and other practical software assistance.
+                    troubleshooting and practical software assistance.
                 </p>
 
             </article>
@@ -2108,7 +2073,9 @@ footer {
 
         <div class="creative-copy">
 
-            <div class="eyebrow">Creative Studio</div>
+            <div class="eyebrow">
+                Creative Studio
+            </div>
 
             <h2>
                 Your business deserves
@@ -2124,21 +2091,20 @@ footer {
 
             <div class="creative-list">
 
+                <span>Graphic Design</span>
                 <span>Logo Design</span>
                 <span>Flyers & Posters</span>
                 <span>Business Cards</span>
                 <span>CV / Resume</span>
                 <span>Company Profiles</span>
                 <span>Business Plans</span>
-                <span>Menus</span>
-                <span>Brand Identity</span>
+                <span>Business Name Registration</span>
 
             </div>
 
 
-            <a
-                href="creative-studio.html"
-                class="btn btn-dark">
+            <a href="creative-studio.html"
+               class="btn btn-dark">
 
                 Explore Creative Studio →
 
@@ -2157,7 +2123,6 @@ footer {
 
             </div>
 
-
             <div class="creative-image">
 
                 <img
@@ -2165,7 +2130,6 @@ footer {
                     alt="Restaurant menu design by Street Gadgets Care">
 
             </div>
-
 
             <div class="creative-image">
 
@@ -2183,7 +2147,7 @@ footer {
 
 
 <!-- =====================================================
-     WHY STREET GADGETS CARE
+     WHY US
 ===================================================== -->
 
 <section class="why-section">
@@ -2192,7 +2156,9 @@ footer {
 
         <div class="section-heading">
 
-            <div class="eyebrow">Why Street Gadgets Care</div>
+            <div class="eyebrow">
+                Why Street Gadgets Care
+            </div>
 
             <h2>
                 More than fixing devices.
@@ -2218,7 +2184,7 @@ footer {
 
                 <p>
                     Technical knowledge is at the heart of what we do.
-                    Repairs, servicing and upgrades are a major part
+                    Repairs, servicing and upgrades remain a major part
                     of Street Gadgets Care.
                 </p>
 
@@ -2260,7 +2226,7 @@ footer {
 
 
 <!-- =====================================================
-     KENYA STRIP
+     KENYA-WIDE SERVICE
 ===================================================== -->
 
 <section class="kenya-section">
@@ -2274,26 +2240,21 @@ footer {
             </div>
 
             <h2>
-                Based in Nairobi.
-                Here to serve beyond Nairobi.
+                NOT IN NAIROBI? NO WORRIES!
             </h2>
 
             <p>
-                Visit us in Nairobi or contact us from wherever you are
-                in Kenya. If you can't bring your device to us, send it
-                and we'll help arrange the repair process and return it
-                safely.
+                Send your device to us and we'll repair & ship it back
+                safely. Contact us first so we can guide you through
+                the process.
             </p>
 
 
             <div class="kenya-points">
 
                 <span>Nairobi Based</span>
-
                 <span>Kenya-Wide Service</span>
-
                 <span>Device Repairs</span>
-
                 <span>Product Enquiries</span>
 
             </div>
@@ -2337,10 +2298,10 @@ footer {
                 </h2>
 
                 <p>
-                    Whether you need a repair, a device, an accessory
-                    or help making your business look more professional,
-                    tell us what you need and we'll help you find the
-                    right place to start.
+                    Need a repair, looking for a device or accessory,
+                    or want help making your business look more
+                    professional? Tell us what you need and we'll
+                    help you find the right place to start.
                 </p>
 
 
@@ -2411,19 +2372,11 @@ footer {
                 <div class="footer-links">
 
                     <a href="index.html">Home</a>
-
                     <a href="about.html">About</a>
-
                     <a href="services.html">Services</a>
-
                     <a href="tech-repairs.html">Tech Repairs</a>
-
                     <a href="shop.html">Shop</a>
-
-                    <a href="creative-studio.html">
-                        Creative Studio
-                    </a>
-
+                    <a href="creative-studio.html">Creative Studio</a>
                     <a href="contact.html">Contact</a>
 
                 </div>
@@ -2512,9 +2465,7 @@ const navLinks = document.getElementById("navLinks");
 const menuIcon = document.getElementById("menuIcon");
 
 
-/* ---------------------------------------------------------
-   HEADER SCROLL EFFECT
---------------------------------------------------------- */
+/* HEADER SCROLL */
 
 function updateHeader() {
 
@@ -2533,9 +2484,7 @@ window.addEventListener("scroll", updateHeader, {
 updateHeader();
 
 
-/* ---------------------------------------------------------
-   MOBILE MENU
---------------------------------------------------------- */
+/* MOBILE MENU */
 
 function closeMobileMenu() {
 
@@ -2575,7 +2524,9 @@ function openMobileMenu() {
 }
 
 
-mobileToggle.addEventListener("click", function() {
+mobileToggle.addEventListener("click", function(event) {
+
+    event.stopPropagation();
 
     const isOpen =
         navLinks.classList.contains("open");
@@ -2589,40 +2540,29 @@ mobileToggle.addEventListener("click", function() {
 });
 
 
-/* ---------------------------------------------------------
-   CLOSE AFTER CLICKING A LINK
---------------------------------------------------------- */
+/* CLOSE AFTER LINK CLICK */
 
 document.querySelectorAll(".nav-links a").forEach(function(link) {
 
     link.addEventListener("click", function() {
-
         closeMobileMenu();
-
     });
 
 });
 
 
-/* ---------------------------------------------------------
-   CLOSE WHEN CLICKING OUTSIDE
---------------------------------------------------------- */
+/* CLOSE OUTSIDE */
 
 document.addEventListener("click", function(event) {
 
-    const clickedInsideHeader =
-        siteHeader.contains(event.target);
-
-    if (!clickedInsideHeader) {
+    if (!siteHeader.contains(event.target)) {
         closeMobileMenu();
     }
 
 });
 
 
-/* ---------------------------------------------------------
-   ESC KEY
---------------------------------------------------------- */
+/* ESC */
 
 document.addEventListener("keydown", function(event) {
 
@@ -2633,9 +2573,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 
-/* ---------------------------------------------------------
-   RESET MENU WHEN RETURNING TO DESKTOP
---------------------------------------------------------- */
+/* RESET ON DESKTOP */
 
 window.addEventListener("resize", function() {
 
@@ -2649,3 +2587,4 @@ window.addEventListener("resize", function() {
 
 </body>
 </html>
+```
