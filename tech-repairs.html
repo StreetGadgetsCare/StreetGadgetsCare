@@ -5,15 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tech Repairs | Street Gadgets Care</title>
+  <title>Tech Repairs | Phone & Laptop Repair | Street Gadgets Care</title>
 
-  <meta name="description" content="Professional phone and laptop repairs in Nairobi. Screen replacement, battery replacement, charging repairs, software support, laptop servicing and more at Street Gadgets Care.">
+  <meta name="description" content="Professional phone and laptop repair services in Nairobi. Screen replacement, battery replacement, charging repairs, software support, laptop servicing, upgrades and more at Street Gadgets Care.">
 
-  <meta name="keywords" content="phone repair Nairobi, laptop repair Nairobi, screen replacement, battery replacement, laptop servicing, phone repair Kenya, Street Gadgets Care">
+  <meta name="keywords" content="phone repair Nairobi, laptop repair Nairobi, phone screen replacement, battery replacement Nairobi, laptop servicing Nairobi, phone repair Kenya, laptop repair Kenya, Street Gadgets Care">
+
+  <meta name="theme-color" content="#0b1220">
 
   <link rel="icon" type="image/png" href="Logo.png">
 
   <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,6 +29,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
@@ -29,6 +37,7 @@
       background: #f6f8fb;
       color: #172033;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img {
@@ -41,17 +50,22 @@
       color: inherit;
     }
 
-    /* =========================
+    button {
+      font-family: inherit;
+    }
+
+
+    /* =========================================================
        HEADER
-    ========================== */
+    ========================================================= */
 
     header {
       background: #0b1220;
-      color: white;
+      color: #fff;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.14);
+      z-index: 2000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
     }
 
     .nav-container {
@@ -76,18 +90,21 @@
       height: auto;
     }
 
+    /* Desktop navigation */
+
     nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 23px;
     }
 
     nav a {
+      position: relative;
       color: #fff;
       font-size: 14px;
       font-weight: 600;
       transition: 0.25s ease;
-      position: relative;
+      white-space: nowrap;
     }
 
     nav a:hover,
@@ -109,38 +126,103 @@
     .nav-cta {
       background: #19a7ce;
       color: #fff !important;
-      padding: 11px 17px;
+      padding: 10px 16px;
       border-radius: 7px;
     }
 
     .nav-cta:hover {
       background: #148cac;
+      transform: translateY(-1px);
     }
 
     .nav-cta::after {
       display: none !important;
     }
 
-    /* =========================
+    /* Hamburger */
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      border-radius: 8px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      transition: 0.25s ease;
+    }
+
+    .menu-toggle:hover {
+      background: rgba(25,167,206,0.15);
+      border-color: rgba(25,167,206,0.4);
+    }
+
+    .menu-toggle span {
+      width: 21px;
+      height: 2px;
+      background: #fff;
+      border-radius: 5px;
+      transition: 0.25s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* =========================================================
        HERO
-    ========================== */
+    ========================================================= */
 
     .hero {
+      position: relative;
+      overflow: hidden;
       background:
-        linear-gradient(110deg, rgba(11,18,32,0.98), rgba(11,18,32,0.88)),
-        url("laptop-servicing.jpg") center/cover;
-      color: white;
+        linear-gradient(
+          105deg,
+          rgba(11,18,32,0.98) 0%,
+          rgba(11,18,32,0.94) 48%,
+          rgba(11,18,32,0.78) 100%
+        ),
+        url("laptop-servicing.jpg") center/cover no-repeat;
+      color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -210px;
+      top: -250px;
+      border: 1px solid rgba(25,167,206,0.16);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .hero-container {
+      position: relative;
+      z-index: 1;
       max-width: 1200px;
-      min-height: 470px;
+      min-height: 500px;
       margin: auto;
-      padding: 68px 22px;
+      padding: 70px 22px;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.08fr 0.92fr;
       align-items: center;
-      gap: 50px;
+      gap: 55px;
     }
 
     .eyebrow {
@@ -154,10 +236,11 @@
     }
 
     .hero h1 {
-      font-size: clamp(38px, 4.5vw, 58px);
-      line-height: 1.06;
+      max-width: 670px;
+      font-size: clamp(39px, 5vw, 61px);
+      line-height: 1.04;
+      letter-spacing: -1.5px;
       margin-bottom: 20px;
-      max-width: 620px;
     }
 
     .hero h1 span {
@@ -165,11 +248,11 @@
     }
 
     .hero p {
-      max-width: 600px;
-      color: #d8e0eb;
+      max-width: 620px;
+      color: #d5deea;
       font-size: 16px;
-      line-height: 1.75;
-      margin-bottom: 27px;
+      line-height: 1.8;
+      margin-bottom: 28px;
     }
 
     .hero-buttons {
@@ -178,33 +261,39 @@
       gap: 11px;
     }
 
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 44px;
+      min-height: 45px;
       padding: 12px 19px;
       border-radius: 7px;
       font-weight: 700;
       font-size: 14px;
       transition: 0.25s ease;
       border: 1px solid transparent;
+      cursor: pointer;
     }
 
     .btn-primary {
       background: #19a7ce;
-      color: white;
+      color: #fff;
     }
 
     .btn-primary:hover {
       background: #148cac;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(25,167,206,0.22);
+      box-shadow: 0 9px 23px rgba(25,167,206,0.24);
     }
 
     .btn-outline {
-      border-color: rgba(255,255,255,0.45);
-      color: white;
+      border-color: rgba(255,255,255,0.42);
+      color: #fff;
       background: transparent;
     }
 
@@ -214,7 +303,20 @@
       transform: translateY(-2px);
     }
 
-    /* HERO IMAGE */
+    .btn-dark {
+      background: #0b1220;
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #162238;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       HERO VISUAL
+    ========================================================= */
 
     .hero-visual {
       display: flex;
@@ -223,37 +325,54 @@
     }
 
     .hero-card {
+      position: relative;
       width: 100%;
-      max-width: 390px;
-      padding: 16px;
-      border-radius: 17px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+      max-width: 420px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.17);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.3);
+    }
+
+    .hero-card::before {
+      content: "REPAIR • SERVICE • SUPPORT";
+      position: absolute;
+      left: 25px;
+      bottom: 25px;
+      z-index: 2;
+      padding: 7px 10px;
+      border-radius: 5px;
+      background: rgba(11,18,32,0.82);
+      color: #19a7ce;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
     .hero-card img {
       width: 100%;
-      height: 245px;
+      height: 280px;
       object-fit: contain;
-      border-radius: 10px;
-      background: rgba(0,0,0,0.08);
+      border-radius: 11px;
+      background: rgba(255,255,255,0.04);
     }
 
-    /* =========================
+
+    /* =========================================================
        QUICK BAR
-    ========================== */
+    ========================================================= */
 
     .quick-bar {
-      background: white;
-      border-bottom: 1px solid #e5e9ef;
+      background: #fff;
+      border-bottom: 1px solid #e4e9ef;
     }
 
     .quick-container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
-      padding: 16px 22px;
+      padding: 17px 22px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
@@ -261,8 +380,8 @@
 
     .quick-item {
       text-align: center;
-      padding: 8px;
-      border-right: 1px solid #e7ebf0;
+      padding: 7px 10px;
+      border-right: 1px solid #e5e9ef;
     }
 
     .quick-item:last-child {
@@ -271,31 +390,36 @@
 
     .quick-item strong {
       display: block;
-      font-size: 13px;
       color: #0b1220;
+      font-size: 13px;
       margin-bottom: 2px;
     }
 
     .quick-item span {
-      font-size: 11px;
       color: #687385;
+      font-size: 11px;
     }
 
-    /* =========================
-       GENERAL
-    ========================== */
+
+    /* =========================================================
+       GENERAL SECTIONS
+    ========================================================= */
 
     .section {
-      padding: 78px 22px;
+      padding: 80px 22px;
     }
 
     .section-light {
       background: #fff;
     }
 
+    .section-soft {
+      background: #f6f8fb;
+    }
+
     .section-dark {
       background: #0b1220;
-      color: white;
+      color: #fff;
     }
 
     .container {
@@ -304,8 +428,8 @@
     }
 
     .section-heading {
-      max-width: 700px;
-      margin-bottom: 38px;
+      max-width: 720px;
+      margin-bottom: 40px;
     }
 
     .section-heading.center {
@@ -315,41 +439,63 @@
     }
 
     .section-heading h2 {
-      font-size: clamp(29px, 3.5vw, 40px);
-      line-height: 1.15;
-      margin-bottom: 13px;
       color: #0b1220;
+      font-size: clamp(29px, 3.5vw, 41px);
+      line-height: 1.12;
+      letter-spacing: -0.5px;
+      margin-bottom: 13px;
     }
 
     .section-dark .section-heading h2 {
-      color: white;
+      color: #fff;
     }
 
     .section-heading p {
       color: #687385;
       font-size: 15px;
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
     .section-dark .section-heading p {
       color: #c4cedb;
     }
 
-    /* =========================
+
+    /* =========================================================
+       REPAIR INTRO
+    ========================================================= */
+
+    .repair-intro {
+      max-width: 1050px;
+      margin: 0 auto 38px;
+      padding: 22px 24px;
+      border-left: 4px solid #19a7ce;
+      background: #f7fafc;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .repair-intro p {
+      color: #687385;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
        PHONE REPAIR CARDS
-    ========================== */
+    ========================================================= */
 
     .repair-grid {
+      max-width: 1050px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      max-width: 1050px;
-      margin: auto;
     }
 
     .repair-card {
-      background: white;
-      border: 1px solid #e4e8ee;
+      background: #fff;
+      border: 1px solid #e2e7ed;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 7px 22px rgba(11,18,32,0.05);
@@ -358,14 +504,13 @@
 
     .repair-card:hover {
       transform: translateY(-5px);
+      border-color: #cfdce5;
       box-shadow: 0 17px 34px rgba(11,18,32,0.11);
-      border-color: #d7e0e8;
     }
 
     .repair-image {
-      height: 175px;
-      background:
-        linear-gradient(135deg, #eef2f6, #f8fafc);
+      height: 185px;
+      background: linear-gradient(135deg, #eef2f6, #f9fbfd);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -377,21 +522,31 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 10px;
+      padding: 11px;
       transition: 0.3s ease;
     }
 
     .repair-card:hover .repair-image img {
-      transform: scale(1.03);
+      transform: scale(1.035);
     }
 
     .repair-content {
       padding: 21px;
     }
 
+    .repair-tag {
+      display: inline-block;
+      color: #19a7ce;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 7px;
+    }
+
     .repair-content h3 {
-      font-size: 18px;
       color: #0b1220;
+      font-size: 18px;
       margin-bottom: 7px;
     }
 
@@ -401,33 +556,61 @@
       line-height: 1.7;
     }
 
-    /* =========================
+
+    /* =========================================================
+       REPAIR CTA STRIP
+    ========================================================= */
+
+    .repair-help {
+      max-width: 1050px;
+      margin: 35px auto 0;
+      padding: 23px 25px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #0b1220, #132238);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .repair-help h3 {
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .repair-help p {
+      color: #bfc9d6;
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
        LAPTOP SERVICES
-    ========================== */
+    ========================================================= */
 
     .laptop-layout {
       max-width: 1050px;
       margin: auto;
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
-      gap: 45px;
+      gap: 48px;
       align-items: center;
     }
 
     .laptop-image {
-      background:
-        linear-gradient(135deg, #eef2f6, #f8fafc);
+      background: linear-gradient(135deg, #eef2f6, #f8fafc);
       border-radius: 16px;
       overflow: hidden;
       max-width: 440px;
       margin: auto;
-      border: 1px solid #e4e8ee;
+      border: 1px solid #e2e7ed;
       box-shadow: 0 12px 30px rgba(11,18,32,0.06);
     }
 
     .laptop-image img {
       width: 100%;
-      height: 300px;
+      height: 315px;
       object-fit: contain;
     }
 
@@ -441,7 +624,7 @@
     .service-item {
       padding: 17px;
       background: #f7f9fb;
-      border: 1px solid #e4e8ee;
+      border: 1px solid #e3e8ee;
       border-radius: 10px;
       transition: 0.25s ease;
     }
@@ -465,9 +648,10 @@
       line-height: 1.55;
     }
 
-    /* =========================
+
+    /* =========================================================
        PROBLEMS
-    ========================== */
+    ========================================================= */
 
     .problem-grid {
       max-width: 1050px;
@@ -479,7 +663,7 @@
 
     .problem {
       padding: 20px 17px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.11);
       background: rgba(255,255,255,0.045);
       border-radius: 10px;
       transition: 0.25s ease;
@@ -487,13 +671,13 @@
 
     .problem:hover {
       background: rgba(25,167,206,0.08);
-      border-color: rgba(25,167,206,0.28);
+      border-color: rgba(25,167,206,0.3);
       transform: translateY(-2px);
     }
 
     .problem strong {
       display: block;
-      color: white;
+      color: #fff;
       font-size: 13px;
       margin-bottom: 4px;
     }
@@ -504,14 +688,15 @@
       line-height: 1.55;
     }
 
-    /* =========================
+
+    /* =========================================================
        SHIPPING
-    ========================== */
+    ========================================================= */
 
     .shipping-box {
       max-width: 1050px;
       margin: 35px auto 0;
-      padding: 24px 25px;
+      padding: 25px;
       border-radius: 13px;
       background: linear-gradient(135deg, #eefaff, #fff);
       border: 1px solid #ccecf5;
@@ -533,9 +718,10 @@
       font-size: 13px;
     }
 
-    /* =========================
+
+    /* =========================================================
        PROCESS
-    ========================== */
+    ========================================================= */
 
     .process-grid {
       max-width: 1050px;
@@ -548,7 +734,7 @@
     .process-card {
       padding: 25px 19px;
       background: #fff;
-      border: 1px solid #e4e8ee;
+      border: 1px solid #e2e7ed;
       border-radius: 11px;
       transition: 0.25s ease;
     }
@@ -563,7 +749,7 @@
       height: 35px;
       border-radius: 50%;
       background: #19a7ce;
-      color: white;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -585,12 +771,13 @@
       line-height: 1.65;
     }
 
-    /* =========================
+
+    /* =========================================================
        VIDEOS
-    ========================== */
+    ========================================================= */
 
     .video-grid {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -598,11 +785,11 @@
     }
 
     .video-card {
-      background: white;
+      background: #fff;
       border-radius: 13px;
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-      border: 1px solid #e4e8ee;
+      border: 1px solid #e3e8ee;
       transition: 0.25s ease;
     }
 
@@ -639,26 +826,45 @@
       color: #687385;
     }
 
-    /* =========================
-       CTA
-    ========================== */
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
 
     .cta {
-      padding: 75px 22px;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 22px;
       background: linear-gradient(135deg, #0b1220, #101d31);
-      color: white;
+      color: #fff;
       text-align: center;
     }
 
+    .cta::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      left: -230px;
+      bottom: -250px;
+      border: 1px solid rgba(25,167,206,0.14);
+      border-radius: 50%;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
     .cta h2 {
-      font-size: clamp(29px, 3.5vw, 40px);
+      font-size: clamp(29px, 3.5vw, 41px);
       line-height: 1.15;
       margin-bottom: 13px;
     }
 
     .cta p {
-      max-width: 620px;
-      margin: 0 auto 25px;
+      max-width: 640px;
+      margin: 0 auto 26px;
       color: #c7d0dc;
       font-size: 15px;
       line-height: 1.7;
@@ -671,14 +877,15 @@
       gap: 11px;
     }
 
-    /* =========================
+
+    /* =========================================================
        FOOTER
-    ========================== */
+    ========================================================= */
 
     footer {
       background: #070d17;
-      color: white;
-      padding: 50px 22px 22px;
+      color: #fff;
+      padding: 52px 22px 22px;
     }
 
     .footer-grid {
@@ -704,6 +911,7 @@
     }
 
     footer h3 {
+      color: #fff;
       font-size: 14px;
       margin-bottom: 14px;
     }
@@ -730,42 +938,49 @@
       font-size: 11px;
     }
 
-    /* =========================
-       WHATSAPP
-    ========================== */
+
+    /* =========================================================
+       FLOATING WHATSAPP
+    ========================================================= */
 
     .whatsapp {
       position: fixed;
       right: 20px;
       bottom: 20px;
-      width: 55px;
-      height: 55px;
+      width: 56px;
+      height: 56px;
       background: #25d366;
-      color: white;
+      color: #fff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 26px;
-      font-weight: bold;
-      z-index: 999;
+      z-index: 1500;
       box-shadow: 0 8px 25px rgba(0,0,0,0.22);
       transition: 0.25s ease;
+      font-size: 0;
+    }
+
+    .whatsapp::before {
+      content: "◉";
+      font-size: 29px;
+      line-height: 1;
     }
 
     .whatsapp:hover {
       transform: scale(1.08);
-      box-shadow: 0 10px 28px rgba(37,211,102,0.28);
+      box-shadow: 0 10px 28px rgba(37,211,102,0.3);
     }
 
-    /* =========================
-       TABLET
-    ========================== */
 
-    @media (max-width: 950px) {
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 1000px) {
 
       nav {
-        gap: 14px;
+        gap: 15px;
       }
 
       nav a {
@@ -798,38 +1013,88 @@
       }
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
 
-    @media (max-width: 700px) {
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
+
+    @media (max-width: 800px) {
 
       .nav-container {
-        flex-direction: column;
-        padding: 14px 18px;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 11px 14px;
-      }
-
-      nav a.active::after {
-        bottom: -5px;
+        min-height: 70px;
+        padding: 10px 18px;
       }
 
       .logo img {
-        width: 150px;
+        width: 155px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 13px 18px 18px;
+        background: #0b1220;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: 0.25s ease;
+      }
+
+      nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      nav a {
+        width: 100%;
+        padding: 13px 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        font-size: 14px;
+      }
+
+      nav a:last-child {
+        border-bottom: none;
+      }
+
+      nav a.active::after {
+        display: none;
+      }
+
+      nav a.active {
+        color: #19a7ce;
+      }
+
+      .nav-cta {
+        margin-top: 9px;
+        text-align: center;
+        border-bottom: none !important;
+        padding: 12px !important;
       }
 
       .hero-container {
-        padding: 55px 18px;
+        padding: 58px 18px 62px;
       }
 
       .hero h1 {
-        font-size: 39px;
+        font-size: 42px;
       }
 
       .hero p {
@@ -837,11 +1102,7 @@
       }
 
       .hero-card {
-        max-width: 340px;
-      }
-
-      .hero-card img {
-        height: 210px;
+        max-width: 370px;
       }
 
       .quick-container {
@@ -853,7 +1114,7 @@
       }
 
       .section {
-        padding: 60px 18px;
+        padding: 65px 18px;
       }
 
       .repair-grid,
@@ -862,58 +1123,69 @@
       }
 
       .repair-image {
-        height: 190px;
+        height: 200px;
       }
 
       .laptop-layout {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 32px;
       }
 
       .laptop-image {
-        max-width: 420px;
+        max-width: 440px;
       }
 
       .laptop-image img {
-        height: 260px;
+        height: 280px;
       }
 
       .service-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .problem-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .process-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .shipping-box {
+      .shipping-box,
+      .repair-help {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .shipping-box .btn {
+      .shipping-box .btn,
+      .repair-help .btn {
         width: 100%;
       }
 
       .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
       }
     }
 
-    @media (max-width: 450px) {
+
+    /* =========================================================
+       SMALL MOBILE
+    ========================================================= */
+
+    @media (max-width: 520px) {
+
+      .logo img {
+        width: 145px;
+      }
+
+      .hero-container {
+        padding: 52px 18px 55px;
+      }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 36px;
+        letter-spacing: -0.8px;
       }
 
       .hero-buttons,
@@ -926,55 +1198,123 @@
         width: 100%;
       }
 
+      .hero-card img {
+        height: 220px;
+      }
+
       .quick-container {
         grid-template-columns: 1fr;
+        padding: 12px 18px;
       }
 
       .quick-item {
         border-right: none;
         border-bottom: 1px solid #e7ebf0;
-        padding-bottom: 12px;
+        padding: 10px;
       }
 
       .quick-item:last-child {
         border-bottom: none;
       }
 
+      .section-heading h2 {
+        font-size: 30px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
       .problem-grid {
         grid-template-columns: 1fr;
       }
 
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shipping-box,
+      .repair-help {
+        padding: 21px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
       .whatsapp {
+        width: 53px;
+        height: 53px;
         right: 15px;
         bottom: 15px;
-        width: 52px;
-        height: 52px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
 
   <header>
 
     <div class="nav-container">
 
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Street Gadgets Care Home">
         <img src="Logo.png" alt="Street Gadgets Care">
       </a>
 
-      <nav aria-label="Main navigation">
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNavigation">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav id="mainNavigation" aria-label="Main navigation">
 
         <a href="index.html">Home</a>
+
         <a href="about.html">About</a>
+
         <a href="services.html">Services</a>
-        <a href="tech-repairs.html" class="active" aria-current="page">Tech Repairs</a>
+
+        <a
+          href="tech-repairs.html"
+          class="active"
+          aria-current="page">
+          Tech Repairs
+        </a>
+
         <a href="shop.html">Shop</a>
-        <a href="creative-studio.html">Creative Studio</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
+
+        <a href="creative-studio.html">
+          Creative Studio
+        </a>
+
+        <a href="contact.html" class="nav-cta">
+          Contact
+        </a>
 
       </nav>
 
@@ -983,7 +1323,9 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
 
   <section class="hero">
 
@@ -1017,7 +1359,9 @@
             Get Repair Help
           </a>
 
-          <a href="#repairs" class="btn btn-outline">
+          <a
+            href="#repairs"
+            class="btn btn-outline">
             Explore Repairs
           </a>
 
@@ -1044,30 +1388,55 @@
   </section>
 
 
-  <!-- QUICK BAR -->
+  <!-- =======================================================
+       QUICK BAR
+  ======================================================== -->
 
   <div class="quick-bar">
 
     <div class="quick-container">
 
       <div class="quick-item">
+
         <strong>Phone Repairs</strong>
-        <span>Common phone problems</span>
+
+        <span>
+          Screens, batteries &amp; more
+        </span>
+
       </div>
 
+
       <div class="quick-item">
+
         <strong>Laptop Repairs</strong>
-        <span>Hardware &amp; software</span>
+
+        <span>
+          Hardware &amp; software
+        </span>
+
       </div>
 
+
       <div class="quick-item">
+
         <strong>Upgrades</strong>
-        <span>Improve performance</span>
+
+        <span>
+          SSD &amp; RAM options
+        </span>
+
       </div>
 
+
       <div class="quick-item">
+
         <strong>Kenya-Wide</strong>
-        <span>Send your device to us</span>
+
+        <span>
+          Send your device to us
+        </span>
+
       </div>
 
     </div>
@@ -1075,28 +1444,50 @@
   </div>
 
 
-  <!-- PHONE REPAIRS -->
+  <!-- =======================================================
+       PHONE REPAIRS
+  ======================================================== -->
 
-  <section class="section section-light" id="repairs">
+  <section
+    class="section section-light"
+    id="repairs">
 
     <div class="container">
 
       <div class="section-heading">
 
-        <span class="eyebrow">Phone Repairs</span>
+        <span class="eyebrow">
+          Phone Repairs
+        </span>
 
-        <h2>We help get your phone working again.</h2>
+        <h2>
+          We help get your phone working again.
+        </h2>
 
         <p>
           Whether your phone has a damaged screen, weak battery,
-          charging problem or other issue, we can assess the
-          problem and work toward the right repair.
+          charging problem or another issue, tell us what is
+          happening and we'll help you determine the right next step.
+        </p>
+
+      </div>
+
+
+      <div class="repair-intro">
+
+        <p>
+          <strong>Not sure what needs to be repaired?</strong>
+          That's okay. Send us your phone model and describe the
+          problem through WhatsApp. We'll guide you from there.
         </p>
 
       </div>
 
 
       <div class="repair-grid">
+
+
+        <!-- SCREEN -->
 
         <div class="repair-card">
 
@@ -1111,7 +1502,13 @@
 
           <div class="repair-content">
 
-            <h3>Screen Replacement</h3>
+            <span class="repair-tag">
+              Phone Repair
+            </span>
+
+            <h3>
+              Screen Replacement
+            </h3>
 
             <p>
               Cracked, broken or damaged screens can affect
@@ -1123,6 +1520,8 @@
 
         </div>
 
+
+        <!-- BACK GLASS -->
 
         <div class="repair-card">
 
@@ -1137,11 +1536,17 @@
 
           <div class="repair-content">
 
-            <h3>Back Glass Repair</h3>
+            <span class="repair-tag">
+              Phone Repair
+            </span>
+
+            <h3>
+              Back Glass Repair
+            </h3>
 
             <p>
-              Damaged phone back glass can make a device look
-              worn and leave it more exposed. Ask us about repair
+              Damaged phone back glass can affect the appearance
+              and protection of your device. Ask us about repair
               options for your model.
             </p>
 
@@ -1149,6 +1554,8 @@
 
         </div>
 
+
+        <!-- BATTERY -->
 
         <div class="repair-card">
 
@@ -1163,7 +1570,13 @@
 
           <div class="repair-content">
 
-            <h3>Battery Replacement</h3>
+            <span class="repair-tag">
+              Phone Repair
+            </span>
+
+            <h3>
+              Battery Replacement
+            </h3>
 
             <p>
               If your phone drains quickly, shuts down unexpectedly
@@ -1177,18 +1590,46 @@
 
       </div>
 
+
+      <div class="repair-help">
+
+        <div>
+
+          <h3>
+            Have a different phone problem?
+          </h3>
+
+          <p>
+            Tell us the phone model and what is happening.
+          </p>
+
+        </div>
+
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20have%20a%20phone%20problem%20and%20need%20repair%20assistance."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer">
+          Tell Us the Problem
+        </a>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- LAPTOP SERVICES -->
+  <!-- =======================================================
+       LAPTOP SERVICES
+  ======================================================== -->
 
-  <section class="section section-light">
+  <section class="section section-soft">
 
     <div class="container">
 
       <div class="laptop-layout">
+
 
         <div class="laptop-image">
 
@@ -1204,9 +1645,13 @@
 
           <div class="section-heading">
 
-            <span class="eyebrow">Laptop Services</span>
+            <span class="eyebrow">
+              Laptop Repairs
+            </span>
 
-            <h2>Keep your laptop running properly.</h2>
+            <h2>
+              Keep your laptop running properly.
+            </h2>
 
             <p>
               We help with laptop servicing, software problems,
@@ -1219,34 +1664,82 @@
 
           <div class="service-list">
 
-            <div class="service-item">
-              <strong>Laptop Servicing</strong>
-              <span>Maintenance and general servicing.</span>
-            </div>
 
             <div class="service-item">
-              <strong>Windows Installation</strong>
-              <span>Operating system installation and setup.</span>
+
+              <strong>
+                Laptop Servicing
+              </strong>
+
+              <span>
+                Maintenance and general servicing.
+              </span>
+
             </div>
 
-            <div class="service-item">
-              <strong>Antivirus &amp; Security</strong>
-              <span>Security setup and malware-related support.</span>
-            </div>
 
             <div class="service-item">
-              <strong>Performance Issues</strong>
-              <span>Help with slow or poorly performing systems.</span>
+
+              <strong>
+                Windows Installation
+              </strong>
+
+              <span>
+                Operating system installation and setup.
+              </span>
+
             </div>
 
-            <div class="service-item">
-              <strong>Storage Upgrades</strong>
-              <span>SSD and storage upgrade options.</span>
-            </div>
 
             <div class="service-item">
-              <strong>RAM Upgrades</strong>
-              <span>Memory upgrade options for supported laptops.</span>
+
+              <strong>
+                Antivirus &amp; Security
+              </strong>
+
+              <span>
+                Security setup and malware-related support.
+              </span>
+
+            </div>
+
+
+            <div class="service-item">
+
+              <strong>
+                Performance Issues
+              </strong>
+
+              <span>
+                Help with slow or poorly performing systems.
+              </span>
+
+            </div>
+
+
+            <div class="service-item">
+
+              <strong>
+                Storage Upgrades
+              </strong>
+
+              <span>
+                SSD and storage upgrade options.
+              </span>
+
+            </div>
+
+
+            <div class="service-item">
+
+              <strong>
+                RAM Upgrades
+              </strong>
+
+              <span>
+                Memory upgrade options for supported laptops.
+              </span>
+
             </div>
 
           </div>
@@ -1260,7 +1753,9 @@
   </section>
 
 
-  <!-- PROBLEMS -->
+  <!-- =======================================================
+       PROBLEMS
+  ======================================================== -->
 
   <section class="section section-dark">
 
@@ -1268,9 +1763,13 @@
 
       <div class="section-heading center">
 
-        <span class="eyebrow">Problems We Help Solve</span>
+        <span class="eyebrow">
+          Problems We Help Solve
+        </span>
 
-        <h2>Not sure what's wrong with your device?</h2>
+        <h2>
+          Not sure what's wrong with your device?
+        </h2>
 
         <p>
           Tell us what your device is doing. We can help you
@@ -1282,58 +1781,126 @@
 
       <div class="problem-grid">
 
-        <div class="problem">
-          <strong>Charging Problems</strong>
-          <span>Device not charging or charging slowly.</span>
-        </div>
 
         <div class="problem">
-          <strong>Liquid Damage</strong>
-          <span>Phones or laptops affected by liquid.</span>
+
+          <strong>
+            Charging Problems
+          </strong>
+
+          <span>
+            Device not charging or charging slowly.
+          </span>
+
         </div>
 
-        <div class="problem">
-          <strong>Software Problems</strong>
-          <span>Errors, crashes and operating system issues.</span>
-        </div>
 
         <div class="problem">
-          <strong>Network Issues</strong>
-          <span>Connectivity and network-related problems.</span>
+
+          <strong>
+            Liquid Damage
+          </strong>
+
+          <span>
+            Phones or laptops affected by liquid.
+          </span>
+
         </div>
 
-        <div class="problem">
-          <strong>Windows Problems</strong>
-          <span>Installation, setup and system support.</span>
-        </div>
 
         <div class="problem">
-          <strong>Slow Performance</strong>
-          <span>Systems that have become unusually slow.</span>
+
+          <strong>
+            Software Problems
+          </strong>
+
+          <span>
+            Errors, crashes and operating system issues.
+          </span>
+
         </div>
 
-        <div class="problem">
-          <strong>Battery Problems</strong>
-          <span>Weak, swollen or fast-draining batteries.</span>
-        </div>
 
         <div class="problem">
-          <strong>Screen Damage</strong>
-          <span>Cracked, broken or damaged displays.</span>
+
+          <strong>
+            Network Issues
+          </strong>
+
+          <span>
+            Connectivity and network-related problems.
+          </span>
+
+        </div>
+
+
+        <div class="problem">
+
+          <strong>
+            Windows Problems
+          </strong>
+
+          <span>
+            Installation, setup and system support.
+          </span>
+
+        </div>
+
+
+        <div class="problem">
+
+          <strong>
+            Slow Performance
+          </strong>
+
+          <span>
+            Systems that have become unusually slow.
+          </span>
+
+        </div>
+
+
+        <div class="problem">
+
+          <strong>
+            Battery Problems
+          </strong>
+
+          <span>
+            Weak, swollen or fast-draining batteries.
+          </span>
+
+        </div>
+
+
+        <div class="problem">
+
+          <strong>
+            Screen Damage
+          </strong>
+
+          <span>
+            Cracked, broken or damaged displays.
+          </span>
+
         </div>
 
       </div>
 
 
+      <!-- SHIPPING -->
+
       <div class="shipping-box">
 
         <div>
 
-          <h3>Not in Nairobi? No worries.</h3>
+          <h3>
+            NOT IN NAIROBI? NO WORRIES!
+          </h3>
 
           <p>
-            Send your device to us and we'll repair it and
-            ship it back safely.
+            Send your device to us and we'll repair it
+            and ship it back safely.
           </p>
 
         </div>
@@ -1353,7 +1920,9 @@
   </section>
 
 
-  <!-- REPAIR PROCESS -->
+  <!-- =======================================================
+       REPAIR PROCESS
+  ======================================================== -->
 
   <section class="section section-light">
 
@@ -1361,9 +1930,13 @@
 
       <div class="section-heading center">
 
-        <span class="eyebrow">Our Repair Process</span>
+        <span class="eyebrow">
+          Our Repair Process
+        </span>
 
-        <h2>Simple from start to finish.</h2>
+        <h2>
+          Simple from start to finish.
+        </h2>
 
         <p>
           We keep the process straightforward so you know
@@ -1375,11 +1948,16 @@
 
       <div class="process-grid">
 
+
         <div class="process-card">
 
-          <div class="process-number">1</div>
+          <div class="process-number">
+            1
+          </div>
 
-          <h3>Tell Us What Happened</h3>
+          <h3>
+            Tell Us What Happened
+          </h3>
 
           <p>
             Send us the device model and explain the problem.
@@ -1390,9 +1968,13 @@
 
         <div class="process-card">
 
-          <div class="process-number">2</div>
+          <div class="process-number">
+            2
+          </div>
 
-          <h3>We Assess the Problem</h3>
+          <h3>
+            We Assess the Problem
+          </h3>
 
           <p>
             We look at the reported issue and determine
@@ -1404,9 +1986,13 @@
 
         <div class="process-card">
 
-          <div class="process-number">3</div>
+          <div class="process-number">
+            3
+          </div>
 
-          <h3>We Get to Work</h3>
+          <h3>
+            We Get to Work
+          </h3>
 
           <p>
             Once the repair is agreed on, we proceed with
@@ -1418,9 +2004,13 @@
 
         <div class="process-card">
 
-          <div class="process-number">4</div>
+          <div class="process-number">
+            4
+          </div>
 
-          <h3>Get Your Device Back</h3>
+          <h3>
+            Get Your Device Back
+          </h3>
 
           <p>
             Your repaired device is ready for collection
@@ -1436,17 +2026,23 @@
   </section>
 
 
-  <!-- VIDEOS -->
+  <!-- =======================================================
+       VIDEOS
+  ======================================================== -->
 
-  <section class="section section-light">
+  <section class="section section-soft">
 
     <div class="container">
 
       <div class="section-heading">
 
-        <span class="eyebrow">Repair Videos &amp; Tech Tips</span>
+        <span class="eyebrow">
+          Repair Videos &amp; Tech Tips
+        </span>
 
-        <h2>See some of our technology content.</h2>
+        <h2>
+          See some of our technology content.
+        </h2>
 
         <p>
           Follow Street Gadgets Care for repair work,
@@ -1457,6 +2053,7 @@
 
 
       <div class="video-grid">
+
 
         <div class="video-card">
 
@@ -1472,8 +2069,15 @@
           </div>
 
           <div class="video-info">
-            <h3>Tech Repair Work</h3>
-            <p>See Street Gadgets Care in action.</p>
+
+            <h3>
+              Tech Repair Work
+            </h3>
+
+            <p>
+              See Street Gadgets Care in action.
+            </p>
+
           </div>
 
         </div>
@@ -1493,8 +2097,15 @@
           </div>
 
           <div class="video-info">
-            <h3>Technology &amp; Repairs</h3>
-            <p>More technology content from Street Gadgets Care.</p>
+
+            <h3>
+              Technology &amp; Repairs
+            </h3>
+
+            <p>
+              More technology content from Street Gadgets Care.
+            </p>
+
           </div>
 
         </div>
@@ -1514,8 +2125,15 @@
           </div>
 
           <div class="video-info">
-            <h3>Journey into Tech Excellence</h3>
-            <p>A look into the world of technology and repair.</p>
+
+            <h3>
+              Journey into Tech Excellence
+            </h3>
+
+            <p>
+              A look into the world of technology and repair.
+            </p>
+
           </div>
 
         </div>
@@ -1535,8 +2153,15 @@
           </div>
 
           <div class="video-info">
-            <h3>Tech Tips &amp; Repairs</h3>
-            <p>Useful technology information from our channel.</p>
+
+            <h3>
+              Tech Tips &amp; Repairs
+            </h3>
+
+            <p>
+              Useful technology information from our channel.
+            </p>
+
           </div>
 
         </div>
@@ -1556,8 +2181,15 @@
           </div>
 
           <div class="video-info">
-            <h3>How to Check Your Computer's Health</h3>
-            <p>A practical technology tip for computer users.</p>
+
+            <h3>
+              How to Check Your Computer's Health
+            </h3>
+
+            <p>
+              A practical technology tip for computer users.
+            </p>
+
           </div>
 
         </div>
@@ -1569,49 +2201,64 @@
   </section>
 
 
-  <!-- FINAL CTA -->
+  <!-- =======================================================
+       FINAL CTA
+  ======================================================== -->
 
   <section class="cta">
 
-    <h2>Let's get your technology working again.</h2>
+    <div class="cta-content">
 
-    <p>
-      Tell us what device you have, what's wrong with it,
-      and we'll help you figure out the next step.
-    </p>
+      <h2>
+        Let's get your technology working again.
+      </h2>
 
-    <div class="cta-buttons">
+      <p>
+        Tell us what device you have, what's wrong with it,
+        and we'll help you figure out the next step.
+      </p>
 
-      <a
-        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20device%20repair."
-        class="btn btn-primary"
-        target="_blank"
-        rel="noopener noreferrer">
-        WhatsApp Us
-      </a>
+      <div class="cta-buttons">
 
-      <a href="contact.html" class="btn btn-outline">
-        Contact Us
-      </a>
+        <a
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20device%20repair."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer">
+          WhatsApp Us
+        </a>
+
+        <a
+          href="contact.html"
+          class="btn btn-outline">
+          Contact Us
+        </a>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
 
   <footer>
 
     <div class="footer-grid">
 
+
       <div class="footer-about">
 
         <div class="footer-logo">
+
           <img
             src="Logo.png"
             alt="Street Gadgets Care"
             loading="lazy">
+
         </div>
 
         <p>
@@ -1625,23 +2272,48 @@
 
       <div>
 
-        <h3>Explore</h3>
+        <h3>
+          Explore
+        </h3>
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="tech-repairs.html" aria-current="page">Tech Repairs</a>
-        <a href="shop.html">Shop</a>
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a
+          href="tech-repairs.html"
+          aria-current="page">
+          Tech Repairs
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
 
       </div>
 
 
       <div>
 
-        <h3>More</h3>
+        <h3>
+          More
+        </h3>
 
-        <a href="creative-studio.html">Creative Studio</a>
-        <a href="contact.html">Contact</a>
+        <a href="creative-studio.html">
+          Creative Studio
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
 
         <a
           href="https://wa.me/254114259961"
@@ -1659,9 +2331,13 @@
 
       <div>
 
-        <h3>Contact</h3>
+        <h3>
+          Contact
+        </h3>
 
-        <a href="tel:0114259961">0114 259 961</a>
+        <a href="tel:0114259961">
+          0114 259 961
+        </a>
 
         <a href="mailto:streetgadgetscare@gmail.com">
           streetgadgetscare@gmail.com
@@ -1698,7 +2374,9 @@
   </footer>
 
 
-  <!-- FLOATING WHATSAPP -->
+  <!-- =======================================================
+       FLOATING WHATSAPP
+  ======================================================== -->
 
   <a
     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20repair%20assistance."
@@ -1707,8 +2385,124 @@
     rel="noopener noreferrer"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
     title="Chat with Street Gadgets Care on WhatsApp">
-    ☎
+    WhatsApp
   </a>
+
+
+  <!-- =======================================================
+       MOBILE MENU JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    menuToggle.addEventListener("click", function () {
+
+      const isOpen = mainNavigation.classList.toggle("open");
+
+      menuToggle.classList.toggle("open", isOpen);
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+    });
+
+
+    /* Close menu when a navigation link is clicked */
+
+    mainNavigation.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        mainNavigation.classList.remove("open");
+
+        menuToggle.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+      });
+
+    });
+
+
+    /* Close menu if user clicks outside the navigation */
+
+    document.addEventListener("click", function (event) {
+
+      const clickedInsideMenu =
+        mainNavigation.contains(event.target);
+
+      const clickedToggle =
+        menuToggle.contains(event.target);
+
+      if (
+        !clickedInsideMenu &&
+        !clickedToggle &&
+        mainNavigation.classList.contains("open")
+      ) {
+
+        mainNavigation.classList.remove("open");
+
+        menuToggle.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+      }
+
+    });
+
+
+    /* Close mobile menu when screen becomes desktop-sized */
+
+    window.addEventListener("resize", function () {
+
+      if (window.innerWidth > 800) {
+
+        mainNavigation.classList.remove("open");
+
+        menuToggle.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+      }
+
+    });
+
+  </script>
+
 
 </body>
 </html>
