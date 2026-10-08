@@ -56,6 +56,11 @@ a {
     text-decoration: none;
 }
 
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 button {
     font: inherit;
 }
@@ -63,6 +68,7 @@ button {
 :root {
     --navy: #0b1220;
     --navy-2: #111d30;
+    --navy-3: #17243a;
     --cyan: #19a7ce;
     --cyan-dark: #087fa3;
     --cyan-light: #eaf9fd;
@@ -141,8 +147,20 @@ section {
     border-radius: 9px;
     font-size: 13px;
     font-weight: 900;
-    transition: .25s ease;
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
     cursor: pointer;
+}
+
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.mobile-toggle:focus-visible,
+.logo-link:focus-visible {
+    outline: 3px solid rgba(25,167,206,.45);
+    outline-offset: 4px;
 }
 
 .btn-primary {
@@ -154,6 +172,7 @@ section {
 .btn-primary:hover {
     background: var(--cyan-dark);
     transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(25,167,206,.28);
 }
 
 .btn-dark {
@@ -162,7 +181,7 @@ section {
 }
 
 .btn-dark:hover {
-    background: #17243a;
+    background: var(--navy-3);
     transform: translateY(-2px);
 }
 
@@ -180,10 +199,11 @@ section {
 .btn-whatsapp {
     background: var(--green);
     color: #ffffff;
+    box-shadow: 0 10px 24px rgba(37,211,102,.16);
 }
 
 .btn-whatsapp:hover {
-    filter: brightness(.94);
+    background: #20bd5a;
     transform: translateY(-2px);
 }
 
@@ -196,44 +216,74 @@ section {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(11,18,32,.96);
-    backdrop-filter: blur(14px);
+    background: rgba(8,14,25,.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255,255,255,.07);
+    transition:
+        background .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(8,14,25,.98);
+    border-bottom-color: rgba(255,255,255,.10);
+    box-shadow: 0 12px 35px rgba(0,0,0,.18);
 }
 
 .navbar {
-    min-height: 76px;
+    min-height: 74px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 28px;
 }
 
+
+/* LOGO */
+
 .logo-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .logo-link img {
-    width: 145px;
+    width: 150px;
     height: 54px;
     object-fit: contain;
     object-position: left center;
+
+    /*
+       The logo itself is allowed to remain transparent.
+       We deliberately do NOT place a background behind it.
+    */
+    background: transparent;
 }
+
+
+/* DESKTOP NAV */
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 25px;
+    justify-content: flex-end;
+    gap: 24px;
+    margin-left: auto;
 }
 
 .nav-links a {
     position: relative;
-    color: rgba(255,255,255,.82);
+    color: rgba(255,255,255,.76);
     font-size: 12px;
     font-weight: 800;
-    transition: .2s ease;
+    white-space: nowrap;
+    transition:
+        color .2s ease,
+        opacity .2s ease;
 }
 
 .nav-links a:hover,
@@ -241,43 +291,83 @@ section {
     color: #ffffff;
 }
 
-.nav-links a.active::after {
+.nav-links a:not(.nav-whatsapp)::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -9px;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
     height: 2px;
-    background: var(--cyan);
     border-radius: 10px;
+    background: var(--cyan);
+    transform: translateX(-50%);
+    transition: width .22s ease;
 }
+
+.nav-links a:not(.nav-whatsapp):hover::after,
+.nav-links a:not(.nav-whatsapp).active::after {
+    width: 100%;
+}
+
+
+/* WHATSAPP NAV BUTTON */
 
 .nav-whatsapp {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 7px;
-    padding: 10px 15px;
+    min-height: 39px;
+    padding: 0 15px;
     border-radius: 8px;
     background: var(--green);
     color: #ffffff !important;
     font-size: 11px !important;
     font-weight: 900 !important;
+    box-shadow: 0 8px 20px rgba(37,211,102,.15);
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
 }
 
 .nav-whatsapp:hover {
+    background: #20bd5a;
     transform: translateY(-1px);
+    box-shadow: 0 11px 24px rgba(37,211,102,.20);
 }
+
+.nav-whatsapp::after {
+    display: none !important;
+}
+
+
+/* MOBILE TOGGLE */
 
 .mobile-toggle {
     display: none;
-    width: 43px;
-    height: 43px;
-    border: 1px solid rgba(255,255,255,.14);
-    border-radius: 9px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 10px;
     background: rgba(255,255,255,.05);
     color: #ffffff;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.mobile-toggle:hover {
+    background: rgba(255,255,255,.10);
+    border-color: rgba(25,167,206,.45);
+}
+
+.mobile-toggle:active {
+    transform: scale(.96);
 }
 
 
@@ -499,6 +589,7 @@ section {
     color: var(--cyan-dark);
     font-weight: 900;
     font-size: 14px;
+    flex-shrink: 0;
 }
 
 .trust-item strong {
@@ -1011,6 +1102,7 @@ footer {
     height: 55px;
     object-fit: contain;
     object-position: left center;
+    background: transparent;
     margin-bottom: 17px;
 }
 
@@ -1095,13 +1187,17 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
 
     .nav-links {
         gap: 17px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
     }
 
     .hero-grid,
@@ -1161,8 +1257,112 @@ footer {
         align-items: flex-start;
         flex-direction: column;
     }
-
 }
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .logo-link img {
+        width: 140px;
+        height: 50px;
+    }
+
+    .mobile-toggle {
+        display: inline-grid;
+        place-items: center;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+
+        padding: 0 16px;
+
+        background:
+            linear-gradient(
+                180deg,
+                #0b1220 0%,
+                #080e19 100%
+            );
+
+        border-top: 1px solid rgba(255,255,255,.07);
+
+        box-shadow:
+            0 25px 50px rgba(0,0,0,.28);
+
+        transition:
+            max-height .35s ease,
+            opacity .25s ease,
+            visibility .25s ease,
+            padding .35s ease;
+    }
+
+    .nav-links.open {
+        max-height: 620px;
+        opacity: 1;
+        visibility: visible;
+        padding: 10px 16px 18px;
+    }
+
+    .nav-links a {
+        display: flex;
+        align-items: center;
+        min-height: 52px;
+        padding: 0 5px;
+
+        border-bottom: 1px solid rgba(255,255,255,.06);
+
+        color: rgba(255,255,255,.82);
+        font-size: 13px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #ffffff;
+    }
+
+    .nav-links a:not(.nav-whatsapp)::after {
+        display: none;
+    }
+
+    .nav-links a.active {
+        color: #7bd8ef;
+    }
+
+    .nav-whatsapp {
+        justify-content: center !important;
+        margin-top: 12px;
+        min-height: 48px !important;
+        border: 0 !important;
+        border-radius: 9px !important;
+        font-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE CONTENT
+========================================================= */
 
 @media (max-width: 760px) {
 
@@ -1172,53 +1372,6 @@ footer {
 
     .container {
         width: min(var(--max), calc(100% - 28px));
-    }
-
-    .navbar {
-        min-height: 68px;
-    }
-
-    .logo-link img {
-        width: 132px;
-        height: 48px;
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 68px;
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 10px 14px 15px;
-        background: #0b1220;
-        border-top: 1px solid rgba(255,255,255,.07);
-        box-shadow: 0 20px 35px rgba(0,0,0,.22);
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links a {
-        padding: 14px 8px;
-        border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-
-    .nav-links a.active::after {
-        display: none;
-    }
-
-    .nav-whatsapp {
-        justify-content: center;
-        margin-top: 10px;
-        border: 0 !important;
     }
 
     .hero {
@@ -1316,10 +1469,24 @@ footer {
         bottom: 12px;
         padding: 11px 13px;
     }
-
 }
 
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
 @media (max-width: 420px) {
+
+    .logo-link img {
+        width: 128px;
+        height: 46px;
+    }
+
+    .mobile-toggle {
+        width: 42px;
+        height: 42px;
+    }
 
     .hero-actions {
         flex-direction: column;
@@ -1356,7 +1523,26 @@ footer {
         justify-content: center;
         font-size: 19px;
     }
+}
 
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
 
 </style>
@@ -1369,23 +1555,39 @@ footer {
      HEADER
 ===================================================== -->
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
 
     <div class="container navbar">
 
-        <a href="index.html" class="logo-link">
-            <img src="Logo.png" alt="Street Gadgets Care">
+        <a
+            href="index.html"
+            class="logo-link"
+            aria-label="Street Gadgets Care Home">
+
+            <img
+                src="Logo.png"
+                alt="Street Gadgets Care">
+
         </a>
+
 
         <button
             class="mobile-toggle"
             id="mobileToggle"
+            type="button"
             aria-label="Open navigation"
+            aria-controls="navLinks"
             aria-expanded="false">
-            ☰
+
+            <span id="menuIcon">☰</span>
+
         </button>
 
-        <nav class="nav-links" id="navLinks">
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+            aria-label="Main navigation">
 
             <a href="index.html" class="active">Home</a>
 
@@ -1406,7 +1608,9 @@ footer {
                 class="nav-whatsapp"
                 target="_blank"
                 rel="noopener">
-                WhatsApp
+
+                WhatsApp Us
+
             </a>
 
         </nav>
@@ -1446,12 +1650,20 @@ footer {
 
             <div class="hero-actions">
 
-                <a href="tech-repairs.html" class="btn btn-primary">
+                <a
+                    href="tech-repairs.html"
+                    class="btn btn-primary">
+
                     I Need a Repair →
+
                 </a>
 
-                <a href="shop.html" class="btn btn-outline">
+                <a
+                    href="shop.html"
+                    class="btn btn-outline">
+
                     Browse the Shop →
+
                 </a>
 
                 <a
@@ -1459,7 +1671,9 @@ footer {
                     class="btn btn-whatsapp"
                     target="_blank"
                     rel="noopener">
+
                     WhatsApp Us
+
                 </a>
 
             </div>
@@ -1607,8 +1821,12 @@ footer {
                     charging faults, software problems, servicing and upgrades.
                 </p>
 
-                <a href="tech-repairs.html" class="path-link">
+                <a
+                    href="tech-repairs.html"
+                    class="path-link">
+
                     Explore Tech Repairs →
+
                 </a>
 
             </article>
@@ -1627,8 +1845,12 @@ footer {
                     chargers, cables, protection and useful accessories.
                 </p>
 
-                <a href="shop.html" class="path-link">
+                <a
+                    href="shop.html"
+                    class="path-link">
+
                     Browse Our Shop →
+
                 </a>
 
             </article>
@@ -1647,8 +1869,12 @@ footer {
                     business plans and professional business materials.
                 </p>
 
-                <a href="creative-studio.html" class="path-link">
+                <a
+                    href="creative-studio.html"
+                    class="path-link">
+
                     Visit Creative Studio →
+
                 </a>
 
             </article>
@@ -1714,8 +1940,12 @@ footer {
             </div>
 
 
-            <a href="tech-repairs.html" class="btn btn-dark">
+            <a
+                href="tech-repairs.html"
+                class="btn btn-dark">
+
                 Explore Repair Services →
+
             </a>
 
         </div>
@@ -1856,7 +2086,9 @@ footer {
                 class="btn btn-whatsapp"
                 target="_blank"
                 rel="noopener">
+
                 Start a Repair Enquiry →
+
             </a>
 
         </div>
@@ -1904,8 +2136,12 @@ footer {
             </div>
 
 
-            <a href="creative-studio.html" class="btn btn-dark">
+            <a
+                href="creative-studio.html"
+                class="btn btn-dark">
+
                 Explore Creative Studio →
+
             </a>
 
         </div>
@@ -2024,7 +2260,7 @@ footer {
 
 
 <!-- =====================================================
-     KENYA-WIDE
+     KENYA STRIP
 ===================================================== -->
 
 <section class="kenya-section">
@@ -2033,7 +2269,9 @@ footer {
 
         <div class="kenya-copy">
 
-            <div class="eyebrow">Serving across Kenya</div>
+            <div class="eyebrow">
+                Serving across Kenya
+            </div>
 
             <h2>
                 Based in Nairobi.
@@ -2068,7 +2306,9 @@ footer {
             class="btn btn-whatsapp"
             target="_blank"
             rel="noopener">
+
             Talk to Us on WhatsApp →
+
         </a>
 
     </div>
@@ -2111,11 +2351,17 @@ footer {
                         class="btn btn-whatsapp"
                         target="_blank"
                         rel="noopener">
+
                         WhatsApp Street Gadgets Care
+
                     </a>
 
-                    <a href="contact.html" class="btn btn-outline">
+                    <a
+                        href="contact.html"
+                        class="btn btn-outline">
+
                         Contact Us
+
                     </a>
 
                 </div>
@@ -2143,7 +2389,9 @@ footer {
 
             <div class="footer-brand">
 
-                <img src="Logo.png" alt="Street Gadgets Care">
+                <img
+                    src="Logo.png"
+                    alt="Street Gadgets Care">
 
                 <p>
                     Technology, repairs, devices, accessories,
@@ -2156,7 +2404,9 @@ footer {
 
             <div>
 
-                <div class="footer-title">Explore</div>
+                <div class="footer-title">
+                    Explore
+                </div>
 
                 <div class="footer-links">
 
@@ -2170,7 +2420,9 @@ footer {
 
                     <a href="shop.html">Shop</a>
 
-                    <a href="creative-studio.html">Creative Studio</a>
+                    <a href="creative-studio.html">
+                        Creative Studio
+                    </a>
 
                     <a href="contact.html">Contact</a>
 
@@ -2181,7 +2433,9 @@ footer {
 
             <div>
 
-                <div class="footer-title">Contact</div>
+                <div class="footer-title">
+                    Contact
+                </div>
 
                 <div class="footer-contact">
 
@@ -2193,7 +2447,9 @@ footer {
                         href="https://wa.me/254114259961"
                         target="_blank"
                         rel="noopener">
+
                         WhatsApp Us
+
                     </a>
 
                     <a href="mailto:streetgadgetscare@gmail.com">
@@ -2245,44 +2501,147 @@ footer {
 
 
 <!-- =====================================================
-     MOBILE MENU
+     HEADER + MOBILE MENU SCRIPT
 ===================================================== -->
 
 <script>
 
+const siteHeader = document.getElementById("siteHeader");
 const mobileToggle = document.getElementById("mobileToggle");
 const navLinks = document.getElementById("navLinks");
+const menuIcon = document.getElementById("menuIcon");
 
-mobileToggle.addEventListener("click", function () {
 
-    navLinks.classList.toggle("open");
+/* ---------------------------------------------------------
+   HEADER SCROLL EFFECT
+--------------------------------------------------------- */
 
-    const isOpen = navLinks.classList.contains("open");
+function updateHeader() {
+
+    if (window.scrollY > 12) {
+        siteHeader.classList.add("scrolled");
+    } else {
+        siteHeader.classList.remove("scrolled");
+    }
+
+}
+
+window.addEventListener("scroll", updateHeader, {
+    passive: true
+});
+
+updateHeader();
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU
+--------------------------------------------------------- */
+
+function closeMobileMenu() {
+
+    navLinks.classList.remove("open");
 
     mobileToggle.setAttribute(
         "aria-expanded",
-        isOpen ? "true" : "false"
+        "false"
     );
 
-    mobileToggle.textContent = isOpen ? "✕" : "☰";
+    mobileToggle.setAttribute(
+        "aria-label",
+        "Open navigation"
+    );
+
+    menuIcon.textContent = "☰";
+
+}
+
+
+function openMobileMenu() {
+
+    navLinks.classList.add("open");
+
+    mobileToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    mobileToggle.setAttribute(
+        "aria-label",
+        "Close navigation"
+    );
+
+    menuIcon.textContent = "✕";
+
+}
+
+
+mobileToggle.addEventListener("click", function() {
+
+    const isOpen =
+        navLinks.classList.contains("open");
+
+    if (isOpen) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
 
 });
 
+
+/* ---------------------------------------------------------
+   CLOSE AFTER CLICKING A LINK
+--------------------------------------------------------- */
 
 document.querySelectorAll(".nav-links a").forEach(function(link) {
 
     link.addEventListener("click", function() {
 
-        navLinks.classList.remove("open");
-
-        mobileToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        mobileToggle.textContent = "☰";
+        closeMobileMenu();
 
     });
+
+});
+
+
+/* ---------------------------------------------------------
+   CLOSE WHEN CLICKING OUTSIDE
+--------------------------------------------------------- */
+
+document.addEventListener("click", function(event) {
+
+    const clickedInsideHeader =
+        siteHeader.contains(event.target);
+
+    if (!clickedInsideHeader) {
+        closeMobileMenu();
+    }
+
+});
+
+
+/* ---------------------------------------------------------
+   ESC KEY
+--------------------------------------------------------- */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeMobileMenu();
+    }
+
+});
+
+
+/* ---------------------------------------------------------
+   RESET MENU WHEN RETURNING TO DESKTOP
+--------------------------------------------------------- */
+
+window.addEventListener("resize", function() {
+
+    if (window.innerWidth > 900) {
+        closeMobileMenu();
+    }
 
 });
 
