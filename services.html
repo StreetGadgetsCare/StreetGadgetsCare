@@ -2,2881 +2,2083 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Services | Street Gadgets Care</title>
-
-    <meta
-        name="description"
-        content="Explore Street Gadgets Care services including phone and laptop repairs, technology support, graphic design, business documents and practical digital support in Nairobi and across Kenya."
-    >
-
-    <meta
-        name="keywords"
-        content="Street Gadgets Care services, phone repair Nairobi, laptop repair Nairobi, graphic design Nairobi, CV design Kenya, business support Kenya, technology services Kenya"
-    >
-
-    <meta name="author" content="Street Gadgets Care">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #0b1220;
-            background: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        :root {
-            --navy: #0b1220;
-            --navy-light: #121d31;
-            --cyan: #19a7ce;
-            --cyan-dark: #118bad;
-            --green: #25d366;
-            --white: #ffffff;
-            --light: #f5f8fa;
-            --text: #263445;
-            --muted: #6b7785;
-            --border: #e3e9ee;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(11, 18, 32, 0.97);
-
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .nav-container {
-            width: min(1180px, 92%);
-            min-height: 76px;
-
-            margin: auto;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-        .logo {
-            width: 155px;
-            height: auto;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        nav a {
-            position: relative;
-
-            color: #ffffff;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            white-space: nowrap;
-
-            transition: color 0.25s ease;
-        }
-
-        nav a:not(.nav-contact)::after {
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-            bottom: -7px;
-
-            width: 0;
-            height: 2px;
-
-            background: var(--cyan);
-
-            transition: width 0.25s ease;
-        }
-
-        nav a:not(.nav-contact):hover {
-            color: var(--cyan);
-        }
-
-        nav a:not(.nav-contact):hover::after {
-            width: 100%;
-        }
-
-        .nav-active {
-            color: var(--cyan) !important;
-        }
-
-        .nav-active::after {
-            width: 100% !important;
-        }
-
-        .nav-contact {
-            background: var(--cyan);
-
-            padding: 11px 18px;
-
-            border-radius: 7px;
-
-            color: #ffffff !important;
-
-            box-shadow: 0 7px 18px rgba(25,167,206,0.18);
-
-            transition:
-                background 0.25s ease,
-                transform 0.25s ease;
-        }
-
-        .nav-contact:hover {
-            background: var(--cyan-dark);
-            transform: translateY(-2px);
-        }
-
-        /* MOBILE MENU BUTTON */
-
-        .menu-toggle {
-            display: none;
-
-            width: 44px;
-            height: 44px;
-
-            padding: 9px;
-
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 8px;
-
-            background: rgba(255,255,255,0.05);
-
-            cursor: pointer;
-
-            align-items: center;
-            justify-content: center;
-
-            flex-direction: column;
-
-            gap: 5px;
-        }
-
-        .menu-toggle span {
-            display: block;
-
-            width: 21px;
-            height: 2px;
-
-            border-radius: 2px;
-
-            background: #ffffff;
-
-            transition:
-                transform 0.25s ease,
-                opacity 0.25s ease;
-        }
-
-        .menu-toggle.active span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        .container {
-            width: min(1180px, 92%);
-            margin: auto;
-        }
-
-        .section {
-            padding: 90px 0;
-        }
-
-        .section-label {
-            display: inline-flex;
-            align-items: center;
-
-            margin-bottom: 13px;
-
-            color: var(--cyan-dark);
-
-            font-size: 11px;
-            font-weight: 800;
-
-            letter-spacing: 1.8px;
-
-            text-transform: uppercase;
-        }
-
-        .section-title {
-            font-size: clamp(32px, 3.8vw, 49px);
-
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 18px;
-        }
-
-        .section-text {
-            max-width: 720px;
-
-            color: var(--muted);
-
-            font-size: 15px;
-
-            line-height: 1.8;
-        }
-
-        .button {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            gap: 8px;
-
-            min-height: 46px;
-
-            padding: 13px 21px;
-
-            border-radius: 7px;
-
-            font-size: 13px;
-            font-weight: 800;
-
-            transition:
-                background 0.25s ease,
-                border-color 0.25s ease,
-                color 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .button-primary {
-            background: var(--cyan);
-            color: #ffffff;
-
-            box-shadow: 0 9px 22px rgba(25,167,206,0.18);
-        }
-
-        .button-primary:hover {
-            background: var(--cyan-dark);
-
-            transform: translateY(-2px);
-
-            box-shadow: 0 12px 25px rgba(25,167,206,0.24);
-        }
-
-        .button-dark {
-            background: var(--navy);
-            color: #ffffff;
-        }
-
-        .button-dark:hover {
-            background: #17243a;
-            transform: translateY(-2px);
-        }
-
-        .button-outline {
-            border: 1px solid #cbd5dc;
-            background: #ffffff;
-            color: var(--navy);
-        }
-
-        .button-outline:hover {
-            border-color: var(--cyan);
-            color: var(--cyan-dark);
-            transform: translateY(-2px);
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .services-hero {
-            position: relative;
-
-            background:
-                radial-gradient(
-                    circle at 82% 20%,
-                    rgba(25,167,206,0.15),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 10% 90%,
-                    rgba(25,167,206,0.07),
-                    transparent 28%
-                ),
-                linear-gradient(
-                    135deg,
-                    #07101e 0%,
-                    #0b1220 65%,
-                    #111e33 100%
-                );
-
-            color: #ffffff;
-
-            padding: 92px 0 86px;
-
-            overflow: hidden;
-        }
-
-        .services-hero::before {
-            content: "";
-
-            position: absolute;
-
-            width: 520px;
-            height: 520px;
-
-            right: -240px;
-            top: -250px;
-
-            border: 1px solid rgba(25,167,206,0.11);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        .services-hero::after {
-            content: "";
-
-            position: absolute;
-
-            width: 260px;
-            height: 260px;
-
-            left: -170px;
-            bottom: -190px;
-
-            border: 1px solid rgba(25,167,206,0.08);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        .services-hero-grid {
-            position: relative;
-            z-index: 1;
-
-            display: grid;
-
-            grid-template-columns: 1.08fr 0.92fr;
-
-            gap: 65px;
-
-            align-items: center;
-        }
-
-        .hero-label {
-            display: flex;
-            align-items: center;
-
-            gap: 10px;
-
-            color: #7dddf5;
-
-            font-size: 11px;
-            font-weight: 800;
-
-            letter-spacing: 1.8px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 20px;
-        }
-
-        .hero-label::before {
-            content: "";
-
-            width: 30px;
-            height: 2px;
-
-            background: var(--cyan);
-
-            flex-shrink: 0;
-        }
-
-        .services-hero h1 {
-            max-width: 680px;
-
-            font-size: clamp(44px, 5.2vw, 66px);
-
-            line-height: 1.02;
-
-            letter-spacing: -2.6px;
-
-            margin-bottom: 22px;
-        }
-
-        .services-hero h1 span {
-            color: var(--cyan);
-        }
-
-        .hero-description {
-            max-width: 630px;
-
-            color: #c4ced9;
-
-            font-size: 16px;
-
-            line-height: 1.8;
-
-            margin-bottom: 27px;
-        }
-
-        .hero-buttons {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-bottom: 22px;
-        }
-
-        .hero-buttons .button-outline {
-            color: #ffffff;
-
-            background: transparent;
-
-            border-color: rgba(255,255,255,0.23);
-        }
-
-        .hero-buttons .button-outline:hover {
-            color: #7dddf5;
-            border-color: var(--cyan);
-        }
-
-        .hero-location {
-            color: #8d9aaa;
-            font-size: 12px;
-        }
-
-        .services-hero-visual {
-            display: flex;
-            justify-content: center;
-        }
-
-        .service-visual-box {
-            position: relative;
-
-            width: 100%;
-            max-width: 470px;
-
-            min-height: 380px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 18px;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(25,167,206,0.13),
-                    transparent 60%
-                ),
-                #101a2b;
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            box-shadow:
-                0 25px 55px rgba(0,0,0,0.25);
-
-            overflow: visible;
-        }
-
-        .service-visual-box::before {
-            content: "";
-
-            position: absolute;
-
-            inset: 14px;
-
-            border: 1px solid rgba(255,255,255,0.045);
-
-            border-radius: 13px;
-
-            pointer-events: none;
-        }
-
-        .service-visual-box img {
-            position: relative;
-            z-index: 1;
-
-            width: 88%;
-            height: 350px;
-
-            object-fit: contain;
-
-            padding: 18px;
-
-            transition: transform 0.35s ease;
-        }
-
-        .service-visual-box:hover img {
-            transform: scale(1.025);
-        }
-
-        .visual-badge {
-            position: absolute;
-            z-index: 2;
-
-            background: rgba(255,255,255,0.96);
-
-            color: var(--navy);
-
-            padding: 10px 13px;
-
-            border-radius: 7px;
-
-            font-size: 9px;
-            font-weight: 900;
-
-            letter-spacing: 0.7px;
-
-            box-shadow:
-                0 12px 25px rgba(0,0,0,0.2);
-        }
-
-        .visual-badge.one {
-            left: -13px;
-            top: 40px;
-        }
-
-        .visual-badge.two {
-            right: -13px;
-            bottom: 40px;
-        }
-
-        /* =========================
-           INTRO
-        ========================= */
-
-        .intro-section {
-            background: #ffffff;
-        }
-
-        .intro-grid {
-            display: grid;
-
-            grid-template-columns: 0.8fr 1.2fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .intro-heading h2 {
-            max-width: 520px;
-
-            font-size: clamp(34px, 4vw, 50px);
-
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-        }
-
-        .intro-copy {
-            position: relative;
-
-            padding-left: 26px;
-
-            border-left: 2px solid rgba(25,167,206,0.28);
-        }
-
-        .intro-copy p {
-            max-width: 670px;
-
-            color: var(--muted);
-
-            font-size: 15px;
-
-            line-height: 1.85;
-
-            margin-bottom: 16px;
-        }
-
-        .intro-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* =========================
-           SERVICE SECTION
-        ========================= */
-
-        .technology-section {
-            background: var(--light);
-        }
-
-        .service-main-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 55px;
-
-            align-items: center;
-        }
-
-        .service-copy h2 {
-            max-width: 570px;
-
-            font-size: clamp(34px, 4vw, 49px);
-
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 17px;
-        }
-
-        .service-copy > p {
-            max-width: 620px;
-
-            color: var(--muted);
-
-            font-size: 15px;
-
-            line-height: 1.8;
-
-            margin-bottom: 25px;
-        }
-
-        .service-list {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 9px;
-
-            margin-bottom: 25px;
-        }
-
-        .service-list div {
-            padding: 12px 14px;
-
-            border-radius: 7px;
-
-            background: #ffffff;
-
-            border: 1px solid var(--border);
-
-            font-size: 12px;
-
-            font-weight: 700;
-
-            transition:
-                border-color 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .service-list div:hover {
-            border-color: rgba(25,167,206,0.4);
-
-            transform: translateY(-2px);
-
-            box-shadow: 0 8px 20px rgba(11,18,32,0.05);
-        }
-
-        .service-list div::before {
-            content: "✓";
-
-            color: var(--cyan);
-
-            font-weight: 900;
-
-            margin-right: 7px;
-        }
-
-        .service-card {
-            padding: 38px;
-
-            min-height: 370px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            border-radius: 15px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #0b1220,
-                    #121d31
-                );
-
-            color: #ffffff;
-
-            overflow: hidden;
-
-            position: relative;
-
-            box-shadow:
-                0 20px 45px rgba(11,18,32,0.12);
-        }
-
-        .service-card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 180px;
-            height: 180px;
-
-            left: -90px;
-            top: -90px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(25,167,206,0.14);
-        }
-
-        .service-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 280px;
-            height: 280px;
-
-            right: -130px;
-            bottom: -140px;
-
-            border-radius: 50%;
-
-            background: rgba(25,167,206,0.12);
-        }
-
-        .service-card-label {
-            position: relative;
-            z-index: 1;
-
-            color: #7dddf5;
-
-            font-size: 10px;
-            font-weight: 900;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 18px;
-        }
-
-        .service-card h3 {
-            position: relative;
-            z-index: 1;
-
-            max-width: 450px;
-
-            font-size: 31px;
-
-            line-height: 1.12;
-
-            letter-spacing: -1px;
-
-            margin-bottom: 16px;
-        }
-
-        .service-card p {
-            position: relative;
-            z-index: 1;
-
-            max-width: 470px;
-
-            color: #aebdca;
-
-            font-size: 14px;
-
-            line-height: 1.8;
-
-            margin-bottom: 20px;
-        }
-
-        .service-card-link {
-            position: relative;
-            z-index: 1;
-
-            display: inline-block;
-
-            color: #7dddf5;
-
-            font-size: 12px;
-            font-weight: 900;
-
-            transition:
-                color 0.25s ease,
-                transform 0.25s ease;
-        }
-
-        .service-card-link:hover {
-            color: #ffffff;
-            transform: translateX(3px);
-        }
-
-        /* =========================
-           COMMON PROBLEMS
-        ========================= */
-
-        .support-section {
-            background: #ffffff;
-        }
-
-        .support-heading {
-            max-width: 700px;
-
-            margin-bottom: 38px;
-        }
-
-        .support-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 10px;
-        }
-
-        .support-tag {
-            padding: 15px;
-
-            border: 1px solid var(--border);
-
-            border-radius: 8px;
-
-            color: var(--text);
-
-            background: #ffffff;
-
-            font-size: 12px;
-
-            font-weight: 700;
-
-            transition:
-                border-color 0.25s ease,
-                background 0.25s ease,
-                transform 0.25s ease;
-        }
-
-        .support-tag:hover {
-            border-color: rgba(25,167,206,0.4);
-
-            background: #f8fcfd;
-
-            transform: translateY(-2px);
-        }
-
-        .support-tag::before {
-            content: "•";
-
-            color: var(--cyan);
-
-            margin-right: 7px;
-        }
-
-        .shipping-note {
-            margin-top: 32px;
-
-            padding: 21px 23px;
-
-            border-left: 3px solid var(--cyan);
-
-            background: var(--light);
-
-            color: var(--muted);
-
-            font-size: 13px;
-
-            line-height: 1.7;
-        }
-
-        .shipping-note strong {
-            color: var(--navy);
-        }
-
-        /* =========================
-           CREATIVE
-        ========================= */
-
-        .creative-section {
-            background:
-                radial-gradient(
-                    circle at 90% 15%,
-                    rgba(25,167,206,0.08),
-                    transparent 28%
-                ),
-                var(--navy);
-
-            color: #ffffff;
-
-            overflow: hidden;
-        }
-
-        .creative-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 60px;
-
-            align-items: center;
-        }
-
-        .creative-copy h2 {
-            max-width: 570px;
-
-            font-size: clamp(34px, 4vw, 49px);
-
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 17px;
-        }
-
-        .creative-copy > p {
-            max-width: 620px;
-
-            color: #aebdca;
-
-            font-size: 15px;
-
-            line-height: 1.8;
-
-            margin-bottom: 26px;
-        }
-
-        .creative-list {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 10px;
-
-            margin-bottom: 25px;
-        }
-
-        .creative-list div {
-            padding: 12px 14px;
-
-            border-radius: 7px;
-
-            background: rgba(255,255,255,0.05);
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            color: #d6dfe7;
-
-            font-size: 12px;
-
-            font-weight: 700;
-
-            transition:
-                background 0.25s ease,
-                border-color 0.25s ease,
-                transform 0.25s ease;
-        }
-
-        .creative-list div:hover {
-            background: rgba(25,167,206,0.08);
-
-            border-color: rgba(25,167,206,0.22);
-
-            transform: translateY(-2px);
-        }
-
-        .creative-list div::before {
-            content: "✓";
-
-            color: var(--cyan);
-
-            margin-right: 7px;
-        }
-
-        .creative-visual {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 12px;
-        }
-
-        .creative-visual img {
-            width: 100%;
-
-            height: 205px;
-
-            object-fit: cover;
-
-            border-radius: 10px;
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-        .creative-visual img:hover {
-            transform: translateY(-4px);
-
-            border-color: rgba(25,167,206,0.35);
-        }
-
-        .creative-visual img:first-child {
-            grid-column: span 2;
-            height: 230px;
-        }
-
-        /* =========================
-           BUSINESS
-        ========================= */
-
-        .business-section {
-            background: #ffffff;
-        }
-
-        .business-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 60px;
-
-            align-items: center;
-        }
-
-        .business-copy h2 {
-            max-width: 570px;
-
-            font-size: clamp(34px, 4vw, 49px);
-
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 17px;
-        }
-
-        .business-copy > p {
-            max-width: 620px;
-
-            color: var(--muted);
-
-            font-size: 15px;
-
-            line-height: 1.8;
-
-            margin-bottom: 25px;
-        }
-
-        .business-list {
-            display: grid;
-
-            gap: 10px;
-        }
-
-        .business-item {
-            padding: 15px 17px;
-
-            border: 1px solid var(--border);
-
-            border-radius: 8px;
-
-            background: var(--light);
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-            transition:
-                border-color 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .business-item:hover {
-            border-color: rgba(25,167,206,0.35);
-
-            transform: translateX(3px);
-
-            box-shadow: 0 8px 22px rgba(11,18,32,0.05);
-        }
-
-        .business-item::before {
-            content: "→";
-
-            color: var(--cyan);
-
-            margin-right: 9px;
-        }
-
-        .business-panel {
-            padding: 40px;
-
-            border-radius: 15px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #f7fafb,
-                    #eef4f7
-                );
-
-            border: 1px solid var(--border);
-
-            box-shadow:
-                0 18px 40px rgba(11,18,32,0.05);
-        }
-
-        .business-panel-label {
-            color: var(--cyan-dark);
-
-            font-size: 10px;
-
-            font-weight: 900;
-
-            letter-spacing: 1.4px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 17px;
-        }
-
-        .business-panel h3 {
-            font-size: 30px;
-
-            line-height: 1.15;
-
-            margin-bottom: 13px;
-        }
-
-        .business-panel p {
-            color: var(--muted);
-
-            font-size: 13px;
-
-            line-height: 1.75;
-
-            margin-bottom: 20px;
-        }
-
-        /* =========================
-           HOW WE WORK
-        ========================= */
-
-        .process-section {
-            background: var(--light);
-        }
-
-        .process-heading {
-            max-width: 700px;
-
-            margin-bottom: 42px;
-        }
-
-        .process-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 14px;
-        }
-
-        .process-card {
-            padding: 27px 22px;
-
-            background: #ffffff;
-
-            border: 1px solid var(--border);
-
-            border-radius: 10px;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .process-card:hover {
-            transform: translateY(-4px);
-
-            border-color: rgba(25,167,206,0.35);
-
-            box-shadow:
-                0 15px 30px rgba(11,18,32,0.06);
-        }
-
-        .process-number {
-            color: var(--cyan);
-
-            font-size: 11px;
-
-            font-weight: 900;
-
-            margin-bottom: 17px;
-        }
-
-        .process-card h3 {
-            font-size: 17px;
-
-            margin-bottom: 8px;
-        }
-
-        .process-card p {
-            color: var(--muted);
-
-            font-size: 12px;
-
-            line-height: 1.7;
-        }
-
-        /* =========================
-           FINAL CTA
-        ========================= */
-
-        .final-cta {
-            position: relative;
-
-            background:
-                radial-gradient(
-                    circle at 20% 50%,
-                    rgba(25,167,206,0.16),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 85% 20%,
-                    rgba(25,167,206,0.07),
-                    transparent 25%
-                ),
-                var(--navy);
-
-            color: #ffffff;
-
-            padding: 90px 0;
-
-            text-align: center;
-
-            overflow: hidden;
-        }
-
-        .final-cta h2 {
-            position: relative;
-            z-index: 1;
-
-            font-size: clamp(36px, 4.7vw, 56px);
-
-            line-height: 1.02;
-
-            letter-spacing: -1.7px;
-
-            margin-bottom: 17px;
-        }
-
-        .final-cta p {
-            position: relative;
-            z-index: 1;
-
-            max-width: 640px;
-
-            margin: 0 auto 27px;
-
-            color: #b7c4d1;
-
-            font-size: 15px;
-        }
-
-        .final-buttons {
-            position: relative;
-            z-index: 1;
-
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-        }
-
-        .final-cta .button-outline {
-            color: #ffffff;
-
-            background: transparent;
-
-            border-color: rgba(255,255,255,0.25);
-        }
-
-        .final-cta .button-outline:hover {
-            color: #7dddf5;
-
-            border-color: var(--cyan);
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #070d17;
-
-            color: #ffffff;
-
-            padding: 60px 0 24px;
-        }
-
-        .footer-grid {
-            display: grid;
-
-            grid-template-columns: 1.5fr 1fr 1fr;
-
-            gap: 55px;
-
-            padding-bottom: 42px;
-
-            border-bottom:
-                1px solid rgba(255,255,255,0.08);
-        }
-
-        .footer-brand img {
-            width: 155px;
-
-            margin-bottom: 17px;
-        }
-
-        .footer-brand p {
-            max-width: 350px;
-
-            color: #8f9baa;
-
-            font-size: 12px;
-
-            line-height: 1.7;
-        }
-
-        .footer-column h4 {
-            font-size: 12px;
-
-            letter-spacing: 1px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 17px;
-        }
-
-        .footer-column a {
-            display: block;
-
-            color: #8f9baa;
-
-            font-size: 12px;
-
-            margin-bottom: 8px;
-
-            transition:
-                color 0.2s ease,
-                transform 0.2s ease;
-        }
-
-        .footer-column a:hover {
-            color: var(--cyan);
-
-            transform: translateX(2px);
-        }
-
-        .footer-bottom {
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            padding-top: 20px;
-
-            color: #697584;
-
-            font-size: 11px;
-        }
-
-        /* =========================
-           WHATSAPP
-        ========================= */
-
-        .whatsapp-float {
-            position: fixed;
-
-            right: 21px;
-            bottom: 21px;
-
-            width: 56px;
-            height: 56px;
-
-            border-radius: 50%;
-
-            background: var(--green);
-
-            color: #ffffff;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 22px;
-
-            z-index: 999;
-
-            box-shadow:
-                0 12px 28px rgba(37,211,102,0.35);
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: translateY(-4px) scale(1.04);
-
-            box-shadow:
-                0 16px 32px rgba(37,211,102,0.42);
-        }
-
-        /* =========================
-           TABLET
-        ========================= */
-
-        @media (max-width: 1050px) {
-
-            nav {
-                gap: 15px;
-            }
-
-            nav a {
-                font-size: 12px;
-            }
-
-            .support-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-        /* =========================
-           MOBILE NAV
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .nav-container {
-                min-height: 70px;
-            }
-
-            .logo {
-                width: 145px;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            nav {
-                position: absolute;
-
-                top: 70px;
-                left: 0;
-                right: 0;
-
-                display: flex;
-
-                flex-direction: column;
-
-                align-items: stretch;
-
-                gap: 0;
-
-                padding: 10px 4% 16px;
-
-                background:
-                    rgba(7,13,23,0.99);
-
-                border-bottom:
-                    1px solid rgba(255,255,255,0.08);
-
-                box-shadow:
-                    0 18px 35px rgba(0,0,0,0.18);
-
-                opacity: 0;
-                visibility: hidden;
-
-                transform: translateY(-10px);
-
-                transition:
-                    opacity 0.25s ease,
-                    visibility 0.25s ease,
-                    transform 0.25s ease;
-            }
-
-            nav.nav-open {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-
-            nav a {
-                width: 100%;
-
-                padding: 14px 8px;
-
-                border-bottom:
-                    1px solid rgba(255,255,255,0.055);
-
-                font-size: 14px;
-            }
-
-            nav a:last-child {
-                margin-top: 8px;
-
-                border-bottom: none;
-
-                text-align: center;
-            }
-
-            nav a:not(.nav-contact)::after {
-                display: none;
-            }
-
-            .nav-contact {
-                padding: 12px 18px;
-            }
-
-            .services-hero {
-                padding: 70px 0;
-            }
-
-            .services-hero-grid,
-            .intro-grid,
-            .service-main-grid,
-            .creative-grid,
-            .business-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-hero-grid {
-                gap: 45px;
-            }
-
-            .service-visual-box {
-                max-width: 520px;
-
-                min-height: 340px;
-
-                margin: 5px auto 0;
-            }
-
-            .service-visual-box img {
-                height: 315px;
-            }
-
-            .visual-badge.one {
-                left: 8px;
-            }
-
-            .visual-badge.two {
-                right: 8px;
-            }
-
-            .intro-copy {
-                padding-left: 20px;
-            }
-
-            .creative-visual {
-                max-width: 650px;
-
-                margin: auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-
-                gap: 38px;
-            }
-
-        }
-
-        /* =========================
-           SMALL MOBILE
-        ========================= */
-
-        @media (max-width: 560px) {
-
-            .container {
-                width: min(92%, 1180px);
-            }
-
-            .section {
-                padding: 68px 0;
-            }
-
-            .services-hero {
-                padding: 62px 0 65px;
-            }
-
-            .services-hero h1 {
-                font-size: 44px;
-
-                letter-spacing: -2px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-
-                align-items: stretch;
-
-                max-width: 330px;
-            }
-
-            .hero-buttons .button {
-                width: 100%;
-            }
-
-            .service-visual-box {
-                min-height: 300px;
-
-                border-radius: 14px;
-            }
-
-            .service-visual-box img {
-                width: 92%;
-
-                height: 280px;
-
-                padding: 13px;
-            }
-
-            .visual-badge {
-                padding: 8px 10px;
-
-                font-size: 8px;
-            }
-
-            .visual-badge.one {
-                top: 25px;
-            }
-
-            .visual-badge.two {
-                bottom: 25px;
-            }
-
-            .service-list,
-            .creative-list {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                padding: 30px;
-
-                min-height: 330px;
-            }
-
-            .service-card h3 {
-                font-size: 27px;
-            }
-
-            .support-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .creative-visual {
-                grid-template-columns: 1fr;
-            }
-
-            .creative-visual img,
-            .creative-visual img:first-child {
-                grid-column: auto;
-
-                height: 230px;
-            }
-
-            .business-panel {
-                padding: 30px;
-            }
-
-            .business-panel h3 {
-                font-size: 27px;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .final-cta {
-                padding: 72px 0;
-            }
-
-            .final-buttons {
-                flex-direction: column;
-
-                align-items: stretch;
-
-                max-width: 320px;
-
-                margin: auto;
-            }
-
-            .final-buttons .button {
-                width: 100%;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-            }
-
-            .whatsapp-float {
-                width: 52px;
-                height: 52px;
-
-                right: 14px;
-                bottom: 14px;
-            }
-
-        }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | Street Gadgets Care</title>
+
+  <meta name="description" content="Explore Street Gadgets Care services including phone and laptop repairs, technology support, creative design, business documents and practical digital support in Nairobi and across Kenya.">
+  <meta name="keywords" content="phone repair Nairobi, laptop repair Nairobi, screen replacement Nairobi, battery replacement, laptop servicing, graphic design Nairobi, CV design, company profile design, business plan, business name registration">
+  <meta name="author" content="Street Gadgets Care">
+
+  <link rel="icon" type="image/png" href="Logo.png">
+
+  <style>
+    :root {
+      --navy: #0b1220;
+      --navy-light: #121d31;
+      --cyan: #19a7ce;
+      --cyan-dark: #118bad;
+      --green: #25d366;
+      --light: #f5f8fa;
+      --white: #ffffff;
+      --text: #263445;
+      --muted: #6b7785;
+      --border: #e3e9ee;
+      --shadow: 0 18px 45px rgba(11, 18, 32, 0.09);
+      --shadow-hover: 0 24px 55px rgba(11, 18, 32, 0.14);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 18, 32, 0.97);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      position: relative;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 170px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+    }
+
+    .main-nav > a {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 12px;
+      border-radius: 9px;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .main-nav > a:hover,
+    .main-nav > a.active {
+      color: var(--white);
+      background: rgba(25, 167, 206, 0.13);
+    }
+
+    .nav-whatsapp {
+      background: var(--green) !important;
+      color: #06150b !important;
+      margin-left: 6px;
+      padding: 11px 16px !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-whatsapp:hover {
+      background: #20c55d !important;
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 21px;
+      height: 2px;
+      background: #fff;
+      border-radius: 4px;
+      transition: 0.25s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(110deg, rgba(11, 18, 32, 0.97) 0%, rgba(11, 18, 32, 0.88) 45%, rgba(11, 18, 32, 0.50) 100%),
+        url("laptop-servicing.jpg") center/cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(25, 167, 206, 0.18);
+      border-radius: 50%;
+      right: -180px;
+      top: -190px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      right: 80px;
+      bottom: -210px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #8bdff5;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--cyan);
+      display: inline-block;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.03;
+      letter-spacing: -2.5px;
+      margin-bottom: 24px;
+      max-width: 760px;
+    }
+
+    .hero h1 span {
+      color: var(--cyan);
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+      max-width: 650px;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 21px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #06141a;
+    }
+
+    .btn-primary:hover {
+      background: #35b7da;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cyan);
+      background: rgba(25, 167, 206, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       INTRO
+    ========================== */
+
+    .intro {
+      padding: 92px 0 55px;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--cyan-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+    }
+
+    .section-heading {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -1.3px;
+      margin-bottom: 17px;
+    }
+
+    .section-text {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================
+       SERVICE PILLARS
+    ========================== */
+
+    .pillars-section {
+      padding: 30px 0 100px;
+      background: var(--white);
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pillar-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: 0 8px 28px rgba(11, 18, 32, 0.045);
+      transition: 0.3s ease;
+    }
+
+    .pillar-card::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(25, 167, 206, 0.05);
+      right: -70px;
+      top: -70px;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(25, 167, 206, 0.3);
+    }
+
+    .pillar-icon {
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      background: #eaf8fc;
+      color: var(--cyan-dark);
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .pillar-card:nth-child(2) .pillar-icon {
+      background: #eef2ff;
+      color: #4d63b8;
+    }
+
+    .pillar-card:nth-child(3) .pillar-icon {
+      background: #edf9f1;
+      color: #21844a;
+    }
+
+    .pillar-card h3 {
+      color: var(--navy);
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .service-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+      padding-top: 17px;
+    }
+
+    .service-list li {
+      position: relative;
+      padding: 7px 0 7px 22px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      color: var(--cyan);
+      font-weight: 800;
+    }
+
+    .pillar-link {
+      display: inline-flex;
+      margin-top: 23px;
+      color: var(--cyan-dark);
+      font-size: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .pillar-link:hover {
+      gap: 5px;
+      color: var(--navy);
+    }
+
+    /* =========================
+       TECHNOLOGY DETAIL
+    ========================== */
+
+    .technology-section {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .detail-copy .section-label {
+      margin-bottom: 12px;
+    }
+
+    .detail-copy h2 {
+      color: var(--navy);
+      font-size: clamp(31px, 4vw, 47px);
+      line-height: 1.1;
+      letter-spacing: -1.4px;
+      margin-bottom: 18px;
+    }
+
+    .detail-copy > p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .mini-services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .mini-service {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .mini-service span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 3px;
+    }
+
+    .detail-visual {
+      position: relative;
+    }
+
+    .detail-image {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .floating-note {
+      position: absolute;
+      left: -28px;
+      bottom: 28px;
+      max-width: 280px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .floating-note strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .floating-note span {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* =========================
+       PROBLEMS
+    ========================== */
+
+    .problems-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .center-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .problem-card {
+      padding: 21px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      transition: 0.25s ease;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(25, 167, 206, 0.35);
+      box-shadow: 0 12px 28px rgba(11, 18, 32, 0.07);
+    }
+
+    .problem-number {
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .problem-card h3 {
+      color: var(--navy);
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    /* =========================
+       KENYA SHIPPING
+    ========================== */
+
+    .shipping-section {
+      padding: 0 0 100px;
+      background: var(--white);
+    }
+
+    .shipping-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 35px;
+      padding: 38px 42px;
+      border-radius: 20px;
+      background:
+        linear-gradient(120deg, var(--navy), #16243b);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .shipping-card::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(25, 167, 206, 0.15);
+      border-radius: 50%;
+      right: -130px;
+      top: -130px;
+    }
+
+    .shipping-card h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .shipping-card h2 span {
+      color: var(--cyan);
+    }
+
+    .shipping-card p {
+      max-width: 700px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+    }
+
+    .shipping-button {
+      position: relative;
+      z-index: 2;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       CREATIVE
+    ========================== */
+
+    .creative-section {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .creative-copy h2,
+    .business-copy h2 {
+      color: var(--navy);
+      font-size: clamp(31px, 4vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -1.3px;
+      margin-bottom: 17px;
+    }
+
+    .creative-copy > p,
+    .business-copy > p {
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 27px;
+    }
+
+    .creative-services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 18px;
+      margin-bottom: 30px;
+    }
+
+    .creative-services div {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .creative-services div::before {
+      content: "•";
+      color: var(--cyan);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    .creative-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .creative-images img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(11, 18, 32, 0.09);
+    }
+
+    .creative-images img:first-child {
+      grid-column: span 2;
+      height: 260px;
+    }
+
+    /* =========================
+       BUSINESS
+    ========================== */
+
+    .business-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .business-card {
+      background: var(--navy);
+      border-radius: 22px;
+      padding: 34px;
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .business-card-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .business-card-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(25, 167, 206, 0.14);
+      color: var(--cyan);
+      font-size: 22px;
+    }
+
+    .business-card h3 {
+      font-size: 21px;
+    }
+
+    .business-card p {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .business-list {
+      list-style: none;
+    }
+
+    .business-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      font-size: 14px;
+    }
+
+    .business-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .business-list li::before {
+      content: "✓";
+      color: var(--cyan);
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       PROCESS
+    ========================== */
+
+    .process-section {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .process-card {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 28px 23px;
+    }
+
+    .process-card::after {
+      content: "→";
+      position: absolute;
+      right: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--cyan);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      z-index: 3;
+    }
+
+    .process-card:last-child::after {
+      display: none;
+    }
+
+    .process-number {
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .process-card h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================== */
+
+    .cta-section {
+      padding: 95px 0;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(25, 167, 206, 0.12), transparent 30%),
+        var(--navy);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+      left: -230px;
+      bottom: -260px;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-content .section-label {
+      color: #8bdff5;
+    }
+
+    .cta-content h2 {
+      color: var(--white);
+      font-size: clamp(31px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+
+    .cta-content p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #080e19;
+      color: rgba(255, 255, 255, 0.72);
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.75fr 1fr;
+      gap: 55px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand img {
+      width: 165px;
+      margin-bottom: 17px;
+    }
+
+    .footer-brand p {
+      max-width: 370px;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .footer-column h3 {
+      color: var(--white);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .footer-column a {
+      display: block;
+      width: fit-content;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 13px;
+      margin-bottom: 10px;
+      transition: 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-contact-item {
+      margin-bottom: 11px;
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      padding-top: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 12px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================== */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 900;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-size: 26px;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.32);
+      transition: 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 1050px) {
+      .main-nav > a {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      .brand img {
+        width: 150px;
+      }
+
+      .detail-grid,
+      .creative-grid,
+      .business-grid {
+        gap: 45px;
+      }
+
+      .problems-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        width: min(100% - 30px, 680px);
+      }
+
+      .nav-wrap {
+        min-height: 70px;
+      }
+
+      .brand img {
+        width: 145px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        padding: 13px;
+        background: var(--navy);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 0;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+      }
+
+      .main-nav.nav-open {
+        display: flex;
+      }
+
+      .main-nav > a {
+        width: 100%;
+        padding: 13px 14px;
+        font-size: 14px;
+      }
+
+      .nav-whatsapp {
+        margin-left: 0;
+        margin-top: 4px;
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 570px;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.8px;
+      }
+
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-grid,
+      .creative-grid,
+      .business-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-grid {
+        gap: 35px;
+      }
+
+      .detail-visual {
+        order: -1;
+      }
+
+      .detail-image {
+        height: 380px;
+      }
+
+      .floating-note {
+        left: 18px;
+        bottom: 18px;
+      }
+
+      .creative-images {
+        order: -1;
+      }
+
+      .business-grid {
+        gap: 35px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-card::after {
+        display: none;
+      }
+
+      .shipping-card {
+        grid-template-columns: 1fr;
+        padding: 32px;
+      }
+
+      .shipping-button {
+        width: fit-content;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+      }
+
+      .footer-brand {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 24px, 500px);
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        line-height: 1.05;
+      }
+
+      .hero p {
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn,
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .intro {
+        padding: 70px 0 35px;
+      }
+
+      .pillars-section,
+      .technology-section,
+      .problems-section,
+      .creative-section,
+      .business-section,
+      .process-section {
+        padding: 70px 0;
+      }
+
+      .shipping-section {
+        padding-bottom: 70px;
+      }
+
+      .pillar-card {
+        padding: 27px;
+      }
+
+      .mini-services,
+      .creative-services {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-image {
+        height: 300px;
+        border-radius: 18px;
+      }
+
+      .floating-note {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: -45px 15px 0;
+        z-index: 4;
+      }
+
+      .problems-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shipping-card {
+        padding: 28px 23px;
+      }
+
+      .shipping-button {
+        width: 100%;
+      }
+
+      .shipping-button .btn {
+        width: 100%;
+      }
+
+      .creative-images {
+        gap: 9px;
+      }
+
+      .creative-images img {
+        height: 140px;
+      }
+
+      .creative-images img:first-child {
+        height: 200px;
+      }
+
+      .business-card {
+        padding: 27px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .floating-whatsapp {
+        width: 53px;
+        height: 53px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 23px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
 
-<!-- =========================
-     HEADER
-========================= -->
+      <a href="index.html" class="brand" aria-label="Street Gadgets Care Home">
+        <img src="Logo.png" alt="Street Gadgets Care">
+      </a>
 
-<header>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNavigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="nav-container">
-
+      <nav class="main-nav" id="mainNavigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="tech-repairs.html">Tech Repairs</a>
+        <a href="shop.html">Shop</a>
+        <a href="creative-studio.html">Creative Studio</a>
+        <a href="contact.html">Let's Talk</a>
         <a
-            href="index.html"
-            aria-label="Street Gadgets Care home"
-        >
-
-            <img
-                src="Logo.png"
-                alt="Street Gadgets Care"
-                class="logo"
-            >
-
+          href="https://wa.me/254114259961"
+          class="nav-whatsapp"
+          target="_blank"
+          rel="noopener">
+          WhatsApp
         </a>
-
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="mainNavigation"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-        <nav
-            id="mainNavigation"
-            aria-label="Main navigation"
-        >
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a
-                href="services.html"
-                class="nav-active"
-                aria-current="page"
-            >
-                Services
-            </a>
-
-            <a href="tech-repairs.html">
-                Tech Repairs
-            </a>
-
-            <a href="shop.html">
-                Shop
-            </a>
-
-            <a href="creative-studio.html">
-                Creative Studio
-            </a>
-
-            <a
-                href="contact.html"
-                class="nav-contact"
-            >
-                Let's Talk
-            </a>
-
-        </nav>
+      </nav>
 
     </div>
-
-</header>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="services-hero">
-
-    <div class="container services-hero-grid">
+  </header>
 
 
-        <div>
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
 
-            <div class="hero-label">
-                Street Gadgets Care Services
-            </div>
+        <div class="eyebrow">SERVICES • STREET GADGETS CARE</div>
 
+        <h1>
+          Practical services for
+          <span>technology & business.</span>
+        </h1>
 
-            <h1>
-                Services built around
-                <span>real needs.</span>
-            </h1>
+        <p>
+          From fixing the device in your hand to helping you present your
+          business professionally, Street Gadgets Care brings technology,
+          creativity and practical support together in one place.
+        </p>
 
+        <div class="hero-actions">
+          <a href="#service-pillars" class="btn btn-primary">
+            Explore Our Services
+          </a>
 
-            <p class="hero-description">
-
-                From fixing the device in your hand to helping
-                your business look professional, Street Gadgets Care
-                brings technology, creativity and practical support
-                together under one brand.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="tech-repairs.html"
-                    class="button button-primary"
-                >
-                    Explore Tech Repairs →
-                </a>
-
-
-                <a
-                    href="contact.html"
-                    class="button button-outline"
-                >
-                    Tell Us What You Need
-                </a>
-
-            </div>
-
-
-            <div class="hero-location">
-                Based in Nairobi • Serving Customers Across Kenya
-            </div>
-
+          <a href="https://wa.me/254114259961" class="btn btn-outline" target="_blank" rel="noopener">
+            Talk To Us
+          </a>
         </div>
 
-
-        <div class="services-hero-visual">
-
-            <div class="service-visual-box">
-
-                <img
-                    src="laptop-servicing.jpg"
-                    alt="Technology service at Street Gadgets Care"
-                    loading="eager"
-                >
-
-
-                <div class="visual-badge one">
-                    TECHNOLOGY FIRST
-                </div>
-
-
-                <div class="visual-badge two">
-                    REPAIR • CREATE • SUPPORT
-                </div>
-
-            </div>
-
-        </div>
-
-
+      </div>
     </div>
+  </section>
 
-</section>
 
-
-<!-- =========================
-     INTRO
-========================= -->
-
-<section class="section intro-section">
-
-    <div class="container intro-grid">
-
-
-        <div class="intro-heading">
-
-            <div class="section-label">
-                What We Offer
-            </div>
-
-
-            <h2>
-                One brand. Several practical ways to help.
-            </h2>
-
-        </div>
-
-
-        <div class="intro-copy">
-
-            <p>
-
-                Street Gadgets Care is built around the things
-                people and businesses regularly need: working
-                technology, useful devices, professional design
-                and practical digital support.
-
-            </p>
-
-
-            <p>
-
-                Our services are organised into three main areas,
-                making it easier to find exactly what you need
-                without making things complicated.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     01 TECHNOLOGY
-========================= -->
-
-<section class="section technology-section">
-
-    <div class="container service-main-grid">
-
-
-        <div class="service-copy">
-
-            <div class="section-label">
-                01 / Technology
-            </div>
-
-
-            <h2>
-                Repair. Upgrade. Protect.
-            </h2>
-
-
-            <p>
-
-                When your phone or laptop has a problem, our
-                technology services help you get it working again,
-                improve its performance and keep it useful.
-
-            </p>
-
-
-            <div class="service-list">
-
-                <div>
-                    Phone Repairs
-                </div>
-
-                <div>
-                    Laptop Repairs
-                </div>
-
-                <div>
-                    Screen Replacement
-                </div>
-
-                <div>
-                    Battery Replacement
-                </div>
-
-                <div>
-                    Device Upgrades
-                </div>
-
-                <div>
-                    Software & Maintenance
-                </div>
-
-            </div>
-
-
-            <a
-                href="tech-repairs.html"
-                class="button button-dark"
-            >
-                Explore Tech Repairs →
-            </a>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-card-label">
-                Technology Support
-            </div>
-
-
-            <h3>
-                Your device has a problem. Let's find the solution.
-            </h3>
-
-
-            <p>
-
-                We work with phones, laptops and everyday technology
-                problems — from hardware issues to software and
-                performance concerns.
-
-            </p>
-
-
-            <a
-                href="tech-repairs.html"
-                class="service-card-link"
-            >
-                See Detailed Repair Services →
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     COMMON TECHNOLOGY PROBLEMS
-========================= -->
-
-<section class="section support-section">
-
+  <!-- =========================
+       INTRO
+  ========================== -->
+  <section class="intro">
     <div class="container">
 
+      <div class="section-label">WHAT WE DO</div>
 
-        <div class="support-heading">
+      <h2 class="section-heading">
+        One brand. Three ways to help.
+      </h2>
 
-            <div class="section-label">
-                Technology Support
-            </div>
-
-
-            <h2 class="section-title">
-                Problems we can help you with.
-            </h2>
-
-
-            <p class="section-text">
-
-                Not sure which repair service you need?
-                Start by telling us what your device is doing.
-                We can help identify the next step.
-
-            </p>
-
-        </div>
-
-
-        <div class="support-grid">
-
-            <div class="support-tag">
-                Charging Problems
-            </div>
-
-            <div class="support-tag">
-                Liquid Damage
-            </div>
-
-            <div class="support-tag">
-                Software Problems
-            </div>
-
-            <div class="support-tag">
-                Network Issues
-            </div>
-
-            <div class="support-tag">
-                Windows Installation
-            </div>
-
-            <div class="support-tag">
-                Laptop Servicing
-            </div>
-
-            <div class="support-tag">
-                Antivirus & Security
-            </div>
-
-            <div class="support-tag">
-                Performance Issues
-            </div>
-
-        </div>
-
-
-        <div class="shipping-note">
-
-            <strong>NOT IN NAIROBI? NO WORRIES!</strong>
-
-            <br>
-
-            Send your device to us and we'll repair it
-            and ship it back safely.
-
-        </div>
+      <p class="section-text">
+        Whether your technology needs fixing, your brand needs better
+        presentation, or your business needs practical support, we've built
+        our services around real everyday needs.
+      </p>
 
     </div>
+  </section>
 
-</section>
+
+  <!-- =========================
+       SERVICE PILLARS
+  ========================== -->
+  <section class="pillars-section" id="service-pillars">
+    <div class="container">
+
+      <div class="pillar-grid">
+
+        <!-- Technology -->
+        <article class="pillar-card">
+
+          <div class="pillar-icon">⚙</div>
+
+          <h3>Technology & Repairs</h3>
+
+          <p>
+            Reliable support for phones, laptops and everyday technology,
+            from repairs and replacements to maintenance and upgrades.
+          </p>
+
+          <ul class="service-list">
+            <li>Phone Repairs</li>
+            <li>Laptop Repairs</li>
+            <li>Screen Replacement</li>
+            <li>Battery Replacement</li>
+            <li>Device Upgrades</li>
+            <li>Software & Maintenance</li>
+          </ul>
+
+          <a href="tech-repairs.html" class="pillar-link">
+            Explore Tech Repairs →
+          </a>
+
+        </article>
 
 
-<!-- =========================
-     02 CREATIVE STUDIO
-========================= -->
+        <!-- Creative -->
+        <article class="pillar-card">
 
-<section class="section creative-section">
+          <div class="pillar-icon">✦</div>
 
-    <div class="container creative-grid">
+          <h3>Creative Studio</h3>
+
+          <p>
+            Professional design support that helps individuals and
+            businesses look more polished, consistent and ready to be seen.
+          </p>
+
+          <ul class="service-list">
+            <li>Graphic Design</li>
+            <li>Logo Design</li>
+            <li>Flyers & Posters</li>
+            <li>Business Cards</li>
+            <li>CV & Resume Design</li>
+            <li>Company Profile Design</li>
+          </ul>
+
+          <a href="creative-studio.html" class="pillar-link">
+            Explore Creative Studio →
+          </a>
+
+        </article>
+
+
+        <!-- Business -->
+        <article class="pillar-card">
+
+          <div class="pillar-icon">▣</div>
+
+          <h3>Business & Digital</h3>
+
+          <p>
+            Practical business support for people starting, improving or
+            presenting their businesses more professionally.
+          </p>
+
+          <ul class="service-list">
+            <li>Business Plans</li>
+            <li>CV & Resume Support</li>
+            <li>Company Profile Design</li>
+            <li>Professional Documents</li>
+            <li>Business Name Registration</li>
+            <li>Digital & General Support</li>
+          </ul>
+
+          <a href="creative-studio.html" class="pillar-link">
+            Explore Business Support →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       TECHNOLOGY
+  ========================== -->
+  <section class="technology-section">
+    <div class="container">
+
+      <div class="detail-grid">
+
+        <div class="detail-copy">
+
+          <div class="section-label">TECHNOLOGY SERVICES</div>
+
+          <h2>
+            Repair. Upgrade.<br>
+            Protect.
+          </h2>
+
+          <p>
+            A faulty phone or laptop can interrupt your work, communication
+            and daily life. We provide practical repair and maintenance
+            services focused on getting your device back to a useful,
+            reliable condition.
+          </p>
+
+          <div class="mini-services">
+
+            <div class="mini-service">
+              Phone Repairs
+              <span>Common phone hardware problems</span>
+            </div>
+
+            <div class="mini-service">
+              Laptop Repairs
+              <span>Hardware and system support</span>
+            </div>
+
+            <div class="mini-service">
+              Screen Replacement
+              <span>Cracked or damaged displays</span>
+            </div>
+
+            <div class="mini-service">
+              Battery Replacement
+              <span>Weak or failing batteries</span>
+            </div>
+
+            <div class="mini-service">
+              Device Upgrades
+              <span>Storage and memory upgrades</span>
+            </div>
+
+            <div class="mini-service">
+              Software & Maintenance
+              <span>System setup and optimization</span>
+            </div>
+
+          </div>
+
+          <a href="tech-repairs.html" class="btn btn-primary">
+            View Tech Repair Services
+          </a>
+
+        </div>
+
+
+        <div class="detail-visual">
+
+          <img
+            src="laptop-servicing.jpg"
+            alt="Laptop servicing by Street Gadgets Care"
+            class="detail-image">
+
+          <div class="floating-note">
+            <strong>Need a repair?</strong>
+            <span>
+              Tell us what's wrong and we'll help you figure out the next step.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       COMMON PROBLEMS
+  ========================== -->
+  <section class="problems-section">
+    <div class="container">
+
+      <div class="center-heading">
+
+        <div class="section-label">COMMON PROBLEMS</div>
+
+        <h2 class="section-heading">
+          If your device is doing this,<br>
+          let's take a look.
+        </h2>
+
+        <p class="section-text">
+          These are some of the common problems we help customers with.
+          If yours isn't listed, you can still contact us.
+        </p>
+
+      </div>
+
+
+      <div class="problems-grid">
+
+        <article class="problem-card">
+          <div class="problem-number">01</div>
+          <h3>Charging Problems</h3>
+          <p>Device not charging, loose ports or charging interruptions.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">02</div>
+          <h3>Liquid Damage</h3>
+          <p>Support for devices affected by accidental liquid exposure.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">03</div>
+          <h3>Software Problems</h3>
+          <p>System errors, crashes, setup issues and software problems.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">04</div>
+          <h3>Network Issues</h3>
+          <p>Help with common connectivity and network-related problems.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">05</div>
+          <h3>Windows Installation</h3>
+          <p>Windows installation, setup and essential system configuration.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">06</div>
+          <h3>Laptop Servicing</h3>
+          <p>Maintenance and servicing to help keep your laptop running well.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">07</div>
+          <h3>Antivirus & Security</h3>
+          <p>Security setup and practical protection for your computer.</p>
+        </article>
+
+        <article class="problem-card">
+          <div class="problem-number">08</div>
+          <h3>Performance Issues</h3>
+          <p>Slow systems, storage limitations and upgrade recommendations.</p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       KENYA SHIPPING
+  ========================== -->
+  <section class="shipping-section">
+    <div class="container">
+
+      <div class="shipping-card">
+
+        <div>
+          <h2>
+            <span>NOT IN NAIROBI?</span><br>
+            NO WORRIES!
+          </h2>
+
+          <p>
+            Send your device to us and we'll repair &amp; ship it back safely.
+            Contact us first so we can guide you through the process.
+          </p>
+        </div>
+
+        <div class="shipping-button">
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20not%20in%20Nairobi%20and%20I%20would%20like%20to%20send%20my%20device%20for%20repair."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener">
+            Ask About Shipping
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       CREATIVE STUDIO
+  ========================== -->
+  <section class="creative-section">
+    <div class="container">
+
+      <div class="creative-grid">
+
+        <div class="creative-images">
+
+          <img
+            src="logo-design.jpg"
+            alt="Logo design by Street Gadgets Care">
+
+          <img
+            src="restaurant-menu-design.jpg"
+            alt="Restaurant menu design by Street Gadgets Care">
+
+          <img
+            src="business-card-design.jpg"
+            alt="Business card design by Street Gadgets Care">
+
+        </div>
 
 
         <div class="creative-copy">
 
-            <div class="section-label">
-                02 / Creative Studio
-            </div>
+          <div class="section-label">CREATIVE STUDIO</div>
 
+          <h2>
+            Design. Brand.<br>
+            Stand Out.
+          </h2>
 
-            <h2>
-                Design. Brand. Stand Out.
-            </h2>
+          <p>
+            Good design helps people understand your business before you
+            even speak. We create practical visual materials for businesses,
+            professionals, events and individuals.
+          </p>
 
+          <div class="creative-services">
 
-            <p>
+            <div>Graphic Design</div>
+            <div>Logo Design</div>
+            <div>Flyers & Posters</div>
+            <div>Business Cards</div>
+            <div>CV & Resume Design</div>
+            <div>Company Profile Design</div>
+            <div>Business Plans</div>
+            <div>Business Name Registration</div>
 
-                Your business deserves to look as professional
-                as the work you do. Our Creative Studio helps
-                turn your ideas into polished visual materials.
+          </div>
 
-            </p>
-
-
-            <div class="creative-list">
-
-                <div>
-                    Graphic Design
-                </div>
-
-                <div>
-                    Logo Design
-                </div>
-
-                <div>
-                    Flyers & Posters
-                </div>
-
-                <div>
-                    Business Cards
-                </div>
-
-                <div>
-                    CV & Resume Design
-                </div>
-
-                <div>
-                    Company Profile Design
-                </div>
-
-                <div>
-                    Business Plans
-                </div>
-
-                <div>
-                    Business Name Registration
-                </div>
-
-            </div>
-
-
-            <a
-                href="creative-studio.html"
-                class="button button-primary"
-            >
-                Visit Creative Studio →
-            </a>
+          <a href="creative-studio.html" class="btn btn-primary">
+            Explore Creative Studio
+          </a>
 
         </div>
 
-
-        <div class="creative-visual">
-
-            <img
-                src="logo-design.jpg"
-                alt="Logo design by Street Gadgets Care"
-                loading="lazy"
-            >
-
-
-            <img
-                src="restaurant-menu-design.jpg"
-                alt="Restaurant menu design by Street Gadgets Care"
-                loading="lazy"
-            >
-
-
-            <img
-                src="business-card-design.jpg"
-                alt="Business card design by Street Gadgets Care"
-                loading="lazy"
-            >
-
-        </div>
-
+      </div>
 
     </div>
+  </section>
 
-</section>
 
+  <!-- =========================
+       BUSINESS SUPPORT
+  ========================== -->
+  <section class="business-section">
+    <div class="container">
 
-<!-- =========================
-     03 BUSINESS & DIGITAL
-========================= -->
-
-<section class="section business-section">
-
-    <div class="container business-grid">
-
+      <div class="business-grid">
 
         <div class="business-copy">
 
-            <div class="section-label">
-                03 / Business & Digital Support
-            </div>
+          <div class="section-label">BUSINESS & DIGITAL SUPPORT</div>
 
+          <h2>
+            Build. Present.<br>
+            Grow.
+          </h2>
 
-            <h2>
-                Build. Present. Grow.
-            </h2>
+          <p>
+            Starting a business or trying to present an existing one more
+            professionally? We can help with practical documents, designs
+            and digital support that make your work easier to present.
+          </p>
 
-
-            <p>
-
-                We also help individuals and businesses with
-                practical documents, registrations and digital
-                support that make everyday business tasks easier.
-
-            </p>
-
-
-            <div class="business-list">
-
-                <div class="business-item">
-                    Business Plans
-                </div>
-
-                <div class="business-item">
-                    CV & Resume Design
-                </div>
-
-                <div class="business-item">
-                    Company Profile Design
-                </div>
-
-                <div class="business-item">
-                    Professional Business Documents
-                </div>
-
-                <div class="business-item">
-                    Business Name Registration Support
-                </div>
-
-                <div class="business-item">
-                    Digital & General Business Support
-                </div>
-
-            </div>
+          <a href="creative-studio.html" class="btn btn-primary">
+            Get Business Support
+          </a>
 
         </div>
 
 
-        <div class="business-panel">
+        <div class="business-card">
 
-            <div class="business-panel-label">
-                Practical Business Support
+          <div class="business-card-top">
+
+            <div class="business-card-icon">◆</div>
+
+            <div>
+              <h3>Business Support</h3>
+              <p>Practical help for your next step.</p>
             </div>
 
+          </div>
 
-            <h3>
-                Need help turning an idea into something professional?
-            </h3>
-
-
-            <p>
-
-                Whether you are starting a business, preparing
-                documents or improving how your business presents
-                itself, we can help you organise the next step.
-
-            </p>
-
-
-            <a
-                href="creative-studio.html"
-                class="button button-dark"
-            >
-                Explore Business Support →
-            </a>
+          <ul class="business-list">
+            <li>Business Plans</li>
+            <li>CV & Resume Support</li>
+            <li>Company Profile Design</li>
+            <li>Professional Business Documents</li>
+            <li>Business Name Registration Support</li>
+            <li>Digital & General Business Support</li>
+          </ul>
 
         </div>
 
+      </div>
 
     </div>
+  </section>
 
-</section>
 
-
-<!-- =========================
-     HOW WE WORK
-========================= -->
-
-<section class="section process-section">
-
+  <!-- =========================
+       PROCESS
+  ========================== -->
+  <section class="process-section">
     <div class="container">
 
+      <div class="center-heading">
 
-        <div class="process-heading">
+        <div class="section-label">HOW IT WORKS</div>
 
-            <div class="section-label">
-                How We Work
-            </div>
-
-
-            <h2 class="section-title">
-                Simple from start to finish.
-            </h2>
-
-
-            <p class="section-text">
-
-                Whatever service you need, we keep the process
-                straightforward.
-
-            </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    01
-                </div>
-
-
-                <h3>
-                    Tell Us What You Need
-                </h3>
-
-
-                <p>
-
-                    Explain the problem, request or project
-                    you have in mind.
-
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    02
-                </div>
-
-
-                <h3>
-                    We Understand
-                </h3>
-
-
-                <p>
-
-                    We look at what you need and identify
-                    the practical next step.
-
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    03
-                </div>
-
-
-                <h3>
-                    We Get to Work
-                </h3>
-
-
-                <p>
-
-                    We carry out the repair, design, support
-                    or service required.
-
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    04
-                </div>
-
-
-                <h3>
-                    You Get the Result
-                </h3>
-
-
-                <p>
-
-                    We complete the work and help you move
-                    forward with the result.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
-
-<section class="final-cta">
-
-    <div class="container">
-
-
-        <h2>
-            What do you need help with?
+        <h2 class="section-heading">
+          Simple from start to finish.
         </h2>
 
-
-        <p>
-
-            Whether it is a repair, a device, a design project
-            or business support, tell us what you need.
-
+        <p class="section-text">
+          Whether it's a repair, a design project or business support,
+          we keep the process straightforward.
         </p>
 
-
-        <div class="final-buttons">
-
-            <a
-                href="tech-repairs.html"
-                class="button button-primary"
-            >
-                Tech Repairs
-            </a>
+      </div>
 
 
-            <a
-                href="shop.html"
-                class="button button-outline"
-            >
-                Visit Shop
-            </a>
+      <div class="process-grid">
+
+        <article class="process-card">
+          <div class="process-number">01</div>
+          <h3>Tell Us What You Need</h3>
+          <p>
+            Contact us and explain the problem, project or service you're
+            looking for.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">02</div>
+          <h3>We Understand</h3>
+          <p>
+            We ask the right questions and determine the best way to help.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">03</div>
+          <h3>We Get to Work</h3>
+          <p>
+            Once everything is clear, we proceed with the agreed service.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">04</div>
+          <h3>You Get the Result</h3>
+          <p>
+            We complete the work and keep you informed along the way.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
 
 
-            <a
-                href="creative-studio.html"
-                class="button button-outline"
-            >
-                Creative Studio
-            </a>
+  <!-- =========================
+       FINAL CTA
+  ========================== -->
+  <section class="cta-section">
+    <div class="container">
 
+      <div class="cta-content">
 
-            <a
-                href="contact.html"
-                class="button button-outline"
-            >
-                Let's Talk
-            </a>
+        <div class="section-label">LET'S GET STARTED</div>
+
+        <h2>
+          What do you need help with?
+        </h2>
+
+        <p>
+          Whether it's your phone, laptop, business or next design project,
+          Street Gadgets Care is ready to help.
+        </p>
+
+        <div class="cta-actions">
+
+          <a href="tech-repairs.html" class="btn btn-primary">
+            Tech Repairs
+          </a>
+
+          <a href="shop.html" class="btn btn-outline">
+            Visit Shop
+          </a>
+
+          <a href="creative-studio.html" class="btn btn-outline">
+            Creative Studio
+          </a>
+
+          <a href="contact.html" class="btn btn-outline">
+            Let's Talk
+          </a>
 
         </div>
 
+      </div>
+
     </div>
+  </section>
 
-</section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
 
     <div class="container">
 
+      <div class="footer-grid">
 
-        <div class="footer-grid">
+        <div class="footer-brand">
 
+          <img src="Logo.png" alt="Street Gadgets Care">
 
-            <div class="footer-brand">
-
-                <img
-                    src="Logo.png"
-                    alt="Street Gadgets Care"
-                    loading="lazy"
-                >
-
-
-                <p>
-
-                    Technology, repairs, devices, accessories,
-                    creative design and practical business support
-                    — all under one roof.
-
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    Explore
-                </h4>
-
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a
-                    href="services.html"
-                    aria-current="page"
-                >
-                    Services
-                </a>
-
-                <a href="tech-repairs.html">
-                    Tech Repairs
-                </a>
-
-                <a href="shop.html">
-                    Shop
-                </a>
-
-                <a href="creative-studio.html">
-                    Creative Studio
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    Contact
-                </h4>
-
-
-                <a href="tel:0114259961">
-                    0114 259 961
-                </a>
-
-
-                <a
-                    href="https://wa.me/254114259961"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    WhatsApp Us
-                </a>
-
-
-                <a href="mailto:streetgadgetscare@gmail.com">
-                    streetgadgetscare@gmail.com
-                </a>
-
-
-                <a href="#">
-                    Nairobi, Kenya
-                </a>
-
-            </div>
-
+          <p>
+            Laptop and phone repair, technology support, accessories,
+            graphic design and practical business support.
+            Based in Nairobi and serving customers across Kenya.
+          </p>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <div class="footer-column">
 
-            <div>
-                © 2026 Street Gadgets Care. All Rights Reserved.
-            </div>
+          <h3>Explore</h3>
 
-
-            <div>
-                Based in Nairobi • Serving Customers Across Kenya
-            </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="tech-repairs.html">Tech Repairs</a>
+          <a href="shop.html">Shop</a>
+          <a href="creative-studio.html">Creative Studio</a>
+          <a href="contact.html">Let's Talk</a>
 
         </div>
 
+
+        <div class="footer-column">
+
+          <h3>Contact</h3>
+
+          <div class="footer-contact-item">
+            <a href="tel:0114259961">0114 259 961</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <a href="https://wa.me/254114259961" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </div>
+
+          <div class="footer-contact-item">
+            <a href="mailto:streetgadgetscare@gmail.com">
+              streetgadgetscare@gmail.com
+            </a>
+          </div>
+
+          <div class="footer-contact-item">
+            Nairobi, Kenya
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Street Gadgets Care. All rights reserved.
+        </div>
+
+        <div>
+          Repair • Create • Support
+        </div>
+
+      </div>
 
     </div>
 
-</footer>
+  </footer>
 
 
-<!-- =========================
-     WHATSAPP
-========================= -->
-
-<a
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================== -->
+  <a
     href="https://wa.me/254114259961"
-    class="whatsapp-float"
-    aria-label="Chat with Street Gadgets Care on WhatsApp"
-    title="Chat with us on WhatsApp"
+    class="floating-whatsapp"
     target="_blank"
-    rel="noopener noreferrer"
->
+    rel="noopener"
+    aria-label="Chat with Street Gadgets Care on WhatsApp">
     ☎
-</a>
+  </a>
 
 
-<script>
-
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================== -->
+  <script>
     const menuToggle = document.getElementById("menuToggle");
     const mainNavigation = document.getElementById("mainNavigation");
 
+    function closeMenu() {
+      menuToggle.classList.remove("active");
+      mainNavigation.classList.remove("nav-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
     menuToggle.addEventListener("click", function () {
+      const isOpen = mainNavigation.classList.toggle("nav-open");
 
-        const isOpen =
-            mainNavigation.classList.toggle("nav-open");
-
-        menuToggle.classList.toggle("active", isOpen);
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
-        );
-
+      menuToggle.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
     });
 
-
-    /* Close menu after selecting a page */
-
-    mainNavigation.querySelectorAll("a").forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-            mainNavigation.classList.remove("nav-open");
-
-            menuToggle.classList.remove("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        });
-
+    document.querySelectorAll("#mainNavigation a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMenu();
+      });
     });
 
-
-    /* Close menu when clicking outside */
-
-    document.addEventListener("click", function(event) {
-
-        if (
-            mainNavigation.classList.contains("nav-open") &&
-            !mainNavigation.contains(event.target) &&
-            !menuToggle.contains(event.target)
-        ) {
-
-            mainNavigation.classList.remove("nav-open");
-
-            menuToggle.classList.remove("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        }
-
+    document.addEventListener("click", function (event) {
+      if (
+        window.innerWidth <= 800 &&
+        mainNavigation.classList.contains("nav-open") &&
+        !mainNavigation.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        closeMenu();
+      }
     });
 
-
-    /* Reset mobile menu when returning to desktop */
-
-    window.addEventListener("resize", function() {
-
-        if (window.innerWidth > 800) {
-
-            mainNavigation.classList.remove("nav-open");
-
-            menuToggle.classList.remove("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        }
-
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 800) {
+        closeMenu();
+      }
     });
-
-</script>
-
+  </script>
 
 </body>
 </html>
