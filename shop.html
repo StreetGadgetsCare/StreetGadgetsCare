@@ -1,17 +1,13 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Shop | Street Gadgets Care</title>
 
   <meta name="description" content="Shop laptops, phones, chargers, cables, storage, phone protection, laptop accessories and useful gadgets from Street Gadgets Care in Nairobi and across Kenya.">
-
   <meta name="keywords" content="laptops Nairobi, phones Nairobi, laptop accessories Kenya, phone accessories Nairobi, SSD Kenya, RAM Kenya, laptop bags Nairobi, chargers Nairobi, Street Gadgets Care">
-
   <meta name="theme-color" content="#0b1220">
 
   <style>
@@ -19,29 +15,21 @@
       --navy: #0b1220;
       --navy-2: #111d30;
       --navy-3: #17243a;
-
       --cyan: #19a7ce;
       --cyan-dark: #087fa3;
       --cyan-light: #eaf9fd;
-
       --green: #25d366;
-
       --white: #ffffff;
       --light: #f6f9fb;
       --light-2: #eef4f7;
-
       --text: #101b2b;
       --muted: #667484;
-
       --border: #dfe7ed;
-
       --shadow-sm: 0 8px 24px rgba(11, 18, 32, 0.07);
       --shadow: 0 16px 40px rgba(11, 18, 32, 0.10);
       --shadow-lg: 0 25px 65px rgba(11, 18, 32, 0.15);
-
       --radius: 20px;
       --radius-sm: 14px;
-
       --max: 1180px;
     }
 
@@ -676,11 +664,114 @@
       font-size: 13px;
       font-weight: 800;
       transition: 0.25s ease;
+      text-align: center;
+      padding: 10px;
     }
 
     .product-btn:hover {
       background: #20bd5b;
       transform: translateY(-1px);
+    }
+
+    /* =========================
+       FEATURED PHONES & GADGETS
+    ========================= */
+
+    .gadgets-section {
+      background: var(--light);
+    }
+
+    .gadget-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .phone-illustration {
+      min-height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 24px 12px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(25,167,206,0.15), transparent 55%),
+        linear-gradient(135deg, #f4f7f9, #e9f0f4);
+    }
+
+    .phone-mockup {
+      width: 76px;
+      height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      border: 4px solid #263449;
+      border-radius: 13px;
+      background: linear-gradient(145deg, #36465c, #101827);
+      box-shadow: 0 10px 18px rgba(11,18,32,0.22);
+    }
+
+    .phone-mockup::before {
+      content: "";
+      width: 22px;
+      height: 4px;
+      position: absolute;
+      top: 5px;
+      border-radius: 5px;
+      background: #0b1220;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 8px;
+      color: #ffffff;
+      background: linear-gradient(145deg, #19a7ce, #10243d 75%);
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+      padding: 8px 3px;
+    }
+
+    .phone-screen span {
+      display: block;
+      margin-top: 6px;
+      color: rgba(255,255,255,0.8);
+      font-size: 8px;
+      font-weight: 600;
+    }
+
+    .phone-mockup.feature-phone {
+      width: 72px;
+      height: 130px;
+      border-width: 5px;
+      border-radius: 12px;
+      background: #222b39;
+    }
+
+    .phone-mockup.feature-phone .phone-screen {
+      border-radius: 5px;
+      background: linear-gradient(145deg, #d9f4fc, #ffffff);
+      color: #162238;
+      font-size: 10px;
+    }
+
+    .phone-mockup.feature-phone .phone-screen span {
+      color: #526171;
+    }
+
+    .gadget-grid .product-card {
+      min-width: 0;
+    }
+
+    .gadget-grid .product-specs {
+      min-height: 48px;
     }
 
     /* =========================
@@ -1211,6 +1302,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .gadget-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .category-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1401,6 +1496,7 @@
 
       .laptop-grid,
       .accessory-grid,
+      .gadget-grid,
       .category-grid,
       .why-grid {
         grid-template-columns: 1fr;
@@ -1416,6 +1512,10 @@
 
       .product-specs {
         min-height: auto;
+      }
+
+      .phone-illustration {
+        min-height: 180px;
       }
 
       .shop-category {
@@ -1507,19 +1607,12 @@
       </button>
 
       <nav class="main-nav" id="mainNavigation">
-
         <a href="index.html">Home</a>
-
         <a href="about.html">About</a>
-
         <a href="services.html">Services</a>
-
         <a href="tech-repairs.html">Tech Repairs</a>
-
         <a href="shop.html" class="active">Shop</a>
-
         <a href="creative-studio.html">Creative Studio</a>
-
         <a href="contact.html">Contact</a>
 
         <a
@@ -1527,10 +1620,7 @@
           class="nav-whatsapp"
           target="_blank"
           rel="noopener"
-        >
-          WhatsApp
-        </a>
-
+        >WhatsApp</a>
       </nav>
 
     </div>
@@ -1549,52 +1639,29 @@
     <div class="category-track">
 
       <div class="category-set">
-
         <a href="shop.html" class="category-link active">All Shop</a>
-
         <a href="devices.html" class="category-link">Devices</a>
-
         <a href="chargers.html" class="category-link">Chargers</a>
-
         <a href="charging-cables.html" class="category-link">Charging Cables</a>
-
         <a href="phone-protection.html" class="category-link">Phone Protection</a>
-
         <a href="batteries.html" class="category-link">Batteries</a>
-
         <a href="laptop-accessories.html" class="category-link">Laptop Accessories</a>
-
         <a href="laptop-storage.html" class="category-link">Storage & Memory</a>
-
         <a href="computer-accessories.html" class="category-link">Computer Accessories</a>
-
         <a href="other-gadgets.html" class="category-link">Other Gadgets</a>
-
       </div>
 
-
       <div class="category-set" aria-hidden="true">
-
         <a href="shop.html" class="category-link active">All Shop</a>
-
         <a href="devices.html" class="category-link">Devices</a>
-
         <a href="chargers.html" class="category-link">Chargers</a>
-
         <a href="charging-cables.html" class="category-link">Charging Cables</a>
-
         <a href="phone-protection.html" class="category-link">Phone Protection</a>
-
         <a href="batteries.html" class="category-link">Batteries</a>
-
         <a href="laptop-accessories.html" class="category-link">Laptop Accessories</a>
-
         <a href="laptop-storage.html" class="category-link">Storage & Memory</a>
-
         <a href="computer-accessories.html" class="category-link">Computer Accessories</a>
-
         <a href="other-gadgets.html" class="category-link">Other Gadgets</a>
-
       </div>
 
     </div>
@@ -1608,7 +1675,6 @@
   <main>
 
     <section class="hero">
-
       <div class="container hero-grid">
 
         <div class="hero-content">
@@ -1639,53 +1705,39 @@
               class="btn btn-whatsapp"
               target="_blank"
               rel="noopener"
-            >
-              Ask Us What You Need
-            </a>
+            >Ask Us What You Need</a>
 
           </div>
 
           <div class="hero-trust">
-
             <span>Practical technology</span>
-
             <span>Competitive prices</span>
-
             <span>Repair expertise</span>
-
             <span>Kenya-wide support</span>
-
           </div>
 
         </div>
 
-
         <div class="hero-visual">
 
           <div class="hero-image-card">
-
             <img
               src="HP%20745%20G6%20RYZEN%207.JPG"
               alt="HP EliteBook 745 G6 Ryzen 7 laptop"
             >
-
           </div>
 
           <div class="hero-badge">
-
             <div class="hero-badge-icon">✓</div>
-
             <div>
               <strong>Technology, handled with care.</strong>
               <small>Street Gadgets Care</small>
             </div>
-
           </div>
 
         </div>
 
       </div>
-
     </section>
 
 
@@ -1698,33 +1750,24 @@
       <div class="container">
 
         <div class="section-heading">
+          <div class="section-kicker">Featured Products</div>
 
-          <div class="section-kicker">
-            Featured Products
-          </div>
-
-          <h2>
-            Laptops Ready To Go
-          </h2>
+          <h2>Laptops Ready To Go</h2>
 
           <p>
             Reliable laptops for work, school, business and everyday use.
             Check the available options below or contact us if you need help
             choosing the right machine.
           </p>
-
         </div>
 
-
         <div class="laptop-grid">
-
 
           <!-- HP ProBook 430 G3 -->
 
           <article class="product-card">
 
             <div class="product-image">
-
               <span class="product-tag">Available</span>
 
               <img
@@ -1732,36 +1775,25 @@
                 alt="HP ProBook 430 G3"
                 loading="lazy"
               >
-
             </div>
 
             <div class="product-content">
-
-              <h3>
-                HP ProBook 430 G3
-              </h3>
+              <h3>HP ProBook 430 G3</h3>
 
               <p class="product-specs">
                 Core i5 6th Gen • 8GB RAM • 256GB SSD
               </p>
 
               <div class="product-bottom">
-
-                <div class="price">
-                  KES 21,500
-                </div>
+                <div class="price">KES 21,500</div>
 
                 <a
                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20430%20G3%20at%20KES%2021%2C500."
                   class="product-btn"
                   target="_blank"
                   rel="noopener"
-                >
-                  Ask on WhatsApp
-                </a>
-
+                >Ask on WhatsApp</a>
               </div>
-
             </div>
 
           </article>
@@ -1772,7 +1804,6 @@
           <article class="product-card">
 
             <div class="product-image">
-
               <span class="product-tag">Available</span>
 
               <img
@@ -1780,36 +1811,25 @@
                 alt="HP EliteBook 840 G3"
                 loading="lazy"
               >
-
             </div>
 
             <div class="product-content">
-
-              <h3>
-                HP EliteBook 840 G3
-              </h3>
+              <h3>HP EliteBook 840 G3</h3>
 
               <p class="product-specs">
                 Core i5 6th Gen • 8GB RAM • 256GB SSD
               </p>
 
               <div class="product-bottom">
-
-                <div class="price">
-                  KES 24,500
-                </div>
+                <div class="price">KES 24,500</div>
 
                 <a
                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20HP%20EliteBook%20840%20G3%20at%20KES%2024%2C500."
                   class="product-btn"
                   target="_blank"
                   rel="noopener"
-                >
-                  Ask on WhatsApp
-                </a>
-
+                >Ask on WhatsApp</a>
               </div>
-
             </div>
 
           </article>
@@ -1820,7 +1840,6 @@
           <article class="product-card">
 
             <div class="product-image">
-
               <span class="product-tag">Available</span>
 
               <img
@@ -1828,36 +1847,25 @@
                 alt="HP EliteBook 840 G5"
                 loading="lazy"
               >
-
             </div>
 
             <div class="product-content">
-
-              <h3>
-                HP EliteBook 840 G5
-              </h3>
+              <h3>HP EliteBook 840 G5</h3>
 
               <p class="product-specs">
                 Core i5 8th Gen • 8GB RAM • 256GB SSD
               </p>
 
               <div class="product-bottom">
-
-                <div class="price">
-                  KES 27,500
-                </div>
+                <div class="price">KES 27,500</div>
 
                 <a
                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20HP%20EliteBook%20840%20G5%20at%20KES%2027%2C500."
                   class="product-btn"
                   target="_blank"
                   rel="noopener"
-                >
-                  Ask on WhatsApp
-                </a>
-
+                >Ask on WhatsApp</a>
               </div>
-
             </div>
 
           </article>
@@ -1868,7 +1876,6 @@
           <article class="product-card">
 
             <div class="product-image">
-
               <span class="product-tag">Featured</span>
 
               <img
@@ -1876,36 +1883,25 @@
                 alt="HP EliteBook 745 G6 Ryzen 7"
                 loading="lazy"
               >
-
             </div>
 
             <div class="product-content">
-
-              <h3>
-                HP EliteBook 745 G6 Ryzen 7
-              </h3>
+              <h3>HP EliteBook 745 G6 Ryzen 7</h3>
 
               <p class="product-specs">
                 AMD Ryzen 7 • 16GB RAM • 512GB SSD
               </p>
 
               <div class="product-bottom">
-
-                <div class="price">
-                  KES 47,500
-                </div>
+                <div class="price">KES 47,500</div>
 
                 <a
                   href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207%20at%20KES%2047%2C500."
                   class="product-btn"
                   target="_blank"
                   rel="noopener"
-                >
-                  Ask on WhatsApp
-                </a>
-
+                >Ask on WhatsApp</a>
               </div>
-
             </div>
 
           </article>
@@ -1913,7 +1909,230 @@
         </div>
 
       </div>
+    </section>
 
+
+    <!-- =========================
+         FEATURED PHONES & GADGETS
+    ========================== -->
+
+    <section class="gadgets-section" id="phones-gadgets">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-kicker">Phones, Chargers & Gadgets</div>
+
+          <h2>More Everyday Essentials</h2>
+
+          <p>
+            Explore affordable phones, charging accessories and useful
+            gadgets from Street Gadgets Care. Contact us on WhatsApp
+            to confirm availability before ordering.
+          </p>
+        </div>
+
+        <div class="gadget-grid">
+
+          <!-- Raeno R1280 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <span class="product-tag">Button Phone</span>
+
+              <div
+                class="phone-illustration"
+                role="img"
+                aria-label="Illustration representing the Raeno R1280 button phone"
+              >
+                <div class="phone-mockup feature-phone">
+                  <div class="phone-screen">
+                    RAENO
+                    <span>R1280</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-content">
+              <h3>Raeno R1280</h3>
+
+              <p class="product-specs">
+                Affordable button phone for calls and everyday use.
+              </p>
+
+              <div class="product-bottom">
+                <div class="price">KES 1,100</div>
+
+                <a
+                  href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Raeno%20R1280%20button%20phone%20at%20KES%201%2C100."
+                  class="product-btn"
+                  target="_blank"
+                  rel="noopener"
+                >Ask on WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- itel it8010 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <span class="product-tag">Button Phone</span>
+
+              <div
+                class="phone-illustration"
+                role="img"
+                aria-label="Illustration representing the itel it8010 button phone"
+              >
+                <div class="phone-mockup feature-phone">
+                  <div class="phone-screen">
+                    itel
+                    <span>it8010</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-content">
+              <h3>itel it8010</h3>
+
+              <p class="product-specs">
+                Practical button phone for everyday calling.
+              </p>
+
+              <div class="product-bottom">
+                <div class="price">KES 1,100</div>
+
+                <a
+                  href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20itel%20it8010%20button%20phone%20at%20KES%201%2C100."
+                  class="product-btn"
+                  target="_blank"
+                  rel="noopener"
+                >Ask on WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- Samsung 25W Charger -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <span class="product-tag">Charger</span>
+
+              <img
+                src="Samsung%2025W.jpeg"
+                alt="Samsung 25W charger"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-content">
+              <h3>Samsung 25W Charger</h3>
+
+              <p class="product-specs">
+                Charging solution for compatible devices.
+                Confirm compatibility before purchasing.
+              </p>
+
+              <div class="product-bottom">
+                <div class="price">From KES 950</div>
+
+                <a
+                  href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Samsung%2025W%20charger%20from%20KES%20950."
+                  class="product-btn"
+                  target="_blank"
+                  rel="noopener"
+                >Ask on WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- Samsung 1.8m C-to-C Cable -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <span class="product-tag">Charging Cable</span>
+
+              <img
+                src="Samsung%201.8m%20C-C.jpeg"
+                alt="Samsung 1.8 metre USB-C to USB-C charging cable"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-content">
+              <h3>Samsung 1.8m C-to-C Cable</h3>
+
+              <p class="product-specs">
+                USB-C to USB-C cable for compatible charging
+                and data-transfer needs.
+              </p>
+
+              <div class="product-bottom">
+                <div class="price">Ask for Price</div>
+
+                <a
+                  href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Samsung%201.8m%20C-to-C%20charging%20cable."
+                  class="product-btn"
+                  target="_blank"
+                  rel="noopener"
+                >Ask on WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- Oraimo 6 Lite Smart Watch -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <span class="product-tag">Smart Watch</span>
+
+              <img
+                src="Oraimo%206%20Lite.jpeg"
+                alt="Oraimo 6 Lite smart watch"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-content">
+              <h3>Oraimo 6 Lite Smart Watch</h3>
+
+              <p class="product-specs">
+                Smart watch for everyday use. Ask us about
+                availability and compatibility.
+              </p>
+
+              <div class="product-bottom">
+                <div class="price">KES 3,500</div>
+
+                <a
+                  href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20interested%20in%20the%20Oraimo%206%20Lite%20Smart%20Watch%20at%20KES%203%2C500."
+                  class="product-btn"
+                  target="_blank"
+                  rel="noopener"
+                >Ask on WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
     </section>
 
 
@@ -1926,54 +2145,40 @@
       <div class="container">
 
         <div class="section-heading">
+          <div class="section-kicker">Popular Accessories</div>
 
-          <div class="section-kicker">
-            Popular Accessories
-          </div>
-
-          <h2>
-            Complete Your Setup
-          </h2>
+          <h2>Complete Your Setup</h2>
 
           <p>
             From laptop bags and storage to memory and everyday computer
             accessories, get the essentials you need in one place.
           </p>
-
         </div>
 
-
         <div class="accessory-grid">
-
 
           <article class="accessory-card">
 
             <div class="accessory-image">
-
               <img
                 src="laptop-bag-1.jpg"
                 alt="Laptop bags"
                 loading="lazy"
               >
-
             </div>
 
             <div class="accessory-content">
-
               <h3>Laptop Bags</h3>
 
               <p>
                 Protective and practical laptop bags for everyday use.
               </p>
 
-              <div class="accessory-price">
-                From KES 1,000
-              </div>
+              <div class="accessory-price">From KES 1,000</div>
 
               <a href="laptop-bags.html" class="text-link">
                 View Laptop Bags →
               </a>
-
             </div>
 
           </article>
@@ -1982,31 +2187,25 @@
           <article class="accessory-card">
 
             <div class="accessory-image">
-
               <img
                 src="nvme-ssd.jpg"
                 alt="NVMe SSD"
                 loading="lazy"
               >
-
             </div>
 
             <div class="accessory-content">
-
               <h3>NVMe SSD</h3>
 
               <p>
                 Upgrade your laptop with faster storage and better performance.
               </p>
 
-              <div class="accessory-price">
-                From KES 7,500
-              </div>
+              <div class="accessory-price">From KES 7,500</div>
 
               <a href="laptop-storage.html" class="text-link">
                 View Storage →
               </a>
-
             </div>
 
           </article>
@@ -2015,31 +2214,25 @@
           <article class="accessory-card">
 
             <div class="accessory-image">
-
               <img
                 src="ram-memory.jpg"
                 alt="Laptop RAM memory"
                 loading="lazy"
               >
-
             </div>
 
             <div class="accessory-content">
-
               <h3>RAM Memory</h3>
 
               <p>
                 Upgrade your laptop or PC memory for smoother performance.
               </p>
 
-              <div class="accessory-price">
-                From KES 2,000
-              </div>
+              <div class="accessory-price">From KES 2,000</div>
 
               <a href="laptop-storage.html" class="text-link">
                 View RAM →
               </a>
-
             </div>
 
           </article>
@@ -2048,31 +2241,25 @@
           <article class="accessory-card">
 
             <div class="accessory-image">
-
               <img
                 src="wireless-mouse.jpg"
                 alt="Wireless mouse"
                 loading="lazy"
               >
-
             </div>
 
             <div class="accessory-content">
-
               <h3>Wireless Mouse</h3>
 
               <p>
                 Practical computer accessories for your everyday setup.
               </p>
 
-              <div class="accessory-price">
-                Ask for Price
-              </div>
+              <div class="accessory-price">Ask for Price</div>
 
               <a href="computer-accessories.html" class="text-link">
                 View Accessories →
               </a>
-
             </div>
 
           </article>
@@ -2080,7 +2267,6 @@
         </div>
 
       </div>
-
     </section>
 
 
@@ -2093,42 +2279,31 @@
       <div class="container">
 
         <div class="section-heading">
+          <div class="section-kicker">Shop Categories</div>
 
-          <div class="section-kicker">
-            Shop Categories
-          </div>
-
-          <h2>
-            Find What You Need
-          </h2>
+          <h2>Find What You Need</h2>
 
           <p>
             Browse our main technology categories and choose the products
             or accessories you are looking for.
           </p>
-
         </div>
 
-
         <div class="category-grid">
-
 
           <!-- Devices -->
 
           <a href="devices.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="HP%20745%20G6%20RYZEN%207.JPG"
                 alt="Devices"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">01</span>
 
               <h3>Devices</h3>
@@ -2137,10 +2312,7 @@
                 Laptops, phones and other devices available for sale.
               </p>
 
-              <span class="category-arrow">
-                View Devices →
-              </span>
-
+              <span class="category-arrow">View Devices →</span>
             </div>
 
           </a>
@@ -2151,17 +2323,14 @@
           <a href="chargers.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="Samsung%2025W.jpeg"
                 alt="Chargers"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">02</span>
 
               <h3>Chargers</h3>
@@ -2170,10 +2339,7 @@
                 Reliable chargers and charging solutions for different devices.
               </p>
 
-              <span class="category-arrow">
-                View Chargers →
-              </span>
-
+              <span class="category-arrow">View Chargers →</span>
             </div>
 
           </a>
@@ -2184,17 +2350,14 @@
           <a href="charging-cables.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="Samsung%201.8m%20C-C.jpeg"
                 alt="Charging cables"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">03</span>
 
               <h3>Charging Cables</h3>
@@ -2203,10 +2366,7 @@
                 Quality charging and data cables for phones and other devices.
               </p>
 
-              <span class="category-arrow">
-                View Cables →
-              </span>
-
+              <span class="category-arrow">View Cables →</span>
             </div>
 
           </a>
@@ -2217,17 +2377,14 @@
           <a href="phone-protection.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="iPhone%202024%20Pro%20Max%20Privacy.jpeg"
                 alt="Phone protection"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">04</span>
 
               <h3>Phone Protection</h3>
@@ -2236,10 +2393,7 @@
                 Screen protectors, phone covers and protection accessories.
               </p>
 
-              <span class="category-arrow">
-                View Protection →
-              </span>
-
+              <span class="category-arrow">View Protection →</span>
             </div>
 
           </a>
@@ -2250,17 +2404,14 @@
           <a href="batteries.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="phone-battery-replacement.jpg"
                 alt="Phone batteries"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">05</span>
 
               <h3>Replacement Batteries</h3>
@@ -2269,10 +2420,7 @@
                 Replacement battery solutions for compatible phones and devices.
               </p>
 
-              <span class="category-arrow">
-                View Batteries →
-              </span>
-
+              <span class="category-arrow">View Batteries →</span>
             </div>
 
           </a>
@@ -2283,17 +2431,14 @@
           <a href="laptop-accessories.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="laptop-bag-1.jpg"
                 alt="Laptop accessories"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">06</span>
 
               <h3>Laptop Accessories</h3>
@@ -2302,10 +2447,7 @@
                 Laptop bags, storage, memory and other useful accessories.
               </p>
 
-              <span class="category-arrow">
-                View Laptop Accessories →
-              </span>
-
+              <span class="category-arrow">View Laptop Accessories →</span>
             </div>
 
           </a>
@@ -2316,17 +2458,14 @@
           <a href="laptop-storage.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="nvme-ssd.jpg"
                 alt="Storage and memory"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">07</span>
 
               <h3>Storage & Memory</h3>
@@ -2335,10 +2474,7 @@
                 HDDs, SSDs, RAM, external storage, memory cards and flash drives.
               </p>
 
-              <span class="category-arrow">
-                View Storage & Memory →
-              </span>
-
+              <span class="category-arrow">View Storage & Memory →</span>
             </div>
 
           </a>
@@ -2349,17 +2485,14 @@
           <a href="computer-accessories.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="wireless-mouse.jpg"
                 alt="Computer and laptop accessories"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">08</span>
 
               <h3>Computer Accessories</h3>
@@ -2369,10 +2502,7 @@
                 Bluetooth dongles and more.
               </p>
 
-              <span class="category-arrow">
-                View Accessories →
-              </span>
-
+              <span class="category-arrow">View Accessories →</span>
             </div>
 
           </a>
@@ -2383,17 +2513,14 @@
           <a href="other-gadgets.html" class="shop-category">
 
             <div class="shop-category-image">
-
               <img
                 src="Logo.png"
                 alt="Other gadgets"
                 loading="lazy"
               >
-
             </div>
 
             <div class="shop-category-content">
-
               <span class="category-number">09</span>
 
               <h3>Other Gadgets</h3>
@@ -2402,10 +2529,7 @@
                 Smart watches and other useful gadgets for everyday life.
               </p>
 
-              <span class="category-arrow">
-                View Other Gadgets →
-              </span>
-
+              <span class="category-arrow">View Other Gadgets →</span>
             </div>
 
           </a>
@@ -2413,7 +2537,6 @@
         </div>
 
       </div>
-
     </section>
 
 
@@ -2428,21 +2551,15 @@
         <div class="help-card">
 
           <div class="help-content">
+            <div class="section-kicker">Need Help Choosing?</div>
 
-            <div class="section-kicker">
-              Need Help Choosing?
-            </div>
-
-            <h2>
-              Not Sure What You Need?
-            </h2>
+            <h2>Not Sure What You Need?</h2>
 
             <p>
               Tell us what device you have, what you want to achieve,
               or what problem you are trying to solve. We'll help you
               find the right product or solution.
             </p>
-
           </div>
 
           <a
@@ -2450,14 +2567,11 @@
             class="btn btn-whatsapp"
             target="_blank"
             rel="noopener"
-          >
-            Talk to Us on WhatsApp
-          </a>
+          >Talk to Us on WhatsApp</a>
 
         </div>
 
       </div>
-
     </section>
 
 
@@ -2470,83 +2584,54 @@
       <div class="container">
 
         <div class="section-heading">
+          <div class="section-kicker">Why Shop With Us</div>
 
-          <div class="section-kicker">
-            Why Shop With Us
-          </div>
-
-          <h2>
-            Simple. Reliable. Convenient.
-          </h2>
+          <h2>Simple. Reliable. Convenient.</h2>
 
           <p>
             We focus on helping you get the right technology without
             unnecessary confusion.
           </p>
-
         </div>
-
 
         <div class="why-grid">
 
-
           <article class="why-card">
+            <div class="why-icon">✓</div>
 
-            <div class="why-icon">
-              ✓
-            </div>
-
-            <h3>
-              Quality Products
-            </h3>
+            <h3>Quality Products</h3>
 
             <p>
               We aim to provide reliable devices, accessories and
               technology products suitable for everyday use.
             </p>
-
           </article>
 
-
           <article class="why-card">
+            <div class="why-icon">K</div>
 
-            <div class="why-icon">
-              K
-            </div>
-
-            <h3>
-              Competitive Prices
-            </h3>
+            <h3>Competitive Prices</h3>
 
             <p>
               Get practical technology options at competitive prices
               in Kenyan Shillings.
             </p>
-
           </article>
 
-
           <article class="why-card">
+            <div class="why-icon">→</div>
 
-            <div class="why-icon">
-              →
-            </div>
-
-            <h3>
-              Kenya-Wide Service
-            </h3>
+            <h3>Kenya-Wide Service</h3>
 
             <p>
               Based in Nairobi, with support for customers outside Nairobi
               through safe device shipping arrangements.
             </p>
-
           </article>
 
         </div>
 
       </div>
-
     </section>
 
 
@@ -2560,20 +2645,14 @@
 
         <div class="service-card">
 
-          <div class="service-icon">
-            →
-          </div>
+          <div class="service-icon">→</div>
 
           <div>
-
-            <h3>
-              NOT IN NAIROBI? NO WORRIES!
-            </h3>
+            <h3>NOT IN NAIROBI? NO WORRIES!</h3>
 
             <p>
               Send your device to us and we'll repair & ship it back safely.
             </p>
-
           </div>
 
           <a
@@ -2581,14 +2660,11 @@
             class="btn btn-primary"
             target="_blank"
             rel="noopener"
-          >
-            Ask About Shipping
-          </a>
+          >Ask About Shipping</a>
 
         </div>
 
       </div>
-
     </section>
 
 
@@ -2601,14 +2677,9 @@
       <div class="container">
 
         <div class="cta-inner">
+          <div class="section-kicker">Street Gadgets Care</div>
 
-          <div class="section-kicker">
-            Street Gadgets Care
-          </div>
-
-          <h2>
-            Looking For Something Specific?
-          </h2>
+          <h2>Looking For Something Specific?</h2>
 
           <p>
             Can't find what you're looking for?
@@ -2623,20 +2694,16 @@
               class="btn btn-whatsapp"
               target="_blank"
               rel="noopener"
-            >
-              Ask on WhatsApp
-            </a>
+            >Ask on WhatsApp</a>
 
             <a href="contact.html" class="btn btn-outline">
               Contact Us
             </a>
 
           </div>
-
         </div>
 
       </div>
-
     </section>
 
   </main>
@@ -2652,13 +2719,9 @@
 
       <div class="footer-grid">
 
-
         <div class="footer-brand">
 
-          <img
-            src="Logo.png"
-            alt="Street Gadgets Care"
-          >
+          <img src="Logo.png" alt="Street Gadgets Care">
 
           <p>
             Laptop and phone repair, devices, accessories and creative
@@ -2667,90 +2730,64 @@
 
         </div>
 
-
         <div class="footer-col">
 
           <h3>Explore</h3>
 
           <a href="index.html">Home</a>
-
           <a href="about.html">About</a>
-
           <a href="services.html">Services</a>
-
           <a href="tech-repairs.html">Tech Repairs</a>
-
           <a href="creative-studio.html">Creative Studio</a>
-
           <a href="contact.html">Contact</a>
 
         </div>
-
 
         <div class="footer-col">
 
           <h3>Shop</h3>
 
           <a href="devices.html">Devices</a>
-
           <a href="chargers.html">Chargers</a>
-
           <a href="charging-cables.html">Charging Cables</a>
-
           <a href="phone-protection.html">Phone Protection</a>
-
           <a href="laptop-accessories.html">Laptop Accessories</a>
-
           <a href="laptop-storage.html">Storage & Memory</a>
-
           <a href="other-gadgets.html">Other Gadgets</a>
 
         </div>
-
 
         <div class="footer-col">
 
           <h3>Contact</h3>
 
-          <a href="tel:0114259961">
-            0114 259 961
-          </a>
+          <a href="tel:0114259961">0114 259 961</a>
 
           <a
             href="https://wa.me/254114259961"
             target="_blank"
             rel="noopener"
-          >
-            WhatsApp
-          </a>
+          >WhatsApp</a>
 
           <a href="mailto:streetgadgetscare@gmail.com">
             streetgadgetscare@gmail.com
           </a>
 
-          <p>
-            Nairobi, Kenya
-          </p>
+          <p>Nairobi, Kenya</p>
 
         </div>
 
       </div>
 
-
       <div class="footer-bottom">
 
-        <span>
-          © 2026 Street Gadgets Care. All Rights Reserved.
-        </span>
+        <span>© 2026 Street Gadgets Care. All Rights Reserved.</span>
 
-        <span>
-          Nairobi, Kenya
-        </span>
+        <span>Nairobi, Kenya</span>
 
       </div>
 
     </div>
-
   </footer>
 
 
@@ -2765,9 +2802,7 @@
     rel="noopener"
     aria-label="Chat with Street Gadgets Care on WhatsApp"
     title="Chat on WhatsApp"
-  >
-    ☎
-  </a>
+  >☎</a>
 
 
   <!-- =========================
@@ -2775,10 +2810,9 @@
   ========================== -->
 
   <script>
-
     /* =========================
        MOBILE NAVIGATION
-    ========================== */
+    ========================= */
 
     const menuToggle = document.getElementById("menuToggle");
     const mainNavigation = document.getElementById("mainNavigation");
@@ -2791,36 +2825,32 @@
     }
 
     menuToggle.addEventListener("click", function () {
-
       const isOpen = mainNavigation.classList.toggle("open");
 
       menuToggle.classList.toggle("active", isOpen);
 
-      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
 
       menuToggle.setAttribute(
         "aria-label",
         isOpen ? "Close navigation menu" : "Open navigation menu"
       );
-
     });
-
 
     /* Close menu when a link is selected */
 
     document.querySelectorAll("#mainNavigation a").forEach(function(link) {
-
       link.addEventListener("click", function() {
         closeMenu();
       });
-
     });
-
 
     /* Close menu when clicking outside */
 
     document.addEventListener("click", function(event) {
-
       if (
         window.innerWidth <= 850 &&
         mainNavigation.classList.contains("open") &&
@@ -2829,64 +2859,49 @@
       ) {
         closeMenu();
       }
-
     });
-
 
     /* Close menu when Escape is pressed */
 
     document.addEventListener("keydown", function(event) {
-
       if (event.key === "Escape") {
         closeMenu();
       }
-
     });
-
 
     /* Reset mobile menu when returning to desktop */
 
     window.addEventListener("resize", function() {
-
       if (window.innerWidth > 850) {
         closeMenu();
       }
-
     });
-
 
     /* =========================
        CATEGORY TICKER
-    ========================== */
+    ========================= */
 
     const categoryWrap = document.getElementById("categoryWrap");
 
     let touchTimer;
 
     categoryWrap.addEventListener("touchstart", function() {
-
       categoryWrap.classList.add("paused");
-
       clearTimeout(touchTimer);
-
     }, { passive: true });
 
-
     categoryWrap.addEventListener("touchend", function() {
-
       clearTimeout(touchTimer);
 
       touchTimer = setTimeout(function() {
         categoryWrap.classList.remove("paused");
       }, 900);
-
     }, { passive: true });
-
 
     /* =========================
        PREVENT TICKER JUMP ON
        POINTER INTERACTION
-    ========================== */
+    ========================= */
 
     categoryWrap.addEventListener("pointerdown", function() {
       categoryWrap.classList.add("paused");
@@ -2896,12 +2911,10 @@
       categoryWrap.classList.remove("paused");
     });
 
+    categoryWrap.addEventListener("pointercancel", function() {
+      categoryWrap.classList.remove("paused");
+    });
   </script>
 
 </body>
 </html>
-```
-
-This version keeps everything else untouched and uses the **exact GitHub filenames** you provided. After committing it to GitHub, give the page a **Ctrl + F5** refresh so the browser doesn't keep the old cached version.
-
-Once those two images are displaying, we can move on to the next improvement rather than changing anything unnecessarily.
