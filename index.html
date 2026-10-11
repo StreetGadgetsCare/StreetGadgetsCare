@@ -1,2590 +1,652 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Street Gadgets Care | Phone & Laptop Repairs, Laptops & Accessories</title>
 
-<title>Street Gadgets Care | Phone & Laptop Repairs, Devices & Creative Solutions</title>
-
-<meta name="description"
-      content="Street Gadgets Care provides phone and laptop repairs, devices, accessories, storage and creative business solutions in Nairobi and across Kenya.">
-
-<meta name="keywords"
-      content="phone repair Nairobi, laptop repair Nairobi, laptop sales Kenya, phone accessories Nairobi, laptop accessories Kenya, graphic design Nairobi, Street Gadgets Care">
-
+<meta name="description" content="Street Gadgets Care offers phone and laptop repairs, laptops, phones, accessories, storage and creative business services in Nairobi, Kenya, with delivery arrangements across Kenya.">
+<meta name="keywords" content="Street Gadgets Care, phone repair Nairobi, laptop repair Nairobi, laptops for sale Kenya, laptop accessories Kenya, phone accessories, graphic design Nairobi">
 <meta name="author" content="Street Gadgets Care">
 <meta name="theme-color" content="#0b1220">
-
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Street Gadgets Care | Technology, Repairs & Creative Solutions">
+<meta property="og:description" content="Phone and laptop repairs, devices, accessories and creative business support in Nairobi and across Kenya.">
+<meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/">
+<meta property="og:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/">
 <link rel="icon" type="image/png" href="Logo.png">
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #0b1220;
-    background: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-button {
-    font: inherit;
-}
-
 :root {
-    --navy: #0b1220;
-    --navy-2: #111d30;
-    --navy-3: #17243a;
-    --cyan: #19a7ce;
-    --cyan-dark: #087fa3;
-    --cyan-light: #eaf9fd;
-    --green: #25d366;
-    --white: #ffffff;
-    --light: #f5f8fa;
-    --light-2: #edf3f6;
-    --text: #0b1220;
-    --muted: #647180;
-    --border: #e1e8ed;
-    --shadow: 0 18px 45px rgba(11,18,32,.08);
-    --shadow-lg: 0 28px 70px rgba(11,18,32,.13);
-    --radius: 18px;
-    --max: 1180px;
+  --navy:#0b1220;
+  --navy2:#111d30;
+  --cyan:#19a7ce;
+  --cyan-dark:#087fa3;
+  --cyan-light:#eaf9fd;
+  --green:#25d366;
+  --white:#fff;
+  --light:#f5f8fa;
+  --text:#0b1220;
+  --muted:#647180;
+  --border:#e1e8ed;
+  --shadow:0 18px 45px rgba(11,18,32,.08);
+  --shadow-lg:0 28px 70px rgba(11,18,32,.13);
+  --radius:18px;
+  --max:1180px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:15px;color:var(--cyan-dark);font-size:11px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase}
+.eyebrow:before{content:"";width:25px;height:2px;background:var(--cyan)}
+.section-heading{max-width:780px;margin-bottom:38px}
+.section-heading h2{font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-1.6px;margin-bottom:15px}
+.section-heading p{max-width:710px;color:var(--muted);font-size:15px;line-height:1.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:0 20px;border-radius:9px;font-size:13px;font-weight:900;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid rgba(25,167,206,.55);outline-offset:4px}
+.btn-primary{background:var(--cyan);color:#fff;box-shadow:0 10px 25px rgba(25,167,206,.2)}
+.btn-primary:hover{background:var(--cyan-dark)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy2)}
+.btn-outline{border:1px solid rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.05)}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.btn-whatsapp{background:var(--green);color:#fff}
+.btn-whatsapp:hover{background:#20bd5a}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(8,14,25,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+.navbar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo-link{display:flex;align-items:center;flex-shrink:0}
+.logo-link img{width:150px;height:54px;object-fit:contain;object-position:left center}
+.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:21px;margin-left:auto}
+.nav-links a{color:rgba(255,255,255,.78);font-size:12px;font-weight:800;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:not(.nav-whatsapp){position:relative}
+.nav-links a:not(.nav-whatsapp):after{content:"";position:absolute;left:50%;bottom:-9px;width:0;height:2px;background:var(--cyan);transform:translateX(-50%);transition:width .2s}
+.nav-links a:not(.nav-whatsapp):hover:after,.nav-links a.active:after{width:100%}
+.nav-links .nav-whatsapp{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:0 14px;border-radius:8px;background:var(--green);color:#fff}
+.mobile-toggle{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.15);border-radius:10px;background:rgba(255,255,255,.05);color:#fff;font-size:21px;cursor:pointer}
+
+/* HERO */
+.hero{position:relative;display:flex;align-items:center;min-height:650px;padding:75px 0 85px;background:radial-gradient(circle at 82% 20%,rgba(25,167,206,.18),transparent 30%),linear-gradient(135deg,#08101d,#0b1220 52%,#111d30);color:#fff;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;right:-280px;top:-310px;border:1px solid rgba(25,167,206,.13);border-radius:50%;width:650px;height:650px;pointer-events:none}
+.hero:after{width:820px;height:820px;right:-370px;top:-390px;opacity:.5}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;gap:55px;align-items:center}
+.hero-copy{max-width:660px}
+.hero-kicker{display:flex;align-items:center;gap:9px;margin-bottom:21px;color:#8eddf1;font-size:11px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase}
+.hero-kicker:before{content:"";width:30px;height:2px;background:var(--cyan)}
+.hero h1{font-size:clamp(45px,5.8vw,75px);line-height:.99;letter-spacing:-3.5px;margin-bottom:24px}
+.hero h1 strong{color:#7bd8ef}
+.hero-text{max-width:590px;color:rgba(255,255,255,.73);font-size:16px;line-height:1.85;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:25px}
+.hero-note{display:flex;flex-wrap:wrap;gap:10px 18px;color:rgba(255,255,255,.66);font-size:11px;font-weight:700}
+.hero-note span:before{content:"✓";color:#7bd8ef;margin-right:7px}
+.hero-image-wrap{position:relative;max-width:510px;margin-left:auto;padding:10px;border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.03));box-shadow:0 35px 80px rgba(0,0,0,.3)}
+.hero-image{width:100%;height:430px;object-fit:contain;border-radius:15px;background:#111d30}
+.hero-badge{position:absolute;left:-20px;bottom:27px;max-width:240px;padding:15px 17px;border-radius:12px;background:rgba(11,18,32,.96);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.hero-badge strong{display:block;font-size:13px;margin-bottom:4px}
+.hero-badge span{color:rgba(255,255,255,.65);font-size:10px;line-height:1.5}
+
+/* TRUST */
+.trust-strip{padding:0;background:#fff;border-bottom:1px solid var(--border)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{min-height:88px;display:flex;align-items:center;justify-content:center;gap:11px;padding:15px;border-right:1px solid var(--border)}
+.trust-item:last-child{border:0}
+.trust-icon{width:35px;height:35px;display:grid;place-items:center;flex-shrink:0;border-radius:9px;background:var(--cyan-light);color:var(--cyan-dark);font-size:15px;font-weight:900}
+.trust-item strong{display:block;font-size:11px;margin-bottom:2px}
+.trust-item span{display:block;color:var(--muted);font-size:10px}
+
+/* MAIN PATHS */
+.paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.path-card{position:relative;min-height:300px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;transition:.25s}
+.path-card:hover{transform:translateY(-5px);border-color:rgba(25,167,206,.4);box-shadow:var(--shadow)}
+.path-number{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:1px;margin-bottom:25px}
+.path-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:12px;background:var(--navy);color:#fff;font-size:18px;margin-bottom:19px}
+.path-card h3{font-size:23px;line-height:1.2;margin-bottom:10px}
+.path-card p{color:var(--muted);font-size:13px;line-height:1.75;margin-bottom:18px}
+.path-link{color:var(--cyan-dark);font-size:12px;font-weight:900}
+
+/* FEATURED PRODUCTS */
+.featured-section{background:var(--light)}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.product-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--border);border-radius:15px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.product-image{height:205px;padding:14px;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--border)}
+.product-image img{width:100%;height:100%;object-fit:contain}
+.product-info{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:17px}
+.product-category{font-size:9px;color:var(--cyan-dark);font-weight:900;letter-spacing:1px;text-transform:uppercase;margin-bottom:7px}
+.product-info h3{font-size:15px;line-height:1.4;margin-bottom:8px}
+.product-price{font-size:17px;font-weight:900;margin-bottom:14px}
+.product-info .btn{width:100%;margin-top:auto;padding:0 10px;font-size:11px;min-height:43px}
+.product-note{margin-top:19px;color:var(--muted);font-size:12px;line-height:1.7}
+.section-actions{display:flex;justify-content:center;margin-top:30px}
+
+/* SHOP INTRO */
+.shop-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.shop-image-box{position:relative;padding:13px;border-radius:20px;background:var(--navy);box-shadow:var(--shadow-lg)}
+.shop-image-box img{width:100%;height:370px;object-fit:contain;border-radius:12px}
+.shop-tag{position:absolute;left:25px;bottom:25px;padding:9px 12px;border-radius:7px;background:rgba(11,18,32,.95);color:#fff;font-size:9px;font-weight:900;letter-spacing:1px}
+.shop-copy h2,.creative-copy h2{font-size:clamp(32px,4vw,49px);line-height:1.08;letter-spacing:-1.7px;margin-bottom:17px}
+.shop-copy>p,.creative-copy>p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:23px}
+.shop-list{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:25px}
+.shop-list-item{padding:12px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:11px;font-weight:800}
+.shop-list-item:before{content:"✓";color:var(--cyan);margin-right:7px}
+
+/* REPAIRS */
+.repair-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.repair-card{padding:25px;border:1px solid var(--border);border-radius:15px;background:#fff;transition:.25s}
+.repair-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.repair-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:10px;background:var(--cyan-light);color:var(--cyan-dark);font-weight:900;margin-bottom:16px}
+.repair-card h3{font-size:18px;margin-bottom:8px}
+.repair-card p{color:var(--muted);font-size:12px;line-height:1.75}
+.repair-bottom{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:35px;padding:26px 28px;border-radius:15px;background:var(--navy);color:#fff}
+.repair-bottom h3{font-size:22px;margin-bottom:4px}
+.repair-bottom p{color:rgba(255,255,255,.65);font-size:12px}
+
+/* CREATIVE */
+.creative-section{background:var(--light)}
+.creative-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.creative-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:25px}
+.creative-list span{padding:8px 11px;border:1px solid var(--border);border-radius:7px;background:#fff;color:#273343;font-size:11px;font-weight:800}
+.creative-visual{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.creative-image{min-height:190px;border-radius:13px;overflow:hidden;background:#e5edf1}
+.creative-image:first-child{grid-row:span 2;min-height:392px}
+.creative-image img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.creative-image:hover img{transform:scale(1.04)}
+
+/* WHY US */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.why-card{padding:27px;border:1px solid var(--border);border-radius:15px;background:var(--light)}
+.why-number{color:var(--cyan);font-size:11px;font-weight:900;margin-bottom:18px}
+.why-card h3{font-size:20px;margin-bottom:8px}
+.why-card p{color:var(--muted);font-size:12px;line-height:1.8}
+
+/* KENYA WIDE */
+.kenya-section{padding:70px 0;background:radial-gradient(circle at 85% 50%,rgba(25,167,206,.17),transparent 28%),var(--navy);color:#fff}
+.kenya-layout{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.kenya-copy{max-width:720px}
+.kenya-copy .eyebrow{color:#7bd8ef}
+.kenya-copy h2{font-size:clamp(29px,4vw,46px);line-height:1.1;letter-spacing:-1.5px;margin-bottom:13px}
+.kenya-copy p{color:rgba(255,255,255,.68);font-size:14px;line-height:1.8}
+.kenya-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.kenya-points span{padding:8px 10px;border:1px solid rgba(255,255,255,.13);border-radius:7px;background:rgba(255,255,255,.04);font-size:10px;font-weight:800;color:rgba(255,255,255,.8)}
+
+/* CTA */
+.final-cta{padding:85px 0}
+.cta-box{position:relative;overflow:hidden;padding:58px;border-radius:22px;background:radial-gradient(circle at 90% 10%,rgba(25,167,206,.18),transparent 28%),linear-gradient(135deg,#0b1220,#111d30);color:#fff}
+.cta-content{position:relative;z-index:1;max-width:730px}
+.cta-content h2{font-size:clamp(32px,5vw,55px);line-height:1.06;letter-spacing:-2px;margin-bottom:16px}
+.cta-content p{color:rgba(255,255,255,.68);font-size:14px;line-height:1.8;margin-bottom:25px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* FOOTER */
+footer{padding:58px 0 24px;background:#080e19;color:#fff}
+.footer-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr;gap:45px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand img{width:150px;height:54px;object-fit:contain;object-position:left center;margin-bottom:15px}
+.footer-brand p{max-width:360px;color:rgba(255,255,255,.58);font-size:12px;line-height:1.8}
+.footer-title{margin-bottom:15px;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.footer-links,.footer-contact{display:grid;gap:10px}
+.footer-links a,.footer-contact a,.footer-contact span{width:fit-content;color:rgba(255,255,255,.62);font-size:11px;overflow-wrap:anywhere}
+.footer-links a:hover,.footer-contact a:hover{color:#fff}
+.footer-socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.footer-socials a{padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:7px;font-size:10px;font-weight:800;color:rgba(255,255,255,.8)}
+.footer-socials a:hover{border-color:var(--cyan);color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:15px;padding-top:21px;color:rgba(255,255,255,.43);font-size:10px}
+
+/* FLOATING WHATSAPP */
+.floating-whatsapp{position:fixed;right:18px;bottom:18px;z-index:1100;display:flex;align-items:center;gap:8px;padding:13px 15px;border-radius:50px;background:var(--green);color:#fff;font-size:11px;font-weight:900;box-shadow:0 15px 35px rgba(0,0,0,.2);transition:transform .2s}
+.floating-whatsapp:hover{transform:translateY(-3px)}
+
+/* TABLET */
+@media(max-width:1080px){
+  .nav-links{gap:13px}
+  .nav-links a{font-size:11px}
+  .hero-grid,.shop-layout,.creative-layout{grid-template-columns:1fr}
+  .hero{padding:70px 0}
+  .hero-visual,.shop-image-box,.creative-visual{width:100%;max-width:650px;margin:auto}
+  .hero-image-wrap{margin:auto}
+  .paths-grid,.repair-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-item:nth-child(2){border-right:0}
+  .trust-item:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .kenya-layout{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:900px){
+  .navbar{min-height:68px}
+  .logo-link img{width:140px;height:50px}
+  .mobile-toggle{display:grid;place-items:center}
+  .nav-links{position:absolute;top:68px;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;max-height:0;overflow:hidden;visibility:hidden;opacity:0;padding:0 16px;background:linear-gradient(180deg,#0b1220,#080e19);border-top:1px solid rgba(255,255,255,.07);box-shadow:0 25px 50px rgba(0,0,0,.28);transition:max-height .3s,opacity .2s,padding .3s,visibility .2s}
+  .nav-links.open{max-height:650px;visibility:visible;opacity:1;padding:10px 16px 18px}
+  .nav-links a{display:flex;align-items:center;min-height:49px;padding:0 5px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}
+  .nav-links a:not(.nav-whatsapp):after{display:none}
+  .nav-links a.active{color:#7bd8ef}
+  .nav-links .nav-whatsapp{justify-content:center;margin-top:12px;min-height:46px;border:0}
+}
+@media(max-width:760px){
+  section{padding:68px 0}
+  .container{width:calc(100% - 28px)}
+  .hero{min-height:auto;padding:62px 0 70px}
+  .hero-grid{gap:42px}
+  .hero h1{font-size:clamp(42px,12vw,60px);letter-spacing:-2.5px}
+  .hero-text{font-size:14px}
+  .hero-image{height:320px}
+  .hero-badge{left:10px;bottom:18px;max-width:205px}
+  .trust-grid,.paths-grid,.repair-grid,.why-grid{grid-template-columns:1fr}
+  .trust-item{justify-content:flex-start;border-right:0;border-bottom:1px solid var(--border)}
+  .trust-item:last-child{border-bottom:0}
+  .path-card{min-height:0}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .product-image{height:155px;padding:10px}
+  .product-info{padding:12px}
+  .product-info h3{font-size:13px}
+  .product-price{font-size:15px}
+  .product-info .btn{font-size:10px;padding:0 7px}
+  .shop-image-box img{height:300px}
+  .shop-list{grid-template-columns:1fr}
+  .repair-bottom{align-items:flex-start;flex-direction:column;padding:23px}
+  .creative-visual{grid-template-columns:1fr 1fr}
+  .creative-image{min-height:145px}
+  .creative-image:first-child{min-height:302px}
+  .cta-box{padding:38px 24px;border-radius:17px}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .footer-bottom{flex-direction:column}
+}
+@media(max-width:420px){
+  .logo-link img{width:128px;height:46px}
+  .mobile-toggle{width:42px;height:42px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .hero-note{flex-direction:column;gap:8px}
+  .creative-visual{grid-template-columns:1fr}
+  .creative-image,.creative-image:first-child{min-height:220px;grid-row:auto}
+  .floating-whatsapp{right:12px;bottom:12px;width:50px;height:50px;padding:0;justify-content:center;font-size:18px}
+  .floating-whatsapp span{display:none}
+  .footer-bottom{padding-bottom:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
-
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-.container {
-    width: min(var(--max), calc(100% - 40px));
-    margin: auto;
-}
-
-section {
-    padding: 95px 0;
-}
-
-.eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 15px;
-    color: var(--cyan-dark);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-}
-
-.eyebrow::before {
-    content: "";
-    width: 25px;
-    height: 2px;
-    background: var(--cyan);
-}
-
-.section-heading {
-    max-width: 780px;
-    margin-bottom: 45px;
-}
-
-.section-heading h2 {
-    font-size: clamp(32px, 4vw, 50px);
-    line-height: 1.08;
-    letter-spacing: -1.8px;
-    margin-bottom: 16px;
-}
-
-.section-heading p {
-    max-width: 710px;
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    min-height: 50px;
-    padding: 0 21px;
-    border-radius: 9px;
-    font-size: 13px;
-    font-weight: 900;
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-    cursor: pointer;
-}
-
-.btn:focus-visible,
-.nav-links a:focus-visible,
-.mobile-toggle:focus-visible,
-.logo-link:focus-visible {
-    outline: 3px solid rgba(25,167,206,.45);
-    outline-offset: 4px;
-}
-
-.btn-primary {
-    background: var(--cyan);
-    color: #ffffff;
-    box-shadow: 0 10px 25px rgba(25,167,206,.23);
-}
-
-.btn-primary:hover {
-    background: var(--cyan-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(25,167,206,.28);
-}
-
-.btn-dark {
-    background: var(--navy);
-    color: #ffffff;
-}
-
-.btn-dark:hover {
-    background: var(--navy-3);
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    border: 1px solid rgba(255,255,255,.28);
-    color: #ffffff;
-    background: rgba(255,255,255,.05);
-}
-
-.btn-outline:hover {
-    background: rgba(255,255,255,.12);
-    transform: translateY(-2px);
-}
-
-.btn-whatsapp {
-    background: var(--green);
-    color: #ffffff;
-    box-shadow: 0 10px 24px rgba(37,211,102,.16);
-}
-
-.btn-whatsapp:hover {
-    background: #20bd5a;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(8,14,25,.94);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(255,255,255,.07);
-    transition: .25s ease;
-}
-
-.site-header.scrolled {
-    background: rgba(8,14,25,.98);
-    box-shadow: 0 12px 35px rgba(0,0,0,.18);
-}
-
-.navbar {
-    min-height: 74px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-}
-
-.logo-link {
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 2;
-}
-
-.logo-link img {
-    width: 150px;
-    height: 54px;
-    object-fit: contain;
-    object-position: left center;
-    background: transparent;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 24px;
-    margin-left: auto;
-}
-
-.nav-links a {
-    position: relative;
-    color: rgba(255,255,255,.76);
-    font-size: 12px;
-    font-weight: 800;
-    white-space: nowrap;
-    transition: color .2s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #ffffff;
-}
-
-.nav-links a:not(.nav-whatsapp)::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 0;
-    height: 2px;
-    border-radius: 10px;
-    background: var(--cyan);
-    transform: translateX(-50%);
-    transition: width .22s ease;
-}
-
-.nav-links a:not(.nav-whatsapp):hover::after,
-.nav-links a:not(.nav-whatsapp).active::after {
-    width: 100%;
-}
-
-.nav-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    min-height: 39px;
-    padding: 0 15px;
-    border-radius: 8px;
-    background: var(--green);
-    color: #ffffff !important;
-    font-size: 11px !important;
-    font-weight: 900 !important;
-    box-shadow: 0 8px 20px rgba(37,211,102,.15);
-    transition: .2s ease;
-}
-
-.nav-whatsapp:hover {
-    background: #20bd5a;
-    transform: translateY(-1px);
-}
-
-.nav-whatsapp::after {
-    display: none !important;
-}
-
-.mobile-toggle {
-    display: none;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(255,255,255,.13);
-    border-radius: 10px;
-    background: rgba(255,255,255,.05);
-    color: #ffffff;
-    cursor: pointer;
-    place-items: center;
-    font-size: 20px;
-    line-height: 1;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-    position: relative;
-    min-height: 700px;
-    display: flex;
-    align-items: center;
-    background:
-        radial-gradient(circle at 82% 22%, rgba(25,167,206,.19), transparent 29%),
-        linear-gradient(135deg, #08101d 0%, #0b1220 48%, #111d30 100%);
-    color: #ffffff;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 560px;
-    height: 560px;
-    right: -270px;
-    top: -250px;
-    border: 1px solid rgba(25,167,206,.17);
-    border-radius: 50%;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 720px;
-    height: 720px;
-    right: -350px;
-    top: -320px;
-    border: 1px solid rgba(25,167,206,.07);
-    border-radius: 50%;
-}
-
-.hero-grid {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1.03fr .97fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.hero-copy {
-    max-width: 660px;
-}
-
-.hero-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    margin-bottom: 22px;
-    color: #8eddf1;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-}
-
-.hero-kicker span {
-    width: 32px;
-    height: 2px;
-    background: var(--cyan);
-}
-
-.hero h1 {
-    max-width: 660px;
-    font-size: clamp(46px, 6vw, 78px);
-    line-height: .97;
-    letter-spacing: -4px;
-    margin-bottom: 25px;
-}
-
-.hero h1 strong {
-    color: #7bd8ef;
-    font-weight: 900;
-}
-
-.hero-text {
-    max-width: 620px;
-    color: rgba(255,255,255,.72);
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 11px;
-    margin-bottom: 29px;
-}
-
-.hero-note {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 22px;
-    color: rgba(255,255,255,.62);
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.hero-note span {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.hero-note span::before {
-    content: "✓";
-    display: grid;
-    place-items: center;
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    background: rgba(25,167,206,.18);
-    color: #7bd8ef;
-    font-size: 9px;
-}
-
-.hero-visual {
-    position: relative;
-}
-
-.hero-image-wrap {
-    position: relative;
-    max-width: 535px;
-    margin-left: auto;
-    padding: 10px;
-    border-radius: 22px;
-    background: linear-gradient(
-        135deg,
-        rgba(255,255,255,.14),
-        rgba(255,255,255,.03)
-    );
-    box-shadow: 0 35px 80px rgba(0,0,0,.30);
-}
-
-.hero-image {
-    width: 100%;
-    height: 490px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 16px;
-    background: #111d30;
-}
-
-.hero-badge {
-    position: absolute;
-    left: -24px;
-    bottom: 32px;
-    max-width: 235px;
-    padding: 16px 18px;
-    border-radius: 12px;
-    background: rgba(11,18,32,.95);
-    border: 1px solid rgba(255,255,255,.10);
-    box-shadow: 0 20px 45px rgba(0,0,0,.22);
-}
-
-.hero-badge strong {
-    display: block;
-    margin-bottom: 3px;
-    color: #ffffff;
-    font-size: 13px;
-}
-
-.hero-badge span {
-    color: rgba(255,255,255,.60);
-    font-size: 10px;
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   TRUST STRIP
-========================================================= */
-
-.trust-strip {
-    background: #ffffff;
-    border-bottom: 1px solid var(--border);
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.trust-item {
-    min-height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 15px 20px;
-    border-right: 1px solid var(--border);
-}
-
-.trust-item:last-child {
-    border-right: 0;
-}
-
-.trust-icon {
-    display: grid;
-    place-items: center;
-    width: 35px;
-    height: 35px;
-    flex-shrink: 0;
-    border-radius: 9px;
-    background: var(--cyan-light);
-    color: var(--cyan-dark);
-    font-size: 14px;
-    font-weight: 900;
-}
-
-.trust-item strong {
-    display: block;
-    font-size: 11px;
-    margin-bottom: 2px;
-}
-
-.trust-item span {
-    display: block;
-    color: var(--muted);
-    font-size: 10px;
-}
-
-
-/* =========================================================
-   THREE MAIN PATHS
-========================================================= */
-
-.paths-section {
-    background: #ffffff;
-}
-
-.paths-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.path-card {
-    position: relative;
-    min-height: 335px;
-    padding: 31px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: #ffffff;
-    overflow: hidden;
-    transition: .3s ease;
-}
-
-.path-card:hover {
-    transform: translateY(-7px);
-    border-color: rgba(25,167,206,.35);
-    box-shadow: var(--shadow);
-}
-
-.path-card::after {
-    content: "";
-    position: absolute;
-    right: -70px;
-    bottom: -70px;
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    background: rgba(25,167,206,.07);
-}
-
-.path-number {
-    color: var(--cyan);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 32px;
-}
-
-.path-icon {
-    width: 49px;
-    height: 49px;
-    display: grid;
-    place-items: center;
-    border-radius: 12px;
-    background: var(--navy);
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 22px;
-}
-
-.path-card h3 {
-    font-size: 24px;
-    line-height: 1.15;
-    margin-bottom: 12px;
-}
-
-.path-card p {
-    max-width: 345px;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 22px;
-}
-
-.path-link {
-    position: relative;
-    z-index: 2;
-    color: var(--cyan-dark);
-    font-size: 12px;
-    font-weight: 900;
-}
-
-
-/* =========================================================
-   SHOP PREVIEW
-========================================================= */
-
-.shop-preview {
-    background: var(--light);
-}
-
-.shop-layout {
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.shop-image-box {
-    position: relative;
-    padding: 14px;
-    border-radius: 20px;
-    background: var(--navy);
-    box-shadow: var(--shadow-lg);
-}
-
-.shop-image-box img {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    border-radius: 12px;
-}
-
-.shop-tag {
-    position: absolute;
-    left: 28px;
-    bottom: 28px;
-    padding: 9px 12px;
-    border-radius: 7px;
-    background: rgba(11,18,32,.93);
-    color: #ffffff;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.shop-copy h2 {
-    max-width: 650px;
-    font-size: clamp(34px, 4vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 18px;
-}
-
-.shop-copy > p {
-    max-width: 650px;
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-.shop-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 28px;
-}
-
-.shop-list-item {
-    padding: 13px 15px;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    background: #ffffff;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.shop-list-item::before {
-    content: "✓";
-    margin-right: 8px;
-    color: var(--cyan);
-}
-
-
-/* =========================================================
-   REPAIRS
-========================================================= */
-
-.repair-section {
-    background: #ffffff;
-}
-
-.repair-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.repair-card {
-    padding: 27px;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    background: #ffffff;
-    transition: .25s ease;
-}
-
-.repair-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
-}
-
-.repair-icon {
-    width: 44px;
-    height: 44px;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    background: var(--cyan-light);
-    color: var(--cyan-dark);
-    font-weight: 900;
-    margin-bottom: 18px;
-}
-
-.repair-card h3 {
-    font-size: 19px;
-    margin-bottom: 8px;
-}
-
-.repair-card p {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.7;
-}
-
-.repair-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    margin-top: 40px;
-    padding: 28px 30px;
-    border-radius: 16px;
-    background: var(--navy);
-    color: #ffffff;
-}
-
-.repair-bottom h3 {
-    font-size: 23px;
-    margin-bottom: 4px;
-}
-
-.repair-bottom p {
-    color: rgba(255,255,255,.62);
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   CREATIVE STUDIO
-========================================================= */
-
-.creative-section {
-    background: var(--light);
-}
-
-.creative-layout {
-    display: grid;
-    grid-template-columns: 1.05fr .95fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.creative-copy h2 {
-    max-width: 650px;
-    font-size: clamp(34px, 4vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 18px;
-}
-
-.creative-copy > p {
-    max-width: 650px;
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-.creative-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 28px;
-}
-
-.creative-list span {
-    padding: 9px 12px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    background: #ffffff;
-    color: #273343;
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.creative-visual {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.creative-image {
-    position: relative;
-    overflow: hidden;
-    min-height: 210px;
-    border-radius: 14px;
-    background: #dfe7eb;
-}
-
-.creative-image:first-child {
-    grid-row: span 2;
-    min-height: 432px;
-}
-
-.creative-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .4s ease;
-}
-
-.creative-image:hover img {
-    transform: scale(1.04);
-}
-
-
-/* =========================================================
-   WHY US
-========================================================= */
-
-.why-section {
-    background: #ffffff;
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.why-card {
-    padding: 30px;
-    border-radius: 15px;
-    background: var(--light);
-    border: 1px solid var(--border);
-}
-
-.why-number {
-    color: var(--cyan);
-    font-size: 11px;
-    font-weight: 900;
-    margin-bottom: 23px;
-}
-
-.why-card h3 {
-    font-size: 21px;
-    margin-bottom: 9px;
-}
-
-.why-card p {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.75;
-}
-
-
-/* =========================================================
-   KENYA SERVICE
-========================================================= */
-
-.kenya-section {
-    padding: 72px 0;
-    background:
-        radial-gradient(circle at 85% 50%, rgba(25,167,206,.17), transparent 28%),
-        var(--navy);
-    color: #ffffff;
-}
-
-.kenya-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.kenya-copy {
-    max-width: 720px;
-}
-
-.kenya-copy .eyebrow {
-    color: #7bd8ef;
-}
-
-.kenya-copy h2 {
-    font-size: clamp(30px, 4vw, 48px);
-    line-height: 1.08;
-    letter-spacing: -1.7px;
-    margin-bottom: 13px;
-}
-
-.kenya-copy p {
-    color: rgba(255,255,255,.63);
-    font-size: 14px;
-    line-height: 1.75;
-}
-
-.kenya-points {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-top: 20px;
-}
-
-.kenya-points span {
-    padding: 8px 11px;
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 7px;
-    background: rgba(255,255,255,.04);
-    color: rgba(255,255,255,.78);
-    font-size: 10px;
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.final-cta {
-    padding: 95px 0;
-    background: #ffffff;
-}
-
-.cta-box {
-    position: relative;
-    overflow: hidden;
-    padding: 65px;
-    border-radius: 23px;
-    background:
-        radial-gradient(circle at 90% 10%, rgba(25,167,206,.18), transparent 28%),
-        linear-gradient(135deg, #0b1220, #111d30);
-    color: #ffffff;
-}
-
-.cta-box::after {
-    content: "";
-    position: absolute;
-    right: -130px;
-    bottom: -170px;
-    width: 430px;
-    height: 430px;
-    border: 1px solid rgba(25,167,206,.16);
-    border-radius: 50%;
-}
-
-.cta-content {
-    position: relative;
-    z-index: 2;
-    max-width: 730px;
-}
-
-.cta-content h2 {
-    font-size: clamp(34px, 5vw, 58px);
-    line-height: 1.03;
-    letter-spacing: -2.3px;
-    margin-bottom: 17px;
-}
-
-.cta-content p {
-    max-width: 650px;
-    color: rgba(255,255,255,.64);
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 27px;
-}
-
-.cta-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 11px;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-    background: #080e19;
-    color: #ffffff;
-    padding: 65px 0 25px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.35fr .8fr .9fr;
-    gap: 60px;
-    padding-bottom: 45px;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-.footer-brand img {
-    width: 150px;
-    height: 55px;
-    object-fit: contain;
-    object-position: left center;
-    background: transparent;
-    margin-bottom: 17px;
-}
-
-.footer-brand p {
-    max-width: 360px;
-    color: rgba(255,255,255,.54);
-    font-size: 12px;
-    line-height: 1.8;
-}
-
-.footer-title {
-    margin-bottom: 17px;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.footer-links {
-    display: grid;
-    gap: 9px;
-}
-
-.footer-links a {
-    width: fit-content;
-    color: rgba(255,255,255,.58);
-    font-size: 11px;
-    transition: .2s ease;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-.footer-contact {
-    display: grid;
-    gap: 10px;
-}
-
-.footer-contact a,
-.footer-contact span {
-    color: rgba(255,255,255,.58);
-    font-size: 11px;
-}
-
-.footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 22px;
-    color: rgba(255,255,255,.40);
-    font-size: 10px;
-}
-
-
-/* =========================================================
-   FLOATING WHATSAPP
-========================================================= */
-
-.floating-whatsapp {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    z-index: 1100;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    padding: 12px 15px;
-    border-radius: 50px;
-    background: var(--green);
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 900;
-    box-shadow: 0 15px 35px rgba(0,0,0,.20);
-    transition: .25s ease;
-}
-
-.floating-whatsapp:hover {
-    transform: translateY(-3px);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1080px) {
-
-    .nav-links {
-        gap: 17px;
-    }
-
-    .nav-links a {
-        font-size: 11px;
-    }
-
-    .hero-grid,
-    .shop-layout,
-    .creative-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 80px 0 90px;
-    }
-
-    .hero-visual {
-        max-width: 650px;
-        width: 100%;
-        margin: auto;
-    }
-
-    .hero-image-wrap {
-        margin: auto;
-    }
-
-    .shop-image-box {
-        max-width: 650px;
-        margin: auto;
-    }
-
-    .creative-visual {
-        max-width: 650px;
-        width: 100%;
-        margin: auto;
-    }
-
-    .paths-grid,
-    .repair-grid,
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .trust-item:nth-child(2) {
-        border-right: 0;
-    }
-
-    .trust-item:nth-child(-n+2) {
-        border-bottom: 1px solid var(--border);
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .kenya-layout {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-}
-
-
-/* =========================================================
-   MOBILE NAV
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .navbar {
-        min-height: 68px;
-    }
-
-    .logo-link img {
-        width: 140px;
-        height: 50px;
-    }
-
-    .mobile-toggle {
-        display: grid;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 68px;
-        left: 0;
-        right: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        visibility: hidden;
-
-        padding: 0 16px;
-
-        background:
-            linear-gradient(
-                180deg,
-                #0b1220 0%,
-                #080e19 100%
-            );
-
-        border-top: 1px solid rgba(255,255,255,.07);
-
-        box-shadow: 0 25px 50px rgba(0,0,0,.28);
-
-        transition:
-            max-height .35s ease,
-            opacity .25s ease,
-            visibility .25s ease,
-            padding .35s ease;
-    }
-
-    .nav-links.open {
-        max-height: 620px;
-        opacity: 1;
-        visibility: visible;
-        padding: 10px 16px 18px;
-    }
-
-    .nav-links a {
-        display: flex;
-        align-items: center;
-        min-height: 52px;
-        padding: 0 5px;
-        border-bottom: 1px solid rgba(255,255,255,.06);
-        color: rgba(255,255,255,.82);
-        font-size: 13px;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-        color: #ffffff;
-    }
-
-    .nav-links a:not(.nav-whatsapp)::after {
-        display: none;
-    }
-
-    .nav-links a.active {
-        color: #7bd8ef;
-    }
-
-    .nav-whatsapp {
-        justify-content: center !important;
-        margin-top: 12px;
-        min-height: 48px !important;
-        border: 0 !important;
-        border-radius: 9px !important;
-        font-size: 12px !important;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 760px) {
-
-    section {
-        padding: 72px 0;
-    }
-
-    .container {
-        width: min(var(--max), calc(100% - 28px));
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 68px 0 78px;
-    }
-
-    .hero-grid {
-        gap: 45px;
-    }
-
-    .hero h1 {
-        font-size: clamp(42px, 13vw, 62px);
-        letter-spacing: -2.7px;
-    }
-
-    .hero-text {
-        font-size: 14px;
-    }
-
-    .hero-image {
-        height: 330px;
-    }
-
-    .hero-badge {
-        left: 12px;
-        bottom: 20px;
-        max-width: 205px;
-    }
-
-    .trust-grid,
-    .paths-grid,
-    .repair-grid,
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .trust-item {
-        justify-content: flex-start;
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .trust-item:last-child {
-        border-bottom: 0;
-    }
-
-    .path-card {
-        min-height: 285px;
-    }
-
-    .shop-image-box img {
-        height: 320px;
-    }
-
-    .shop-list {
-        grid-template-columns: 1fr;
-    }
-
-    .repair-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 25px;
-    }
-
-    .creative-visual {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .creative-image {
-        min-height: 150px;
-    }
-
-    .creative-image:first-child {
-        min-height: 310px;
-    }
-
-    .cta-box {
-        padding: 40px 25px;
-        border-radius: 18px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .footer-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .floating-whatsapp {
-        right: 12px;
-        bottom: 12px;
-        padding: 11px 13px;
-    }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 420px) {
-
-    .logo-link img {
-        width: 128px;
-        height: 46px;
-    }
-
-    .mobile-toggle {
-        width: 42px;
-        height: 42px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .hero-note {
-        flex-direction: column;
-        gap: 9px;
-    }
-
-    .creative-visual {
-        grid-template-columns: 1fr;
-    }
-
-    .creative-image,
-    .creative-image:first-child {
-        min-height: 230px;
-        grid-row: auto;
-    }
-
-    .floating-whatsapp span {
-        display: none;
-    }
-
-    .floating-whatsapp {
-        width: 50px;
-        height: 50px;
-        padding: 0;
-        justify-content: center;
-        font-size: 19px;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-    }
-}
-
 </style>
 </head>
 
 <body>
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header class="site-header" id="siteHeader">
+  <div class="container navbar">
+    <a href="index.html" class="logo-link" aria-label="Street Gadgets Care Home">
+      <img src="Logo.png" alt="Street Gadgets Care" width="150" height="54">
+    </a>
 
-    <div class="container navbar">
+    <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">
+      <span id="menuIcon" aria-hidden="true">☰</span>
+    </button>
 
-        <a href="index.html"
-           class="logo-link"
-           aria-label="Street Gadgets Care Home">
-
-            <img src="Logo.png"
-                 alt="Street Gadgets Care">
-
-        </a>
-
-        <button
-            class="mobile-toggle"
-            id="mobileToggle"
-            type="button"
-            aria-label="Open navigation"
-            aria-controls="navLinks"
-            aria-expanded="false">
-
-            <span id="menuIcon">☰</span>
-
-        </button>
-
-        <nav
-            class="nav-links"
-            id="navLinks"
-            aria-label="Main navigation">
-
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="tech-repairs.html">Tech Repairs</a>
-            <a href="shop.html">Shop</a>
-            <a href="creative-studio.html">Creative Studio</a>
-            <a href="contact.html">Contact</a>
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-                class="nav-whatsapp"
-                target="_blank"
-                rel="noopener">
-
-                WhatsApp Us
-
-            </a>
-
-        </nav>
-
-    </div>
-
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tech-repairs.html">Tech Repairs</a>
+      <a href="shop.html">Shop</a>
+      <a href="creative-studio.html">Creative Studio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="nav-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+    </nav>
+  </div>
 </header>
 
-
 <main>
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
+  <section class="hero">
     <div class="container hero-grid">
-
-        <div class="hero-copy">
-
-            <div class="hero-kicker">
-                <span></span>
-                Repair • Shop • Create
-            </div>
-
-            <h1>
-                Technology that
-                <strong>works for you.</strong>
-            </h1>
-
-            <p class="hero-text">
-                Street Gadgets Care helps you keep your technology
-                working, find the devices and accessories you need,
-                and present your business professionally.
-            </p>
-
-            <div class="hero-actions">
-
-                <a href="tech-repairs.html"
-                   class="btn btn-primary">
-
-                    I Need a Repair →
-
-                </a>
-
-                <a href="shop.html"
-                   class="btn btn-outline">
-
-                    Browse the Shop →
-
-                </a>
-
-                <a
-                    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20device%20or%20service."
-                    class="btn btn-whatsapp"
-                    target="_blank"
-                    rel="noopener">
-
-                    WhatsApp Us
-
-                </a>
-
-            </div>
-
-            <div class="hero-note">
-
-                <span>Based in Nairobi</span>
-                <span>Serving customers across Kenya</span>
-                <span>Practical solutions</span>
-
-            </div>
-
+      <div class="hero-copy">
+        <div class="hero-kicker">Repair · Shop · Create</div>
+        <h1>Technology that <strong>works for you.</strong></h1>
+        <p class="hero-text">Street Gadgets Care helps you keep your technology working, find the devices and accessories you need, and present your business professionally.</p>
+        <div class="hero-actions">
+          <a href="tech-repairs.html" class="btn btn-primary">I Need a Repair →</a>
+          <a href="shop.html" class="btn btn-outline">Browse the Shop →</a>
+          <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20device%20or%20service." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
         </div>
-
-
-        <div class="hero-visual">
-
-            <div class="hero-image-wrap">
-
-                <img
-                    src="HP%20745%20G6%20RYZEN%207.JPG"
-                    alt="HP EliteBook laptop available from Street Gadgets Care"
-                    class="hero-image">
-
-            </div>
-
-            <div class="hero-badge">
-
-                <strong>Technology, handled with care.</strong>
-
-                <span>
-                    Repairs, devices, accessories and creative support
-                    from one trusted place.
-                </span>
-
-            </div>
-
+        <div class="hero-note">
+          <span>Based in Nairobi</span>
+          <span>Serving customers across Kenya</span>
+          <span>Practical solutions</span>
         </div>
+      </div>
 
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <img src="HP%20745%20G6%20RYZEN%207.JPG" alt="HP EliteBook laptop offered by Street Gadgets Care" class="hero-image" width="600" height="500" fetchpriority="high">
+        </div>
+        <div class="hero-badge">
+          <strong>Technology, handled with care.</strong>
+          <span>Repairs, devices, accessories and creative support from one place.</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =====================================================
-     TRUST STRIP
-===================================================== -->
-
-<section class="trust-strip">
-
+  <div class="trust-strip" aria-label="Our services at a glance">
     <div class="container trust-grid">
-
-        <div class="trust-item">
-
-            <div class="trust-icon">✓</div>
-
-            <div>
-                <strong>Practical Service</strong>
-                <span>Solutions built around your needs</span>
-            </div>
-
-        </div>
-
-        <div class="trust-item">
-
-            <div class="trust-icon">⚙</div>
-
-            <div>
-                <strong>Technical Expertise</strong>
-                <span>Repairs, servicing and upgrades</span>
-            </div>
-
-        </div>
-
-        <div class="trust-item">
-
-            <div class="trust-icon">▣</div>
-
-            <div>
-                <strong>Useful Technology</strong>
-                <span>Devices and accessories</span>
-            </div>
-
-        </div>
-
-        <div class="trust-item">
-
-            <div class="trust-icon">↗</div>
-
-            <div>
-                <strong>Kenya-Wide</strong>
-                <span>Nairobi based, serving across Kenya</span>
-            </div>
-
-        </div>
-
+      <div class="trust-item"><div class="trust-icon">✓</div><div><strong>Practical Service</strong><span>Solutions built around your needs</span></div></div>
+      <div class="trust-item"><div class="trust-icon">⚙</div><div><strong>Technical Expertise</strong><span>Repairs, servicing and upgrades</span></div></div>
+      <div class="trust-item"><div class="trust-icon">▣</div><div><strong>Useful Technology</strong><span>Devices and accessories</span></div></div>
+      <div class="trust-item"><div class="trust-icon">↗</div><div><strong>Kenya-Wide Service</strong><span>Nairobi based, serving across Kenya</span></div></div>
     </div>
+  </div>
 
-</section>
-
-
-<!-- =====================================================
-     THREE MAIN PATHS
-===================================================== -->
-
-<section class="paths-section">
-
+  <section>
     <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">What we do</div>
+        <h2>Start with what you need. We'll help with the rest.</h2>
+        <p>Whether your device needs attention, you're looking for technology, or you want your business to look more professional, Street Gadgets Care gives you a clear place to start.</p>
+      </div>
 
-        <div class="section-heading">
-
-            <div class="eyebrow">What we do</div>
-
-            <h2>
-                Start with what you need.
-                We'll help with the rest.
-            </h2>
-
-            <p>
-                Whether your device needs attention, you're looking
-                for technology or you want your business to look more
-                professional, Street Gadgets Care gives you a clear
-                place to start.
-            </p>
-
-        </div>
-
-
-        <div class="paths-grid">
-
-            <article class="path-card">
-
-                <div class="path-number">
-                    01 / TECH REPAIRS
-                </div>
-
-                <div class="path-icon">⚙</div>
-
-                <h3>Fix Your Technology</h3>
-
-                <p>
-                    Phone and laptop repairs, screen replacement,
-                    battery replacement, charging problems, software
-                    support, servicing and upgrades.
-                </p>
-
-                <a href="tech-repairs.html"
-                   class="path-link">
-
-                    Explore Tech Repairs →
-
-                </a>
-
-            </article>
-
-
-            <article class="path-card">
-
-                <div class="path-number">
-                    02 / SHOP
-                </div>
-
-                <div class="path-icon">▣</div>
-
-                <h3>Shop Technology</h3>
-
-                <p>
-                    Browse laptops, phones, smart gadgets, storage,
-                    chargers, cables, protection and useful computer
-                    accessories.
-                </p>
-
-                <a href="shop.html"
-                   class="path-link">
-
-                    Browse Our Shop →
-
-                </a>
-
-            </article>
-
-
-            <article class="path-card">
-
-                <div class="path-number">
-                    03 / CREATIVE STUDIO
-                </div>
-
-                <div class="path-icon">✦</div>
-
-                <h3>Build Your Brand</h3>
-
-                <p>
-                    Logo design, flyers, business cards, CVs,
-                    company profiles, business plans and professional
-                    business materials.
-                </p>
-
-                <a href="creative-studio.html"
-                   class="path-link">
-
-                    Visit Creative Studio →
-
-                </a>
-
-            </article>
-
-        </div>
-
+      <div class="paths-grid">
+        <article class="path-card">
+          <div class="path-number">01 / TECH REPAIRS</div>
+          <div class="path-icon">⚙</div>
+          <h3>Fix Your Technology</h3>
+          <p>Phone and laptop repairs, screen and battery replacement, charging problems, software support, servicing and upgrades.</p>
+          <a href="tech-repairs.html" class="path-link">Explore Tech Repairs →</a>
+        </article>
+        <article class="path-card">
+          <div class="path-number">02 / SHOP</div>
+          <div class="path-icon">▣</div>
+          <h3>Shop Technology</h3>
+          <p>Browse laptops, phones, smart gadgets, storage, chargers, cables, phone protection and useful computer accessories.</p>
+          <a href="shop.html" class="path-link">Browse Our Shop →</a>
+        </article>
+        <article class="path-card">
+          <div class="path-number">03 / CREATIVE STUDIO</div>
+          <div class="path-icon">✦</div>
+          <h3>Build Your Brand</h3>
+          <p>Logo design, flyers, business cards, CVs, company profiles, business plans and professional business materials.</p>
+          <a href="creative-studio.html" class="path-link">Visit Creative Studio →</a>
+        </article>
+      </div>
     </div>
+  </section>
 
-</section>
+  <section class="featured-section" id="featured-products">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Featured products</div>
+        <h2>Technology for work, study and everyday life.</h2>
+        <p>Explore selected devices and accessories. Contact us to confirm current availability before placing your order.</p>
+      </div>
 
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image"><img src="HP%20745%20G6%20RYZEN%207.JPG" alt="HP EliteBook 745 G6 Ryzen 7 laptop" loading="lazy" width="300" height="220"></div>
+          <div class="product-info">
+            <div class="product-category">Laptop</div>
+            <h3>HP EliteBook 745 G6 Ryzen 7</h3>
+            <div class="product-price">KES 47,500</div>
+            <a class="btn btn-dark" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207%20listed%20at%20KES%2047%2C500." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+          </div>
+        </article>
 
-<!-- =====================================================
-     SHOP PREVIEW
-===================================================== -->
+        <article class="product-card">
+          <div class="product-image"><img src="HP%20840%20G3.JPG" alt="HP EliteBook 840 G3 laptop" loading="lazy" width="300" height="220"></div>
+          <div class="product-info">
+            <div class="product-category">Laptop</div>
+            <h3>HP EliteBook 840 G3</h3>
+            <div class="product-price">KES 24,500</div>
+            <a class="btn btn-dark" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G3%20listed%20at%20KES%2024%2C500." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+          </div>
+        </article>
 
-<section class="shop-preview">
+        <article class="product-card">
+          <div class="product-image"><img src="nvme-ssd.jpg" alt="NVMe SSD storage drive" loading="lazy" width="300" height="220"></div>
+          <div class="product-info">
+            <div class="product-category">Storage & Memory</div>
+            <h3>NVMe SSD Storage</h3>
+            <div class="product-price">From KES 7,500</div>
+            <a class="btn btn-dark" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20please%20tell%20me%20about%20your%20NVMe%20SSD%20storage%20options%20and%20compatibility." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+          </div>
+        </article>
 
+        <article class="product-card">
+          <div class="product-image"><img src="laptop-bag-1.jpg" alt="Laptop bag available from Street Gadgets Care" loading="lazy" width="300" height="220"></div>
+          <div class="product-info">
+            <div class="product-category">Laptop Accessories</div>
+            <h3>Laptop Bags</h3>
+            <div class="product-price">From KES 1,000</div>
+            <a class="btn btn-dark" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20please%20show%20me%20the%20available%20laptop%20bags." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="product-note">Prices and availability may change. Please confirm the exact model, specifications, compatibility and current stock with us before purchasing.</p>
+      <div class="section-actions"><a href="shop.html" class="btn btn-primary">Explore All Products →</a></div>
+    </div>
+  </section>
+
+  <section>
     <div class="container shop-layout">
-
-        <div class="shop-image-box">
-
-            <img
-                src="HP%20745%20G6%20RYZEN%207.JPG"
-                alt="HP EliteBook laptop available at Street Gadgets Care">
-
-            <div class="shop-tag">
-                DEVICES • ACCESSORIES • STORAGE
-            </div>
-
+      <div class="shop-image-box">
+        <img src="Samsung%2025W.jpeg" alt="Charging accessory available from Street Gadgets Care" loading="lazy" width="600" height="420">
+        <div class="shop-tag">DEVICES · ACCESSORIES · STORAGE</div>
+      </div>
+      <div class="shop-copy">
+        <div class="eyebrow">Shop technology</div>
+        <h2>Find the technology you actually need.</h2>
+        <p>From laptops and phones to storage, chargers, cables and computer accessories, our shop is built around useful technology for everyday work and life.</p>
+        <div class="shop-list">
+          <div class="shop-list-item">Laptops & Phones</div>
+          <div class="shop-list-item">Smart Gadgets</div>
+          <div class="shop-list-item">Chargers & Cables</div>
+          <div class="shop-list-item">Storage & Memory</div>
+          <div class="shop-list-item">Phone Protection</div>
+          <div class="shop-list-item">Laptop Bags</div>
+          <div class="shop-list-item">Computer Accessories</div>
+          <div class="shop-list-item">Other Gadgets</div>
         </div>
-
-
-        <div class="shop-copy">
-
-            <div class="eyebrow">
-                Shop technology
-            </div>
-
-            <h2>
-                Find the technology
-                you actually need.
-            </h2>
-
-            <p>
-                From laptops and phones to storage, chargers,
-                cables and computer accessories, our shop is built
-                around useful technology for everyday work and life.
-            </p>
-
-
-            <div class="shop-list">
-
-                <div class="shop-list-item">
-                    Laptops
-                </div>
-
-                <div class="shop-list-item">
-                    Phones & Gadgets
-                </div>
-
-                <div class="shop-list-item">
-                    Chargers
-                </div>
-
-                <div class="shop-list-item">
-                    Charging Cables
-                </div>
-
-                <div class="shop-list-item">
-                    Storage & Memory
-                </div>
-
-                <div class="shop-list-item">
-                    Phone Protection
-                </div>
-
-                <div class="shop-list-item">
-                    Laptop Bags
-                </div>
-
-                <div class="shop-list-item">
-                    Computer Accessories
-                </div>
-
-            </div>
-
-
-            <a href="shop.html"
-               class="btn btn-dark">
-
-                Explore the Shop →
-
-            </a>
-
-        </div>
-
+        <a href="shop.html" class="btn btn-dark">Explore the Shop →</a>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =====================================================
-     REPAIR SUPPORT
-===================================================== -->
-
-<section class="repair-section">
-
+  <section>
     <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Tech repairs</div>
+        <h2>We help with the problems you actually experience.</h2>
+        <p>Not sure what's wrong with your device? Tell us what is happening and we'll help you figure out where to start.</p>
+      </div>
 
-        <div class="section-heading">
+      <div class="repair-grid">
+        <article class="repair-card"><div class="repair-icon">▣</div><h3>Phone Problems</h3><p>Screen damage, battery problems, charging faults, back glass, software and other common phone issues.</p></article>
+        <article class="repair-card"><div class="repair-icon">▰</div><h3>Laptop Problems</h3><p>Slow performance, charging faults, Windows problems, screen issues, battery problems and general servicing.</p></article>
+        <article class="repair-card"><div class="repair-icon">↗</div><h3>Upgrades</h3><p>Improve performance with SSD storage, RAM upgrades, battery replacement and other suitable upgrades.</p></article>
+        <article class="repair-card"><div class="repair-icon">⌘</div><h3>Software Support</h3><p>Windows installation, software setup, driver support, troubleshooting and practical software assistance.</p></article>
+        <article class="repair-card"><div class="repair-icon">⚡</div><h3>Charging Issues</h3><p>Having trouble charging your phone or laptop? Contact us for help identifying the likely cause and solution.</p></article>
+        <article class="repair-card"><div class="repair-icon">?</div><h3>Not Sure?</h3><p>You don't have to diagnose the problem yourself. Tell us what your device is doing and we'll guide you.</p></article>
+      </div>
 
-            <div class="eyebrow">
-                Tech repairs
-            </div>
-
-            <h2>
-                We help with the problems
-                you actually experience.
-            </h2>
-
-            <p>
-                Not sure what's wrong with your device?
-                That's okay. Tell us what is happening and we'll
-                help you figure out where to start.
-            </p>
-
-        </div>
-
-
-        <div class="repair-grid">
-
-            <article class="repair-card">
-
-                <div class="repair-icon">▣</div>
-
-                <h3>Phone Problems</h3>
-
-                <p>
-                    Screen damage, battery problems, charging faults,
-                    back glass, software and other common phone issues.
-                </p>
-
-            </article>
-
-
-            <article class="repair-card">
-
-                <div class="repair-icon">▰</div>
-
-                <h3>Laptop Problems</h3>
-
-                <p>
-                    Slow performance, charging faults, Windows problems,
-                    screen issues, battery problems and general servicing.
-                </p>
-
-            </article>
-
-
-            <article class="repair-card">
-
-                <div class="repair-icon">↗</div>
-
-                <h3>Upgrades</h3>
-
-                <p>
-                    Improve performance with SSD storage, RAM upgrades,
-                    battery replacement and other suitable upgrades.
-                </p>
-
-            </article>
-
-
-            <article class="repair-card">
-
-                <div class="repair-icon">⌘</div>
-
-                <h3>Software Support</h3>
-
-                <p>
-                    Windows installation, software setup, driver support,
-                    troubleshooting and practical software assistance.
-                </p>
-
-            </article>
-
-
-            <article class="repair-card">
-
-                <div class="repair-icon">⚡</div>
-
-                <h3>Charging Issues</h3>
-
-                <p>
-                    Having trouble charging your phone or laptop?
-                    We'll help identify the likely cause and solution.
-                </p>
-
-            </article>
-
-
-            <article class="repair-card">
-
-                <div class="repair-icon">?</div>
-
-                <h3>Not Sure?</h3>
-
-                <p>
-                    You don't have to diagnose the problem yourself.
-                    Tell us what your device is doing and we'll guide you.
-                </p>
-
-            </article>
-
-        </div>
-
-
-        <div class="repair-bottom">
-
-            <div>
-
-                <h3>Need repair help?</h3>
-
-                <p>
-                    Send us your device model and describe the problem.
-                </p>
-
-            </div>
-
-            <a
-                href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20repair.%20My%20device%20is%3A%20"
-                class="btn btn-whatsapp"
-                target="_blank"
-                rel="noopener">
-
-                Start a Repair Enquiry →
-
-            </a>
-
-        </div>
-
+      <div class="repair-bottom">
+        <div><h3>Need repair help?</h3><p>Send us your device model and describe the problem.</p></div>
+        <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20a%20repair.%20My%20device%20is%3A%20" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Start a Repair Enquiry →</a>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =====================================================
-     CREATIVE STUDIO
-===================================================== -->
-
-<section class="creative-section">
-
+  <section class="creative-section">
     <div class="container creative-layout">
-
-        <div class="creative-copy">
-
-            <div class="eyebrow">
-                Creative Studio
-            </div>
-
-            <h2>
-                Your business deserves
-                to look the part.
-            </h2>
-
-            <p>
-                We don't only take care of your technology.
-                We also help you present your business professionally —
-                from the first logo to the documents your customers see.
-            </p>
-
-
-            <div class="creative-list">
-
-                <span>Graphic Design</span>
-                <span>Logo Design</span>
-                <span>Flyers & Posters</span>
-                <span>Business Cards</span>
-                <span>CV / Resume</span>
-                <span>Company Profiles</span>
-                <span>Business Plans</span>
-                <span>Business Name Registration</span>
-
-            </div>
-
-
-            <a href="creative-studio.html"
-               class="btn btn-dark">
-
-                Explore Creative Studio →
-
-            </a>
-
+      <div class="creative-copy">
+        <div class="eyebrow">Creative Studio</div>
+        <h2>Your business deserves to look the part.</h2>
+        <p>We don't only take care of your technology. We also help you present your business professionally — from the first logo to the documents your customers see.</p>
+        <div class="creative-list">
+          <span>Graphic Design</span><span>Logo Design</span><span>Flyers & Posters</span><span>Business Cards</span><span>CV / Resume</span><span>Company Profiles</span><span>Business Plans</span><span>Business Name Registration</span>
         </div>
-
-
-        <div class="creative-visual">
-
-            <div class="creative-image">
-
-                <img
-                    src="logo-design.jpg"
-                    alt="Logo design by Street Gadgets Care">
-
-            </div>
-
-            <div class="creative-image">
-
-                <img
-                    src="restaurant-menu-design.jpg"
-                    alt="Restaurant menu design by Street Gadgets Care">
-
-            </div>
-
-            <div class="creative-image">
-
-                <img
-                    src="business-card-design.jpg"
-                    alt="Business card design by Street Gadgets Care">
-
-            </div>
-
-        </div>
-
+        <a href="creative-studio.html" class="btn btn-dark">Explore Creative Studio →</a>
+      </div>
+      <div class="creative-visual">
+        <div class="creative-image"><img src="logo-design.jpg" alt="Logo design example" loading="lazy" width="400" height="500"></div>
+        <div class="creative-image"><img src="restaurant-menu-design.jpg" alt="Restaurant menu design example" loading="lazy" width="400" height="250"></div>
+        <div class="creative-image"><img src="business-card-design.jpg" alt="Business card design example" loading="lazy" width="400" height="250"></div>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =====================================================
-     WHY US
-===================================================== -->
-
-<section class="why-section">
-
+  <section>
     <div class="container">
-
-        <div class="section-heading">
-
-            <div class="eyebrow">
-                Why Street Gadgets Care
-            </div>
-
-            <h2>
-                More than fixing devices.
-                We help you move forward.
-            </h2>
-
-            <p>
-                Technology affects how we work, communicate, learn,
-                create and grow. Our goal is to make getting the right
-                help simpler and more practical.
-            </p>
-
-        </div>
-
-
-        <div class="why-grid">
-
-            <article class="why-card">
-
-                <div class="why-number">01</div>
-
-                <h3>Technology First</h3>
-
-                <p>
-                    Technical knowledge is at the heart of what we do.
-                    Repairs, servicing and upgrades remain a major part
-                    of Street Gadgets Care.
-                </p>
-
-            </article>
-
-
-            <article class="why-card">
-
-                <div class="why-number">02</div>
-
-                <h3>Practical Solutions</h3>
-
-                <p>
-                    We focus on what you actually need instead of
-                    making technology unnecessarily complicated.
-                </p>
-
-            </article>
-
-
-            <article class="why-card">
-
-                <div class="why-number">03</div>
-
-                <h3>More Under One Roof</h3>
-
-                <p>
-                    Repairs, technology, accessories, creative design
-                    and practical business support — connected in one place.
-                </p>
-
-            </article>
-
-        </div>
-
+      <div class="section-heading">
+        <div class="eyebrow">Why Street Gadgets Care</div>
+        <h2>More than fixing devices. We help you move forward.</h2>
+        <p>Technology affects how we work, communicate, learn, create and grow. Our goal is to make getting the right help simpler and more practical.</p>
+      </div>
+      <div class="why-grid">
+        <article class="why-card"><div class="why-number">01</div><h3>Technology First</h3><p>Technical knowledge is at the heart of what we do. Repairs, servicing and upgrades remain a major part of Street Gadgets Care.</p></article>
+        <article class="why-card"><div class="why-number">02</div><h3>Practical Solutions</h3><p>We focus on what you actually need instead of making technology unnecessarily complicated.</p></article>
+        <article class="why-card"><div class="why-number">03</div><h3>More Under One Roof</h3><p>Repairs, technology, accessories, creative design and practical business support — connected in one place.</p></article>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =====================================================
-     KENYA-WIDE SERVICE
-===================================================== -->
-
-<section class="kenya-section">
-
+  <section class="kenya-section">
     <div class="container kenya-layout">
-
-        <div class="kenya-copy">
-
-            <div class="eyebrow">
-                Serving across Kenya
-            </div>
-
-            <h2>
-                NOT IN NAIROBI? NO WORRIES!
-            </h2>
-
-            <p>
-                Send your device to us and we'll repair & ship it back
-                safely. Contact us first so we can guide you through
-                the process.
-            </p>
-
-
-            <div class="kenya-points">
-
-                <span>Nairobi Based</span>
-                <span>Kenya-Wide Service</span>
-                <span>Device Repairs</span>
-                <span>Product Enquiries</span>
-
-            </div>
-
-        </div>
-
-
-        <a
-            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20not%20in%20Nairobi%20and%20would%20like%20to%20ask%20about%20your%20service."
-            class="btn btn-whatsapp"
-            target="_blank"
-            rel="noopener">
-
-            Talk to Us on WhatsApp →
-
-        </a>
-
+      <div class="kenya-copy">
+        <div class="eyebrow">Serving across Kenya</div>
+        <h2>NOT IN NAIROBI? NO WORRIES!</h2>
+        <p>Send your device to us and we'll repair &amp; ship it back safely. Contact us first so we can guide you through the process.</p>
+        <div class="kenya-points"><span>Nairobi Based</span><span>Kenya-Wide Service</span><span>Device Repairs</span><span>Product Enquiries</span></div>
+      </div>
+      <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20not%20in%20Nairobi%20and%20would%20like%20to%20ask%20about%20your%20service." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Talk to Us on WhatsApp →</a>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
-<section class="final-cta">
-
+  <section class="final-cta">
     <div class="container">
-
-        <div class="cta-box">
-
-            <div class="cta-content">
-
-                <div class="eyebrow">
-                    Let's get started
-                </div>
-
-                <h2>
-                    What can we take care of for you?
-                </h2>
-
-                <p>
-                    Need a repair, looking for a device or accessory,
-                    or want help making your business look more
-                    professional? Tell us what you need and we'll
-                    help you find the right place to start.
-                </p>
-
-
-                <div class="cta-actions">
-
-                    <a
-                        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-                        class="btn btn-whatsapp"
-                        target="_blank"
-                        rel="noopener">
-
-                        WhatsApp Street Gadgets Care
-
-                    </a>
-
-                    <a
-                        href="contact.html"
-                        class="btn btn-outline">
-
-                        Contact Us
-
-                    </a>
-
-                </div>
-
-            </div>
-
+      <div class="cta-box">
+        <div class="cta-content">
+          <div class="eyebrow">Let's get started</div>
+          <h2>What can we take care of for you?</h2>
+          <p>Need a repair, looking for a device or accessory, or want help making your business look more professional? Tell us what you need and we'll help you find the right place to start.</p>
+          <div class="cta-actions">
+            <a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Street Gadgets Care</a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
         </div>
-
+      </div>
     </div>
-
-</section>
-
+  </section>
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div class="footer-brand">
-
-                <img
-                    src="Logo.png"
-                    alt="Street Gadgets Care">
-
-                <p>
-                    Technology, repairs, devices, accessories,
-                    creative design and practical business support —
-                    all under one roof.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Explore
-                </div>
-
-                <div class="footer-links">
-
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="tech-repairs.html">Tech Repairs</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="creative-studio.html">Creative Studio</a>
-                    <a href="contact.html">Contact</a>
-
-                </div>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Contact
-                </div>
-
-                <div class="footer-contact">
-
-                    <a href="tel:0114259961">
-                        0114 259 961
-                    </a>
-
-                    <a
-                        href="https://wa.me/254114259961"
-                        target="_blank"
-                        rel="noopener">
-
-                        WhatsApp Us
-
-                    </a>
-
-                    <a href="mailto:streetgadgetscare@gmail.com">
-                        streetgadgetscare@gmail.com
-                    </a>
-
-                    <span>
-                        Nairobi, Kenya
-                    </span>
-
-                </div>
-
-            </div>
-
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Street Gadgets Care Home"><img src="Logo.png" alt="Street Gadgets Care" width="150" height="54" loading="lazy"></a>
+        <p>Technology, repairs, devices, accessories, creative design and practical business support — all under one roof.</p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@street_gadgets_care" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.youtube.com/results?search_query=Street+Gadgets+Care" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
+      </div>
 
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 Street Gadgets Care. All Rights Reserved.
-            </span>
-
-            <span>
-                Based in Nairobi • Serving Customers Across Kenya
-            </span>
-
+      <div>
+        <div class="footer-title">Explore</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="tech-repairs.html">Tech Repairs</a>
+          <a href="shop.html">Shop</a>
+          <a href="creative-studio.html">Creative Studio</a>
+          <a href="contact.html">Contact</a>
         </div>
+      </div>
 
+      <div>
+        <div class="footer-title">Contact</div>
+        <div class="footer-contact">
+          <a href="tel:+254114259961">0114 259 961</a>
+          <a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+          <a href="mailto:streetgadgetscare@gmail.com">streetgadgetscare@gmail.com</a>
+          <span>Nairobi, Kenya</span>
+          <span>Delivery arrangements available across Kenya.</span>
+        </div>
+      </div>
     </div>
 
+    <div class="footer-bottom">
+      <span>© <span id="currentYear">2026</span> Street Gadgets Care. All rights reserved.</span>
+      <span>Based in Nairobi · Serving customers across Kenya</span>
+    </div>
+  </div>
 </footer>
 
-
-<!-- =====================================================
-     FLOATING WHATSAPP
-===================================================== -->
-
-<a
-    href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-    class="floating-whatsapp"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat with Street Gadgets Care on WhatsApp">
-
-    <span>WhatsApp</span> 💬
-
-</a>
-
-
-<!-- =====================================================
-     HEADER + MOBILE MENU SCRIPT
-===================================================== -->
+<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with Street Gadgets Care on WhatsApp"><span>WhatsApp</span> 💬</a>
 
 <script>
+(function(){
+  const header = document.getElementById("siteHeader");
+  const toggle = document.getElementById("mobileToggle");
+  const nav = document.getElementById("navLinks");
+  const icon = document.getElementById("menuIcon");
 
-const siteHeader = document.getElementById("siteHeader");
-const mobileToggle = document.getElementById("mobileToggle");
-const navLinks = document.getElementById("navLinks");
-const menuIcon = document.getElementById("menuIcon");
+  function updateHeader(){
+    header.classList.toggle("scrolled", window.scrollY > 12);
+  }
 
+  function closeMenu(){
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded","false");
+    toggle.setAttribute("aria-label","Open navigation");
+    icon.textContent = "☰";
+  }
 
-/* HEADER SCROLL */
+  function openMenu(){
+    nav.classList.add("open");
+    toggle.setAttribute("aria-expanded","true");
+    toggle.setAttribute("aria-label","Close navigation");
+    icon.textContent = "✕";
+  }
 
-function updateHeader() {
-
-    if (window.scrollY > 12) {
-        siteHeader.classList.add("scrolled");
-    } else {
-        siteHeader.classList.remove("scrolled");
-    }
-
-}
-
-window.addEventListener("scroll", updateHeader, {
-    passive: true
-});
-
-updateHeader();
-
-
-/* MOBILE MENU */
-
-function closeMobileMenu() {
-
-    navLinks.classList.remove("open");
-
-    mobileToggle.setAttribute(
-        "aria-expanded",
-        "false"
-    );
-
-    mobileToggle.setAttribute(
-        "aria-label",
-        "Open navigation"
-    );
-
-    menuIcon.textContent = "☰";
-
-}
-
-
-function openMobileMenu() {
-
-    navLinks.classList.add("open");
-
-    mobileToggle.setAttribute(
-        "aria-expanded",
-        "true"
-    );
-
-    mobileToggle.setAttribute(
-        "aria-label",
-        "Close navigation"
-    );
-
-    menuIcon.textContent = "✕";
-
-}
-
-
-mobileToggle.addEventListener("click", function(event) {
-
+  toggle.addEventListener("click",function(event){
     event.stopPropagation();
+    nav.classList.contains("open") ? closeMenu() : openMenu();
+  });
 
-    const isOpen =
-        navLinks.classList.contains("open");
+  nav.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click",closeMenu);
+  });
 
-    if (isOpen) {
-        closeMobileMenu();
-    } else {
-        openMobileMenu();
-    }
+  document.addEventListener("click",function(event){
+    if(!header.contains(event.target)) closeMenu();
+  });
 
-});
+  document.addEventListener("keydown",function(event){
+    if(event.key === "Escape") closeMenu();
+  });
 
+  window.addEventListener("resize",function(){
+    if(window.innerWidth > 900) closeMenu();
+  });
 
-/* CLOSE AFTER LINK CLICK */
+  window.addEventListener("scroll",updateHeader,{passive:true});
+  updateHeader();
 
-document.querySelectorAll(".nav-links a").forEach(function(link) {
-
-    link.addEventListener("click", function() {
-        closeMobileMenu();
-    });
-
-});
-
-
-/* CLOSE OUTSIDE */
-
-document.addEventListener("click", function(event) {
-
-    if (!siteHeader.contains(event.target)) {
-        closeMobileMenu();
-    }
-
-});
-
-
-/* ESC */
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-        closeMobileMenu();
-    }
-
-});
-
-
-/* RESET ON DESKTOP */
-
-window.addEventListener("resize", function() {
-
-    if (window.innerWidth > 900) {
-        closeMobileMenu();
-    }
-
-});
-
+  const year = document.getElementById("currentYear");
+  if(year) year.textContent = new Date().getFullYear();
+})();
 </script>
-
 </body>
 </html>
-```
