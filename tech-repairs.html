@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Repairs | Street Gadgets Care Nairobi</title>
-  <meta name="description" content="Phone screen replacement for selected Samsung, iPhone, Tecno, Redmi and itel models. Laptop repairs, hardware troubleshooting and technology support by Street Gadgets Care in Nairobi, Kenya.">
+  <meta name="description" content="Phone screen replacement and battery replacement for selected Infinix, Samsung, iPhone, Tecno, Redmi and itel models. Laptop repairs and hardware troubleshooting by Street Gadgets Care in Nairobi, Kenya.">
   <meta name="theme-color" content="#0b1220">
   <link rel="icon" type="image/png" href="Logo.png">
 
@@ -478,7 +477,7 @@
       font-size: 13px;
     }
 
-    /* SCREEN REPLACEMENT CATALOGUE */
+    /* SCREEN AND BATTERY CATALOGUE */
 
     .screen-catalogue {
       background: #f5f7fa;
@@ -588,6 +587,7 @@
       color: var(--muted);
       font-size: 12px;
       text-align: center;
+      overflow-wrap: anywhere;
     }
 
     .screen-product-content {
@@ -677,6 +677,44 @@
       color: #536174;
       font-size: 12px;
       line-height: 1.8;
+    }
+
+    .catalogue-section-heading {
+      max-width: 1100px;
+      margin: 0 auto 28px;
+    }
+
+    .catalogue-section-heading h3 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 24px;
+    }
+
+    .catalogue-section-heading p {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    #battery-replacements {
+      padding-top: 65px;
+      border-top: 1px solid var(--border);
+      margin-top: 65px;
+      scroll-margin-top: 95px;
+    }
+
+    .battery-tag {
+      color: #16804a;
+    }
+
+    .battery-quality-note {
+      border-color: #d7f0df;
+      background: #f1fbf4;
+    }
+
+    .battery-inquiry-btn {
+      background: var(--green);
     }
 
     /* LAPTOP REPAIRS */
@@ -1511,12 +1549,14 @@
         about the available screen specifications before booking.
       </p>
 
-      <div class="screen-brand-nav" aria-label="Screen brands">
-        <a href="#screens-samsung">Samsung</a>
-        <a href="#screens-iphone">iPhone</a>
-        <a href="#screens-tecno">Tecno</a>
+      <div class="screen-brand-nav" aria-label="Screen and battery categories">
+        <a href="#screens-samsung">Samsung Screens</a>
+        <a href="#screens-iphone">iPhone Screens</a>
+        <a href="#screens-infinix">Infinix Screens</a>
+        <a href="#screens-tecno">Tecno Screens</a>
         <a href="#screens-redmi">Redmi / Xiaomi</a>
-        <a href="#screens-itel">itel</a>
+        <a href="#screens-itel">itel Screens</a>
+        <a href="#battery-replacements">Phone Batteries</a>
       </div>
 
       <div id="screenCatalogue"></div>
@@ -1531,6 +1571,34 @@
         We will not describe a screen as original, AMOLED or OLED unless
         that specification has been confirmed for the actual part.
       </div>
+
+      <!-- PHONE BATTERY REPLACEMENTS -->
+      <section id="battery-replacements" aria-labelledby="batteryHeading">
+        <div class="catalogue-section-heading">
+          <span class="eyebrow">Phone Battery Catalogue</span>
+          <h3 id="batteryHeading">Phone Battery Replacements</h3>
+          <p>
+            Looking for a replacement battery for your Tecno phone?
+            Browse the models below and contact Street Gadgets Care
+            to confirm availability, battery compatibility and the
+            replacement price before arranging your repair.
+          </p>
+        </div>
+
+        <div class="screen-brand-nav" aria-label="Battery brands">
+          <a href="#batteries-tecno">Tecno Batteries</a>
+        </div>
+
+        <div id="batteryCatalogue"></div>
+
+        <div class="screen-catalogue-note">
+          <strong>Battery compatibility matters.</strong>
+          Battery models and connectors can differ between phone
+          versions. Please confirm your exact phone model and the
+          battery part before purchasing or arranging installation.
+          Availability and pricing will be confirmed through WhatsApp.
+        </div>
+      </section>
     </div>
   </section>
 
@@ -1864,7 +1932,7 @@
     </svg>
   </a>
 
-  <!-- SCREEN CATALOGUE AND MOBILE MENU -->
+  <!-- SCREEN CATALOGUE, BATTERY CATALOGUE AND MOBILE MENU -->
   <script>
     const screenBrands = [
       {
@@ -1990,6 +2058,62 @@
         ]
       },
       {
+        id: "screens-infinix",
+        name: "Infinix",
+        models: [
+          {
+            name: "Infinix Hot 50 Pro+",
+            image: "infinix-hot-50-pro-plus-screen.jpg",
+            description: "Has your Infinix Hot 50 Pro+ screen been cracked or damaged? Ask us about a compatible replacement and confirm the available display grade before arranging installation.",
+            features: [
+              "Confirm Hot 50 Pro+ compatibility",
+              "Ask about brightness and colour reproduction",
+              "Check touch response and fitting"
+            ]
+          },
+          {
+            name: "Infinix Hot 60i",
+            image: "infinix-hot-60i-screen.jpg",
+            description: "For a damaged Infinix Hot 60i display, inquire about the correct replacement screen. We can confirm availability, compatible parts and the total replacement price.",
+            features: [
+              "Model-specific screen compatibility",
+              "Ask about available screen quality",
+              "Confirm display and touch operation"
+            ]
+          },
+          {
+            name: "Infinix Note 50 Pro",
+            image: "infinix-note-50-pro-screen.jpg",
+            description: "Restore your Infinix Note 50 Pro display with a compatible replacement option. Ask us to confirm the actual panel specification, colour performance and availability.",
+            features: [
+              "Confirm Note 50 Pro compatibility",
+              "Ask about panel type and colour quality",
+              "Check display and touch functions"
+            ]
+          },
+          {
+            name: "Infinix Smart 10 Plus",
+            image: "infinix-smart-10-plus-screen.jpg",
+            description: "If your Infinix Smart 10 Plus screen is broken or unresponsive, contact us to confirm a compatible replacement and the available screen quality.",
+            features: [
+              "Confirm Smart 10 Plus compatibility",
+              "Ask about clarity and brightness",
+              "Check touch response after fitting"
+            ]
+          },
+          {
+            name: "Infinix Smart 10",
+            image: "infinix-smart-10-screen.jpg",
+            description: "For a cracked or faulty Infinix Smart 10 display, ask about the compatible replacement available for your phone and the total replacement cost.",
+            features: [
+              "Confirm the exact Smart 10 model",
+              "Ask about display and colour quality",
+              "Check touch operation after fitting"
+            ]
+          }
+        ]
+      },
+      {
         id: "screens-tecno",
         name: "Tecno",
         models: [
@@ -2031,6 +2155,66 @@
               "Check the exact model compatibility",
               "Ask about colour and brightness",
               "Confirm touch response after fitting"
+            ]
+          },
+          {
+            name: "Tecno Phantom 5",
+            image: "Tecno-Phantom-5-Screen.jpg",
+            description: "Need a replacement screen for your Tecno Phantom 5? Contact us to confirm the correct compatible display, available quality and replacement price.",
+            features: [
+              "Confirm Phantom 5 compatibility",
+              "Ask about display clarity and colours",
+              "Check touch response after fitting"
+            ]
+          },
+          {
+            name: "Tecno Phantom 6 Plus",
+            image: "Tecno-Phantom-6-Plus-Screen.jpg",
+            description: "For a damaged Tecno Phantom 6 Plus display, ask us to check the correct screen for your device and confirm the available replacement option.",
+            features: [
+              "Confirm Phantom 6 Plus compatibility",
+              "Ask about screen grade and brightness",
+              "Check touch and display operation"
+            ]
+          },
+          {
+            name: "Tecno Phantom 6",
+            image: "Tecno-Phantom-6-Screen.jpg",
+            description: "If your Tecno Phantom 6 display is cracked or faulty, inquire about a compatible replacement and confirm the actual part specifications before fitting.",
+            features: [
+              "Confirm Phantom 6 compatibility",
+              "Ask about colour and display quality",
+              "Check touch response after fitting"
+            ]
+          },
+          {
+            name: "Tecno Spark 2",
+            image: "Tecno-spark2-Screen.jpg",
+            description: "For a damaged Tecno Spark 2 screen, contact us to confirm the compatible replacement, available display quality and total repair cost.",
+            features: [
+              "Confirm Spark 2 compatibility",
+              "Ask about brightness and clarity",
+              "Check display and touch operation"
+            ]
+          },
+          {
+            name: "Tecno Spark K7",
+            image: "Tecno-spark-K7-Screen.jpg",
+            description: "Ask about a compatible screen replacement for your Tecno Spark K7. We can help confirm the correct part, its availability and the replacement cost.",
+            features: [
+              "Confirm Spark K7 compatibility",
+              "Ask about available screen grade",
+              "Check touch and display operation"
+            ]
+          },
+          {
+            name: "Tecno Spark K8",
+            image: "Tecno-spark-K8-Screen.jpg",
+            description: "If your Tecno Spark K8 screen is broken or not responding properly, inquire about the correct compatible screen and available replacement options.",
+            features: [
+              "Confirm Spark K8 compatibility",
+              "Ask about display clarity and colour",
+              "Check touch response after fitting"
             ]
           }
         ]
@@ -2119,13 +2303,173 @@
       }
     ];
 
-    const screenCatalogue = document.getElementById("screenCatalogue");
+    /* TECNO BATTERY CATALOGUE */
 
-    function createScreenCard(model) {
+    const batteryBrands = [
+      {
+        id: "batteries-tecno",
+        name: "Tecno Batteries",
+        models: [
+          {
+            name: "Tecno Camon 11 Pro Battery",
+            image: "tecno-camon-11-pro-battery.jpg",
+            description: "Looking for a replacement battery for your Tecno Camon 11 Pro? Ask us to confirm the compatible battery part, availability and replacement price.",
+            features: [
+              "Confirm the correct battery model",
+              "Ask about battery availability",
+              "Confirm the total replacement cost"
+            ]
+          },
+          {
+            name: "Tecno Camon 12 Battery",
+            image: "tecno-camon-12-battery.jpg",
+            description: "If your Tecno Camon 12 battery drains quickly or struggles to hold charge, inquire about a compatible replacement battery for your device.",
+            features: [
+              "Confirm Camon 12 compatibility",
+              "Ask about the available battery",
+              "Check replacement and fitting options"
+            ]
+          },
+          {
+            name: "Tecno Camon 12 Pro Battery",
+            image: "tecno-camon-12-pro-battery.jpg",
+            description: "Need a battery for your Tecno Camon 12 Pro? Contact us to confirm the correct battery part and its availability before arranging replacement.",
+            features: [
+              "Confirm Camon 12 Pro compatibility",
+              "Ask about battery availability",
+              "Confirm the replacement price"
+            ]
+          },
+          {
+            name: "Tecno Camon 15 Battery",
+            image: "tecno-camon-15-battery.jpg",
+            description: "For a Tecno Camon 15 that no longer holds charge properly, ask about a compatible replacement battery and the available fitting options.",
+            features: [
+              "Confirm the exact Camon 15 model",
+              "Ask about battery availability",
+              "Check fitting options"
+            ]
+          },
+          {
+            name: "Tecno Camon 16 Battery",
+            image: "tecno-camon-16-battery.jpg",
+            description: "Ask us about a replacement battery for your Tecno Camon 16. We will help confirm the correct part, compatibility and current availability.",
+            features: [
+              "Confirm Camon 16 compatibility",
+              "Ask about the correct battery part",
+              "Confirm the total replacement cost"
+            ]
+          },
+          {
+            name: "Tecno Camon 40 4G Battery",
+            image: "tecno-camon-40-4g-battery.jpg",
+            description: "Looking for a battery for the Tecno Camon 40 4G? Contact us to confirm the correct battery for this version and check availability.",
+            features: [
+              "Confirm the Camon 40 4G version",
+              "Ask about battery compatibility",
+              "Check replacement options"
+            ]
+          },
+          {
+            name: "Tecno Camon 40 Premier 5G Battery",
+            image: "tecno-camon-40-premier-5g-battery.jpg",
+            description: "For the Tecno Camon 40 Premier 5G, ask us to confirm the compatible battery part and current availability before booking a replacement.",
+            features: [
+              "Confirm Camon 40 Premier 5G compatibility",
+              "Ask about the correct battery part",
+              "Confirm replacement pricing"
+            ]
+          },
+          {
+            name: "Tecno Camon 40 Pro 4G Battery",
+            image: "tecno-camon-40-pro-4g-battery.jpg",
+            description: "Need a battery for your Tecno Camon 40 Pro 4G? Contact us to check the correct battery, availability and replacement options.",
+            features: [
+              "Confirm the Camon 40 Pro 4G version",
+              "Ask about battery availability",
+              "Check fitting and replacement cost"
+            ]
+          },
+          {
+            name: "Tecno Camon 40 Pro 5G Battery",
+            image: "tecno-camon-40-pro-5g-battery.jpg",
+            description: "Ask about a compatible replacement battery for the Tecno Camon 40 Pro 5G. Confirm the exact part and availability before arranging installation.",
+            features: [
+              "Confirm the Camon 40 Pro 5G version",
+              "Ask about the correct battery part",
+              "Confirm replacement pricing"
+            ]
+          },
+          {
+            name: "Tecno Spark 4 Pro Battery",
+            image: "tecno-spark-4-pro-battery.jpg",
+            description: "If your Tecno Spark 4 Pro battery is weak or no longer holds charge, inquire about a compatible replacement and the cost of fitting.",
+            features: [
+              "Confirm Spark 4 Pro compatibility",
+              "Ask about battery availability",
+              "Check replacement options"
+            ]
+          },
+          {
+            name: "Tecno Spark 5 Battery",
+            image: "tecno-spark-5-battery.jpg",
+            description: "For a Tecno Spark 5 with battery or charging endurance concerns, ask us to confirm the correct replacement battery and its availability.",
+            features: [
+              "Confirm Spark 5 compatibility",
+              "Ask about the available battery",
+              "Confirm replacement pricing"
+            ]
+          },
+          {
+            name: "Tecno Spark 7 Battery",
+            image: "tecno-spark-7-battery.jpg",
+            description: "Need a replacement battery for your Tecno Spark 7? Contact us to check compatibility, availability and the total replacement cost.",
+            features: [
+              "Confirm Spark 7 compatibility",
+              "Ask about battery availability",
+              "Check fitting options"
+            ]
+          },
+          {
+            name: "Tecno Spark 7P Battery",
+            image: "tecno-spark-7p-battery.jpg",
+            description: "Ask about a replacement battery for the Tecno Spark 7P. We can help confirm the correct part and the available replacement options.",
+            features: [
+              "Confirm Spark 7P compatibility",
+              "Ask about battery availability",
+              "Confirm the replacement price"
+            ]
+          },
+          {
+            name: "Tecno Spark 7 Battery",
+            image: "tecno-spark-7-battery.jpg",
+            description: "Contact us to confirm the battery required for your Tecno Spark 7 and check whether a compatible replacement is available.",
+            features: [
+              "Confirm the exact phone model",
+              "Check battery compatibility",
+              "Ask about replacement options"
+            ]
+          }
+        ]
+      }
+    ];
+
+    const screenCatalogue = document.getElementById("screenCatalogue");
+    const batteryCatalogue = document.getElementById("batteryCatalogue");
+
+    function createCatalogueCard(model, type) {
+      const isBattery = type === "battery";
+
+      const itemLabel = isBattery
+        ? "battery replacement"
+        : "screen replacement";
+
       const message =
-        "Hello Street Gadgets Care, I would like to inquire about a screen replacement for my " +
-        model.name +
-        ". Please confirm availability, screen quality, panel type, colour reproduction, touch performance and the total replacement price.";
+        "Hello Street Gadgets Care, I would like to inquire about a " +
+        itemLabel +
+        " for my " +
+        model.name.replace(/ Battery$/, "") +
+        ". Please confirm compatibility, availability and the total replacement price.";
 
       const card = document.createElement("article");
       card.className = "screen-product-card";
@@ -2135,15 +2479,20 @@
 
       const image = document.createElement("img");
       image.src = model.image;
-      image.alt = model.name + " replacement screen";
+      image.alt = model.name;
       image.loading = "lazy";
 
       image.addEventListener("error", function () {
+        if (image.dataset.fallbackShown === "true") return;
+
+        image.dataset.fallbackShown = "true";
         image.style.display = "none";
+
         const fallback = document.createElement("div");
         fallback.className = "screen-image-fallback";
         fallback.textContent =
-          "Image not found. Please check the GitHub filename: " + model.image;
+          "Image not found. Check the GitHub filename: " + model.image;
+
         imageWrap.appendChild(fallback);
       });
 
@@ -2153,8 +2502,12 @@
       content.className = "screen-product-content";
 
       const tag = document.createElement("span");
-      tag.className = "screen-product-tag";
-      tag.textContent = "Screen Replacement";
+      tag.className = isBattery
+        ? "screen-product-tag battery-tag"
+        : "screen-product-tag";
+      tag.textContent = isBattery
+        ? "Phone Battery"
+        : "Screen Replacement";
 
       const title = document.createElement("h4");
       title.textContent = model.name;
@@ -2172,16 +2525,19 @@
       });
 
       const quality = document.createElement("div");
-      quality.className = "screen-quality-note";
+      quality.className = isBattery
+        ? "screen-quality-note battery-quality-note"
+        : "screen-quality-note";
 
       const qualityTitle = document.createElement("strong");
-      qualityTitle.textContent = "Quality, colours and touch";
+      qualityTitle.textContent = isBattery
+        ? "Compatibility and availability"
+        : "Quality, colours and touch";
 
       const qualityText = document.createElement("span");
-      qualityText.textContent =
-        "Ask us to confirm the actual screen grade, panel technology, " +
-        "brightness, colour reproduction and touch performance. " +
-        "Specifications depend on the replacement supplied.";
+      qualityText.textContent = isBattery
+        ? "Confirm the correct battery part, compatibility, availability and replacement cost before proceeding."
+        : "Ask us to confirm the actual screen grade, panel technology, brightness, colour reproduction and touch performance. Specifications depend on the replacement supplied.";
 
       quality.appendChild(qualityTitle);
       quality.appendChild(qualityText);
@@ -2192,10 +2548,13 @@
         "https://wa.me/254114259961?text=" + encodeURIComponent(message);
       button.target = "_blank";
       button.rel = "noopener noreferrer";
-      button.textContent = "Inquire on WhatsApp";
+      button.textContent = isBattery
+        ? "Inquire About Battery"
+        : "Inquire on WhatsApp";
+
       button.setAttribute(
         "aria-label",
-        "Inquire on WhatsApp about " + model.name + " screen replacement"
+        "Inquire on WhatsApp about " + model.name
       );
 
       content.appendChild(tag);
@@ -2211,8 +2570,10 @@
       return card;
     }
 
-    if (screenCatalogue) {
-      screenBrands.forEach(function (brand) {
+    function renderCatalogue(container, brands, type) {
+      if (!container) return;
+
+      brands.forEach(function (brand) {
         const group = document.createElement("section");
         group.className = "screen-brand-group";
         group.id = brand.id;
@@ -2233,14 +2594,17 @@
         grid.className = "screen-product-grid";
 
         brand.models.forEach(function (model) {
-          grid.appendChild(createScreenCard(model));
+          grid.appendChild(createCatalogueCard(model, type));
         });
 
         group.appendChild(heading);
         group.appendChild(grid);
-        screenCatalogue.appendChild(group);
+        container.appendChild(group);
       });
     }
+
+    renderCatalogue(screenCatalogue, screenBrands, "screen");
+    renderCatalogue(batteryCatalogue, batteryBrands, "battery");
 
     /* MOBILE NAVIGATION */
 
@@ -2291,4 +2655,3 @@
 
 </body>
 </html>
-```
