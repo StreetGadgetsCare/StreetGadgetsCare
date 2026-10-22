@@ -1,693 +1,470 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Technology & Accessories | Street Gadgets Care</title>
-<meta name="description" content="Shop laptops, phones, Oraimo earbuds, headphones, neckbands, chargers, cables, storage and accessories at Street Gadgets Care. Based in Nairobi, serving customers across Kenya.">
+<title>Phone Spare Parts | Street Gadgets Care</title>
+<meta name="description" content="Browse phone screen replacements, batteries and iPhone spare parts at Street Gadgets Care in Nairobi, Kenya. Ask us to confirm compatibility and availability on WhatsApp.">
 <meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" href="Logo.png">
 
 <style>
-:root{
- --navy:#0b1220;
- --navy2:#111d30;
- --cyan:#19a7ce;
- --cyan-dark:#087fa3;
- --green:#25d366;
- --white:#fff;
- --light:#f6f9fb;
- --text:#101b2b;
- --muted:#667484;
- --border:#dfe7ed;
- --shadow:0 16px 40px rgba(11,18,32,.1);
- --max:1180px
-}
+:root{--navy:#0b1220;--navy2:#14233a;--cyan:#19a7ce;--green:#25d366;--text:#172033;--muted:#687385;--light:#f5f7fa;--border:#e2e7ed}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:150px}
-body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--text);line-height:1.6;overflow-x:hidden}
-img{max-width:100%;display:block}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-button,a{-webkit-tap-highlight-color:transparent}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-
-.site-header{position:sticky;top:0;z-index:2000;background:rgba(11,18,32,.98);border-bottom:1px solid rgba(255,255,255,.08)}
-.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand img{width:165px;height:auto;object-fit:contain}
-.main-nav{display:flex;align-items:center;justify-content:flex-end;gap:3px}
-.main-nav a{color:rgba(255,255,255,.88);font-size:13px;font-weight:700;padding:10px;border-radius:9px;white-space:nowrap;transition:.2s}
-.main-nav a:hover,.main-nav a.active{color:#fff;background:rgba(255,255,255,.09)}
-.main-nav .nav-whatsapp{background:var(--green);color:#fff;margin-left:5px;padding:10px 13px}
-
-.menu-toggle{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
-.menu-toggle span{width:21px;height:2px;background:#fff;border-radius:5px;transition:.2s}
-.menu-toggle.active span:first-child{transform:translateY(7px) rotate(45deg)}
-.menu-toggle.active span:nth-child(2){opacity:0}
-.menu-toggle.active span:last-child{transform:translateY(-7px) rotate(-45deg)}
-
-.category-wrap{position:sticky;top:76px;z-index:1500;overflow:hidden;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 4px 16px rgba(11,18,32,.04)}
-.category-track{display:flex;width:max-content;animation:categoryScroll 48s linear infinite}
-.category-set{display:flex;align-items:center;gap:8px;padding:9px 8px}
-.category-wrap:hover .category-track,.category-wrap:focus-within .category-track,.category-wrap.paused .category-track{animation-play-state:paused}
-.category-link{display:inline-flex;align-items:center;min-height:38px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#465466;font-size:13px;font-weight:700;white-space:nowrap}
-.category-link:hover{color:var(--cyan-dark);border-color:var(--cyan);background:#eaf9fd}
-.category-link.active{color:#fff;border-color:var(--navy);background:var(--navy)}
-@keyframes categoryScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 20%,rgba(25,167,206,.18),transparent 28%),linear-gradient(135deg,#f8fbfd,#edf6f9);padding:70px 0}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--cyan-dark);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
-.eyebrow:before{content:"";width:28px;height:2px;background:var(--cyan)}
-.hero h1{color:var(--navy);font-size:clamp(40px,5vw,66px);line-height:1.04;letter-spacing:-2px;margin-bottom:20px}
-.hero h1 span{color:var(--cyan-dark)}
-.hero-text{max-width:620px;color:var(--muted);font-size:17px;line-height:1.8;margin-bottom:25px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:25px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:47px;padding:12px 18px;border-radius:11px;font-size:14px;font-weight:800;border:1px solid transparent;transition:.2s;cursor:pointer}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{color:#fff;background:var(--navy)}
-.btn-whatsapp{color:#fff;background:var(--green)}
-.btn-outline{color:var(--navy);border-color:var(--border);background:#fff}
-.hero-trust{display:flex;flex-wrap:wrap;gap:12px}
-.hero-trust span{color:#526171;font-size:12px;font-weight:700}
-.hero-visual{position:relative}
-.hero-image-card{overflow:hidden;border-radius:25px;background:#fff;padding:10px;box-shadow:0 25px 65px rgba(11,18,32,.15);transform:rotate(1deg)}
-.hero-image-card img{width:100%;aspect-ratio:1/.78;object-fit:cover;object-position:center;border-radius:18px}
-
-.section{padding:70px 0}
-.section-light{background:var(--light)}
-.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}
-.section-heading h2{font-size:clamp(27px,3.4vw,38px);line-height:1.2;color:var(--navy);margin-bottom:8px}
-.section-heading p{max-width:650px;color:var(--muted);font-size:15px}
-.text-link{color:var(--cyan-dark);font-weight:800;font-size:14px}
-
-.featured-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.product-card,.category-card{background:#fff;border:1px solid var(--border);border-radius:17px;overflow:hidden;transition:.25s}
-.product-card:hover,.category-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c8eaf3}
-.product-image{position:relative;background:#f1f5f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.product-image img{width:100%;height:210px;object-fit:contain;padding:12px;transition:transform .3s}
-.product-card:hover .product-image img{transform:scale(1.04)}
-.product-info{padding:17px}
-.product-info h3{font-size:16px;line-height:1.4;color:var(--navy);margin-bottom:7px}
-.product-info p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px}
-.price{color:var(--cyan-dark);font-size:19px;font-weight:800;margin-bottom:13px}
-.price small{font-size:12px;font-weight:600;color:var(--muted)}
-.product-actions{display:flex;flex-direction:column;gap:8px}
-.product-actions .btn{width:100%;min-height:43px;padding:10px;font-size:13px}
-.tag{display:inline-block;font-size:11px;font-weight:800;padding:5px 9px;border-radius:6px;color:var(--cyan-dark);background:#eaf9fd;margin-bottom:10px}
-
-.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.category-card{display:flex;flex-direction:column}
-.category-image{height:205px;background:#f1f5f8;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.category-image img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .3s}
-.category-card:hover .category-image img{transform:scale(1.04)}
-.category-content{padding:20px;display:flex;flex-direction:column;flex:1}
-.category-content h3{font-size:19px;color:var(--navy);margin-bottom:7px}
-.category-content p{font-size:14px;color:var(--muted);margin-bottom:17px;flex:1}
-.category-content .btn{width:100%}
-
-.promo-strip{background:var(--navy);color:#fff;padding:25px 0}
-.promo-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.promo-inner h2{font-size:23px;line-height:1.3;margin-bottom:5px}
-.promo-inner p{font-size:14px;color:#c7d3df}
-.promo-inner .btn{flex-shrink:0}
-
-.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.help-card{padding:28px;border:1px solid var(--border);border-radius:18px;background:#fff}
-.help-card h3{font-size:21px;color:var(--navy);margin-bottom:10px}
-.help-card p{font-size:14px;color:var(--muted);margin-bottom:18px}
-
-.site-footer{background:#080e19;color:#fff;padding:48px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px;margin-bottom:35px}
-.footer-brand img{width:160px;margin-bottom:15px}
-.footer-brand p,.footer-col p{color:#b7c2cf;font-size:14px;line-height:1.8}
-.footer-col h3{font-size:15px;margin-bottom:14px}
-.footer-col a{display:block;color:#b7c2cf;font-size:14px;margin:8px 0}
-.footer-col a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#9eabba;font-size:12px}
-
-.floating-whatsapp{position:fixed;right:18px;bottom:18px;z-index:1800;width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:800;box-shadow:0 8px 25px rgba(0,0,0,.22)}
+img{display:block;max-width:100%}
+.container{width:min(1150px,100%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:var(--navy);color:#fff;box-shadow:0 4px 20px #0002}
+.nav-container{width:min(1200px,100%);min-height:72px;margin:auto;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo img{width:155px;height:auto}
+nav{display:flex;align-items:center;gap:16px}
+nav a{color:#fff;font-size:13px;font-weight:700;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--cyan)}
+nav a.nav-cta{padding:10px 14px;border-radius:7px;background:var(--cyan)}
+.menu-toggle{display:none;width:43px;height:43px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid #ffffff44;border-radius:8px;background:transparent}
+.menu-toggle span{width:21px;height:2px;background:#fff}
+.hero{background:linear-gradient(110deg,#0b1220,#14233a);color:#fff}
+.hero-inner{width:min(1200px,100%);min-height:330px;margin:auto;padding:54px 22px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:35px}
+.eyebrow{display:inline-block;margin-bottom:11px;color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+.hero h1{max-width:720px;margin-bottom:15px;font-size:clamp(35px,5vw,55px);line-height:1.1}
+.hero h1 span{color:var(--cyan)}
+.hero p{max-width:650px;margin-bottom:22px;color:#d5deea;font-size:15px;line-height:1.8}
+.hero-image{padding:12px;border:1px solid #ffffff25;border-radius:14px;background:#ffffff0d}
+.hero-image img{width:100%;height:225px;object-fit:contain}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:11px 16px;border-radius:7px;font-size:13px;font-weight:800;text-align:center}
+.primary{background:var(--cyan);color:#fff}
+.whatsapp{background:var(--green);color:#fff}
+.trust{background:#fff;border-bottom:1px solid var(--border)}
+.trust-inner{width:min(1100px,100%);margin:auto;padding:13px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.trust-item{text-align:center;padding:7px;border-right:1px solid var(--border)}
+.trust-item:last-child{border:0}
+.trust-item strong{display:block;color:var(--navy);font-size:13px}
+.trust-item span{color:var(--muted);font-size:11px}
+.section{padding:60px 22px}
+.white{background:#fff}
+.heading{max-width:780px;margin:0 auto 28px;text-align:center}
+.heading h2{margin-bottom:10px;color:var(--navy);font-size:clamp(27px,3.5vw,38px);line-height:1.2}
+.heading p,.catalogue-intro{color:var(--muted);font-size:14px;line-height:1.8}
+.catalogue-intro{max-width:900px;margin:0 0 24px}
+.category-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:0 auto 27px}
+.category-nav a{padding:9px 14px;border:1px solid #dce4ec;border-radius:25px;background:#fff;color:var(--navy);font-size:12px;font-weight:800}
+.category-nav a:hover{background:var(--cyan);color:#fff;border-color:var(--cyan)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.card{min-width:0;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:0 7px 22px #0b122008}
+.photo{height:195px;padding:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef2f6,#fff);border-bottom:1px solid #e7ebf0}
+.photo img{width:100%;height:100%;object-fit:contain}
+.card-info{padding:14px;display:flex;flex-direction:column;flex:1}
+.tag{margin-bottom:5px;color:#148cac;font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.card h3{margin-bottom:8px;color:var(--navy);font-size:15px;line-height:1.4;overflow-wrap:anywhere}
+.card p{margin-bottom:13px;color:var(--muted);font-size:12px;line-height:1.65}
+.card .btn{width:100%;margin-top:auto;font-size:12px}
+.brand-block{max-width:1100px;margin:0 auto 38px;scroll-margin-top:100px}
+.brand-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.brand-heading h3{color:var(--navy);font-size:23px}
+.brand-heading span{color:var(--muted);font-size:12px}
+.note{max-width:900px;margin:25px auto 0;padding:17px 19px;border:1px solid #ccecf5;border-radius:10px;background:#fff;color:#536174;font-size:12px;line-height:1.8}
+.cta{padding:52px 22px;background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;text-align:center}
+.cta h2{font-size:clamp(26px,3vw,35px);margin-bottom:10px}
+.cta p{max-width:700px;margin:0 auto 18px;color:#c4cedb;font-size:14px}
+.cta .btn{margin:4px}
+.footer{background:#070d17;color:#fff;padding:32px 22px}
+.footer-inner{width:min(1120px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer p{color:#bdc7d4;font-size:12px}
+.footer-links{display:flex;flex-wrap:wrap;gap:14px}
+.footer-links a{font-size:12px;color:#e7edf5}
 
 @media(max-width:1000px){
- .header-inner{gap:12px}
- .brand img{width:140px}
- .main-nav a{font-size:12px;padding:9px 7px}
- .main-nav .nav-whatsapp{padding:9px}
- .hero-grid{gap:30px}
- .featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+nav{gap:10px}
+nav a{font-size:12px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media(max-width:760px){
- .container{width:calc(100% - 30px)}
- .header-inner{min-height:68px}
- .brand img{width:145px}
- .menu-toggle{display:flex;flex-shrink:0}
- .main-nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--navy);padding:12px 15px 18px;flex-direction:column;align-items:stretch;gap:4px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 14px 25px rgba(0,0,0,.2)}
- .main-nav.open{display:flex}
- .main-nav a{font-size:14px;padding:12px 14px}
- .main-nav .nav-whatsapp{margin:5px 0 0;text-align:center}
- .category-wrap{top:68px}
- .hero{padding:48px 0}
- .hero-grid{grid-template-columns:1fr;gap:30px}
- .hero h1{font-size:clamp(38px,10vw,54px);letter-spacing:-1.5px}
- .hero-text{font-size:15px}
- .hero-image-card{max-width:540px;margin:auto}
- .section{padding:50px 0}
- .section-heading{align-items:flex-start;flex-direction:column;margin-bottom:23px}
- .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
- .category-image{height:160px}
- .category-content{padding:15px}
- .category-content h3{font-size:16px}
- .category-content p{font-size:13px}
- .promo-inner{align-items:flex-start;flex-direction:column}
- .help-grid{grid-template-columns:1fr}
- .footer-grid{grid-template-columns:1fr 1fr;gap:25px}
- .footer-brand{grid-column:1/-1}
+.nav-container{min-height:66px;padding:9px 16px}
+.logo img{width:140px}
+.menu-toggle{display:flex}
+nav{display:none;position:absolute;top:100%;left:0;right:0;padding:13px 18px 18px;background:var(--navy);align-items:stretch;flex-direction:column;gap:0;border-top:1px solid #ffffff1c}
+nav.open{display:flex}
+nav a{padding:12px 4px;border-bottom:1px solid #ffffff12;font-size:14px}
+nav a.nav-cta{margin-top:10px;text-align:center}
+.hero-inner{grid-template-columns:1fr;min-height:auto;padding:42px 18px;gap:22px}
+.hero-image{max-width:460px;width:100%;margin:auto}
+.hero-image img{height:190px}
+.trust-inner{grid-template-columns:1fr;gap:0}
+.trust-item{border-right:0;border-bottom:1px solid var(--border);padding:9px}
+.trust-item:last-child{border:0}
+.section{padding:44px 16px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.photo{height:165px;padding:9px}
+.card-info{padding:11px}
+.card h3{font-size:14px}
+.card p{font-size:11px}
+.card .btn{font-size:11px;padding:10px 7px}
+.brand-heading h3{font-size:19px}
+.brand-heading span{font-size:10px;text-align:right}
+.footer-inner{flex-direction:column;align-items:flex-start}
 }
-@media(max-width:430px){
- .featured-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
- .product-image img{height:150px;padding:8px}
- .product-info{padding:12px}
- .product-info h3{font-size:14px}
- .product-info p{font-size:12px}
- .price{font-size:16px}
- .product-info .btn{font-size:12px;padding:9px 6px}
- .category-grid{gap:11px}
- .category-image{height:125px}
- .category-content{padding:12px}
- .category-content h3{font-size:14px}
- .category-content p{font-size:12px}
- .category-content .btn{font-size:12px;padding:9px 5px}
- .hero-actions .btn{width:100%}
- .footer-grid{grid-template-columns:1fr}
- .footer-brand{grid-column:auto}
- .footer-bottom{flex-direction:column}
+@media(max-width:390px){
+.grid{grid-template-columns:1fr}
+.photo{height:220px}
+.hero h1{font-size:34px}
 }
 </style>
 </head>
 
 <body>
-
-<header class="site-header">
- <div class="container header-inner">
-  <a class="brand" href="index.html" aria-label="Street Gadgets Care home">
-   <img src="Logo.png" alt="Street Gadgets Care">
-  </a>
-
-  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
-   <span></span><span></span><span></span>
-  </button>
-
-  <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-   <a href="index.html">Home</a>
-   <a href="about.html">About</a>
-   <a href="services.html">Services</a>
-   <a href="tech-repairs.html">Tech Repairs</a>
-   <a href="shop.html" class="active">Shop</a>
-   <a href="creative-studio.html">Creative Studio</a>
-   <a href="contact.html">Contact</a>
-   <a class="nav-whatsapp" href="https://wa.me/254114259961" target="_blank" rel="noopener">WhatsApp Us</a>
-  </nav>
- </div>
+<header>
+<div class="nav-container">
+<a href="index.html" class="logo" aria-label="Street Gadgets Care Home"><img src="Logo.png" alt="Street Gadgets Care"></a>
+<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav id="mainNavigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tech-repairs.html" class="active" aria-current="page">Spare Parts</a>
+<a href="shop.html">Shop</a>
+<a href="creative-studio.html">Creative Studio</a>
+<a href="contact.html" class="nav-cta">Contact</a>
+</nav>
+</div>
 </header>
 
-<div class="category-wrap" id="categoryWrap">
- <div class="category-track">
-  <div class="category-set">
-   <a class="category-link active" href="shop.html">All Shop</a>
-   <a class="category-link" href="devices.html">Laptops &amp; Devices</a>
-   <a class="category-link" href="laptop-bags.html">Laptop Bags</a>
-   <a class="category-link" href="laptop-storage.html">Storage &amp; Memory</a>
-   <a class="category-link" href="computer-accessories.html">Computer Accessories</a>
-   <a class="category-link" href="screen-protectors.html">Screen Protectors</a>
-   <a class="category-link" href="phone-covers.html">Phone Covers</a>
-   <a class="category-link" href="laptop-accessories.html">Laptop Accessories</a>
-   <a class="category-link" href="other-gadgets.html">Other Gadgets</a>
-  </div>
+<section class="hero">
+<div class="hero-inner">
+<div>
+<span class="eyebrow">Street Gadgets Care • Spare Parts</span>
+<h1>Find the right <span>replacement part.</span></h1>
+<p>Browse phone screen replacements, batteries and selected iPhone spare parts. Send us your exact phone model to confirm compatibility, availability and price before ordering.</p>
+<div class="actions">
+<a class="btn primary" href="#iphone-parts">Browse iPhone Parts</a>
+<a class="btn whatsapp" target="_blank" rel="noopener noreferrer" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20phone%20spare%20part.">Ask on WhatsApp</a>
+</div>
+</div>
+<div class="hero-image">
+<img src="iphone-14-pro-max-screen-replacement.jpg" alt="iPhone replacement screen spare part" fetchpriority="high" onerror="this.closest('.hero-image').style.display='none'">
+</div>
+</div>
+</section>
 
-  <div class="category-set" aria-hidden="true">
-   <a class="category-link" href="shop.html">All Shop</a>
-   <a class="category-link" href="devices.html">Laptops &amp; Devices</a>
-   <a class="category-link" href="laptop-bags.html">Laptop Bags</a>
-   <a class="category-link" href="laptop-storage.html">Storage &amp; Memory</a>
-   <a class="category-link" href="computer-accessories.html">Computer Accessories</a>
-   <a class="category-link" href="screen-protectors.html">Screen Protectors</a>
-   <a class="category-link" href="phone-covers.html">Phone Covers</a>
-   <a class="category-link" href="laptop-accessories.html">Laptop Accessories</a>
-   <a class="category-link" href="other-gadgets.html">Other Gadgets</a>
-  </div>
- </div>
+<div class="trust">
+<div class="trust-inner">
+<div class="trust-item"><strong>Model-specific enquiries</strong><span>Confirm the exact part before purchase</span></div>
+<div class="trust-item"><strong>Direct WhatsApp support</strong><span>Ask about stock and compatibility</span></div>
+<div class="trust-item"><strong>Kenya-wide arrangements</strong><span>Contact us about delivery options</span></div>
+</div>
 </div>
 
-<main>
-
-<section class="hero">
- <div class="container hero-grid">
-  <div>
-   <div class="eyebrow">The Street Gadgets Store</div>
-   <h1>Technology for <span>everyday life.</span></h1>
-   <p class="hero-text">Discover laptops, phones, chargers, cables, storage, protection accessories and smart gadgets from Street Gadgets Care. Browse our products and get personal assistance on WhatsApp before ordering.</p>
-
-   <div class="hero-actions">
-    <a class="btn btn-primary" href="#featured">Explore Products →</a>
-    <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noopener">Chat on WhatsApp</a>
-   </div>
-
-   <div class="hero-trust">
-    <span>Helpful product guidance</span>
-    <span>Delivery arrangements across Kenya</span>
-    <span>Based in Nairobi</span>
-   </div>
-  </div>
-
-  <div class="hero-visual">
-   <div class="hero-image-card">
-    <img src="nvme-ssd.jpg" alt="Technology and computer products at Street Gadgets Care" onerror="this.onerror=null;this.src='Logo.png'">
-   </div>
-  </div>
- </div>
+<section class="section white" id="iphone-parts">
+<div class="container">
+<div class="heading">
+<span class="eyebrow">iPhone Spare Parts</span>
+<h2>Replacement parts for selected iPhone models</h2>
+<p>Choose a part below to ask about the exact model, compatible replacement, availability and price.</p>
+</div>
+<div class="category-nav">
+<a href="#iphone-parts">iPhone Parts</a>
+<a href="#screen-replacements">Screen Replacements</a>
+<a href="#battery-replacements">Phone Batteries</a>
+</div>
+<div id="iphoneGrid" class="grid"></div>
+<div class="note"><strong>Before ordering:</strong> iPhone parts can vary by model and version. Confirm compatibility with Street Gadgets Care before purchasing or arranging installation.</div>
+</div>
 </section>
 
-<section class="section" id="featured">
- <div class="container">
-  <div class="section-heading">
-   <div>
-    <div class="eyebrow">Selected for you</div>
-    <h2>Featured Products</h2>
-    <p>Explore selected laptops, accessories and smart gadgets. Contact us to confirm availability before ordering.</p>
-   </div>
-   <a class="text-link" href="#categories">Browse all categories →</a>
-  </div>
-
-  <div class="featured-grid">
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="HP%20745%20G6%20RYZEN%207.JPG" alt="HP EliteBook 745 G6 Ryzen 7 laptop" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Business Laptop</span>
-     <h3>HP EliteBook 745 G6 Ryzen 7</h3>
-     <p>Ryzen 7 processor, 16GB RAM and 512GB SSD.</p>
-     <div class="price">KES 47,500</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207%20listed%20at%20KES%2047%2C500." target="_blank" rel="noopener">Ask on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="HP%20840%20g5.jpeg" alt="HP EliteBook 840 G5 laptop" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Business Laptop</span>
-     <h3>HP EliteBook 840 G5</h3>
-     <p>Intel Core i5 8th generation, 8GB RAM and 256GB SSD.</p>
-     <div class="price">KES 27,500</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G5%20listed%20at%20KES%2027%2C500." target="_blank" rel="noopener">Ask on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="Samsung%2025W.jpeg" alt="Samsung 25W phone charger" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Charging</span>
-     <h3>Samsung 25W Charger</h3>
-     <p>Ask us about compatibility and current availability.</p>
-     <div class="price">Ask for price</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20please%20tell%20me%20the%20price%20and%20availability%20of%20the%20Samsung%2025W%20charger." target="_blank" rel="noopener">Ask for Price</a>
-     </div>
-    </div>
-   </article>
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="Oraimo%206%20Lite.jpeg" alt="Oraimo 6 Lite smartwatch" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Smart Gadget</span>
-     <h3>Oraimo 6 Lite Smartwatch</h3>
-     <p>Ask about available colours, features and current price.</p>
-     <div class="price">Ask for price</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20the%20Oraimo%206%20Lite%20smartwatch." target="_blank" rel="noopener">Ask on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- NORMAL DATA CABLE -->
-   <article class="product-card">
-    <div class="product-image">
-     <img src="normal-data-cable.jpg" alt="Normal phone data and charging cable" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Phone Accessory</span>
-     <h3>Normal Data Cable</h3>
-     <p>A practical everyday cable for compatible phones and devices. Confirm the connector type before ordering.</p>
-     <div class="price">KES 150</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20buy%20the%20normal%20data%20cable%20listed%20at%20KES%20150." target="_blank" rel="noopener">Order on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- ORAIMO SPACEBUDS LITE -->
-   <article class="product-card">
-    <div class="product-image">
-     <img src="oraimo-spacebuds-lite.jpg" alt="Oraimo SpaceBuds Lite wireless earbuds" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Wireless Audio</span>
-     <h3>Oraimo SpaceBuds Lite</h3>
-     <p>Wireless earbuds for music, calls and everyday listening.</p>
-     <div class="price">KES 2,500</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20SpaceBuds%20Lite%20at%20KES%202%2C500." target="_blank" rel="noopener">Order on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- ORAIMO BOOMPOP PRO -->
-   <article class="product-card">
-    <div class="product-image">
-     <img src="oraimo-boompop-pro.jpg" alt="Oraimo BoomPop Pro headphones" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Wireless Audio</span>
-     <h3>Oraimo BoomPop Pro Headphones</h3>
-     <p>Over-ear headphones for listening to music and enjoying audio on the go.</p>
-     <div class="price">KES 6,500</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20BoomPop%20Pro%20Headphones%20at%20KES%206%2C500." target="_blank" rel="noopener">Order on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- ORAIMO NECKLACE 5 -->
-   <article class="product-card">
-    <div class="product-image">
-     <img src="oraimo-necklace-5.jpg" alt="Oraimo Necklace 5 wireless neckband earphones" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Wireless Audio</span>
-     <h3>Oraimo Necklace 5</h3>
-     <p>Neckband-style wireless earphones for everyday listening.</p>
-     <div class="price">KES 4,750</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Necklace%205%20at%20KES%204%2C750." target="_blank" rel="noopener">Order on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="laptop-bag-1.jpg" alt="Laptop bag" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Laptop Accessory</span>
-     <h3>Laptop Bags</h3>
-     <p>Choose from different designs and sizes.</p>
-     <div class="price">From KES 1,000</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20please%20show%20me%20your%20available%20laptop%20bags." target="_blank" rel="noopener">View Bags</a>
-     </div>
-    </div>
-   </article>
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="nvme-ssd.jpg" alt="NVMe SSD storage drive" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Storage</span>
-     <h3>SSD Storage</h3>
-     <p>Upgrade your computer with faster storage.</p>
-     <div class="price">From KES 7,500</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20NVMe%20and%20SATA%20SSDs." target="_blank" rel="noopener">Ask on WhatsApp</a>
-     </div>
-    </div>
-   </article>
-
-   <article class="product-card">
-    <div class="product-image">
-     <img src="wireless-mouse.jpg" alt="Wireless computer mouse" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'">
-    </div>
-    <div class="product-info">
-     <span class="tag">Computer Accessory</span>
-     <h3>Wireless Mouse</h3>
-     <p>Ask us about available computer accessories.</p>
-     <div class="price">Ask for price</div>
-     <div class="product-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%2C%20please%20tell%20me%20about%20your%20wireless%20mouse%20options." target="_blank" rel="noopener">Ask for Price</a>
-     </div>
-    </div>
-   </article>
-
-  </div>
- </div>
+<section class="section" id="screen-replacements">
+<div class="container">
+<div class="catalogue-intro">
+<span class="eyebrow">Existing Screen Catalogue</span>
+<h2 style="font-size:clamp(27px,3vw,36px);color:var(--navy);margin-bottom:9px">Phone Screen Replacements</h2>
+<p>The existing screen listings are preserved below for Samsung, iPhone, Infinix, Tecno, Redmi/Xiaomi and itel. Use WhatsApp to confirm availability and replacement price.</p>
+</div>
+<div id="screenNav" class="category-nav"></div>
+<div id="screenCatalogue"></div>
+<div class="note"><strong>Compatibility:</strong> Confirm the exact phone model and screen type before purchase or installation.</div>
+</div>
 </section>
 
-<section class="section section-light" id="categories">
- <div class="container">
-  <div class="section-heading">
-   <div>
-    <div class="eyebrow">Shop by category</div>
-    <h2>Explore Our Shop</h2>
-    <p>Find the technology and accessories you need. Open a category to see more products, or message us if you cannot find what you want.</p>
-   </div>
-  </div>
-
-  <div class="category-grid">
-
-   <a class="category-card" href="devices.html">
-    <div class="category-image"><img src="HP%20745%20G6%20RYZEN%207.JPG" alt="Laptops and devices" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Laptops &amp; Devices</h3>
-     <p>Explore laptops and selected devices for work, study and everyday use.</p>
-     <span class="btn btn-primary">Explore Devices →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="laptop-bags.html">
-    <div class="category-image"><img src="laptop-bag-1.jpg" alt="Laptop bags" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Laptop Bags</h3>
-     <p>Carry and protect your laptop with practical bags in different styles.</p>
-     <span class="btn btn-primary">Shop Laptop Bags →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="laptop-storage.html">
-    <div class="category-image"><img src="nvme-ssd.jpg" alt="Laptop storage and memory" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Storage &amp; Memory</h3>
-     <p>Explore SSDs, HDDs, RAM, external storage and memory products.</p>
-     <span class="btn btn-primary">Explore Storage →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="computer-accessories.html">
-    <div class="category-image"><img src="wireless-mouse.jpg" alt="Computer and laptop accessories" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Computer / Laptop Accessories</h3>
-     <p>Find mice, keyboards, cleaning products, dongles and more.</p>
-     <span class="btn btn-primary">Browse Accessories →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="screen-protectors.html">
-    <div class="category-image"><img src="iPhone%202024%20Pro%20Max%20Privacy.jpeg" alt="Phone screen protection" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Screen Protectors</h3>
-     <p>Ask about screen protection options for your phone model.</p>
-     <span class="btn btn-primary">Explore Protection →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="phone-covers.html">
-    <div class="category-image"><img src="iPhone%202024%20Pro%20Max%20Privacy.jpeg" alt="Phone protection and covers" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Phone Covers</h3>
-     <p>Explore phone protection options and ask about your specific model.</p>
-     <span class="btn btn-primary">Browse Phone Covers →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="laptop-accessories.html">
-    <div class="category-image"><img src="laptop-bag-1.jpg" alt="Laptop accessories" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Laptop Accessories</h3>
-     <p>Discover useful add-ons and accessories for your laptop setup.</p>
-     <span class="btn btn-primary">Shop Laptop Accessories →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="other-gadgets.html">
-    <div class="category-image"><img src="oraimo-spacebuds-lite.jpg" alt="Oraimo wireless earbuds and other gadgets" loading="lazy" onerror="this.onerror=null;this.src='Logo.png'"></div>
-    <div class="category-content">
-     <h3>Other Gadgets</h3>
-     <p>Explore wireless earbuds, headphones, neckbands, smartwatches and useful everyday gadgets.</p>
-     <span class="btn btn-primary">Explore Gadgets →</span>
-    </div>
-   </a>
-
-   <a class="category-card" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20product%20that%20is%20not%20currently%20shown%20on%20your%20website." target="_blank" rel="noopener">
-    <div class="category-image"><img src="Logo.png" alt="Street Gadgets Care product enquiries" loading="lazy"></div>
-    <div class="category-content">
-     <h3>Can't Find It?</h3>
-     <p>Not seeing what you need? Tell us the product or model and we'll help you enquire.</p>
-     <span class="btn btn-whatsapp">Ask Us on WhatsApp →</span>
-    </div>
-   </a>
-
-  </div>
- </div>
+<section class="section white" id="battery-replacements">
+<div class="container">
+<div class="catalogue-intro">
+<span class="eyebrow">Existing Battery Catalogue</span>
+<h2 style="font-size:clamp(27px,3vw,36px);color:var(--navy);margin-bottom:9px">Phone Battery Replacements</h2>
+<p>The existing Tecno battery listings are preserved below. Confirm your exact model and compatible battery before arranging replacement.</p>
+</div>
+<div id="batteryNav" class="category-nav"></div>
+<div id="batteryCatalogue"></div>
+<div class="note"><strong>Battery compatibility:</strong> Battery models and connectors can differ between versions. Confirm the exact device model before purchasing.</div>
+</div>
 </section>
 
-<section class="promo-strip">
- <div class="container promo-inner">
-  <div>
-   <h2>Not in stock? Ask us.</h2>
-   <p>Tell us what you need and we'll help you check availability.</p>
-  </div>
-  <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20looking%20for%20a%20product%20that%20is%20not%20listed%20on%20your%20shop%20page." target="_blank" rel="noopener">Request a Product</a>
- </div>
+<section class="cta">
+<div class="container">
+<h2>Need help finding the correct part?</h2>
+<p>Send Street Gadgets Care your phone brand, exact model and the part you need. We will help confirm compatibility and availability.</p>
+<a class="btn whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20phone%20spare%20part." target="_blank" rel="noopener noreferrer">Inquire on WhatsApp</a>
+<a class="btn primary" href="contact.html">Contact Us</a>
+</div>
 </section>
 
-<section class="section">
- <div class="container">
-  <div class="section-heading">
-   <div>
-    <div class="eyebrow">Personal assistance</div>
-    <h2>Need help choosing?</h2>
-    <p>We can help you enquire about compatibility, pricing and availability before you make a purchase.</p>
-   </div>
-  </div>
-
-  <div class="help-grid">
-   <div class="help-card">
-    <h3>Looking for a specific product?</h3>
-    <p>Send us the product name, laptop model or phone model. We'll help you check the available options.</p>
-    <a class="btn btn-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20product." target="_blank" rel="noopener">Ask on WhatsApp</a>
-   </div>
-
-   <div class="help-card">
-    <h3>Need a repair instead?</h3>
-    <p>We also offer laptop and phone repair services. Tell us what is wrong with your device and we can guide you on the next step.</p>
-    <a class="btn btn-primary" href="tech-repairs.html">Explore Repair Services</a>
-   </div>
-  </div>
- </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
- <div class="container">
-  <div class="footer-grid">
-
-   <div class="footer-brand">
-    <a href="index.html"><img src="Logo.png" alt="Street Gadgets Care logo" loading="lazy"></a>
-    <p>Street Gadgets Care provides laptop and phone repair, technology accessories, devices and creative services. Based in Nairobi, with delivery arrangements available across Kenya.</p>
-   </div>
-
-   <div class="footer-col">
-    <h3>Quick Links</h3>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Our Services</a>
-    <a href="tech-repairs.html">Tech Repairs</a>
-    <a href="shop.html">Shop All Products</a>
-    <a href="creative-studio.html">Creative Studio</a>
-    <a href="contact.html">Contact Us</a>
-   </div>
-
-   <div class="footer-col">
-    <h3>Contact Us</h3>
-    <p>Nairobi, Kenya</p>
-    <p>Phone: 0114259961</p>
-    <a href="https://wa.me/254114259961" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
-    <a href="mailto:streetgadgetscare@gmail.com">streetgadgetscare@gmail.com</a>
-    <a href="https://www.tiktok.com/@street_gadgets_care" target="_blank" rel="noopener">TikTok</a>
-    <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
-   </div>
-
-  </div>
-
-  <div class="footer-bottom">
-   <span>© <span id="year"></span> Street Gadgets Care. All rights reserved.</span>
-   <span>Technology • Repairs • Accessories • Creative Solutions</span>
-  </div>
- </div>
+<footer class="footer">
+<div class="footer-inner">
+<div><strong>Street Gadgets Care</strong><p>Phone and laptop repairs, spare parts and technology solutions in Nairobi, Kenya.</p></div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="tech-repairs.html" class="active" aria-current="page">Spare Parts</a>
+<a href="shop.html">Shop</a>
+<a href="contact.html">Contact</a>
+<a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+</div>
 </footer>
 
-<a class="floating-whatsapp" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20assistance." target="_blank" rel="noopener" aria-label="Chat with Street Gadgets Care on WhatsApp">✆</a>
-
 <script>
-(function(){
- const menuToggle=document.getElementById("menuToggle");
- const mainNav=document.getElementById("mainNav");
- const categoryWrap=document.getElementById("categoryWrap");
+const WHATSAPP_BASE='https://wa.me/254114259961?text=';
 
- if(menuToggle&&mainNav){
-  menuToggle.addEventListener("click",function(){
-   const isOpen=mainNav.classList.toggle("open");
-   menuToggle.classList.toggle("active",isOpen);
-   menuToggle.setAttribute("aria-expanded",String(isOpen));
-   menuToggle.setAttribute("aria-label",isOpen?"Close navigation menu":"Open navigation menu");
-  });
+const iphoneParts=[
+["iPhone X","Charging system","iphone-x-charging-system-replacement.jpg"],
+["iPhone X","Battery","iphone-x-battery-replacement.jpg"],
+["iPhone X","Back cover","iphone-x-back-cover-replacement.jpg"],
+["iPhone XR","Charging system","iphone-xr-charging-system-replacement.jpg"],
+["iPhone XR","Battery","iphone-xr-battery-replacement.jpg"],
+["iPhone XR","Back cover","iphone-xr-back-cover-replacement.jpg"],
+["iPhone XS","Charging system","iphone-xs-charging-system-replacement.jpg"],
+["iPhone XS","Battery","iphone-xs-battery-replacement.jpg"],
+["iPhone XS","Back cover","iphone-xs-back-cover-replacement.jpg"],
+["iPhone XS Max","Charging system","iphone-xs-max-charging-system-replacement.jpg"],
+["iPhone XS Max","Back cover","iphone-xs-max-back-cover-replacement.jpg"],
+["iPhone 11","Charging system","iphone-11-charging-system-replacement.jpg"],
+["iPhone 11","Back cover","iphone-11-back-cover-replacement.jpg"],
+["iPhone 11","Battery","iphone-11-battery-replacement.jpg"],
+["iPhone 11 Pro","Charging system","iphone-11-pro-charging-system-replacement.jpg"],
+["iPhone 11 Pro","Back cover","iphone-11-pro-back-cover-replacement.jpg"],
+["iPhone 11 Pro","Battery","iphone-11-pro-battery-replacement.jpg"],
+["iPhone 11 Pro Max","Charging system","iphone-11-pro-max-charging-system-replacement.jpg"],
+["iPhone 11 Pro Max","Back cover","iphone-11-pro-max-back-cover-replacement.jpg"],
+["iPhone 11 Pro Max","Battery","iphone-11-pro-max-battery-replacement.jpg"],
+["iPhone 11 Pro Max","Screen","iphone-11-pro-max-screen-replacement.jpg"],
+["iPhone 12 Pro Max","Charging system","iphone-12-pro-max-charging-system-replacement.jpg"],
+["iPhone 12 Pro","Charging system","iphone-12-pro-charging-system-replacement.jpg"],
+["iPhone 12 mini","Charging system","iphone-12-mini-charging-system-replacement.jpg"],
+["iPhone 12 Pro Max","Back cover","iphone-12-pro-max-back-cover-replacement.jpg"],
+["iPhone 12 Pro","Back cover","iphone-12-pro-back-cover-replacement.jpg"],
+["iPhone 12 mini","Back cover","iphone-12-mini-back-cover-replacement.jpg"],
+["iPhone 12","Battery","iphone-12-battery-replacement.jpg"],
+["iPhone 12 Pro Max","Battery","iphone-12-pro-max-battery-replacement.jpg"],
+["iPhone 12 Pro","Battery","iphone-12-pro-battery-replacement.jpg"],
+["iPhone 13 Pro Max","Charging system","iphone-13-pro-max-charging-system-replacement.jpg"],
+["iPhone 13 Pro","Charging system","iphone-13-pro-charging-system-replacement.jpg"],
+["iPhone 13","Charging system","iphone-13-charging-system-replacement.jpg"],
+["iPhone 13 mini","Charging system","iphone-13-mini-charging-system-replacement.jpg"],
+["iPhone 13 Pro Max","Back cover","iphone-13-pro-max-back-cover-replacement.jpg"],
+["iPhone 13 Pro","Back cover","iphone-13-pro-back-cover-replacement.jpg"],
+["iPhone 13","Back cover","iphone-13-back-cover-replacement.jpg"],
+["iPhone 13 mini","Back cover","iphone-13-mini-back-cover-replacement.jpg"],
+["iPhone 13","Battery","iphone-13-battery-replacement.jpg"],
+["iPhone 13 Pro Max","Battery","iphone-13-pro-max-battery-replacement.jpg"],
+["iPhone 13 Pro","Battery","iphone-13-pro-battery-replacement.jpg"],
+["iPhone 14 Pro Max","Charging system","iphone-14-pro-max-charging-system-replacement.jpg"],
+["iPhone 14 Pro","Charging system","iphone-14-pro-charging-system-replacement.jpg"],
+["iPhone 14 Plus","Charging system","iphone-14-plus-charging-system-replacement.jpg"],
+["iPhone 14","Charging system","iphone-14-charging-system-replacement.jpg"],
+["iPhone 14 Pro Max","Back cover","iphone-14-pro-max-back-cover-replacement.jpg"],
+["iPhone 14 Pro","Back cover","iphone-14-pro-back-cover-replacement.jpg"],
+["iPhone 14 Plus","Back cover","iphone-14-plus-back-cover-replacement.jpg"],
+["iPhone 14","Back cover","iphone-14-back-cover-replacement.jpg"],
+["iPhone 14 Plus","Battery","iphone-14-plus-battery-replacement.jpg"],
+["iPhone 14 Pro Max","Battery","iphone-14-pro-max-battery-replacement.jpg"],
+["iPhone 14 Pro","Battery","iphone-14-pro-battery-replacement.jpg"],
+["iPhone 14","Battery","iphone-14-battery-replacement.jpg"],
+["iPhone 14 Plus","Screen","iphone-14-plus-screen-replacement.jpg"],
+["iPhone 14 Pro Max","Screen","iphone-14-pro-max-screen-replacement.jpg"],
+["iPhone 14 Pro","Screen","iphone-14-pro-screen-replacement.jpg"],
+["iPhone 14","Screen","iphone-14-screen-replacement.jpg"]
+];
 
-  mainNav.querySelectorAll("a").forEach(function(link){
-   link.addEventListener("click",function(){
-    mainNav.classList.remove("open");
-    menuToggle.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded","false");
-   });
-  });
+const screenBrands=[
+["screens-samsung","Samsung",[
+["Samsung Galaxy A07","samsung-a07-screen.jpg"],
+["Samsung Galaxy A07s","samsung-a07s-screen.jpg"],
+["Samsung Galaxy A16","samsung-a16-screen.jpg"]
+]],
+["screens-iphone","iPhone",[
+["iPhone XS","iphone-xs-screen.jpg.WEBP"],
+["iPhone 11","iphone-11-screen.jpg"],
+["iPhone 12","iphone-12-screen.jpg"],
+["iPhone 12 Pro","iphone-12-pro-screen.jpg"],
+["iPhone 12 Pro Max","iphone-12-pro-max-screen.jpg"],
+["iPhone 15","iphone-15-screen.jpg"],
+["iPhone 15 Pro","iphone-15-pro-screen.jpg"],
+["iPhone 15 Pro Max","iphone-15-pro-max-screen.jpg"]
+]],
+["screens-infinix","Infinix",[
+["Infinix Hot 50 Pro+","infinix-hot-50-pro-plus-screen.jpg"],
+["Infinix Hot 60i","infinix-hot-60i-screen.jpg"],
+["Infinix Note 50 Pro","infinix-note-50-pro-screen.jpg"],
+["Infinix Smart 10 Plus","infinix-smart-10-plus-screen.jpg"],
+["Infinix Smart 10","infinix-smart-10-screen.jpg"]
+]],
+["screens-tecno","Tecno",[
+["Tecno Camon 40 Pro","tecno-camon-40-pro-screen.jpg"],
+["Tecno Spark 30 Pro","tecno-spark-30-pro-screen.jpg"],
+["Tecno Spark 30C","tecno-spark-30c-screen.jpg"],
+["Tecno Pop 9","tecno-pop-9-screen.jpg"],
+["Tecno Phantom 5","tecno-phantom-5-screen.jpg"],
+["Tecno Phantom 6 Plus","tecno-phantom-6-plus-screen.jpg"],
+["Tecno Phantom 6","tecno-phantom-6-screen.jpg"],
+["Tecno Spark 2","tecno-spark-2-screen.jpg"],
+["Tecno Spark K7","tecno-spark-k7-screen.jpg"],
+["Tecno Spark K8","tecno-spark-k8-screen.jpg"]
+]],
+["screens-redmi","Redmi / Xiaomi",[
+["Redmi A7","redmi-a7-screen.jpg"],
+["Redmi Note 15 4G","redmi-note-15-4g-screen.jpg"],
+["Redmi Note 15 5G","redmi-note-15-5g-screen.jpg"],
+["Redmi Note 15 Pro","redmi-note-15-pro-screen.jpg"],
+["Redmi Note 15 Pro 5G","redmi-note-15-pro-5g-screen.jpg"],
+["Redmi Note 15 Pro+ 5G","redmi-note-15-pro-plus-5g-screen.jpg"]
+]],
+["screens-itel","itel",[
+["itel A70","itel-a70-screen.jpg"]
+]]
+];
 
-  document.addEventListener("click",function(event){
-   if(!mainNav.contains(event.target)&&!menuToggle.contains(event.target)){
-    mainNav.classList.remove("open");
-    menuToggle.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded","false");
-   }
-  });
- }
+const batteryBrands=[
+["batteries-tecno","Tecno Batteries",[
+["Tecno Camon 11 Pro Battery","tecno-camon-11-pro-battery.jpg"],
+["Tecno Camon 12 Battery","tecno-camon-12-battery.jpg"],
+["Tecno Camon 12 Pro Battery","tecno-camon-12-pro-battery.jpg"],
+["Tecno Camon 15 Battery","tecno-camon-15-battery.jpg"],
+["Tecno Camon 16 Battery","tecno-camon-16-battery.jpg"],
+["Tecno Camon 40 4G Battery","tecno-camon-40-4g-battery.jpg"],
+["Tecno Camon 40 Premier 5G Battery","tecno-camon-40-premier-5g-battery.jpg"],
+["Tecno Camon 40 Pro 4G Battery","tecno-camon-40-pro-4g-battery.jpg"],
+["Tecno Camon 40 Pro 5G Battery","tecno-camon-40-pro-5g-battery.jpg"],
+["Tecno Spark 4 Pro Battery","tecno-spark-4-pro-battery.jpg"],
+["Tecno Spark 5 Battery","tecno-spark-5-battery.jpg"],
+["Tecno Spark 7 Battery","tecno-spark-7-battery.jpg"],
+["Tecno Spark 7P Battery","tecno-spark-7p-battery.jpg"],
+["Tecno Spark 7 Battery","tecno-spark-7-battery.jpg"]
+]]
+];
 
- if(categoryWrap){
-  let touchTimer;
+function waLink(message){
+return WHATSAPP_BASE+encodeURIComponent(message);
+}
 
-  categoryWrap.addEventListener("touchstart",function(){
-   categoryWrap.classList.add("paused");
-   clearTimeout(touchTimer);
-  },{passive:true});
+function makeCard(name,image,type){
+const card=document.createElement('article');
+card.className='card';
 
-  categoryWrap.addEventListener("touchend",function(){
-   clearTimeout(touchTimer);
-   touchTimer=setTimeout(function(){
-    categoryWrap.classList.remove("paused");
-   },900);
-  },{passive:true});
+const photo=document.createElement('div');
+photo.className='photo';
 
-  categoryWrap.addEventListener("pointerdown",function(){
-   categoryWrap.classList.add("paused");
-  });
+const img=document.createElement('img');
+img.src=image;
+img.alt=name+' '+type;
+img.loading='lazy';
+img.onerror=function(){
+this.style.display='none';
+const fallback=document.createElement('div');
+fallback.style.cssText='font-size:11px;color:#687385;overflow-wrap:anywhere;text-align:center';
+fallback.textContent='Image filename: '+image;
+photo.appendChild(fallback);
+};
+photo.appendChild(img);
 
-  categoryWrap.addEventListener("pointerup",function(){
-   categoryWrap.classList.remove("paused");
-  });
- }
+const info=document.createElement('div');
+info.className='card-info';
 
- const year=document.getElementById("year");
- if(year)year.textContent=new Date().getFullYear();
-})();
+const tag=document.createElement('span');
+tag.className='tag';
+tag.textContent=type;
+
+const title=document.createElement('h3');
+title.textContent=name;
+
+const p=document.createElement('p');
+p.textContent='Ask us to confirm the compatible part, availability and replacement price for this model.';
+
+const link=document.createElement('a');
+link.className='btn whatsapp';
+link.href=waLink('Hello Street Gadgets Care, I would like to inquire about '+type+' for '+name+'. Please confirm compatibility, availability and price.');
+link.target='_blank';
+link.rel='noopener noreferrer';
+link.textContent='Ask on WhatsApp';
+
+info.append(tag,title,p,link);
+card.append(photo,info);
+return card;
+}
+
+function renderCatalogue(brands,containerId,navId,type){
+const container=document.getElementById(containerId);
+const nav=document.getElementById(navId);
+
+brands.forEach(brand=>{
+const link=document.createElement('a');
+link.href='#'+brand[0];
+link.textContent=brand[1];
+nav.appendChild(link);
+
+const section=document.createElement('section');
+section.className='brand-block';
+section.id=brand[0];
+
+const heading=document.createElement('div');
+heading.className='brand-heading';
+
+const title=document.createElement('h3');
+title.textContent=brand[1];
+
+const count=document.createElement('span');
+count.textContent=brand[2].length+' listed models';
+
+heading.append(title,count);
+
+const grid=document.createElement('div');
+grid.className='grid';
+
+const seen=new Set();
+
+brand[2].forEach(model=>{
+if(seen.has(model[1]))return;
+seen.add(model[1]);
+grid.appendChild(makeCard(model[0],model[1],type));
+});
+
+section.append(heading,grid);
+container.appendChild(section);
+});
+}
+
+const iphoneGrid=document.getElementById('iphoneGrid');
+iphoneParts.forEach(item=>{
+iphoneGrid.appendChild(makeCard(item[0]+' — '+item[1],item[2],item[1]));
+});
+
+renderCatalogue(screenBrands,'screenCatalogue','screenNav','Screen replacement');
+renderCatalogue(batteryBrands,'batteryCatalogue','batteryNav','Battery replacement');
+
+const menuToggle=document.getElementById('menuToggle');
+const nav=document.getElementById('mainNavigation');
+
+menuToggle.addEventListener('click',()=>{
+const open=nav.classList.toggle('open');
+menuToggle.setAttribute('aria-expanded',String(open));
+menuToggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+});
+
+nav.querySelectorAll('a').forEach(link=>{
+link.addEventListener('click',()=>{
+nav.classList.remove('open');
+menuToggle.setAttribute('aria-expanded','false');
+});
+});
 </script>
-
 </body>
 </html>
-```
