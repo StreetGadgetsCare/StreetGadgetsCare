@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -438,6 +437,7 @@
       color: #75849a;
       font-size: 12px;
       padding: 12px;
+      overflow-wrap: anywhere;
     }
 
     .part-content {
@@ -471,7 +471,7 @@
       margin: 0 0 14px;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .part-content .btn {
@@ -806,8 +806,8 @@
         <div class="section-heading">
           <h2>Browse the spare parts catalogue</h2>
           <p>
-            Each brand has its own section, and each phone model has its own
-            group. Only parts included in the supplied filename list are shown.
+            Browse by brand and exact phone model. Each listed part has its own
+            description; message us to confirm compatibility, availability and price.
           </p>
         </div>
 
@@ -827,7 +827,6 @@
             <option value="Redmi / Xiaomi">Redmi / Xiaomi</option>
             <option value="itel">itel</option>
             <option value="Tecno">Tecno</option>
-            <option value="General Phone Parts">General Phone Parts</option>
           </select>
 
           <select class="field" id="partFilter" aria-label="Filter by spare part type">
@@ -922,169 +921,165 @@
 
   <script>
     /*
-      IMPORTANT:
-      This catalogue intentionally lists the phone-part images supplied
-      by the business owner. Filenames are case-sensitive on GitHub Pages.
-      Images are loaded from the repository root.
+      This catalogue uses an explicit list of supplied phone-part images.
+      It does not scan the repository, so laptop batteries, screen protectors,
+      general repair photos and unrelated shop images will not be added
+      automatically.
     */
 
     const parts = [
       // iPhone X family
-      { brand: "iPhone", model: "iPhone X", type: "Back Cover", file: "iphone-x-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone X", type: "Battery", file: "iphone-x-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone X", type: "Charging System", file: "iphone-x-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone X", type: "Back Cover", file: "iphone-x-back-cover-replacement.jpg", description: "Freshen up the look of your iPhone X with this back-cover replacement option. Ask us to confirm the colour, version and availability before ordering." },
+      { brand: "iPhone", model: "iPhone X", type: "Battery", file: "iphone-x-battery-replacement.jpg", description: "Help your iPhone X stay powered with this battery replacement option. Ask us to verify the battery version and availability for your exact phone." },
+      { brand: "iPhone", model: "iPhone X", type: "Charging System", file: "iphone-x-charging-system-replacement.jpg", description: "Having charging trouble with your iPhone X? Enquire about this charging-system replacement and let us confirm the correct connector assembly for your variant." },
 
-      { brand: "iPhone", model: "iPhone XR", type: "Back Cover", file: "iphone-xr-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone XR", type: "Battery", file: "iphone-xr-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone XR", type: "Charging System", file: "iphone-xr-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone XR", type: "Back Cover", file: "iphone-xr-back-cover-replacement.jpg", description: "For an iPhone XR with a cracked or damaged rear cover, this is a replacement option to enquire about. Confirm the exact fit and finish with us." },
+      { brand: "iPhone", model: "iPhone XR", type: "Battery", file: "iphone-xr-battery-replacement.jpg", description: "If your iPhone XR battery drains quickly or no longer holds charge, enquire about this replacement. We’ll help check the correct battery variant." },
+      { brand: "iPhone", model: "iPhone XR", type: "Charging System", file: "iphone-xr-charging-system-replacement.jpg", description: "This charging-system part is listed for iPhone XR, useful to check when the phone has charging-port problems. Confirm the exact version with us first." },
 
-      { brand: "iPhone", model: "iPhone XS", type: "Screen", file: "iphone-xs-screen.jpg.WEBP" },
-      { brand: "iPhone", model: "iPhone XS", type: "Back Cover", file: "iphone-xs-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone XS", type: "Battery", file: "iphone-xs-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone XS", type: "Charging System", file: "iphone-xs-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone XS", type: "Screen", file: "iphone-xs-screen.jpg.WEBP", description: "Refresh the display on iPhone XS with this screen option, ideal when cracks or display damage affect everyday use. Confirm the exact variant before ordering." },
+      { brand: "iPhone", model: "iPhone XS", type: "Back Cover", file: "iphone-xs-back-cover-replacement.jpg", description: "Help restore the rear appearance of your iPhone XS by checking this back-cover part. Availability and colour options are confirmed on enquiry." },
+      { brand: "iPhone", model: "iPhone XS", type: "Battery", file: "iphone-xs-battery-replacement.jpg", description: "Bring dependable everyday power back to your iPhone XS by checking this battery option with us. Confirm compatibility before purchase." },
+      { brand: "iPhone", model: "iPhone XS", type: "Charging System", file: "iphone-xs-charging-system-replacement.jpg", description: "For an iPhone XS that charges inconsistently, ask us about this charging-system replacement. We’ll help verify compatibility and availability." },
 
-      { brand: "iPhone", model: "iPhone XS Max", type: "Back Cover", file: "iphone-xs-max-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone XS Max", type: "Charging System", file: "iphone-xs-max-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone XS Max", type: "Back Cover", file: "iphone-xs-max-back-cover-replacement.jpg", description: "Replace a worn or damaged rear cover on your iPhone XS Max with this listed option. Contact us to verify the correct model version before purchase." },
+      { brand: "iPhone", model: "iPhone XS Max", type: "Charging System", file: "iphone-xs-max-charging-system-replacement.jpg", description: "Get help addressing charging-port issues on your iPhone XS Max with this replacement option. Check the exact model variant before placing an order." },
 
       // iPhone 11 family
-      { brand: "iPhone", model: "iPhone 11", type: "Screen", file: "iphone-11-screen.jpg" },
-      { brand: "iPhone", model: "iPhone 11", type: "Back Cover", file: "iphone-11-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11", type: "Battery", file: "iphone-11-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11", type: "Charging System", file: "iphone-11-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 11", type: "Screen", file: "iphone-11-screen.jpg", description: "Help bring iPhone 11 back to a clear viewing experience with a replacement screen listed for this model. Ask us to verify compatibility and availability." },
+      { brand: "iPhone", model: "iPhone 11", type: "Back Cover", file: "iphone-11-back-cover-replacement.jpg", description: "A back-cover replacement option for iPhone 11 when the rear panel is cracked, scratched or broken. Ask us to confirm the exact variant." },
+      { brand: "iPhone", model: "iPhone 11", type: "Battery", file: "iphone-11-battery-replacement.jpg", description: "A battery replacement option for an iPhone 11 that struggles to retain charge. Contact us to confirm the exact part and current availability." },
+      { brand: "iPhone", model: "iPhone 11", type: "Charging System", file: "iphone-11-charging-system-replacement.jpg", description: "If your iPhone 11 has a loose or faulty charging connection, enquire about this charging-system part. Fit and stock should be confirmed first." },
 
-      { brand: "iPhone", model: "iPhone 11 Pro", type: "Back Cover", file: "iphone-11-pro-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11 Pro", type: "Battery", file: "iphone-11-pro-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11 Pro", type: "Charging System", file: "iphone-11-pro-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 11 Pro", type: "Back Cover", file: "iphone-11-pro-back-cover-replacement.jpg", description: "Give your iPhone 11 Pro a tidier finish by enquiring about this back cover. Please confirm the model version and available colour before ordering." },
+      { brand: "iPhone", model: "iPhone 11 Pro", type: "Battery", file: "iphone-11-pro-battery-replacement.jpg", description: "Keep your iPhone 11 Pro ready for daily use with a battery replacement enquiry. We recommend confirming the precise model variant first." },
+      { brand: "iPhone", model: "iPhone 11 Pro", type: "Charging System", file: "iphone-11-pro-charging-system-replacement.jpg", description: "A charging-system replacement option for the iPhone 11 Pro. Message us with the exact model details so we can check the right part for you." },
 
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Screen", file: "iphone-11-pro-max-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Back Cover", file: "iphone-11-pro-max-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Battery", file: "iphone-11-pro-max-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Charging System", file: "iphone-11-pro-max-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Screen", file: "iphone-11-pro-max-screen-replacement.jpg", description: "For customers repairing an iPhone 11 Pro Max with display damage, this screen is a model-specific option to check with us before ordering." },
+      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Back Cover", file: "iphone-11-pro-max-back-cover-replacement.jpg", description: "This back-cover listing gives iPhone 11 Pro Max owners a replacement option for a damaged rear panel. Ask us to check fit, colour and stock." },
+      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Battery", file: "iphone-11-pro-max-battery-replacement.jpg", description: "For an iPhone 11 Pro Max with reduced battery life, this listed battery is worth checking as a replacement option. Ask us about fit and stock." },
+      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Charging System", file: "iphone-11-pro-max-charging-system-replacement.jpg", description: "If charging lasts less time than it used to on your iPhone 11 Pro Max, ask us about this charging-system option and confirm the correct version before ordering." },
 
       // iPhone 12 family
-      { brand: "iPhone", model: "iPhone 12", type: "Screen", file: "iphone-12-screen.jpg" },
-      { brand: "iPhone", model: "iPhone 12", type: "Battery", file: "iphone-12-battery-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 12", type: "Screen", file: "iphone-12-screen.jpg", description: "Keep your iPhone 12 useful with a screen replacement matched to the model shown. Contact us to check the correct version and current stock." },
+      { brand: "iPhone", model: "iPhone 12", type: "Battery", file: "iphone-12-battery-replacement.jpg", description: "Improve the day-to-day usability of your iPhone 12 by enquiring about this battery replacement. Exact compatibility and availability must be confirmed." },
 
-      { brand: "iPhone", model: "iPhone 12 mini", type: "Back Cover", file: "iphone-12-mini-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 12 mini", type: "Charging System", file: "iphone-12-mini-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 12 mini", type: "Back Cover", file: "iphone-12-mini-back-cover-replacement.jpg", description: "For customers repairing an iPhone 12 mini with rear-cover damage, this is a model-specific option to enquire about. Check the correct version first." },
+      { brand: "iPhone", model: "iPhone 12 mini", type: "Charging System", file: "iphone-12-mini-charging-system-replacement.jpg", description: "A charging-system replacement option for iPhone 12 mini owners experiencing connection problems. Ask us to verify the part before ordering." },
 
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Screen", file: "iphone-12-pro-screen.jpg" },
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Back Cover", file: "iphone-12-pro-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Battery", file: "iphone-12-pro-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Charging System", file: "iphone-12-pro-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 12 Pro", type: "Screen", file: "iphone-12-pro-screen.jpg", description: "Make your iPhone 12 Pro easier to use again with a screen replacement enquiry tailored to the model listed. Confirm compatibility with us before payment." },
+      { brand: "iPhone", model: "iPhone 12 Pro", type: "Back Cover", file: "iphone-12-pro-back-cover-replacement.jpg", description: "Restore a cleaner rear appearance on your iPhone 12 Pro with this back-cover option. Contact us to confirm the exact fit and colour." },
+      { brand: "iPhone", model: "iPhone 12 Pro", type: "Battery", file: "iphone-12-pro-battery-replacement.jpg", description: "For an iPhone 12 Pro that no longer holds charge as expected, enquire about this battery replacement. We’ll help check the appropriate variant." },
+      { brand: "iPhone", model: "iPhone 12 Pro", type: "Charging System", file: "iphone-12-pro-charging-system-replacement.jpg", description: "If your iPhone 12 Pro has a charging-port fault, this listed charging-system part is worth checking. Ask us to confirm compatibility and stock." },
 
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Screen", file: "iphone-12-pro-max-screen.jpg" },
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Back Cover", file: "iphone-12-pro-max-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Battery", file: "iphone-12-pro-max-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Charging System", file: "iphone-12-pro-max-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Screen", file: "iphone-12-pro-max-screen.jpg", description: "This screen listing is intended for iPhone 12 Pro Max display repairs. Message us to confirm the exact version and availability before ordering." },
+      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Back Cover", file: "iphone-12-pro-max-back-cover-replacement.jpg", description: "Replace a damaged rear panel on your iPhone 12 Pro Max by enquiring about this back-cover option. Colour and compatibility need confirmation." },
+      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Battery", file: "iphone-12-pro-max-battery-replacement.jpg", description: "Ask us about this iPhone 12 Pro Max battery if your phone needs a replacement to address poor battery life. Confirm the correct version first." },
+      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Charging System", file: "iphone-12-pro-max-charging-system-replacement.jpg", description: "For charging difficulties on an iPhone 12 Pro Max, enquire about this charging-system replacement. We can help check the correct part and availability." },
 
       // iPhone 13 family
-      { brand: "iPhone", model: "iPhone 13", type: "Screen", file: "iphone-13-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13", type: "Back Cover", file: "iphone-13-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13", type: "Battery", file: "iphone-13-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13", type: "Charging System", file: "iphone-13-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 13", type: "Screen", file: "iphone-13-screen-replacement.jpg", description: "A replacement screen option for iPhone 13 when cracks, display lines or touch problems need attention. Let us confirm the precise variant first." },
+      { brand: "iPhone", model: "iPhone 13", type: "Back Cover", file: "iphone-13-back-cover-replacement.jpg", description: "Give an iPhone 13 with a damaged back cover a repair option worth checking. Contact us to confirm colour, fit and current availability." },
+      { brand: "iPhone", model: "iPhone 13", type: "Battery", file: "iphone-13-battery-replacement.jpg", description: "This battery listing is for iPhone 13 users looking to address reduced battery life. Ask us to verify compatibility and availability for your device." },
+      { brand: "iPhone", model: "iPhone 13", type: "Charging System", file: "iphone-13-charging-system-replacement.jpg", description: "Check this charging-system replacement for an iPhone 13 with a faulty charging connection. Please confirm your exact model before placing an order." },
 
-      { brand: "iPhone", model: "iPhone 13 mini", type: "Back Cover", file: "iphone-13-mini-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 mini", type: "Charging System", file: "iphone-13-mini-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 13 mini", type: "Back Cover", file: "iphone-13-mini-back-cover-replacement.jpg", description: "An option to consider when the rear cover of your iPhone 13 mini is damaged. Ask us to verify the correct version and available colour." },
+      { brand: "iPhone", model: "iPhone 13 mini", type: "Charging System", file: "iphone-13-mini-charging-system-replacement.jpg", description: "Enquire about this charging-system part for an iPhone 13 mini that has difficulty connecting to a charger. Compatibility must be confirmed." },
 
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Screen", file: "iphone-13-pro-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Back Cover", file: "iphone-13-pro-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Battery", file: "iphone-13-pro-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Charging System", file: "iphone-13-pro-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 13 Pro", type: "Screen", file: "iphone-13-pro-screen-replacement.jpg", description: "Help address display damage on an iPhone 13 Pro with this screen replacement option. Contact us to check the exact model variant and stock." },
+      { brand: "iPhone", model: "iPhone 13 Pro", type: "Back Cover", file: "iphone-13-pro-back-cover-replacement.jpg", description: "This back-cover option is listed for iPhone 13 Pro repairs involving rear-panel damage. Ask us about fit and colour availability before purchase." },
+      { brand: "iPhone", model: "iPhone 13 Pro", type: "Battery", file: "iphone-13-pro-battery-replacement.jpg", description: "For an iPhone 13 Pro that needs better battery performance, enquire about this replacement battery. We’ll help verify the right variant." },
+      { brand: "iPhone", model: "iPhone 13 Pro", type: "Charging System", file: "iphone-13-pro-charging-system-replacement.jpg", description: "If the charging connection on your iPhone 13 Pro is unreliable, ask us about this charging-system part. Confirm compatibility before ordering." },
 
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Screen", file: "iphone-13-pro-max-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Back Cover", file: "iphone-13-pro-max-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Battery", file: "iphone-13-pro-max-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Charging System", file: "iphone-13-pro-max-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Screen", file: "iphone-13-pro-max-screen-replacement.jpg", description: "A screen replacement option for iPhone 13 Pro Max owners dealing with a cracked or faulty display. Enquire to confirm the correct version." },
+      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Back Cover", file: "iphone-13-pro-max-back-cover-replacement.jpg", description: "For a damaged iPhone 13 Pro Max rear cover, ask us about this replacement option. We’ll confirm the model fit and colour availability." },
+      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Battery", file: "iphone-13-pro-max-battery-replacement.jpg", description: "Keep your iPhone 13 Pro Max ready for everyday use by checking this battery replacement option. Exact compatibility and stock are confirmed on enquiry." },
+      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Charging System", file: "iphone-13-pro-max-charging-system-replacement.jpg", description: "This charging-system part is listed for iPhone 13 Pro Max. Ask us to check whether it matches your exact variant and charging issue." },
 
       // iPhone 14 family
-      { brand: "iPhone", model: "iPhone 14", type: "Screen", file: "iphone-14-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14", type: "Back Cover", file: "iphone-14-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14", type: "Battery", file: "iphone-14-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14", type: "Charging System", file: "iphone-14-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 14", type: "Screen", file: "iphone-14-screen-replacement.jpg", description: "A practical screen replacement option for iPhone 14 when display damage affects normal use. Check the exact version and availability with us." },
+      { brand: "iPhone", model: "iPhone 14", type: "Back Cover", file: "iphone-14-back-cover-replacement.jpg", description: "Refresh the rear of an iPhone 14 with this back-cover replacement option. Contact us to confirm the correct fit and available colour." },
+      { brand: "iPhone", model: "iPhone 14", type: "Battery", file: "iphone-14-battery-replacement.jpg", description: "If your iPhone 14 battery performance has declined, ask us about this replacement battery. We’ll check the correct part for your model." },
+      { brand: "iPhone", model: "iPhone 14", type: "Charging System", file: "iphone-14-charging-system-replacement.jpg", description: "For an iPhone 14 with charging-port trouble, enquire about this charging-system replacement and confirm compatibility before ordering." },
 
-      { brand: "iPhone", model: "iPhone 14 Plus", type: "Back Cover", file: "iphone-14-plus-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Plus", type: "Charging System", file: "iphone-14-plus-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 14 Plus", type: "Back Cover", file: "iphone-14-plus-back-cover-replacement.jpg", description: "This back-cover listing offers an option for an iPhone 14 Plus with rear-panel damage. Ask us to confirm colour, fit and stock." },
+      { brand: "iPhone", model: "iPhone 14 Plus", type: "Charging System", file: "iphone-14-plus-charging-system-replacement.jpg", description: "Check this charging-system replacement for an iPhone 14 Plus that has charging-connection issues. Exact compatibility is confirmed on enquiry." },
 
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Screen", file: "iphone-14-pro-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Back Cover", file: "iphone-14-pro-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Battery", file: "iphone-14-pro-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Charging System", file: "iphone-14-pro-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 14 Pro", type: "Screen", file: "iphone-14-pro-screen-replacement.jpg", description: "For a cracked or faulty iPhone 14 Pro display, this screen option is ready for an availability check. Confirm your exact model before purchase." },
+      { brand: "iPhone", model: "iPhone 14 Pro", type: "Back Cover", file: "iphone-14-pro-back-cover-replacement.jpg", description: "Repair the look of an iPhone 14 Pro with this back-cover replacement option. Message us to verify the correct version and colour." },
+      { brand: "iPhone", model: "iPhone 14 Pro", type: "Battery", file: "iphone-14-pro-battery-replacement.jpg", description: "Enquire about this iPhone 14 Pro battery if your phone needs a replacement due to reduced battery life. Compatibility and stock must be checked." },
+      { brand: "iPhone", model: "iPhone 14 Pro", type: "Charging System", file: "iphone-14-pro-charging-system-replacement.jpg", description: "This charging-system listing is for iPhone 14 Pro repairs. Ask us to verify the exact variant before ordering for a charging-port problem." },
 
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Screen", file: "iphone-14-pro-max-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Back Cover", file: "iphone-14-pro-max-back-cover-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Battery", file: "iphone-14-pro-max-battery-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Charging System", file: "iphone-14-pro-max-charging-system-replacement.jpg" },
+      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Screen", file: "iphone-14-pro-max-screen-replacement.jpg", description: "A screen option for iPhone 14 Pro Max owners who need to address a damaged display. Contact us to check the correct part and availability." },
+      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Back Cover", file: "iphone-14-pro-max-back-cover-replacement.jpg", description: "For rear-cover damage on an iPhone 14 Pro Max, enquire about this listed replacement. Confirm colour and model compatibility before ordering." },
+      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Battery", file: "iphone-14-pro-max-battery-replacement.jpg", description: "Ask us about this battery replacement for an iPhone 14 Pro Max with reduced battery life. We’ll help confirm the correct variant." },
+      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Charging System", file: "iphone-14-pro-max-charging-system-replacement.jpg", description: "If your iPhone 14 Pro Max has trouble charging, enquire about this charging-system part and confirm the exact fit before purchase." },
 
       // These filenames were supplied under this exact model name.
-      // Please confirm the intended model before advertising these parts.
-      { brand: "iPhone", model: "iPhone 14 Pro Plus — confirm model", type: "Screen", file: "iphone-14-pro-plus-screen-replacement.jpg" },
-      { brand: "iPhone", model: "iPhone 14 Pro Plus — confirm model", type: "Battery", file: "iphone-14-pro-plus-battery-replacement.jpg" },
+      // Confirm the intended model before advertising these parts.
+      { brand: "iPhone", model: "iPhone 14 Pro Plus — confirm model", type: "Screen", file: "iphone-14-pro-plus-screen-replacement.jpg", description: "This screen image was supplied under the name iPhone 14 Pro Plus. Please confirm the intended phone model with us before ordering this part." },
+      { brand: "iPhone", model: "iPhone 14 Pro Plus — confirm model", type: "Battery", file: "iphone-14-pro-plus-battery-replacement.jpg", description: "This battery listing uses the supplied iPhone 14 Pro Plus filename. Confirm the intended model and part compatibility before advertising or ordering." },
 
       // iPhone 15 family
-      { brand: "iPhone", model: "iPhone 15", type: "Screen", file: "iphone-15-screen.jpg" },
-      { brand: "iPhone", model: "iPhone 15 Pro", type: "Screen", file: "iphone-15-pro-screen.jpg" },
-      { brand: "iPhone", model: "iPhone 15 Pro Max", type: "Screen", file: "iphone-15-pro-max-screen.jpg" },
+      { brand: "iPhone", model: "iPhone 15", type: "Screen", file: "iphone-15-screen.jpg", description: "For iPhone 15 display damage, enquire about this listed screen replacement. We’ll help check the exact version and current availability." },
+      { brand: "iPhone", model: "iPhone 15 Pro", type: "Screen", file: "iphone-15-pro-screen.jpg", description: "This screen option is listed for the iPhone 15 Pro. Contact us to confirm compatibility and stock before arranging a replacement." },
+      { brand: "iPhone", model: "iPhone 15 Pro Max", type: "Screen", file: "iphone-15-pro-max-screen.jpg", description: "An iPhone 15 Pro Max screen replacement option to check when the display is cracked or faulty. Ask us to confirm the correct version." },
 
-      { brand: "iPhone", model: "General iPhone Parts", type: "Back Glass", file: "iphone-back-glass.jpg" },
+      { brand: "iPhone", model: "General iPhone Parts", type: "Back Glass", file: "iphone-back-glass.jpg", description: "For an iPhone with damaged rear glass, enquire about this back-glass replacement option. Tell us the exact iPhone model so we can check compatibility." },
 
       // Infinix
-      { brand: "Infinix", model: "Infinix Hot 50 Pro+", type: "Screen", file: "infinix-hot-50-pro-plus-screen.jpg" },
-      { brand: "Infinix", model: "Infinix Hot 60i", type: "Screen", file: "infinix-hot-60i-screen.jpg" },
-      { brand: "Infinix", model: "Infinix Note 50 Pro", type: "Screen", file: "infinix-note-50-pro-screen.jpg" },
-      { brand: "Infinix", model: "Infinix Smart 10", type: "Screen", file: "infinix-smart-10-screen.jpg" },
-      { brand: "Infinix", model: "Infinix Smart 10 Plus", type: "Screen", file: "infinix-smart-10-plus-screen.jpg" },
+      { brand: "Infinix", model: "Infinix Hot 50 Pro+", type: "Screen", file: "infinix-hot-50-pro-plus-screen.jpg", description: "Refresh the display on Infinix Hot 50 Pro+ with this screen option, ideal when cracks or display damage affect everyday use. Confirm the exact variant before ordering." },
+      { brand: "Infinix", model: "Infinix Hot 60i", type: "Screen", file: "infinix-hot-60i-screen.jpg", description: "Help bring Infinix Hot 60i back to a clear viewing experience with a replacement screen listed for this model. Ask us to verify compatibility and availability." },
+      { brand: "Infinix", model: "Infinix Note 50 Pro", type: "Screen", file: "infinix-note-50-pro-screen.jpg", description: "For a damaged or unusable Infinix Note 50 Pro display, this screen is a practical replacement to enquire about. Share your exact model variant before purchase." },
+      { brand: "Infinix", model: "Infinix Smart 10", type: "Screen", file: "infinix-smart-10-screen.jpg", description: "Keep your Infinix Smart 10 useful with a screen replacement matched to the model shown. Contact us to check the correct version and current stock." },
+      { brand: "Infinix", model: "Infinix Smart 10 Plus", type: "Screen", file: "infinix-smart-10-plus-screen.jpg", description: "A replacement screen option for Infinix Smart 10 Plus when cracks, display lines or touch problems need attention. Let us confirm the precise variant first." },
 
       // Samsung
-      { brand: "Samsung", model: "Samsung Galaxy A07", type: "Screen", file: "samsung-a07-screen.jpg" },
-      { brand: "Samsung", model: "Samsung Galaxy A07s", type: "Screen", file: "samsung-a07s-screen.jpg" },
-      { brand: "Samsung", model: "Samsung Galaxy A16", type: "Screen", file: "samsung-a16-screen.jpg" },
+      { brand: "Samsung", model: "Samsung Galaxy A07", type: "Screen", file: "samsung-a07-screen.jpg", description: "Give your Samsung Galaxy A07 display a fresh start with this model-specific screen listing. Enquire for compatibility, availability and the current price." },
+      { brand: "Samsung", model: "Samsung Galaxy A07s", type: "Screen", file: "samsung-a07s-screen.jpg", description: "If the Samsung Galaxy A07s screen is broken or difficult to use, ask us about this replacement option. We’ll help confirm the right variant for your phone." },
+      { brand: "Samsung", model: "Samsung Galaxy A16", type: "Screen", file: "samsung-a16-screen.jpg", description: "This Samsung Galaxy A16 screen listing is for customers looking to replace a damaged display. Message us to check the correct fit and availability." },
 
       // Redmi / Xiaomi
-      { brand: "Redmi / Xiaomi", model: "Redmi A7", type: "Screen", file: "redmi-a7-screen.jpg" },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 4G", type: "Screen", file: "redmi-note-15-4g-screen.jpg" },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 5G", type: "Screen", file: "redmi-note-15-5g-screen.jpg" },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro", type: "Screen", file: "redmi-note-15-pro-screen.jpg" },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro 5G", type: "Screen", file: "redmi-note-15-pro-5g-screen.jpg" },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro+ 5G", type: "Screen", file: "redmi-note-15-pro-plus-5g-screen.jpg" },
+      { brand: "Redmi / Xiaomi", model: "Redmi A7", type: "Screen", file: "redmi-a7-screen.jpg", description: "Make your Redmi A7 easier to use again with a screen replacement enquiry tailored to the model listed. Confirm compatibility with us before payment." },
+      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 4G", type: "Screen", file: "redmi-note-15-4g-screen.jpg", description: "A useful replacement option for a cracked Redmi Note 15 4G display or a screen that no longer works properly. Ask us to check the exact version." },
+      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 5G", type: "Screen", file: "redmi-note-15-5g-screen.jpg", description: "Help address display damage on a Redmi Note 15 5G with this screen replacement option. Contact us to check the exact model variant and stock." },
+      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro", type: "Screen", file: "redmi-note-15-pro-screen.jpg", description: "A screen replacement option for Redmi Note 15 Pro owners dealing with a cracked or faulty display. Enquire to confirm the correct version." },
+      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro 5G", type: "Screen", file: "redmi-note-15-pro-5g-screen.jpg", description: "This screen option is listed for Redmi Note 15 Pro 5G. Contact us to confirm compatibility and stock before arranging a replacement." },
+      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro+ 5G", type: "Screen", file: "redmi-note-15-pro-plus-5g-screen.jpg", description: "For Redmi Note 15 Pro+ 5G display damage, enquire about this listed screen replacement. We’ll help check the exact version and current availability." },
 
       // itel
-      { brand: "itel", model: "itel A70", type: "Screen", file: "itel-a70-screen.jpg" },
+      { brand: "itel", model: "itel A70", type: "Screen", file: "itel-a70-screen.jpg", description: "An itel A70 screen replacement option for customers dealing with a cracked or faulty display. Ask us to confirm the correct part and availability." },
 
       // Tecno Camon
-      { brand: "Tecno", model: "Tecno Camon 11 Pro", type: "Battery", file: "tecno-camon-11-pro-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 12", type: "Battery", file: "tecno-camon-12-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 12 Pro", type: "Battery", file: "tecno-camon-12-pro-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 15", type: "Battery", file: "tecno-camon-15-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 16", type: "Battery", file: "tecno-camon-16-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 40 4G", type: "Battery", file: "tecno-camon-40-4g-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 40 Premier 5G", type: "Battery", file: "tecno-camon-40-premier-5g-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 40 Pro 4G", type: "Battery", file: "tecno-camon-40-pro-4g-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 40 Pro 5G", type: "Battery", file: "tecno-camon-40-pro-5g-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Camon 40 Pro", type: "Screen", file: "tecno-camon-40-pro-screen.jpg" },
+      { brand: "Tecno", model: "Tecno Camon 11 Pro", type: "Battery", file: "tecno-camon-11-pro-battery.jpg", description: "A battery replacement option for a Tecno Camon 11 Pro that struggles to retain charge. Contact us to confirm the exact part and current availability." },
+      { brand: "Tecno", model: "Tecno Camon 12", type: "Battery", file: "tecno-camon-12-battery.jpg", description: "Keep your Tecno Camon 12 ready for daily use with a battery replacement enquiry. We recommend confirming the precise model variant first." },
+      { brand: "Tecno", model: "Tecno Camon 12 Pro", type: "Battery", file: "tecno-camon-12-pro-battery.jpg", description: "For a Tecno Camon 12 Pro with reduced battery life, this listed battery is worth checking as a replacement option. Ask us about fit and stock." },
+      { brand: "Tecno", model: "Tecno Camon 15", type: "Battery", file: "tecno-camon-15-battery.jpg", description: "If your Tecno Camon 15 battery drains quickly or no longer holds charge, enquire about this replacement. We’ll help check the correct battery variant." },
+      { brand: "Tecno", model: "Tecno Camon 16", type: "Battery", file: "tecno-camon-16-battery.jpg", description: "Improve the day-to-day usability of your Tecno Camon 16 by enquiring about this battery replacement. Exact compatibility and availability must be confirmed." },
+      { brand: "Tecno", model: "Tecno Camon 40 4G", type: "Battery", file: "tecno-camon-40-4g-battery.jpg", description: "Bring dependable everyday power back to your Tecno Camon 40 4G by checking this battery option with us. Confirm compatibility before purchase." },
+      { brand: "Tecno", model: "Tecno Camon 40 Premier 5G", type: "Battery", file: "tecno-camon-40-premier-5g-battery.jpg", description: "Ask us about this Tecno Camon 40 Premier 5G battery if your phone needs a replacement to address poor battery life. Confirm the correct version first." },
+      { brand: "Tecno", model: "Tecno Camon 40 Pro 4G", type: "Battery", file: "tecno-camon-40-pro-4g-battery.jpg", description: "This battery listing is for Tecno Camon 40 Pro 4G users looking to address reduced battery life. Ask us to verify compatibility and availability for your device." },
+      { brand: "Tecno", model: "Tecno Camon 40 Pro 5G", type: "Battery", file: "tecno-camon-40-pro-5g-battery.jpg", description: "Help your Tecno Camon 40 Pro 5G stay powered with this battery replacement option. Ask us to verify the battery version and availability for your exact phone." },
+      { brand: "Tecno", model: "Tecno Camon 40 Pro", type: "Screen", file: "tecno-camon-40-pro-screen.jpg", description: "Refresh the display on Tecno Camon 40 Pro with this screen option, ideal when cracks or display damage affect everyday use. Confirm the exact variant before ordering." },
 
       // Tecno Phantom
-      { brand: "Tecno", model: "Tecno Phantom 5", type: "Screen", file: "tecno-phantom-5-screen.jpg" },
-      { brand: "Tecno", model: "Tecno Phantom 6", type: "Screen", file: "tecno-phantom-6-screen.jpg" },
-      { brand: "Tecno", model: "Tecno Phantom 6 Plus", type: "Screen", file: "tecno-phantom-6-plus-screen.jpg" },
+      { brand: "Tecno", model: "Tecno Phantom 5", type: "Screen", file: "tecno-phantom-5-screen.jpg", description: "Help bring Tecno Phantom 5 back to a clear viewing experience with a replacement screen listed for this model. Ask us to verify compatibility and availability." },
+      { brand: "Tecno", model: "Tecno Phantom 6", type: "Screen", file: "tecno-phantom-6-screen.jpg", description: "For a damaged or unusable Tecno Phantom 6 display, this screen is a practical replacement to enquire about. Share your exact model variant before purchase." },
+      { brand: "Tecno", model: "Tecno Phantom 6 Plus", type: "Screen", file: "tecno-phantom-6-plus-screen.jpg", description: "Keep your Tecno Phantom 6 Plus useful with a screen replacement matched to the model shown. Contact us to check the correct version and current stock." },
 
       // Tecno Pop
-      { brand: "Tecno", model: "Tecno Pop 9", type: "Screen", file: "tecno-pop-9-screen.jpg" },
+      { brand: "Tecno", model: "Tecno Pop 9", type: "Screen", file: "tecno-pop-9-screen.jpg", description: "A replacement screen option for Tecno Pop 9 when cracks, display lines or touch problems need attention. Let us confirm the precise variant first." },
 
       // Tecno Spark
-      { brand: "Tecno", model: "Tecno Spark 2", type: "Screen", file: "tecno-spark-2-screen.jpg" },
-      { brand: "Tecno", model: "Tecno Spark 30 Pro", type: "Screen", file: "tecno-spark-30-pro-screen.jpg" },
-      { brand: "Tecno", model: "Tecno Spark 30C", type: "Screen", file: "tecno-spark-30c-screen.jpg" },
-      { brand: "Tecno", model: "Tecno Spark 4 Pro", type: "Battery", file: "tecno-spark-4-pro-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Spark 5", type: "Battery", file: "tecno-spark-5-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Spark 7", type: "Battery", file: "tecno-spark-7-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Spark 7P", type: "Battery", file: "tecno-spark-7p-battery.jpg" },
-      { brand: "Tecno", model: "Tecno Spark K7", type: "Screen", file: "tecno-spark-k7-screen.jpg" },
-      { brand: "Tecno", model: "Tecno Spark K8", type: "Screen", file: "tecno-spark-k8-screen.jpg" },
-
-      // General phone-part reference images
-      { brand: "General Phone Parts", model: "General Phone Parts", type: "Screen", file: "phone-screen-repair.jpg" },
-      { brand: "General Phone Parts", model: "General Phone Parts", type: "Battery", file: "phone-battery-replacement.jpg" }
+      { brand: "Tecno", model: "Tecno Spark 2", type: "Screen", file: "tecno-spark-2-screen.jpg", description: "Give your Tecno Spark 2 display a fresh start with this model-specific screen listing. Enquire for compatibility, availability and the current price." },
+      { brand: "Tecno", model: "Tecno Spark 30 Pro", type: "Screen", file: "tecno-spark-30-pro-screen.jpg", description: "If the Tecno Spark 30 Pro screen is broken or difficult to use, ask us about this replacement option. We’ll help confirm the right variant for your phone." },
+      { brand: "Tecno", model: "Tecno Spark 30C", type: "Screen", file: "tecno-spark-30c-screen.jpg", description: "This Tecno Spark 30C screen listing is for customers looking to replace a damaged display. Message us to check the correct fit and availability." },
+      { brand: "Tecno", model: "Tecno Spark 4 Pro", type: "Battery", file: "tecno-spark-4-pro-battery.jpg", description: "A battery replacement option for a Tecno Spark 4 Pro that struggles to retain charge. Contact us to confirm the exact part and current availability." },
+      { brand: "Tecno", model: "Tecno Spark 5", type: "Battery", file: "tecno-spark-5-battery.jpg", description: "Keep your Tecno Spark 5 ready for daily use with a battery replacement enquiry. We recommend confirming the precise model variant first." },
+      { brand: "Tecno", model: "Tecno Spark 7", type: "Battery", file: "tecno-spark-7-battery.jpg", description: "For a Tecno Spark 7 with reduced battery life, this listed battery is worth checking as a replacement option. Ask us about fit and stock." },
+      { brand: "Tecno", model: "Tecno Spark 7P", type: "Battery", file: "tecno-spark-7p-battery.jpg", description: "Help your Tecno Spark 7P stay powered with this battery replacement option. Ask us to verify the battery version and availability for your exact phone." },
+      { brand: "Tecno", model: "Tecno Spark K7", type: "Screen", file: "tecno-spark-k7-screen.jpg", description: "Make your Tecno Spark K7 easier to use again with a screen replacement enquiry tailored to the model listed. Confirm compatibility with us before payment." },
+      { brand: "Tecno", model: "Tecno Spark K8", type: "Screen", file: "tecno-spark-k8-screen.jpg", description: "A useful replacement option for a cracked Tecno Spark K8 display or a screen that no longer works properly. Ask us to check the exact version." }
     ];
 
     const brandOrder = [
@@ -1093,8 +1088,7 @@
       "Samsung",
       "Redmi / Xiaomi",
       "itel",
-      "Tecno",
-      "General Phone Parts"
+      "Tecno"
     ];
 
     const searchInput = document.getElementById("searchInput");
@@ -1129,8 +1123,7 @@
     }
 
     function createPartCard(item) {
-      const filename = encodeURIComponent(item.file);
-      const imageURL = filename;
+      const imageURL = encodeURIComponent(item.file);
 
       return `
         <article class="part-card">
@@ -1150,10 +1143,7 @@
           <div class="part-content">
             <span class="part-type">${escapeHTML(item.type)}</span>
             <h4>${escapeHTML(item.model)}</h4>
-            <p>
-              ${escapeHTML(item.type)} replacement part.
-              Contact us to confirm the exact variant and availability.
-            </p>
+            <p>${escapeHTML(item.description)}</p>
             <a class="btn btn-primary"
                href="${whatsappURL(item)}"
                target="_blank"
@@ -1175,7 +1165,8 @@
           item.brand,
           item.model,
           item.type,
-          item.file
+          item.file,
+          item.description
         ].join(" ").toLowerCase();
 
         return (!search || searchable.includes(search)) &&
@@ -1191,7 +1182,7 @@
         filtered.length + (filtered.length === 1
           ? " listed part"
           : " listed parts") +
-        " · Images are matched to the filenames supplied.";
+        " · Check the exact filename if an image does not appear.";
 
       if (!filtered.length) {
         results.innerHTML = `
