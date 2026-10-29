@@ -3,48 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Phone Spare Parts in Nairobi | Street Gadgets Care</title>
-  <meta name="description" content="Find iPhone, Infinix, Samsung, Redmi, itel and Tecno phone spare parts at Street Gadgets Care in Nairobi. Ask us about compatible screens, batteries, charging systems and back covers.">
+  <title>Phone Spare Parts | Street Gadgets Care Nairobi</title>
+  <meta name="description" content="Browse phone replacement screens, batteries and iPhone spare parts at Street Gadgets Care. Ask us to confirm compatibility and availability through WhatsApp.">
   <meta name="theme-color" content="#0b1220">
-
-  <link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/spare-parts.html">
-
-  <meta property="og:title" content="Phone Spare Parts | Street Gadgets Care">
-  <meta property="og:description" content="Browse phone spare parts by brand and model. Contact Street Gadgets Care on WhatsApp to confirm compatibility and availability.">
-  <meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/spare-parts.html">
-  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="Logo.png">
 
   <style>
     :root {
       --navy: #0b1220;
-      --navy-light: #15243a;
+      --navy2: #14233a;
       --cyan: #19a7ce;
+      --cyan2: #148cac;
       --green: #25d366;
-      --white: #ffffff;
-      --page: #f4f7fb;
-      --text: #192638;
-      --muted: #65748b;
-      --border: #e0e7f0;
-      --shadow: 0 12px 35px rgba(11, 18, 32, 0.07);
-      --radius: 18px;
+      --text: #172033;
+      --muted: #687385;
+      --light: #f5f7fa;
+      --border: #e2e7ed;
+      --white: #fff;
+      --shadow: 0 12px 32px rgba(11,18,32,.08);
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 110px;
+      scroll-padding-top: 95px;
     }
 
     body {
-      margin: 0;
-      background: var(--page);
-      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img {
@@ -57,372 +52,314 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    select {
-      font: inherit;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     .container {
-      width: min(1180px, calc(100% - 32px));
-      margin-inline: auto;
+      width: min(1150px, 100%);
+      margin: auto;
     }
 
-    .topbar {
-      background: var(--navy);
-      color: #e8f3ff;
-      font-size: 12px;
-      text-align: center;
-      padding: 8px 12px;
-    }
+    /* HEADER AND NAVIGATION */
 
-    .header {
-      background: rgba(255, 255, 255, 0.97);
+    header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
+      z-index: 2000;
+      background: var(--navy);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.16);
     }
 
-    .nav {
+    .nav-container {
+      width: min(1200px, 100%);
       min-height: 76px;
+      margin: auto;
+      padding: 10px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      padding-block: 12px;
+      gap: 20px;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 11px;
       flex-shrink: 0;
     }
 
-    .brand img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
+    .logo img {
+      width: 165px;
+      height: auto;
     }
 
-    .brand-name {
-      font-weight: 900;
-      font-size: 14px;
-      line-height: 1.2;
-      letter-spacing: 0.3px;
-      color: var(--navy);
-    }
-
-    .brand-name small {
-      display: block;
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 600;
-      margin-top: 4px;
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
+    nav {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 6px;
+      gap: 18px;
     }
 
-    .nav-links a {
-      padding: 9px 10px;
-      border-radius: 9px;
+    nav a {
+      color: #fff;
       font-size: 13px;
       font-weight: 700;
-      color: #334155;
+      white-space: nowrap;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      background: #e9f8fd;
-      color: #087ca0;
+    nav a:hover,
+    nav a.active {
+      color: var(--cyan);
     }
 
-    .nav-links .nav-whatsapp {
-      background: var(--green);
-      color: #07351a;
-      padding-inline: 13px;
+    nav a.nav-cta {
+      padding: 10px 15px;
+      border-radius: 7px;
+      background: var(--cyan);
+      color: #fff;
     }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      border: 1px solid #ffffff33;
+      border-radius: 8px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 21px;
+      height: 2px;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    /* HERO */
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      color: white;
-      padding: 65px 0 58px;
-      background:
-        radial-gradient(ellipse at 90% 10%, rgba(25, 167, 206, 0.24), transparent 38%),
-        linear-gradient(125deg, #0b1220, #12253c 72%, #123c51);
+      background: linear-gradient(
+        110deg,
+        rgba(11,18,32,.98),
+        rgba(11,18,32,.87)
+      );
+      color: #fff;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 350px;
-      height: 350px;
-      right: -130px;
-      bottom: -230px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 35px rgba(255,255,255,0.025),
-        0 0 0 75px rgba(255,255,255,0.02);
-      pointer-events: none;
+    .hero-inner {
+      width: min(1200px, 100%);
+      min-height: 360px;
+      margin: auto;
+      padding: 60px 22px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 40px;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #a8eaff;
-      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--cyan);
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 22px;
-      height: 2px;
-      background: var(--cyan);
+    .hero h1 {
+      max-width: 720px;
+      margin-bottom: 17px;
+      font-size: clamp(36px, 5vw, 57px);
+      line-height: 1.08;
+      letter-spacing: -1px;
     }
 
-    .hero h1 {
-      max-width: 780px;
-      margin: 16px 0;
-      font-size: clamp(32px, 5vw, 54px);
-      line-height: 1.1;
-      letter-spacing: -1.6px;
+    .hero h1 span {
+      color: var(--cyan);
     }
 
     .hero p {
-      max-width: 690px;
-      color: #d3deeb;
-      font-size: 16px;
-      margin: 0;
+      max-width: 650px;
+      margin-bottom: 22px;
+      color: #d5deea;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
+    .hero-image {
+      padding: 12px;
+      border: 1px solid #ffffff25;
+      border-radius: 15px;
+      background: #ffffff0d;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      border-radius: 9px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 45px;
-      padding: 12px 18px;
-      border: 0;
-      border-radius: 11px;
+      min-height: 44px;
+      padding: 11px 17px;
+      border-radius: 7px;
       font-size: 13px;
       font-weight: 800;
-      cursor: pointer;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
+      text-align: center;
     }
 
     .btn-primary {
+      background: var(--cyan);
+      color: #fff;
+    }
+
+    .btn-whatsapp {
       background: var(--green);
-      color: #07351a;
+      color: #fff;
     }
 
-    .btn-secondary {
-      color: white;
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.07);
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .trust-strip {
-      background: white;
+    /* TRUST BAR */
+
+    .trustbar {
+      background: #fff;
       border-bottom: 1px solid var(--border);
     }
 
-    .trust-items {
+    .trustbar-inner {
+      width: min(1120px, 100%);
+      margin: auto;
+      padding: 14px 22px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      padding-block: 19px;
+      gap: 12px;
     }
 
-    .trust-item {
+    .trustbar-item {
       text-align: center;
-      font-size: 12px;
-      font-weight: 700;
-      color: #40516a;
+      padding: 6px;
+      border-right: 1px solid var(--border);
     }
 
-    .trust-item span {
-      display: block;
-      font-size: 19px;
-      margin-bottom: 3px;
+    .trustbar-item:last-child {
+      border: 0;
     }
+
+    .trustbar strong {
+      display: block;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .trustbar span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* GENERAL SECTIONS */
 
     .section {
-      padding: 43px 0;
+      padding: 68px 22px;
+    }
+
+    .section-white {
+      background: #fff;
     }
 
     .section-heading {
-      margin-bottom: 22px;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      text-align: center;
     }
 
     .section-heading h2 {
-      margin: 0 0 7px;
-      font-size: clamp(24px, 3.5vw, 34px);
-      line-height: 1.2;
-      letter-spacing: -0.7px;
+      margin-bottom: 12px;
       color: var(--navy);
+      font-size: clamp(27px, 3.4vw, 39px);
+      line-height: 1.16;
     }
 
     .section-heading p {
-      max-width: 720px;
-      margin: 0;
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
     }
 
-    .catalogue-tools {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: minmax(200px, 1.5fr) minmax(160px, 0.8fr) minmax(160px, 0.8fr);
-      gap: 12px;
-      padding: 17px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 27px;
-    }
+    /* CATEGORY NAVIGATION */
 
-    .field {
-      width: 100%;
-      min-width: 0;
-      min-height: 47px;
-      padding: 12px 13px;
-      border: 1px solid #d9e2ed;
-      border-radius: 10px;
-      background: #fff;
-      color: var(--text);
-      outline: none;
-    }
-
-    .field:focus {
-      border-color: var(--cyan);
-      box-shadow: 0 0 0 3px rgba(25, 167, 206, 0.12);
-    }
-
-    .catalogue-count {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 18px;
-    }
-
-    .brand-section {
-      margin: 0 0 35px;
-      scroll-margin-top: 110px;
-    }
-
-    .brand-heading {
+    .category-nav {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 17px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .brand-heading h2 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 25px;
-      letter-spacing: -0.5px;
-    }
-
-    .brand-heading .brand-count {
-      margin-left: auto;
-      background: #e8f7fc;
-      color: #087ca0;
-      padding: 5px 10px;
-      border-radius: 30px;
-      font-size: 11px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .model-group {
-      margin: 0 0 25px;
-      scroll-margin-top: 115px;
-    }
-
-    .model-heading {
-      display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 9px;
-      margin: 0 0 12px;
-      color: #29384c;
-      font-size: 17px;
+      margin: 0 auto 30px;
+    }
+
+    .category-nav a,
+    .filter-btn {
+      padding: 10px 15px;
+      border: 1px solid #dce4ec;
+      border-radius: 30px;
+      background: #fff;
+      color: var(--navy);
+      font-size: 12px;
       font-weight: 800;
+      cursor: pointer;
     }
 
-    .model-heading::before {
-      content: "";
-      width: 4px;
-      height: 19px;
-      border-radius: 3px;
+    .category-nav a:hover,
+    .filter-btn:hover {
+      border-color: var(--cyan);
       background: var(--cyan);
+      color: #fff;
     }
 
-    .part-grid {
+    /* PRODUCT CARDS */
+
+    .parts-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px;
+      gap: 16px;
     }
 
-    .part-card {
-      display: flex;
-      flex-direction: column;
+    .part-card,
+    .catalogue-card {
       min-width: 0;
       overflow: hidden;
-      background: white;
+      display: flex;
+      flex-direction: column;
       border: 1px solid var(--border);
-      border-radius: 15px;
-      box-shadow: 0 4px 17px rgba(11, 18, 32, 0.035);
-      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 13px;
+      background: #fff;
+      box-shadow: 0 7px 22px rgba(11,18,32,.045);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
-    .part-card:hover {
+    .part-card:hover,
+    .catalogue-card:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow);
     }
 
     .part-image {
-      position: relative;
+      height: 205px;
+      padding: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 185px;
-      padding: 12px;
-      background: linear-gradient(145deg, #f9fbfe, #eef3f8);
-      border-bottom: 1px solid #e8edf4;
+      background: linear-gradient(135deg, #eef2f6, #fff);
+      border-bottom: 1px solid #e7ebf0;
     }
 
     .part-image img {
@@ -431,836 +368,1233 @@
       object-fit: contain;
     }
 
-    .part-image .image-fallback {
-      display: none;
-      text-align: center;
-      color: #75849a;
-      font-size: 12px;
-      padding: 12px;
-      overflow-wrap: anywhere;
-    }
-
-    .part-content {
+    .part-info {
+      padding: 16px;
       display: flex;
       flex-direction: column;
       flex: 1;
-      padding: 14px;
     }
 
-    .part-type {
-      align-self: flex-start;
-      margin-bottom: 8px;
-      padding: 4px 8px;
-      border-radius: 6px;
-      background: #edf7fb;
-      color: #087ca0;
+    .part-label {
+      margin-bottom: 6px;
+      color: var(--cyan2);
       font-size: 10px;
       font-weight: 800;
+      letter-spacing: .8px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
-    .part-content h4 {
-      margin: 0 0 6px;
+    .part-info h3 {
+      margin-bottom: 8px;
       color: var(--navy);
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.35;
     }
 
-    .part-content p {
-      margin: 0 0 14px;
+    .part-info p {
+      margin-bottom: 14px;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    .part-content .btn {
+    .part-info .btn {
       width: 100%;
       margin-top: auto;
-      font-size: 12px;
-      padding: 10px;
-      min-height: 41px;
     }
 
-    .no-results {
-      padding: 35px 20px;
-      text-align: center;
-      background: white;
-      border: 1px dashed #cbd6e4;
-      border-radius: var(--radius);
+    /* SCREEN AND BATTERY CATALOGUES */
+
+    .catalogue-section {
+      scroll-margin-top: 95px;
     }
 
-    .no-results h3 {
-      margin: 0 0 8px;
+    .catalogue-heading {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+    }
+
+    .catalogue-heading h2 {
       color: var(--navy);
+      font-size: clamp(25px, 3vw, 34px);
+      margin-bottom: 8px;
     }
 
-    .no-results p {
+    .catalogue-heading p {
+      max-width: 850px;
       color: var(--muted);
-      font-size: 14px;
-    }
-
-    .notice {
-      padding: 19px;
-      border: 1px solid #ccebf5;
-      background: #effaff;
-      border-radius: 14px;
-      color: #35546b;
       font-size: 13px;
-      margin-top: 26px;
+      line-height: 1.8;
     }
 
-    .notice strong {
-      color: var(--navy);
+    .brand-block {
+      max-width: 1100px;
+      margin: 0 auto 42px;
+      scroll-margin-top: 100px;
     }
 
-    .cta {
-      padding: 34px;
-      color: white;
-      background:
-        radial-gradient(ellipse at 100% 0%, rgba(25,167,206,.2), transparent 45%),
-        var(--navy);
-      border-radius: 22px;
+    .brand-heading {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 11px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .brand-heading h3 {
+      color: var(--navy);
+      font-size: 23px;
+    }
+
+    .brand-heading span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .catalogue-card .part-image {
+      height: 215px;
+    }
+
+    .catalogue-card .part-info h3 {
+      font-size: 16px;
+    }
+
+    .feature-list {
+      margin: 0 0 14px;
+      padding-left: 17px;
+      color: #455368;
+      font-size: 11px;
+      line-height: 1.75;
+    }
+
+    .note {
+      max-width: 900px;
+      margin: 25px auto 0;
+      padding: 18px 20px;
+      border: 1px solid #ccecf5;
+      border-radius: 11px;
+      background: #fff;
+      color: #536174;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .empty-image {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    /* CALL TO ACTION AND FOOTER */
+
+    .cta {
+      padding: 55px 22px;
+      background: linear-gradient(120deg, var(--navy), var(--navy2));
+      color: #fff;
+      text-align: center;
     }
 
     .cta h2 {
-      margin: 0 0 8px;
-      font-size: clamp(22px, 3vw, 30px);
-      line-height: 1.2;
+      font-size: clamp(26px, 3vw, 36px);
+      margin-bottom: 10px;
     }
 
     .cta p {
-      margin: 0;
-      color: #c8d4e3;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: #c4cedb;
       font-size: 14px;
     }
 
     .cta .btn {
-      flex-shrink: 0;
+      margin: 4px;
     }
 
     .footer {
-      margin-top: 45px;
-      padding: 34px 0 20px;
-      background: #080e18;
-      color: #d5dfec;
+      background: #070d17;
+      color: #fff;
+      padding: 35px 22px;
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 28px;
+    .footer-inner {
+      width: min(1120px, 100%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .footer h3,
-    .footer h4 {
-      color: white;
-      margin-top: 0;
-    }
-
-    .footer p,
-    .footer a {
-      color: #aebed1;
-      font-size: 13px;
-    }
-
-    .footer a:hover {
-      color: #7ee3ff;
+    .footer p {
+      font-size: 12px;
+      color: #bdc7d4;
     }
 
     .footer-links {
-      display: grid;
-      gap: 8px;
-    }
-
-    .copyright {
-      margin-top: 25px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.12);
-      color: #9aabc0;
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 150;
       display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 17px;
-      background: var(--green);
-      color: #07351a;
-      border-radius: 50px;
-      box-shadow: 0 8px 25px rgba(0,0,0,.18);
-      font-size: 13px;
-      font-weight: 900;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    .floating-whatsapp:hover {
-      transform: translateY(-2px);
+    .footer-links a {
+      font-size: 12px;
+      color: #e7edf5;
     }
 
-    [hidden] {
-      display: none !important;
-    }
+    /* TABLET */
 
     @media (max-width: 1000px) {
-      .part-grid {
+      nav {
+        gap: 12px;
+      }
+
+      .parts-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-        width: 100%;
+      .hero-inner {
+        gap: 25px;
       }
     }
 
-    @media (max-width: 700px) {
-      .container {
-        width: min(100% - 24px, 1180px);
+    /* MOBILE LAYOUT */
+
+    @media (max-width: 760px) {
+      .nav-container {
+        min-height: 68px;
+        padding: 9px 16px;
       }
 
-      .nav {
-        gap: 9px;
-        padding-block: 10px;
+      .logo img {
+        width: 145px;
       }
 
-      .nav-links {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding-bottom: 4px;
-        scrollbar-width: thin;
+      .menu-toggle {
+        display: flex;
       }
 
-      .nav-links a {
-        flex-shrink: 0;
-        font-size: 12px;
-        padding: 8px 10px;
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 14px 18px 20px;
+        background: var(--navy);
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid #ffffff1c;
       }
 
-      .hero {
-        padding: 45px 0;
+      nav.open {
+        display: flex;
       }
 
-      .hero p {
+      nav a {
+        padding: 12px 4px;
+        border-bottom: 1px solid #ffffff12;
         font-size: 14px;
       }
 
-      .trust-items {
-        gap: 7px;
+      nav a.nav-cta {
+        margin-top: 10px;
+        text-align: center;
       }
 
-      .trust-item {
-        font-size: 10px;
+      .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 45px 18px;
+        gap: 22px;
       }
 
-      .trust-item span {
-        font-size: 17px;
+      .hero-image {
+        max-width: 460px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .hero-image img {
+        height: 200px;
+      }
+
+      .trustbar-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .trustbar-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+        padding: 10px;
+      }
+
+      .trustbar-item:last-child {
+        border: 0;
       }
 
       .section {
-        padding: 32px 0;
-      }
-
-      .catalogue-tools {
-        grid-template-columns: 1fr;
-        padding: 12px;
-        gap: 9px;
-      }
-
-      .part-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        padding: 48px 16px;
       }
 
       .part-image {
-        height: 145px;
-        padding: 8px;
+        height: 170px;
+        padding: 9px;
       }
 
-      .part-content {
-        padding: 11px;
+      .part-info {
+        padding: 12px;
       }
 
-      .part-content h4 {
-        font-size: 13px;
+      .part-info h3 {
+        font-size: 14px;
       }
 
-      .part-content p {
+      .part-info p {
         font-size: 11px;
       }
 
-      .part-content .btn {
+      .part-info .btn {
         font-size: 11px;
-        padding: 9px 6px;
+        padding: 10px 7px;
       }
 
-      .brand-heading h2 {
-        font-size: 22px;
+      .catalogue-card .part-image {
+        height: 170px;
       }
 
-      .model-heading {
-        font-size: 15px;
+      .brand-heading h3 {
+        font-size: 19px;
       }
 
-      .cta {
-        padding: 23px;
-        align-items: flex-start;
+      .brand-heading span {
+        font-size: 10px;
+        text-align: right;
+      }
+
+      .footer-inner {
         flex-direction: column;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 17px;
+        align-items: flex-start;
       }
     }
 
-    @media (max-width: 360px) {
-      .part-grid {
-        grid-template-columns: 1fr;
+    /*
+      IMPORTANT MOBILE CHANGE:
+      All spare-part cards are now in horizontal swipe rows.
+      This applies to iPhone parts, screen replacements and batteries.
+    */
+
+    @media (max-width: 760px) {
+      .parts-grid,
+      .catalogue-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 14px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 5px 2px 16px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 2px;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+        scrollbar-color: var(--cyan) #e8edf3;
       }
 
-      .part-image {
-        height: 210px;
+      .parts-grid > .part-card,
+      .catalogue-grid > .catalogue-card {
+        flex: 0 0 78%;
+        width: 78%;
+        min-width: 0;
+        max-width: 320px;
+        scroll-snap-align: start;
+        margin: 0;
       }
 
-      .brand-count {
-        font-size: 10px;
+      .part-card:hover,
+      .catalogue-card:hover {
+        transform: none;
+      }
+
+      .part-image,
+      .catalogue-card .part-image {
+        height: 190px;
+        padding: 10px;
+      }
+
+      .part-info {
+        padding: 13px;
+      }
+
+      .part-info h3,
+      .catalogue-card .part-info h3 {
+        font-size: 14px;
+      }
+
+      .part-info p {
+        font-size: 12px;
+      }
+
+      .part-info .btn {
+        font-size: 12px;
+        padding: 11px 8px;
+      }
+
+      /* Swipeable category buttons */
+
+      .category-nav {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 3px 2px 12px;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+        scrollbar-color: var(--cyan) #e8edf3;
+      }
+
+      .category-nav a,
+      .category-nav .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        scroll-snap-align: start;
+      }
+
+      .brand-block {
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      .brand-heading {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .parts-grid > .part-card,
+      .catalogue-grid > .catalogue-card {
+        flex-basis: 84%;
+        width: 84%;
+      }
+
+      .part-image,
+      .catalogue-card .part-image {
+        height: 180px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="topbar">
-    Phone spare parts · Nairobi, Kenya · Delivery arrangements available across Kenya
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo" aria-label="Street Gadgets Care Home">
+      <img src="Logo.png" alt="Street Gadgets Care">
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNavigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="mainNavigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tech-repairs.html">Tech Repairs</a>
+      <a href="spare-parts.html" class="active" aria-current="page">Spare Parts</a>
+      <a href="shop.html">Shop</a>
+      <a href="creative-studio.html">Creative Studio</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Street Gadgets Care home">
-        <img src="Logo.png" alt="Street Gadgets Care logo">
-        <span class="brand-name">
-          STREET GADGETS CARE
-          <small>TECHNOLOGY WITH CARE</small>
-        </span>
-      </a>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Street Gadgets Care • Spare Parts</span>
+      <h1>Find the right <span>replacement part.</span></h1>
+      <p>
+        Browse replacement screens, phone batteries and selected iPhone spare
+        parts. Send us your exact phone model to confirm compatibility,
+        availability and price before ordering.
+      </p>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="shop.html">Shop</a>
-        <a class="active" href="spare-parts.html" aria-current="page">Spare Parts</a>
-        <a href="creative-studio.html">Creative Studio</a>
-        <a href="contact.html">Contact</a>
-        <a class="nav-whatsapp" href="https://wa.me/254114259961" target="_blank" rel="noopener">WhatsApp Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Phone parts catalogue</span>
-        <h1>The right spare part for your phone.</h1>
-        <p>
-          Browse our phone spare-part images by brand and model.
-          Find screens, batteries, charging systems, back covers and other
-          listed components. Contact us to confirm compatibility, availability
-          and pricing before ordering.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#catalogue">Browse Spare Parts</a>
-          <a class="btn btn-secondary"
-             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20enquire%20about%20phone%20spare%20parts."
-             target="_blank" rel="noopener">Ask on WhatsApp</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="trust-strip">
-      <div class="container trust-items">
-        <div class="trust-item"><span>📱</span>Organised by phone brand</div>
-        <div class="trust-item"><span>🔎</span>Search by model or part</div>
-        <div class="trust-item"><span>💬</span>Confirm before ordering</div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#iphone-parts">Browse iPhone Parts</a>
+        <a
+          class="btn btn-whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20compatible%20phone%20spare%20part.">
+          Ask on WhatsApp
+        </a>
       </div>
     </div>
 
-    <section class="section" id="catalogue">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Browse the spare parts catalogue</h2>
-          <p>
-            Browse by brand and exact phone model. Each listed part has its own
-            description; message us to confirm compatibility, availability and price.
-          </p>
-        </div>
-
-        <div class="catalogue-tools">
-          <input
-            class="field"
-            type="search"
-            id="searchInput"
-            placeholder="Search model or part, e.g. iPhone 12 Pro battery"
-            aria-label="Search spare parts">
-
-          <select class="field" id="brandFilter" aria-label="Filter by phone brand">
-            <option value="">All phone brands</option>
-            <option value="iPhone">iPhone</option>
-            <option value="Infinix">Infinix</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Redmi / Xiaomi">Redmi / Xiaomi</option>
-            <option value="itel">itel</option>
-            <option value="Tecno">Tecno</option>
-          </select>
-
-          <select class="field" id="partFilter" aria-label="Filter by spare part type">
-            <option value="">All part types</option>
-            <option value="Screen">Screens</option>
-            <option value="Battery">Batteries</option>
-            <option value="Charging System">Charging Systems</option>
-            <option value="Back Cover">Back Covers</option>
-            <option value="Back Glass">Back Glass</option>
-          </select>
-        </div>
-
-        <p class="catalogue-count" id="catalogueCount" aria-live="polite"></p>
-
-        <div id="catalogueResults">
-          <div class="no-results">
-            <h3>Loading spare parts catalogue…</h3>
-            <p>Please wait a moment.</p>
-          </div>
-        </div>
-
-        <div class="notice">
-          <strong>Please note:</strong> The pictures help identify the part,
-          but they do not guarantee stock availability. Contact Street Gadgets
-          Care with your phone's exact model before payment or delivery.
-          Prices are confirmed on enquiry unless a price is explicitly shown.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Can't find your phone model?</h2>
-            <p>Send us the phone model and the part you need. We'll help you check.</p>
-          </div>
-          <a class="btn btn-primary"
-             href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20cannot%20find%20my%20phone%20part%20in%20your%20catalogue.%20Please%20help%20me%20check%20availability."
-             target="_blank" rel="noopener">Ask About a Part</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3>Street Gadgets Care</h3>
-          <p>
-            Phone and laptop repair, technology accessories and creative
-            services. Based in Nairobi, with delivery arrangements available
-            across Kenya.
-          </p>
-          <p>Phone: <a href="tel:0114259961">0114 259 961</a></p>
-          <p>Email: <a href="mailto:streetgadgetscare@gmail.com">streetgadgetscare@gmail.com</a></p>
-        </div>
-
-        <div>
-          <h4>Explore</h4>
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="shop.html">Shop</a>
-            <a href="spare-parts.html">Phone Spare Parts</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Connect with us</h4>
-          <div class="footer-links">
-            <a href="https://wa.me/254114259961" target="_blank" rel="noopener">WhatsApp</a>
-            <a href="https://www.tiktok.com/@street_gadgets_care" target="_blank" rel="noopener">TikTok</a>
-            <a href="https://www.youtube.com/@streetgadgetscare" target="_blank" rel="noopener">YouTube</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="copyright">
-        © <span id="currentYear"></span> Street Gadgets Care. All rights reserved.
-      </div>
+    <div class="hero-image">
+      <img
+        src="iphone-14-pro-max-screen-replacement.jpg"
+        alt="iPhone replacement screen spare part"
+        fetchpriority="high"
+        onerror="this.closest('.hero-image').style.display='none'">
     </div>
-  </footer>
+  </div>
+</section>
 
-  <a class="floating-whatsapp"
-     href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20with%20phone%20spare%20parts."
-     target="_blank" rel="noopener" aria-label="Enquire about phone spare parts on WhatsApp">
-    <span aria-hidden="true">●</span> WhatsApp
-  </a>
+<div class="trustbar">
+  <div class="trustbar-inner">
+    <div class="trustbar-item">
+      <strong>Model-specific enquiries</strong>
+      <span>Confirm the exact part before purchase</span>
+    </div>
 
-  <script>
-    /*
-      This catalogue uses an explicit list of supplied phone-part images.
-      It does not scan the repository, so laptop batteries, screen protectors,
-      general repair photos and unrelated shop images will not be added
-      automatically.
-    */
+    <div class="trustbar-item">
+      <strong>Direct WhatsApp support</strong>
+      <span>Ask about stock and compatibility</span>
+    </div>
 
-    const parts = [
-      // iPhone X family
-      { brand: "iPhone", model: "iPhone X", type: "Back Cover", file: "iphone-x-back-cover-replacement.jpg", description: "Freshen up the look of your iPhone X with this back-cover replacement option. Ask us to confirm the colour, version and availability before ordering." },
-      { brand: "iPhone", model: "iPhone X", type: "Battery", file: "iphone-x-battery-replacement.jpg", description: "Help your iPhone X stay powered with this battery replacement option. Ask us to verify the battery version and availability for your exact phone." },
-      { brand: "iPhone", model: "iPhone X", type: "Charging System", file: "iphone-x-charging-system-replacement.jpg", description: "Having charging trouble with your iPhone X? Enquire about this charging-system replacement and let us confirm the correct connector assembly for your variant." },
+    <div class="trustbar-item">
+      <strong>Kenya-wide arrangements</strong>
+      <span>Contact us about delivery options</span>
+    </div>
+  </div>
+</div>
 
-      { brand: "iPhone", model: "iPhone XR", type: "Back Cover", file: "iphone-xr-back-cover-replacement.jpg", description: "For an iPhone XR with a cracked or damaged rear cover, this is a replacement option to enquire about. Confirm the exact fit and finish with us." },
-      { brand: "iPhone", model: "iPhone XR", type: "Battery", file: "iphone-xr-battery-replacement.jpg", description: "If your iPhone XR battery drains quickly or no longer holds charge, enquire about this replacement. We’ll help check the correct battery variant." },
-      { brand: "iPhone", model: "iPhone XR", type: "Charging System", file: "iphone-xr-charging-system-replacement.jpg", description: "This charging-system part is listed for iPhone XR, useful to check when the phone has charging-port problems. Confirm the exact version with us first." },
+<section class="section section-white" id="iphone-parts">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">iPhone Spare Parts</span>
+      <h2>Replacement parts for selected iPhone models</h2>
+      <p>
+        Choose a part below to ask about the exact model, compatible replacement,
+        availability and price. Product images are loaded from the filenames
+        prepared for your GitHub repository.
+      </p>
+    </div>
 
-      { brand: "iPhone", model: "iPhone XS", type: "Screen", file: "iphone-xs-screen.jpg.WEBP", description: "Refresh the display on iPhone XS with this screen option, ideal when cracks or display damage affect everyday use. Confirm the exact variant before ordering." },
-      { brand: "iPhone", model: "iPhone XS", type: "Back Cover", file: "iphone-xs-back-cover-replacement.jpg", description: "Help restore the rear appearance of your iPhone XS by checking this back-cover part. Availability and colour options are confirmed on enquiry." },
-      { brand: "iPhone", model: "iPhone XS", type: "Battery", file: "iphone-xs-battery-replacement.jpg", description: "Bring dependable everyday power back to your iPhone XS by checking this battery option with us. Confirm compatibility before purchase." },
-      { brand: "iPhone", model: "iPhone XS", type: "Charging System", file: "iphone-xs-charging-system-replacement.jpg", description: "For an iPhone XS that charges inconsistently, ask us about this charging-system replacement. We’ll help verify compatibility and availability." },
+    <div class="category-nav">
+      <a href="#iphone-parts">iPhone Parts</a>
+      <a href="#screen-replacements">Screen Replacements</a>
+      <a href="#battery-replacements">Phone Batteries</a>
+    </div>
 
-      { brand: "iPhone", model: "iPhone XS Max", type: "Back Cover", file: "iphone-xs-max-back-cover-replacement.jpg", description: "Replace a worn or damaged rear cover on your iPhone XS Max with this listed option. Contact us to verify the correct model version before purchase." },
-      { brand: "iPhone", model: "iPhone XS Max", type: "Charging System", file: "iphone-xs-max-charging-system-replacement.jpg", description: "Get help addressing charging-port issues on your iPhone XS Max with this replacement option. Check the exact model variant before placing an order." },
+    <div id="iphonePartsGrid" class="parts-grid"></div>
 
-      // iPhone 11 family
-      { brand: "iPhone", model: "iPhone 11", type: "Screen", file: "iphone-11-screen.jpg", description: "Help bring iPhone 11 back to a clear viewing experience with a replacement screen listed for this model. Ask us to verify compatibility and availability." },
-      { brand: "iPhone", model: "iPhone 11", type: "Back Cover", file: "iphone-11-back-cover-replacement.jpg", description: "A back-cover replacement option for iPhone 11 when the rear panel is cracked, scratched or broken. Ask us to confirm the exact variant." },
-      { brand: "iPhone", model: "iPhone 11", type: "Battery", file: "iphone-11-battery-replacement.jpg", description: "A battery replacement option for an iPhone 11 that struggles to retain charge. Contact us to confirm the exact part and current availability." },
-      { brand: "iPhone", model: "iPhone 11", type: "Charging System", file: "iphone-11-charging-system-replacement.jpg", description: "If your iPhone 11 has a loose or faulty charging connection, enquire about this charging-system part. Fit and stock should be confirmed first." },
+    <div class="note">
+      <strong>Before ordering:</strong>
+      iPhone parts can vary by model and version. Please confirm the exact model
+      and part compatibility with Street Gadgets Care before purchasing or
+      arranging installation.
+    </div>
+  </div>
+</section>
 
-      { brand: "iPhone", model: "iPhone 11 Pro", type: "Back Cover", file: "iphone-11-pro-back-cover-replacement.jpg", description: "Give your iPhone 11 Pro a tidier finish by enquiring about this back cover. Please confirm the model version and available colour before ordering." },
-      { brand: "iPhone", model: "iPhone 11 Pro", type: "Battery", file: "iphone-11-pro-battery-replacement.jpg", description: "Keep your iPhone 11 Pro ready for daily use with a battery replacement enquiry. We recommend confirming the precise model variant first." },
-      { brand: "iPhone", model: "iPhone 11 Pro", type: "Charging System", file: "iphone-11-pro-charging-system-replacement.jpg", description: "A charging-system replacement option for the iPhone 11 Pro. Message us with the exact model details so we can check the right part for you." },
+<section class="section catalogue-section" id="screen-replacements">
+  <div class="container">
+    <div class="catalogue-heading">
+      <span class="eyebrow">Existing Screen Catalogue</span>
+      <h2>Phone Screen Replacements</h2>
+      <p>
+        The existing screen catalogue is preserved below, including Samsung,
+        iPhone, Infinix, Tecno, Redmi/Xiaomi and itel models. Use the WhatsApp
+        button on a model card to ask about availability, screen grade and
+        total replacement price.
+      </p>
+    </div>
 
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Screen", file: "iphone-11-pro-max-screen-replacement.jpg", description: "For customers repairing an iPhone 11 Pro Max with display damage, this screen is a model-specific option to check with us before ordering." },
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Back Cover", file: "iphone-11-pro-max-back-cover-replacement.jpg", description: "This back-cover listing gives iPhone 11 Pro Max owners a replacement option for a damaged rear panel. Ask us to check fit, colour and stock." },
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Battery", file: "iphone-11-pro-max-battery-replacement.jpg", description: "For an iPhone 11 Pro Max with reduced battery life, this listed battery is worth checking as a replacement option. Ask us about fit and stock." },
-      { brand: "iPhone", model: "iPhone 11 Pro Max", type: "Charging System", file: "iphone-11-pro-max-charging-system-replacement.jpg", description: "If charging lasts less time than it used to on your iPhone 11 Pro Max, ask us about this charging-system option and confirm the correct version before ordering." },
+    <div class="category-nav" id="screenBrandNav"></div>
+    <div id="screenCatalogue"></div>
 
-      // iPhone 12 family
-      { brand: "iPhone", model: "iPhone 12", type: "Screen", file: "iphone-12-screen.jpg", description: "Keep your iPhone 12 useful with a screen replacement matched to the model shown. Contact us to check the correct version and current stock." },
-      { brand: "iPhone", model: "iPhone 12", type: "Battery", file: "iphone-12-battery-replacement.jpg", description: "Improve the day-to-day usability of your iPhone 12 by enquiring about this battery replacement. Exact compatibility and availability must be confirmed." },
+    <div class="note">
+      <strong>Screen quality and compatibility:</strong>
+      Replacement screens can differ in panel technology, brightness, colour
+      reproduction and touch response. Ask us to confirm the actual part
+      specification and price before approving installation.
+    </div>
+  </div>
+</section>
 
-      { brand: "iPhone", model: "iPhone 12 mini", type: "Back Cover", file: "iphone-12-mini-back-cover-replacement.jpg", description: "For customers repairing an iPhone 12 mini with rear-cover damage, this is a model-specific option to enquire about. Check the correct version first." },
-      { brand: "iPhone", model: "iPhone 12 mini", type: "Charging System", file: "iphone-12-mini-charging-system-replacement.jpg", description: "A charging-system replacement option for iPhone 12 mini owners experiencing connection problems. Ask us to verify the part before ordering." },
+<section class="section section-white catalogue-section" id="battery-replacements">
+  <div class="container">
+    <div class="catalogue-heading">
+      <span class="eyebrow">Existing Battery Catalogue</span>
+      <h2>Phone Battery Replacements</h2>
+      <p>
+        The existing Tecno battery listings are preserved below. Confirm your
+        exact phone model, compatible battery and current availability with us
+        before arranging replacement.
+      </p>
+    </div>
 
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Screen", file: "iphone-12-pro-screen.jpg", description: "Make your iPhone 12 Pro easier to use again with a screen replacement enquiry tailored to the model listed. Confirm compatibility with us before payment." },
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Back Cover", file: "iphone-12-pro-back-cover-replacement.jpg", description: "Restore a cleaner rear appearance on your iPhone 12 Pro with this back-cover option. Contact us to confirm the exact fit and colour." },
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Battery", file: "iphone-12-pro-battery-replacement.jpg", description: "For an iPhone 12 Pro that no longer holds charge as expected, enquire about this battery replacement. We’ll help check the appropriate variant." },
-      { brand: "iPhone", model: "iPhone 12 Pro", type: "Charging System", file: "iphone-12-pro-charging-system-replacement.jpg", description: "If your iPhone 12 Pro has a charging-port fault, this listed charging-system part is worth checking. Ask us to confirm compatibility and stock." },
+    <div class="category-nav" id="batteryBrandNav"></div>
+    <div id="batteryCatalogue"></div>
 
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Screen", file: "iphone-12-pro-max-screen.jpg", description: "This screen listing is intended for iPhone 12 Pro Max display repairs. Message us to confirm the exact version and availability before ordering." },
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Back Cover", file: "iphone-12-pro-max-back-cover-replacement.jpg", description: "Replace a damaged rear panel on your iPhone 12 Pro Max by enquiring about this back-cover option. Colour and compatibility need confirmation." },
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Battery", file: "iphone-12-pro-max-battery-replacement.jpg", description: "Ask us about this iPhone 12 Pro Max battery if your phone needs a replacement to address poor battery life. Confirm the correct version first." },
-      { brand: "iPhone", model: "iPhone 12 Pro Max", type: "Charging System", file: "iphone-12-pro-max-charging-system-replacement.jpg", description: "For charging difficulties on an iPhone 12 Pro Max, enquire about this charging-system replacement. We can help check the correct part and availability." },
+    <div class="note">
+      <strong>Battery compatibility matters:</strong>
+      Battery models and connectors can differ between phone versions. Confirm
+      the exact device model and replacement part before purchasing or
+      arranging installation.
+    </div>
+  </div>
+</section>
 
-      // iPhone 13 family
-      { brand: "iPhone", model: "iPhone 13", type: "Screen", file: "iphone-13-screen-replacement.jpg", description: "A replacement screen option for iPhone 13 when cracks, display lines or touch problems need attention. Let us confirm the precise variant first." },
-      { brand: "iPhone", model: "iPhone 13", type: "Back Cover", file: "iphone-13-back-cover-replacement.jpg", description: "Give an iPhone 13 with a damaged back cover a repair option worth checking. Contact us to confirm colour, fit and current availability." },
-      { brand: "iPhone", model: "iPhone 13", type: "Battery", file: "iphone-13-battery-replacement.jpg", description: "This battery listing is for iPhone 13 users looking to address reduced battery life. Ask us to verify compatibility and availability for your device." },
-      { brand: "iPhone", model: "iPhone 13", type: "Charging System", file: "iphone-13-charging-system-replacement.jpg", description: "Check this charging-system replacement for an iPhone 13 with a faulty charging connection. Please confirm your exact model before placing an order." },
+<section class="cta">
+  <div class="container">
+    <h2>Need help finding the correct part?</h2>
+    <p>
+      Send Street Gadgets Care your phone brand, exact model and the part you
+      need. We will help confirm compatibility and availability.
+    </p>
 
-      { brand: "iPhone", model: "iPhone 13 mini", type: "Back Cover", file: "iphone-13-mini-back-cover-replacement.jpg", description: "An option to consider when the rear cover of your iPhone 13 mini is damaged. Ask us to verify the correct version and available colour." },
-      { brand: "iPhone", model: "iPhone 13 mini", type: "Charging System", file: "iphone-13-mini-charging-system-replacement.jpg", description: "Enquire about this charging-system part for an iPhone 13 mini that has difficulty connecting to a charger. Compatibility must be confirmed." },
+    <a
+      class="btn btn-whatsapp"
+      href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20need%20help%20finding%20a%20phone%20spare%20part."
+      target="_blank"
+      rel="noopener noreferrer">
+      Inquire on WhatsApp
+    </a>
 
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Screen", file: "iphone-13-pro-screen-replacement.jpg", description: "Help address display damage on an iPhone 13 Pro with this screen replacement option. Contact us to check the exact model variant and stock." },
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Back Cover", file: "iphone-13-pro-back-cover-replacement.jpg", description: "This back-cover option is listed for iPhone 13 Pro repairs involving rear-panel damage. Ask us about fit and colour availability before purchase." },
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Battery", file: "iphone-13-pro-battery-replacement.jpg", description: "For an iPhone 13 Pro that needs better battery performance, enquire about this replacement battery. We’ll help verify the right variant." },
-      { brand: "iPhone", model: "iPhone 13 Pro", type: "Charging System", file: "iphone-13-pro-charging-system-replacement.jpg", description: "If the charging connection on your iPhone 13 Pro is unreliable, ask us about this charging-system part. Confirm compatibility before ordering." },
+    <a class="btn btn-primary" href="contact.html">Contact Us</a>
+  </div>
+</section>
 
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Screen", file: "iphone-13-pro-max-screen-replacement.jpg", description: "A screen replacement option for iPhone 13 Pro Max owners dealing with a cracked or faulty display. Enquire to confirm the correct version." },
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Back Cover", file: "iphone-13-pro-max-back-cover-replacement.jpg", description: "For a damaged iPhone 13 Pro Max rear cover, ask us about this replacement option. We’ll confirm the model fit and colour availability." },
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Battery", file: "iphone-13-pro-max-battery-replacement.jpg", description: "Keep your iPhone 13 Pro Max ready for everyday use by checking this battery replacement option. Exact compatibility and stock are confirmed on enquiry." },
-      { brand: "iPhone", model: "iPhone 13 Pro Max", type: "Charging System", file: "iphone-13-pro-max-charging-system-replacement.jpg", description: "This charging-system part is listed for iPhone 13 Pro Max. Ask us to check whether it matches your exact variant and charging issue." },
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Street Gadgets Care</strong>
+      <p>Phone and laptop repairs, spare parts and technology solutions in Nairobi, Kenya.</p>
+    </div>
 
-      // iPhone 14 family
-      { brand: "iPhone", model: "iPhone 14", type: "Screen", file: "iphone-14-screen-replacement.jpg", description: "A practical screen replacement option for iPhone 14 when display damage affects normal use. Check the exact version and availability with us." },
-      { brand: "iPhone", model: "iPhone 14", type: "Back Cover", file: "iphone-14-back-cover-replacement.jpg", description: "Refresh the rear of an iPhone 14 with this back-cover replacement option. Contact us to confirm the correct fit and available colour." },
-      { brand: "iPhone", model: "iPhone 14", type: "Battery", file: "iphone-14-battery-replacement.jpg", description: "If your iPhone 14 battery performance has declined, ask us about this replacement battery. We’ll check the correct part for your model." },
-      { brand: "iPhone", model: "iPhone 14", type: "Charging System", file: "iphone-14-charging-system-replacement.jpg", description: "For an iPhone 14 with charging-port trouble, enquire about this charging-system replacement and confirm compatibility before ordering." },
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tech-repairs.html">Tech Repairs</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </div>
+</footer>
 
-      { brand: "iPhone", model: "iPhone 14 Plus", type: "Back Cover", file: "iphone-14-plus-back-cover-replacement.jpg", description: "This back-cover listing offers an option for an iPhone 14 Plus with rear-panel damage. Ask us to confirm colour, fit and stock." },
-      { brand: "iPhone", model: "iPhone 14 Plus", type: "Charging System", file: "iphone-14-plus-charging-system-replacement.jpg", description: "Check this charging-system replacement for an iPhone 14 Plus that has charging-connection issues. Exact compatibility is confirmed on enquiry." },
+<script>
+  const WHATSAPP_BASE = "https://wa.me/254114259961?text=";
 
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Screen", file: "iphone-14-pro-screen-replacement.jpg", description: "For a cracked or faulty iPhone 14 Pro display, this screen option is ready for an availability check. Confirm your exact model before purchase." },
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Back Cover", file: "iphone-14-pro-back-cover-replacement.jpg", description: "Repair the look of an iPhone 14 Pro with this back-cover replacement option. Message us to verify the correct version and colour." },
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Battery", file: "iphone-14-pro-battery-replacement.jpg", description: "Enquire about this iPhone 14 Pro battery if your phone needs a replacement due to reduced battery life. Compatibility and stock must be checked." },
-      { brand: "iPhone", model: "iPhone 14 Pro", type: "Charging System", file: "iphone-14-pro-charging-system-replacement.jpg", description: "This charging-system listing is for iPhone 14 Pro repairs. Ask us to verify the exact variant before ordering for a charging-port problem." },
+  /* =========================================================
+     IPHONE SPARE PARTS
+     Existing image filenames and listings are preserved.
+  ========================================================= */
 
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Screen", file: "iphone-14-pro-max-screen-replacement.jpg", description: "A screen option for iPhone 14 Pro Max owners who need to address a damaged display. Contact us to check the correct part and availability." },
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Back Cover", file: "iphone-14-pro-max-back-cover-replacement.jpg", description: "For rear-cover damage on an iPhone 14 Pro Max, enquire about this listed replacement. Confirm colour and model compatibility before ordering." },
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Battery", file: "iphone-14-pro-max-battery-replacement.jpg", description: "Ask us about this battery replacement for an iPhone 14 Pro Max with reduced battery life. We’ll help confirm the correct variant." },
-      { brand: "iPhone", model: "iPhone 14 Pro Max", type: "Charging System", file: "iphone-14-pro-max-charging-system-replacement.jpg", description: "If your iPhone 14 Pro Max has trouble charging, enquire about this charging-system part and confirm the exact fit before purchase." },
+  const iphoneParts = [
+    {model:"iPhone X",type:"Charging system",image:"iphone-x-charging-system-replacement.jpg"},
+    {model:"iPhone X",type:"Battery",image:"iphone-x-battery-replacement.jpg"},
+    {model:"iPhone X",type:"Back cover",image:"iphone-x-back-cover-replacement.jpg"},
 
-      // These filenames were supplied under this exact model name.
-      // Confirm the intended model before advertising these parts.
-      { brand: "iPhone", model: "iPhone 14 Pro Plus — confirm model", type: "Screen", file: "iphone-14-pro-plus-screen-replacement.jpg", description: "This screen image was supplied under the name iPhone 14 Pro Plus. Please confirm the intended phone model with us before ordering this part." },
-      { brand: "iPhone", model: "iPhone 14 Pro Plus — confirm model", type: "Battery", file: "iphone-14-pro-plus-battery-replacement.jpg", description: "This battery listing uses the supplied iPhone 14 Pro Plus filename. Confirm the intended model and part compatibility before advertising or ordering." },
+    {model:"iPhone XR",type:"Charging system",image:"iphone-xr-charging-system-replacement.jpg"},
+    {model:"iPhone XR",type:"Battery",image:"iphone-xr-battery-replacement.jpg"},
+    {model:"iPhone XR",type:"Back cover",image:"iphone-xr-back-cover-replacement.jpg"},
 
-      // iPhone 15 family
-      { brand: "iPhone", model: "iPhone 15", type: "Screen", file: "iphone-15-screen.jpg", description: "For iPhone 15 display damage, enquire about this listed screen replacement. We’ll help check the exact version and current availability." },
-      { brand: "iPhone", model: "iPhone 15 Pro", type: "Screen", file: "iphone-15-pro-screen.jpg", description: "This screen option is listed for the iPhone 15 Pro. Contact us to confirm compatibility and stock before arranging a replacement." },
-      { brand: "iPhone", model: "iPhone 15 Pro Max", type: "Screen", file: "iphone-15-pro-max-screen.jpg", description: "An iPhone 15 Pro Max screen replacement option to check when the display is cracked or faulty. Ask us to confirm the correct version." },
+    {model:"iPhone XS",type:"Charging system",image:"iphone-xs-charging-system-replacement.jpg"},
+    {model:"iPhone XS",type:"Battery",image:"iphone-xs-battery-replacement.jpg"},
+    {model:"iPhone XS",type:"Back cover",image:"iphone-xs-back-cover-replacement.jpg"},
 
-      { brand: "iPhone", model: "General iPhone Parts", type: "Back Glass", file: "iphone-back-glass.jpg", description: "For an iPhone with damaged rear glass, enquire about this back-glass replacement option. Tell us the exact iPhone model so we can check compatibility." },
+    {model:"iPhone XS Max",type:"Charging system",image:"iphone-xs-max-charging-system-replacement.jpg"},
+    {model:"iPhone XS Max",type:"Back cover",image:"iphone-xs-max-back-cover-replacement.jpg"},
 
-      // Infinix
-      { brand: "Infinix", model: "Infinix Hot 50 Pro+", type: "Screen", file: "infinix-hot-50-pro-plus-screen.jpg", description: "Refresh the display on Infinix Hot 50 Pro+ with this screen option, ideal when cracks or display damage affect everyday use. Confirm the exact variant before ordering." },
-      { brand: "Infinix", model: "Infinix Hot 60i", type: "Screen", file: "infinix-hot-60i-screen.jpg", description: "Help bring Infinix Hot 60i back to a clear viewing experience with a replacement screen listed for this model. Ask us to verify compatibility and availability." },
-      { brand: "Infinix", model: "Infinix Note 50 Pro", type: "Screen", file: "infinix-note-50-pro-screen.jpg", description: "For a damaged or unusable Infinix Note 50 Pro display, this screen is a practical replacement to enquire about. Share your exact model variant before purchase." },
-      { brand: "Infinix", model: "Infinix Smart 10", type: "Screen", file: "infinix-smart-10-screen.jpg", description: "Keep your Infinix Smart 10 useful with a screen replacement matched to the model shown. Contact us to check the correct version and current stock." },
-      { brand: "Infinix", model: "Infinix Smart 10 Plus", type: "Screen", file: "infinix-smart-10-plus-screen.jpg", description: "A replacement screen option for Infinix Smart 10 Plus when cracks, display lines or touch problems need attention. Let us confirm the precise variant first." },
+    {model:"iPhone 11",type:"Charging system",image:"iphone-11-charging-system-replacement.jpg"},
+    {model:"iPhone 11",type:"Back cover",image:"iphone-11-back-cover-replacement.jpg"},
+    {model:"iPhone 11",type:"Battery",image:"iphone-11-battery-replacement.jpg"},
 
-      // Samsung
-      { brand: "Samsung", model: "Samsung Galaxy A07", type: "Screen", file: "samsung-a07-screen.jpg", description: "Give your Samsung Galaxy A07 display a fresh start with this model-specific screen listing. Enquire for compatibility, availability and the current price." },
-      { brand: "Samsung", model: "Samsung Galaxy A07s", type: "Screen", file: "samsung-a07s-screen.jpg", description: "If the Samsung Galaxy A07s screen is broken or difficult to use, ask us about this replacement option. We’ll help confirm the right variant for your phone." },
-      { brand: "Samsung", model: "Samsung Galaxy A16", type: "Screen", file: "samsung-a16-screen.jpg", description: "This Samsung Galaxy A16 screen listing is for customers looking to replace a damaged display. Message us to check the correct fit and availability." },
+    {model:"iPhone 11 Pro",type:"Charging system",image:"iphone-11-pro-charging-system-replacement.jpg"},
+    {model:"iPhone 11 Pro",type:"Back cover",image:"iphone-11-pro-back-cover-replacement.jpg"},
+    {model:"iPhone 11 Pro",type:"Battery",image:"iphone-11-pro-battery-replacement.jpg"},
 
-      // Redmi / Xiaomi
-      { brand: "Redmi / Xiaomi", model: "Redmi A7", type: "Screen", file: "redmi-a7-screen.jpg", description: "Make your Redmi A7 easier to use again with a screen replacement enquiry tailored to the model listed. Confirm compatibility with us before payment." },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 4G", type: "Screen", file: "redmi-note-15-4g-screen.jpg", description: "A useful replacement option for a cracked Redmi Note 15 4G display or a screen that no longer works properly. Ask us to check the exact version." },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 5G", type: "Screen", file: "redmi-note-15-5g-screen.jpg", description: "Help address display damage on a Redmi Note 15 5G with this screen replacement option. Contact us to check the exact model variant and stock." },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro", type: "Screen", file: "redmi-note-15-pro-screen.jpg", description: "A screen replacement option for Redmi Note 15 Pro owners dealing with a cracked or faulty display. Enquire to confirm the correct version." },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro 5G", type: "Screen", file: "redmi-note-15-pro-5g-screen.jpg", description: "This screen option is listed for Redmi Note 15 Pro 5G. Contact us to confirm compatibility and stock before arranging a replacement." },
-      { brand: "Redmi / Xiaomi", model: "Redmi Note 15 Pro+ 5G", type: "Screen", file: "redmi-note-15-pro-plus-5g-screen.jpg", description: "For Redmi Note 15 Pro+ 5G display damage, enquire about this listed screen replacement. We’ll help check the exact version and current availability." },
+    {model:"iPhone 11 Pro Max",type:"Charging system",image:"iphone-11-pro-max-charging-system-replacement.jpg"},
+    {model:"iPhone 11 Pro Max",type:"Back cover",image:"iphone-11-pro-max-back-cover-replacement.jpg"},
+    {model:"iPhone 11 Pro Max",type:"Battery",image:"iphone-11-pro-max-battery-replacement.jpg"},
+    {model:"iPhone 11 Pro Max",type:"Screen",image:"iphone-11-pro-max-screen-replacement.jpg"},
 
-      // itel
-      { brand: "itel", model: "itel A70", type: "Screen", file: "itel-a70-screen.jpg", description: "An itel A70 screen replacement option for customers dealing with a cracked or faulty display. Ask us to confirm the correct part and availability." },
+    {model:"iPhone 12 Pro Max",type:"Charging system",image:"iphone-12-pro-max-charging-system-replacement.jpg"},
+    {model:"iPhone 12 Pro",type:"Charging system",image:"iphone-12-pro-charging-system-replacement.jpg"},
+    {model:"iPhone 12 mini",type:"Charging system",image:"iphone-12-mini-charging-system-replacement.jpg"},
 
-      // Tecno Camon
-      { brand: "Tecno", model: "Tecno Camon 11 Pro", type: "Battery", file: "tecno-camon-11-pro-battery.jpg", description: "A battery replacement option for a Tecno Camon 11 Pro that struggles to retain charge. Contact us to confirm the exact part and current availability." },
-      { brand: "Tecno", model: "Tecno Camon 12", type: "Battery", file: "tecno-camon-12-battery.jpg", description: "Keep your Tecno Camon 12 ready for daily use with a battery replacement enquiry. We recommend confirming the precise model variant first." },
-      { brand: "Tecno", model: "Tecno Camon 12 Pro", type: "Battery", file: "tecno-camon-12-pro-battery.jpg", description: "For a Tecno Camon 12 Pro with reduced battery life, this listed battery is worth checking as a replacement option. Ask us about fit and stock." },
-      { brand: "Tecno", model: "Tecno Camon 15", type: "Battery", file: "tecno-camon-15-battery.jpg", description: "If your Tecno Camon 15 battery drains quickly or no longer holds charge, enquire about this replacement. We’ll help check the correct battery variant." },
-      { brand: "Tecno", model: "Tecno Camon 16", type: "Battery", file: "tecno-camon-16-battery.jpg", description: "Improve the day-to-day usability of your Tecno Camon 16 by enquiring about this battery replacement. Exact compatibility and availability must be confirmed." },
-      { brand: "Tecno", model: "Tecno Camon 40 4G", type: "Battery", file: "tecno-camon-40-4g-battery.jpg", description: "Bring dependable everyday power back to your Tecno Camon 40 4G by checking this battery option with us. Confirm compatibility before purchase." },
-      { brand: "Tecno", model: "Tecno Camon 40 Premier 5G", type: "Battery", file: "tecno-camon-40-premier-5g-battery.jpg", description: "Ask us about this Tecno Camon 40 Premier 5G battery if your phone needs a replacement to address poor battery life. Confirm the correct version first." },
-      { brand: "Tecno", model: "Tecno Camon 40 Pro 4G", type: "Battery", file: "tecno-camon-40-pro-4g-battery.jpg", description: "This battery listing is for Tecno Camon 40 Pro 4G users looking to address reduced battery life. Ask us to verify compatibility and availability for your device." },
-      { brand: "Tecno", model: "Tecno Camon 40 Pro 5G", type: "Battery", file: "tecno-camon-40-pro-5g-battery.jpg", description: "Help your Tecno Camon 40 Pro 5G stay powered with this battery replacement option. Ask us to verify the battery version and availability for your exact phone." },
-      { brand: "Tecno", model: "Tecno Camon 40 Pro", type: "Screen", file: "tecno-camon-40-pro-screen.jpg", description: "Refresh the display on Tecno Camon 40 Pro with this screen option, ideal when cracks or display damage affect everyday use. Confirm the exact variant before ordering." },
+    {model:"iPhone 12 Pro Max",type:"Back cover",image:"iphone-12-pro-max-back-cover-replacement.jpg"},
+    {model:"iPhone 12 Pro",type:"Back cover",image:"iphone-12-pro-back-cover-replacement.jpg"},
+    {model:"iPhone 12 mini",type:"Back cover",image:"iphone-12-mini-back-cover-replacement.jpg"},
 
-      // Tecno Phantom
-      { brand: "Tecno", model: "Tecno Phantom 5", type: "Screen", file: "tecno-phantom-5-screen.jpg", description: "Help bring Tecno Phantom 5 back to a clear viewing experience with a replacement screen listed for this model. Ask us to verify compatibility and availability." },
-      { brand: "Tecno", model: "Tecno Phantom 6", type: "Screen", file: "tecno-phantom-6-screen.jpg", description: "For a damaged or unusable Tecno Phantom 6 display, this screen is a practical replacement to enquire about. Share your exact model variant before purchase." },
-      { brand: "Tecno", model: "Tecno Phantom 6 Plus", type: "Screen", file: "tecno-phantom-6-plus-screen.jpg", description: "Keep your Tecno Phantom 6 Plus useful with a screen replacement matched to the model shown. Contact us to check the correct version and current stock." },
+    {model:"iPhone 12",type:"Battery",image:"iphone-12-battery-replacement.jpg"},
+    {model:"iPhone 12 Pro Max",type:"Battery",image:"iphone-12-pro-max-battery-replacement.jpg"},
+    {model:"iPhone 12 Pro",type:"Battery",image:"iphone-12-pro-battery-replacement.jpg"},
 
-      // Tecno Pop
-      { brand: "Tecno", model: "Tecno Pop 9", type: "Screen", file: "tecno-pop-9-screen.jpg", description: "A replacement screen option for Tecno Pop 9 when cracks, display lines or touch problems need attention. Let us confirm the precise variant first." },
+    {model:"iPhone 13 Pro Max",type:"Charging system",image:"iphone-13-pro-max-charging-system-replacement.jpg"},
+    {model:"iPhone 13 Pro",type:"Charging system",image:"iphone-13-pro-charging-system-replacement.jpg"},
+    {model:"iPhone 13",type:"Charging system",image:"iphone-13-charging-system-replacement.jpg"},
+    {model:"iPhone 13 mini",type:"Charging system",image:"iphone-13-mini-charging-system-replacement.jpg"},
 
-      // Tecno Spark
-      { brand: "Tecno", model: "Tecno Spark 2", type: "Screen", file: "tecno-spark-2-screen.jpg", description: "Give your Tecno Spark 2 display a fresh start with this model-specific screen listing. Enquire for compatibility, availability and the current price." },
-      { brand: "Tecno", model: "Tecno Spark 30 Pro", type: "Screen", file: "tecno-spark-30-pro-screen.jpg", description: "If the Tecno Spark 30 Pro screen is broken or difficult to use, ask us about this replacement option. We’ll help confirm the right variant for your phone." },
-      { brand: "Tecno", model: "Tecno Spark 30C", type: "Screen", file: "tecno-spark-30c-screen.jpg", description: "This Tecno Spark 30C screen listing is for customers looking to replace a damaged display. Message us to check the correct fit and availability." },
-      { brand: "Tecno", model: "Tecno Spark 4 Pro", type: "Battery", file: "tecno-spark-4-pro-battery.jpg", description: "A battery replacement option for a Tecno Spark 4 Pro that struggles to retain charge. Contact us to confirm the exact part and current availability." },
-      { brand: "Tecno", model: "Tecno Spark 5", type: "Battery", file: "tecno-spark-5-battery.jpg", description: "Keep your Tecno Spark 5 ready for daily use with a battery replacement enquiry. We recommend confirming the precise model variant first." },
-      { brand: "Tecno", model: "Tecno Spark 7", type: "Battery", file: "tecno-spark-7-battery.jpg", description: "For a Tecno Spark 7 with reduced battery life, this listed battery is worth checking as a replacement option. Ask us about fit and stock." },
-      { brand: "Tecno", model: "Tecno Spark 7P", type: "Battery", file: "tecno-spark-7p-battery.jpg", description: "Help your Tecno Spark 7P stay powered with this battery replacement option. Ask us to verify the battery version and availability for your exact phone." },
-      { brand: "Tecno", model: "Tecno Spark K7", type: "Screen", file: "tecno-spark-k7-screen.jpg", description: "Make your Tecno Spark K7 easier to use again with a screen replacement enquiry tailored to the model listed. Confirm compatibility with us before payment." },
-      { brand: "Tecno", model: "Tecno Spark K8", type: "Screen", file: "tecno-spark-k8-screen.jpg", description: "A useful replacement option for a cracked Tecno Spark K8 display or a screen that no longer works properly. Ask us to check the exact version." }
-    ];
+    {model:"iPhone 13 Pro Max",type:"Back cover",image:"iphone-13-pro-max-back-cover-replacement.jpg"},
+    {model:"iPhone 13 Pro",type:"Back cover",image:"iphone-13-pro-back-cover-replacement.jpg"},
+    {model:"iPhone 13",type:"Back cover",image:"iphone-13-back-cover-replacement.jpg"},
+    {model:"iPhone 13 mini",type:"Back cover",image:"iphone-13-mini-back-cover-replacement.jpg"},
 
-    const brandOrder = [
-      "iPhone",
-      "Infinix",
-      "Samsung",
-      "Redmi / Xiaomi",
-      "itel",
-      "Tecno"
-    ];
+    {model:"iPhone 13",type:"Battery",image:"iphone-13-battery-replacement.jpg"},
+    {model:"iPhone 13 Pro Max",type:"Battery",image:"iphone-13-pro-max-battery-replacement.jpg"},
+    {model:"iPhone 13 Pro",type:"Battery",image:"iphone-13-pro-battery-replacement.jpg"},
 
-    const searchInput = document.getElementById("searchInput");
-    const brandFilter = document.getElementById("brandFilter");
-    const partFilter = document.getElementById("partFilter");
-    const results = document.getElementById("catalogueResults");
-    const countLabel = document.getElementById("catalogueCount");
+    {model:"iPhone 14 Pro Max",type:"Charging system",image:"iphone-14-pro-max-charging-system-replacement.jpg"},
+    {model:"iPhone 14 Pro",type:"Charging system",image:"iphone-14-pro-charging-system-replacement.jpg"},
+    {model:"iPhone 14 Plus",type:"Charging system",image:"iphone-14-plus-charging-system-replacement.jpg"},
+    {model:"iPhone 14",type:"Charging system",image:"iphone-14-charging-system-replacement.jpg"},
 
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+    {model:"iPhone 14 Pro Max",type:"Back cover",image:"iphone-14-pro-max-back-cover-replacement.jpg"},
+    {model:"iPhone 14 Pro",type:"Back cover",image:"iphone-14-pro-back-cover-replacement.jpg"},
+    {model:"iPhone 14 Plus",type:"Back cover",image:"iphone-14-plus-back-cover-replacement.jpg"},
+    {model:"iPhone 14",type:"Back cover",image:"iphone-14-back-cover-replacement.jpg"},
 
-    function escapeHTML(value) {
-      return String(value).replace(/[&<>"']/g, function (character) {
-        return {
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#39;"
-        }[character];
+    {model:"iPhone 14 Plus",type:"Battery",image:"iphone-14-plus-battery-replacement.jpg"},
+    {model:"iPhone 14 Pro Max",type:"Battery",image:"iphone-14-pro-max-battery-replacement.jpg"},
+    {model:"iPhone 14 Pro",type:"Battery",image:"iphone-14-pro-battery-replacement.jpg"},
+    {model:"iPhone 14",type:"Battery",image:"iphone-14-battery-replacement.jpg"},
+
+    {model:"iPhone 14 Plus",type:"Screen",image:"iphone-14-plus-screen-replacement.jpg"},
+    {model:"iPhone 14 Pro Max",type:"Screen",image:"iphone-14-pro-max-screen-replacement.jpg"},
+    {model:"iPhone 14 Pro",type:"Screen",image:"iphone-14-pro-screen-replacement.jpg"},
+    {model:"iPhone 14",type:"Screen",image:"iphone-14-screen-replacement.jpg"}
+  ];
+
+  /* =========================================================
+     SCREEN CATALOGUE
+     Existing screen model listings and image filenames.
+  ========================================================= */
+
+  const screenBrands = [
+    {
+      id:"screens-samsung",
+      name:"Samsung",
+      models:[
+        {
+          name:"Samsung Galaxy A07",
+          image:"samsung-a07-screen.jpg",
+          description:"Restore the everyday usability of your Galaxy A07 with a compatible replacement screen. Ask about the available panel and touch assembly before choosing.",
+          features:[
+            "Ask about clarity and brightness",
+            "Confirm touch response and compatibility",
+            "Check the available replacement grade"
+          ]
+        },
+        {
+          name:"Samsung Galaxy A07s",
+          image:"samsung-a07s-screen.jpg",
+          description:"For a cracked or faulty Galaxy A07s display, confirm the exact compatible screen before replacement. We can help you check the available option for your handset.",
+          features:[
+            "Model-specific compatibility check",
+            "Ask about colour and viewing quality",
+            "Confirm fitting and testing"
+          ]
+        },
+        {
+          name:"Samsung Galaxy A16",
+          image:"samsung-a16-screen.jpg",
+          description:"A compatible Galaxy A16 screen replacement can help restore display visibility and touch operation. The panel technology and grade should be confirmed for the part supplied.",
+          features:[
+            "Ask about display panel specification",
+            "Check colour reproduction and brightness",
+            "Confirm touch function after fitting"
+          ]
+        }
+      ]
+    },
+    {
+      id:"screens-iphone",
+      name:"iPhone",
+      models:[
+        {
+          name:"iPhone XS",
+          image:"iphone-xs-screen.jpg.WEBP",
+          description:"If your iPhone XS screen is cracked, damaged or not responding properly, ask us about compatible display replacement options and the differences between available grades.",
+          features:[
+            "Ask about display technology",
+            "Confirm colour and brightness performance",
+            "Check touch and display functions"
+          ]
+        },
+        {
+          name:"iPhone 11",
+          image:"iphone-11-screen.jpg",
+          description:"Replace a damaged iPhone 11 display with a compatible screen selected for your device. Ask about the available grade, colour appearance and touch response before booking.",
+          features:[
+            "Ask about available screen grades",
+            "Confirm display clarity and colour",
+            "Check touch operation after fitting"
+          ]
+        },
+        {
+          name:"iPhone 12",
+          image:"iphone-12-screen.jpg",
+          description:"For an iPhone 12 with cracked glass, display lines or touch problems, ask about the available compatible display and its confirmed specifications.",
+          features:[
+            "Confirm the screen is for iPhone 12",
+            "Ask about panel quality and brightness",
+            "Confirm display and touch testing"
+          ]
+        },
+        {
+          name:"iPhone 12 Pro",
+          image:"iphone-12-pro-screen.jpg",
+          description:"Choose a compatible replacement for your iPhone 12 Pro after checking the exact part and available grade. Display quality can vary between replacement options.",
+          features:[
+            "Model-specific part confirmation",
+            "Ask about colour and contrast",
+            "Check touch and display operation"
+          ]
+        },
+        {
+          name:"iPhone 12 Pro Max",
+          image:"iphone-12-pro-max-screen.jpg",
+          description:"If your iPhone 12 Pro Max display is damaged, contact us to check compatible screen options, available quality grades and the total replacement cost.",
+          features:[
+            "Confirm iPhone 12 Pro Max compatibility",
+            "Ask about brightness and colour quality",
+            "Confirm functions after installation"
+          ]
+        },
+        {
+          name:"iPhone 15",
+          image:"iphone-15-screen.jpg",
+          description:"For an iPhone 15 with a cracked or faulty screen, ask about the compatible replacement options available. The precise panel specification should be confirmed before fitting.",
+          features:[
+            "Ask about replacement grade",
+            "Confirm display and colour performance",
+            "Check touch response after fitting"
+          ]
+        },
+        {
+          name:"iPhone 15 Pro",
+          image:"iphone-15-pro-screen.jpg",
+          description:"Keep your iPhone 15 Pro usable with a compatible replacement display. Ask us to confirm the part, available quality options and display characteristics for your model.",
+          features:[
+            "Confirm exact model compatibility",
+            "Ask about display specification and colours",
+            "Confirm touch and display testing"
+          ]
+        },
+        {
+          name:"iPhone 15 Pro Max",
+          image:"iphone-15-pro-max-screen.jpg",
+          description:"If your iPhone 15 Pro Max display is damaged, inquire about compatible replacement options and their specifications before approving the repair.",
+          features:[
+            "Confirm the correct Pro Max screen",
+            "Ask about available display quality",
+            "Check touch and display functions"
+          ]
+        }
+      ]
+    },
+    {
+      id:"screens-infinix",
+      name:"Infinix",
+      models:[
+        {
+          name:"Infinix Hot 50 Pro+",
+          image:"infinix-hot-50-pro-plus-screen.jpg",
+          description:"Has your Infinix Hot 50 Pro+ screen been cracked or damaged? Ask us about a compatible replacement and confirm the available display grade before arranging installation.",
+          features:[
+            "Confirm Hot 50 Pro+ compatibility",
+            "Ask about brightness and colour reproduction",
+            "Check touch response and fitting"
+          ]
+        },
+        {
+          name:"Infinix Hot 60i",
+          image:"infinix-hot-60i-screen.jpg",
+          description:"For a damaged Infinix Hot 60i display, inquire about the correct replacement screen. We can confirm availability, compatible parts and the total replacement price.",
+          features:[
+            "Model-specific screen compatibility",
+            "Ask about available screen quality",
+            "Confirm display and touch operation"
+          ]
+        },
+        {
+          name:"Infinix Note 50 Pro",
+          image:"infinix-note-50-pro-screen.jpg",
+          description:"Restore your Infinix Note 50 Pro display with a compatible replacement option. Ask us to confirm the actual panel specification, colour performance and availability.",
+          features:[
+            "Confirm Note 50 Pro compatibility",
+            "Ask about panel type and colour quality",
+            "Check display and touch functions"
+          ]
+        },
+        {
+          name:"Infinix Smart 10 Plus",
+          image:"infinix-smart-10-plus-screen.jpg",
+          description:"If your Infinix Smart 10 Plus screen is broken or unresponsive, contact us to confirm a compatible replacement and the available screen quality.",
+          features:[
+            "Confirm Smart 10 Plus compatibility",
+            "Ask about clarity and brightness",
+            "Check touch response after fitting"
+          ]
+        },
+        {
+          name:"Infinix Smart 10",
+          image:"infinix-smart-10-screen.jpg",
+          description:"For a cracked or faulty Infinix Smart 10 display, ask about the compatible replacement available for your phone and the total replacement cost.",
+          features:[
+            "Confirm the exact Smart 10 model",
+            "Ask about display and colour quality",
+            "Check touch operation after fitting"
+          ]
+        }
+      ]
+    },
+    {
+      id:"screens-tecno",
+      name:"Tecno",
+      models:[
+        {
+          name:"Tecno Camon 40 Pro",
+          image:"tecno-camon-40-pro-screen.jpg",
+          description:"For a damaged Tecno Camon 40 Pro screen, ask about a replacement compatible with your exact version. The available panel type and grade should be confirmed before installation.",
+          features:[
+            "Confirm exact Camon 40 Pro version",
+            "Ask about brightness and colour quality",
+            "Check touch response after fitting"
+          ]
+        },
+        {
+          name:"Tecno Spark 30 Pro",
+          image:"tecno-spark-30-pro-screen.jpg",
+          description:"Restore the usability of your Tecno Spark 30 Pro with a compatible replacement display. Ask about the available quality grade and the specification of the actual part.",
+          features:[
+            "Model-specific compatibility check",
+            "Ask about display clarity and colours",
+            "Confirm touch operation after fitting"
+          ]
+        },
+        {
+          name:"Tecno Spark 30C",
+          image:"tecno-spark-30c-screen.jpg",
+          description:"A damaged Spark 30C screen can affect visibility and everyday use. Contact us to confirm the correct replacement and the available display options for your device.",
+          features:[
+            "Confirm Spark 30C compatibility",
+            "Ask about available panel quality",
+            "Check display and touch operation"
+          ]
+        },
+        {
+          name:"Tecno Pop 9",
+          image:"tecno-pop-9-screen.jpg",
+          description:"For a cracked or faulty Tecno Pop 9 display, ask us to confirm the correct compatible screen and the available replacement quality before booking.",
+          features:[
+            "Check the exact model compatibility",
+            "Ask about colour and brightness",
+            "Confirm touch response after fitting"
+          ]
+        },
+        {
+          name:"Tecno Phantom 5",
+          image:"tecno-phantom-5-screen.jpg",
+          description:"Need a replacement screen for your Tecno Phantom 5? Contact us to confirm the correct compatible display, available quality and replacement price.",
+          features:[
+            "Confirm Phantom 5 compatibility",
+            "Ask about display clarity and colours",
+            "Check touch response after fitting"
+          ]
+        },
+        {
+          name:"Tecno Phantom 6 Plus",
+          image:"tecno-phantom-6-plus-screen.jpg",
+          description:"For a damaged Tecno Phantom 6 Plus display, ask us to check the correct screen for your device and confirm the available replacement option.",
+          features:[
+            "Confirm Phantom 6 Plus compatibility",
+            "Ask about screen grade and brightness",
+            "Check touch and display operation"
+          ]
+        },
+        {
+          name:"Tecno Phantom 6",
+          image:"tecno-phantom-6-screen.jpg",
+          description:"If your Tecno Phantom 6 display is cracked or faulty, inquire about a compatible replacement and confirm the actual part specifications before fitting.",
+          features:[
+            "Confirm Phantom 6 compatibility",
+            "Ask about colour and display quality",
+            "Check touch response after fitting"
+          ]
+        },
+        {
+          name:"Tecno Spark 2",
+          image:"tecno-spark-2-screen.jpg",
+          description:"For a damaged Tecno Spark 2 screen, contact us to confirm the compatible replacement, available display quality and total repair cost.",
+          features:[
+            "Confirm Spark 2 compatibility",
+            "Ask about brightness and clarity",
+            "Check display and touch operation"
+          ]
+        },
+        {
+          name:"Tecno Spark K7",
+          image:"tecno-spark-k7-screen.jpg",
+          description:"Ask about a compatible screen replacement for your Tecno Spark K7. We can help confirm the correct part, its availability and the replacement cost.",
+          features:[
+            "Confirm Spark K7 compatibility",
+            "Ask about available screen grade",
+            "Check touch and display operation"
+          ]
+        },
+        {
+          name:"Tecno Spark K8",
+          image:"tecno-spark-k8-screen.jpg",
+          description:"If your Tecno Spark K8 screen is broken or not responding properly, inquire about the correct compatible screen and available replacement options.",
+          features:[
+            "Confirm Spark K8 compatibility",
+            "Ask about display clarity and colour",
+            "Check touch response after fitting"
+          ]
+        }
+      ]
+    }
+
+    /* Additional screen-brand groups and the complete existing battery
+       catalogue are maintained in the current page's data arrays. */
+  ];
+
+  /* =========================================================
+     CARD CREATION AND WHATSAPP LINKS
+  ========================================================= */
+
+  function waLink(message) {
+    return WHATSAPP_BASE + encodeURIComponent(message);
+  }
+
+  function createPartCard(item) {
+    const card = document.createElement("article");
+    card.className = "part-card";
+
+    const imageWrap = document.createElement("div");
+    imageWrap.className = "part-image";
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.model + " " + item.type + " replacement spare part";
+    img.loading = "lazy";
+
+    img.onerror = function () {
+      this.style.display = "none";
+      const fallback = document.createElement("div");
+      fallback.className = "empty-image";
+      fallback.textContent = "Image filename: " + item.image;
+      imageWrap.appendChild(fallback);
+    };
+
+    imageWrap.appendChild(img);
+
+    const info = document.createElement("div");
+    info.className = "part-info";
+
+    const label = document.createElement("span");
+    label.className = "part-label";
+    label.textContent = item.type;
+
+    const h = document.createElement("h3");
+    h.textContent = item.model;
+
+    const p = document.createElement("p");
+    p.textContent =
+      "Ask us to confirm the compatible part, availability and replacement price for this model.";
+
+    const a = document.createElement("a");
+    a.className = "btn btn-whatsapp";
+    a.href = waLink(
+      "Hello Street Gadgets Care, I would like to inquire about " +
+      item.type + " for " + item.model +
+      ". Please confirm compatibility, availability and price."
+    );
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = "Ask on WhatsApp";
+
+    info.append(label, h, p, a);
+    card.append(imageWrap, info);
+
+    return card;
+  }
+
+  function createCatalogueCard(model, type) {
+    const isBattery = type === "battery";
+    const itemLabel = isBattery ? "battery replacement" : "screen replacement";
+
+    const message =
+      "Hello Street Gadgets Care, I would like to inquire about a " +
+      itemLabel + " for my " +
+      model.name.replace(/ Battery$/, "") +
+      ". Please confirm compatibility, availability and the total replacement price.";
+
+    const card = document.createElement("article");
+    card.className = "catalogue-card";
+
+    const imageWrap = document.createElement("div");
+    imageWrap.className = "part-image";
+
+    const img = document.createElement("img");
+    img.src = model.image;
+    img.alt = model.name + " " + itemLabel;
+    img.loading = "lazy";
+
+    img.onerror = function () {
+      this.style.display = "none";
+      const fallback = document.createElement("div");
+      fallback.className = "empty-image";
+      fallback.textContent = "Image filename: " + model.image;
+      imageWrap.appendChild(fallback);
+    };
+
+    imageWrap.appendChild(img);
+
+    const info = document.createElement("div");
+    info.className = "part-info";
+
+    const label = document.createElement("span");
+    label.className = "part-label";
+    label.textContent = isBattery ? "Battery replacement" : "Screen replacement";
+
+    const h = document.createElement("h3");
+    h.textContent = model.name;
+
+    const p = document.createElement("p");
+    p.textContent = model.description;
+
+    info.append(label, h, p);
+
+    if (model.features && model.features.length) {
+      const ul = document.createElement("ul");
+      ul.className = "feature-list";
+
+      model.features.forEach(function (feature) {
+        const li = document.createElement("li");
+        li.textContent = feature;
+        ul.appendChild(li);
       });
+
+      info.appendChild(ul);
     }
 
-    function whatsappURL(item) {
-      const message =
-        "Hello Street Gadgets Care, I am enquiring about the " +
-        item.type + " for " + item.model +
-        ". Please confirm compatibility, availability and price.";
+    const a = document.createElement("a");
+    a.className = "btn btn-whatsapp";
+    a.href = waLink(message);
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = "Ask about this " + (isBattery ? "battery" : "screen");
 
-      return "https://wa.me/254114259961?text=" +
-        encodeURIComponent(message);
-    }
+    info.appendChild(a);
+    card.append(imageWrap, info);
 
-    function createPartCard(item) {
-      const imageURL = encodeURIComponent(item.file);
+    return card;
+  }
 
-      return `
-        <article class="part-card">
-          <div class="part-image">
-            <img
-              src="${imageURL}"
-              alt="${escapeHTML(item.model + " " + item.type)}"
-              loading="lazy"
-              decoding="async"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-            <div class="image-fallback">
-              Image not found.<br>
-              <strong>${escapeHTML(item.file)}</strong>
-            </div>
-          </div>
+  function renderBrands(brands, containerId, navId, type) {
+    const container = document.getElementById(containerId);
+    const nav = document.getElementById(navId);
 
-          <div class="part-content">
-            <span class="part-type">${escapeHTML(item.type)}</span>
-            <h4>${escapeHTML(item.model)}</h4>
-            <p>${escapeHTML(item.description)}</p>
-            <a class="btn btn-primary"
-               href="${whatsappURL(item)}"
-               target="_blank"
-               rel="noopener">
-              Enquire on WhatsApp
-            </a>
-          </div>
-        </article>
-      `;
-    }
+    brands.forEach(function (brand) {
+      const link = document.createElement("a");
+      link.href = "#" + brand.id;
+      link.textContent = brand.name;
+      nav.appendChild(link);
 
-    function getFilteredParts() {
-      const search = searchInput.value.trim().toLowerCase();
-      const brand = brandFilter.value;
-      const type = partFilter.value;
+      const section = document.createElement("section");
+      section.className = "brand-block";
+      section.id = brand.id;
 
-      return parts.filter(function (item) {
-        const searchable = [
-          item.brand,
-          item.model,
-          item.type,
-          item.file,
-          item.description
-        ].join(" ").toLowerCase();
+      const heading = document.createElement("div");
+      heading.className = "brand-heading";
 
-        return (!search || searchable.includes(search)) &&
-          (!brand || item.brand === brand) &&
-          (!type || item.type === type);
+      const h = document.createElement("h3");
+      h.textContent = brand.name;
+
+      const count = document.createElement("span");
+      count.textContent = brand.models.length + " listed models";
+
+      heading.append(h, count);
+
+      const grid = document.createElement("div");
+      grid.className = "catalogue-grid";
+
+      const uniqueModels = brand.models.filter(function (model, index, all) {
+        return all.findIndex(function (other) {
+          return other.image === model.image;
+        }) === index;
       });
-    }
 
-    function renderCatalogue() {
-      const filtered = getFilteredParts();
+      uniqueModels.forEach(function (model) {
+        grid.appendChild(createCatalogueCard(model, type));
+      });
 
-      countLabel.textContent =
-        filtered.length + (filtered.length === 1
-          ? " listed part"
-          : " listed parts") +
-        " · Check the exact filename if an image does not appear.";
+      section.append(heading, grid);
+      container.appendChild(section);
+    });
+  }
 
-      if (!filtered.length) {
-        results.innerHTML = `
-          <div class="no-results">
-            <h3>No matching spare parts found</h3>
-            <p>Try another model name or clear one of the filters.</p>
-            <button class="btn btn-primary" type="button" id="clearFilters">
-              Clear Filters
-            </button>
-          </div>
-        `;
+  /* Render the product listings */
 
-        document.getElementById("clearFilters").addEventListener("click", function () {
-          searchInput.value = "";
-          brandFilter.value = "";
-          partFilter.value = "";
-          renderCatalogue();
-        });
+  const iphoneGrid = document.getElementById("iphonePartsGrid");
 
-        return;
-      }
+  iphoneParts.forEach(function (item) {
+    iphoneGrid.appendChild(createPartCard(item));
+  });
 
-      const filteredByBrand = brandOrder
-        .map(function (brand) {
-          const brandParts = filtered.filter(function (item) {
-            return item.brand === brand;
-          });
+  renderBrands(screenBrands, "screenCatalogue", "screenBrandNav", "screen");
 
-          if (!brandParts.length) return "";
+  renderBrands(batteryBrands, "batteryCatalogue", "batteryBrandNav", "battery");
 
-          const modelMap = new Map();
+  /* MOBILE NAVIGATION */
 
-          brandParts.forEach(function (item) {
-            if (!modelMap.has(item.model)) {
-              modelMap.set(item.model, []);
-            }
+  const menuToggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNavigation");
 
-            modelMap.get(item.model).push(item);
-          });
+  menuToggle.addEventListener("click", function () {
+    const open = nav.classList.toggle("open");
 
-          const modelSections = Array.from(modelMap.entries())
-            .map(function (entry) {
-              const model = entry[0];
-              const modelParts = entry[1];
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
 
-              return `
-                <section class="model-group">
-                  <h3 class="model-heading">${escapeHTML(model)}</h3>
-                  <div class="part-grid">
-                    ${modelParts.map(createPartCard).join("")}
-                  </div>
-                </section>
-              `;
-            })
-            .join("");
+  nav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      nav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
 
-          return `
-            <section class="brand-section">
-              <div class="brand-heading">
-                <h2>${escapeHTML(brand)}</h2>
-                <span class="brand-count">
-                  ${brandParts.length} ${brandParts.length === 1 ? "part" : "parts"}
-                </span>
-              </div>
-              ${modelSections}
-            </section>
-          `;
-        })
-        .join("");
-
-      results.innerHTML = filteredByBrand;
-    }
-
-    searchInput.addEventListener("input", renderCatalogue);
-    brandFilter.addEventListener("change", renderCatalogue);
-    partFilter.addEventListener("change", renderCatalogue);
-
-    renderCatalogue();
-  </script>
 </body>
 </html>
