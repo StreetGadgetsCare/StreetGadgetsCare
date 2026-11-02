@@ -288,7 +288,7 @@
       cursor: pointer;
     }
 
-    /* HERO: REPAIR-FIRST */
+    /* HERO */
 
     .hero {
       position: relative;
@@ -825,6 +825,67 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .video-load {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      border: 0;
+      color: #fff;
+      background-color: #080e19;
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    .video-load::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(0deg, rgba(0,0,0,.62), rgba(0,0,0,.12));
+    }
+
+    .video-play,
+    .video-load-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-play {
+      display: grid;
+      width: 58px;
+      height: 42px;
+      place-items: center;
+      padding-left: 3px;
+      border-radius: 12px;
+      color: #fff;
+      background: #e62117;
+      font-size: 19px;
+    }
+
+    .video-load-text {
+      font-size: 11px;
+      font-weight: 800;
+      text-shadow: 0 1px 4px #000;
+    }
+
+    .image-fallback {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      min-height: 120px;
+      place-items: center;
+      padding: 18px;
+      color: #657284;
+      background: #edf2f5;
+      font-size: 12px;
+      text-align: center;
     }
 
     .video-info {
@@ -1687,7 +1748,7 @@
     </div>
   </section>
 
-  <!-- REPAIR PHOTOS MOVED FROM TECH REPAIRS -->
+  <!-- REPAIR GALLERY -->
 
   <section class="section repair-gallery-section" id="repair-gallery">
     <div class="container">
@@ -2021,7 +2082,7 @@
     </div>
   </section>
 
-  <!-- REPAIR VIDEOS MOVED FROM TECH REPAIRS -->
+  <!-- REPAIR VIDEOS -->
 
   <section class="section section-light" id="repair-videos">
     <div class="container">
@@ -2039,13 +2100,10 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/DXVP_zwtb6k"
-              title="Street Gadgets Care repair video"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button class="video-load" type="button" data-video-id="DXVP_zwtb6k" aria-label="Play Street Gadgets Care repair video">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-load-text">Play video</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Tech Repair Work</h3>
@@ -2055,13 +2113,10 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/VR8dvpx2vgY"
-              title="Street Gadgets Care technology video"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button class="video-load" type="button" data-video-id="VR8dvpx2vgY" aria-label="Play Street Gadgets Care technology video">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-load-text">Play video</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Technology and Repairs</h3>
@@ -2071,13 +2126,10 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/3Eia1pcI59g"
-              title="Journey into Tech Excellence"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button class="video-load" type="button" data-video-id="3Eia1pcI59g" aria-label="Play Journey into Tech Excellence">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-load-text">Play video</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Journey into Tech Excellence</h3>
@@ -2087,13 +2139,10 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/FzRo8pXfS1U"
-              title="Street Gadgets Care tech tips and repairs"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button class="video-load" type="button" data-video-id="FzRo8pXfS1U" aria-label="Play Street Gadgets Care tech tips and repairs">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-load-text">Play video</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Tech Tips and Repairs</h3>
@@ -2103,13 +2152,10 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/Wcvv5hZNxqQ"
-              title="How to check your computer's health"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button class="video-load" type="button" data-video-id="Wcvv5hZNxqQ" aria-label="Play How to check your computer's health">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-load-text">Play video</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>How to Check Your Computer's Health</h3>
@@ -2334,6 +2380,7 @@
 
 <script>
   /* Mobile navigation */
+
   const mobileToggle = document.getElementById("mobileToggle");
   const navLinks = document.getElementById("navLinks");
   const menuIcon = document.getElementById("menuIcon");
@@ -2378,7 +2425,77 @@
     });
   }
 
-  /* Automatically update the copyright year */
+  /* Close the mobile menu when a visitor taps outside it. */
+
+  document.addEventListener("click", function (event) {
+    if (!mobileToggle || !navLinks) return;
+
+    if (
+      !navLinks.contains(event.target) &&
+      !mobileToggle.contains(event.target)
+    ) {
+      navLinks.classList.remove("open");
+      mobileToggle.setAttribute("aria-expanded", "false");
+      mobileToggle.setAttribute("aria-label", "Open navigation menu");
+
+      if (menuIcon) {
+        menuIcon.textContent = "☰";
+      }
+    }
+  });
+
+  /* Load YouTube videos only after a visitor presses Play. */
+
+  document.querySelectorAll(".video-load").forEach(function (button) {
+    const videoId = button.getAttribute("data-video-id");
+
+    if (videoId) {
+      button.style.backgroundImage =
+        "url(https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg)";
+    }
+
+    button.addEventListener("click", function () {
+      if (!videoId) return;
+
+      const frame = document.createElement("iframe");
+
+      frame.src =
+        "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1";
+
+      frame.title =
+        button.getAttribute("aria-label") ||
+        "Street Gadgets Care video";
+
+      frame.loading = "lazy";
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+
+      frame.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+      frame.allowFullscreen = true;
+
+      button.parentElement.replaceChildren(frame);
+    });
+  });
+
+  /* Show a neat placeholder if a repository image filename is missing. */
+
+  document.querySelectorAll("img").forEach(function (img) {
+    img.addEventListener("error", function () {
+      const fallback = document.createElement("div");
+
+      fallback.className = "image-fallback";
+
+      fallback.textContent = img.alt
+        ? img.alt + " — image unavailable"
+        : "Image unavailable";
+
+      img.replaceWith(fallback);
+    }, { once: true });
+  });
+
+  /* Automatically update the copyright year. */
+
   const currentYear = document.getElementById("currentYear");
 
   if (currentYear) {
