@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Phone & Laptop Repair in Nairobi | Street Gadgets Care</title>
-  <meta name="description" content="Street Gadgets Care provides phone and laptop repairs, screen and battery replacement, laptop servicing, devices, accessories and creative business services in Nairobi, Kenya.">
-  <meta name="keywords" content="phone repair Nairobi, laptop repair Nairobi, phone screen replacement Kenya, laptop servicing Nairobi, laptops for sale Kenya, Street Gadgets Care">
+  <meta name="description" content="Street Gadgets Care offers phone and laptop repairs, replacement parts, laptops, accessories and creative business services in Nairobi, Kenya. Delivery arrangements available across Kenya.">
   <meta name="author" content="Street Gadgets Care">
   <meta name="theme-color" content="#0b1220">
   <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
 
   <link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/">
   <link rel="icon" type="image/png" href="Logo.png">
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Street Gadgets Care">
   <meta property="og:title" content="Street Gadgets Care | Phone & Laptop Repairs">
   <meta property="og:description" content="Phone and laptop repairs, replacement parts, devices, accessories and creative services in Nairobi, Kenya.">
   <meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/">
   <meta property="og:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
+  <meta property="og:image:alt" content="Street Gadgets Care logo">
+
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Street Gadgets Care | Phone & Laptop Repairs">
+  <meta name="twitter:description" content="Phone and laptop repairs, devices, accessories and creative services in Nairobi, Kenya.">
+  <meta name="twitter:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
+
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
 
   <style>
     :root {
@@ -197,6 +207,21 @@
       outline-offset: 4px;
     }
 
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 15px;
+      z-index: 2000;
+      padding: 12px 16px;
+      border-radius: 8px;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
     /* HEADER */
 
     .site-header {
@@ -288,7 +313,7 @@
       cursor: pointer;
     }
 
-    /* HERO: REPAIR-FIRST */
+    /* HERO */
 
     .hero {
       position: relative;
@@ -360,7 +385,7 @@
     }
 
     .hero-text {
-      max-width: 560px;
+      max-width: 570px;
       margin-bottom: 25px;
       color: rgba(255,255,255,.76);
       font-size: 15px;
@@ -795,7 +820,7 @@
       content: "✓";
     }
 
-    /* REPAIR VIDEOS */
+    /* CLICK-TO-LOAD VIDEOS */
 
     .video-grid {
       display: grid;
@@ -816,7 +841,50 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
+      overflow: hidden;
       background: #080e19;
+    }
+
+    .video-preview {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      color: var(--white);
+      background-color: #080e19;
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    .video-preview::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.05));
+    }
+
+    .play-icon {
+      position: relative;
+      z-index: 1;
+      width: 58px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: var(--white);
+      background: #e62117;
+      font-size: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.25);
+      transition: transform .2s;
+    }
+
+    .video-preview:hover .play-icon {
+      transform: scale(1.1);
     }
 
     .video-frame iframe {
@@ -1479,9 +1547,39 @@
       }
     }
   </style>
+
+  <!-- BUSINESS INFORMATION FOR SEARCH ENGINES -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ComputerRepair",
+    "name": "Street Gadgets Care",
+    "url": "https://streetgadgetscare.github.io/StreetGadgetsCare/",
+    "logo": "https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png",
+    "image": "https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png",
+    "description": "Phone and laptop repairs, replacement parts, devices, accessories and creative business services.",
+    "telephone": "+254114259961",
+    "email": "streetgadgetscare@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Kenya"
+    },
+    "sameAs": [
+      "https://www.tiktok.com/@street_gadgets_care",
+      "https://www.youtube.com/results?search_query=Street+Gadgets+Care"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="site-header" id="siteHeader">
   <div class="container navbar">
@@ -1519,7 +1617,7 @@
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
   <!-- HERO -->
 
@@ -1538,7 +1636,8 @@
         <p class="hero-text">
           From damaged phone screens and charging problems to laptop servicing,
           software issues and hardware troubleshooting, Street Gadgets Care helps
-          you get your technology working again.
+          you get your technology working again. We also offer devices, accessories,
+          spare parts and creative business services.
         </p>
 
         <div class="hero-actions">
@@ -1687,7 +1786,7 @@
     </div>
   </section>
 
-  <!-- REPAIR PHOTOS MOVED FROM TECH REPAIRS -->
+  <!-- REPAIR PHOTOS -->
 
   <section class="section repair-gallery-section" id="repair-gallery">
     <div class="container">
@@ -1864,7 +1963,7 @@
         <div class="eyebrow">Featured products</div>
         <h2>Technology for work, study and everyday use.</h2>
         <p>
-          Explore selected products and prices. Contact us to confirm availability
+          Explore selected laptops and prices. Contact us to confirm availability
           and specifications before placing an order.
         </p>
       </div>
@@ -2021,7 +2120,7 @@
     </div>
   </section>
 
-  <!-- REPAIR VIDEOS MOVED FROM TECH REPAIRS -->
+  <!-- REPAIR VIDEOS -->
 
   <section class="section section-light" id="repair-videos">
     <div class="container">
@@ -2032,6 +2131,7 @@
         <p>
           Explore technology content from Street Gadgets Care, including
           repair-related videos and practical tips for computer users.
+          Select a video to play it.
         </p>
       </div>
 
@@ -2039,13 +2139,14 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/DXVP_zwtb6k"
-              title="Street Gadgets Care repair video"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button
+              class="video-preview"
+              type="button"
+              data-video-id="DXVP_zwtb6k"
+              aria-label="Play Street Gadgets Care repair video"
+              style="background-image:url('https://i.ytimg.com/vi/DXVP_zwtb6k/hqdefault.jpg')">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Tech Repair Work</h3>
@@ -2055,13 +2156,14 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/VR8dvpx2vgY"
-              title="Street Gadgets Care technology video"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button
+              class="video-preview"
+              type="button"
+              data-video-id="VR8dvpx2vgY"
+              aria-label="Play Street Gadgets Care technology video"
+              style="background-image:url('https://i.ytimg.com/vi/VR8dvpx2vgY/hqdefault.jpg')">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Technology and Repairs</h3>
@@ -2071,13 +2173,14 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/3Eia1pcI59g"
-              title="Journey into Tech Excellence"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button
+              class="video-preview"
+              type="button"
+              data-video-id="3Eia1pcI59g"
+              aria-label="Play Journey into Tech Excellence video"
+              style="background-image:url('https://i.ytimg.com/vi/3Eia1pcI59g/hqdefault.jpg')">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Journey into Tech Excellence</h3>
@@ -2087,13 +2190,14 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/FzRo8pXfS1U"
-              title="Street Gadgets Care tech tips and repairs"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button
+              class="video-preview"
+              type="button"
+              data-video-id="FzRo8pXfS1U"
+              aria-label="Play Street Gadgets Care tech tips and repairs video"
+              style="background-image:url('https://i.ytimg.com/vi/FzRo8pXfS1U/hqdefault.jpg')">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>Tech Tips and Repairs</h3>
@@ -2103,13 +2207,14 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/Wcvv5hZNxqQ"
-              title="How to check your computer's health"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <button
+              class="video-preview"
+              type="button"
+              data-video-id="Wcvv5hZNxqQ"
+              aria-label="Play How to Check Your Computer's Health video"
+              style="background-image:url('https://i.ytimg.com/vi/Wcvv5hZNxqQ/hqdefault.jpg')">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
           </div>
           <div class="video-info">
             <h3>How to Check Your Computer's Health</h3>
@@ -2333,10 +2438,23 @@
 </a>
 
 <script>
-  /* Mobile navigation */
+  /* MOBILE NAVIGATION */
+
   const mobileToggle = document.getElementById("mobileToggle");
   const navLinks = document.getElementById("navLinks");
   const menuIcon = document.getElementById("menuIcon");
+
+  function closeMobileMenu() {
+    if (!mobileToggle || !navLinks) return;
+
+    navLinks.classList.remove("open");
+    mobileToggle.setAttribute("aria-expanded", "false");
+    mobileToggle.setAttribute("aria-label", "Open navigation menu");
+
+    if (menuIcon) {
+      menuIcon.textContent = "☰";
+    }
+  }
 
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener("click", function () {
@@ -2354,31 +2472,54 @@
     });
 
     navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        mobileToggle.setAttribute("aria-expanded", "false");
-        mobileToggle.setAttribute("aria-label", "Open navigation menu");
-
-        if (menuIcon) {
-          menuIcon.textContent = "☰";
-        }
-      });
+      link.addEventListener("click", closeMobileMenu);
     });
 
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
-        navLinks.classList.remove("open");
-        mobileToggle.setAttribute("aria-expanded", "false");
-        mobileToggle.setAttribute("aria-label", "Open navigation menu");
+        closeMobileMenu();
+      }
+    });
 
-        if (menuIcon) {
-          menuIcon.textContent = "☰";
-        }
+    document.addEventListener("click", function (event) {
+      if (
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(event.target) &&
+        !mobileToggle.contains(event.target)
+      ) {
+        closeMobileMenu();
       }
     });
   }
 
-  /* Automatically update the copyright year */
+  /* CLICK-TO-LOAD YOUTUBE VIDEOS */
+
+  document.querySelectorAll(".video-preview").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const videoId = button.getAttribute("data-video-id");
+
+      if (!videoId) return;
+
+      const iframe = document.createElement("iframe");
+
+      iframe.src =
+        "https://www.youtube-nocookie.com/embed/" +
+        encodeURIComponent(videoId) +
+        "?autoplay=1&rel=0";
+
+      iframe.title = button.getAttribute("aria-label") || "Street Gadgets Care video";
+      iframe.loading = "lazy";
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+
+      button.replaceWith(iframe);
+    });
+  });
+
+  /* AUTOMATIC COPYRIGHT YEAR */
+
   const currentYear = document.getElementById("currentYear");
 
   if (currentYear) {
