@@ -6,9 +6,7 @@
 
 <title>Shop Technology & Accessories | Street Gadgets Care</title>
 
-<meta name="description" content="Shop laptops, phones, Oraimo earbuds, headphones, neckbands, chargers, cables, storage and accessories at Street Gadgets Care. Based in Nairobi, with delivery arrangements across Kenya.">
-
-<meta name="keywords" content="laptops for sale Nairobi, phone accessories Kenya, laptop accessories Nairobi, Oraimo earbuds Kenya, SSD Nairobi, laptop bags Kenya, Street Gadgets Care">
+<meta name="description" content="Shop laptops, phones, Oraimo earbuds, headphones, neckbands, chargers, cables, storage and accessories at Street Gadgets Care. Based in Nairobi, serving customers across Kenya.">
 
 <meta name="theme-color" content="#0b1220">
 
@@ -16,7 +14,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shop Technology & Accessories | Street Gadgets Care">
-<meta property="og:description" content="Explore laptops, phones, chargers, storage, audio products and everyday technology accessories at Street Gadgets Care.">
+<meta property="og:description" content="Explore laptops, phones, chargers, storage, audio products and technology accessories at Street Gadgets Care.">
 <meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/shop.html">
 <meta property="og:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
 
@@ -36,11 +34,7 @@
  --max:1180px;
 }
 
-*{
- box-sizing:border-box;
- margin:0;
- padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 html{
  scroll-behavior:smooth;
@@ -55,28 +49,16 @@ body{
  overflow-x:hidden;
 }
 
-img{
- max-width:100%;
- display:block;
-}
-
-a{
- color:inherit;
- text-decoration:none;
-}
-
-button,a{
- -webkit-tap-highlight-color:transparent;
-}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
 
 .container{
  width:min(var(--max),calc(100% - 40px));
  margin:auto;
 }
 
-/* =========================
-   HEADER AND NAVIGATION
-========================= */
+/* HEADER */
 
 .site-header{
  position:sticky;
@@ -130,10 +112,6 @@ button,a{
  padding:10px 13px;
 }
 
-.main-nav .nav-whatsapp:hover{
- background:#1fbd5b;
-}
-
 .menu-toggle{
  display:none;
  width:44px;
@@ -160,17 +138,13 @@ button,a{
  transform:translateY(7px) rotate(45deg);
 }
 
-.menu-toggle.active span:nth-child(2){
- opacity:0;
-}
+.menu-toggle.active span:nth-child(2){opacity:0}
 
 .menu-toggle.active span:last-child{
  transform:translateY(-7px) rotate(-45deg);
 }
 
-/* =========================
-   CATEGORY NAVIGATION
-========================= */
+/* CATEGORY NAVIGATION */
 
 .category-wrap{
  position:sticky;
@@ -213,7 +187,6 @@ button,a{
  font-size:13px;
  font-weight:700;
  white-space:nowrap;
- transition:.2s;
 }
 
 .category-link:hover{
@@ -233,9 +206,7 @@ button,a{
  to{transform:translateX(-50%)}
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
  position:relative;
@@ -280,9 +251,7 @@ button,a{
  margin-bottom:20px;
 }
 
-.hero h1 span{
- color:var(--cyan-dark);
-}
+.hero h1 span{color:var(--cyan-dark)}
 
 .hero-text{
  max-width:620px;
@@ -314,26 +283,16 @@ button,a{
  cursor:pointer;
 }
 
-.btn:hover{
- transform:translateY(-2px);
-}
+.btn:hover{transform:translateY(-2px)}
 
 .btn-primary{
  color:#fff;
  background:var(--navy);
 }
 
-.btn-primary:hover{
- background:#172941;
-}
-
 .btn-whatsapp{
  color:#fff;
  background:var(--green);
-}
-
-.btn-whatsapp:hover{
- background:#1fbd5b;
 }
 
 .btn-outline{
@@ -354,9 +313,7 @@ button,a{
  font-weight:700;
 }
 
-.hero-visual{
- position:relative;
-}
+.hero-visual{position:relative}
 
 .hero-image-card{
  overflow:hidden;
@@ -375,17 +332,10 @@ button,a{
  border-radius:18px;
 }
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* GENERAL SECTIONS */
 
-.section{
- padding:70px 0;
-}
-
-.section-light{
- background:var(--light);
-}
+.section{padding:70px 0}
+.section-light{background:var(--light)}
 
 .section-heading{
  display:flex;
@@ -414,9 +364,7 @@ button,a{
  font-size:14px;
 }
 
-/* =========================
-   FEATURED PRODUCTS
-========================= */
+/* FEATURED PRODUCTS */
 
 .featured-grid{
  display:grid;
@@ -461,9 +409,7 @@ button,a{
  transform:scale(1.04);
 }
 
-.product-info{
- padding:17px;
-}
+.product-info{padding:17px}
 
 .product-info h3{
  font-size:16px;
@@ -516,9 +462,7 @@ button,a{
  margin-bottom:10px;
 }
 
-/* =========================
-   SHOP CATEGORIES
-========================= */
+/* SHOP CATEGORIES */
 
 .category-grid{
  display:grid;
@@ -572,13 +516,9 @@ button,a{
  flex:1;
 }
 
-.category-content .btn{
- width:100%;
-}
+.category-content .btn{width:100%}
 
-/* =========================
-   PROMOTIONAL STRIP
-========================= */
+/* PROMO STRIP */
 
 .promo-strip{
  background:var(--navy);
@@ -604,13 +544,9 @@ button,a{
  color:#c7d3df;
 }
 
-.promo-inner .btn{
- flex-shrink:0;
-}
+.promo-inner .btn{flex-shrink:0}
 
-/* =========================
-   CUSTOMER HELP
-========================= */
+/* CUSTOMER HELP */
 
 .help-grid{
  display:grid;
@@ -637,9 +573,7 @@ button,a{
  margin-bottom:18px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .site-footer{
  background:#080e19;
@@ -678,9 +612,7 @@ button,a{
  margin:8px 0;
 }
 
-.footer-col a:hover{
- color:#fff;
-}
+.footer-col a:hover{color:#fff}
 
 .footer-bottom{
  border-top:1px solid rgba(255,255,255,.12);
@@ -693,9 +625,7 @@ button,a{
  font-size:12px;
 }
 
-/* =========================
-   FLOATING WHATSAPP
-========================= */
+/* FLOATING WHATSAPP */
 
 .floating-whatsapp{
  position:fixed;
@@ -713,63 +643,38 @@ button,a{
  font-size:27px;
  font-weight:800;
  box-shadow:0 8px 25px rgba(0,0,0,.22);
- transition:.2s;
 }
 
-.floating-whatsapp:hover{
- transform:translateY(-3px);
- background:#1fbd5b;
-}
-
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media(max-width:1000px){
 
- .header-inner{
-  gap:12px;
- }
-
- .brand img{
-  width:140px;
- }
+ .header-inner{gap:12px}
+ .brand img{width:140px}
 
  .main-nav a{
   font-size:12px;
   padding:9px 7px;
  }
 
- .main-nav .nav-whatsapp{
-  padding:9px;
- }
+ .main-nav .nav-whatsapp{padding:9px}
 
- .hero-grid{
-  gap:30px;
- }
+ .hero-grid{gap:30px}
 
  .featured-grid{
   grid-template-columns:repeat(2,minmax(0,1fr));
  }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:760px){
 
- .container{
-  width:calc(100% - 30px);
- }
+ .container{width:calc(100% - 30px)}
 
- .header-inner{
-  min-height:68px;
- }
+ .header-inner{min-height:68px}
 
- .brand img{
-  width:145px;
- }
+ .brand img{width:145px}
 
  .menu-toggle{
   display:flex;
@@ -791,9 +696,7 @@ button,a{
   box-shadow:0 14px 25px rgba(0,0,0,.2);
  }
 
- .main-nav.open{
-  display:flex;
- }
+ .main-nav.open{display:flex}
 
  .main-nav a{
   font-size:14px;
@@ -805,13 +708,9 @@ button,a{
   text-align:center;
  }
 
- .category-wrap{
-  top:68px;
- }
+ .category-wrap{top:68px}
 
- .hero{
-  padding:48px 0;
- }
+ .hero{padding:48px 0}
 
  .hero-grid{
   grid-template-columns:1fr;
@@ -823,18 +722,14 @@ button,a{
   letter-spacing:-1.5px;
  }
 
- .hero-text{
-  font-size:15px;
- }
+ .hero-text{font-size:15px}
 
  .hero-image-card{
   max-width:540px;
   margin:auto;
  }
 
- .section{
-  padding:50px 0;
- }
+ .section{padding:50px 0}
 
  .section-heading{
   align-items:flex-start;
@@ -847,44 +742,29 @@ button,a{
   gap:14px;
  }
 
- .category-image{
-  height:160px;
- }
+ .category-image{height:160px}
 
- .category-content{
-  padding:15px;
- }
+ .category-content{padding:15px}
 
- .category-content h3{
-  font-size:16px;
- }
-
- .category-content p{
-  font-size:13px;
- }
+ .category-content h3{font-size:16px}
+ .category-content p{font-size:13px}
 
  .promo-inner{
   align-items:flex-start;
   flex-direction:column;
  }
 
- .help-grid{
-  grid-template-columns:1fr;
- }
+ .help-grid{grid-template-columns:1fr}
 
  .footer-grid{
   grid-template-columns:1fr 1fr;
   gap:25px;
  }
 
- .footer-brand{
-  grid-column:1/-1;
- }
+ .footer-brand{grid-column:1/-1}
 }
 
-/* =========================
-   SMALL PHONES
-========================= */
+/* SMALL PHONES */
 
 @media(max-width:430px){
 
@@ -898,78 +778,43 @@ button,a{
   padding:8px;
  }
 
- .product-info{
-  padding:12px;
- }
+ .product-info{padding:12px}
 
- .product-info h3{
-  font-size:14px;
- }
+ .product-info h3{font-size:14px}
+ .product-info p{font-size:12px}
 
- .product-info p{
-  font-size:12px;
- }
-
- .price{
-  font-size:16px;
- }
+ .price{font-size:16px}
 
  .product-info .btn{
   font-size:12px;
   padding:9px 6px;
  }
 
- .category-grid{
-  gap:11px;
- }
+ .category-grid{gap:11px}
+ .category-image{height:125px}
+ .category-content{padding:12px}
 
- .category-image{
-  height:125px;
- }
-
- .category-content{
-  padding:12px;
- }
-
- .category-content h3{
-  font-size:14px;
- }
-
- .category-content p{
-  font-size:12px;
- }
+ .category-content h3{font-size:14px}
+ .category-content p{font-size:12px}
 
  .category-content .btn{
   font-size:12px;
   padding:9px 5px;
  }
 
- .hero-actions .btn{
-  width:100%;
- }
+ .hero-actions .btn{width:100%}
 
- .footer-grid{
-  grid-template-columns:1fr;
- }
+ .footer-grid{grid-template-columns:1fr}
+ .footer-brand{grid-column:auto}
 
- .footer-brand{
-  grid-column:auto;
- }
-
- .footer-bottom{
-  flex-direction:column;
- }
+ .footer-bottom{flex-direction:column}
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
+/* REDUCED MOTION */
 
 @media(prefers-reduced-motion:reduce){
 
- html{
-  scroll-behavior:auto;
- }
+ html{scroll-behavior:auto}
 
  *,
  *::before,
@@ -979,18 +824,12 @@ button,a{
   transition-duration:.01ms!important;
  }
 
- .category-track{
-  animation:none;
- }
+ .category-track{animation:none}
 }
 </style>
 </head>
 
 <body>
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header class="site-header">
 
@@ -1007,25 +846,19 @@ button,a{
    aria-expanded="false"
    aria-controls="mainNav"
    type="button">
-
    <span></span>
    <span></span>
    <span></span>
-
   </button>
 
   <nav class="main-nav" id="mainNav" aria-label="Main navigation">
 
    <a href="index.html">Home</a>
-
    <a href="about.html">About</a>
-
    <a href="services.html">Services</a>
-
    <a href="spare-parts.html">Spare Parts</a>
-
+   <a href="shop.html" class="active" aria-current="page">Shop</a>
    <a href="creative-studio.html">Creative</a>
-
    <a href="contact.html">Contact</a>
 
    <a
@@ -1042,9 +875,7 @@ button,a{
 
 </header>
 
-<!-- =========================
-     SHOP CATEGORY NAVIGATION
-========================= -->
+<!-- SHOP CATEGORY NAVIGATION -->
 
 <div class="category-wrap" id="categoryWrap">
 
@@ -1052,81 +883,29 @@ button,a{
 
   <div class="category-set">
 
-   <a class="category-link active" href="shop.html">
-    All Shop
-   </a>
-
-   <a class="category-link" href="devices.html">
-    Laptops &amp; Devices
-   </a>
-
-   <a class="category-link" href="laptop-bags.html">
-    Laptop Bags
-   </a>
-
-   <a class="category-link" href="laptop-storage.html">
-    Storage &amp; Memory
-   </a>
-
-   <a class="category-link" href="computer-accessories.html">
-    Computer Accessories
-   </a>
-
-   <a class="category-link" href="screen-protectors.html">
-    Screen Protectors
-   </a>
-
-   <a class="category-link" href="phone-covers.html">
-    Phone Covers
-   </a>
-
-   <a class="category-link" href="laptop-accessories.html">
-    Laptop Accessories
-   </a>
-
-   <a class="category-link" href="other-gadgets.html">
-    Other Gadgets
-   </a>
+   <a class="category-link active" href="shop.html">All Shop</a>
+   <a class="category-link" href="devices.html">Laptops &amp; Devices</a>
+   <a class="category-link" href="laptop-bags.html">Laptop Bags</a>
+   <a class="category-link" href="laptop-storage.html">Storage &amp; Memory</a>
+   <a class="category-link" href="computer-accessories.html">Computer Accessories</a>
+   <a class="category-link" href="screen-protectors.html">Screen Protectors</a>
+   <a class="category-link" href="phone-covers.html">Phone Covers</a>
+   <a class="category-link" href="laptop-accessories.html">Laptop Accessories</a>
+   <a class="category-link" href="other-gadgets.html">Other Gadgets</a>
 
   </div>
 
   <div class="category-set" aria-hidden="true">
 
-   <a class="category-link" href="shop.html" tabindex="-1">
-    All Shop
-   </a>
-
-   <a class="category-link" href="devices.html" tabindex="-1">
-    Laptops &amp; Devices
-   </a>
-
-   <a class="category-link" href="laptop-bags.html" tabindex="-1">
-    Laptop Bags
-   </a>
-
-   <a class="category-link" href="laptop-storage.html" tabindex="-1">
-    Storage &amp; Memory
-   </a>
-
-   <a class="category-link" href="computer-accessories.html" tabindex="-1">
-    Computer Accessories
-   </a>
-
-   <a class="category-link" href="screen-protectors.html" tabindex="-1">
-    Screen Protectors
-   </a>
-
-   <a class="category-link" href="phone-covers.html" tabindex="-1">
-    Phone Covers
-   </a>
-
-   <a class="category-link" href="laptop-accessories.html" tabindex="-1">
-    Laptop Accessories
-   </a>
-
-   <a class="category-link" href="other-gadgets.html" tabindex="-1">
-    Other Gadgets
-   </a>
+   <a class="category-link" href="shop.html" tabindex="-1">All Shop</a>
+   <a class="category-link" href="devices.html" tabindex="-1">Laptops &amp; Devices</a>
+   <a class="category-link" href="laptop-bags.html" tabindex="-1">Laptop Bags</a>
+   <a class="category-link" href="laptop-storage.html" tabindex="-1">Storage &amp; Memory</a>
+   <a class="category-link" href="computer-accessories.html" tabindex="-1">Computer Accessories</a>
+   <a class="category-link" href="screen-protectors.html" tabindex="-1">Screen Protectors</a>
+   <a class="category-link" href="phone-covers.html" tabindex="-1">Phone Covers</a>
+   <a class="category-link" href="laptop-accessories.html" tabindex="-1">Laptop Accessories</a>
+   <a class="category-link" href="other-gadgets.html" tabindex="-1">Other Gadgets</a>
 
   </div>
 
@@ -1136,9 +915,7 @@ button,a{
 
 <main>
 
-<!-- =========================
-     HERO SECTION
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1146,13 +923,9 @@ button,a{
 
   <div>
 
-   <div class="eyebrow">
-    The Street Gadgets Store
-   </div>
+   <div class="eyebrow">The Street Gadgets Store</div>
 
-   <h1>
-    Technology for <span>everyday life.</span>
-   </h1>
+   <h1>Technology for <span>everyday life.</span></h1>
 
    <p class="hero-text">
     Discover laptops, phones, chargers, cables, storage,
@@ -1178,13 +951,9 @@ button,a{
    </div>
 
    <div class="hero-trust">
-
     <span>Helpful product guidance</span>
-
     <span>Delivery arrangements across Kenya</span>
-
     <span>Based in Nairobi</span>
-
    </div>
 
   </div>
@@ -1206,9 +975,7 @@ button,a{
 
 </section>
 
-<!-- =========================
-     FEATURED PRODUCTS
-========================= -->
+<!-- FEATURED PRODUCTS -->
 
 <section class="section" id="featured">
 
@@ -1217,18 +984,12 @@ button,a{
   <div class="section-heading">
 
    <div>
-
-    <div class="eyebrow">
-     Selected for you
-    </div>
-
+    <div class="eyebrow">Selected for you</div>
     <h2>Featured Products</h2>
-
     <p>
      Explore selected laptops, accessories and smart gadgets.
      Contact us to confirm availability before ordering.
     </p>
-
    </div>
 
    <a class="text-link" href="#categories">
@@ -1239,36 +1000,23 @@ button,a{
 
   <div class="featured-grid">
 
-   <!-- HP ELITEBOOK 745 G6 -->
-
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="HP%20745%20G6%20RYZEN%207.JPG"
       alt="HP EliteBook 745 G6 Ryzen 7 laptop"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Business Laptop</span>
-
      <h3>HP EliteBook 745 G6 Ryzen 7</h3>
-
-     <p>
-      Ryzen 7 processor, 16GB RAM and 512GB SSD.
-     </p>
-
-     <div class="price">
-      KES 47,500
-     </div>
+     <p>Ryzen 7 processor, 16GB RAM and 512GB SSD.</p>
+     <div class="price">KES 47,500</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20745%20G6%20Ryzen%207%20listed%20at%20KES%2047%2C500."
@@ -1276,43 +1024,28 @@ button,a{
        rel="noopener">
        Ask on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
 
-   <!-- HP ELITEBOOK 840 G5 -->
-
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="HP%20840%20g5.jpeg"
       alt="HP EliteBook 840 G5 laptop"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Business Laptop</span>
-
      <h3>HP EliteBook 840 G5</h3>
-
-     <p>
-      Intel Core i5 8th generation, 8GB RAM and 256GB SSD.
-     </p>
-
-     <div class="price">
-      KES 27,500
-     </div>
+     <p>Intel Core i5 8th generation, 8GB RAM and 256GB SSD.</p>
+     <div class="price">KES 27,500</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20I%20am%20interested%20in%20the%20HP%20EliteBook%20840%20G5%20listed%20at%20KES%2027%2C500."
@@ -1320,43 +1053,28 @@ button,a{
        rel="noopener">
        Ask on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
 
-   <!-- SAMSUNG 25W CHARGER -->
-
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="Samsung%2025W.jpeg"
       alt="Samsung 25W phone charger"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Charging</span>
-
      <h3>Samsung 25W Charger</h3>
-
-     <p>
-      Ask us about compatibility and current availability.
-     </p>
-
-     <div class="price">
-      Ask for price
-     </div>
+     <p>Ask us about compatibility and current availability.</p>
+     <div class="price">Ask for price</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20please%20tell%20me%20the%20price%20and%20availability%20of%20the%20Samsung%2025W%20charger."
@@ -1364,43 +1082,28 @@ button,a{
        rel="noopener">
        Ask for Price
       </a>
-
      </div>
-
     </div>
 
    </article>
 
-   <!-- ORAIMO 6 LITE SMARTWATCH -->
-
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="Oraimo%206%20Lite.jpeg"
       alt="Oraimo 6 Lite smartwatch"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Smart Gadget</span>
-
      <h3>Oraimo 6 Lite Smartwatch</h3>
-
-     <p>
-      Ask about available colours, features and current price.
-     </p>
-
-     <div class="price">
-      Ask for price
-     </div>
+     <p>Ask about available colours, features and current price.</p>
+     <div class="price">Ask for price</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20the%20Oraimo%206%20Lite%20smartwatch."
@@ -1408,9 +1111,7 @@ button,a{
        rel="noopener">
        Ask on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1420,32 +1121,23 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="normal-data-cable.jpg"
       alt="Normal phone data and charging cable"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Phone Accessory</span>
-
      <h3>Normal Data Cable</h3>
-
      <p>
       A practical everyday cable for compatible phones and
       devices. Confirm the connector type before ordering.
      </p>
-
-     <div class="price">
-      KES 150
-     </div>
+     <div class="price">KES 150</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20would%20like%20to%20buy%20the%20normal%20data%20cable%20listed%20at%20KES%20150."
@@ -1453,9 +1145,7 @@ button,a{
        rel="noopener">
        Order on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1465,31 +1155,20 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="oraimo-spacebuds-lite.jpg"
       alt="Oraimo SpaceBuds Lite wireless earbuds"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Wireless Audio</span>
-
      <h3>Oraimo SpaceBuds Lite</h3>
-
-     <p>
-      Wireless earbuds for music, calls and everyday listening.
-     </p>
-
-     <div class="price">
-      KES 2,500
-     </div>
+     <p>Wireless earbuds for music, calls and everyday listening.</p>
+     <div class="price">KES 2,500</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20SpaceBuds%20Lite%20at%20KES%202%2C500."
@@ -1497,9 +1176,7 @@ button,a{
        rel="noopener">
        Order on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1509,32 +1186,23 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="oraimo-boompop-pro.jpg"
       alt="Oraimo BoomPop Pro headphones"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Wireless Audio</span>
-
      <h3>Oraimo BoomPop Pro Headphones</h3>
-
      <p>
       Over-ear headphones for listening to music and enjoying
       audio on the go.
      </p>
-
-     <div class="price">
-      KES 6,500
-     </div>
+     <div class="price">KES 6,500</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20BoomPop%20Pro%20Headphones%20at%20KES%206%2C500."
@@ -1542,9 +1210,7 @@ button,a{
        rel="noopener">
        Order on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1554,31 +1220,20 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="oraimo-necklace-5.jpg"
       alt="Oraimo Necklace 5 wireless neckband earphones"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Wireless Audio</span>
-
      <h3>Oraimo Necklace 5</h3>
-
-     <p>
-      Neckband-style wireless earphones for everyday listening.
-     </p>
-
-     <div class="price">
-      KES 4,750
-     </div>
+     <p>Neckband-style wireless earphones for everyday listening.</p>
+     <div class="price">KES 4,750</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20am%20interested%20in%20the%20Oraimo%20Necklace%205%20at%20KES%204%2C750."
@@ -1586,9 +1241,7 @@ button,a{
        rel="noopener">
        Order on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1598,31 +1251,20 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="laptop-bag-1.jpg"
       alt="Laptop bag"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Laptop Accessory</span>
-
      <h3>Laptop Bags</h3>
-
-     <p>
-      Choose from different designs and sizes.
-     </p>
-
-     <div class="price">
-      From KES 1,000
-     </div>
+     <p>Choose from different designs and sizes.</p>
+     <div class="price">From KES 1,000</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20please%20show%20me%20your%20available%20laptop%20bags."
@@ -1630,9 +1272,7 @@ button,a{
        rel="noopener">
        View Bags
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1642,31 +1282,20 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="nvme-ssd.jpg"
       alt="NVMe SSD storage drive"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Storage</span>
-
      <h3>SSD Storage</h3>
-
-     <p>
-      Upgrade your computer with faster storage.
-     </p>
-
-     <div class="price">
-      From KES 7,500
-     </div>
+     <p>Upgrade your computer with faster storage.</p>
+     <div class="price">From KES 7,500</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20NVMe%20and%20SATA%20SSDs."
@@ -1674,9 +1303,7 @@ button,a{
        rel="noopener">
        Ask on WhatsApp
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1686,31 +1313,20 @@ button,a{
    <article class="product-card">
 
     <div class="product-image">
-
      <img
       src="wireless-mouse.jpg"
       alt="Wireless computer mouse"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="product-info">
-
      <span class="tag">Computer Accessory</span>
-
      <h3>Wireless Mouse</h3>
-
-     <p>
-      Ask us about available computer accessories.
-     </p>
-
-     <div class="price">
-      Ask for price
-     </div>
+     <p>Ask us about available computer accessories.</p>
+     <div class="price">Ask for price</div>
 
      <div class="product-actions">
-
       <a
        class="btn btn-whatsapp"
        href="https://wa.me/254114259961?text=Hello%2C%20please%20tell%20me%20about%20your%20wireless%20mouse%20options."
@@ -1718,9 +1334,7 @@ button,a{
        rel="noopener">
        Ask for Price
       </a>
-
      </div>
-
     </div>
 
    </article>
@@ -1731,9 +1345,7 @@ button,a{
 
 </section>
 
-<!-- =========================
-     SHOP CATEGORIES
-========================= -->
+<!-- SHOP CATEGORIES -->
 
 <section class="section section-light" id="categories">
 
@@ -1742,273 +1354,185 @@ button,a{
   <div class="section-heading">
 
    <div>
-
-    <div class="eyebrow">
-     Shop by category
-    </div>
-
+    <div class="eyebrow">Shop by category</div>
     <h2>Explore Our Shop</h2>
-
     <p>
      Find the technology and accessories you need. Open a
      category to see more products, or message us if you
      cannot find what you want.
     </p>
-
    </div>
 
   </div>
 
   <div class="category-grid">
 
-   <!-- DEVICES -->
-
    <a class="category-card" href="devices.html">
 
     <div class="category-image">
-
      <img
       src="HP%20745%20G6%20RYZEN%207.JPG"
       alt="Laptops and devices"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Laptops &amp; Devices</h3>
-
      <p>
       Explore laptops and selected devices for work, study
       and everyday use.
      </p>
-
-     <span class="btn btn-primary">
-      Explore Devices →
-     </span>
-
+     <span class="btn btn-primary">Explore Devices →</span>
     </div>
 
    </a>
 
-   <!-- LAPTOP BAGS -->
-
    <a class="category-card" href="laptop-bags.html">
 
     <div class="category-image">
-
      <img
       src="laptop-bag-1.jpg"
       alt="Laptop bags"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Laptop Bags</h3>
-
      <p>
       Carry and protect your laptop with practical bags in
       different styles.
      </p>
-
-     <span class="btn btn-primary">
-      Shop Laptop Bags →
-     </span>
-
+     <span class="btn btn-primary">Shop Laptop Bags →</span>
     </div>
 
    </a>
 
-   <!-- STORAGE AND MEMORY -->
-
    <a class="category-card" href="laptop-storage.html">
 
     <div class="category-image">
-
      <img
       src="nvme-ssd.jpg"
       alt="Laptop storage and memory"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Storage &amp; Memory</h3>
-
      <p>
       Explore SSDs, HDDs, RAM, external storage and memory
       products.
      </p>
-
-     <span class="btn btn-primary">
-      Explore Storage →
-     </span>
-
+     <span class="btn btn-primary">Explore Storage →</span>
     </div>
 
    </a>
 
-   <!-- COMPUTER ACCESSORIES -->
-
    <a class="category-card" href="computer-accessories.html">
 
     <div class="category-image">
-
      <img
       src="wireless-mouse.jpg"
       alt="Computer and laptop accessories"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Computer / Laptop Accessories</h3>
-
      <p>
       Find mice, keyboards, cleaning products, dongles and
       more.
      </p>
-
-     <span class="btn btn-primary">
-      Browse Accessories →
-     </span>
-
+     <span class="btn btn-primary">Browse Accessories →</span>
     </div>
 
    </a>
 
-   <!-- SCREEN PROTECTORS -->
-
    <a class="category-card" href="screen-protectors.html">
 
     <div class="category-image">
-
      <img
       src="iPhone%202024%20Pro%20Max%20Privacy.jpeg"
       alt="Phone screen protection"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Screen Protectors</h3>
-
      <p>
       Ask about screen protection options for your phone model.
      </p>
-
-     <span class="btn btn-primary">
-      Explore Protection →
-     </span>
-
+     <span class="btn btn-primary">Explore Protection →</span>
     </div>
 
    </a>
 
-   <!-- PHONE COVERS -->
-
    <a class="category-card" href="phone-covers.html">
 
     <div class="category-image">
-
      <img
       src="iPhone%202024%20Pro%20Max%20Privacy.jpeg"
       alt="Phone protection and covers"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Phone Covers</h3>
-
      <p>
       Explore phone protection options and ask about your
       specific model.
      </p>
-
-     <span class="btn btn-primary">
-      Browse Phone Covers →
-     </span>
-
+     <span class="btn btn-primary">Browse Phone Covers →</span>
     </div>
 
    </a>
 
-   <!-- LAPTOP ACCESSORIES -->
-
    <a class="category-card" href="laptop-accessories.html">
 
     <div class="category-image">
-
      <img
       src="laptop-bag-1.jpg"
       alt="Laptop accessories"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Laptop Accessories</h3>
-
      <p>
       Discover useful add-ons and accessories for your laptop
       setup.
      </p>
-
-     <span class="btn btn-primary">
-      Shop Laptop Accessories →
-     </span>
-
+     <span class="btn btn-primary">Shop Laptop Accessories →</span>
     </div>
 
    </a>
 
-   <!-- OTHER GADGETS -->
-
    <a class="category-card" href="other-gadgets.html">
 
     <div class="category-image">
-
      <img
       src="oraimo-spacebuds-lite.jpg"
       alt="Oraimo wireless earbuds and other gadgets"
       loading="lazy"
       onerror="this.onerror=null;this.src='Logo.png'">
-
     </div>
 
     <div class="category-content">
-
      <h3>Other Gadgets</h3>
-
      <p>
       Explore wireless earbuds, headphones, neckbands,
       smartwatches and useful everyday gadgets.
      </p>
-
-     <span class="btn btn-primary">
-      Explore Gadgets →
-     </span>
-
+     <span class="btn btn-primary">Explore Gadgets →</span>
     </div>
 
    </a>
-
-   <!-- PRODUCT ENQUIRIES -->
 
    <a
     class="category-card"
@@ -2017,27 +1541,19 @@ button,a{
     rel="noopener">
 
     <div class="category-image">
-
      <img
       src="Logo.png"
       alt="Street Gadgets Care product enquiries"
       loading="lazy">
-
     </div>
 
     <div class="category-content">
-
      <h3>Can't Find It?</h3>
-
      <p>
       Not seeing what you need? Tell us the product or model
       and we'll help you enquire.
      </p>
-
-     <span class="btn btn-whatsapp">
-      Ask Us on WhatsApp →
-     </span>
-
+     <span class="btn btn-whatsapp">Ask Us on WhatsApp →</span>
     </div>
 
    </a>
@@ -2048,22 +1564,17 @@ button,a{
 
 </section>
 
-<!-- =========================
-     NOT IN STOCK
-========================= -->
+<!-- NOT IN STOCK -->
 
 <section class="promo-strip">
 
  <div class="container promo-inner">
 
   <div>
-
    <h2>Not in stock? Ask us.</h2>
-
    <p>
     Tell us what you need and we'll help you check availability.
    </p>
-
   </div>
 
   <a
@@ -2078,9 +1589,7 @@ button,a{
 
 </section>
 
-<!-- =========================
-     CUSTOMER ASSISTANCE
-========================= -->
+<!-- CUSTOMER ASSISTANCE -->
 
 <section class="section">
 
@@ -2089,18 +1598,12 @@ button,a{
   <div class="section-heading">
 
    <div>
-
-    <div class="eyebrow">
-     Personal assistance
-    </div>
-
+    <div class="eyebrow">Personal assistance</div>
     <h2>Need help choosing?</h2>
-
     <p>
      We can help you enquire about compatibility, pricing
      and availability before you make a purchase.
     </p>
-
    </div>
 
   </div>
@@ -2150,9 +1653,7 @@ button,a{
 
 </main>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer class="site-footer">
 
@@ -2163,12 +1664,10 @@ button,a{
    <div class="footer-brand">
 
     <a href="index.html">
-
      <img
       src="Logo.png"
       alt="Street Gadgets Care logo"
       loading="lazy">
-
     </a>
 
     <p>
@@ -2185,17 +1684,11 @@ button,a{
     <h3>Quick Links</h3>
 
     <a href="index.html">Home</a>
-
     <a href="about.html">About Us</a>
-
     <a href="services.html">Our Services</a>
-
     <a href="spare-parts.html">Spare Parts</a>
-
     <a href="shop.html">Shop All Products</a>
-
     <a href="creative-studio.html">Creative Studio</a>
-
     <a href="contact.html">Contact Us</a>
 
    </div>
@@ -2205,7 +1698,6 @@ button,a{
     <h3>Contact Us</h3>
 
     <p>Nairobi, Kenya</p>
-
     <p>Phone: 0114259961</p>
 
     <a
@@ -2224,6 +1716,13 @@ button,a{
      target="_blank"
      rel="noopener">
      TikTok
+    </a>
+
+    <a
+     href="https://www.youtube.com/@streetgadgetscare"
+     target="_blank"
+     rel="noopener">
+     YouTube
     </a>
 
    </div>
@@ -2246,9 +1745,7 @@ button,a{
 
 </footer>
 
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
+<!-- FLOATING WHATSAPP -->
 
 <a
  class="floating-whatsapp"
@@ -2256,14 +1753,8 @@ button,a{
  target="_blank"
  rel="noopener"
  aria-label="Chat with Street Gadgets Care on WhatsApp">
-
  ✆
-
 </a>
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
 
 <script>
 (function(){
@@ -2271,8 +1762,6 @@ button,a{
  const menuToggle = document.getElementById("menuToggle");
  const mainNav = document.getElementById("mainNav");
  const categoryWrap = document.getElementById("categoryWrap");
-
- /* MOBILE NAVIGATION */
 
  function closeMenu(){
 
@@ -2285,6 +1774,8 @@ button,a{
   menuToggle.setAttribute("aria-label","Open navigation menu");
 
  }
+
+ /* MOBILE NAVIGATION */
 
  if(menuToggle && mainNav){
 
@@ -2328,9 +1819,7 @@ button,a{
   document.addEventListener("keydown",function(event){
 
    if(event.key === "Escape"){
-
     closeMenu();
-
    }
 
   });
@@ -2346,7 +1835,6 @@ button,a{
   categoryWrap.addEventListener("touchstart",function(){
 
    categoryWrap.classList.add("paused");
-
    clearTimeout(touchTimer);
 
   },{passive:true});
@@ -2383,14 +1871,12 @@ button,a{
 
  }
 
- /* AUTOMATIC COPYRIGHT YEAR */
+ /* COPYRIGHT YEAR */
 
  const year = document.getElementById("year");
 
  if(year){
-
   year.textContent = new Date().getFullYear();
-
  }
 
 })();
