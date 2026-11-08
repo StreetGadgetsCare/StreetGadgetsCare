@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +18,15 @@
     >
 
     <meta name="author" content="Street Gadgets Care">
+    <meta name="theme-color" content="#0b1220">
+
+    <link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/about.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Street Gadgets Care | Technology with Care">
+    <meta property="og:description" content="Get to know Street Gadgets Care, a Nairobi-based technology, repair, accessories and creative support brand serving customers across Kenya.">
+    <meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/about.html">
+    <meta property="og:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
 
     <style>
 
@@ -37,11 +45,14 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
             color: #0b1220;
             background: #ffffff;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.65;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         img {
@@ -52,6 +63,16 @@
         a {
             text-decoration: none;
             color: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(25,167,206,0.75);
+            outline-offset: 3px;
+        }
+
+        section[id] {
+            scroll-margin-top: 90px;
         }
 
         :root {
@@ -111,8 +132,8 @@
         nav a {
             color: #ffffff;
 
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 13px;
+            font-weight: 650;
 
             white-space: nowrap;
 
@@ -239,8 +260,8 @@
         .section-text {
             color: var(--muted);
 
-            font-size: 15px;
-            line-height: 1.8;
+            font-size: 16px;
+            line-height: 1.75;
         }
 
         .button {
@@ -255,8 +276,8 @@
 
             border-radius: 7px;
 
-            font-size: 13px;
-            font-weight: 800;
+            font-size: 14px;
+            font-weight: 750;
 
             transition:
                 background 0.25s ease,
@@ -455,9 +476,9 @@
         }
 
         .hero-location {
-            color: #8d9aaa;
+            color: #aab7c5;
 
-            font-size: 12px;
+            font-size: 13px;
         }
 
 
@@ -537,7 +558,7 @@
 
             border-radius: 7px;
 
-            font-size: 9px;
+            font-size: 10px;
             font-weight: 900;
 
             letter-spacing: 0.7px;
@@ -592,8 +613,8 @@
 
             color: var(--muted);
 
-            font-size: 15px;
-            line-height: 1.85;
+            font-size: 16px;
+            line-height: 1.8;
 
             margin-bottom: 17px;
         }
@@ -681,8 +702,8 @@
         .who-highlight p {
             color: var(--muted);
 
-            font-size: 13px;
-            line-height: 1.8;
+            font-size: 14px;
+            line-height: 1.75;
 
             margin: 0;
         }
@@ -723,8 +744,8 @@
 
             color: var(--muted);
 
-            font-size: 15px;
-            line-height: 1.85;
+            font-size: 16px;
+            line-height: 1.8;
 
             margin-bottom: 15px;
         }
@@ -962,7 +983,7 @@
         .identity-card p {
             color: var(--muted);
 
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.75;
 
             margin-bottom: 19px;
@@ -1041,7 +1062,7 @@
         .approach-card p {
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.7;
         }
 
@@ -1081,7 +1102,7 @@
 
             color: var(--muted);
 
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.8;
         }
 
@@ -1130,7 +1151,7 @@
         .value-item p {
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.7;
         }
 
@@ -1373,8 +1394,8 @@
 
             color: #8f9baa;
 
-            font-size: 12px;
-            line-height: 1.7;
+            font-size: 13px;
+            line-height: 1.75;
         }
 
         .footer-column h4 {
@@ -1386,15 +1407,18 @@
             margin-bottom: 17px;
         }
 
-        .footer-column a {
+        .footer-column a,
+        .footer-column span {
             display: block;
 
             color: #8f9baa;
 
-            font-size: 12px;
+            font-size: 13px;
 
-            margin-bottom: 8px;
+            margin-bottom: 9px;
+        }
 
+        .footer-column a {
             transition: color 0.2s ease;
         }
 
@@ -1413,7 +1437,8 @@
 
             color: #697584;
 
-            font-size: 11px;
+            font-size: 12px;
+            line-height: 1.6;
         }
 
 
@@ -1651,9 +1676,8 @@
             }
 
             .about-hero h1 {
-                font-size: 45px;
-
-                letter-spacing: -2px;
+                font-size: clamp(39px, 10vw, 48px);
+                letter-spacing: -1.8px;
             }
 
             .about-hero-text {
@@ -1687,7 +1711,7 @@
             .visual-badge {
                 padding: 8px 10px;
 
-                font-size: 8px;
+                font-size: 9px;
             }
 
             .visual-badge.one {
@@ -1822,16 +1846,12 @@
                 Services
             </a>
 
-            <a href="tech-repairs.html">
-                Tech Repairs
-            </a>
-
-            <a href="shop.html">
-                Shop
+            <a href="spare-parts.html">
+                Spare Parts
             </a>
 
             <a href="creative-studio.html">
-                Creative Studio
+                Creative
             </a>
 
             <a
@@ -1883,10 +1903,10 @@
             <div class="hero-buttons">
 
                 <a
-                    href="tech-repairs.html"
+                    href="spare-parts.html"
                     class="button button-primary"
                 >
-                    Explore Tech Repairs →
+                    Explore Spare Parts →
                 </a>
 
 
@@ -2163,10 +2183,10 @@
 
 
                 <a
-                    href="tech-repairs.html"
+                    href="spare-parts.html"
                     class="identity-link"
                 >
-                    Explore Tech Repairs →
+                    Explore Spare Parts →
                 </a>
 
             </div>
@@ -2193,10 +2213,10 @@
 
 
                 <a
-                    href="shop.html"
+                    href="spare-parts.html"
                     class="identity-link"
                 >
-                    Explore Our Shop →
+                    Explore Spare Parts →
                 </a>
 
             </div>
@@ -2227,7 +2247,7 @@
                     href="creative-studio.html"
                     class="identity-link"
                 >
-                    Visit Creative Studio →
+                    Visit Creative →
                 </a>
 
             </div>
@@ -2604,18 +2624,18 @@
         <div class="final-buttons">
 
             <a
-                href="tech-repairs.html"
+                href="spare-parts.html"
                 class="button button-dark"
             >
-                Tech Repairs
+                Spare Parts
             </a>
 
 
             <a
-                href="shop.html"
+                href="spare-parts.html"
                 class="button button-outline"
             >
-                Visit Shop
+                Spare Parts
             </a>
 
 
@@ -2623,7 +2643,7 @@
                 href="creative-studio.html"
                 class="button button-outline"
             >
-                Creative Studio
+                Creative
             </a>
 
 
@@ -2692,16 +2712,12 @@
                     Services
                 </a>
 
-                <a href="tech-repairs.html">
-                    Tech Repairs
-                </a>
-
-                <a href="shop.html">
-                    Shop
+                <a href="spare-parts.html">
+                    Spare Parts
                 </a>
 
                 <a href="creative-studio.html">
-                    Creative Studio
+                    Creative
                 </a>
 
                 <a href="contact.html">
@@ -2737,9 +2753,9 @@
                 </a>
 
 
-                <a href="#">
+                <span>
                     Nairobi, Kenya
-                </a>
+                </span>
 
             </div>
 
@@ -2866,6 +2882,31 @@
     });
 
 
+    /* Close the mobile menu with the Escape key */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            mainNavigation.classList.remove("nav-open");
+
+            menuToggle.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
+
+
     /* Reset navigation when returning to desktop */
 
     window.addEventListener("resize", function () {
@@ -2895,4 +2936,3 @@
 
 </body>
 </html>
-```
