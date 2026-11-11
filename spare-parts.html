@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,139 +10,751 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/spare-parts.html">
   <link rel="icon" type="image/png" href="Logo.png">
+
   <style>
-    :root{
-      --navy:#0b1220;--navy2:#14233a;--cyan:#19a7ce;--cyan-dark:#1185a7;
-      --green:#25d366;--text:#172033;--muted:#687385;--light:#f5f7fa;
-      --border:#e2e7ed;--white:#fff;--shadow:0 12px 32px rgba(11,18,32,.08)
+    :root {
+      --navy:#0b1220;
+      --navy2:#14233a;
+      --cyan:#19a7ce;
+      --cyan-dark:#1185a7;
+      --green:#25d366;
+      --text:#172033;
+      --muted:#687385;
+      --light:#f5f7fa;
+      --border:#e2e7ed;
+      --white:#fff;
+      --shadow:0 12px 32px rgba(11,18,32,.08);
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:100px}
-    body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.6;overflow-x:hidden}
-    img{display:block;max-width:100%}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(1160px,100%);margin:auto;padding:0 22px}
-    header{position:sticky;top:0;z-index:1000;background:var(--navy);color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.16)}
-    .nav-container{width:min(1200px,100%);min-height:76px;margin:auto;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand-link{display:flex;align-items:center;gap:11px;flex-shrink:0}
-    .brand-link img{width:53px;height:53px;object-fit:contain}
-    .brand-copy strong{display:block;font-size:14px;letter-spacing:.6px;line-height:1.2}
-    .brand-copy span{display:block;margin-top:4px;color:#aebdce;font-size:9px;font-weight:700;letter-spacing:1.2px}
-    nav{display:flex;align-items:center;gap:17px}
-    nav a{color:#fff;font-size:13px;font-weight:700;white-space:nowrap}
-    nav a:hover,nav a.active{color:var(--cyan)}
-    nav a.nav-cta{padding:10px 15px;border-radius:7px;background:var(--cyan);color:#fff}
-    .menu-toggle{display:none;width:43px;height:43px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid #ffffff33;border-radius:8px;background:transparent;cursor:pointer}
-    .menu-toggle span{width:21px;height:2px;background:#fff;border-radius:5px}
-    main{padding:48px 0 68px}
-    .page-heading{margin:0 auto 30px;text-align:center}
-    .page-heading h1{color:var(--navy);font-size:clamp(28px,4vw,42px);line-height:1.18;letter-spacing:-.7px}
-    .brand-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:0 auto 42px}
-    .brand-nav a{padding:9px 15px;border:1px solid #dce4ec;border-radius:30px;background:#fff;color:var(--navy);font-size:12px;font-weight:800;transition:.2s}
-    .brand-nav a:hover{border-color:var(--cyan);background:var(--cyan);color:#fff}
-    .brand-section{margin:0 auto 52px;scroll-margin-top:105px}
-    .brand-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--border)}
-    .brand-heading h2{color:var(--navy);font-size:25px;line-height:1.2}
-    .brand-heading span{color:var(--muted);font-size:12px}
-    .parts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .part-card{min-width:0;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--border);border-radius:14px;background:#fff;box-shadow:0 7px 22px rgba(11,18,32,.045);transition:transform .2s ease,box-shadow .2s ease}
-    .part-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-    .part-image{height:220px;padding:13px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef2f6,#fff);border-bottom:1px solid #e7ebf0}
-    .part-image img{width:100%;height:100%;object-fit:contain}
-    .empty-image{font-size:12px;color:var(--muted);text-align:center;padding:14px;overflow-wrap:anywhere}
-    .part-info{padding:17px;display:flex;flex-direction:column;flex:1}
-    .part-label{align-self:flex-start;margin-bottom:8px;padding:5px 9px;border-radius:30px;background:#eaf8fc;color:var(--cyan-dark);font-size:10px;font-weight:800;letter-spacing:.55px;text-transform:uppercase}
-    .part-info h3{margin-bottom:9px;color:var(--navy);font-size:17px;line-height:1.35}
-    .part-description{min-height:76px;margin-bottom:15px;color:var(--muted);font-size:12px;line-height:1.75}
-    .part-meta{display:grid;gap:6px;margin:0 0 16px;padding:11px 12px;border-radius:9px;background:#f7f9fb}
-    .part-meta span{font-size:11px;color:#526074}
-    .part-meta strong{color:var(--navy)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin-top:auto;padding:11px 15px;border-radius:8px;background:var(--green);color:#fff;font-size:12px;font-weight:800;text-align:center;transition:filter .2s}
-    .btn:hover{filter:brightness(.94)}
-    footer{background:#070d17;color:#fff;padding:30px 22px}
-    .footer-inner{width:min(1160px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
-    .footer-brand{display:flex;align-items:center;gap:12px}
-    .footer-brand img{width:48px;height:48px;object-fit:contain}
-    .footer-brand strong{display:block;font-size:13px}
-    .footer-brand p{margin-top:3px;color:#bdc7d4;font-size:11px}
-    .footer-links{display:flex;flex-wrap:wrap;gap:15px}
-    .footer-links a{font-size:12px;color:#e7edf5}
-    .footer-links a:hover{color:var(--cyan)}
-    a:focus-visible,button:focus-visible{outline:3px solid #65d8f5;outline-offset:3px}
-    @media(max-width:950px){nav{gap:11px}nav a{font-size:12px}.parts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:760px){
-      .nav-container{min-height:68px;padding:8px 16px}
-      .brand-link img{width:47px;height:47px}
-      .brand-copy strong{font-size:12px}
-      .brand-copy span{font-size:8px}
-      .menu-toggle{display:flex}
-      nav{display:none;position:absolute;top:100%;left:0;right:0;padding:12px 18px 18px;background:var(--navy);align-items:stretch;flex-direction:column;gap:0;border-top:1px solid #ffffff1c}
-      nav.open{display:flex}
-      nav a{padding:12px 4px;border-bottom:1px solid #ffffff12;font-size:14px}
-      nav a.nav-cta{margin-top:10px;text-align:center}
-      main{padding:35px 0 48px}
-      .container{padding:0 16px}
-      .page-heading{margin-bottom:23px}
-      .brand-nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:2px 1px 12px;margin-bottom:30px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-      .brand-nav a{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start}
-      .brand-heading h2{font-size:21px}
-      .parts-grid{display:flex;flex-wrap:nowrap;gap:14px;overflow-x:auto;overflow-y:hidden;padding:4px 2px 16px;scroll-snap-type:x mandatory;scroll-padding-left:2px;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--cyan) #e8edf3}
-      .parts-grid>.part-card{flex:0 0 82%;width:82%;max-width:330px;scroll-snap-align:start}
-      .part-card:hover{transform:none}
-      .part-image{height:195px}
-      .part-info{padding:14px}
-      .part-description{min-height:0;font-size:12px}
-      .footer-inner{align-items:flex-start;flex-direction:column}
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
-    @media(max-width:390px){.parts-grid>.part-card{flex-basis:88%;width:88%}.part-image{height:185px}.brand-heading h2{font-size:19px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+    html {
+      scroll-behavior:smooth;
+      scroll-padding-top:100px;
+    }
+
+    body {
+      font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;
+      background:var(--light);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    img {
+      display:block;
+      max-width:100%;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container {
+      width:min(1160px,100%);
+      margin:auto;
+      padding:0 22px;
+    }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:var(--navy);
+      color:#fff;
+      box-shadow:0 4px 20px rgba(0,0,0,.16);
+    }
+
+    .nav-container {
+      width:min(1200px,100%);
+      min-height:76px;
+      margin:auto;
+      padding:10px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand-link {
+      display:flex;
+      align-items:center;
+      gap:11px;
+      flex-shrink:0;
+    }
+
+    .brand-link img {
+      width:53px;
+      height:53px;
+      object-fit:contain;
+    }
+
+    .brand-copy strong {
+      display:block;
+      font-size:14px;
+      letter-spacing:.6px;
+      line-height:1.2;
+    }
+
+    .brand-copy span {
+      display:block;
+      margin-top:4px;
+      color:#aebdce;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:1.2px;
+    }
+
+    header nav {
+      display:flex;
+      align-items:center;
+      gap:17px;
+    }
+
+    header nav a {
+      color:#fff;
+      font-size:13px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    header nav a:hover,
+    header nav a.active {
+      color:var(--cyan);
+    }
+
+    header nav a.nav-cta {
+      padding:10px 15px;
+      border-radius:7px;
+      background:var(--cyan);
+      color:#fff;
+    }
+
+    .menu-toggle {
+      display:none;
+      width:43px;
+      height:43px;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+      border:1px solid #ffffff33;
+      border-radius:8px;
+      background:transparent;
+      cursor:pointer;
+    }
+
+    .menu-toggle span {
+      width:21px;
+      height:2px;
+      background:#fff;
+      border-radius:5px;
+    }
+
+    main {
+      padding:48px 0 68px;
+    }
+
+    .page-heading {
+      margin:0 auto 30px;
+      text-align:center;
+    }
+
+    .page-heading h1 {
+      color:var(--navy);
+      font-size:clamp(28px,4vw,42px);
+      line-height:1.18;
+      letter-spacing:-.7px;
+    }
+
+    /* BRAND NAVIGATION */
+
+    .brand-nav {
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:9px;
+      margin:0 auto 42px;
+    }
+
+    .brand-nav a {
+      padding:9px 15px;
+      border:1px solid #dce4ec;
+      border-radius:30px;
+      background:#fff;
+      color:var(--navy);
+      font-size:12px;
+      font-weight:800;
+      transition:.2s;
+    }
+
+    .brand-nav a:hover {
+      border-color:var(--cyan);
+      background:var(--cyan);
+      color:#fff;
+    }
+
+    /* BRAND SECTIONS */
+
+    .brand-section {
+      margin:0 auto 58px;
+      scroll-margin-top:105px;
+    }
+
+    .brand-heading {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:14px;
+      padding-bottom:12px;
+      border-bottom:2px solid var(--border);
+    }
+
+    .brand-heading h2 {
+      color:var(--navy);
+      font-size:25px;
+      line-height:1.2;
+    }
+
+    .brand-heading span {
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* SERIES NAVIGATION */
+
+    .series-nav {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      overflow-x:auto;
+      padding:2px 1px 13px;
+      margin-bottom:23px;
+      scroll-snap-type:x proximity;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:thin;
+      scrollbar-color:var(--cyan) #e8edf3;
+    }
+
+    .series-nav a {
+      flex:0 0 auto;
+      padding:8px 13px;
+      border:1px solid #dce4ec;
+      border-radius:24px;
+      background:#fff;
+      color:var(--navy);
+      font-size:11px;
+      font-weight:800;
+      white-space:nowrap;
+      scroll-snap-align:start;
+      transition:.2s;
+    }
+
+    .series-nav a:hover {
+      border-color:var(--cyan);
+      background:var(--cyan);
+      color:#fff;
+    }
+
+    .series-section {
+      margin:0 0 34px;
+      scroll-margin-top:110px;
+    }
+
+    .series-heading {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:16px;
+    }
+
+    .series-heading h3 {
+      color:var(--navy2);
+      font-size:19px;
+      line-height:1.3;
+    }
+
+    .series-heading span {
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    /* INDIVIDUAL PHONE MODELS */
+
+    .model-section {
+      margin:0 0 27px;
+      scroll-margin-top:112px;
+    }
+
+    .model-heading {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .model-heading h4 {
+      color:var(--navy);
+      font-size:15px;
+      font-weight:800;
+    }
+
+    .model-heading:after {
+      content:"";
+      height:1px;
+      flex:1;
+      background:var(--border);
+    }
+
+    /* PART CARDS */
+
+    .parts-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .part-card {
+      min-width:0;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:#fff;
+      box-shadow:0 7px 22px rgba(11,18,32,.045);
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+
+    .part-card:hover {
+      transform:translateY(-3px);
+      box-shadow:var(--shadow);
+    }
+
+    .part-image {
+      height:220px;
+      padding:13px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#eef2f6,#fff);
+      border-bottom:1px solid #e7ebf0;
+    }
+
+    .part-image img {
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    .empty-image {
+      font-size:12px;
+      color:var(--muted);
+      text-align:center;
+      padding:14px;
+      overflow-wrap:anywhere;
+    }
+
+    .part-info {
+      padding:17px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+
+    .part-label {
+      align-self:flex-start;
+      margin-bottom:8px;
+      padding:5px 9px;
+      border-radius:30px;
+      background:#eaf8fc;
+      color:var(--cyan-dark);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.55px;
+      text-transform:uppercase;
+    }
+
+    .part-info h3 {
+      margin-bottom:9px;
+      color:var(--navy);
+      font-size:17px;
+      line-height:1.35;
+    }
+
+    .part-description {
+      min-height:76px;
+      margin-bottom:15px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.75;
+    }
+
+    .part-meta {
+      display:grid;
+      gap:6px;
+      margin:0 0 16px;
+      padding:11px 12px;
+      border-radius:9px;
+      background:#f7f9fb;
+    }
+
+    .part-meta span {
+      font-size:11px;
+      color:#526074;
+    }
+
+    .part-meta strong {
+      color:var(--navy);
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:44px;
+      margin-top:auto;
+      padding:11px 15px;
+      border-radius:8px;
+      background:var(--green);
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      text-align:center;
+      transition:filter .2s;
+    }
+
+    .btn:hover {
+      filter:brightness(.94);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background:#070d17;
+      color:#fff;
+      padding:30px 22px;
+    }
+
+    .footer-inner {
+      width:min(1160px,100%);
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+
+    .footer-brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .footer-brand img {
+      width:48px;
+      height:48px;
+      object-fit:contain;
+    }
+
+    .footer-brand strong {
+      display:block;
+      font-size:13px;
+    }
+
+    .footer-brand p {
+      margin-top:3px;
+      color:#bdc7d4;
+      font-size:11px;
+    }
+
+    .footer-links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .footer-links a {
+      font-size:12px;
+      color:#e7edf5;
+    }
+
+    .footer-links a:hover {
+      color:var(--cyan);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline:3px solid #65d8f5;
+      outline-offset:3px;
+    }
+
+    @media(max-width:950px) {
+      header nav {
+        gap:11px;
+      }
+
+      header nav a {
+        font-size:12px;
+      }
+
+      .parts-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media(max-width:760px) {
+      .nav-container {
+        min-height:68px;
+        padding:8px 16px;
+      }
+
+      .brand-link img {
+        width:47px;
+        height:47px;
+      }
+
+      .brand-copy strong {
+        font-size:12px;
+      }
+
+      .brand-copy span {
+        font-size:8px;
+      }
+
+      .menu-toggle {
+        display:flex;
+      }
+
+      header nav {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        padding:12px 18px 18px;
+        background:var(--navy);
+        align-items:stretch;
+        flex-direction:column;
+        gap:0;
+        border-top:1px solid #ffffff1c;
+      }
+
+      header nav.open {
+        display:flex;
+      }
+
+      header nav a {
+        padding:12px 4px;
+        border-bottom:1px solid #ffffff12;
+        font-size:14px;
+      }
+
+      header nav a.nav-cta {
+        margin-top:10px;
+        text-align:center;
+      }
+
+      main {
+        padding:35px 0 48px;
+      }
+
+      .container {
+        padding:0 16px;
+      }
+
+      .page-heading {
+        margin-bottom:23px;
+      }
+
+      .brand-nav {
+        justify-content:flex-start;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        padding:2px 1px 12px;
+        margin-bottom:30px;
+        scroll-snap-type:x proximity;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:thin;
+      }
+
+      .brand-nav a {
+        flex:0 0 auto;
+        white-space:nowrap;
+        scroll-snap-align:start;
+      }
+
+      .brand-heading h2 {
+        font-size:21px;
+      }
+
+      .series-nav {
+        margin-bottom:20px;
+      }
+
+      .series-heading h3 {
+        font-size:17px;
+      }
+
+      .model-heading h4 {
+        font-size:14px;
+      }
+
+      .parts-grid {
+        display:flex;
+        flex-wrap:nowrap;
+        gap:14px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        padding:4px 2px 16px;
+        scroll-snap-type:x mandatory;
+        scroll-padding-left:2px;
+        -webkit-overflow-scrolling:touch;
+        overscroll-behavior-x:contain;
+        scrollbar-width:thin;
+        scrollbar-color:var(--cyan) #e8edf3;
+      }
+
+      .parts-grid>.part-card {
+        flex:0 0 82%;
+        width:82%;
+        max-width:330px;
+        scroll-snap-align:start;
+      }
+
+      .part-card:hover {
+        transform:none;
+      }
+
+      .part-image {
+        height:195px;
+      }
+
+      .part-info {
+        padding:14px;
+      }
+
+      .part-description {
+        min-height:0;
+        font-size:12px;
+      }
+
+      .footer-inner {
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:390px) {
+      .parts-grid>.part-card {
+        flex-basis:88%;
+        width:88%;
+      }
+
+      .part-image {
+        height:185px;
+      }
+
+      .brand-heading h2 {
+        font-size:19px;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition:none!important;
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <header>
   <div class="nav-container">
+
     <a href="index.html" class="brand-link" aria-label="Street Gadgets Care Home">
       <img src="Logo.png" alt="Street Gadgets Care logo">
-      <span class="brand-copy"><strong>STREET GADGETS CARE</strong><span>REPAIR • PARTS • CREATE</span></span>
+
+      <span class="brand-copy">
+        <strong>STREET GADGETS CARE</strong>
+        <span>REPAIR • PARTS • CREATE</span>
+      </span>
     </a>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNavigation">
-      <span></span><span></span><span></span>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNavigation">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
+
     <nav id="mainNavigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="spare-parts.html" class="active" aria-current="page">Spare Parts</a>
+      <a href="shop.html">Shop</a>
       <a href="creative-studio.html">Creative</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
+
   </div>
 </header>
 
 <main>
   <div class="container">
+
     <div class="page-heading">
       <h1>Replacement parts for selected smartphone models</h1>
     </div>
+
     <nav class="brand-nav" id="brandNav" aria-label="Jump to phone brand"></nav>
+
     <div id="brandCatalogues"></div>
+
   </div>
 </main>
 
 <footer>
   <div class="footer-inner">
+
     <div class="footer-brand">
       <img src="Logo.png" alt="Street Gadgets Care logo">
-      <div><strong>STREET GADGETS CARE</strong><p>Phone replacement parts and repair support in Nairobi, Kenya.</p></div>
+
+      <div>
+        <strong>STREET GADGETS CARE</strong>
+        <p>Phone replacement parts and repair support in Nairobi, Kenya.</p>
+      </div>
     </div>
+
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="spare-parts.html" aria-current="page">Spare Parts</a>
+      <a href="shop.html">Shop</a>
       <a href="creative-studio.html">Creative</a>
       <a href="contact.html">Contact</a>
       <a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
+
   </div>
 </footer>
 
@@ -374,70 +987,94 @@ const batteryBrands = [
     ["Tecno Spark 4 Pro Battery","tecno-spark-4-pro-battery.jpg"],
     ["Tecno Spark 5 Battery","tecno-spark-5-battery.jpg"],
     ["Tecno Spark 7 Battery","tecno-spark-7-battery.jpg"],
-    ["Tecno Spark 7P Battery","tecno-spark-7p-battery.jpg"],
-    ["Tecno Spark 7 Battery","tecno-spark-7-battery.jpg"]
+    ["Tecno Spark 7P Battery","tecno-spark-7p-battery.jpg"]
   ]]
 ];
 
-const brandOrder = ["iPhone","Samsung","Redmi / Xiaomi","Google Pixel","Infinix","Tecno","itel"];
-const brandMap = new Map(brandOrder.map(name => [name, []]));
+const brandOrder = [
+  "iPhone",
+  "Samsung",
+  "Redmi / Xiaomi",
+  "Google Pixel",
+  "Infinix",
+  "Tecno",
+  "itel"
+];
 
-function addPart(brand, model, type, image) {
-  if (!brandMap.has(brand)) brandMap.set(brand, []);
-  brandMap.get(brand).push({model, type, image});
+const brandMap = new Map(brandOrder.map(name => [name,[]]));
+
+function addPart(brand,model,type,image) {
+  if (!brandMap.has(brand)) {
+    brandMap.set(brand,[]);
+  }
+
+  brandMap.get(brand).push({model,type,image});
 }
 
 iphoneParts.forEach(([model,type,image]) => {
-  const normalType = type === "Screen" ? "Screen replacement"
-    : type === "Battery" ? "Battery replacement"
-    : type === "Charging system" ? "Charging system replacement"
-    : type === "Back cover" ? "Back cover replacement"
-    : type;
-  addPart("iPhone", model, normalType, image);
+  const normalType =
+    type === "Screen" ? "Screen replacement" :
+    type === "Battery" ? "Battery replacement" :
+    type === "Charging system" ? "Charging system replacement" :
+    type === "Back cover" ? "Back cover replacement" :
+    type;
+
+  addPart("iPhone",model,normalType,image);
 });
 
 screenBrands.forEach(([brand,models]) => {
-  models.forEach(([model,image]) => addPart(brand, model, "Screen replacement", image));
-});
-
-replacementBrands.forEach(([brand,parts]) => {
-  parts.forEach(([model,type,image]) => addPart(brand, model, type, image));
-});
-
-batteryBrands.forEach((brandEntry) => {
-  const models = brandEntry[1];
-  models.forEach(([name,image]) => {
-    const model = name.replace(/\s+Battery$/i,"");
-    addPart("Tecno", model, "Battery replacement", image);
+  models.forEach(([model,image]) => {
+    addPart(brand,model,"Screen replacement",image);
   });
 });
 
-/* Add each model/part combination once, while retaining different parts for the same model. */
+replacementBrands.forEach(([brand,parts]) => {
+  parts.forEach(([model,type,image]) => {
+    addPart(brand,model,type,image);
+  });
+});
+
+batteryBrands.forEach(brandEntry => {
+  const models = brandEntry[1];
+
+  models.forEach(([name,image]) => {
+    const model = name.replace(/\s+Battery$/i,"");
+    addPart("Tecno",model,"Battery replacement",image);
+  });
+});
+
+/* PART DESCRIPTIONS */
+
 const descriptionSets = {
+
   "Screen replacement": [
     model => `A damaged display can make your ${model} difficult to use. This screen replacement listing helps you find a model-matched display, with panel quality and touch compatibility confirmed before fitting.`,
     model => `Bring everyday viewing and touch use back to your ${model}. Ask about the compatible screen assembly and compare the available display options for this exact model.`,
     model => `Cracks, lines or an unresponsive display can interrupt the use of your ${model}. We can help identify the correct replacement screen and confirm the available quality and fitting cost.`,
     model => `Choose a screen specifically checked for your ${model}. Ask about the correct display assembly, available quality options and fitting cost.`
   ],
+
   "Battery replacement": [
     model => `If your ${model} struggles to hold charge, ask about a battery matched to the exact device version. We will help confirm compatibility, available quality options and replacement cost.`,
     model => `Support more dependable everyday power on your ${model} with a compatible battery replacement. Confirm the correct battery specification and fitting options with our team.`,
     model => `Frequent charging or unexpected power loss may indicate a battery issue on your ${model}. Enquire about the suitable replacement and confirm the part details before installation.`,
     model => `A battery replacement for the ${model} should match the correct model and connector. Ask us to verify the part, available quality options and total replacement price.`
   ],
+
   "Charging system replacement": [
     model => `Restore a more dependable charging connection on your ${model} with a compatible charging-system replacement. We can help check the correct assembly and confirm the fitting cost.`,
     model => `If your ${model} charges intermittently or the cable connection feels loose, ask about this charging-system part. Compatibility and available replacement options can be confirmed before fitting.`,
     model => `A faulty charging port can interrupt daily use of your ${model}. Enquire about the model-matched charging system and confirm the part specification and replacement price.`,
     model => `Keep your ${model} ready for everyday use with a charging-system replacement selected for the correct model version. Ask us to verify compatibility and availability.`
   ],
+
   "Back cover replacement": [
     model => `Refresh the rear finish of your ${model} with a compatible replacement back cover. Ask about the available colour and finish options, fit and replacement cost.`,
     model => `A cracked or worn rear cover can take away from the look of your ${model}. Enquire about a model-matched replacement and confirm the available finish before ordering.`,
     model => `Give your ${model} a cleaner exterior with a replacement back cover designed for the correct model. Contact us to check compatibility, colour options and fitting.`,
     model => `For a damaged or loose rear cover on your ${model}, ask about the suitable replacement and available finish. We will help confirm the correct fit.`
   ],
+
   "Back glass cover replacement": [
     model => `Restore the rear appearance of your ${model} with a compatible back-glass replacement. Ask us to confirm the correct glass, available finish and fitting cost.`,
     model => `Cracked rear glass can affect the finish of your ${model}. Enquire about a replacement matched to the exact model and check the available options before repair.`,
@@ -450,15 +1087,26 @@ function getDescription(model,type) {
   const options = descriptionSets[type] || [
     device => `Ask Street Gadgets Care about a compatible ${type.toLowerCase()} for your ${device}. We will help confirm the correct part, available quality options and replacement cost.`
   ];
+
   let hash = 0;
-  for (let i=0;i<model.length;i++) hash = (hash * 31 + model.charCodeAt(i)) >>> 0;
-  const partHash = type.split("").reduce((sum,char)=>sum+char.charCodeAt(0),0);
+
+  for (let i=0;i<model.length;i++) {
+    hash = (hash * 31 + model.charCodeAt(i)) >>> 0;
+  }
+
+  const partHash = type.split("").reduce(
+    (sum,char) => sum + char.charCodeAt(0),
+    0
+  );
+
   return options[(hash + partHash) % options.length](model);
 }
 
 function whatsappLink(message) {
   return WHATSAPP_BASE + encodeURIComponent(message);
 }
+
+/* CREATE PART CARD */
 
 function createPartCard(item) {
   const card = document.createElement("article");
@@ -472,13 +1120,17 @@ function createPartCard(item) {
   img.alt = `${item.model} ${item.type} spare part`;
   img.loading = "lazy";
   img.decoding = "async";
-  img.onerror = function () {
+
+  img.onerror = function() {
     this.style.display = "none";
+
     const fallback = document.createElement("div");
     fallback.className = "empty-image";
     fallback.textContent = "Image file: " + item.image;
+
     imageWrap.appendChild(fallback);
   };
+
   imageWrap.appendChild(img);
 
   const info = document.createElement("div");
@@ -497,44 +1149,149 @@ function createPartCard(item) {
 
   const meta = document.createElement("div");
   meta.className = "part-meta";
+
   const quality = document.createElement("span");
   quality.innerHTML = "<strong>Quality options:</strong> Enquire";
+
   const price = document.createElement("span");
   price.innerHTML = "<strong>Price:</strong> On enquiry";
+
   meta.append(quality,price);
 
   const button = document.createElement("a");
   button.className = "btn";
-  button.href = whatsappLink(`Hello Street Gadgets Care, I am interested in the ${item.type} for ${item.model}. Please confirm compatibility, available quality options and the total replacement price.`);
+
+  button.href = whatsappLink(
+    `Hello Street Gadgets Care, I am interested in the ${item.type} for ${item.model}. Please confirm compatibility, available quality options and the total replacement price.`
+  );
+
   button.target = "_blank";
   button.rel = "noopener noreferrer";
   button.textContent = "Enquire on WhatsApp";
 
   info.append(label,title,description,meta,button);
   card.append(imageWrap,info);
+
   return card;
 }
 
+/* IDENTIFY PHONE SERIES */
+
+function getSeriesName(brand,model) {
+
+  if (brand === "iPhone") {
+    if (/iPhone X/i.test(model)) {
+      return "iPhone X Series";
+    }
+
+    const match = model.match(/iPhone (\d+)/i);
+
+    return match
+      ? `iPhone ${match[1]} Series`
+      : "Other iPhone Models";
+  }
+
+  if (brand === "Samsung") {
+    if (/Galaxy A/i.test(model)) {
+      return "Galaxy A Series";
+    }
+
+    const match = model.match(/Galaxy ([A-Z]\d+)/i);
+
+    return match
+      ? `Galaxy ${match[1]} Series`
+      : "Other Galaxy Models";
+  }
+
+  if (brand === "Redmi / Xiaomi") {
+    if (/Redmi Note/i.test(model)) {
+      return "Redmi Note Series";
+    }
+
+    if (/Redmi A/i.test(model)) {
+      return "Redmi A Series";
+    }
+
+    const match = model.match(/Redmi (\d+)/i);
+
+    return match
+      ? `Redmi ${match[1]} Series`
+      : "Other Redmi Models";
+  }
+
+  if (brand === "Google Pixel") {
+    const match = model.match(/Pixel (\d+)/i);
+
+    return match
+      ? `Pixel ${match[1]} Series`
+      : "Other Pixel Models";
+  }
+
+  if (brand === "Infinix") {
+    const match = model.match(/Infinix (Hot|Note|Smart|Zero|GT)/i);
+
+    return match
+      ? `${match[1]} Series`
+      : "Other Infinix Models";
+  }
+
+  if (brand === "Tecno") {
+    const match = model.match(/Tecno (Camon|Spark|Phantom|Pop|Pova)/i);
+
+    return match
+      ? `${match[1]} Series`
+      : "Other Tecno Models";
+  }
+
+  if (brand === "itel") {
+    const match = model.match(/itel ([A-Z]+)/i);
+
+    return match
+      ? `${match[1]} Series`
+      : "Other itel Models";
+  }
+
+  return "Other Models";
+}
+
+/* BUILD THE COMPLETE BRAND / SERIES / MODEL CATALOGUE */
+
 function renderCatalogue() {
+
   const nav = document.getElementById("brandNav");
   const root = document.getElementById("brandCatalogues");
 
   brandOrder.forEach((brand,index) => {
+
     const rawParts = brandMap.get(brand) || [];
     const seen = new Set();
+
     const parts = rawParts.filter(item => {
-      const key = item.model.toLowerCase() + "|" + item.type.toLowerCase() + "|" + item.image.toLowerCase();
-      if (seen.has(key)) return false;
+
+      // Keep only one listing for each model and part type.
+      const key =
+        item.model.toLowerCase() + "|" +
+        item.type.toLowerCase();
+
+      if (seen.has(key)) {
+        return false;
+      }
+
       seen.add(key);
       return true;
     });
-    if (!parts.length) return;
+
+    if (!parts.length) {
+      return;
+    }
 
     const sectionId = "brand-" + (index + 1);
-    const link = document.createElement("a");
-    link.href = "#" + sectionId;
-    link.textContent = brand;
-    nav.appendChild(link);
+
+    const brandLink = document.createElement("a");
+    brandLink.href = "#" + sectionId;
+    brandLink.textContent = brand;
+
+    nav.appendChild(brandLink);
 
     const section = document.createElement("section");
     section.className = "brand-section";
@@ -547,45 +1304,170 @@ function renderCatalogue() {
     title.textContent = brand;
 
     const count = document.createElement("span");
-    count.textContent = parts.length + (parts.length === 1 ? " listed part" : " listed parts");
-
-    const grid = document.createElement("div");
-    grid.className = "parts-grid";
-
-    parts.forEach(item => grid.appendChild(createPartCard(item)));
+    count.textContent =
+      parts.length +
+      (parts.length === 1 ? " listed part" : " listed parts");
 
     heading.append(title,count);
-    section.append(heading,grid);
+
+    /* Group all parts into their respective phone series and models. */
+
+    const seriesGroups = new Map();
+
+    parts.forEach(item => {
+
+      const series = getSeriesName(brand,item.model);
+
+      if (!seriesGroups.has(series)) {
+        seriesGroups.set(series,new Map());
+      }
+
+      const modelGroups = seriesGroups.get(series);
+
+      if (!modelGroups.has(item.model)) {
+        modelGroups.set(item.model,[]);
+      }
+
+      modelGroups.get(item.model).push(item);
+    });
+
+    /* Create horizontal series navigation. */
+
+    const seriesNav = document.createElement("nav");
+    seriesNav.className = "series-nav";
+    seriesNav.setAttribute(
+      "aria-label",
+      brand + " phone series"
+    );
+
+    let seriesIndex = 0;
+    const seriesSections = [];
+
+    seriesGroups.forEach((modelGroups,seriesName) => {
+
+      const seriesId =
+        sectionId + "-series-" + (++seriesIndex);
+
+      const seriesLink = document.createElement("a");
+      seriesLink.href = "#" + seriesId;
+      seriesLink.textContent = seriesName;
+
+      seriesNav.appendChild(seriesLink);
+
+      const seriesSection = document.createElement("section");
+      seriesSection.className = "series-section";
+      seriesSection.id = seriesId;
+
+      const seriesHeading = document.createElement("div");
+      seriesHeading.className = "series-heading";
+
+      const seriesTitle = document.createElement("h3");
+      seriesTitle.textContent = seriesName;
+
+      const modelCount = document.createElement("span");
+      const numberOfModels = modelGroups.size;
+
+      modelCount.textContent =
+        numberOfModels +
+        (numberOfModels === 1 ? " model" : " models");
+
+      seriesHeading.append(seriesTitle,modelCount);
+      seriesSection.appendChild(seriesHeading);
+
+      /* Each phone model gets its own heading and parts group. */
+
+      let modelIndex = 0;
+
+      modelGroups.forEach((modelParts,modelName) => {
+
+        const modelSection = document.createElement("section");
+        modelSection.className = "model-section";
+
+        modelSection.id =
+          seriesId + "-model-" + (++modelIndex);
+
+        const modelHeading = document.createElement("div");
+        modelHeading.className = "model-heading";
+
+        const modelTitle = document.createElement("h4");
+        modelTitle.textContent = modelName;
+
+        modelHeading.appendChild(modelTitle);
+
+        const grid = document.createElement("div");
+        grid.className = "parts-grid";
+
+        modelParts.forEach(item => {
+          grid.appendChild(createPartCard(item));
+        });
+
+        modelSection.append(modelHeading,grid);
+        seriesSection.appendChild(modelSection);
+      });
+
+      seriesSections.push(seriesSection);
+    });
+
+    section.append(
+      heading,
+      seriesNav,
+      ...seriesSections
+    );
+
     root.appendChild(section);
   });
 }
 
 renderCatalogue();
 
+/* MOBILE MENU */
+
 const menuToggle = document.getElementById("menuToggle");
 const navigation = document.getElementById("mainNavigation");
 
 menuToggle.addEventListener("click",() => {
+
   const isOpen = navigation.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded",String(isOpen));
-  menuToggle.setAttribute("aria-label",isOpen ? "Close navigation menu" : "Open navigation menu");
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
 });
 
 navigation.querySelectorAll("a").forEach(link => {
+
   link.addEventListener("click",() => {
+
     navigation.classList.remove("open");
+
     menuToggle.setAttribute("aria-expanded","false");
-    menuToggle.setAttribute("aria-label","Open navigation menu");
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
   });
 });
 
 document.addEventListener("keydown",event => {
+
   if (event.key === "Escape") {
+
     navigation.classList.remove("open");
+
     menuToggle.setAttribute("aria-expanded","false");
-    menuToggle.setAttribute("aria-label","Open navigation menu");
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
   }
 });
 </script>
+
 </body>
 </html>
