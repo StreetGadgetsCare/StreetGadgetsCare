@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +53,14 @@ body{
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,a{-webkit-tap-highlight-color:transparent}
+
+/* ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible{
+ outline:3px solid var(--cyan);
+ outline-offset:3px;
+}
 
 .container{
  width:min(var(--max),calc(100% - 40px));
@@ -824,7 +833,19 @@ button,a{-webkit-tap-highlight-color:transparent}
   transition-duration:.01ms!important;
  }
 
- .category-track{animation:none}
+ .category-wrap{
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+ }
+
+ .category-track{
+  animation:none;
+  transform:none;
+ }
+
+ .category-set[aria-hidden="true"]{
+  display:none;
+ }
 }
 </style>
 </head>
@@ -877,13 +898,13 @@ button,a{-webkit-tap-highlight-color:transparent}
 
 <!-- SHOP CATEGORY NAVIGATION -->
 
-<div class="category-wrap" id="categoryWrap">
+<nav class="category-wrap" id="categoryWrap" aria-label="Shop categories">
 
  <div class="category-track">
 
   <div class="category-set">
 
-   <a class="category-link active" href="shop.html">All Shop</a>
+   <a class="category-link active" href="shop.html" aria-current="page">All Shop</a>
    <a class="category-link" href="devices.html">Laptops &amp; Devices</a>
    <a class="category-link" href="laptop-bags.html">Laptop Bags</a>
    <a class="category-link" href="laptop-storage.html">Storage &amp; Memory</a>
@@ -911,7 +932,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 
  </div>
 
-</div>
+</nav>
 
 <main>
 
@@ -1007,6 +1028,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="HP%20745%20G6%20RYZEN%207.JPG"
       alt="HP EliteBook 745 G6 Ryzen 7 laptop"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1036,6 +1058,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="HP%20840%20g5.jpeg"
       alt="HP EliteBook 840 G5 laptop"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1065,6 +1088,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="Samsung%2025W.jpeg"
       alt="Samsung 25W phone charger"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1094,6 +1118,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="Oraimo%206%20Lite.jpeg"
       alt="Oraimo 6 Lite smartwatch"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1125,6 +1150,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="normal-data-cable.jpg"
       alt="Normal phone data and charging cable"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1159,6 +1185,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="oraimo-spacebuds-lite.jpg"
       alt="Oraimo SpaceBuds Lite wireless earbuds"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1190,6 +1217,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="oraimo-boompop-pro.jpg"
       alt="Oraimo BoomPop Pro headphones"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1224,6 +1252,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="oraimo-necklace-5.jpg"
       alt="Oraimo Necklace 5 wireless neckband earphones"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1255,6 +1284,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="laptop-bag-1.jpg"
       alt="Laptop bag"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1286,6 +1316,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="nvme-ssd.jpg"
       alt="NVMe SSD storage drive"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1317,6 +1348,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="wireless-mouse.jpg"
       alt="Wireless computer mouse"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1374,6 +1406,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="HP%20745%20G6%20RYZEN%207.JPG"
       alt="Laptops and devices"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1395,6 +1428,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="laptop-bag-1.jpg"
       alt="Laptop bags"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1416,6 +1450,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="nvme-ssd.jpg"
       alt="Laptop storage and memory"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1437,6 +1472,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="wireless-mouse.jpg"
       alt="Computer and laptop accessories"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1458,6 +1494,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="iPhone%202024%20Pro%20Max%20Privacy.jpeg"
       alt="Phone screen protection"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1478,6 +1515,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="iPhone%202024%20Pro%20Max%20Privacy.jpeg"
       alt="Phone protection and covers"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1499,6 +1537,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="laptop-bag-1.jpg"
       alt="Laptop accessories"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1520,6 +1559,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       src="oraimo-spacebuds-lite.jpg"
       alt="Oraimo wireless earbuds and other gadgets"
       loading="lazy"
+      decoding="async"
       onerror="this.onerror=null;this.src='Logo.png'">
     </div>
 
@@ -1719,6 +1759,13 @@ button,a{-webkit-tap-highlight-color:transparent}
     </a>
 
     <a
+     href="https://www.instagram.com/street_gadgets_care"
+     target="_blank"
+     rel="noopener">
+     Instagram
+    </a>
+
+    <a
      href="https://www.youtube.com/@streetgadgetscare"
      target="_blank"
      rel="noopener">
@@ -1819,6 +1866,14 @@ button,a{-webkit-tap-highlight-color:transparent}
   document.addEventListener("keydown",function(event){
 
    if(event.key === "Escape"){
+    closeMenu();
+   }
+
+  });
+
+  window.addEventListener("resize",function(){
+
+   if(window.innerWidth > 760){
     closeMenu();
    }
 
