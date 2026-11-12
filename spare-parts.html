@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -165,11 +164,120 @@
       text-align:center;
     }
 
+    .page-kicker {
+      display:inline-block;
+      margin-bottom:10px;
+      color:var(--cyan-dark);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:1.5px;
+    }
+
     .page-heading h1 {
       color:var(--navy);
       font-size:clamp(28px,4vw,42px);
       line-height:1.18;
       letter-spacing:-.7px;
+    }
+
+    .page-intro {
+      max-width:650px;
+      margin:12px auto 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* SEARCH */
+
+    .catalogue-search {
+      max-width:720px;
+      margin:0 auto 28px;
+      padding:18px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:#fff;
+      box-shadow:0 8px 26px rgba(11,18,32,.05);
+    }
+
+    .catalogue-search label {
+      display:block;
+      margin-bottom:8px;
+      color:var(--navy);
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .search-control {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-height:52px;
+      padding:0 13px;
+      border:1px solid #d7e0e9;
+      border-radius:9px;
+      background:#fbfcfd;
+      transition:border-color .2s,box-shadow .2s;
+    }
+
+    .search-control:focus-within {
+      border-color:var(--cyan);
+      box-shadow:0 0 0 3px rgba(25,167,206,.12);
+    }
+
+    .search-icon {
+      color:var(--cyan-dark);
+      font-size:25px;
+      line-height:1;
+    }
+
+    .search-control input {
+      width:100%;
+      min-width:0;
+      height:48px;
+      border:0;
+      outline:0;
+      background:transparent;
+      color:var(--text);
+      font:inherit;
+      font-size:14px;
+    }
+
+    .search-control input::placeholder {
+      color:#8b96a5;
+    }
+
+    .search-control button {
+      flex:0 0 auto;
+      padding:7px 11px;
+      border:0;
+      border-radius:6px;
+      background:#eaf8fc;
+      color:var(--cyan-dark);
+      font-size:11px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .search-status {
+      margin-top:9px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .no-results {
+      display:none;
+      margin:18px 0 35px;
+      padding:28px 18px;
+      border:1px dashed #cbd5df;
+      border-radius:12px;
+      background:#fff;
+      color:var(--muted);
+      text-align:center;
+      font-size:13px;
+    }
+
+    [hidden] {
+      display:none !important;
     }
 
     /* BRAND NAVIGATION */
@@ -313,16 +421,32 @@
       background:var(--border);
     }
 
-    /* PART CARDS */
+    /* HORIZONTAL PART CARDS */
 
     .parts-grid {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
+      display:flex;
+      flex-wrap:nowrap;
       gap:16px;
+      overflow-x:auto;
+      overflow-y:hidden;
+      padding:4px 2px 17px;
+      scroll-snap-type:x proximity;
+      scroll-padding-left:2px;
+      -webkit-overflow-scrolling:touch;
+      overscroll-behavior-x:contain;
+      scrollbar-width:thin;
+      scrollbar-color:var(--cyan) #e8edf3;
+    }
+
+    .parts-grid>.part-card {
+      flex:0 0 290px;
+      width:290px;
+      scroll-snap-align:start;
     }
 
     .part-card {
       min-width:0;
+      min-height:100%;
       overflow:hidden;
       display:flex;
       flex-direction:column;
@@ -505,10 +629,6 @@
       header nav a {
         font-size:12px;
       }
-
-      .parts-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
     }
 
     @media(max-width:760px) {
@@ -575,6 +695,11 @@
         margin-bottom:23px;
       }
 
+      .catalogue-search {
+        padding:15px;
+        margin-bottom:23px;
+      }
+
       .brand-nav {
         justify-content:flex-start;
         flex-wrap:nowrap;
@@ -608,26 +733,10 @@
         font-size:14px;
       }
 
-      .parts-grid {
-        display:flex;
-        flex-wrap:nowrap;
-        gap:14px;
-        overflow-x:auto;
-        overflow-y:hidden;
-        padding:4px 2px 16px;
-        scroll-snap-type:x mandatory;
-        scroll-padding-left:2px;
-        -webkit-overflow-scrolling:touch;
-        overscroll-behavior-x:contain;
-        scrollbar-width:thin;
-        scrollbar-color:var(--cyan) #e8edf3;
-      }
-
       .parts-grid>.part-card {
-        flex:0 0 82%;
+        flex-basis:82%;
         width:82%;
         max-width:330px;
-        scroll-snap-align:start;
       }
 
       .part-card:hover {
@@ -722,12 +831,27 @@
   <div class="container">
 
     <div class="page-heading">
-      <h1>Replacement parts for selected smartphone models</h1>
+      <span class="page-kicker">STREET GADGETS CARE · NAIROBI</span>
+      <h1>Find the right spare part for your phone</h1>
+      <p class="page-intro">Search by phone model or spare part, or browse the catalogue by brand and series.</p>
+    </div>
+
+    <div class="catalogue-search">
+      <label for="partSearch">Search spare parts</label>
+      <div class="search-control">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="partSearch" type="search" placeholder="e.g. iPhone XS screen, Samsung A14 battery..." autocomplete="off">
+        <button id="clearSearch" type="button" aria-label="Clear search" hidden>Clear</button>
+      </div>
+      <p id="searchStatus" class="search-status" aria-live="polite">Browse all available listings below.</p>
     </div>
 
     <nav class="brand-nav" id="brandNav" aria-label="Jump to phone brand"></nav>
 
     <div id="brandCatalogues"></div>
+    <div id="noResults" class="no-results" role="status">
+      No matching spare parts found. Try another model name or part type, or contact us on WhatsApp for assistance.
+    </div>
 
   </div>
 </main>
@@ -845,7 +969,7 @@ const screenBrands = [
   ]],
 
   ["iPhone",[
-    ["iPhone XS","iphone-xs-screen.jpg.WEBP"],
+    ["iPhone XS","iphone-xs-screen-replacement..jpg"],
     ["iPhone 11","iphone-11-screen.jpg"],
     ["iPhone 12","iphone-12-screen.jpg"],
     ["iPhone 12 Pro","iphone-12-pro-screen.jpg"],
@@ -906,7 +1030,7 @@ const replacementBrands = [
 
     ["Samsung Galaxy A14 4G","Charging system replacement","samsung-a14-4g-charging-system-replacement.jpg"],
     ["Samsung Galaxy A14 4G","Screen replacement","samsung-a14-4g-screen-replacement.jpg"],
-    ["Samsung Galaxy A14 4G","Back cover replacement","samsung-a14-4g-back-cover-replacement.jpg"],
+    ["Samsung Galaxy A14 4G","Back cover replacement","Samsung-A14-4g-Back-Cover-Replacement-jpg"],
     ["Samsung Galaxy A14 5G","Screen replacement","samsung-a14-5g-screen-replacement.jpg"],
     ["Samsung Galaxy A14","Charging system replacement","samsung-a14-charging-system-replacement.jpg"],
 
@@ -1111,6 +1235,9 @@ function whatsappLink(message) {
 function createPartCard(item) {
   const card = document.createElement("article");
   card.className = "part-card";
+  card.dataset.model = item.model.toLowerCase();
+  card.dataset.type = item.type.toLowerCase();
+  card.dataset.search = `${item.model} ${item.type}`.toLowerCase();
 
   const imageWrap = document.createElement("div");
   imageWrap.className = "part-image";
@@ -1343,7 +1470,24 @@ function renderCatalogue() {
     let seriesIndex = 0;
     const seriesSections = [];
 
-    seriesGroups.forEach((modelGroups,seriesName) => {
+    const collator = new Intl.Collator("en", {
+      numeric:true,
+      sensitivity:"base"
+    });
+
+    Array.from(seriesGroups.entries())
+      .sort((a,b) => {
+        if (brand === "iPhone") {
+          const seriesNumber = name => {
+            if (name === "iPhone X Series") return 0;
+            const match = name.match(/iPhone (\d+) Series/);
+            return match ? Number(match[1]) : 999;
+          };
+          return seriesNumber(a[0]) - seriesNumber(b[0]);
+        }
+        return collator.compare(a[0],b[0]);
+      })
+      .forEach(([seriesName,modelGroups]) => {
 
       const seriesId =
         sectionId + "-series-" + (++seriesIndex);
@@ -1378,7 +1522,14 @@ function renderCatalogue() {
 
       let modelIndex = 0;
 
-      modelGroups.forEach((modelParts,modelName) => {
+      const collator = new Intl.Collator("en", {
+        numeric:true,
+        sensitivity:"base"
+      });
+
+      Array.from(modelGroups.entries())
+        .sort((a,b) => collator.compare(a[0],b[0]))
+        .forEach(([modelName,modelParts]) => {
 
         const modelSection = document.createElement("section");
         modelSection.className = "model-section";
@@ -1419,6 +1570,77 @@ function renderCatalogue() {
 }
 
 renderCatalogue();
+
+/* LIVE CATALOGUE SEARCH */
+
+const partSearch = document.getElementById("partSearch");
+const clearSearch = document.getElementById("clearSearch");
+const searchStatus = document.getElementById("searchStatus");
+const noResults = document.getElementById("noResults");
+
+function filterCatalogue() {
+  const query = partSearch.value.trim().toLowerCase();
+  const cards = Array.from(document.querySelectorAll(".part-card"));
+  let visibleCount = 0;
+  let visibleBrands = 0;
+
+  cards.forEach(card => {
+    const searchable = [
+      card.dataset.search,
+      card.closest(".brand-section")?.querySelector(".brand-heading h2")?.textContent || ""
+    ].join(" ").toLowerCase();
+
+    const match = !query || searchable.includes(query);
+    card.hidden = !match;
+
+    if (match) visibleCount++;
+  });
+
+  document.querySelectorAll(".model-section").forEach(section => {
+    const hasVisible = section.querySelector(".part-card:not([hidden])");
+    section.hidden = !hasVisible;
+  });
+
+  document.querySelectorAll(".series-section").forEach(section => {
+    const hasVisible = section.querySelector(".model-section:not([hidden])");
+    section.hidden = !hasVisible;
+  });
+
+  document.querySelectorAll(".brand-section").forEach(section => {
+    const hasVisible = section.querySelector(".series-section:not([hidden])");
+    section.hidden = !hasVisible;
+
+    if (hasVisible) visibleBrands++;
+  });
+
+  document.querySelectorAll("#brandNav a").forEach(link => {
+    const target = document.querySelector(link.getAttribute("href"));
+    link.hidden = !target || target.hidden;
+  });
+
+  document.querySelectorAll(".series-nav a").forEach(link => {
+    const target = document.querySelector(link.getAttribute("href"));
+    link.hidden = !target || target.hidden;
+  });
+
+  clearSearch.hidden = !query;
+  noResults.style.display = query && visibleCount === 0 ? "block" : "none";
+
+  if (!query) {
+    searchStatus.textContent = "Browse all available listings below.";
+  } else {
+    searchStatus.textContent =
+      `${visibleCount} matching ${visibleCount === 1 ? "part" : "parts"} found across ${visibleBrands} ${visibleBrands === 1 ? "brand" : "brands"}.`;
+  }
+}
+
+partSearch.addEventListener("input",filterCatalogue);
+
+clearSearch.addEventListener("click",() => {
+  partSearch.value = "";
+  filterCatalogue();
+  partSearch.focus();
+});
 
 /* MOBILE MENU */
 
