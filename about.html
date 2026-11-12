@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,24 +22,123 @@ body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:#0b1220;backgrou
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 :root{--navy:#0b1220;--cyan:#19a7ce;--cyan-dark:#118bad;--green:#25d366;--light:#f5f8fa;--muted:#6b7785;--border:#e3e9ee}
+
 header{position:sticky;top:0;z-index:1000;background:rgba(11,18,32,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav-container{width:min(1180px,92%);min-height:76px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{width:53px;height:53px;object-fit:contain;flex-shrink:0}
-nav{display:flex;align-items:center;gap:24px}
-nav a{color:#fff;font-size:13px;font-weight:650;white-space:nowrap;transition:color .25s}
+
+.nav-container{
+width:min(1180px,92%);
+min-height:76px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px
+}
+
+/* HEADER BRANDING */
+.logo-link{
+display:flex;
+align-items:center;
+gap:9px;
+flex-shrink:0;
+min-width:0
+}
+
+.logo{
+width:53px;
+height:53px;
+object-fit:contain;
+flex-shrink:0
+}
+
+.brand-copy{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:1px;
+min-width:0;
+line-height:1.2
+}
+
+.brand-copy strong{
+display:block;
+color:#fff;
+font-size:15px;
+font-weight:900;
+letter-spacing:.55px;
+white-space:nowrap
+}
+
+.brand-tagline{
+display:block;
+color:#8eddf1;
+font-size:9px;
+font-weight:800;
+letter-spacing:1.05px;
+white-space:nowrap
+}
+
+/* NAVIGATION */
+nav{
+display:flex;
+align-items:center;
+gap:20px;
+margin-left:auto
+}
+
+nav a{
+color:#fff;
+font-size:13px;
+font-weight:650;
+white-space:nowrap;
+transition:color .25s
+}
+
 nav a:hover,.nav-active{color:var(--cyan)!important}
-.nav-contact{background:var(--cyan);padding:11px 18px;border-radius:7px;color:#fff!important}
+
+.nav-contact{
+background:var(--cyan);
+padding:11px 18px;
+border-radius:7px;
+color:#fff!important
+}
+
 .nav-contact:hover{background:var(--cyan-dark)}
-.menu-toggle{display:none;width:44px;height:44px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:rgba(255,255,255,.05);cursor:pointer}
-.menu-toggle span{display:block;width:21px;height:2px;border-radius:10px;background:#fff;transition:.25s}
+
+.menu-toggle{
+display:none;
+width:44px;
+height:44px;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap:5px;
+border:1px solid rgba(255,255,255,.14);
+border-radius:8px;
+background:rgba(255,255,255,.05);
+cursor:pointer;
+flex-shrink:0
+}
+
+.menu-toggle span{
+display:block;
+width:21px;
+height:2px;
+border-radius:10px;
+background:#fff;
+transition:.25s
+}
+
 .menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .menu-toggle.active span:nth-child(2){opacity:0}
 .menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
 .container{width:min(1180px,92%);margin:auto}
 .section{padding:90px 0}
 .section-label{display:inline-block;margin-bottom:13px;color:var(--cyan-dark);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
 .section-title{font-size:clamp(32px,3.8vw,49px);line-height:1.08;letter-spacing:-1.5px;margin-bottom:18px}
 .section-text{color:var(--muted);font-size:16px;line-height:1.75}
+
 .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 21px;border-radius:7px;font-size:14px;font-weight:750;transition:.25s}
 .button-primary{background:var(--cyan);color:#fff}
 .button-primary:hover{background:var(--cyan-dark);transform:translateY(-2px)}
@@ -154,21 +254,43 @@ footer{background:#070d17;color:#fff;padding:60px 0 24px}
 .whatsapp-float:hover{transform:translateY(-4px) scale(1.04)}
 
 /* RESPONSIVE */
-@media(max-width:1050px){
-nav{gap:14px}
-nav a{font-size:12px}
+@media(max-width:1100px){
+.nav-container{gap:12px}
+.brand-copy strong{font-size:13px}
+.brand-tagline{font-size:8px;letter-spacing:.8px}
+.logo{width:48px;height:48px}
+.menu-toggle{display:flex}
+nav{
+position:absolute;
+top:76px;
+left:0;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:stretch;
+gap:0;
+padding:10px 4% 16px;
+background:rgba(7,13,23,.98);
+border-top:1px solid rgba(255,255,255,.07);
+border-bottom:1px solid rgba(255,255,255,.08);
+box-shadow:0 18px 35px rgba(0,0,0,.22);
+opacity:0;
+visibility:hidden;
+transform:translateY(-10px);
+transition:.25s;
+margin-left:0
+}
+nav.nav-open{opacity:1;visibility:visible;transform:translateY(0)}
+nav a{display:block;width:100%;padding:13px 12px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.05)}
+nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
 .about-hero-grid{gap:40px}
 .identity-grid{grid-template-columns:repeat(2,1fr)}
 .approach-grid{grid-template-columns:repeat(2,1fr)}
 }
+
 @media(max-width:800px){
 .nav-container{min-height:70px}
-.logo{width:47px;height:47px}
-.menu-toggle{display:flex}
-nav{position:absolute;top:70px;left:0;width:100%;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:10px 4% 16px;background:rgba(7,13,23,.98);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 18px 35px rgba(0,0,0,.22);opacity:0;visibility:hidden;transform:translateY(-10px);transition:.25s}
-nav.nav-open{opacity:1;visibility:visible;transform:translateY(0)}
-nav a{display:block;width:100%;padding:13px 12px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.05)}
-nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
+nav{top:70px}
 .about-hero{padding:70px 0}
 .about-hero-grid,.who-grid,.story-grid,.values-grid{grid-template-columns:1fr}
 .about-visual-box{max-width:520px;min-height:350px;margin:5px auto 0}
@@ -178,6 +300,7 @@ nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
 .kenya-box{grid-template-columns:1fr;gap:22px;padding:32px}
 .footer-grid{grid-template-columns:1fr 1fr;gap:38px}
 }
+
 @media(max-width:560px){
 .section{padding:68px 0}
 .about-hero{padding:62px 0 68px}
@@ -199,6 +322,14 @@ nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
 .footer-bottom{flex-direction:column}
 .whatsapp-float{width:52px;height:52px;right:14px;bottom:14px}
 }
+
+@media(max-width:390px){
+.brand-copy strong{font-size:11px;letter-spacing:.3px}
+.brand-tagline{font-size:7px;letter-spacing:.55px}
+.logo{width:43px;height:43px}
+.logo-link{gap:7px}
+.menu-toggle{width:40px;height:40px}
+}
 </style>
 </head>
 
@@ -206,8 +337,13 @@ nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
 
 <header>
 <div class="nav-container">
-<a href="index.html" aria-label="Street Gadgets Care Home">
-<img src="Logo.png" alt="Street Gadgets Care" class="logo">
+
+<a href="index.html" class="logo-link" aria-label="Street Gadgets Care Home">
+<img src="Logo.png" alt="Street Gadgets Care logo" class="logo" width="53" height="53">
+<span class="brand-copy">
+<strong>STREET GADGETS CARE</strong>
+<span class="brand-tagline">REPAIR . RELIABLE . TRUSTED</span>
+</span>
 </a>
 
 <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNavigation">
@@ -223,6 +359,7 @@ nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
 <a href="creative-studio.html">Creative</a>
 <a href="contact.html" class="nav-contact">Let's Talk</a>
 </nav>
+
 </div>
 </header>
 
@@ -504,7 +641,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 window.addEventListener("resize", function () {
-    if (window.innerWidth > 800) {
+    if (window.innerWidth > 1100) {
         mainNavigation.classList.remove("nav-open");
         menuToggle.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
