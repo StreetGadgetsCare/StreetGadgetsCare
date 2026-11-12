@@ -131,7 +131,7 @@ background:#1fbd59;
 transform:translateY(-2px);
 }
 
-/* HEADER */
+/* HEADER — MATCHED TO ABOUT PAGE */
 
 .site-header{
 position:sticky;
@@ -148,37 +148,54 @@ min-height:82px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:24px;
+gap:18px;
 }
+
+/* HEADER BRANDING */
 
 .brand{
 display:flex;
 align-items:center;
-gap:11px;
+gap:9px;
 flex-shrink:0;
+min-width:0;
 }
 
 .brand img{
 width:53px;
 height:53px;
 object-fit:contain;
+flex-shrink:0;
 }
 
-.brand-name{
-color:var(--white);
-font-size:0.96rem;
-line-height:1.25;
-font-weight:800;
-letter-spacing:0.4px;
+.brand-copy{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:1px;
+min-width:0;
+line-height:1.2;
 }
 
-.brand-name span{
+.brand-copy strong{
 display:block;
-margin-top:4px;
-color:var(--cyan);
-font-size:0.68rem;
-letter-spacing:1.6px;
+color:#fff;
+font-size:15px;
+font-weight:900;
+letter-spacing:.55px;
+white-space:nowrap;
 }
+
+.brand-tagline{
+display:block;
+color:#8eddf1;
+font-size:9px;
+font-weight:800;
+letter-spacing:1.05px;
+white-space:nowrap;
+}
+
+/* NAVIGATION */
 
 .main-nav{
 display:flex;
@@ -824,9 +841,18 @@ background:#1fbd59;
 
 .main-nav > a:not(.btn){font-size:0.82rem;}
 
-.brand-name{font-size:0.86rem;}
+/* Match About page responsive branding */
+.brand-copy strong{
+font-size:13px;
+letter-spacing:.55px;
+}
 
-.brand-name span{font-size:0.62rem;}
+.brand-tagline{
+font-size:8px;
+letter-spacing:.8px;
+}
+
+.brand img{width:48px;height:48px;}
 
 .hero-grid{gap:35px;}
 
@@ -950,11 +976,15 @@ h1{font-size:clamp(2.15rem,10vw,3rem);}
 
 h2{font-size:1.85rem;}
 
-.brand-name{font-size:0.82rem;}
+/* Keep the About page brand proportions */
+.brand-copy strong{
+font-size:13px;
+letter-spacing:.55px;
+}
 
-.brand-name span{
-font-size:0.59rem;
-letter-spacing:1.2px;
+.brand-tagline{
+font-size:8px;
+letter-spacing:.8px;
 }
 
 .hero{padding:48px 0;}
@@ -1079,12 +1109,12 @@ animation-duration:0.01ms !important;
 <div class="container header-inner">
 
 <a href="index.html" class="brand" aria-label="Street Gadgets Care Home">
-<img src="Logo.png" alt="Street Gadgets Care logo">
+<img src="Logo.png" alt="Street Gadgets Care logo" class="logo" width="53" height="53">
 
-<div class="brand-name">
-STREET GADGETS CARE
-<span>REPAIR • PARTS • CREATE</span>
-</div>
+<span class="brand-copy">
+<strong>STREET GADGETS CARE</strong>
+<span class="brand-tagline">REPAIR . RELIABLE . TRUSTED</span>
+</span>
 </a>
 
 <button
