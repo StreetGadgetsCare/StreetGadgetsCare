@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -449,266 +450,114 @@
 
         .hero-buttons {
             display: flex;
-
             flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-bottom: 22px;
+            gap: 12px;
         }
 
-        .hero-button-light {
-            border: 1px solid rgba(255,255,255,0.20);
-
-            color: #ffffff;
-
-            background: rgba(255,255,255,0.05);
-        }
-
-        .hero-button-light:hover {
-            border-color: var(--cyan);
-
-            background: rgba(25,167,206,0.10);
-
-            transform: translateY(-2px);
-        }
-
-        .hero-location {
-            color: #aab7c5;
-
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           HERO VISUAL
-        ========================= */
-
-        .about-visual {
-            display: flex;
-            justify-content: center;
-        }
-
-        .about-visual-box {
+        .hero-image-wrap {
             position: relative;
+        }
 
+        .hero-image {
             width: 100%;
-            max-width: 480px;
-            min-height: 390px;
+            height: 430px;
 
-            display: flex;
+            object-fit: cover;
 
-            align-items: center;
-            justify-content: center;
+            border-radius: 12px;
 
-            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.12);
 
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(25,167,206,0.13),
-                    transparent 60%
-                ),
-                #101a2b;
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            box-shadow:
-                0 25px 55px rgba(0,0,0,0.25);
-
-            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
         }
 
-        .about-visual-box::before {
-            content: "";
-
+        .hero-image-note {
             position: absolute;
 
-            width: 220px;
-            height: 220px;
+            left: -22px;
+            bottom: 25px;
 
-            border-radius: 50%;
+            max-width: 235px;
 
-            border: 1px solid rgba(25,167,206,0.12);
-        }
+            padding: 17px 20px;
 
-        .about-visual-box img {
-            position: relative;
-            z-index: 1;
+            border-radius: 9px;
 
-            width: 86%;
-            height: 360px;
-
-            object-fit: contain;
-
-            padding: 18px;
-        }
-
-        .visual-badge {
-            position: absolute;
-            z-index: 2;
-
-            background: rgba(255,255,255,0.96);
+            background: #ffffff;
 
             color: var(--navy);
 
-            padding: 10px 13px;
-
-            border-radius: 7px;
-
-            font-size: 10px;
-            font-weight: 900;
-
-            letter-spacing: 0.7px;
-
-            box-shadow:
-                0 12px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.18);
         }
 
-        .visual-badge.one {
-            top: 38px;
-            left: -13px;
+        .hero-image-note strong {
+            display: block;
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
         }
 
-        .visual-badge.two {
-            right: -13px;
-            bottom: 40px;
+        .hero-image-note span {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 12px;
         }
 
 
         /* =========================
-           WHO WE ARE
+           INTRO / WHO WE ARE
         ========================= */
 
-        .who-section {
-            background: #ffffff;
-        }
-
-        .who-grid {
+        .intro-grid {
             display: grid;
 
-            grid-template-columns: 0.9fr 1.1fr;
+            grid-template-columns: 0.85fr 1.15fr;
 
-            gap: 70px;
+            gap: 85px;
 
-            align-items: center;
+            align-items: start;
         }
 
-        .who-copy h2 {
-            max-width: 560px;
+        .intro-heading {
+            position: sticky;
+            top: 115px;
+        }
 
-            font-size: clamp(34px, 4vw, 50px);
+        .intro-copy p {
+            color: var(--muted);
 
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
+            font-size: 16px;
+            line-height: 1.9;
 
             margin-bottom: 18px;
         }
 
-        .who-copy p {
-            max-width: 650px;
-
-            color: var(--muted);
-
-            font-size: 16px;
-            line-height: 1.8;
-
-            margin-bottom: 17px;
-        }
-
-        .who-copy p:last-child {
+        .intro-copy p:last-child {
             margin-bottom: 0;
         }
 
-        .who-highlight {
-            position: relative;
+        .intro-highlight {
+            margin-top: 28px;
 
-            padding: 38px;
+            padding: 22px 24px;
 
-            border-radius: 14px;
+            border-left: 3px solid var(--cyan);
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #f8fbfc,
-                    #f1f6f8
-                );
+            background: var(--light);
 
-            border: 1px solid var(--border);
+            color: var(--navy);
 
-            overflow: hidden;
-        }
-
-        .who-highlight::before {
-            content: "";
-
-            position: absolute;
-
-            width: 5px;
-            height: 100%;
-
-            left: 0;
-            top: 0;
-
-            background: var(--cyan);
-        }
-
-        .who-highlight::after {
-            content: "";
-
-            position: absolute;
-
-            width: 170px;
-            height: 170px;
-
-            right: -80px;
-            bottom: -90px;
-
-            border-radius: 50%;
-
-            background: rgba(25,167,206,0.08);
-        }
-
-        .who-highlight-label,
-        .who-highlight h3,
-        .who-highlight p {
-            position: relative;
-            z-index: 1;
-        }
-
-        .who-highlight-label {
-            color: var(--cyan-dark);
-
-            font-size: 10px;
-            font-weight: 900;
-
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-
-            margin-bottom: 12px;
-        }
-
-        .who-highlight h3 {
-            font-size: 27px;
-
-            line-height: 1.2;
-
-            margin-bottom: 12px;
-        }
-
-        .who-highlight p {
-            color: var(--muted);
-
-            font-size: 14px;
-            line-height: 1.75;
-
-            margin: 0;
+            font-size: 16px;
+            font-weight: 650;
+            line-height: 1.7;
         }
 
 
         /* =========================
-           STORY
+           OUR STORY
         ========================= */
 
         .story-section {
@@ -720,532 +569,336 @@
 
             grid-template-columns: 1fr 1fr;
 
-            gap: 65px;
+            gap: 75px;
 
             align-items: center;
         }
 
-        .story-copy h2 {
-            max-width: 590px;
+        .story-image {
+            width: 100%;
+            height: 430px;
 
-            font-size: clamp(34px, 4vw, 50px);
+            object-fit: cover;
 
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 19px;
+            border-radius: 10px;
         }
 
-        .story-copy p {
-            max-width: 650px;
-
+        .story-content p {
             color: var(--muted);
 
             font-size: 16px;
-            line-height: 1.8;
-
-            margin-bottom: 15px;
-        }
-
-        .story-points {
-            display: grid;
-
-            gap: 12px;
-
-            margin-top: 25px;
-        }
-
-        .story-point {
-            display: flex;
-
-            gap: 12px;
-
-            align-items: flex-start;
-
-            color: var(--text);
-
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .story-point::before {
-            content: "✓";
-
-            flex-shrink: 0;
-
-            width: 21px;
-            height: 21px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #e8f7fb;
-
-            color: var(--cyan-dark);
-
-            font-size: 11px;
-            font-weight: 900;
-        }
-
-        .story-card {
-            position: relative;
-
-            padding: 42px;
-
-            min-height: 350px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            border-radius: 15px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #0b1220,
-                    #121d31
-                );
-
-            color: #ffffff;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 18px 45px rgba(11,18,32,0.10);
-        }
-
-        .story-card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 190px;
-            height: 190px;
-
-            top: -95px;
-            right: -65px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(25,167,206,0.14);
-        }
-
-        .story-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 270px;
-            height: 270px;
-
-            right: -120px;
-            bottom: -130px;
-
-            border-radius: 50%;
-
-            background: rgba(25,167,206,0.12);
-        }
-
-        .story-card-label {
-            position: relative;
-            z-index: 1;
-
-            color: #7dddf5;
-
-            font-size: 10px;
-            font-weight: 900;
-
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+            line-height: 1.85;
 
             margin-bottom: 17px;
         }
 
-        .story-card h3 {
-            position: relative;
-            z-index: 1;
-
-            max-width: 480px;
-
-            font-size: 33px;
-
-            line-height: 1.1;
-
-            letter-spacing: -1px;
-
-            margin-bottom: 16px;
-        }
-
-        .story-card p {
-            position: relative;
-            z-index: 1;
-
-            max-width: 470px;
-
-            color: #aebdca;
-
-            font-size: 14px;
-            line-height: 1.8;
+        .story-content p:last-child {
+            margin-bottom: 0;
         }
 
 
         /* =========================
-           THREE AREAS
+           WHAT WE DO
         ========================= */
 
-        .identity-section {
-            background: #ffffff;
-        }
-
-        .identity-heading {
+        .services-intro {
             max-width: 720px;
-            margin-bottom: 43px;
+
+            margin-bottom: 42px;
         }
 
-        .identity-grid {
+        .services-grid {
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
 
-            gap: 17px;
+            gap: 20px;
         }
 
-        .identity-card {
-            position: relative;
-
-            padding: 31px;
+        .service-card {
+            padding: 29px 26px;
 
             border: 1px solid var(--border);
 
-            border-radius: 12px;
+            border-radius: 10px;
 
             background: #ffffff;
 
             transition:
-                transform 0.25s ease,
                 border-color 0.25s ease,
+                transform 0.25s ease,
                 box-shadow 0.25s ease;
         }
 
-        .identity-card::before {
-            content: "";
+        .service-card:hover {
+            border-color: rgba(25,167,206,0.55);
 
-            position: absolute;
+            transform: translateY(-4px);
 
-            top: 0;
-            left: 0;
+            box-shadow: 0 15px 35px rgba(11,18,32,0.07);
+        }
+
+        .service-number {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
 
             width: 42px;
-            height: 3px;
-
-            background: var(--cyan);
-
-            border-radius: 12px 0 0 0;
-        }
-
-        .identity-card:hover {
-            transform: translateY(-5px);
-
-            border-color: rgba(25,167,206,0.35);
-
-            box-shadow:
-                0 16px 35px rgba(11,18,32,0.07);
-        }
-
-        .identity-number {
-            color: var(--cyan);
-
-            font-size: 11px;
-            font-weight: 900;
-
-            letter-spacing: 1px;
+            height: 42px;
 
             margin-bottom: 21px;
+
+            border-radius: 8px;
+
+            background: #eaf8fc;
+
+            color: var(--cyan-dark);
+
+            font-size: 13px;
+            font-weight: 800;
         }
 
-        .identity-card h3 {
-            font-size: 22px;
+        .service-card h3 {
+            color: var(--navy);
 
-            line-height: 1.2;
+            font-size: 19px;
 
             margin-bottom: 11px;
         }
 
-        .identity-card p {
+        .service-card p {
             color: var(--muted);
 
             font-size: 14px;
             line-height: 1.75;
 
-            margin-bottom: 19px;
+            margin-bottom: 18px;
         }
 
-        .identity-link {
+        .service-link {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
             color: var(--cyan-dark);
 
-            font-size: 12px;
-            font-weight: 900;
-
-            transition: color 0.2s ease;
+            font-size: 13px;
+            font-weight: 800;
         }
 
-        .identity-link:hover {
-            color: var(--cyan);
+        .service-link:hover {
+            color: var(--navy);
         }
 
 
         /* =========================
-           APPROACH
+           OUR APPROACH
         ========================= */
 
         .approach-section {
-            background: var(--light);
-        }
+            background: var(--navy);
 
-        .approach-heading {
-            max-width: 700px;
-            margin-bottom: 42px;
+            color: #ffffff;
         }
 
         .approach-grid {
             display: grid;
 
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 0.9fr 1.1fr;
 
-            gap: 14px;
+            gap: 80px;
+
+            align-items: start;
         }
 
-        .approach-card {
-            padding: 27px 22px;
-
-            background: #ffffff;
-
-            border: 1px solid var(--border);
-
-            border-radius: 10px;
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+        .approach-section .section-label {
+            color: #7dddf5;
         }
 
-        .approach-card:hover {
-            transform: translateY(-4px);
+        .approach-section .section-title {
+            color: #ffffff;
+        }
 
-            box-shadow:
-                0 12px 28px rgba(11,18,32,0.06);
+        .approach-section .section-text {
+            color: #b7c3d0;
+        }
+
+        .approach-list {
+            display: grid;
+
+            gap: 24px;
+        }
+
+        .approach-item {
+            display: grid;
+
+            grid-template-columns: 45px 1fr;
+
+            gap: 17px;
+
+            padding-bottom: 23px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .approach-item:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
         }
 
         .approach-number {
             color: var(--cyan);
 
-            font-size: 11px;
-            font-weight: 900;
-
-            margin-bottom: 18px;
-        }
-
-        .approach-card h3 {
-            font-size: 17px;
-            margin-bottom: 8px;
-        }
-
-        .approach-card p {
-            color: var(--muted);
-
             font-size: 13px;
-            line-height: 1.7;
+            font-weight: 850;
+
+            padding-top: 3px;
+        }
+
+        .approach-item h3 {
+            color: #ffffff;
+
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+        .approach-item p {
+            color: #aebbc9;
+
+            font-size: 14px;
+            line-height: 1.75;
         }
 
 
         /* =========================
-           VALUES
+           OUR VALUES
         ========================= */
-
-        .values-section {
-            background: #ffffff;
-        }
 
         .values-grid {
             display: grid;
 
-            grid-template-columns: 0.8fr 1.2fr;
+            grid-template-columns: 0.9fr 1.1fr;
 
-            gap: 70px;
+            gap: 80px;
 
-            align-items: center;
-        }
-
-        .values-copy h2 {
-            max-width: 520px;
-
-            font-size: clamp(34px, 4vw, 49px);
-
-            line-height: 1.08;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 18px;
-        }
-
-        .values-copy p {
-            max-width: 570px;
-
-            color: var(--muted);
-
-            font-size: 16px;
-            line-height: 1.75;
+            align-items: start;
         }
 
         .values-list {
             display: grid;
-            gap: 13px;
+
+            gap: 0;
         }
 
         .value-item {
             display: grid;
 
-            grid-template-columns: 70px 1fr;
+            grid-template-columns: 55px 1fr;
 
             gap: 18px;
 
-            padding: 21px;
+            padding: 22px 0;
 
-            border: 1px solid var(--border);
-
-            border-radius: 10px;
-
-            transition:
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
+            border-bottom: 1px solid var(--border);
         }
 
-        .value-item:hover {
-            border-color: rgba(25,167,206,0.30);
+        .value-item:first-child {
+            padding-top: 0;
+        }
 
-            box-shadow:
-                0 10px 25px rgba(11,18,32,0.05);
+        .value-item:last-child {
+            border-bottom: 0;
         }
 
         .value-number {
-            color: var(--cyan);
+            color: var(--cyan-dark);
 
-            font-size: 12px;
-            font-weight: 900;
+            font-size: 14px;
+            font-weight: 850;
         }
 
         .value-item h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            color: var(--navy);
+
+            font-size: 17px;
+
+            margin-bottom: 6px;
         }
 
         .value-item p {
-            color: var(--muted);
-
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-
-        /* =========================
-           KENYA SERVICE MESSAGE
-        ========================= */
-
-        .kenya-section {
-            background: var(--light);
-
-            padding: 72px 0;
-        }
-
-        .kenya-box {
-            position: relative;
-
-            display: grid;
-
-            grid-template-columns: 1fr auto;
-
-            gap: 35px;
-
-            align-items: center;
-
-            padding: 38px 42px;
-
-            border-radius: 14px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #f2f7f9
-                );
-
-            border: 1px solid var(--border);
-
-            overflow: hidden;
-        }
-
-        .kenya-box::after {
-            content: "";
-
-            position: absolute;
-
-            width: 210px;
-            height: 210px;
-
-            right: -105px;
-            top: -105px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(25,167,206,0.12);
-        }
-
-        .kenya-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .kenya-label {
-            color: var(--cyan-dark);
-
-            font-size: 10px;
-            font-weight: 900;
-
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-
-            margin-bottom: 9px;
-        }
-
-        .kenya-box h2 {
-            font-size: clamp(26px, 3vw, 37px);
-
-            line-height: 1.1;
-
-            letter-spacing: -1px;
-
-            margin-bottom: 10px;
-        }
-
-        .kenya-box p {
-            max-width: 690px;
-
             color: var(--muted);
 
             font-size: 14px;
             line-height: 1.75;
         }
 
+
+        /* =========================
+           KENYA-WIDE SERVICE
+        ========================= */
+
+        .kenya-section {
+            padding: 25px 0 90px;
+        }
+
+        .kenya-box {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 35px;
+
+            padding: 42px 45px;
+
+            border-radius: 12px;
+
+            background: #eef9fc;
+
+            border: 1px solid #d9f0f7;
+        }
+
+        .kenya-content {
+            max-width: 720px;
+        }
+
+        .kenya-label {
+            color: var(--cyan-dark);
+
+            font-size: 11px;
+            font-weight: 850;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .kenya-box h2 {
+            color: var(--navy);
+
+            font-size: clamp(27px, 3vw, 37px);
+
+            line-height: 1.15;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 12px;
+        }
+
+        .kenya-box p {
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
         .kenya-action {
-            position: relative;
-            z-index: 1;
+            flex-shrink: 0;
         }
 
 
@@ -1254,62 +907,52 @@
         ========================= */
 
         .brand-statement {
-            position: relative;
+            padding: 90px 0;
 
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(25,167,206,0.10),
-                    transparent 38%
-                ),
-                var(--navy);
-
-            color: #ffffff;
-
-            padding: 86px 0;
+            background: #f6f8fa;
 
             text-align: center;
-
-            overflow: hidden;
         }
 
         .brand-statement-label {
-            color: #7dddf5;
+            color: var(--cyan-dark);
 
             font-size: 11px;
-            font-weight: 900;
+            font-weight: 850;
 
             letter-spacing: 1.8px;
             text-transform: uppercase;
 
-            margin-bottom: 18px;
+            margin-bottom: 17px;
         }
 
         .brand-statement h2 {
             max-width: 850px;
 
-            margin: 0 auto 18px;
+            margin: 0 auto 20px;
 
-            font-size: clamp(36px, 4.8vw, 57px);
+            color: var(--navy);
 
-            line-height: 1.03;
+            font-size: clamp(34px, 4.5vw, 54px);
+
+            line-height: 1.1;
 
             letter-spacing: -1.8px;
         }
 
         .brand-statement h2 span {
-            color: var(--cyan);
+            color: var(--cyan-dark);
         }
 
         .brand-statement p {
-            max-width: 650px;
+            max-width: 670px;
 
             margin: auto;
 
-            color: #aebdca;
+            color: var(--muted);
 
             font-size: 16px;
-            line-height: 1.75;
+            line-height: 1.8;
         }
 
 
@@ -1318,41 +961,45 @@
         ========================= */
 
         .final-cta {
-            background: #ffffff;
-
-            padding: 90px 0;
+            padding: 85px 0;
 
             text-align: center;
+
+            background: #ffffff;
         }
 
         .final-cta h2 {
-            font-size: clamp(36px, 4.5vw, 54px);
+            color: var(--navy);
 
-            line-height: 1.03;
+            font-size: clamp(32px, 4vw, 46px);
 
-            letter-spacing: -1.6px;
+            line-height: 1.1;
 
-            margin-bottom: 16px;
+            letter-spacing: -1.4px;
+
+            margin-bottom: 15px;
         }
 
         .final-cta p {
-            max-width: 620px;
+            max-width: 570px;
 
             margin: 0 auto 27px;
 
             color: var(--muted);
 
             font-size: 15px;
+            line-height: 1.8;
         }
 
         .final-buttons {
             display: flex;
 
-            justify-content: center;
-
             flex-wrap: wrap;
 
-            gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            gap: 12px;
         }
 
 
@@ -1361,62 +1008,66 @@
         ========================= */
 
         footer {
-            background: #070d17;
+            padding: 65px 0 25px;
+
+            background: #080f1b;
 
             color: #ffffff;
-
-            padding: 60px 0 24px;
         }
 
         .footer-grid {
             display: grid;
 
-            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-columns: 1.4fr 0.8fr 1fr 1fr;
 
-            gap: 55px;
+            gap: 45px;
 
-            padding-bottom: 42px;
-
-            border-bottom:
-                1px solid rgba(255,255,255,0.08);
+            padding-bottom: 45px;
         }
 
         .footer-brand img {
             width: 155px;
+            height: auto;
 
-            margin-bottom: 17px;
+            margin-bottom: 18px;
         }
 
         .footer-brand p {
-            max-width: 350px;
+            max-width: 300px;
 
-            color: #8f9baa;
+            color: #aab6c4;
 
             font-size: 13px;
-            line-height: 1.7;
+            line-height: 1.8;
+        }
+
+        .footer-column {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            gap: 11px;
         }
 
         .footer-column h4 {
-            font-size: 12px;
+            color: #ffffff;
 
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 14px;
 
-            margin-bottom: 17px;
+            margin-bottom: 7px;
         }
 
         .footer-column a,
         .footer-column span {
-            display: block;
-
-            color: #8f9baa;
+            color: #aab6c4;
 
             font-size: 13px;
+            line-height: 1.6;
 
-            margin-bottom: 9px;
-        }
+            overflow-wrap: anywhere;
 
-        .footer-column a {
             transition: color 0.2s ease;
         }
 
@@ -1427,27 +1078,37 @@
         .footer-bottom {
             display: flex;
 
+            align-items: center;
             justify-content: space-between;
 
             gap: 20px;
 
-            padding-top: 20px;
+            padding-top: 22px;
 
-            color: #697584;
+            border-top: 1px solid rgba(255,255,255,0.10);
+
+            color: #8290a0;
 
             font-size: 12px;
         }
 
 
         /* =========================
-           WHATSAPP FLOAT
+           FLOATING WHATSAPP
         ========================= */
 
         .whatsapp-float {
             position: fixed;
 
-            right: 21px;
-            bottom: 21px;
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 999;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
 
             width: 56px;
             height: 56px;
@@ -1455,19 +1116,12 @@
             border-radius: 50%;
 
             background: var(--green);
+
             color: #ffffff;
 
-            display: flex;
+            font-size: 27px;
 
-            align-items: center;
-            justify-content: center;
-
-            font-size: 22px;
-
-            z-index: 999;
-
-            box-shadow:
-                0 12px 28px rgba(37,211,102,0.35);
+            box-shadow: 0 7px 22px rgba(0,0,0,0.20);
 
             transition:
                 transform 0.25s ease,
@@ -1475,21 +1129,20 @@
         }
 
         .whatsapp-float:hover {
-            transform: translateY(-4px) scale(1.04);
+            transform: translateY(-4px);
 
-            box-shadow:
-                0 16px 32px rgba(37,211,102,0.42);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.25);
         }
 
 
         /* =========================
-           TABLET
+           RESPONSIVE
         ========================= */
 
         @media (max-width: 1050px) {
 
             nav {
-                gap: 14px;
+                gap: 16px;
             }
 
             nav a {
@@ -1500,20 +1153,20 @@
                 gap: 40px;
             }
 
-            .identity-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .intro-grid,
+            .story-grid,
+            .approach-grid,
+            .values-grid {
+                gap: 50px;
             }
 
-            .approach-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .footer-grid {
+                grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+                gap: 28px;
             }
 
         }
 
-
-        /* =========================
-           MOBILE NAV
-        ========================= */
 
         @media (max-width: 800px) {
 
@@ -1522,7 +1175,7 @@
             }
 
             .logo {
-                width: 145px;
+                width: 140px;
             }
 
             .menu-toggle {
@@ -1534,146 +1187,123 @@
 
                 top: 70px;
                 left: 0;
+                right: 0;
 
-                width: 100%;
-
-                display: flex;
+                display: none;
 
                 flex-direction: column;
-
                 align-items: stretch;
 
                 gap: 0;
 
-                padding: 10px 4% 16px;
+                padding: 10px 4% 18px;
 
-                background: rgba(7,13,23,0.98);
+                background: #0b1220;
 
-                border-top: 1px solid rgba(255,255,255,0.07);
-                border-bottom: 1px solid rgba(255,255,255,0.08);
+                border-top: 1px solid rgba(255,255,255,0.08);
 
-                box-shadow:
-                    0 18px 35px rgba(0,0,0,0.22);
-
-                opacity: 0;
-                visibility: hidden;
-
-                transform: translateY(-10px);
-
-                transition:
-                    opacity 0.25s ease,
-                    visibility 0.25s ease,
-                    transform 0.25s ease;
+                box-shadow: 0 18px 30px rgba(0,0,0,0.18);
             }
 
             nav.nav-open {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
+                display: flex;
             }
 
             nav a {
                 display: block;
 
-                width: 100%;
+                padding: 13px 8px;
 
-                padding: 13px 12px;
+                border-bottom: 1px solid rgba(255,255,255,0.07);
 
                 font-size: 14px;
-
-                border-bottom:
-                    1px solid rgba(255,255,255,0.05);
             }
 
-            nav a:last-child {
-                margin-top: 8px;
-
-                border-bottom: 0;
+            nav .nav-contact {
+                margin-top: 12px;
 
                 text-align: center;
-            }
 
-            .nav-contact {
-                padding: 13px 18px;
+                border-bottom: 0;
             }
-
 
             .about-hero {
                 padding: 70px 0;
             }
 
-            .about-hero-grid,
-            .who-grid,
+            .about-hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 42px;
+            }
+
+            .about-hero h1 {
+                max-width: 600px;
+            }
+
+            .hero-image {
+                height: 390px;
+            }
+
+            .hero-image-note {
+                left: 15px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .intro-grid,
             .story-grid,
+            .approach-grid,
             .values-grid {
                 grid-template-columns: 1fr;
+
+                gap: 35px;
             }
 
-            .about-visual-box {
-                max-width: 520px;
-
-                min-height: 350px;
-
-                margin: 5px auto 0;
+            .intro-heading {
+                position: static;
             }
 
-            .about-visual-box img {
-                height: 330px;
+            .story-image {
+                height: 370px;
             }
 
-            .visual-badge.one {
-                left: 8px;
-            }
-
-            .visual-badge.two {
-                right: 8px;
-            }
-
-            .story-grid {
-                gap: 40px;
-            }
-
-            .values-grid {
-                gap: 40px;
-            }
-
-            .identity-grid {
-                grid-template-columns: 1fr;
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .kenya-box {
-                grid-template-columns: 1fr;
+                align-items: flex-start;
 
-                gap: 22px;
+                flex-direction: column;
 
-                padding: 32px;
+                padding: 35px;
             }
 
             .footer-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
 
-                gap: 38px;
+                gap: 35px;
             }
 
         }
 
 
-        /* =========================
-           SMALL MOBILE
-        ========================= */
+        @media (max-width: 520px) {
 
-        @media (max-width: 560px) {
-
-            .section {
-                padding: 68px 0;
+            .container {
+                width: min(100% - 36px, 1180px);
             }
 
             .about-hero {
-                padding: 62px 0 68px;
+                padding: 58px 0 65px;
             }
 
             .about-hero h1 {
-                font-size: clamp(39px, 10vw, 48px);
+                font-size: 43px;
+
                 letter-spacing: -1.8px;
             }
 
@@ -1683,7 +1313,6 @@
 
             .hero-buttons {
                 flex-direction: column;
-
                 align-items: stretch;
             }
 
@@ -1691,86 +1320,97 @@
                 width: 100%;
             }
 
-            .about-visual-box {
-                min-height: 300px;
-
-                border-radius: 14px;
+            .hero-image {
+                height: 290px;
             }
 
-            .about-visual-box img {
-                width: 92%;
+            .hero-image-note {
+                position: relative;
 
-                height: 285px;
+                left: auto;
+                bottom: auto;
 
-                padding: 13px;
+                max-width: none;
+
+                margin: -20px 15px 0;
+
+                z-index: 2;
             }
 
-            .visual-badge {
-                padding: 8px 10px;
-
-                font-size: 9px;
-            }
-
-            .visual-badge.one {
-                top: 20px;
-            }
-
-            .visual-badge.two {
-                bottom: 20px;
-            }
-
-            .who-highlight {
-                padding: 30px;
-            }
-
-            .story-card {
-                padding: 31px;
-
-                min-height: 310px;
-            }
-
-            .story-card h3 {
-                font-size: 28px;
-            }
-
-            .approach-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .value-item {
-                grid-template-columns: 50px 1fr;
-
-                gap: 12px;
-
-                padding: 18px;
-            }
-
-            .kenya-section {
+            .section {
                 padding: 60px 0;
             }
 
-            .kenya-box {
-                padding: 28px 24px;
+            .section-title {
+                font-size: 34px;
             }
 
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: 25px 22px;
+            }
+
+            .story-image {
+                height: 280px;
+            }
+
+            .kenya-section {
+                padding: 10px 0 60px;
+            }
+
+            .kenya-box {
+                padding: 27px 23px;
+            }
+
+            .kenya-action,
             .kenya-action .button {
+                width: 100%;
+            }
+
+            .brand-statement {
+                padding: 65px 0;
+            }
+
+            .brand-statement h2 {
+                font-size: 35px;
+            }
+
+            .final-cta {
+                padding: 65px 0;
+            }
+
+            .final-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .final-buttons .button {
                 width: 100%;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
+
+                gap: 30px;
             }
 
             .footer-bottom {
+                align-items: flex-start;
+
                 flex-direction: column;
+
+                gap: 8px;
             }
 
             .whatsapp-float {
                 width: 52px;
                 height: 52px;
 
-                right: 14px;
-                bottom: 14px;
+                right: 16px;
+                bottom: 16px;
             }
 
         }
@@ -1792,10 +1432,7 @@
     <div class="nav-container">
 
 
-        <a
-            href="index.html"
-            aria-label="Street Gadgets Care Home"
-        >
+        <a href="index.html" aria-label="Street Gadgets Care home">
 
             <img
                 src="Logo.png"
@@ -1822,25 +1459,22 @@
         </button>
 
 
-        <nav
-            id="mainNavigation"
-            aria-label="Main navigation"
-        >
+        <nav id="mainNavigation" aria-label="Main navigation">
 
             <a href="index.html">
                 Home
             </a>
 
-            <a
-                href="about.html"
-                class="nav-active"
-                aria-current="page"
-            >
+            <a href="about.html" class="nav-active" aria-current="page">
                 About
             </a>
 
             <a href="services.html">
                 Services
+            </a>
+
+            <a href="shop.html">
+                Shop
             </a>
 
             <a href="spare-parts.html">
@@ -1851,14 +1485,12 @@
                 Creative
             </a>
 
-            <a
-                href="contact.html"
-                class="nav-contact"
-            >
+            <a href="contact.html" class="nav-contact">
                 Let's Talk
             </a>
 
         </nav>
+
 
     </div>
 
@@ -1871,81 +1503,84 @@
 
 <section class="about-hero">
 
-    <div class="container about-hero-grid">
+    <div class="container">
 
 
-        <div>
+        <div class="about-hero-grid">
 
-            <div class="hero-label">
-                About Street Gadgets Care
+
+            <div class="about-hero-content">
+
+
+                <div class="hero-label">
+                    About Street Gadgets Care
+                </div>
+
+
+                <h1>
+                    Technology deserves
+                    <span>better care.</span>
+                </h1>
+
+
+                <p class="about-hero-text">
+
+                    We are a Nairobi-based technology and creative
+                    support brand focused on helping people and
+                    businesses get more from their devices,
+                    technology and ideas.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="services.html"
+                        class="button button-primary"
+                    >
+                        Explore Our Services →
+                    </a>
+
+
+                    <a
+                        href="contact.html"
+                        class="button button-outline"
+                    >
+                        Get in Touch
+                    </a>
+
+                </div>
+
+
             </div>
 
 
-            <h1>
-                Technology
-                <span>with care.</span>
-            </h1>
+            <div class="hero-image-wrap">
 
-
-            <p class="about-hero-text">
-
-                Street Gadgets Care is a Nairobi-based technology
-                and creative support brand helping people and businesses
-                solve everyday technology problems, find useful devices
-                and present themselves professionally.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-
-                <a
-                    href="spare-parts.html"
-                    class="button button-primary"
-                >
-                    Explore Spare Parts →
-                </a>
-
-
-                <a
-                    href="contact.html"
-                    class="button hero-button-light"
-                >
-                    Talk To Us
-                </a>
-
-            </div>
-
-
-            <div class="hero-location">
-                Based in Nairobi • Serving Customers Across Kenya
-            </div>
-
-        </div>
-
-
-        <div class="about-visual">
-
-            <div class="about-visual-box">
 
                 <img
                     src="laptop-servicing.jpg"
-                    alt="Laptop servicing at Street Gadgets Care"
-                    loading="eager"
+                    alt="Laptop servicing and professional computer repair"
+                    class="hero-image"
                 >
 
 
-                <div class="visual-badge one">
-                    TECHNOLOGY FIRST
+                <div class="hero-image-note">
+
+                    <strong>
+                        Practical technology solutions
+                    </strong>
+
+                    <span>
+                        Repair, devices, accessories and creative support
+                    </span>
+
                 </div>
 
-
-                <div class="visual-badge two">
-                    CARE • SKILL • SOLUTIONS
-                </div>
 
             </div>
+
 
         </div>
 
@@ -1959,73 +1594,72 @@
      WHO WE ARE
 ========================= -->
 
-<section class="section who-section">
+<section class="section">
 
-    <div class="container who-grid">
+    <div class="container">
 
 
-        <div class="who-copy">
+        <div class="intro-grid">
 
-            <div class="section-label">
-                Who We Are
+
+            <div class="intro-heading">
+
+                <div class="section-label">
+                    Who We Are
+                </div>
+
+
+                <h2 class="section-title">
+                    More than repairs.
+                    A partner in technology.
+                </h2>
+
             </div>
 
 
-            <h2>
-                More than fixing devices.
-            </h2>
+            <div class="intro-copy">
 
 
-            <p>
+                <p>
 
-                Street Gadgets Care was built around a simple idea:
-                technology should make life and work easier — not
-                create unnecessary problems.
+                    Street Gadgets Care is a Nairobi-based
+                    technology business providing phone and laptop
+                    repair, device sales, accessories, spare parts
+                    and creative design services.
 
-            </p>
-
-
-            <p>
-
-                We work with individuals, students, professionals
-                and businesses who need practical help with their
-                devices, technology, creative work or digital needs.
-
-            </p>
+                </p>
 
 
-            <p>
+                <p>
 
-                Our foundation is technical, but our work goes beyond
-                repairs. We bring technology, products, creative
-                services and practical business support together.
+                    We understand how important technology is in
+                    everyday life. From communication and work to
+                    learning and business, devices play an important
+                    role in keeping people connected and productive.
 
-            </p>
-
-        </div>
+                </p>
 
 
-        <div class="who-highlight">
+                <p>
 
-            <div class="who-highlight-label">
-                Our Focus
+                    Our aim is to provide practical solutions that
+                    help customers make informed decisions, maintain
+                    their devices and access the technology services
+                    they need.
+
+                </p>
+
+
+                <div class="intro-highlight">
+
+                    We bring device care, technology products and
+                    creative services together in one place.
+
+                </div>
+
+
             </div>
 
-
-            <h3>
-                Helping you solve the problem in front of you.
-            </h3>
-
-
-            <p>
-
-                Whether it is a laptop that has stopped working,
-                a phone that needs repair, a device you want to buy,
-                or a business document that needs to look professional,
-                we focus on understanding what you need and finding
-                a practical way forward.
-
-            </p>
 
         </div>
 
@@ -2041,81 +1675,68 @@
 
 <section class="section story-section">
 
-    <div class="container story-grid">
+    <div class="container">
 
 
-        <div class="story-copy">
-
-            <div class="section-label">
-                Our Story
-            </div>
+        <div class="story-grid">
 
 
-            <h2>
-                We take care of the technology you depend on.
-            </h2>
+            <div>
 
-
-            <p>
-
-                Technology has become part of almost everything we do.
-                We use our phones to communicate, laptops to work,
-                devices to learn and digital tools to run businesses.
-
-            </p>
-
-
-            <p>
-
-                When those things stop working or become difficult
-                to manage, you need someone who can understand the
-                problem and help you move forward.
-
-            </p>
-
-
-            <div class="story-points">
-
-                <div class="story-point">
-                    Understand the real problem
-                </div>
-
-                <div class="story-point">
-                    Recommend practical solutions
-                </div>
-
-                <div class="story-point">
-                    Carry out careful technical work
-                </div>
-
-                <div class="story-point">
-                    Keep communication clear
-                </div>
+                <img
+                    src="laptop-servicing.jpg"
+                    alt="Professional laptop servicing at Street Gadgets Care"
+                    class="story-image"
+                    loading="lazy"
+                >
 
             </div>
 
-        </div>
+
+            <div class="story-content">
 
 
-        <div class="story-card">
+                <div class="section-label">
+                    Our Story
+                </div>
 
-            <div class="story-card-label">
-                Street Gadgets Care
+
+                <h2 class="section-title">
+                    Built around solving everyday technology needs.
+                </h2>
+
+
+                <p>
+
+                    Street Gadgets Care was built around a simple
+                    idea: people need dependable support when it
+                    comes to their technology.
+
+                </p>
+
+
+                <p>
+
+                    A device problem can interrupt work, studies,
+                    communication and business. Finding the right
+                    product, repair or technical support should
+                    not make that experience more difficult.
+
+                </p>
+
+
+                <p>
+
+                    That is why we bring together repair services,
+                    technology products, accessories, spare parts
+                    and creative design — giving customers a place
+                    to seek practical support for different needs.
+
+                </p>
+
+
             </div>
 
-
-            <h3>
-                Technology should work for you.
-            </h3>
-
-
-            <p>
-
-                Our role is to help make that possible — whether
-                through repair, maintenance, the right technology,
-                creative design or practical digital support.
-
-            </p>
 
         </div>
 
@@ -2129,129 +1750,203 @@
      WHAT WE DO
 ========================= -->
 
-<section class="section identity-section">
+<section class="section">
 
     <div class="container">
 
 
-        <div class="identity-heading">
+        <div class="services-intro">
 
             <div class="section-label">
-                What We Are About
+                What We Do
             </div>
 
 
             <h2 class="section-title">
-                Three areas. One connected brand.
+                Technology services under one roof.
             </h2>
 
 
             <p class="section-text">
 
-                Street Gadgets Care brings several practical services
-                together while keeping technology at the centre.
+                From keeping your devices working to helping you
+                access products and creative services, we offer
+                solutions for different technology needs.
 
             </p>
 
         </div>
 
 
-        <div class="identity-grid">
+        <div class="services-grid">
 
 
-            <div class="identity-card">
+            <div class="service-card">
 
-                <div class="identity-number">
-                    01 / TECHNOLOGY
+                <div class="service-number">
+                    01
                 </div>
 
 
                 <h3>
-                    Technology & Repairs
+                    Phone Repair
                 </h3>
 
 
                 <p>
 
-                    Phone and laptop repairs, screen and battery
-                    replacement, software support, servicing,
-                    maintenance and upgrades.
+                    Professional diagnostics and repair support
+                    for mobile phones, helping identify and address
+                    device problems.
 
                 </p>
 
 
-                <a
-                    href="spare-parts.html"
-                    class="identity-link"
-                >
-                    Explore Spare Parts →
+                <a href="services.html" class="service-link">
+                    Explore Services →
                 </a>
 
             </div>
 
 
-            <div class="identity-card">
+            <div class="service-card">
 
-                <div class="identity-number">
-                    02 / PRODUCTS
+                <div class="service-number">
+                    02
                 </div>
 
 
                 <h3>
-                    Devices & Accessories
+                    Laptop Repair
                 </h3>
 
 
                 <p>
 
-                    Laptops, phones, storage, laptop bags, chargers,
-                    cables, protection and other useful technology.
+                    Technical diagnostics and repair support for
+                    laptops to help resolve hardware and software
+                    related problems.
 
                 </p>
 
 
-                <a
-                    href="spare-parts.html"
-                    class="identity-link"
-                >
-                    Explore Spare Parts →
+                <a href="services.html" class="service-link">
+                    Explore Services →
                 </a>
 
             </div>
 
 
-            <div class="identity-card">
+            <div class="service-card">
 
-                <div class="identity-number">
-                    03 / CREATIVE
+                <div class="service-number">
+                    03
                 </div>
 
 
                 <h3>
-                    Creative & Digital Support
+                    Phones & Laptops
                 </h3>
 
 
                 <p>
 
-                    Graphic design, CVs, company profiles,
-                    business plans, business documents and
-                    business name registration support.
+                    Explore available phones and laptops for
+                    different needs through our devices section.
 
                 </p>
 
 
-                <a
-                    href="creative-studio.html"
-                    class="identity-link"
-                >
-                    Visit Creative →
+                <a href="shop.html" class="service-link">
+                    Explore Shop →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Accessories
+                </h3>
+
+
+                <p>
+
+                    Accessories for phones, laptops and other
+                    everyday technology needs.
+
+                </p>
+
+
+                <a href="shop.html" class="service-link">
+                    Explore Shop →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    05
+                </div>
+
+
+                <h3>
+                    Spare Parts
+                </h3>
+
+
+                <p>
+
+                    Spare parts for different phone and laptop
+                    models, depending on availability.
+
+                </p>
+
+
+                <a href="spare-parts.html" class="service-link">
+                    Browse Spare Parts →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    06
+                </div>
+
+
+                <h3>
+                    Creative Design
+                </h3>
+
+
+                <p>
+
+                    Graphic design and creative support for
+                    individuals, businesses and brands.
+
+                </p>
+
+
+                <a href="creative-studio.html" class="service-link">
+                    Explore Creative →
                 </a>
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -2267,120 +1962,119 @@
     <div class="container">
 
 
-        <div class="approach-heading">
-
-            <div class="section-label">
-                Our Approach
-            </div>
-
-
-            <h2 class="section-title">
-                How we work with you.
-            </h2>
-
-
-            <p class="section-text">
-
-                Good service starts with understanding what the
-                customer actually needs.
-
-            </p>
-
-        </div>
-
-
         <div class="approach-grid">
 
 
-            <div class="approach-card">
+            <div>
 
-                <div class="approach-number">
-                    01
+                <div class="section-label">
+                    Our Approach
                 </div>
 
 
-                <h3>
-                    Listen First
-                </h3>
+                <h2 class="section-title">
+                    A straightforward way to get things done.
+                </h2>
 
 
-                <p>
+                <p class="section-text">
 
-                    We start by understanding the problem,
-                    request or goal.
+                    We believe technology support should be clear,
+                    practical and centred around what the customer
+                    actually needs.
 
                 </p>
 
             </div>
 
 
-            <div class="approach-card">
+            <div class="approach-list">
 
-                <div class="approach-number">
-                    02
+
+                <div class="approach-item">
+
+                    <div class="approach-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Understand the Need
+                        </h3>
+
+
+                        <p>
+
+                            We start by understanding the device,
+                            product or service you need help with.
+
+                        </p>
+
+                    </div>
+
                 </div>
 
 
-                <h3>
-                    Find the Practical Solution
-                </h3>
+                <div class="approach-item">
+
+                    <div class="approach-number">
+                        02
+                    </div>
 
 
-                <p>
+                    <div>
 
-                    We focus on solutions that make sense
-                    for the situation.
-
-                </p>
-
-            </div>
+                        <h3>
+                            Identify the Right Solution
+                        </h3>
 
 
-            <div class="approach-card">
+                        <p>
 
-                <div class="approach-number">
-                    03
+                            We consider the available options and
+                            help you understand the next steps.
+
+                        </p>
+
+                    </div>
+
                 </div>
 
 
-                <h3>
-                    Careful Work
-                </h3>
+                <div class="approach-item">
+
+                    <div class="approach-number">
+                        03
+                    </div>
 
 
-                <p>
+                    <div>
 
-                    We take care with repairs, designs,
-                    products and customer requests.
-
-                </p>
-
-            </div>
+                        <h3>
+                            Keep Communication Clear
+                        </h3>
 
 
-            <div class="approach-card">
+                        <p>
 
-                <div class="approach-number">
-                    04
+                            We value clear communication throughout
+                            the process so customers understand
+                            what is being discussed.
+
+                        </p>
+
+                    </div>
+
                 </div>
 
-
-                <h3>
-                    Clear Communication
-                </h3>
-
-
-                <p>
-
-                    We keep the process understandable from
-                    start to finish.
-
-                </p>
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -2388,114 +2082,120 @@
 
 
 <!-- =========================
-     VALUES
+     OUR VALUES
 ========================= -->
 
-<section class="section values-section">
+<section class="section">
 
-    <div class="container values-grid">
-
-
-        <div class="values-copy">
-
-            <div class="section-label">
-                What Matters To Us
-            </div>
+    <div class="container">
 
 
-            <h2>
-                The way we do things matters.
-            </h2>
+        <div class="values-grid">
 
 
-            <p>
+            <div>
 
-                Every repair, product inquiry, design project and
-                customer conversation contributes to the Street
-                Gadgets Care experience.
-
-            </p>
-
-        </div>
-
-
-        <div class="values-list">
-
-
-            <div class="value-item">
-
-                <div class="value-number">
-                    01
+                <div class="section-label">
+                    What Matters to Us
                 </div>
 
 
-                <div>
-
-                    <h3>
-                        Care
-                    </h3>
+                <h2 class="section-title">
+                    The values behind our work.
+                </h2>
 
 
-                    <p>
+                <p class="section-text">
 
-                        We treat your device, project and request
-                        with attention.
+                    The way we approach technology and customer
+                    support is guided by a few important principles.
 
-                    </p>
-
-                </div>
+                </p>
 
             </div>
 
 
-            <div class="value-item">
+            <div class="values-list">
 
-                <div class="value-number">
-                    02
+
+                <div class="value-item">
+
+                    <div class="value-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Honesty and Clarity
+                        </h3>
+
+
+                        <p>
+
+                            We believe customers should understand
+                            the options available to them and make
+                            informed decisions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="value-item">
+
+                    <div class="value-number">
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Attention to Detail
+                        </h3>
+
+
+                        <p>
+
+                            Small details matter in technical work,
+                            design and customer service.
+
+                        </p>
+
+                    </div>
+
                 </div>
 
 
-                <div>
+                <div class="value-item">
 
-                    <h3>
-                        Attention to Detail
-                    </h3>
-
-
-                    <p>
-
-                        Small details matter in technical work,
-                        design and customer service.
-
-                    </p>
-
-                </div>
-
-            </div>
+                    <div class="value-number">
+                        03
+                    </div>
 
 
-            <div class="value-item">
+                    <div>
 
-                <div class="value-number">
-                    03
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Customer Focus
-                    </h3>
+                        <h3>
+                            Customer Focus
+                        </h3>
 
 
-                    <p>
+                        <p>
 
-                        We aim to understand what you actually
-                        need before deciding how to help.
+                            We aim to understand what you actually
+                            need before deciding how to help.
 
-                    </p>
+                        </p>
+
+                    </div>
 
                 </div>
+
 
             </div>
 
@@ -2630,6 +2330,14 @@
 
 
             <a
+                href="shop.html"
+                class="button button-outline"
+            >
+                Shop
+            </a>
+
+
+            <a
                 href="creative-studio.html"
                 class="button button-outline"
             >
@@ -2702,6 +2410,10 @@
                     Services
                 </a>
 
+                <a href="shop.html">
+                    Shop
+                </a>
+
                 <a href="spare-parts.html">
                     Spare Parts
                 </a>
@@ -2745,6 +2457,35 @@
 
                 <span>
                     Nairobi, Kenya
+                </span>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <a
+                    href="https://www.instagram.com/street_gadgets_care"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram · @street_gadgets_care
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@street_gadgets_care"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    TikTok · @street_gadgets_care
+                </a>
+
+                <span>
+                    Facebook and YouTube: Street Gadgets Care
                 </span>
 
             </div>
