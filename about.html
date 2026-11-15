@@ -2,652 +2,1763 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Street Gadgets Care</title>
-<meta name="description" content="Learn more about Street Gadgets Care — a Nairobi-based technology, repair, accessories, creative design and business support brand serving customers across Kenya.">
-<meta name="author" content="Street Gadgets Care">
-<meta name="theme-color" content="#0b1220">
-<link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/about.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About Street Gadgets Care | Technology with Care">
-<meta property="og:description" content="Get to know Street Gadgets Care, a Nairobi-based technology, repair, accessories and creative support brand serving customers across Kenya.">
-<meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/about.html">
-<meta property="og:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:#0b1220;background:#fff;font-size:16px;line-height:1.65;overflow-x:hidden}
-img{display:block;max-width:100%}
-a{text-decoration:none;color:inherit}
-:root{--navy:#0b1220;--cyan:#19a7ce;--cyan-dark:#118bad;--green:#25d366;--light:#f5f8fa;--muted:#6b7785;--border:#e3e9ee}
+  <title>About Us | Street Gadgets Care</title>
+  <meta name="description" content="Learn more about Street Gadgets Care — a Nairobi-based technology, repair, accessories, creative design and business support brand serving customers across Kenya.">
+  <meta name="keywords" content="Street Gadgets Care, about Street Gadgets Care, phone repair Nairobi, laptop repair Nairobi, technology Kenya, graphic design Nairobi">
+  <meta name="author" content="Street Gadgets Care">
+  <meta name="theme-color" content="#0b1220">
 
-header{position:sticky;top:0;z-index:1000;background:rgba(11,18,32,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+  <link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Street Gadgets Care | Technology with Care">
+  <meta property="og:description" content="Get to know Street Gadgets Care, a Nairobi-based technology, repair, accessories and creative support brand serving customers across Kenya.">
+  <meta property="og:url" content="https://streetgadgetscare.github.io/StreetGadgetsCare/about.html">
+  <meta property="og:image" content="https://streetgadgetscare.github.io/StreetGadgetsCare/Logo.png">
 
-.nav-container{
-width:min(1180px,92%);
-min-height:76px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:18px
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-/* HEADER BRANDING */
-.logo-link{
-display:flex;
-align-items:center;
-gap:9px;
-flex-shrink:0;
-min-width:0
-}
+  <style>
+    :root {
+      --navy: #0b1220;
+      --navy-light: #121d31;
+      --cyan: #19a7ce;
+      --cyan-dark: #118bad;
+      --green: #25d366;
+      --white: #ffffff;
+      --light: #f5f8fa;
+      --text: #263445;
+      --muted: #6b7785;
+      --border: #e3e9ee;
+      --container: 1180px;
+    }
 
-.logo{
-width:53px;
-height:53px;
-object-fit:contain;
-flex-shrink:0
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.brand-copy{
-display:flex;
-flex-direction:column;
-justify-content:center;
-gap:1px;
-min-width:0;
-line-height:1.2
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-.brand-copy strong{
-display:block;
-color:#fff;
-font-size:15px;
-font-weight:900;
-letter-spacing:.55px;
-white-space:nowrap
-}
+    body {
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-.brand-tagline{
-display:block;
-color:#8eddf1;
-font-size:9px;
-font-weight:800;
-letter-spacing:1.05px;
-white-space:nowrap
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* NAVIGATION */
-nav{
-display:flex;
-align-items:center;
-gap:20px;
-margin-left:auto
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-nav a{
-color:#fff;
-font-size:13px;
-font-weight:650;
-white-space:nowrap;
-transition:color .25s
-}
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-nav a:hover,.nav-active{color:var(--cyan)!important}
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(25,167,206,.75);
+      outline-offset: 3px;
+    }
 
-.nav-contact{
-background:var(--cyan);
-padding:11px 18px;
-border-radius:7px;
-color:#fff!important
-}
+    .container {
+      width: min(var(--container), 92%);
+      margin-inline: auto;
+    }
 
-.nav-contact:hover{background:var(--cyan-dark)}
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 10px;
+      z-index: 2000;
+      padding: 12px 16px;
+      color: var(--navy);
+      background: white;
+      border-radius: 6px;
+    }
 
-.menu-toggle{
-display:none;
-width:44px;
-height:44px;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-gap:5px;
-border:1px solid rgba(255,255,255,.14);
-border-radius:8px;
-background:rgba(255,255,255,.05);
-cursor:pointer;
-flex-shrink:0
-}
+    .skip-link:focus {
+      left: 10px;
+    }
 
-.menu-toggle span{
-display:block;
-width:21px;
-height:2px;
-border-radius:10px;
-background:#fff;
-transition:.25s
-}
+    /* HEADER */
 
-.menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.menu-toggle.active span:nth-child(2){opacity:0}
-.menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11,18,32,.98);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
 
-.container{width:min(1180px,92%);margin:auto}
-.section{padding:90px 0}
-.section-label{display:inline-block;margin-bottom:13px;color:var(--cyan-dark);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
-.section-title{font-size:clamp(32px,3.8vw,49px);line-height:1.08;letter-spacing:-1.5px;margin-bottom:18px}
-.section-text{color:var(--muted);font-size:16px;line-height:1.75}
+    .nav-container {
+      width: min(var(--container), 92%);
+      min-height: 78px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 21px;border-radius:7px;font-size:14px;font-weight:750;transition:.25s}
-.button-primary{background:var(--cyan);color:#fff}
-.button-primary:hover{background:var(--cyan-dark);transform:translateY(-2px)}
-.button-dark{background:var(--navy);color:#fff}
-.button-dark:hover{background:#17243a;transform:translateY(-2px)}
-.button-outline{border:1px solid #cbd5dc;color:var(--navy);background:#fff}
-.button-outline:hover{border-color:var(--cyan);color:var(--cyan-dark);transform:translateY(-2px)}
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      min-width: 0;
+    }
 
-/* HERO */
-.about-hero{position:relative;background:radial-gradient(circle at 80% 20%,rgba(25,167,206,.14),transparent 30%),linear-gradient(135deg,#07101e,#0b1220 65%,#111e33);color:#fff;padding:92px 0 86px;overflow:hidden}
-.about-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
-.hero-label{display:flex;align-items:center;gap:10px;color:#7dddf5;font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:20px}
-.hero-label:before{content:"";width:30px;height:2px;background:var(--cyan)}
-.about-hero h1{max-width:650px;font-size:clamp(45px,5.4vw,68px);line-height:1.01;letter-spacing:-2.7px;margin-bottom:22px}
-.about-hero h1 span{color:var(--cyan)}
-.about-hero-text{max-width:620px;color:#c4ced9;font-size:16px;line-height:1.8;margin-bottom:27px}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
-.hero-button-light{border:1px solid rgba(255,255,255,.2);color:#fff;background:rgba(255,255,255,.05)}
-.hero-button-light:hover{border-color:var(--cyan);background:rgba(25,167,206,.1);transform:translateY(-2px)}
-.hero-location{color:#aab7c5;font-size:13px}
-.about-visual{display:flex;justify-content:center}
-.about-visual-box{position:relative;width:100%;max-width:480px;min-height:390px;display:flex;align-items:center;justify-content:center;border-radius:18px;background:radial-gradient(circle at center,rgba(25,167,206,.13),transparent 60%),#101a2b;border:1px solid rgba(255,255,255,.08);box-shadow:0 25px 55px rgba(0,0,0,.25);overflow:hidden}
-.about-visual-box:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid rgba(25,167,206,.12)}
-.about-visual-box img{position:relative;z-index:1;width:86%;height:360px;object-fit:contain;padding:18px}
-.visual-badge{position:absolute;z-index:2;background:#fff;color:var(--navy);padding:10px 13px;border-radius:7px;font-size:10px;font-weight:900;letter-spacing:.7px;box-shadow:0 12px 25px rgba(0,0,0,.2)}
-.visual-badge.one{top:38px;left:8px}
-.visual-badge.two{right:8px;bottom:40px}
+    .logo {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
 
-/* WHO WE ARE */
-.who-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-.who-copy h2{max-width:560px;font-size:clamp(34px,4vw,50px);line-height:1.08;letter-spacing:-1.5px;margin-bottom:18px}
-.who-copy p{max-width:650px;color:var(--muted);font-size:16px;line-height:1.8;margin-bottom:17px}
-.who-highlight{position:relative;padding:38px;border-radius:14px;background:linear-gradient(145deg,#f8fbfc,#f1f6f8);border:1px solid var(--border);overflow:hidden}
-.who-highlight:before{content:"";position:absolute;width:5px;height:100%;left:0;top:0;background:var(--cyan)}
-.who-highlight-label{color:var(--cyan-dark);font-size:10px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:12px}
-.who-highlight h3{font-size:27px;line-height:1.2;margin-bottom:12px}
-.who-highlight p{color:var(--muted);font-size:14px;line-height:1.75}
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+      line-height: 1.2;
+    }
 
-/* STORY */
-.story-section{background:var(--light)}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
-.story-copy h2{max-width:590px;font-size:clamp(34px,4vw,50px);line-height:1.08;letter-spacing:-1.5px;margin-bottom:19px}
-.story-copy p{max-width:650px;color:var(--muted);font-size:16px;line-height:1.8;margin-bottom:15px}
-.story-points{display:grid;gap:12px;margin-top:25px}
-.story-point{display:flex;gap:12px;align-items:flex-start;color:#263445;font-size:13px;font-weight:700}
-.story-point:before{content:"✓";flex-shrink:0;width:21px;height:21px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#e8f7fb;color:var(--cyan-dark);font-size:11px;font-weight:900}
-.story-card{position:relative;padding:42px;min-height:350px;display:flex;flex-direction:column;justify-content:center;border-radius:15px;background:linear-gradient(145deg,#0b1220,#121d31);color:#fff;overflow:hidden}
-.story-card-label{color:#7dddf5;font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:17px}
-.story-card h3{max-width:480px;font-size:33px;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}
-.story-card p{max-width:470px;color:#aebdca;font-size:14px;line-height:1.8}
+    .brand-copy strong {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .35px;
+      white-space: nowrap;
+    }
 
-/* SERVICES / IDENTITY */
-.identity-heading{max-width:720px;margin-bottom:43px}
-.identity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.identity-card{position:relative;padding:31px;border:1px solid var(--border);border-radius:12px;background:#fff;transition:.25s}
-.identity-card:hover{transform:translateY(-5px);border-color:rgba(25,167,206,.35);box-shadow:0 16px 35px rgba(11,18,32,.07)}
-.identity-number{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:1px;margin-bottom:21px}
-.identity-card h3{font-size:22px;line-height:1.2;margin-bottom:11px}
-.identity-card p{color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:19px}
-.identity-link{color:var(--cyan-dark);font-size:12px;font-weight:900}
-.identity-link:hover{color:var(--cyan)}
+    .brand-tagline {
+      margin-top: 5px;
+      color: #8edcf0;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.05px;
+      white-space: nowrap;
+    }
 
-/* APPROACH */
-.approach-section{background:var(--light)}
-.approach-heading{max-width:700px;margin-bottom:42px}
-.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.approach-card{padding:27px 22px;background:#fff;border:1px solid var(--border);border-radius:10px;transition:.25s}
-.approach-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(11,18,32,.06)}
-.approach-number{color:var(--cyan);font-size:11px;font-weight:900;margin-bottom:18px}
-.approach-card h3{font-size:17px;margin-bottom:8px}
-.approach-card p{color:var(--muted);font-size:13px;line-height:1.7}
+    .main-navigation {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-/* VALUES */
-.values-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
-.values-copy h2{max-width:520px;font-size:clamp(34px,4vw,49px);line-height:1.08;letter-spacing:-1.5px;margin-bottom:18px}
-.values-copy p{max-width:570px;color:var(--muted);font-size:16px;line-height:1.75}
-.values-list{display:grid;gap:13px}
-.value-item{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:21px;border:1px solid var(--border);border-radius:10px}
-.value-number{color:var(--cyan);font-size:12px;font-weight:900}
-.value-item h3{font-size:18px;margin-bottom:5px}
-.value-item p{color:var(--muted);font-size:13px;line-height:1.7}
+    .main-navigation a {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: color .2s ease, background .2s ease;
+    }
 
-/* KENYA-WIDE SERVICE */
-.kenya-section{background:var(--light);padding:72px 0}
-.kenya-box{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center;padding:38px 42px;border-radius:14px;background:linear-gradient(135deg,#fff,#f2f7f9);border:1px solid var(--border)}
-.kenya-label{color:var(--cyan-dark);font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px}
-.kenya-box h2{font-size:clamp(26px,3vw,37px);line-height:1.1;margin-bottom:10px}
-.kenya-box p{max-width:690px;color:var(--muted);font-size:14px;line-height:1.75}
+    .main-navigation a:hover,
+    .main-navigation a.active {
+      color: var(--cyan);
+    }
 
-/* BRAND STATEMENT */
-.brand-statement{background:radial-gradient(circle at 50% 0%,rgba(25,167,206,.1),transparent 38%),var(--navy);color:#fff;padding:86px 0;text-align:center}
-.brand-statement-label{color:#7dddf5;font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px}
-.brand-statement h2{max-width:850px;margin:0 auto 18px;font-size:clamp(36px,4.8vw,57px);line-height:1.03;letter-spacing:-1.8px}
-.brand-statement h2 span{color:var(--cyan)}
-.brand-statement p{max-width:650px;margin:auto;color:#aebdca;font-size:16px;line-height:1.75}
+    .main-navigation .nav-contact {
+      padding: 10px 16px;
+      background: var(--cyan);
+      color: #fff;
+      border-radius: 6px;
+    }
 
-/* FINAL CTA */
-.final-cta{background:#fff;padding:90px 0;text-align:center}
-.final-cta h2{font-size:clamp(36px,4.5vw,54px);line-height:1.03;letter-spacing:-1.6px;margin-bottom:16px}
-.final-cta p{max-width:620px;margin:0 auto 27px;color:var(--muted);font-size:15px}
-.final-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+    .main-navigation .nav-contact:hover {
+      background: var(--cyan-dark);
+      color: #fff;
+    }
 
-/* FOOTER */
-footer{background:#070d17;color:#fff;padding:60px 0 24px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.3fr;gap:34px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.08)}
-.footer-brand img{width:48px;height:48px;object-fit:contain;margin-bottom:17px}
-.footer-brand p{max-width:350px;color:#8f9baa;font-size:13px;line-height:1.7}
-.footer-column h4{font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:17px}
-.footer-column a,.footer-column span{display:block;color:#8f9baa;font-size:13px;margin-bottom:9px;overflow-wrap:anywhere}
-.footer-column a:hover{color:var(--cyan)}
-.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;color:#697584;font-size:12px}
-.whatsapp-float{position:fixed;right:21px;bottom:21px;width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;z-index:999;box-shadow:0 12px 28px rgba(37,211,102,.35);transition:.25s}
-.whatsapp-float:hover{transform:translateY(-4px) scale(1.04)}
+    .mobile-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 7px;
+      background: rgba(255,255,255,.05);
+      cursor: pointer;
+    }
 
-/* RESPONSIVE */
-@media(max-width:1100px){
-.nav-container{gap:12px}
-.brand-copy strong{font-size:13px}
-.brand-tagline{font-size:8px;letter-spacing:.8px}
-.logo{width:48px;height:48px}
-.menu-toggle{display:flex}
-nav{
-position:absolute;
-top:76px;
-left:0;
-width:100%;
-display:flex;
-flex-direction:column;
-align-items:stretch;
-gap:0;
-padding:10px 4% 16px;
-background:rgba(7,13,23,.98);
-border-top:1px solid rgba(255,255,255,.07);
-border-bottom:1px solid rgba(255,255,255,.08);
-box-shadow:0 18px 35px rgba(0,0,0,.22);
-opacity:0;
-visibility:hidden;
-transform:translateY(-10px);
-transition:.25s;
-margin-left:0
-}
-nav.nav-open{opacity:1;visibility:visible;transform:translateY(0)}
-nav a{display:block;width:100%;padding:13px 12px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.05)}
-nav a:last-child{margin-top:8px;border-bottom:0;text-align:center}
-.about-hero-grid{gap:40px}
-.identity-grid{grid-template-columns:repeat(2,1fr)}
-.approach-grid{grid-template-columns:repeat(2,1fr)}
-}
+    .mobile-toggle span {
+      width: 21px;
+      height: 2px;
+      background: white;
+      border-radius: 5px;
+      transition: transform .2s ease, opacity .2s ease;
+    }
 
-@media(max-width:800px){
-.nav-container{min-height:70px}
-nav{top:70px}
-.about-hero{padding:70px 0}
-.about-hero-grid,.who-grid,.story-grid,.values-grid{grid-template-columns:1fr}
-.about-visual-box{max-width:520px;min-height:350px;margin:5px auto 0}
-.about-visual-box img{height:330px}
-.story-grid,.values-grid{gap:40px}
-.identity-grid{grid-template-columns:1fr}
-.kenya-box{grid-template-columns:1fr;gap:22px;padding:32px}
-.footer-grid{grid-template-columns:1fr 1fr;gap:38px}
-}
+    .mobile-toggle.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
 
-@media(max-width:560px){
-.section{padding:68px 0}
-.about-hero{padding:62px 0 68px}
-.about-hero h1{font-size:clamp(39px,10vw,48px);letter-spacing:-1.8px}
-.about-hero-text{font-size:15px}
-.hero-buttons{flex-direction:column;align-items:stretch}
-.hero-buttons .button{width:100%}
-.about-visual-box{min-height:300px}
-.about-visual-box img{width:92%;height:285px;padding:13px}
-.who-highlight{padding:30px}
-.story-card{padding:31px;min-height:310px}
-.story-card h3{font-size:28px}
-.approach-grid{grid-template-columns:1fr}
-.value-item{grid-template-columns:50px 1fr;gap:12px;padding:18px}
-.kenya-section{padding:60px 0}
-.kenya-box{padding:28px 24px}
-.kenya-action .button{width:100%}
-.footer-grid{grid-template-columns:1fr}
-.footer-bottom{flex-direction:column}
-.whatsapp-float{width:52px;height:52px;right:14px;bottom:14px}
-}
+    .mobile-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
 
-@media(max-width:390px){
-.brand-copy strong{font-size:11px;letter-spacing:.3px}
-.brand-tagline{font-size:7px;letter-spacing:.55px}
-.logo{width:43px;height:43px}
-.logo-link{gap:7px}
-.menu-toggle{width:40px;height:40px}
-}
-</style>
+    .mobile-toggle.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* GENERAL */
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 13px;
+      color: var(--cyan-dark);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      font-size: clamp(32px, 3.8vw, 49px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: white;
+      background: var(--cyan);
+    }
+
+    .button-primary:hover {
+      background: var(--cyan-dark);
+    }
+
+    .button-dark {
+      color: white;
+      background: var(--navy);
+    }
+
+    .button-dark:hover {
+      background: var(--navy-light);
+    }
+
+    .button-outline {
+      color: var(--navy);
+      background: white;
+      border-color: #cbd5dc;
+    }
+
+    .button-outline:hover {
+      color: var(--cyan-dark);
+      border-color: var(--cyan);
+    }
+
+    /* HERO */
+
+    .about-hero {
+      position: relative;
+      padding: 90px 0 85px;
+      color: white;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(25,167,206,.14), transparent 30%),
+        linear-gradient(135deg, #07101e 0%, #0b1220 65%, #111e33 100%);
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -280px;
+      top: -280px;
+      border: 1px solid rgba(25,167,206,.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .about-hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: #7dddf5;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .hero-label::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--cyan);
+    }
+
+    .about-hero h1 {
+      max-width: 650px;
+      margin-bottom: 22px;
+      font-size: clamp(45px, 5.4vw, 68px);
+      line-height: 1.01;
+      letter-spacing: -2.7px;
+    }
+
+    .about-hero h1 span {
+      color: var(--cyan);
+    }
+
+    .about-hero-text {
+      max-width: 620px;
+      margin-bottom: 27px;
+      color: #c4ced9;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .hero-button-light {
+      color: white;
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.2);
+    }
+
+    .hero-button-light:hover {
+      background: rgba(25,167,206,.1);
+      border-color: var(--cyan);
+    }
+
+    .hero-location {
+      color: #aab7c5;
+      font-size: 13px;
+    }
+
+    .about-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-visual-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 480px;
+      min-height: 390px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at center, rgba(25,167,206,.13), transparent 60%),
+        #101a2b;
+      box-shadow: 0 25px 55px rgba(0,0,0,.25);
+      overflow: hidden;
+    }
+
+    .about-visual-box img {
+      position: relative;
+      z-index: 1;
+      width: 86%;
+      height: 360px;
+      padding: 18px;
+      object-fit: contain;
+    }
+
+    .visual-badge {
+      position: absolute;
+      z-index: 2;
+      padding: 10px 13px;
+      border-radius: 6px;
+      color: var(--navy);
+      background: rgba(255,255,255,.96);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .7px;
+      box-shadow: 0 12px 25px rgba(0,0,0,.2);
+    }
+
+    .visual-badge.one {
+      top: 38px;
+      left: 8px;
+    }
+
+    .visual-badge.two {
+      right: 8px;
+      bottom: 40px;
+    }
+
+    /* WHO WE ARE */
+
+    .who-section {
+      background: white;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .who-copy h2,
+    .story-copy h2,
+    .values-copy h2 {
+      margin-bottom: 18px;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .who-copy p,
+    .story-copy p {
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .who-highlight {
+      position: relative;
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: linear-gradient(145deg, #f8fbfc, #f1f6f8);
+      overflow: hidden;
+    }
+
+    .who-highlight::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--cyan);
+    }
+
+    .who-highlight-label {
+      margin-bottom: 12px;
+      color: var(--cyan-dark);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .who-highlight h3 {
+      margin-bottom: 12px;
+      font-size: 27px;
+      line-height: 1.2;
+    }
+
+    .who-highlight p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    /* STORY */
+
+    .story-section {
+      background: var(--light);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .story-points {
+      display: grid;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .story-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .story-point::before {
+      content: "✓";
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      color: var(--cyan-dark);
+      background: #e8f7fb;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .story-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 350px;
+      padding: 42px;
+      border-radius: 14px;
+      color: white;
+      background: linear-gradient(145deg, #0b1220, #121d31);
+      overflow: hidden;
+    }
+
+    .story-card-label {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 17px;
+      color: #7dddf5;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .story-card h3 {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      margin-bottom: 16px;
+      font-size: 33px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .story-card p {
+      position: relative;
+      z-index: 1;
+      max-width: 470px;
+      color: #aebdca;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* WHAT WE DO */
+
+    .identity-section {
+      background: white;
+    }
+
+    .identity-heading,
+    .approach-heading {
+      max-width: 720px;
+      margin-bottom: 43px;
+    }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .identity-card {
+      position: relative;
+      padding: 31px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: white;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .identity-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 42px;
+      height: 3px;
+      border-radius: 11px 0 0 0;
+      background: var(--cyan);
+    }
+
+    .identity-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(25,167,206,.35);
+      box-shadow: 0 16px 35px rgba(11,18,32,.07);
+    }
+
+    .identity-number {
+      margin-bottom: 21px;
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .identity-card h3 {
+      margin-bottom: 11px;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .identity-card p {
+      margin-bottom: 19px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .identity-link {
+      color: var(--cyan-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .identity-link:hover {
+      color: var(--cyan);
+    }
+
+    /* APPROACH */
+
+    .approach-section {
+      background: var(--light);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .approach-card {
+      padding: 27px 22px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: white;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .approach-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11,18,32,.06);
+    }
+
+    .approach-number {
+      margin-bottom: 18px;
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .approach-card h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .approach-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* VALUES */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .values-copy p {
+      max-width: 570px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .values-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .value-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 18px;
+      padding: 21px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .value-item:hover {
+      border-color: rgba(25,167,206,.3);
+      box-shadow: 0 10px 25px rgba(11,18,32,.05);
+    }
+
+    .value-number {
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .value-item h3 {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .value-item p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* KENYA-WIDE SERVICE */
+
+    .kenya-section {
+      padding: 72px 0;
+      background: var(--light);
+    }
+
+    .kenya-box {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 35px;
+      align-items: center;
+      padding: 38px 42px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: linear-gradient(135deg, white, #f2f7f9);
+      overflow: hidden;
+    }
+
+    .kenya-label {
+      margin-bottom: 9px;
+      color: var(--cyan-dark);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .kenya-box h2 {
+      margin-bottom: 10px;
+      font-size: clamp(26px, 3vw, 37px);
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .kenya-box p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .kenya-action {
+      align-self: center;
+    }
+
+    /* BRAND STATEMENT */
+
+    .brand-statement {
+      padding: 86px 0;
+      color: white;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(25,167,206,.1), transparent 38%),
+        var(--navy);
+    }
+
+    .brand-statement-label {
+      margin-bottom: 18px;
+      color: #7dddf5;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .brand-statement h2 {
+      max-width: 850px;
+      margin: 0 auto 18px;
+      font-size: clamp(36px, 4.8vw, 57px);
+      line-height: 1.03;
+      letter-spacing: -1.8px;
+    }
+
+    .brand-statement h2 span {
+      color: var(--cyan);
+    }
+
+    .brand-statement p {
+      max-width: 650px;
+      margin: auto;
+      color: #aebdca;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 90px 0;
+      text-align: center;
+      background: white;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 16px;
+      font-size: clamp(36px, 4.5vw, 54px);
+      line-height: 1.03;
+      letter-spacing: -1.6px;
+    }
+
+    .final-cta p {
+      max-width: 620px;
+      margin: 0 auto 27px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .final-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      padding: 60px 0 24px;
+      color: white;
+      background: #070d17;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr;
+      gap: 34px;
+      padding-bottom: 42px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-brand img {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 14px;
+      object-fit: contain;
+    }
+
+    .footer-brand strong {
+      display: block;
+      margin-bottom: 8px;
+      color: white;
+      font-size: 14px;
+      letter-spacing: .3px;
+    }
+
+    .footer-brand .footer-tagline {
+      display: block;
+      margin-bottom: 14px;
+      color: #8edcf0;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand p {
+      max-width: 350px;
+      color: #8f9baa;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 17px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .footer-column a,
+    .footer-column span {
+      display: block;
+      margin-bottom: 9px;
+      color: #8f9baa;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 20px;
+      color: #697584;
+      font-size: 12px;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 21px;
+      bottom: 21px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      color: white;
+      background: var(--green);
+      font-size: 23px;
+      box-shadow: 0 12px 28px rgba(37,211,102,.3);
+      transition: transform .2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1050px) {
+      .main-navigation {
+        gap: 12px;
+      }
+
+      .main-navigation a {
+        font-size: 11px;
+      }
+
+      .about-hero-grid {
+        gap: 38px;
+      }
+
+      .identity-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .nav-container {
+        min-height: 72px;
+      }
+
+      .logo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand-copy strong {
+        font-size: 13px;
+      }
+
+      .brand-tagline {
+        font-size: 8px;
+      }
+
+      .mobile-toggle {
+        display: flex;
+      }
+
+      .main-navigation {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 4% 16px;
+        background: rgba(7,13,23,.99);
+        border-top: 1px solid rgba(255,255,255,.07);
+        box-shadow: 0 18px 35px rgba(0,0,0,.22);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+      }
+
+      .main-navigation.nav-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .main-navigation a {
+        display: block;
+        width: 100%;
+        padding: 13px 12px;
+        border-bottom: 1px solid rgba(255,255,255,.05);
+        font-size: 14px;
+      }
+
+      .main-navigation .nav-contact {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .about-hero {
+        padding: 70px 0;
+      }
+
+      .about-hero-grid,
+      .who-grid,
+      .story-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual-box {
+        max-width: 520px;
+        min-height: 350px;
+        margin: 5px auto 0;
+      }
+
+      .about-visual-box img {
+        height: 330px;
+      }
+
+      .story-grid,
+      .values-grid {
+        gap: 40px;
+      }
+
+      .kenya-box {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 32px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section {
+        padding: 68px 0;
+      }
+
+      .about-hero {
+        padding: 62px 0 68px;
+      }
+
+      .about-hero h1 {
+        font-size: clamp(39px, 10vw, 48px);
+        letter-spacing: -1.8px;
+      }
+
+      .about-hero-text {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .about-visual-box {
+        min-height: 300px;
+        border-radius: 13px;
+      }
+
+      .about-visual-box img {
+        width: 92%;
+        height: 285px;
+        padding: 13px;
+      }
+
+      .visual-badge {
+        padding: 8px 10px;
+        font-size: 9px;
+      }
+
+      .visual-badge.one {
+        top: 20px;
+      }
+
+      .visual-badge.two {
+        bottom: 20px;
+      }
+
+      .who-highlight {
+        padding: 30px;
+      }
+
+      .story-card {
+        min-height: 310px;
+        padding: 31px;
+      }
+
+      .story-card h3 {
+        font-size: 28px;
+      }
+
+      .identity-grid,
+      .approach-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item {
+        grid-template-columns: 50px 1fr;
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .kenya-section {
+        padding: 60px 0;
+      }
+
+      .kenya-box {
+        padding: 28px 24px;
+      }
+
+      .kenya-action .button {
+        width: 100%;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<div class="nav-container">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<a href="index.html" class="logo-link" aria-label="Street Gadgets Care Home">
-<img src="Logo.png" alt="Street Gadgets Care logo" class="logo" width="53" height="53">
-<span class="brand-copy">
-<strong>STREET GADGETS CARE</strong>
-<span class="brand-tagline">REPAIR . RELIABLE . TRUSTED</span>
-</span>
-</a>
+<header class="site-header">
+  <div class="nav-container">
 
-<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNavigation">
-<span></span><span></span><span></span>
-</button>
+    <a href="index.html" class="logo-link" aria-label="Street Gadgets Care home">
+      <img src="Logo.png" alt="Street Gadgets Care logo" class="logo" width="58" height="58">
+      <span class="brand-copy">
+        <strong>STREET GADGETS CARE</strong>
+        <span class="brand-tagline">REPAIR . RELIABLE . TRUSTED</span>
+      </span>
+    </a>
 
-<nav id="mainNavigation" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a href="about.html" class="nav-active" aria-current="page">About</a>
-<a href="services.html">Services</a>
-<a href="shop.html">Shop</a>
-<a href="spare-parts.html">Spare Parts</a>
-<a href="creative-studio.html">Creative</a>
-<a href="contact.html" class="nav-contact">Let's Talk</a>
-</nav>
+    <button class="mobile-toggle" id="menuToggle" type="button"
+      aria-label="Open navigation menu" aria-expanded="false"
+      aria-controls="mainNavigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-</div>
+    <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active" aria-current="page">About</a>
+      <a href="services.html">Services</a>
+      <a href="shop.html">Shop</a>
+      <a href="spare-parts.html">Spare Parts</a>
+      <a href="creative-studio.html">Creative</a>
+      <a href="contact.html" class="nav-contact">Let's Talk</a>
+    </nav>
+
+  </div>
 </header>
 
-<section class="about-hero">
-<div class="container about-hero-grid">
-<div>
-<div class="hero-label">About Street Gadgets Care</div>
-<h1>Technology <span>with care.</span></h1>
-<p class="about-hero-text">
-Street Gadgets Care is a Nairobi-based technology and creative support brand helping people and businesses solve everyday technology problems, find useful devices and present themselves professionally.
-</p>
-<div class="hero-buttons">
-<a href="spare-parts.html" class="button button-primary">Explore Spare Parts →</a>
-<a href="contact.html" class="button hero-button-light">Talk To Us</a>
-</div>
-<div class="hero-location">Based in Nairobi • Serving Customers Across Kenya</div>
-</div>
+<main id="main-content">
 
-<div class="about-visual">
-<div class="about-visual-box">
-<img src="laptop-servicing.jpg" alt="Laptop servicing at Street Gadgets Care" loading="eager">
-<div class="visual-badge one">TECHNOLOGY FIRST</div>
-<div class="visual-badge two">CARE • SKILL • SOLUTIONS</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- HERO -->
 
-<section class="section who-section">
-<div class="container who-grid">
-<div class="who-copy">
-<div class="section-label">Who We Are</div>
-<h2>More than fixing devices.</h2>
-<p>Street Gadgets Care was built around a simple idea: technology should make life and work easier — not create unnecessary problems.</p>
-<p>We work with individuals, students, professionals and businesses who need practical help with their devices, technology, creative work or digital needs.</p>
-<p>Our foundation is technical, but our work goes beyond repairs. We bring technology, products, creative services and practical business support together.</p>
-</div>
+  <section class="about-hero">
+    <div class="container about-hero-grid">
 
-<div class="who-highlight">
-<div class="who-highlight-label">Our Focus</div>
-<h3>Helping you solve the problem in front of you.</h3>
-<p>Whether it is a laptop that has stopped working, a phone that needs repair, a device you want to buy, or a business document that needs to look professional, we focus on understanding what you need and finding a practical way forward.</p>
-</div>
-</div>
-</section>
+      <div>
+        <div class="hero-label">About Street Gadgets Care</div>
 
-<section class="section story-section">
-<div class="container story-grid">
-<div class="story-copy">
-<div class="section-label">Our Story</div>
-<h2>We take care of the technology you depend on.</h2>
-<p>Technology has become part of almost everything we do. We use our phones to communicate, laptops to work, devices to learn and digital tools to run businesses.</p>
-<p>When those things stop working or become difficult to manage, you need someone who can understand the problem and help you move forward.</p>
-<div class="story-points">
-<div class="story-point">Understand the real problem</div>
-<div class="story-point">Recommend practical solutions</div>
-<div class="story-point">Carry out careful technical work</div>
-<div class="story-point">Keep communication clear</div>
-</div>
-</div>
+        <h1>
+          Technology
+          <span>with care.</span>
+        </h1>
 
-<div class="story-card">
-<div class="story-card-label">Street Gadgets Care</div>
-<h3>Technology should work for you.</h3>
-<p>Our role is to help make that possible — whether through repair, maintenance, the right technology, creative design or practical digital support.</p>
-</div>
-</div>
-</section>
+        <p class="about-hero-text">
+          Street Gadgets Care is a Nairobi-based technology and creative
+          support brand helping people and businesses solve everyday
+          technology problems, find useful devices and present themselves
+          professionally.
+        </p>
 
-<section class="section identity-section">
-<div class="container">
-<div class="identity-heading">
-<div class="section-label">What We Are About</div>
-<h2 class="section-title">Three areas. One connected brand.</h2>
-<p class="section-text">Street Gadgets Care brings several practical services together while keeping technology at the centre.</p>
-</div>
+        <div class="hero-buttons">
+          <a href="spare-parts.html" class="button button-primary">
+            Explore Spare Parts →
+          </a>
 
-<div class="identity-grid">
-<div class="identity-card">
-<div class="identity-number">01 / TECHNOLOGY</div>
-<h3>Technology & Repairs</h3>
-<p>Phone and laptop repairs, screen and battery replacement, software support, servicing, maintenance and upgrades.</p>
-<a href="spare-parts.html" class="identity-link">Explore Spare Parts →</a>
-</div>
+          <a href="contact.html" class="button hero-button-light">
+            Talk To Us
+          </a>
+        </div>
 
-<div class="identity-card">
-<div class="identity-number">02 / PRODUCTS</div>
-<h3>Devices & Accessories</h3>
-<p>Laptops, phones, storage, laptop bags, chargers, cables, protection and other useful technology.</p>
-<a href="shop.html" class="identity-link">Visit Shop →</a>
-</div>
+        <div class="hero-location">
+          Based in Nairobi • Serving Customers Across Kenya
+        </div>
+      </div>
 
-<div class="identity-card">
-<div class="identity-number">03 / CREATIVE</div>
-<h3>Creative & Digital Support</h3>
-<p>Graphic design, CVs, company profiles, business plans, business documents and business name registration support.</p>
-<a href="creative-studio.html" class="identity-link">Visit Creative →</a>
-</div>
-</div>
-</div>
-</section>
+      <div class="about-visual">
+        <div class="about-visual-box">
+          <img src="laptop-servicing.jpg"
+            alt="Laptop servicing at Street Gadgets Care"
+            loading="eager">
 
-<section class="section approach-section">
-<div class="container">
-<div class="approach-heading">
-<div class="section-label">Our Approach</div>
-<h2 class="section-title">How we work with you.</h2>
-<p class="section-text">Good service starts with understanding what the customer actually needs.</p>
-</div>
+          <div class="visual-badge one">TECHNOLOGY FIRST</div>
+          <div class="visual-badge two">CARE • SKILL • SOLUTIONS</div>
+        </div>
+      </div>
 
-<div class="approach-grid">
-<div class="approach-card">
-<div class="approach-number">01</div>
-<h3>Listen First</h3>
-<p>We start by understanding the problem, request or goal.</p>
-</div>
-<div class="approach-card">
-<div class="approach-number">02</div>
-<h3>Find the Practical Solution</h3>
-<p>We focus on solutions that make sense for the situation.</p>
-</div>
-<div class="approach-card">
-<div class="approach-number">03</div>
-<h3>Careful Work</h3>
-<p>We take care with repairs, designs, products and customer requests.</p>
-</div>
-<div class="approach-card">
-<div class="approach-number">04</div>
-<h3>Clear Communication</h3>
-<p>We keep the process understandable from start to finish.</p>
-</div>
-</div>
-</div>
-</section>
+    </div>
+  </section>
 
-<section class="section values-section">
-<div class="container values-grid">
-<div class="values-copy">
-<div class="section-label">What Matters To Us</div>
-<h2>The way we do things matters.</h2>
-<p>Every repair, product inquiry, design project and customer conversation contributes to the Street Gadgets Care experience.</p>
-</div>
+  <!-- WHO WE ARE -->
 
-<div class="values-list">
-<div class="value-item">
-<div class="value-number">01</div>
-<div><h3>Care</h3><p>We treat your device, project and request with attention.</p></div>
-</div>
-<div class="value-item">
-<div class="value-number">02</div>
-<div><h3>Attention to Detail</h3><p>Small details matter in technical work, design and customer service.</p></div>
-</div>
-<div class="value-item">
-<div class="value-number">03</div>
-<div><h3>Customer Focus</h3><p>We aim to understand what you actually need before deciding how to help.</p></div>
-</div>
-</div>
-</div>
-</section>
+  <section class="section who-section">
+    <div class="container who-grid">
 
-<section class="kenya-section">
-<div class="container">
-<div class="kenya-box">
-<div class="kenya-content">
-<div class="kenya-label">Nairobi Based • Kenya Wide</div>
-<h2>Not in Nairobi? No worries.</h2>
-<p>You don't have to be in Nairobi to work with Street Gadgets Care. Send your device to us and we'll repair it and ship it back safely.</p>
-</div>
-<div class="kenya-action">
-<a href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20not%20in%20Nairobi%20and%20I%27d%20like%20to%20know%20how%20to%20send%20my%20device%20for%20repair." class="button button-primary" target="_blank" rel="noopener noreferrer">Ask About Shipping →</a>
-</div>
-</div>
-</div>
-</section>
+      <div class="who-copy">
+        <div class="section-label">Who We Are</div>
 
-<section class="brand-statement">
-<div class="container">
-<div class="brand-statement-label">Our Philosophy</div>
-<h2>Technology with care. <span>Solutions with purpose.</span></h2>
-<p>From repairing the device in your hand to helping your business present itself professionally, Street Gadgets Care is here to help you move forward.</p>
-</div>
-</section>
+        <h2>More than fixing devices.</h2>
 
-<section class="final-cta">
-<div class="container">
-<h2>Ready to get started?</h2>
-<p>Tell us what you need and we'll help you find the right place to begin.</p>
-<div class="final-buttons">
-<a href="spare-parts.html" class="button button-dark">Spare Parts</a>
-<a href="shop.html" class="button button-outline">Shop</a>
-<a href="creative-studio.html" class="button button-outline">Creative</a>
-<a href="contact.html" class="button button-primary">Let's Talk</a>
-</div>
-</div>
-</section>
+        <p>
+          Street Gadgets Care was built around a simple idea:
+          technology should make life and work easier — not create
+          unnecessary problems.
+        </p>
 
-<footer>
-<div class="container">
-<div class="footer-grid">
+        <p>
+          We work with individuals, students, professionals and businesses
+          who need practical help with their devices, technology, creative
+          work or digital needs.
+        </p>
 
-<div class="footer-brand">
-<img src="Logo.png" alt="Street Gadgets Care" loading="lazy">
-<p>Technology, repairs, devices, accessories, creative design and practical business support — all under one roof.</p>
-</div>
+        <p>
+          Our foundation is technical, but our work goes beyond repairs.
+          We bring technology, products, creative services and practical
+          business support together.
+        </p>
+      </div>
 
-<div class="footer-column">
-<h4>Explore</h4>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="shop.html">Shop</a>
-<a href="spare-parts.html">Spare Parts</a>
-<a href="creative-studio.html">Creative</a>
-<a href="contact.html">Contact</a>
-</div>
+      <div class="who-highlight">
+        <div class="who-highlight-label">Our Focus</div>
 
-<div class="footer-column">
-<h4>Contact</h4>
-<a href="tel:0114259961">0114 259 961</a>
-<a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-<a href="mailto:streetgadgetscare@gmail.com">streetgadgetscare@gmail.com</a>
-<span>Nairobi, Kenya</span>
-</div>
+        <h3>Helping you solve the problem in front of you.</h3>
 
-<div class="footer-column">
-<h4>Follow Us</h4>
-<a href="https://www.instagram.com/street_gadgets_care" target="_blank" rel="noopener noreferrer">Instagram · @street_gadgets_care</a>
-<a href="https://www.tiktok.com/@street_gadgets_care" target="_blank" rel="noopener noreferrer">TikTok · @street_gadgets_care</a>
-<span>Facebook and YouTube: Street Gadgets Care</span>
-</div>
+        <p>
+          Whether it is a laptop that has stopped working, a phone that
+          needs repair, a device you want to buy, or a business document
+          that needs to look professional, we focus on understanding what
+          you need and finding a practical way forward.
+        </p>
+      </div>
 
-</div>
+    </div>
+  </section>
 
-<div class="footer-bottom">
-<div>© 2026 Street Gadgets Care. All Rights Reserved.</div>
-<div>Based in Nairobi • Serving Customers Across Kenya</div>
-</div>
-</div>
+  <!-- OUR STORY -->
+
+  <section class="section story-section">
+    <div class="container story-grid">
+
+      <div class="story-copy">
+        <div class="section-label">Our Story</div>
+
+        <h2>We take care of the technology you depend on.</h2>
+
+        <p>
+          Technology has become part of almost everything we do.
+          We use our phones to communicate, laptops to work, devices
+          to learn and digital tools to run businesses.
+        </p>
+
+        <p>
+          When those things stop working or become difficult to manage,
+          you need someone who can understand the problem and help you
+          move forward.
+        </p>
+
+        <div class="story-points">
+          <div class="story-point">Understand the real problem</div>
+          <div class="story-point">Recommend practical solutions</div>
+          <div class="story-point">Carry out careful technical work</div>
+          <div class="story-point">Keep communication clear</div>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card-label">Street Gadgets Care</div>
+
+        <h3>Technology should work for you.</h3>
+
+        <p>
+          Our role is to help make that possible — whether through repair,
+          maintenance, the right technology, creative design or practical
+          digital support.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+
+  <section class="section identity-section">
+    <div class="container">
+
+      <div class="identity-heading">
+        <div class="section-label">What We Are About</div>
+
+        <h2 class="section-title">Three areas. One connected brand.</h2>
+
+        <p class="section-text">
+          Street Gadgets Care brings several practical services together
+          while keeping technology at the centre.
+        </p>
+      </div>
+
+      <div class="identity-grid">
+
+        <article class="identity-card">
+          <div class="identity-number">01 / TECHNOLOGY</div>
+          <h3>Technology & Repairs</h3>
+
+          <p>
+            Phone and laptop repairs, screen and battery replacement,
+            software support, servicing, maintenance and upgrades.
+          </p>
+
+          <a href="services.html" class="identity-link">
+            Explore Our Services →
+          </a>
+        </article>
+
+        <article class="identity-card">
+          <div class="identity-number">02 / PRODUCTS</div>
+          <h3>Devices & Accessories</h3>
+
+          <p>
+            Laptops, phones, storage, laptop bags, chargers, cables,
+            protection and other useful technology.
+          </p>
+
+          <a href="shop.html" class="identity-link">
+            Visit Shop →
+          </a>
+        </article>
+
+        <article class="identity-card">
+          <div class="identity-number">03 / CREATIVE</div>
+          <h3>Creative & Digital Support</h3>
+
+          <p>
+            Graphic design, CVs, company profiles, business plans,
+            business documents and business name registration support.
+          </p>
+
+          <a href="creative-studio.html" class="identity-link">
+            Visit Creative →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH -->
+
+  <section class="section approach-section">
+    <div class="container">
+
+      <div class="approach-heading">
+        <div class="section-label">Our Approach</div>
+
+        <h2 class="section-title">How we work with you.</h2>
+
+        <p class="section-text">
+          Good service starts with understanding what the customer
+          actually needs.
+        </p>
+      </div>
+
+      <div class="approach-grid">
+
+        <article class="approach-card">
+          <div class="approach-number">01</div>
+          <h3>Listen First</h3>
+          <p>We start by understanding the problem, request or goal.</p>
+        </article>
+
+        <article class="approach-card">
+          <div class="approach-number">02</div>
+          <h3>Find the Practical Solution</h3>
+          <p>We focus on solutions that make sense for the situation.</p>
+        </article>
+
+        <article class="approach-card">
+          <div class="approach-number">03</div>
+          <h3>Careful Work</h3>
+          <p>We take care with repairs, designs, products and customer requests.</p>
+        </article>
+
+        <article class="approach-card">
+          <div class="approach-number">04</div>
+          <h3>Clear Communication</h3>
+          <p>We keep the process understandable from start to finish.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+
+  <section class="section values-section">
+    <div class="container values-grid">
+
+      <div class="values-copy">
+        <div class="section-label">What Matters To Us</div>
+
+        <h2>The way we do things matters.</h2>
+
+        <p>
+          Every repair, product inquiry, design project and customer
+          conversation contributes to the Street Gadgets Care experience.
+        </p>
+      </div>
+
+      <div class="values-list">
+
+        <article class="value-item">
+          <div class="value-number">01</div>
+          <div>
+            <h3>Care</h3>
+            <p>We treat your device, project and request with attention.</p>
+          </div>
+        </article>
+
+        <article class="value-item">
+          <div class="value-number">02</div>
+          <div>
+            <h3>Attention to Detail</h3>
+            <p>Small details matter in technical work, design and customer service.</p>
+          </div>
+        </article>
+
+        <article class="value-item">
+          <div class="value-number">03</div>
+          <div>
+            <h3>Customer Focus</h3>
+            <p>We aim to understand what you actually need before deciding how to help.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KENYA-WIDE SERVICE ARRANGEMENTS -->
+
+  <section class="kenya-section">
+    <div class="container">
+
+      <div class="kenya-box">
+
+        <div class="kenya-content">
+          <div class="kenya-label">Nairobi Based • Kenya Wide</div>
+
+          <h2>Not in Nairobi? You can still reach us.</h2>
+
+          <p>
+            Customers outside Nairobi can arrange their own courier to
+            send a device to our shop. The cost of sending the device
+            to us is paid by the customer. Once the repair is complete,
+            you can collect it from our shop or request delivery.
+            Any return delivery or courier charge is quoted and agreed
+            with you before dispatch. Contact us first so we can discuss
+            the arrangements for your device.
+          </p>
+        </div>
+
+        <div class="kenya-action">
+          <a
+            href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%27m%20outside%20Nairobi%20and%20would%20like%20to%20ask%20about%20sending%20my%20device%20for%20repair."
+            class="button button-primary"
+            target="_blank"
+            rel="noopener noreferrer">
+            Ask About Sending a Device →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STATEMENT -->
+
+  <section class="brand-statement">
+    <div class="container">
+
+      <div class="brand-statement-label">Our Philosophy</div>
+
+      <h2>
+        Technology with care.
+        <span>Solutions with purpose.</span>
+      </h2>
+
+      <p>
+        From repairing the device in your hand to helping your business
+        present itself professionally, Street Gadgets Care is here to
+        help you move forward.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+
+  <section class="final-cta">
+    <div class="container">
+
+      <h2>Ready to get started?</h2>
+
+      <p>
+        Tell us what you need and we'll help you find the right place
+        to begin.
+      </p>
+
+      <div class="final-buttons">
+        <a href="spare-parts.html" class="button button-dark">Spare Parts</a>
+        <a href="shop.html" class="button button-outline">Shop</a>
+        <a href="creative-studio.html" class="button button-outline">Creative</a>
+        <a href="contact.html" class="button button-primary">Let's Talk</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="Logo.png" alt="Street Gadgets Care logo" loading="lazy">
+        <strong>STREET GADGETS CARE</strong>
+        <span class="footer-tagline">REPAIR . RELIABLE . TRUSTED</span>
+
+        <p>
+          Technology, repairs, devices, accessories, creative design
+          and practical business support — all under one roof.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="spare-parts.html">Spare Parts</a>
+        <a href="creative-studio.html">Creative</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <a href="tel:+254114259961">0114259961</a>
+        <a href="https://wa.me/254114259961" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+        <a href="mailto:streetgadgetscare@gmail.com">streetgadgetscare@gmail.com</a>
+        <span>Nairobi, Kenya</span>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <a href="https://www.instagram.com/street_gadgets_care" target="_blank" rel="noopener noreferrer">Instagram · @street_gadgets_care</a>
+        <a href="https://www.tiktok.com/@street_gadgets_care" target="_blank" rel="noopener noreferrer">TikTok · @street_gadgets_care</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook · Street Gadgets Care</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube · Street Gadgets Care</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="currentYear">2026</span> Street Gadgets Care. All Rights Reserved.</div>
+      <div>Based in Nairobi • Serving Customers Across Kenya</div>
+    </div>
+
+  </div>
 </footer>
 
-<a href="https://wa.me/254114259961" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Street Gadgets Care on WhatsApp" title="Chat with us on WhatsApp">☎</a>
+<a
+  href="https://wa.me/254114259961"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with Street Gadgets Care on WhatsApp"
+  title="Chat with us on WhatsApp">
+  ☎
+</a>
 
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const mainNavigation = document.getElementById("mainNavigation");
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNavigation = document.getElementById("mainNavigation");
 
-menuToggle.addEventListener("click", function () {
+  function closeMenu() {
+    mainNavigation.classList.remove("nav-open");
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+  }
+
+  menuToggle.addEventListener("click", function () {
     const isOpen = mainNavigation.classList.toggle("nav-open");
+
     menuToggle.classList.toggle("active", isOpen);
-    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
-});
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
 
-mainNavigation.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        mainNavigation.classList.remove("nav-open");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
-    });
-});
+  mainNavigation.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
 
-document.addEventListener("click", function (event) {
-    if (!mainNavigation.contains(event.target) && !menuToggle.contains(event.target)) {
-        mainNavigation.classList.remove("nav-open");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
+  document.addEventListener("click", function (event) {
+    if (
+      !mainNavigation.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      closeMenu();
     }
-});
+  });
 
-document.addEventListener("keydown", function (event) {
+  document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-        mainNavigation.classList.remove("nav-open");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      closeMenu();
     }
-});
+  });
 
-window.addEventListener("resize", function () {
-    if (window.innerWidth > 1100) {
-        mainNavigation.classList.remove("nav-open");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 820) {
+      closeMenu();
     }
-});
+  });
+
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
 </script>
 
 </body>
