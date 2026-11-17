@@ -1314,7 +1314,7 @@ function renderCatalogue(brands, models, products, compatibility, variants) {
       if (brand === "iPhone") {
         const seriesNumber = name => {
           if (name === "iPhone X Series") return 0;
-          const match = name.match(/iPhone (\\d+) Series/);
+          const match = name.match(/iPhone (\d+) Series/);
           return match ? Number(match[1]) : 999;
         };
         return seriesNumber(a[0]) - seriesNumber(b[0]);
