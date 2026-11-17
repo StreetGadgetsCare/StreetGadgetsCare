@@ -791,18 +791,12 @@
     }
   
     .model-empty {
-      grid-column: 1 / -1;
-      padding: 16px 18px;
-      border: 1px dashed var(--border);
-      border-radius: 12px;
-      background: var(--white);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .part-meta {
-      flex-wrap: wrap;
-      gap: 7px 14px;
+      padding:16px 18px;
+      border:1px dashed var(--border);
+      border-radius:12px;
+      background:var(--white);
+      color:var(--muted);
+      font-size:13px;
     }
 
   </style>
@@ -900,24 +894,240 @@
 </footer>
 
 <script>
-/*
-  Street Gadgets Care spare-parts catalogue
-  Product and model data: Supabase
-  Product images: existing image files in this GitHub repository
-*/
-const SUPABASE_URL = "https://adipqznxhpwnilsmjhiq.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_K0STbvDLc39F_KA9Ja6q3w_JU0dpJGS";
+
 const WHATSAPP_BASE = "https://wa.me/254114259961?text=";
-const PAGE_SIZE = 1000;
 
-const partSearch = document.getElementById("partSearch");
-const clearSearch = document.getElementById("clearSearch");
-const searchStatus = document.getElementById("searchStatus");
-const noResults = document.getElementById("noResults");
-const brandNav = document.getElementById("brandNav");
-const catalogueRoot = document.getElementById("brandCatalogues");
+const iphoneParts = [
+  ["iPhone X","Charging system","iphone-x-charging-system-replacement.jpg"],
+  ["iPhone X","Battery","iphone-x-battery-replacement.jpg"],
+  ["iPhone X","Back cover","iphone-x-back-cover-replacement.jpg"],
 
-const preferredBrandOrder = [
+  ["iPhone XR","Charging system","iphone-xr-charging-system-replacement.jpg"],
+  ["iPhone XR","Battery","iphone-xr-battery-replacement.jpg"],
+  ["iPhone XR","Back cover","iphone-xr-back-cover-replacement.jpg"],
+
+  ["iPhone XS","Charging system","iphone-xs-charging-system-replacement.jpg"],
+  ["iPhone XS","Battery","iphone-xs-battery-replacement.jpg"],
+  ["iPhone XS","Back cover","iphone-xs-back-cover-replacement.jpg"],
+
+  ["iPhone XS Max","Charging system","iphone-xs-max-charging-system-replacement.jpg"],
+  ["iPhone XS Max","Back cover","iphone-xs-max-back-cover-replacement.jpg"],
+
+  ["iPhone 11","Charging system","iphone-11-charging-system-replacement.jpg"],
+  ["iPhone 11","Back cover","iphone-11-back-cover-replacement.jpg"],
+  ["iPhone 11","Battery","iphone-11-battery-replacement.jpg"],
+
+  ["iPhone 11 Pro","Charging system","iphone-11-pro-charging-system-replacement.jpg"],
+  ["iPhone 11 Pro","Back cover","iphone-11-pro-back-cover-replacement.jpg"],
+  ["iPhone 11 Pro","Battery","iphone-11-pro-battery-replacement.jpg"],
+
+  ["iPhone 11 Pro Max","Charging system","iphone-11-pro-max-charging-system-replacement.jpg"],
+  ["iPhone 11 Pro Max","Back cover","iphone-11-pro-max-back-cover-replacement.jpg"],
+  ["iPhone 11 Pro Max","Battery","iphone-11-pro-max-battery-replacement.jpg"],
+  ["iPhone 11 Pro Max","Screen","iphone-11-pro-max-screen-replacement.jpg"],
+
+  ["iPhone 12 Pro Max","Charging system","iphone-12-pro-max-charging-system-replacement.jpg"],
+  ["iPhone 12 Pro","Charging system","iphone-12-pro-charging-system-replacement.jpg"],
+  ["iPhone 12 mini","Charging system","iphone-12-mini-charging-system-replacement.jpg"],
+
+  ["iPhone 12 Pro Max","Back cover","iphone-12-pro-max-back-cover-replacement.jpg"],
+  ["iPhone 12 Pro","Back cover","iphone-12-pro-back-cover-replacement.jpg"],
+  ["iPhone 12 mini","Back cover","iphone-12-mini-back-cover-replacement.jpg"],
+
+  ["iPhone 12","Battery","iphone-12-battery-replacement.jpg"],
+  ["iPhone 12 Pro Max","Battery","iphone-12-pro-max-battery-replacement.jpg"],
+  ["iPhone 12 Pro","Battery","iphone-12-pro-battery-replacement.jpg"],
+
+  ["iPhone 13 Pro Max","Charging system","iphone-13-pro-max-charging-system-replacement.jpg"],
+  ["iPhone 13 Pro","Charging system","iphone-13-pro-charging-system-replacement.jpg"],
+  ["iPhone 13","Charging system","iphone-13-charging-system-replacement.jpg"],
+  ["iPhone 13 mini","Charging system","iphone-13-mini-charging-system-replacement.jpg"],
+
+  ["iPhone 13 Pro Max","Back cover","iphone-13-pro-max-back-cover-replacement.jpg"],
+  ["iPhone 13 Pro","Back cover","iphone-13-pro-back-cover-replacement.jpg"],
+  ["iPhone 13","Back cover","iphone-13-back-cover-replacement.jpg"],
+  ["iPhone 13 mini","Back cover","iphone-13-mini-back-cover-replacement.jpg"],
+
+  ["iPhone 13","Battery","iphone-13-battery-replacement.jpg"],
+  ["iPhone 13 Pro Max","Battery","iphone-13-pro-max-battery-replacement.jpg"],
+  ["iPhone 13 Pro","Battery","iphone-13-pro-battery-replacement.jpg"],
+
+  ["iPhone 14 Pro Max","Charging system","iphone-14-pro-max-charging-system-replacement.jpg"],
+  ["iPhone 14 Pro","Charging system","iphone-14-pro-charging-system-replacement.jpg"],
+  ["iPhone 14 Plus","Charging system","iphone-14-plus-charging-system-replacement.jpg"],
+  ["iPhone 14","Charging system","iphone-14-charging-system-replacement.jpg"],
+
+  ["iPhone 14 Pro Max","Back cover","iphone-14-pro-max-back-cover-replacement.jpg"],
+  ["iPhone 14 Pro","Back cover","iphone-14-pro-back-cover-replacement.jpg"],
+  ["iPhone 14 Plus","Back cover","iphone-14-plus-back-cover-replacement.jpg"],
+  ["iPhone 14","Back cover","iphone-14-back-cover-replacement.jpg"],
+
+  ["iPhone 14 Plus","Battery","iphone-14-plus-battery-replacement.jpg"],
+  ["iPhone 14 Pro Max","Battery","iphone-14-pro-max-battery-replacement.jpg"],
+  ["iPhone 14 Pro","Battery","iphone-14-pro-battery-replacement.jpg"],
+  ["iPhone 14","Battery","iphone-14-battery-replacement.jpg"],
+
+  ["iPhone 14 Plus","Screen","iphone-14-plus-screen-replacement.jpg"],
+  ["iPhone 14 Pro Max","Screen","iphone-14-pro-max-screen-replacement.jpg"],
+  ["iPhone 14 Pro","Screen","iphone-14-pro-screen-replacement.jpg"],
+  ["iPhone 14","Screen","iphone-14-screen-replacement.jpg"]
+];
+
+const screenBrands = [
+  ["Samsung",[
+    ["Samsung Galaxy A07","samsung-a07-screen.jpg"],
+    ["Samsung Galaxy A07s","samsung-a07s-screen.jpg"],
+    ["Samsung Galaxy A16","samsung-a16-screen.jpg"]
+  ]],
+
+  ["iPhone",[
+    ["iPhone XS","iphone-xs-screen-replacement.jpg"],
+    ["iPhone 11","iphone-11-screen.jpg"],
+    ["iPhone 12","iphone-12-screen.jpg"],
+    ["iPhone 12 Pro","iphone-12-pro-screen.jpg"],
+    ["iPhone 12 Pro Max","iphone-12-pro-max-screen.jpg"],
+    ["iPhone 15","iphone-15-screen.jpg"],
+    ["iPhone 15 Pro","iphone-15-pro-screen.jpg"],
+    ["iPhone 15 Pro Max","iphone-15-pro-max-screen.jpg"]
+  ]],
+
+  ["Infinix",[
+    ["Infinix Hot 50 Pro+","infinix-hot-50-pro-plus-screen.jpg"],
+    ["Infinix Hot 60i","infinix-hot-60i-screen.jpg"],
+    ["Infinix Note 50 Pro","infinix-note-50-pro-screen.jpg"],
+    ["Infinix Smart 10 Plus","infinix-smart-10-plus-screen.jpg"],
+    ["Infinix Smart 10","infinix-smart-10-screen.jpg"]
+  ]],
+
+  ["Tecno",[
+    ["Tecno Camon 40 Pro","tecno-camon-40-pro-screen.jpg"],
+    ["Tecno Spark 30 Pro","tecno-spark-30-pro-screen.jpg"],
+    ["Tecno Spark 30C","tecno-spark-30c-screen.jpg"],
+    ["Tecno Pop 9","tecno-pop-9-screen.jpg"],
+    ["Tecno Phantom 5","tecno-phantom-5-screen.jpg"],
+    ["Tecno Phantom 6 Plus","tecno-phantom-6-plus-screen.jpg"],
+    ["Tecno Phantom 6","tecno-phantom-6-screen.jpg"],
+    ["Tecno Spark 2","tecno-spark-2-screen.jpg"],
+    ["Tecno Spark K7","tecno-spark-k7-screen.jpg"],
+    ["Tecno Spark K8","tecno-spark-k8-screen.jpg"]
+  ]],
+
+  ["Redmi / Xiaomi",[
+    ["Redmi A7","redmi-a7-screen.jpg"],
+    ["Redmi Note 15 4G","redmi-note-15-4g-screen.jpg"],
+    ["Redmi Note 15 5G","redmi-note-15-5g-screen.jpg"],
+    ["Redmi Note 15 Pro","redmi-note-15-pro-screen.jpg"],
+    ["Redmi Note 15 Pro 5G","redmi-note-15-pro-5g-screen.jpg"],
+    ["Redmi Note 15 Pro+ 5G","redmi-note-15-pro-plus-5g-screen.jpg"]
+  ]],
+
+  ["itel",[
+    ["itel A70","itel-a70-screen.jpg"]
+  ]]
+];
+
+const replacementBrands = [
+
+  ["Samsung",[
+
+    ["Samsung Galaxy A16 5G","Charging system replacement","samsung-a16-5g-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A16 4G","Charging system replacement","samsung-a16-4g-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A16 5G","Screen replacement","samsung-a16-5g-screen-replacement.jpg"],
+    ["Samsung Galaxy A16","Battery replacement","samsung-a16-battery-replacement.jpg"],
+
+    ["Samsung Galaxy A15 5G","Charging system replacement","samsung-a15-5g-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A15","Charging system replacement","samsung-a15-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A15","Back cover replacement","samsung-a15-back-cover-replacement.jpg"],
+    ["Samsung Galaxy A15","Battery replacement","samsung-a15-battery-replacement.jpg"],
+
+    ["Samsung Galaxy A14 4G","Charging system replacement","samsung-a14-4g-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A14 4G","Screen replacement","samsung-a14-4g-screen-replacement.jpg"],
+    ["Samsung Galaxy A14 4G","Back cover replacement","Samsung-A14-4g-Back-Cover-Replacement-jpg"],
+    ["Samsung Galaxy A14 5G","Screen replacement","samsung-a14-5g-screen-replacement.jpg"],
+    ["Samsung Galaxy A14","Charging system replacement","samsung-a14-charging-system-replacement.jpg"],
+
+    ["Samsung Galaxy A13 4G","Charging system replacement","samsung-a13-4g-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A13 4G","Screen replacement","samsung-a13-4g-screen-replacement.jpg"],
+    ["Samsung Galaxy A13 4G","Back cover replacement","samsung-a13-4g-back-cover-replacement.jpg"],
+    ["Samsung Galaxy A13 5G","Screen replacement","samsung-a13-5g-screen-replacement.jpg"],
+    ["Samsung Galaxy A13 5G","Charging system replacement","samsung-a13-5g-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A13","Battery replacement","samsung-a13-battery-replacement.jpg"],
+
+    ["Samsung Galaxy A17","Charging system replacement","samsung-a17-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A17","Back glass cover replacement","samsung-a17-back-glass-cover-replacement.jpg"],
+    ["Samsung Galaxy A17","Battery replacement","samsung-galaxy-a17-battery-replacement.jpg"],
+
+    ["Samsung Galaxy A06","Charging system replacement","samsung-a06-charging-system-replacement.jpg"],
+    ["Samsung Galaxy A06","Back cover replacement","samsung-a06-back-cover-replacement.jpg"],
+    ["Samsung Galaxy A06","Battery replacement","samsung-galaxy-a06-battery-replacement.jpg"],
+    ["Samsung Galaxy A06","Screen replacement","samsung-galaxy-a06-screen-replacement.jpg"],
+
+    ["Samsung Galaxy A05s","Back cover replacement","samsung-a05s-back-cover-replacement.jpg"],
+    ["Samsung Galaxy A05s","Screen replacement","samsung-a05s-screen-replacement.jpg"],
+    ["Samsung Galaxy A05s","Charging system replacement","samsung-a05s-charging-system-replacement.jpg"],
+
+    ["Samsung Galaxy A05","Screen replacement","samsung-a05-screen-replacement.jpg"]
+  ]],
+
+  ["Redmi / Xiaomi",[
+
+    ["Redmi 13C","Back cover replacement","redmi-13c-back-cover-replacement.jpg"],
+    ["Redmi 13C","Charging system replacement","redmi-13c-charging-system-replacement.jpg"],
+    ["Redmi 13C","Screen replacement","redmi-13c-screen-replacement.jpg"],
+    ["Redmi 13C","Battery replacement","redmi-13c-battery-replacement.jpg"],
+
+    ["Redmi 14C","Battery replacement","redmi-14c-battery-replacement.jpg"],
+    ["Redmi 14C","Screen replacement","redmi-14c-screen-replacement.jpg"],
+
+    ["Redmi 15C","Screen replacement","redmi-15c-screen-replacement.jpg"],
+    ["Redmi 15C","Battery replacement","redmi-15c-battery-replacement.jpg"],
+    ["Redmi 15C","Charging system replacement","redmi-15c-charging-system-replacement.jpg"],
+    ["Redmi 15C","Back cover replacement","redmi-15c-back-cover-replacement.jpg"]
+  ]],
+
+  ["Google Pixel",[
+
+    ["Google Pixel 6a","Battery replacement","google-pixel-6a-battery-replacement.jpg"],
+    ["Google Pixel 6","Battery replacement","google-pixel-6-battery-replacement.jpg"],
+    ["Google Pixel 6a","Screen replacement","google-pixel-6a-screen-replacement.jpg"],
+    ["Google Pixel 6","Screen replacement","google-pixel-6-screen-replacement.jpg"],
+    ["Google Pixel 6 Pro","Screen replacement","google-pixel-6-pro-screen-replacement.jpg"],
+
+    ["Google Pixel 7a","Battery replacement","google-pixel-7a-battery-replacement.jpg"],
+    ["Google Pixel 7 Pro","Battery replacement","google-pixel-7-pro-battery-replacement.jpg"],
+    ["Google Pixel 7","Battery replacement","google-pixel-7-battery-replacement.jpg"],
+    ["Google Pixel 7a","Screen replacement","google-pixel-7a-screen-replacement.jpg"],
+    ["Google Pixel 7 Pro","Screen replacement","google-pixel-7-pro-screen-replacement.jpg"],
+    ["Google Pixel 7","Screen replacement","google-pixel-7-screen-replacement.jpg"],
+
+    ["Google Pixel 8a","Battery replacement","google-pixel-8a-battery-replacement.jpg"],
+    ["Google Pixel 8a","Screen replacement","google-pixel-8a-screen-replacement.jpg"],
+    ["Google Pixel 8","Screen replacement","google-pixel-8-screen-replacement.jpg"],
+    ["Google Pixel 8 Pro","Battery replacement","google-pixel-8-pro-battery-replacement.jpg"],
+    ["Google Pixel 8","Battery replacement","google-pixel-8-battery-replacement.jpg"],
+    ["Google Pixel 8 Pro","Screen replacement","google-pixel-8-pro-screen-replacement.jpg"]
+  ]]
+];
+
+const batteryBrands = [
+  ["Tecno Batteries",[
+    ["Tecno Camon 11 Pro Battery","tecno-camon-11-pro-battery.jpg"],
+    ["Tecno Camon 12 Battery","tecno-camon-12-battery.jpg"],
+    ["Tecno Camon 12 Pro Battery","tecno-camon-12-pro-battery.jpg"],
+    ["Tecno Camon 15 Battery","tecno-camon-15-battery.jpg"],
+    ["Tecno Camon 16 Battery","tecno-camon-16-battery.jpg"],
+    ["Tecno Camon 40 4G Battery","tecno-camon-40-4g-battery.jpg"],
+    ["Tecno Camon 40 Premier 5G Battery","tecno-camon-40-premier-5g-battery.jpg"],
+    ["Tecno Camon 40 Pro 4G Battery","tecno-camon-40-pro-4g-battery.jpg"],
+    ["Tecno Camon 40 Pro 5G Battery","tecno-camon-40-pro-5g-battery.jpg"],
+    ["Tecno Spark 4 Pro Battery","tecno-spark-4-pro-battery.jpg"],
+    ["Tecno Spark 5 Battery","tecno-spark-5-battery.jpg"],
+    ["Tecno Spark 7 Battery","tecno-spark-7-battery.jpg"],
+    ["Tecno Spark 7P Battery","tecno-spark-7p-battery.jpg"]
+  ]]
+];
+
+const brandOrder = [
   "iPhone",
   "Samsung",
   "Redmi / Xiaomi",
@@ -927,201 +1137,151 @@ const preferredBrandOrder = [
   "itel"
 ];
 
-function displayBrandName(name) {
-  const value = String(name || "").trim();
+const brandMap = new Map(brandOrder.map(name => [name,[]]));
+const supabaseModelsByBrand = new Map();
 
-  if (/^apple$/i.test(value) || /^iphone$/i.test(value)) return "iPhone";
-  if (/^(redmi|xiaomi|redmi\s*\/\s*xiaomi)$/i.test(value)) return "Redmi / Xiaomi";
-  if (/^google\s*pixel$/i.test(value)) return "Google Pixel";
-  if (/^itel$/i.test(value)) return "itel";
+function addPart(brand,model,type,image) {
+  if (!brandMap.has(brand)) {
+    brandMap.set(brand,[]);
+  }
 
-  return value;
+  brandMap.get(brand).push({model,type,image,product:null,variants:[]});
 }
 
-function cleanLabel(value) {
-  return String(value || "Spare part")
-    .replace(/[_-]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .replace(/\b\w/g, character => character.toUpperCase());
-}
+iphoneParts.forEach(([model,type,image]) => {
+  const normalType =
+    type === "Screen" ? "Screen replacement" :
+    type === "Battery" ? "Battery replacement" :
+    type === "Charging system" ? "Charging system replacement" :
+    type === "Back cover" ? "Back cover replacement" :
+    type;
 
-function normalisePartType(value, productName) {
-  const raw = String(value || "").trim();
-  const text = (raw + " " + String(productName || "")).toLowerCase();
+  addPart("iPhone",model,normalType,image);
+});
 
-  if (/screen|display|lcd|amoled/.test(text)) return "Screen replacement";
-  if (/battery/.test(text)) return "Battery replacement";
-  if (/charg(e|ing)|usb.?c|charging.?port/.test(text)) return "Charging system replacement";
-  if (/back.?glass/.test(text)) return "Back glass cover replacement";
-  if (/back.?cover|rear.?cover/.test(text)) return "Back cover replacement";
+screenBrands.forEach(([brand,models]) => {
+  models.forEach(([model,image]) => {
+    addPart(brand,model,"Screen replacement",image);
+  });
+});
 
-  return cleanLabel(raw || "Spare part");
+replacementBrands.forEach(([brand,parts]) => {
+  parts.forEach(([model,type,image]) => {
+    addPart(brand,model,type,image);
+  });
+});
+
+batteryBrands.forEach(brandEntry => {
+  const models = brandEntry[1];
+
+  models.forEach(([name,image]) => {
+    const model = name.replace(/\s+Battery$/i,"");
+    addPart("Tecno",model,"Battery replacement",image);
+  });
+});
+
+/* PART DESCRIPTIONS */
+
+const descriptionSets = {
+
+  "Screen replacement": [
+    model => `A damaged display can make your ${model} difficult to use. This screen replacement listing helps you find a model-matched display, with panel quality and touch compatibility confirmed before fitting.`,
+    model => `Bring everyday viewing and touch use back to your ${model}. Ask about the compatible screen assembly and compare the available display options for this exact model.`,
+    model => `Cracks, lines or an unresponsive display can interrupt the use of your ${model}. We can help identify the correct replacement screen and confirm the available quality and fitting cost.`,
+    model => `Choose a screen specifically checked for your ${model}. Ask about the correct display assembly, available quality options and fitting cost.`
+  ],
+
+  "Battery replacement": [
+    model => `If your ${model} struggles to hold charge, ask about a battery matched to the exact device version. We will help confirm compatibility, available quality options and replacement cost.`,
+    model => `Support more dependable everyday power on your ${model} with a compatible battery replacement. Confirm the correct battery specification and fitting options with our team.`,
+    model => `Frequent charging or unexpected power loss may indicate a battery issue on your ${model}. Enquire about the suitable replacement and confirm the part details before installation.`,
+    model => `A battery replacement for the ${model} should match the correct model and connector. Ask us to verify the part, available quality options and total replacement price.`
+  ],
+
+  "Charging system replacement": [
+    model => `Restore a more dependable charging connection on your ${model} with a compatible charging-system replacement. We can help check the correct assembly and confirm the fitting cost.`,
+    model => `If your ${model} charges intermittently or the cable connection feels loose, ask about this charging-system part. Compatibility and available replacement options can be confirmed before fitting.`,
+    model => `A faulty charging port can interrupt daily use of your ${model}. Enquire about the model-matched charging system and confirm the part specification and replacement price.`,
+    model => `Keep your ${model} ready for everyday use with a charging-system replacement selected for the correct model version. Ask us to verify compatibility and availability.`
+  ],
+
+  "Back cover replacement": [
+    model => `Refresh the rear finish of your ${model} with a compatible replacement back cover. Ask about the available colour and finish options, fit and replacement cost.`,
+    model => `A cracked or worn rear cover can take away from the look of your ${model}. Enquire about a model-matched replacement and confirm the available finish before ordering.`,
+    model => `Give your ${model} a cleaner exterior with a replacement back cover designed for the correct model. Contact us to check compatibility, colour options and fitting.`,
+    model => `For a damaged or loose rear cover on your ${model}, ask about the suitable replacement and available finish. We will help confirm the correct fit.`
+  ],
+
+  "Back glass cover replacement": [
+    model => `Restore the rear appearance of your ${model} with a compatible back-glass replacement. Ask us to confirm the correct glass, available finish and fitting cost.`,
+    model => `Cracked rear glass can affect the finish of your ${model}. Enquire about a replacement matched to the exact model and check the available options before repair.`,
+    model => `Give your ${model} a refreshed rear finish with a suitable back-glass replacement. We can help verify compatibility and explain the available fitting options.`,
+    model => `A precise model match matters when replacing the rear glass on your ${model}. Contact us to confirm the correct part and replacement price.`
+  ]
+};
+
+function getDescription(model,type) {
+  const options = descriptionSets[type] || [
+    device => `Ask Street Gadgets Care about a compatible ${type.toLowerCase()} for your ${device}. We will help confirm the correct part, available quality options and replacement cost.`
+  ];
+
+  let hash = 0;
+
+  for (let i=0;i<model.length;i++) {
+    hash = (hash * 31 + model.charCodeAt(i)) >>> 0;
+  }
+
+  const partHash = type.split("").reduce(
+    (sum,char) => sum + char.charCodeAt(0),
+    0
+  );
+
+  return options[(hash + partHash) % options.length](model);
 }
 
 function whatsappLink(message) {
   return WHATSAPP_BASE + encodeURIComponent(message);
 }
 
-async function fetchAllRows(table, query) {
-  const rows = [];
-  let offset = 0;
-
-  while (true) {
-    const params = new URLSearchParams(query);
-    params.set("limit", String(PAGE_SIZE));
-    params.set("offset", String(offset));
-
-    const response = await fetch(
-      SUPABASE_URL + "/rest/v1/" + table + "?" + params.toString(),
-      {
-        method: "GET",
-        headers: {
-          "apikey": SUPABASE_PUBLISHABLE_KEY,
-          "Authorization": "Bearer " + SUPABASE_PUBLISHABLE_KEY,
-          "Accept": "application/json"
-        }
-      }
-    );
-
-    if (!response.ok) {
-      const details = await response.text();
-      throw new Error(
-        table + " request failed (" + response.status + "): " + details.slice(0, 260)
-      );
-    }
-
-    const batch = await response.json();
-
-    if (!Array.isArray(batch)) {
-      throw new Error("Unexpected response received from the " + table + " table.");
-    }
-
-    rows.push(...batch);
-
-    if (batch.length < PAGE_SIZE) break;
-    offset += PAGE_SIZE;
-  }
-
-  return rows;
-}
-
-function getSeriesName(brand, model) {
-  if (brand === "iPhone") {
-    if (/^iPhone X(?:R|S(?: Max)?)?$/i.test(model)) return "iPhone X Series";
-
-    const match = model.match(/^iPhone\s+(\d+)/i);
-    return match ? "iPhone " + match[1] + " Series" : "Other iPhone Models";
-  }
-
-  if (brand === "Samsung") {
-    const match = model.match(/Galaxy\s+([A-Z]\d+)/i);
-    return match ? "Galaxy " + match[1].toUpperCase() + " Series" : "Other Galaxy Models";
-  }
-
-  if (brand === "Redmi / Xiaomi") {
-    if (/Redmi\s+Note/i.test(model)) return "Redmi Note Series";
-    if (/Redmi\s+A/i.test(model)) return "Redmi A Series";
-
-    const match = model.match(/Redmi\s+(\d+)/i);
-    return match ? "Redmi " + match[1] + " Series" : "Other Redmi Models";
-  }
-
-  if (brand === "Google Pixel") {
-    const match = model.match(/Pixel\s+(\d+)/i);
-    return match ? "Pixel " + match[1] + " Series" : "Other Pixel Models";
-  }
-
-  if (brand === "Infinix") {
-    const match = model.match(/Infinix\s+(Hot|Note|Smart|Zero|GT)/i);
-    return match ? match[1] + " Series" : "Other Infinix Models";
-  }
-
-  if (brand === "Tecno") {
-    const match = model.match(/Tecno\s+(Camon|Spark|Phantom|Pop|Pova)/i);
-    return match ? match[1] + " Series" : "Other Tecno Models";
-  }
-
-  if (brand === "itel") {
-    const match = model.match(/itel\s+([A-Z]+)/i);
-    return match ? match[1].toUpperCase() + " Series" : "Other itel Models";
-  }
-
-  return "Other " + brand + " Models";
-}
-
-function getDescription(model, type, product) {
-  const supplied = String(product.description || "").trim();
-  if (supplied) return supplied;
-
-  return "Ask Street Gadgets Care to confirm the correct " +
-    type.toLowerCase() + " for your " + model +
-    ", including compatibility, available options and replacement cost.";
-}
-
-function formatPrice(value) {
-  const amount = Number(value);
-  if (!Number.isFinite(amount)) return "On enquiry";
-
-  return "KSh " + amount.toLocaleString("en-KE", {
-    maximumFractionDigits: 2
-  });
-}
+/* CREATE PART CARD */
 
 function createPartCard(item) {
-  const product = item.product;
+  const product = item.product || {};
   const variants = item.variants || [];
   const card = document.createElement("article");
   card.className = "part-card";
-  card.dataset.search = [
-    item.brand,
-    item.model,
-    item.type,
-    product.name,
-    product.description || ""
-  ].join(" ").toLowerCase();
+  card.dataset.model = item.model.toLowerCase();
+  card.dataset.type = item.type.toLowerCase();
+  card.dataset.search = [item.model,item.type,product.name || "",product.description || ""].join(" ").toLowerCase();
 
   const imageWrap = document.createElement("div");
   imageWrap.className = "part-image";
-
-  const imagePath = String(product.image_path || "").trim();
-
-  if (imagePath) {
-    const img = document.createElement("img");
-    img.src = imagePath;
-    img.alt = String(product.name || (item.model + " " + item.type));
-    img.loading = "lazy";
-    img.decoding = "async";
-
-    img.onerror = function() {
-      this.style.display = "none";
-      const fallback = document.createElement("div");
-      fallback.className = "empty-image";
-      fallback.textContent = "Image unavailable: " + imagePath;
-      imageWrap.appendChild(fallback);
-    };
-
-    imageWrap.appendChild(img);
-  } else {
+  const img = document.createElement("img");
+  img.src = product.image_path || item.image;
+  img.alt = item.model + " " + item.type + " spare part";
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.onerror = function() {
+    this.style.display = "none";
     const fallback = document.createElement("div");
     fallback.className = "empty-image";
-    fallback.textContent = "Image coming soon";
+    fallback.textContent = "Image file: " + (product.image_path || item.image);
     imageWrap.appendChild(fallback);
-  }
+  };
+  imageWrap.appendChild(img);
 
   const info = document.createElement("div");
   info.className = "part-info";
-
   const label = document.createElement("span");
   label.className = "part-label";
   label.textContent = item.type;
 
   const title = document.createElement("h3");
-  title.textContent = String(product.name || (item.model + " " + item.type));
+  title.textContent = product.name || (item.model + " " + item.type);
 
   const description = document.createElement("p");
   description.className = "part-description";
-  description.textContent = getDescription(item.model, item.type, product);
+  description.textContent = product.description || getDescription(item.model,item.type);
 
   const meta = document.createElement("div");
   meta.className = "part-meta";
@@ -1130,28 +1290,20 @@ function createPartCard(item) {
   const qualityStrong = document.createElement("strong");
   qualityStrong.textContent = "Quality options: ";
   quality.appendChild(qualityStrong);
-
-  const qualityLabels = [...new Set(
-    variants.map(variant => String(variant.quality_label || "").trim()).filter(Boolean)
-  )];
-
-  quality.appendChild(document.createTextNode(
-    qualityLabels.length ? qualityLabels.join(", ") : "Enquire"
-  ));
+  const qualityLabels = [...new Set(variants.map(v => String(v.quality_label || "").trim()).filter(Boolean))];
+  quality.appendChild(document.createTextNode(qualityLabels.length ? qualityLabels.join(", ") : "Enquire"));
 
   const price = document.createElement("span");
   const priceStrong = document.createElement("strong");
   priceStrong.textContent = "Price: ";
   price.appendChild(priceStrong);
-
-  const pricedVariants = variants.filter(variant =>
-    variant.price !== null && variant.price !== undefined && variant.price !== ""
-  );
-
+  const pricedVariants = variants.filter(v => v.price !== null && v.price !== undefined && v.price !== "");
   if (pricedVariants.length) {
-    const priceLines = pricedVariants.map(variant => {
-      const labelText = String(variant.quality_label || "").trim();
-      return (labelText ? labelText + ": " : "") + formatPrice(variant.price);
+    const priceLines = pricedVariants.map(v => {
+      const q = String(v.quality_label || "").trim();
+      const amount = Number(v.price);
+      const formatted = Number.isFinite(amount) ? "KSh " + amount.toLocaleString("en-KE",{maximumFractionDigits:2}) : "On enquiry";
+      return (q ? q + ": " : "") + formatted;
     });
     price.appendChild(document.createTextNode([...new Set(priceLines)].join(" | ")));
   } else {
@@ -1162,127 +1314,149 @@ function createPartCard(item) {
   const availabilityStrong = document.createElement("strong");
   availabilityStrong.textContent = "Availability: ";
   availability.appendChild(availabilityStrong);
-
   if (!variants.length) {
     availability.appendChild(document.createTextNode("Contact to confirm"));
   } else {
-    const totalStock = variants.reduce((sum, variant) => {
-      return sum + Math.max(0, Number(variant.stock_quantity) || 0);
-    }, 0);
-
-    availability.appendChild(document.createTextNode(
-      totalStock > 0 ? "In stock" : "Currently unavailable"
-    ));
+    const stock = variants.reduce((sum,v) => sum + Math.max(0,Number(v.stock_quantity) || 0),0);
+    availability.appendChild(document.createTextNode(stock > 0 ? "In stock" : "Currently unavailable"));
   }
-
-  meta.append(quality, price, availability);
+  meta.append(quality,price,availability);
 
   const button = document.createElement("a");
   button.className = "btn";
-  button.href = whatsappLink(
-    "Hello Street Gadgets Care, I am interested in " +
-    String(product.name || item.type) + " for " + item.model +
-    ". Please confirm compatibility, available quality options, availability and the total replacement price."
-  );
+  button.href = whatsappLink("Hello Street Gadgets Care, I am interested in the " + item.type + " for " + item.model + ". Please confirm compatibility, available quality options and the total replacement price.");
   button.target = "_blank";
   button.rel = "noopener noreferrer";
   button.textContent = "Enquire on WhatsApp";
 
-  info.append(label, title, description, meta, button);
-  card.append(imageWrap, info);
-
+  info.append(label,title,description,meta,button);
+  card.append(imageWrap,info);
   return card;
 }
 
-function sortBrandNames(names) {
-  const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+/* IDENTIFY PHONE SERIES */
 
-  return names.sort((a, b) => {
-    const indexA = preferredBrandOrder.indexOf(a);
-    const indexB = preferredBrandOrder.indexOf(b);
+function getSeriesName(brand,model) {
 
-    if (indexA !== -1 || indexB !== -1) {
-      if (indexA === -1) return 1;
-      if (indexB === -1) return -1;
-      return indexA - indexB;
+  if (brand === "iPhone") {
+    if (/iPhone X/i.test(model)) {
+      return "iPhone X Series";
     }
 
-    return collator.compare(a, b);
-  });
+    const match = model.match(/iPhone (\d+)/i);
+
+    return match
+      ? `iPhone ${match[1]} Series`
+      : "Other iPhone Models";
+  }
+
+  if (brand === "Samsung") {
+    if (/Galaxy A/i.test(model)) {
+      return "Galaxy A Series";
+    }
+
+    const match = model.match(/Galaxy ([A-Z]\d+)/i);
+
+    return match
+      ? `Galaxy ${match[1]} Series`
+      : "Other Galaxy Models";
+  }
+
+  if (brand === "Redmi / Xiaomi") {
+    if (/Redmi Note/i.test(model)) {
+      return "Redmi Note Series";
+    }
+
+    if (/Redmi A/i.test(model)) {
+      return "Redmi A Series";
+    }
+
+    const match = model.match(/Redmi (\d+)/i);
+
+    return match
+      ? `Redmi ${match[1]} Series`
+      : "Other Redmi Models";
+  }
+
+  if (brand === "Google Pixel") {
+    const match = model.match(/Pixel (\d+)/i);
+
+    return match
+      ? `Pixel ${match[1]} Series`
+      : "Other Pixel Models";
+  }
+
+  if (brand === "Infinix") {
+    const match = model.match(/Infinix (Hot|Note|Smart|Zero|GT)/i);
+
+    return match
+      ? `${match[1]} Series`
+      : "Other Infinix Models";
+  }
+
+  if (brand === "Tecno") {
+    const match = model.match(/Tecno (Camon|Spark|Phantom|Pop|Pova)/i);
+
+    return match
+      ? `${match[1]} Series`
+      : "Other Tecno Models";
+  }
+
+  if (brand === "itel") {
+    const match = model.match(/itel ([A-Z]+)/i);
+
+    return match
+      ? `${match[1]} Series`
+      : "Other itel Models";
+  }
+
+  return "Other Models";
 }
 
-function renderCatalogue(brands, models, products, compatibility, variants) {
-  brandNav.replaceChildren();
-  catalogueRoot.replaceChildren();
+/* BUILD THE COMPLETE BRAND / SERIES / MODEL CATALOGUE */
 
-  const brandById = new Map(
-    brands.map(brand => [brand.id, displayBrandName(brand.name)])
-  );
+function renderCatalogue() {
 
-  const productsById = new Map(products.map(product => [product.id, product]));
-  const variantsByProduct = new Map();
+  const nav = document.getElementById("brandNav");
+  const root = document.getElementById("brandCatalogues");
+  nav.replaceChildren();
+  root.replaceChildren();
 
-  variants.forEach(variant => {
-    if (!variantsByProduct.has(variant.product_id)) {
-      variantsByProduct.set(variant.product_id, []);
-    }
-    variantsByProduct.get(variant.product_id).push(variant);
-  });
+  brandOrder.forEach((brand,index) => {
 
-  const productsByModel = new Map();
+    const rawParts = brandMap.get(brand) || [];
+    const seen = new Set();
 
-  compatibility.forEach(link => {
-    const product = productsById.get(link.product_id);
-    if (!product) return;
+    const parts = rawParts.filter(item => {
 
-    if (!productsByModel.has(link.model_id)) {
-      productsByModel.set(link.model_id, []);
-    }
+      // Keep only one listing for each model and part type.
+      const key =
+        item.model.toLowerCase() + "|" +
+        item.type.toLowerCase();
 
-    const existing = productsByModel.get(link.model_id);
-    if (!existing.some(item => item.id === product.id)) {
-      existing.push(product);
-    }
-  });
+      if (seen.has(key)) {
+        return false;
+      }
 
-  const modelsByBrand = new Map();
-
-  models.forEach(model => {
-    const brand = brandById.get(model.brand_id);
-    if (!brand) return;
-
-    if (!modelsByBrand.has(brand)) modelsByBrand.set(brand, []);
-
-    const linkedProducts = productsByModel.get(model.id) || [];
-    modelsByBrand.get(brand).push({
-      id: model.id,
-      name: String(model.model_name || "").trim(),
-      products: linkedProducts
+      seen.add(key);
+      return true;
     });
-  });
 
-  const brandNames = sortBrandNames([...modelsByBrand.keys()]);
-  const collator = new Intl.Collator("en", {
-    numeric: true,
-    sensitivity: "base"
-  });
+    if (!parts.length) {
+      return;
+    }
 
-  let totalLinkedProducts = 0;
-  let totalModels = 0;
+    const sectionId = "brand-" + (index + 1);
 
-  brandNames.forEach((brand, brandIndex) => {
-    const brandModels = modelsByBrand.get(brand) || [];
-    brandModels.sort((a, b) => collator.compare(a.name, b.name));
-
-    const brandId = "brand-" + (brandIndex + 1);
     const brandLink = document.createElement("a");
-    brandLink.href = "#" + brandId;
+    brandLink.href = "#" + sectionId;
     brandLink.textContent = brand;
-    brandNav.appendChild(brandLink);
 
-    const brandSection = document.createElement("section");
-    brandSection.className = "brand-section";
-    brandSection.id = brandId;
+    nav.appendChild(brandLink);
+
+    const section = document.createElement("section");
+    section.className = "brand-section";
+    section.id = sectionId;
 
     const heading = document.createElement("div");
     heading.className = "brand-heading";
@@ -1290,44 +1464,80 @@ function renderCatalogue(brands, models, products, compatibility, variants) {
     const title = document.createElement("h2");
     title.textContent = brand;
 
-    const brandPartCount = brandModels.reduce((sum, model) => sum + model.products.length, 0);
     const count = document.createElement("span");
-    count.textContent = brandModels.length + " models · " + brandPartCount + " listed parts";
-    heading.append(title, count);
+    count.textContent =
+      parts.length +
+      (parts.length === 1 ? " listed part" : " listed parts");
+
+    heading.append(title,count);
+
+    /* Group all parts into their respective phone series and models. */
 
     const seriesGroups = new Map();
 
-    brandModels.forEach(model => {
-      const seriesName = getSeriesName(brand, model.name);
-      if (!seriesGroups.has(seriesName)) seriesGroups.set(seriesName, []);
-      seriesGroups.get(seriesName).push(model);
+    parts.forEach(item => {
+
+      const series = getSeriesName(brand,item.model);
+
+      if (!seriesGroups.has(series)) {
+        seriesGroups.set(series,new Map());
+      }
+
+      const modelGroups = seriesGroups.get(series);
+
+      if (!modelGroups.has(item.model)) {
+        modelGroups.set(item.model,[]);
+      }
+
+      modelGroups.get(item.model).push(item);
     });
+
+    /* Include database models even when no spare parts are linked yet. */
+    const databaseModels = supabaseModelsByBrand.get(brand) || new Set();
+    databaseModels.forEach(modelName => {
+      const seriesName = getSeriesName(brand,modelName);
+      if (!seriesGroups.has(seriesName)) seriesGroups.set(seriesName,new Map());
+      if (!seriesGroups.get(seriesName).has(modelName)) seriesGroups.get(seriesName).set(modelName,[]);
+    });
+
+    /* Create horizontal series navigation. */
 
     const seriesNav = document.createElement("nav");
     seriesNav.className = "series-nav";
-    seriesNav.setAttribute("aria-label", brand + " phone series");
+    seriesNav.setAttribute(
+      "aria-label",
+      brand + " phone series"
+    );
 
-    const seriesSections = [];
     let seriesIndex = 0;
+    const seriesSections = [];
 
-    const sortedSeries = [...seriesGroups.entries()].sort((a, b) => {
-      if (brand === "iPhone") {
-        const seriesNumber = name => {
-          if (name === "iPhone X Series") return 0;
-          const match = name.match(/iPhone (\d+) Series/);
-          return match ? Number(match[1]) : 999;
-        };
-        return seriesNumber(a[0]) - seriesNumber(b[0]);
-      }
-      return collator.compare(a[0], b[0]);
+    const collator = new Intl.Collator("en", {
+      numeric:true,
+      sensitivity:"base"
     });
 
-    sortedSeries.forEach(([seriesName, seriesModels]) => {
-      const seriesId = brandId + "-series-" + (++seriesIndex);
+    Array.from(seriesGroups.entries())
+      .sort((a,b) => {
+        if (brand === "iPhone") {
+          const seriesNumber = name => {
+            if (name === "iPhone X Series") return 0;
+            const match = name.match(/iPhone (\d+) Series/);
+            return match ? Number(match[1]) : 999;
+          };
+          return seriesNumber(a[0]) - seriesNumber(b[0]);
+        }
+        return collator.compare(a[0],b[0]);
+      })
+      .forEach(([seriesName,modelGroups]) => {
+
+      const seriesId =
+        sectionId + "-series-" + (++seriesIndex);
 
       const seriesLink = document.createElement("a");
       seriesLink.href = "#" + seriesId;
       seriesLink.textContent = seriesName;
+
       seriesNav.appendChild(seriesLink);
 
       const seriesSection = document.createElement("section");
@@ -1341,222 +1551,319 @@ function renderCatalogue(brands, models, products, compatibility, variants) {
       seriesTitle.textContent = seriesName;
 
       const modelCount = document.createElement("span");
-      modelCount.textContent = seriesModels.length +
-        (seriesModels.length === 1 ? " model" : " models");
+      const numberOfModels = modelGroups.size;
 
-      seriesHeading.append(seriesTitle, modelCount);
+      modelCount.textContent =
+        numberOfModels +
+        (numberOfModels === 1 ? " model" : " models");
+
+      seriesHeading.append(seriesTitle,modelCount);
       seriesSection.appendChild(seriesHeading);
 
-      seriesModels.forEach(model => {
-        totalModels++;
+      /* Each phone model gets its own heading and parts group. */
+
+      let modelIndex = 0;
+
+      const collator = new Intl.Collator("en", {
+        numeric:true,
+        sensitivity:"base"
+      });
+
+      Array.from(modelGroups.entries())
+        .sort((a,b) => collator.compare(a[0],b[0]))
+        .forEach(([modelName,modelParts]) => {
 
         const modelSection = document.createElement("section");
         modelSection.className = "model-section";
-        modelSection.dataset.search = (brand + " " + model.name).toLowerCase();
+
+        modelSection.id =
+          seriesId + "-model-" + (++modelIndex);
 
         const modelHeading = document.createElement("div");
         modelHeading.className = "model-heading";
 
         const modelTitle = document.createElement("h4");
-        modelTitle.textContent = model.name;
+        modelTitle.textContent = modelName;
+
         modelHeading.appendChild(modelTitle);
 
         const grid = document.createElement("div");
         grid.className = "parts-grid";
 
-        if (model.products.length) {
-          model.products.sort((a, b) => collator.compare(a.name || "", b.name || ""));
-
-          model.products.forEach(product => {
-            const type = normalisePartType(product.product_type, product.name);
-            const item = {
-              brand,
-              model: model.name,
-              type,
-              product,
-              variants: variantsByProduct.get(product.id) || []
-            };
-
-            grid.appendChild(createPartCard(item));
-            totalLinkedProducts++;
-          });
+        if (modelParts.length) {
+          modelParts.forEach(item => grid.appendChild(createPartCard(item)));
         } else {
           const empty = document.createElement("p");
           empty.className = "model-empty";
-          empty.textContent =
-            "No spare parts are currently listed for this model. Contact us to check availability.";
+          empty.textContent = "No spare parts are currently listed for this model. Contact us to check availability.";
           grid.appendChild(empty);
         }
 
-        modelSection.append(modelHeading, grid);
+        modelSection.dataset.model = modelName.toLowerCase();
+        modelSection.append(modelHeading,grid);
         seriesSection.appendChild(modelSection);
       });
 
       seriesSections.push(seriesSection);
     });
 
-    brandSection.append(heading, seriesNav, ...seriesSections);
-    catalogueRoot.appendChild(brandSection);
-  });
+    section.append(
+      heading,
+      seriesNav,
+      ...seriesSections
+    );
 
-  return {
-    brandCount: brandNames.length,
-    modelCount: totalModels,
-    productCount: totalLinkedProducts
-  };
+    root.appendChild(section);
+  });
 }
+
+renderCatalogue();
+
+
+/* Supabase enriches matching GitHub listings and adds database-only items/models. */
+const SUPABASE_URL = "https://adipqznxhpwnilsmjhiq.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_K0STbvDLc39F_KA9Ja6q3w_JU0dpJGS";
+const SUPABASE_PAGE_SIZE = 1000;
+
+function displayBrandName(name) {
+  const value = String(name || "").trim();
+  if (/^apple$/i.test(value) || /^iphone$/i.test(value)) return "iPhone";
+  if (/^(redmi|xiaomi|redmi\s*\/\s*xiaomi)$/i.test(value)) return "Redmi / Xiaomi";
+  if (/^google\s*pixel$/i.test(value)) return "Google Pixel";
+  if (/^itel$/i.test(value)) return "itel";
+  return value;
+}
+
+function normaliseDatabasePartType(product) {
+  const text = (String(product.product_type || "") + " " + String(product.name || "")).toLowerCase();
+  if (/screen|display|lcd|amoled/.test(text)) return "Screen replacement";
+  if (/battery/.test(text)) return "Battery replacement";
+  if (/charg(e|ing)|usb.?c|charging.?port/.test(text)) return "Charging system replacement";
+  if (/back.?glass/.test(text)) return "Back glass cover replacement";
+  if (/back.?cover|rear.?cover/.test(text)) return "Back cover replacement";
+  return String(product.product_type || "Spare part").replace(/[_-]+/g," ").replace(/\s+/g," ").trim().replace(/\b\w/g,letter => letter.toUpperCase());
+}
+
+function normaliseExistingPartType(type) {
+  const value = String(type || "").toLowerCase();
+  if (/screen|display|lcd|amoled/.test(value)) return "Screen replacement";
+  if (/battery/.test(value)) return "Battery replacement";
+  if (/charg(e|ing)|usb.?c/.test(value)) return "Charging system replacement";
+  if (/back.?glass/.test(value)) return "Back glass cover replacement";
+  if (/back.?cover|rear.?cover/.test(value)) return "Back cover replacement";
+  return String(type || "").trim();
+}
+
+async function fetchSupabaseRows(table,query) {
+  const rows = [];
+  let offset = 0;
+  while (true) {
+    const params = new URLSearchParams(query);
+    params.set("limit",String(SUPABASE_PAGE_SIZE));
+    params.set("offset",String(offset));
+    const response = await fetch(SUPABASE_URL + "/rest/v1/" + table + "?" + params.toString(),{
+      method:"GET",
+      headers:{
+        "apikey":SUPABASE_PUBLISHABLE_KEY,
+        "Authorization":"Bearer " + SUPABASE_PUBLISHABLE_KEY,
+        "Accept":"application/json"
+      }
+    });
+    if (!response.ok) {
+      const detail = await response.text();
+      throw new Error(table + " returned " + response.status + ": " + detail.slice(0,220));
+    }
+    const batch = await response.json();
+    if (!Array.isArray(batch)) throw new Error("Unexpected " + table + " response.");
+    rows.push(...batch);
+    if (batch.length < SUPABASE_PAGE_SIZE) break;
+    offset += PAGE_SIZE;
+  }
+  return rows;
+}
+
+async function loadSupabaseCatalogue() {
+  const status = document.getElementById("searchStatus");
+  status.textContent = "Showing the existing catalogue while checking for updated product details.";
+
+  try {
+    const [brands,models,products,compatibility] = await Promise.all([
+      fetchSupabaseRows("device_brands",{select:"id,name",order:"name.asc"}),
+      fetchSupabaseRows("device_models",{select:"id,brand_id,model_name",order:"model_name.asc"}),
+      fetchSupabaseRows("products",{select:"id,product_type,name,description,image_path,is_active",is_active:"eq.true",order:"name.asc"}),
+      fetchSupabaseRows("product_compatibility",{select:"product_id,model_id"})
+    ]);
+
+    let variants = [];
+    let variantsFailed = false;
+    try {
+      variants = await fetchSupabaseRows("product_variants",{select:"id,product_id,quality_label,price,stock_quantity,is_active",is_active:"eq.true"});
+    } catch (error) {
+      variantsFailed = true;
+      console.warn("Product variants could not be loaded:",error);
+    }
+
+    const brandNames = new Map(brands.map(brand => [brand.id,displayBrandName(brand.name)]));
+    const modelById = new Map(models.map(model => [model.id,model]));
+    const productById = new Map(products.map(product => [product.id,product]));
+    const variantsByProduct = new Map();
+
+    variants.forEach(variant => {
+      if (!variantsByProduct.has(variant.product_id)) variantsByProduct.set(variant.product_id,[]);
+      variantsByProduct.get(variant.product_id).push(variant);
+    });
+
+    supabaseModelsByBrand.clear();
+    models.forEach(model => {
+      const brand = brandNames.get(model.brand_id);
+      const modelName = String(model.model_name || "").trim();
+      if (!brand || !modelName) return;
+      if (!brandOrder.includes(brand)) brandOrder.push(brand);
+      if (!brandMap.has(brand)) brandMap.set(brand,[]);
+      if (!supabaseModelsByBrand.has(brand)) supabaseModelsByBrand.set(brand,new Set());
+      supabaseModelsByBrand.get(brand).add(modelName);
+    });
+
+    let matchedStaticItems = 0;
+    let addedDatabaseItems = 0;
+
+    compatibility.forEach(link => {
+      const product = productById.get(link.product_id);
+      const model = modelById.get(link.model_id);
+      if (!product || !model) return;
+
+      const brand = brandNames.get(model.brand_id);
+      const modelName = String(model.model_name || "").trim();
+      if (!brand || !modelName) return;
+
+      const type = normaliseDatabasePartType(product);
+      const existing = (brandMap.get(brand) || []).find(item =>
+        item.model.toLowerCase() === modelName.toLowerCase() &&
+        normaliseExistingPartType(item.type).toLowerCase() === type.toLowerCase()
+      );
+
+      if (existing) {
+        existing.product = product;
+        existing.variants = variantsByProduct.get(product.id) || [];
+        if (product.image_path) existing.image = product.image_path;
+        matchedStaticItems++;
+      } else {
+        addPart(brand,modelName,type,product.image_path || "");
+        const added = brandMap.get(brand)[brandMap.get(brand).length - 1];
+        added.product = product;
+        added.variants = variantsByProduct.get(product.id) || [];
+        addedDatabaseItems++;
+      }
+    });
+
+    renderCatalogue();
+    filterCatalogue();
+
+    const productLinks = compatibility.filter(link => productById.has(link.product_id)).length;
+    status.textContent = "Supabase checked: " + models.length + " database phone models and " +
+      productLinks + " product-model links. All original GitHub catalogue entries remain available." +
+      (variantsFailed ? " Prices and stock could not be loaded; please enquire." : "");
+
+    console.info("Supabase catalogue sync",{
+      databaseModels:models.length,
+      databaseProducts:products.length,
+      compatibilityLinks:productLinks,
+      matchedStaticItems,
+      addedDatabaseItems,
+      variants:variants.length
+    });
+  } catch (error) {
+    console.error("Supabase catalogue update failed:",error);
+    status.textContent = "Showing the existing catalogue. The latest database details could not be loaded; refresh to try again.";
+  }
+}
+
+/* LIVE CATALOGUE SEARCH */
+
+const partSearch = document.getElementById("partSearch");
+const clearSearch = document.getElementById("clearSearch");
+const searchStatus = document.getElementById("searchStatus");
+const noResults = document.getElementById("noResults");
 
 function filterCatalogue() {
   const query = partSearch.value.trim().toLowerCase();
-  const modelSections = [...document.querySelectorAll(".model-section")];
-
-  let visibleModels = 0;
-  let visibleParts = 0;
+  const cards = Array.from(document.querySelectorAll(".part-card"));
+  let visibleCount = 0;
   let visibleBrands = 0;
 
-  modelSections.forEach(modelSection => {
-    const modelMatches = !query || modelSection.dataset.search.includes(query);
-    const cards = [...modelSection.querySelectorAll(".part-card")];
+  document.querySelectorAll(".model-section").forEach(section => {
+    const brandName = section.closest(".brand-section")?.querySelector(".brand-heading h2")?.textContent || "";
+    const modelMatch = !query || (section.dataset.model + " " + brandName.toLowerCase()).includes(query);
+    const cardsInModel = [...section.querySelectorAll(".part-card")];
     let matchingCards = 0;
 
-    cards.forEach(card => {
-      const matches = !query || modelMatches || card.dataset.search.includes(query);
-      card.hidden = !matches;
-      if (matches) matchingCards++;
+    cardsInModel.forEach(card => {
+      const searchable = [card.dataset.search,brandName].join(" ").toLowerCase();
+      const match = !query || modelMatch || searchable.includes(query);
+      card.hidden = !match;
+      if (match) matchingCards++;
     });
 
-    const visible = !query || modelMatches || matchingCards > 0;
-    modelSection.hidden = !visible;
-
-    if (visible) {
-      visibleModels++;
-      visibleParts += modelMatches || !query ? cards.length : matchingCards;
-    }
+    const modelVisible = !query || modelMatch || matchingCards > 0;
+    section.hidden = !modelVisible;
+    if (modelVisible) visibleCount += modelMatch ? cardsInModel.length : matchingCards;
   });
 
   document.querySelectorAll(".series-section").forEach(section => {
-    section.hidden = !section.querySelector(".model-section:not([hidden])");
+    const hasVisible = section.querySelector(".model-section:not([hidden])");
+    section.hidden = !hasVisible;
   });
 
   document.querySelectorAll(".brand-section").forEach(section => {
-    const hasVisible = !!section.querySelector(".series-section:not([hidden])");
+    const hasVisible = section.querySelector(".series-section:not([hidden])");
     section.hidden = !hasVisible;
+
     if (hasVisible) visibleBrands++;
   });
 
-  document.querySelectorAll("#brandNav a, .series-nav a").forEach(link => {
+  document.querySelectorAll("#brandNav a").forEach(link => {
+    const target = document.querySelector(link.getAttribute("href"));
+    link.hidden = !target || target.hidden;
+  });
+
+  document.querySelectorAll(".series-nav a").forEach(link => {
     const target = document.querySelector(link.getAttribute("href"));
     link.hidden = !target || target.hidden;
   });
 
   clearSearch.hidden = !query;
-  noResults.style.display = query && visibleModels === 0 ? "block" : "none";
+  noResults.style.display = query && visibleCount === 0 ? "block" : "none";
 
   if (!query) {
-    searchStatus.textContent =
-      "Browse all " + catalogueTotals.modelCount + " phone models and " +
-      catalogueTotals.productCount + " listed spare parts below.";
-  } else if (visibleParts === 0 && visibleModels > 0) {
-    searchStatus.textContent =
-      "Found " + visibleModels + " matching " +
-      (visibleModels === 1 ? "phone model" : "phone models") +
-      ". No parts are currently listed for this model; contact us to check availability.";
+    searchStatus.textContent = "Browse all available listings below.";
   } else {
     searchStatus.textContent =
-      visibleParts + " matching " + (visibleParts === 1 ? "spare part" : "spare parts") +
-      " across " + visibleModels + " " + (visibleModels === 1 ? "model" : "models") +
-      " in " + visibleBrands + " " + (visibleBrands === 1 ? "brand" : "brands") + ".";
+      `${visibleCount} matching ${visibleCount === 1 ? "part" : "parts"} found across ${visibleBrands} ${visibleBrands === 1 ? "brand" : "brands"}.`;
   }
 }
 
-let catalogueTotals = {
-  brandCount: 0,
-  modelCount: 0,
-  productCount: 0
-};
+partSearch.addEventListener("input",filterCatalogue);
 
-partSearch.addEventListener("input", filterCatalogue);
-
-clearSearch.addEventListener("click", () => {
+clearSearch.addEventListener("click",() => {
   partSearch.value = "";
   filterCatalogue();
   partSearch.focus();
 });
 
-async function loadCatalogue() {
-  searchStatus.textContent = "Loading phone models and spare parts...";
-  noResults.style.display = "none";
-
-  try {
-    const [brands, models, products, compatibility] = await Promise.all([
-      fetchAllRows("device_brands", {
-        select: "id,name",
-        order: "name.asc"
-      }),
-      fetchAllRows("device_models", {
-        select: "id,brand_id,model_name",
-        order: "model_name.asc"
-      }),
-      fetchAllRows("products", {
-        select: "id,product_type,name,description,image_path,is_active",
-        is_active: "eq.true",
-        order: "name.asc"
-      }),
-      fetchAllRows("product_compatibility", {
-        select: "product_id,model_id"
-      })
-    ]);
-
-    let variants = [];
-    let variantsUnavailable = false;
-
-    try {
-      variants = await fetchAllRows("product_variants", {
-        select: "id,product_id,quality_label,price,stock_quantity,is_active",
-        is_active: "eq.true"
-      });
-    } catch (variantError) {
-      variantsUnavailable = true;
-      console.warn("Product variants could not be loaded:", variantError);
-    }
-
-    catalogueTotals = renderCatalogue(
-      brands,
-      models,
-      products,
-      compatibility,
-      variants
-    );
-
-    if (variantsUnavailable) {
-      searchStatus.textContent =
-        "Catalogue loaded. Product prices and availability details could not be retrieved; please enquire.";
-    } else {
-      filterCatalogue();
-    }
-
-    if (!catalogueTotals.modelCount) {
-      noResults.textContent =
-        "No phone models were returned by the catalogue database. Please contact Street Gadgets Care.";
-      noResults.style.display = "block";
-    }
-  } catch (error) {
-    console.error("Spare-parts catalogue loading error:", error);
-    searchStatus.textContent =
-      "The spare-parts catalogue could not be loaded. Please refresh the page or contact us on WhatsApp.";
-    noResults.textContent =
-      "We are having trouble loading the catalogue right now. Please try again shortly or contact Street Gadgets Care.";
-    noResults.style.display = "block";
-  }
-}
-
 /* MOBILE MENU */
+
 const menuToggle = document.getElementById("menuToggle");
 const navigation = document.getElementById("mainNavigation");
 
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click",() => {
+
   const isOpen = navigation.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
   menuToggle.setAttribute(
     "aria-label",
     isOpen ? "Close navigation menu" : "Open navigation menu"
@@ -1564,22 +1871,35 @@ menuToggle.addEventListener("click", () => {
 });
 
 navigation.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
+
+  link.addEventListener("click",() => {
+
     navigation.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    menuToggle.setAttribute("aria-expanded","false");
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
   });
 });
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown",event => {
+
   if (event.key === "Escape") {
+
     navigation.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    menuToggle.setAttribute("aria-expanded","false");
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
   }
 });
 
-loadCatalogue();
+loadSupabaseCatalogue();
+
 </script>
 
 </body>
