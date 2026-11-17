@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | Street Gadgets Care</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0b1220;--navy2:#14233a;--cyan:#19a7ce;--cyan2:#087fa3;--green:#25d366;--text:#172033;--muted:#687385;--light:#f5f7fa;--border:#e2e7ed;--white:#fff;--shadow:0 12px 32px rgba(11,18,32,.08);--danger:#c43d4b}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.55}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    .topbar{background:var(--navy);color:#fff;padding:13px 22px;box-shadow:0 4px 18px #0002}
+    .top-inner{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .brand img{width:49px;height:49px;object-fit:contain;flex-shrink:0}
+    .brand-name{font-size:14px;font-weight:800;letter-spacing:.55px;line-height:1.2}
+    .tagline{display:block;margin-top:5px;color:#aebdce;font-size:9px;font-weight:700;letter-spacing:1.1px}
+    .top-actions{display:flex;align-items:center;gap:10px}
+    .top-actions a,.top-actions button{color:#fff;text-decoration:none;border:1px solid #ffffff35;background:transparent;border-radius:8px;padding:9px 12px;font-size:12px;font-weight:700}
+    .top-actions a:hover,.top-actions button:hover{border-color:var(--cyan);color:#8de5fb}
+    .wrap{width:min(1240px,100%);margin:28px auto;padding:0 20px 50px}
+    .intro{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+    h1{font-size:clamp(24px,4vw,32px);letter-spacing:-.8px;color:var(--navy)}
+    .sub{color:var(--muted);font-size:13px;margin-top:5px}
+    .status{padding:10px 13px;border-radius:9px;background:#eaf9fd;color:#075d77;font-size:12px;font-weight:700;max-width:430px}
+    .status.error{background:#fff0f1;color:#9e2634}
+    .status.good{background:#eaf8ef;color:#17683a}
+    .panel{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:20px;margin-bottom:20px}
+    .panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+    h2{font-size:17px;color:var(--navy)}
+    .muted{font-size:12px;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:20px}
+    .stat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:15px}
+    .stat strong{display:block;font-size:25px;color:var(--navy);line-height:1.2}
+    .stat span{font-size:11px;color:var(--muted);font-weight:700}
+    .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+    .toolbar input{flex:1;min-width:220px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+    label{font-size:12px;font-weight:700;color:#354156}
+    input,select,textarea{width:100%;border:1px solid #d7dee7;border-radius:8px;padding:10px 11px;background:#fff;color:var(--text);outline:none;font-size:13px}
+    input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #19a7ce1c}
+    textarea{min-height:86px;resize:vertical}
+    select[multiple]{min-height:230px;padding:7px}
+    .hint{font-size:11px;color:var(--muted)}
+    .btn{border:0;border-radius:8px;padding:10px 14px;font-size:12px;font-weight:800;background:var(--cyan);color:#fff}
+    .btn:hover{background:var(--cyan2)}
+    .btn.secondary{background:#edf2f6;color:#27364b}
+    .btn.secondary:hover{background:#dfe8ef}
+    .btn.danger{background:#fff0f1;color:#a32d3a}
+    .btn.danger:hover{background:#ffe0e3}
+    .btn:disabled{opacity:.55;cursor:not-allowed}
+    .products{display:grid;gap:9px}
+    .product{display:grid;grid-template-columns:58px minmax(0,1fr) auto;gap:13px;align-items:center;padding:10px;border:1px solid var(--border);border-radius:10px}
+    .product img{width:58px;height:58px;object-fit:contain;background:#f7f9fb;border-radius:7px}
+    .product-name{font-size:13px;font-weight:800;color:var(--navy)}
+    .product-meta{font-size:11px;color:var(--muted);margin-top:3px}
+    .pill{display:inline-block;border-radius:30px;padding:3px 8px;font-size:10px;font-weight:800;background:#eaf8ef;color:#17683a;margin-left:5px}
+    .pill.off{background:#fff0f1;color:#a32d3a}
+    .product-actions{display:flex;gap:7px;align-items:center}
+    .product-actions button{padding:8px 10px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+    .full{grid-column:1/-1}
+    .checkline{display:flex;align-items:center;gap:9px;padding:8px 0}
+    .checkline input{width:auto}
+    .empty{padding:28px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed var(--border);border-radius:10px}
+    .login-shell{max-width:420px;margin:9vh auto;padding:0 18px}
+    .login-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:25px;box-shadow:var(--shadow)}
+    .login-card h1{font-size:24px;margin-bottom:5px}
+    .login-card .btn{width:100%;margin-top:5px}
+    .hidden{display:none!important}
+    .notice{background:#f0f8fb;border-left:3px solid var(--cyan);padding:11px 13px;border-radius:7px;color:#315269;font-size:11px;margin:10px 0 15px}
+    .row-end{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+    .divider{height:1px;background:var(--border);margin:17px 0}
+    @media(max-width:720px){.wrap{margin:20px auto;padding:0 13px 35px}.topbar{padding:11px 13px}.brand img{width:43px;height:43px}.top-actions a{display:none}.intro{align-items:flex-start;flex-direction:column}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.grid2,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.panel{padding:15px}.product{grid-template-columns:48px minmax(0,1fr);gap:10px}.product img{width:48px;height:48px}.product-actions{grid-column:2;justify-content:flex-start}.product-actions button{padding:7px 10px}.status{max-width:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-inner">
+      <div class="brand">
+        <img src="Logo.png" alt="Street Gadgets Care logo">
+        <div><div class="brand-name">STREET GADGETS CARE</div><span class="tagline">REPAIR . RELIABLE . TRUSTED</span></div>
+      </div>
+      <div class="top-actions">
+        <a href="spare-parts.html" target="_blank" rel="noopener">View public catalogue</a>
+        <button id="logoutBtn" class="hidden" type="button">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="loginView" class="login-shell">
+    <section class="login-card">
+      <h1>Admin sign in</h1>
+      <p class="sub" style="margin-bottom:20px">Sign in with your Street Gadgets Care administrator account.</p>
+      <form id="loginForm">
+        <div class="field"><label for="email">Email address</label><input id="email" type="email" autocomplete="username" value="streetgadgetscare@gmail.com" required></div>
+        <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div>
+        <button id="loginBtn" class="btn" type="submit">Sign in</button>
+      </form>
+      <p id="loginMessage" class="muted" role="status" style="margin-top:13px"></p>
+      <div class="notice">This page uses your Supabase administrator login. Never share your password or secret service-role key.</div>
+    </section>
+  </main>
+
+  <main id="appView" class="wrap hidden">
+    <div class="intro">
+      <div><h1>Catalogue management</h1><p class="sub">Manage spare-parts listings, compatible phone models and catalogue visibility.</p></div>
+      <div id="status" class="status" role="status">Checking administrator access…</div>
+    </div>
+    <section class="stats">
+      <div class="stat"><strong id="totalProducts">—</strong><span>PRODUCTS</span></div>
+      <div class="stat"><strong id="activeProducts">—</strong><span>VISIBLE IN CATALOGUE</span></div>
+      <div class="stat"><strong id="totalModels">—</strong><span>PHONE MODELS</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Products</h2><p class="muted">Edit existing listings or add a new spare part.</p></div><button id="newProductBtn" class="btn" type="button">+ Add product</button></div>
+      <div class="toolbar"><input id="productSearch" type="search" placeholder="Search product name, type or description…"><select id="visibilityFilter" style="max-width:170px"><option value="all">All products</option><option value="active">Visible only</option><option value="inactive">Hidden only</option></select></div>
+      <div id="productList" class="products"><div class="empty">Loading products…</div></div>
+    </section>
+
+    <section id="productEditor" class="panel hidden">
+      <div class="panel-head"><div><h2 id="editorTitle">Add product</h2><p class="muted">Prices are intentionally not collected or displayed here.</p></div><button id="closeEditorBtn" class="btn secondary" type="button">Close</button></div>
+      <form id="productForm">
+        <input id="productId" type="hidden">
+        <div class="form-grid">
+          <div class="field"><label for="productName">Product name *</label><input id="productName" required maxlength="180" placeholder="e.g. Samsung A14 4G Back Cover"></div>
+          <div class="field"><label for="productType">Product type *</label><input id="productType" required maxlength="80" placeholder="e.g. back cover, screen, battery"></div>
+          <div class="field full"><label for="description">Description</label><textarea id="description" maxlength="1500" placeholder="Add useful product details…"></textarea></div>
+          <div class="field"><label for="imagePath">Image filename / path</label><input id="imagePath" maxlength="500" placeholder="e.g. Samsung-A14-4g-Back-Cover-Replacement-jpg"><span class="hint">For existing GitHub images, enter the exact filename including its extension if it has one. Keep the image in the website repository root.</span></div>
+          <div class="field"><label for="categoryId">Category</label><select id="categoryId"><option value="">No category</option></select></div>
+          <div class="field full"><label for="modelSearch">Find compatible phone models</label><input id="modelSearch" type="search" placeholder="Search brand or model to filter the list…"></div>
+          <div class="field full"><label for="compatibleModels">Compatible models (select one or more)</label><select id="compatibleModels" multiple></select><span class="hint">Use Ctrl (Windows) or Command (Mac) to select multiple models. Existing selections are retained when editing.</span></div>
+          <div class="field full"><label class="checkline"><input id="isActive" type="checkbox" checked> Show this product on the public spare-parts catalogue</label><span class="hint">Untick to hide the product from the public catalogue without deleting it.</span></div>
+        </div>
+        <div class="row-end"><button id="cancelProductBtn" class="btn secondary" type="button">Cancel</button><button id="saveProductBtn" class="btn" type="submit">Save product</button></div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Phone brands and models</h2><p class="muted">Add a brand or add a model under an existing brand.</p></div></div>
+      <div class="grid2">
+        <form id="brandForm">
+          <div class="field"><label for="newBrandName">Add phone brand</label><input id="newBrandName" maxlength="80" placeholder="e.g. Samsung" required></div>
+          <button class="btn secondary" type="submit">Add brand</button>
+        </form>
+        <form id="modelForm">
+          <div class="field"><label for="modelBrand">Brand</label><select id="modelBrand" required></select></div>
+          <div class="field"><label for="newModelName">Phone model</label><input id="newModelName" maxlength="120" placeholder="e.g. Galaxy A15 4G" required></div>
+          <button class="btn secondary" type="submit">Add phone model</button>
+        </form>
+      </div>
+    </section>
+    <p class="muted" style="text-align:center">Street Gadgets Care · Admin dashboard</p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    "use strict";
+    const SUPABASE_URL = "https://adipqznxhpwnilsmjhiq.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_K0STbvDLc39F_KA9Ja6q3w_JU0dpJGS";
+    const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+    const $ = id => document.getElementById(id);
+    let products = [];
+    let brands = [];
+    let models = [];
+    let categories = [];
+    let currentProductLinks = [];
+    let selectedModelIds = new Set();
+
+    function setStatus(message,kind="") {
+      const el=$("status");
+      el.textContent=message;
+      el.className="status"+(kind?" "+kind:"");
+    }
+    function showLogin(message="") {
+      $("loginView").classList.remove("hidden");
+      $("appView").classList.add("hidden");
+      $("logoutBtn").classList.add("hidden");
+      $("loginMessage").textContent=message;
+    }
+    function showApp() {
+      $("loginView").classList.add("hidden");
+      $("appView").classList.remove("hidden");
+      $("logoutBtn").classList.remove("hidden");
+    }
+    function errorText(error) {
+      return error && error.message ? error.message : String(error || "Unknown error");
+    }
+    async function verifyAdmin() {
+      const {data,error}=await db.rpc("is_admin");
+      if(error) throw error;
+      if(data!==true) throw new Error("This account is signed in but is not authorised as an administrator.");
+      return true;
+    }
+    async function loadAll() {
+      setStatus("Loading catalogue data…");
+      const [p,b,m,c]=await Promise.all([
+        db.from("products").select("id,category_id,product_type,name,description,image_path,is_active,created_at,updated_at").order("name"),
+        db.from("device_brands").select("id,name").order("name"),
+        db.from("device_models").select("id,brand_id,model_name").order("model_name"),
+        db.from("product_categories").select("id,name,slug").order("name")
+      ]);
+      for(const result of [p,b,m,c]) if(result.error) throw result.error;
+      products=p.data||[]; brands=b.data||[]; models=m.data||[]; categories=c.data||[];
+      renderProducts();
+      renderCategories();
+      renderBrands();
+      updateStats();
+      setStatus("Connected. Administrator access verified.","good");
+    }
+    function updateStats() {
+      $("totalProducts").textContent=products.length;
+      $("activeProducts").textContent=products.filter(p=>p.is_active).length;
+      $("totalModels").textContent=models.length;
+    }
+    function imageUrl(path) {
+      if(!path) return "";
+      if(/^https?:\/\//i.test(path)) return path;
+      return path;
+    }
+    function renderProducts() {
+      const query=$("productSearch").value.trim().toLowerCase();
+      const filter=$("visibilityFilter").value;
+      const filtered=products.filter(p=>{
+        const matches=(String(p.name||"")+" "+String(p.product_type||"")+" "+String(p.description||"")).toLowerCase().includes(query);
+        const visible=filter==="all"||(filter==="active"&&p.is_active)||(filter==="inactive"&&!p.is_active);
+        return matches&&visible;
+      });
+      const root=$("productList");
+      root.innerHTML="";
+      if(!filtered.length){root.innerHTML='<div class="empty">No matching products found.</div>';return;}
+      const fragment=document.createDocumentFragment();
+      filtered.forEach(product=>{
+        const row=document.createElement("article");row.className="product";
+        const img=document.createElement("img");img.alt="";img.loading="lazy";img.src=imageUrl(product.image_path)||"Logo.png";img.onerror=()=>{img.src="Logo.png";};
+        const details=document.createElement("div");
+        const name=document.createElement("div");name.className="product-name";name.textContent=product.name;
+        const pill=document.createElement("span");pill.className="pill"+(product.is_active?"":" off");pill.textContent=product.is_active?"Visible":"Hidden";name.appendChild(pill);
+        const meta=document.createElement("div");meta.className="product-meta";meta.textContent=(product.product_type||"Uncategorised")+(product.image_path?" · "+product.image_path:" · No image path");
+        details.append(name,meta);
+        const actions=document.createElement("div");actions.className="product-actions";
+        const edit=document.createElement("button");edit.type="button";edit.className="btn secondary";edit.textContent="Edit";edit.addEventListener("click",()=>openEditor(product));
+        actions.append(edit);row.append(img,details,actions);fragment.append(row);
+      });
+      root.append(fragment);
+    }
+    function renderCategories() {
+      const select=$("categoryId");select.innerHTML='<option value="">No category</option>';
+      categories.forEach(c=>{const o=document.createElement("option");o.value=c.id;o.textContent=c.name;select.append(o);});
+    }
+    function renderBrands() {
+      const select=$("modelBrand");select.innerHTML="";
+      brands.forEach(b=>{const o=document.createElement("option");o.value=b.id;o.textContent=b.name;select.append(o);});
+      renderModelOptions();
+    }
+    function renderModelOptions() {
+      const query=$("modelSearch").value.trim().toLowerCase();
+      const select=$("compatibleModels");
+      const chosen=selectedModelIds;
+      select.innerHTML="";
+      const brandById=new Map(brands.map(b=>[b.id,b.name]));
+      models.forEach(m=>{
+        const brand=brandById.get(m.brand_id)||"Other";
+        const label=brand+" — "+m.model_name;
+        if(query&&!label.toLowerCase().includes(query)) return;
+        const o=document.createElement("option");o.value=m.id;o.textContent=label;o.selected=chosen.has(m.id);select.append(o);
+      });
+    }
+    async function openEditor(product=null) {
+      $("productForm").reset();
+      $("productId").value=product?product.id:"";
+      $("editorTitle").textContent=product?"Edit product":"Add product";
+      $("productName").value=product?.name||"";
+      $("productType").value=product?.product_type||"";
+      $("description").value=product?.description||"";
+      $("imagePath").value=product?.image_path||"";
+      $("categoryId").value=product?.category_id||"";
+      $("isActive").checked=product?!!product.is_active:true;
+      $("modelSearch").value="";
+      currentProductLinks=[];
+      selectedModelIds=new Set();
+      if(product){
+        const {data,error}=await db.from("product_compatibility").select("model_id").eq("product_id",product.id);
+        if(error){setStatus("Could not load compatible models: "+errorText(error),"error");return;}
+        currentProductLinks=(data||[]).map(x=>x.model_id);
+      }
+      selectedModelIds=new Set(currentProductLinks);
+      renderModelOptions();
+      $("productEditor").classList.remove("hidden");
+      $("productEditor").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+    function closeEditor(){$("productEditor").classList.add("hidden");}
+    async function saveProduct(event) {
+      event.preventDefault();
+      const id=$("productId").value;
+      const payload={
+        name:$("productName").value.trim(),
+        product_type:$("productType").value.trim(),
+        description:$("description").value.trim()||null,
+        image_path:$("imagePath").value.trim()||null,
+        category_id:$("categoryId").value||null,
+        is_active:$("isActive").checked,
+        updated_at:new Date().toISOString()
+      };
+      if(!payload.name||!payload.product_type)return;
+      const selected=Array.from(selectedModelIds);
+      const saveBtn=$("saveProductBtn");saveBtn.disabled=true;saveBtn.textContent="Saving…";
+      try{
+        let productId=id;
+        if(id){
+          const {error}=await db.from("products").update(payload).eq("id",id);
+          if(error)throw error;
+        }else{
+          const {data,error}=await db.from("products").insert(payload).select("id").single();
+          if(error)throw error;productId=data.id;
+        }
+        const existingResult=await db.from("product_compatibility").select("model_id").eq("product_id",productId);
+        if(existingResult.error)throw existingResult.error;
+        const existing=new Set((existingResult.data||[]).map(x=>x.model_id));
+        const wanted=new Set(selected);
+        for(const modelId of existing) if(!wanted.has(modelId)){
+          const {error}=await db.from("product_compatibility").delete().eq("product_id",productId).eq("model_id",modelId);
+          if(error)throw error;
+        }
+        for(const modelId of wanted) if(!existing.has(modelId)){
+          const {error}=await db.from("product_compatibility").insert({product_id:productId,model_id:modelId});
+          if(error)throw error;
+        }
+        closeEditor();await loadAll();setStatus("Product saved successfully.","good");
+      }catch(error){setStatus("Save failed: "+errorText(error),"error");}
+      finally{saveBtn.disabled=false;saveBtn.textContent="Save product";}
+    }
+    async function addBrand(event){
+      event.preventDefault();const name=$("newBrandName").value.trim();if(!name)return;
+      const {error}=await db.from("device_brands").insert({name});
+      if(error){setStatus("Could not add brand: "+errorText(error),"error");return;}
+      $("brandForm").reset();await loadAll();setStatus("Phone brand added.","good");
+    }
+    async function addModel(event){
+      event.preventDefault();const brand_id=$("modelBrand").value;const model_name=$("newModelName").value.trim();
+      if(!brand_id||!model_name)return;
+      const {error}=await db.from("device_models").insert({brand_id,model_name});
+      if(error){setStatus("Could not add model: "+errorText(error),"error");return;}
+      $("modelForm").reset();await loadAll();setStatus("Phone model added.","good");
+    }
+    async function startSession(session){
+      if(!session){showLogin();return;}
+      try{
+        await verifyAdmin();
+        showApp();await loadAll();
+      }catch(error){
+        await db.auth.signOut();showLogin("Administrator check failed: "+errorText(error));
+      }
+    }
+    $("loginForm").addEventListener("submit",async event=>{
+      event.preventDefault();const btn=$("loginBtn");btn.disabled=true;btn.textContent="Signing in…";$("loginMessage").textContent="";
+      try{
+        const {data,error}=await db.auth.signInWithPassword({email:$("email").value.trim(),password:$("password").value});
+        if(error)throw error;
+        await startSession(data.session);
+      }catch(error){$("loginMessage").textContent="Sign in failed: "+errorText(error);}
+      finally{btn.disabled=false;btn.textContent="Sign in";$("password").value="";}
+    });
+    $("logoutBtn").addEventListener("click",async()=>{await db.auth.signOut();showLogin("You have signed out.");});
+    $("newProductBtn").addEventListener("click",()=>openEditor());
+    $("closeEditorBtn").addEventListener("click",closeEditor);
+    $("cancelProductBtn").addEventListener("click",closeEditor);
+    $("productForm").addEventListener("submit",saveProduct);
+    $("brandForm").addEventListener("submit",addBrand);
+    $("modelForm").addEventListener("submit",addModel);
+    $("productSearch").addEventListener("input",renderProducts);
+    $("visibilityFilter").addEventListener("change",renderProducts);
+    $("compatibleModels").addEventListener("change",()=>{
+      const visibleIds=Array.from($("compatibleModels").options).map(o=>o.value);
+      visibleIds.forEach(id=>selectedModelIds.delete(id));
+      Array.from($("compatibleModels").selectedOptions).forEach(o=>selectedModelIds.add(o.value));
+    });
+    $("modelSearch").addEventListener("input",()=>renderModelOptions());
+    db.auth.getSession().then(({data})=>startSession(data.session)).catch(error=>showLogin(errorText(error)));
+    db.auth.onAuthStateChange((event,session)=>{if(event==="SIGNED_OUT")showLogin();});
+  </script>
+</body>
+</html>
