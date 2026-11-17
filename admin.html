@@ -174,6 +174,7 @@
     let models = [];
     let categories = [];
     let currentProductLinks = [];
+    let selectedModelIds = new Set();
 
     function setStatus(message,kind="") {
       const el=$("status");
@@ -261,10 +262,10 @@
       brands.forEach(b=>{const o=document.createElement("option");o.value=b.id;o.textContent=b.name;select.append(o);});
       renderModelOptions();
     }
-    function renderModelOptions(selected=[]) {
+    function renderModelOptions() {
       const query=$("modelSearch").value.trim().toLowerCase();
       const select=$("compatibleModels");
-      const chosen=new Set(selected.length?selected:Array.from(select.selectedOptions).map(o=>o.value));
+      const chosen=selectedModelIds;
       select.innerHTML="";
       const brandById=new Map(brands.map(b=>[b.id,b.name]));
       models.forEach(m=>{
@@ -286,12 +287,14 @@
       $("isActive").checked=product?!!product.is_active:true;
       $("modelSearch").value="";
       currentProductLinks=[];
+      selectedModelIds=new Set();
       if(product){
         const {data,error}=await db.from("product_compatibility").select("model_id").eq("product_id",product.id);
         if(error){setStatus("Could not load compatible models: "+errorText(error),"error");return;}
         currentProductLinks=(data||[]).map(x=>x.model_id);
       }
-      renderModelOptions(currentProductLinks);
+      selectedModelIds=new Set(currentProductLinks);
+      renderModelOptions();
       $("productEditor").classList.remove("hidden");
       $("productEditor").scrollIntoView({behavior:"smooth",block:"start"});
     }
@@ -309,7 +312,7 @@
         updated_at:new Date().toISOString()
       };
       if(!payload.name||!payload.product_type)return;
-      const selected=Array.from($("compatibleModels").selectedOptions).map(o=>o.value);
+      const selected=Array.from(selectedModelIds);
       const saveBtn=$("saveProductBtn");saveBtn.disabled=true;saveBtn.textContent="Saving…";
       try{
         let productId=id;
@@ -376,6 +379,11 @@
     $("modelForm").addEventListener("submit",addModel);
     $("productSearch").addEventListener("input",renderProducts);
     $("visibilityFilter").addEventListener("change",renderProducts);
+    $("compatibleModels").addEventListener("change",()=>{
+      const visibleIds=Array.from($("compatibleModels").options).map(o=>o.value);
+      visibleIds.forEach(id=>selectedModelIds.delete(id));
+      Array.from($("compatibleModels").selectedOptions).forEach(o=>selectedModelIds.add(o.value));
+    });
     $("modelSearch").addEventListener("input",()=>renderModelOptions());
     db.auth.getSession().then(({data})=>startSession(data.session)).catch(error=>showLogin(errorText(error)));
     db.auth.onAuthStateChange((event,session)=>{if(event==="SIGNED_OUT")showLogin();});
