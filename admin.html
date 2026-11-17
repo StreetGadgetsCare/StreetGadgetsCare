@@ -133,7 +133,14 @@
         <input id="productId" type="hidden">
         <div class="form-grid">
           <div class="field"><label for="productName">Product name *</label><input id="productName" required maxlength="180" placeholder="e.g. Samsung A14 4G Back Cover"></div>
-          <div class="field"><label for="productType">Product type *</label><input id="productType" required maxlength="80" placeholder="e.g. back cover, screen, battery"></div>
+          <div class="field">
+  <label for="productType">Product type *</label>
+  <select id="productType" required>
+    <option value="">Choose product type</option>
+    <option value="spare_part">Spare Part</option>
+    <option value="shop_product">Shop Product</option>
+  </select>
+</div>
           <div class="field full"><label for="description">Description</label><textarea id="description" maxlength="1500" placeholder="Add useful product details…"></textarea></div>
           <div class="field"><label for="imagePath">Image filename / path</label><input id="imagePath" maxlength="500" placeholder="e.g. Samsung-A14-4g-Back-Cover-Replacement-jpg"><span class="hint">For existing GitHub images, enter the exact filename including its extension if it has one. Keep the image in the website repository root.</span></div>
           <div class="field"><label for="categoryId">Category</label><select id="categoryId"><option value="">No category</option></select></div>
