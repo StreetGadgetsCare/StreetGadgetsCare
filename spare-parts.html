@@ -789,6 +789,16 @@
         transition:none!important;
       }
     }
+  
+    .model-empty {
+      padding:16px 18px;
+      border:1px dashed var(--border);
+      border-radius:12px;
+      background:var(--white);
+      color:var(--muted);
+      font-size:13px;
+    }
+
   </style>
 </head>
 
@@ -884,6 +894,8 @@
 </footer>
 
 <script>
+
+
 const WHATSAPP_BASE = "https://wa.me/254114259961?text=";
 
 const iphoneParts = [
@@ -1127,13 +1139,14 @@ const brandOrder = [
 ];
 
 const brandMap = new Map(brandOrder.map(name => [name,[]]));
+const supabaseModelsByBrand = new Map();
 
 function addPart(brand,model,type,image) {
   if (!brandMap.has(brand)) {
     brandMap.set(brand,[]);
   }
 
-  brandMap.get(brand).push({model,type,image});
+  brandMap.get(brand).push({model,type,image,product:null,variants:[]});
 }
 
 iphoneParts.forEach(([model,type,image]) => {
@@ -1234,72 +1247,91 @@ function whatsappLink(message) {
 /* CREATE PART CARD */
 
 function createPartCard(item) {
+  const product = item.product || {};
+  const variants = item.variants || [];
   const card = document.createElement("article");
   card.className = "part-card";
   card.dataset.model = item.model.toLowerCase();
   card.dataset.type = item.type.toLowerCase();
-  card.dataset.search = `${item.model} ${item.type}`.toLowerCase();
+  card.dataset.search = [item.model,item.type,product.name || "",product.description || ""].join(" ").toLowerCase();
 
   const imageWrap = document.createElement("div");
   imageWrap.className = "part-image";
-
   const img = document.createElement("img");
-  img.src = item.image;
-  img.alt = `${item.model} ${item.type} spare part`;
+  img.src = product.image_path || item.image;
+  img.alt = item.model + " " + item.type + " spare part";
   img.loading = "lazy";
   img.decoding = "async";
-
   img.onerror = function() {
     this.style.display = "none";
-
     const fallback = document.createElement("div");
     fallback.className = "empty-image";
-    fallback.textContent = "Image file: " + item.image;
-
+    fallback.textContent = "Image file: " + (product.image_path || item.image);
     imageWrap.appendChild(fallback);
   };
-
   imageWrap.appendChild(img);
 
   const info = document.createElement("div");
   info.className = "part-info";
-
   const label = document.createElement("span");
   label.className = "part-label";
   label.textContent = item.type;
 
   const title = document.createElement("h3");
-  title.textContent = item.model + " " + item.type;
+  title.textContent = product.name || (item.model + " " + item.type);
 
   const description = document.createElement("p");
   description.className = "part-description";
-  description.textContent = getDescription(item.model,item.type);
+  description.textContent = product.description || getDescription(item.model,item.type);
 
   const meta = document.createElement("div");
   meta.className = "part-meta";
 
   const quality = document.createElement("span");
-  quality.innerHTML = "<strong>Quality options:</strong> Enquire";
+  const qualityStrong = document.createElement("strong");
+  qualityStrong.textContent = "Quality options: ";
+  quality.appendChild(qualityStrong);
+  const qualityLabels = [...new Set(variants.map(v => String(v.quality_label || "").trim()).filter(Boolean))];
+  quality.appendChild(document.createTextNode(qualityLabels.length ? qualityLabels.join(", ") : "Enquire"));
 
   const price = document.createElement("span");
-  price.innerHTML = "<strong>Price:</strong> On enquiry";
+  const priceStrong = document.createElement("strong");
+  priceStrong.textContent = "Price: ";
+  price.appendChild(priceStrong);
+  const pricedVariants = variants.filter(v => v.price !== null && v.price !== undefined && v.price !== "");
+  if (pricedVariants.length) {
+    const priceLines = pricedVariants.map(v => {
+      const q = String(v.quality_label || "").trim();
+      const amount = Number(v.price);
+      const formatted = Number.isFinite(amount) ? "KSh " + amount.toLocaleString("en-KE",{maximumFractionDigits:2}) : "On enquiry";
+      return (q ? q + ": " : "") + formatted;
+    });
+    price.appendChild(document.createTextNode([...new Set(priceLines)].join(" | ")));
+  } else {
+    price.appendChild(document.createTextNode("On enquiry"));
+  }
 
-  meta.append(quality,price);
+  const availability = document.createElement("span");
+  const availabilityStrong = document.createElement("strong");
+  availabilityStrong.textContent = "Availability: ";
+  availability.appendChild(availabilityStrong);
+  if (!variants.length) {
+    availability.appendChild(document.createTextNode("Contact to confirm"));
+  } else {
+    const stock = variants.reduce((sum,v) => sum + Math.max(0,Number(v.stock_quantity) || 0),0);
+    availability.appendChild(document.createTextNode(stock > 0 ? "In stock" : "Currently unavailable"));
+  }
+  meta.append(quality,price,availability);
 
   const button = document.createElement("a");
   button.className = "btn";
-
-  button.href = whatsappLink(
-    `Hello Street Gadgets Care, I am interested in the ${item.type} for ${item.model}. Please confirm compatibility, available quality options and the total replacement price.`
-  );
-
+  button.href = whatsappLink("Hello Street Gadgets Care, I am interested in the " + item.type + " for " + item.model + ". Please confirm compatibility, available quality options and the total replacement price.");
   button.target = "_blank";
   button.rel = "noopener noreferrer";
   button.textContent = "Enquire on WhatsApp";
 
   info.append(label,title,description,meta,button);
   card.append(imageWrap,info);
-
   return card;
 }
 
@@ -1388,6 +1420,8 @@ function renderCatalogue() {
 
   const nav = document.getElementById("brandNav");
   const root = document.getElementById("brandCatalogues");
+  nav.replaceChildren();
+  root.replaceChildren();
 
   brandOrder.forEach((brand,index) => {
 
@@ -1409,7 +1443,9 @@ function renderCatalogue() {
       return true;
     });
 
-    if (!parts.length) {
+    const databaseModels = supabaseModelsByBrand.get(brand) || new Set();
+
+    if (!parts.length && !databaseModels.size) {
       return;
     }
 
@@ -1457,6 +1493,13 @@ function renderCatalogue() {
       }
 
       modelGroups.get(item.model).push(item);
+    });
+
+    /* Include database models even when no spare parts are linked yet. */
+    databaseModels.forEach(modelName => {
+      const seriesName = getSeriesName(brand,modelName);
+      if (!seriesGroups.has(seriesName)) seriesGroups.set(seriesName,new Map());
+      if (!seriesGroups.get(seriesName).has(modelName)) seriesGroups.get(seriesName).set(modelName,[]);
     });
 
     /* Create horizontal series navigation. */
@@ -1549,10 +1592,16 @@ function renderCatalogue() {
         const grid = document.createElement("div");
         grid.className = "parts-grid";
 
-        modelParts.forEach(item => {
-          grid.appendChild(createPartCard(item));
-        });
+        if (modelParts.length) {
+          modelParts.forEach(item => grid.appendChild(createPartCard(item)));
+        } else {
+          const empty = document.createElement("p");
+          empty.className = "model-empty";
+          empty.textContent = "No spare parts are currently listed for this model. Contact us to check availability.";
+          grid.appendChild(empty);
+        }
 
+        modelSection.dataset.model = modelName.toLowerCase();
         modelSection.append(modelHeading,grid);
         seriesSection.appendChild(modelSection);
       });
@@ -1572,6 +1621,165 @@ function renderCatalogue() {
 
 renderCatalogue();
 
+
+/* Supabase enriches matching GitHub listings and adds database-only items/models. */
+const SUPABASE_URL = "https://adipqznxhpwnilsmjhiq.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_K0STbvDLc39F_KA9Ja6q3w_JU0dpJGS";
+const SUPABASE_PAGE_SIZE = 1000;
+
+function displayBrandName(name) {
+  const value = String(name || "").trim();
+  if (/^apple$/i.test(value) || /^iphone$/i.test(value)) return "iPhone";
+  if (/^(redmi|xiaomi|redmi\s*\/\s*xiaomi)$/i.test(value)) return "Redmi / Xiaomi";
+  if (/^google\s*pixel$/i.test(value)) return "Google Pixel";
+  if (/^itel$/i.test(value)) return "itel";
+  return value;
+}
+
+function normaliseDatabasePartType(product) {
+  const text = (String(product.product_type || "") + " " + String(product.name || "")).toLowerCase();
+  if (/screen|display|lcd|amoled/.test(text)) return "Screen replacement";
+  if (/battery/.test(text)) return "Battery replacement";
+  if (/charg(e|ing)|usb.?c|charging.?port/.test(text)) return "Charging system replacement";
+  if (/back.?glass/.test(text)) return "Back glass cover replacement";
+  if (/back.?cover|rear.?cover/.test(text)) return "Back cover replacement";
+  return String(product.product_type || "Spare part").replace(/[_-]+/g," ").replace(/\s+/g," ").trim().replace(/\b\w/g,letter => letter.toUpperCase());
+}
+
+function normaliseExistingPartType(type) {
+  const value = String(type || "").toLowerCase();
+  if (/screen|display|lcd|amoled/.test(value)) return "Screen replacement";
+  if (/battery/.test(value)) return "Battery replacement";
+  if (/charg(e|ing)|usb.?c/.test(value)) return "Charging system replacement";
+  if (/back.?glass/.test(value)) return "Back glass cover replacement";
+  if (/back.?cover|rear.?cover/.test(value)) return "Back cover replacement";
+  return String(type || "").trim();
+}
+
+async function fetchSupabaseRows(table,query) {
+  const rows = [];
+  let offset = 0;
+  while (true) {
+    const params = new URLSearchParams(query);
+    params.set("limit",String(SUPABASE_PAGE_SIZE));
+    params.set("offset",String(offset));
+    const response = await fetch(SUPABASE_URL + "/rest/v1/" + table + "?" + params.toString(),{
+      method:"GET",
+      headers:{
+        "apikey":SUPABASE_PUBLISHABLE_KEY,
+        "Authorization":"Bearer " + SUPABASE_PUBLISHABLE_KEY,
+        "Accept":"application/json"
+      }
+    });
+    if (!response.ok) {
+      const detail = await response.text();
+      throw new Error(table + " returned " + response.status + ": " + detail.slice(0,220));
+    }
+    const batch = await response.json();
+    if (!Array.isArray(batch)) throw new Error("Unexpected " + table + " response.");
+    rows.push(...batch);
+    if (batch.length < SUPABASE_PAGE_SIZE) break;
+    offset += SUPABASE_PAGE_SIZE;
+  }
+  return rows;
+}
+
+async function loadSupabaseCatalogue() {
+  const status = document.getElementById("searchStatus");
+  status.textContent = "Showing the existing catalogue while checking for updated product details.";
+
+  try {
+    const [brands,models,products,compatibility] = await Promise.all([
+      fetchSupabaseRows("device_brands",{select:"id,name",order:"name.asc"}),
+      fetchSupabaseRows("device_models",{select:"id,brand_id,model_name",order:"model_name.asc"}),
+      fetchSupabaseRows("products",{select:"id,product_type,name,description,image_path,is_active",is_active:"eq.true",order:"name.asc"}),
+      fetchSupabaseRows("product_compatibility",{select:"product_id,model_id"})
+    ]);
+
+    let variants = [];
+    let variantsFailed = false;
+    try {
+      variants = await fetchSupabaseRows("product_variants",{select:"id,product_id,quality_label,price,stock_quantity,is_active",is_active:"eq.true"});
+    } catch (error) {
+      variantsFailed = true;
+      console.warn("Product variants could not be loaded:",error);
+    }
+
+    const brandNames = new Map(brands.map(brand => [brand.id,displayBrandName(brand.name)]));
+    const modelById = new Map(models.map(model => [model.id,model]));
+    const productById = new Map(products.map(product => [product.id,product]));
+    const variantsByProduct = new Map();
+
+    variants.forEach(variant => {
+      if (!variantsByProduct.has(variant.product_id)) variantsByProduct.set(variant.product_id,[]);
+      variantsByProduct.get(variant.product_id).push(variant);
+    });
+
+    supabaseModelsByBrand.clear();
+    models.forEach(model => {
+      const brand = brandNames.get(model.brand_id);
+      const modelName = String(model.model_name || "").trim();
+      if (!brand || !modelName) return;
+      if (!brandOrder.includes(brand)) brandOrder.push(brand);
+      if (!brandMap.has(brand)) brandMap.set(brand,[]);
+      if (!supabaseModelsByBrand.has(brand)) supabaseModelsByBrand.set(brand,new Set());
+      supabaseModelsByBrand.get(brand).add(modelName);
+    });
+
+    let matchedStaticItems = 0;
+    let addedDatabaseItems = 0;
+
+    compatibility.forEach(link => {
+      const product = productById.get(link.product_id);
+      const model = modelById.get(link.model_id);
+      if (!product || !model) return;
+
+      const brand = brandNames.get(model.brand_id);
+      const modelName = String(model.model_name || "").trim();
+      if (!brand || !modelName) return;
+
+      const type = normaliseDatabasePartType(product);
+      const existing = (brandMap.get(brand) || []).find(item =>
+        item.model.toLowerCase() === modelName.toLowerCase() &&
+        normaliseExistingPartType(item.type).toLowerCase() === type.toLowerCase()
+      );
+
+      if (existing) {
+        existing.product = product;
+        existing.variants = variantsByProduct.get(product.id) || [];
+        if (product.image_path) existing.image = product.image_path;
+        matchedStaticItems++;
+      } else {
+        addPart(brand,modelName,type,product.image_path || "");
+        const added = brandMap.get(brand)[brandMap.get(brand).length - 1];
+        added.product = product;
+        added.variants = variantsByProduct.get(product.id) || [];
+        addedDatabaseItems++;
+      }
+    });
+
+    renderCatalogue();
+    filterCatalogue();
+
+    const productLinks = compatibility.filter(link => productById.has(link.product_id)).length;
+    status.textContent = "Supabase checked: " + models.length + " database phone models and " +
+      productLinks + " product-model links. All original GitHub catalogue entries remain available." +
+      (variantsFailed ? " Prices and stock could not be loaded; please enquire." : "");
+
+    console.info("Supabase catalogue sync",{
+      databaseModels:models.length,
+      databaseProducts:products.length,
+      compatibilityLinks:productLinks,
+      matchedStaticItems,
+      addedDatabaseItems,
+      variants:variants.length
+    });
+  } catch (error) {
+    console.error("Supabase catalogue update failed:",error);
+    status.textContent = "Showing the existing catalogue. The latest database details could not be loaded; refresh to try again.";
+  }
+}
+
 /* LIVE CATALOGUE SEARCH */
 
 const partSearch = document.getElementById("partSearch");
@@ -1585,21 +1793,22 @@ function filterCatalogue() {
   let visibleCount = 0;
   let visibleBrands = 0;
 
-  cards.forEach(card => {
-    const searchable = [
-      card.dataset.search,
-      card.closest(".brand-section")?.querySelector(".brand-heading h2")?.textContent || ""
-    ].join(" ").toLowerCase();
-
-    const match = !query || searchable.includes(query);
-    card.hidden = !match;
-
-    if (match) visibleCount++;
-  });
-
   document.querySelectorAll(".model-section").forEach(section => {
-    const hasVisible = section.querySelector(".part-card:not([hidden])");
-    section.hidden = !hasVisible;
+    const brandName = section.closest(".brand-section")?.querySelector(".brand-heading h2")?.textContent || "";
+    const modelMatch = !query || (section.dataset.model + " " + brandName.toLowerCase()).includes(query);
+    const cardsInModel = [...section.querySelectorAll(".part-card")];
+    let matchingCards = 0;
+
+    cardsInModel.forEach(card => {
+      const searchable = [card.dataset.search,brandName].join(" ").toLowerCase();
+      const match = !query || modelMatch || searchable.includes(query);
+      card.hidden = !match;
+      if (match) matchingCards++;
+    });
+
+    const modelVisible = !query || modelMatch || matchingCards > 0;
+    section.hidden = !modelVisible;
+    if (modelVisible) visibleCount += modelMatch ? cardsInModel.length : matchingCards;
   });
 
   document.querySelectorAll(".series-section").forEach(section => {
@@ -1625,10 +1834,12 @@ function filterCatalogue() {
   });
 
   clearSearch.hidden = !query;
-  noResults.style.display = query && visibleCount === 0 ? "block" : "none";
+  noResults.style.display = query && visibleBrands === 0 ? "block" : "none";
 
   if (!query) {
     searchStatus.textContent = "Browse all available listings below.";
+  } else if (visibleCount === 0 && visibleBrands > 0) {
+    searchStatus.textContent = "Phone model found. No spare parts are currently listed for it; contact us to check availability.";
   } else {
     searchStatus.textContent =
       `${visibleCount} matching ${visibleCount === 1 ? "part" : "parts"} found across ${visibleBrands} ${visibleBrands === 1 ? "brand" : "brands"}.`;
@@ -1690,6 +1901,10 @@ document.addEventListener("keydown",event => {
     );
   }
 });
+
+loadSupabaseCatalogue();
+
+
 </script>
 
 </body>
