@@ -895,6 +895,7 @@
 
 <script>
 
+
 const WHATSAPP_BASE = "https://wa.me/254114259961?text=";
 
 const iphoneParts = [
@@ -1442,7 +1443,9 @@ function renderCatalogue() {
       return true;
     });
 
-    if (!parts.length) {
+    const databaseModels = supabaseModelsByBrand.get(brand) || new Set();
+
+    if (!parts.length && !databaseModels.size) {
       return;
     }
 
@@ -1493,7 +1496,6 @@ function renderCatalogue() {
     });
 
     /* Include database models even when no spare parts are linked yet. */
-    const databaseModels = supabaseModelsByBrand.get(brand) || new Set();
     databaseModels.forEach(modelName => {
       const seriesName = getSeriesName(brand,modelName);
       if (!seriesGroups.has(seriesName)) seriesGroups.set(seriesName,new Map());
@@ -1677,7 +1679,7 @@ async function fetchSupabaseRows(table,query) {
     if (!Array.isArray(batch)) throw new Error("Unexpected " + table + " response.");
     rows.push(...batch);
     if (batch.length < SUPABASE_PAGE_SIZE) break;
-    offset += PAGE_SIZE;
+    offset += SUPABASE_PAGE_SIZE;
   }
   return rows;
 }
@@ -1832,10 +1834,12 @@ function filterCatalogue() {
   });
 
   clearSearch.hidden = !query;
-  noResults.style.display = query && visibleCount === 0 ? "block" : "none";
+  noResults.style.display = query && visibleBrands === 0 ? "block" : "none";
 
   if (!query) {
     searchStatus.textContent = "Browse all available listings below.";
+  } else if (visibleCount === 0 && visibleBrands > 0) {
+    searchStatus.textContent = "Phone model found. No spare parts are currently listed for it; contact us to check availability.";
   } else {
     searchStatus.textContent =
       `${visibleCount} matching ${visibleCount === 1 ? "part" : "parts"} found across ${visibleBrands} ${visibleBrands === 1 ? "brand" : "brands"}.`;
@@ -1899,6 +1903,7 @@ document.addEventListener("keydown",event => {
 });
 
 loadSupabaseCatalogue();
+
 
 </script>
 
