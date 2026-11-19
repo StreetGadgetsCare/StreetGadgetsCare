@@ -293,7 +293,8 @@
         details.append(name,meta);
         const actions=document.createElement("div");actions.className="product-actions";
         const edit=document.createElement("button");edit.type="button";edit.className="btn secondary";edit.textContent="Edit";edit.addEventListener("click",()=>openEditor(product));
-        actions.append(edit);row.append(img,details,actions);fragment.append(row);
+        const del=document.createElement("button");del.type="button";del.className="btn danger";del.textContent="Delete";del.addEventListener("click",()=>deleteProduct(product,del));
+        actions.append(edit,del);row.append(img,details,actions);fragment.append(row);
       });
       root.append(fragment);
     }
@@ -433,6 +434,35 @@
         closeEditor();await loadAll();setStatus("Product saved successfully.","good");
       }catch(error){setStatus("Save failed: "+errorText(error),"error");}
       finally{saveBtn.disabled=false;saveBtn.textContent="Save product";}
+    }
+    async function deleteProduct(product,button){
+      const confirmed=window.confirm("Permanently delete \""+product.name+"\"? This will remove the product and its phone-model compatibility links. This cannot be undone.");
+      if(!confirmed)return;
+      button.disabled=true;button.textContent="Deleting…";
+      let linkedModelIds=[];
+      try{
+        const linksResult=await db.from("product_compatibility").select("model_id").eq("product_id",product.id);
+        if(linksResult.error)throw linksResult.error;
+        linkedModelIds=(linksResult.data||[]).map(row=>row.model_id);
+        if(linkedModelIds.length){
+          const {error}=await db.from("product_compatibility").delete().eq("product_id",product.id);
+          if(error)throw error;
+        }
+        const {error:deleteError}=await db.from("products").delete().eq("id",product.id);
+        if(deleteError){
+          if(linkedModelIds.length){
+            const restoreRows=linkedModelIds.map(model_id=>({product_id:product.id,model_id}));
+            const {error:restoreError}=await db.from("product_compatibility").insert(restoreRows);
+            if(restoreError)throw new Error(deleteError.message+" Compatibility restoration also failed: "+restoreError.message);
+          }
+          throw deleteError;
+        }
+        await loadAll();
+        setStatus("Product permanently deleted.","good");
+      }catch(error){
+        setStatus("Could not delete product: "+errorText(error),"error");
+        button.disabled=false;button.textContent="Delete";
+      }
     }
     async function addBrand(event){
       event.preventDefault();const name=$("newBrandName").value.trim();if(!name)return;
