@@ -94,6 +94,17 @@
     .module-card .module-state.planned{color:#76520a;background:#fff5dc}
     .module-card button{margin-top:4px}
     .module-view{min-width:0}
+    .repair-list{display:grid;gap:10px}
+    .repair-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid var(--border);border-radius:10px;padding:13px}
+    .repair-title{font-size:13px;font-weight:800;color:var(--navy)}
+    .repair-meta{font-size:11px;color:var(--muted);margin-top:3px}
+    .repair-status{display:inline-block;border-radius:20px;padding:4px 9px;background:#eaf8ef;color:#17683a;font-size:10px;font-weight:800;margin-top:7px}
+    .repair-status.awaiting_parts,.repair-status.awaiting_customer_approval{background:#fff5dc;color:#76520a}
+    .repair-status.cancelled{background:#fff0f1;color:#a32d3a}
+    .repair-status.received,.repair-status.diagnosing{background:#eaf3ff;color:#24558a}
+    .repair-status.ready_for_collection{background:#eaf8ef;color:#17683a}
+    .repair-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+    @media(max-width:720px){.repair-form-grid{grid-template-columns:1fr}.repair-row{grid-template-columns:1fr}.repair-row .btn{justify-self:start}}
     @media(max-width:720px){.overview-grid{grid-template-columns:1fr}.module-nav{margin-bottom:15px}.module-nav button{padding:9px 11px}}
     @media(max-width:720px){.wrap{margin:20px auto;padding:0 13px 35px}.topbar{padding:11px 13px}.brand img{width:43px;height:43px}.top-actions a{display:none}.intro{align-items:flex-start;flex-direction:column}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.grid2,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.panel{padding:15px}.product{grid-template-columns:48px minmax(0,1fr);gap:10px}.product img{width:48px;height:48px}.product-actions{grid-column:2;justify-content:flex-start}.product-actions button{padding:7px 10px}.status{max-width:none}}
   </style>
@@ -225,6 +236,54 @@
       </div>
     </section>
     </section>
+
+    <section id="moduleRepairs" class="module-view hidden">
+      <div class="intro">
+        <div><h1>Repairs management</h1><p class="sub">Register repair jobs and follow each device from intake to collection.</p></div>
+        <div id="repairStatus" class="status" role="status">Repairs workspace</div>
+      </div>
+      <section class="stats">
+        <div class="stat"><strong id="repairTotal">—</strong><span>TOTAL REPAIRS</span></div>
+        <div class="stat"><strong id="repairInProgress">—</strong><span>IN PROGRESS</span></div>
+        <div class="stat"><strong id="repairReady">—</strong><span>READY FOR COLLECTION</span></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><h2>Repair jobs</h2><p class="muted">Search by repair reference, customer, phone or device.</p></div><button id="newRepairBtn" class="btn" type="button">+ New repair</button></div>
+        <div class="toolbar">
+          <input id="repairSearch" type="search" placeholder="Search repairs…">
+          <select id="repairFilter" style="max-width:220px">
+            <option value="all">All repair statuses</option>
+            <option value="received">Received</option><option value="diagnosing">Diagnosing</option>
+            <option value="awaiting_customer_approval">Awaiting customer approval</option><option value="awaiting_parts">Awaiting parts</option>
+            <option value="in_progress">In progress</option><option value="ready_for_collection">Ready for collection</option>
+            <option value="collected">Collected</option><option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div id="repairList" class="repair-list"><div class="empty">Repair records will appear here.</div></div>
+      </section>
+      <section id="repairEditor" class="panel hidden">
+        <div class="panel-head"><div><h2 id="repairEditorTitle">Register repair</h2><p class="muted">Record the customer's details and the condition reported at intake.</p></div><button id="closeRepairEditorBtn" class="btn secondary" type="button">Close</button></div>
+        <form id="repairForm">
+          <input id="repairId" type="hidden">
+          <div class="repair-form-grid">
+            <div class="field"><label for="repairCustomerName">Customer name *</label><input id="repairCustomerName" maxlength="140" required></div>
+            <div class="field"><label for="repairCustomerPhone">Customer phone *</label><input id="repairCustomerPhone" type="tel" maxlength="30" required placeholder="e.g. 07XX XXX XXX"></div>
+            <div class="field"><label for="repairCustomerEmail">Email (optional)</label><input id="repairCustomerEmail" type="email" maxlength="180"></div>
+            <div class="field"><label for="repairDeviceType">Device type *</label><select id="repairDeviceType" required><option value="">Choose device type</option><option>Phone</option><option>Tablet</option><option>Laptop</option><option>Desktop</option><option>Other</option></select></div>
+            <div class="field"><label for="repairBrand">Brand *</label><input id="repairBrand" maxlength="80" required placeholder="e.g. Samsung, HP, Apple"></div>
+            <div class="field"><label for="repairModel">Model *</label><input id="repairModel" maxlength="120" required placeholder="e.g. Galaxy A14, EliteBook 840 G5"></div>
+            <div class="field"><label for="repairIdentifier">Serial number / IMEI (optional)</label><input id="repairIdentifier" maxlength="100"></div>
+            <div class="field"><label for="repairTechnician">Assigned technician (optional)</label><input id="repairTechnician" maxlength="140"></div>
+            <div class="field full"><label for="repairIssue">Customer-reported problem *</label><textarea id="repairIssue" maxlength="3000" required placeholder="Describe the issue as reported by the customer…"></textarea></div>
+            <div class="field full"><label for="repairDiagnosis">Technician diagnosis (optional)</label><textarea id="repairDiagnosis" maxlength="3000" placeholder="Add findings after diagnosis…"></textarea></div>
+            <div class="field"><label for="repairQuote">Quotation (KSh, optional)</label><input id="repairQuote" type="number" min="0" step="1" placeholder="Leave blank if not yet quoted"></div>
+            <div class="field"><label for="repairCurrentStatus">Repair status</label><select id="repairCurrentStatus"><option value="received">Received</option><option value="diagnosing">Diagnosing</option><option value="awaiting_customer_approval">Awaiting customer approval</option><option value="awaiting_parts">Awaiting parts</option><option value="in_progress">In progress</option><option value="ready_for_collection">Ready for collection</option><option value="collected">Collected</option><option value="cancelled">Cancelled</option></select></div>
+            <div class="field full"><label for="repairInternalNotes">Internal notes (optional)</label><textarea id="repairInternalNotes" maxlength="3000" placeholder="Notes for your team…"></textarea></div>
+          </div>
+          <div class="row-end"><button id="cancelRepairBtn" class="btn secondary" type="button">Cancel</button><button id="saveRepairBtn" class="btn" type="submit">Save repair</button></div>
+        </form>
+      </section>
+    </section>
     <p class="muted" style="text-align:center">Street Gadgets Care · Admin dashboard</p>
   </main>
 
@@ -242,10 +301,14 @@
     let currentProductLinks = [];
     let selectedModelIds = new Set();
     let imagePreviewObjectUrl = null;
+    let repairs = [];
+    const REPAIR_STATUSES = ["received","diagnosing","awaiting_customer_approval","awaiting_parts","in_progress","ready_for_collection","collected","cancelled"];
+    const REPAIR_STATUS_LABELS = {received:"Received",diagnosing:"Diagnosing",awaiting_customer_approval:"Awaiting customer approval",awaiting_parts:"Awaiting parts",in_progress:"In progress",ready_for_collection:"Ready for collection",collected:"Collected",cancelled:"Cancelled"};
 
     function switchModule(moduleName) {
       const validModules = ["overview","products","repairs","customers","orders","inventory","website","staff"];
       if (!validModules.includes(moduleName)) return;
+      if(moduleName==="repairs"&&repairs.length===0) loadRepairs().catch(error=>setRepairStatus("Could not load repairs: "+errorText(error),"error"));
       document.querySelectorAll(".module-view").forEach(view => {
         view.classList.toggle("hidden", view.id !== "module" + moduleName.charAt(0).toUpperCase() + moduleName.slice(1));
       });
@@ -258,6 +321,106 @@
       button.addEventListener("click", () => switchModule(button.dataset.module));
     });
 
+    function setRepairStatus(message,kind="") {
+      const el=$("repairStatus");el.textContent=message;el.className="status"+(kind?" "+kind:"");
+    }
+    function repairReference(id) {
+      return "SGC-"+String(id||"").replace(/-/g,"").slice(0,8).toUpperCase();
+    }
+    function renderRepairs() {
+      const query=$("repairSearch").value.trim().toLowerCase();
+      const filter=$("repairFilter").value;
+      const filtered=repairs.filter(r=>{
+        const haystack=[repairReference(r.id),r.customer?.full_name,r.customer?.phone,r.device_type,r.brand,r.model].join(" ").toLowerCase();
+        return (!query||haystack.includes(query))&&(filter==="all"||r.status===filter);
+      });
+      $("repairTotal").textContent=repairs.length;
+      $("repairInProgress").textContent=repairs.filter(r=>["diagnosing","awaiting_customer_approval","awaiting_parts","in_progress"].includes(r.status)).length;
+      $("repairReady").textContent=repairs.filter(r=>r.status==="ready_for_collection").length;
+      const root=$("repairList");root.innerHTML="";
+      if(!filtered.length){root.innerHTML='<div class="empty">No matching repair jobs found.</div>';return;}
+      const fragment=document.createDocumentFragment();
+      filtered.forEach(r=>{
+        const row=document.createElement("article");row.className="repair-row";
+        const info=document.createElement("div");
+        const title=document.createElement("div");title.className="repair-title";title.textContent=repairReference(r.id)+" · "+(r.device_type||"Device")+" — "+(r.brand||"")+" "+(r.model||"");
+        const meta=document.createElement("div");meta.className="repair-meta";meta.textContent=(r.customer?.full_name||"Customer")+" · "+(r.customer?.phone||"No phone")+" · "+new Date(r.created_at).toLocaleDateString();
+        const status=document.createElement("span");status.className="repair-status "+r.status;status.textContent=REPAIR_STATUS_LABELS[r.status]||r.status;
+        info.append(title,meta,status);
+        const edit=document.createElement("button");edit.type="button";edit.className="btn secondary";edit.textContent="View / update";edit.addEventListener("click",()=>openRepairEditor(r));
+        row.append(info,edit);fragment.append(row);
+      });
+      root.append(fragment);
+    }
+    async function loadRepairs() {
+      setRepairStatus("Loading repair records…");
+      const {data,error}=await db.from("repair_jobs").select("id,customer_id,device_type,brand,model,serial_or_imei,reported_issue,diagnosis,quoted_amount,status,assigned_technician,internal_notes,created_at,updated_at,customers(id,full_name,phone,email)").order("created_at",{ascending:false});
+      if(error)throw error;
+      repairs=(data||[]).map(r=>({...r,customer:r.customers||null}));
+      renderRepairs();
+      setRepairStatus("Repairs connected. "+repairs.length+" record(s) loaded.","good");
+    }
+    function openRepairEditor(repair=null) {
+      $("repairForm").reset();
+      $("repairId").value=repair?.id||"";
+      $("repairEditorTitle").textContent=repair?"Update repair · "+repairReference(repair.id):"Register repair";
+      $("repairCustomerName").value=repair?.customer?.full_name||"";
+      $("repairCustomerPhone").value=repair?.customer?.phone||"";
+      $("repairCustomerEmail").value=repair?.customer?.email||"";
+      $("repairDeviceType").value=repair?.device_type||"";
+      $("repairBrand").value=repair?.brand||"";
+      $("repairModel").value=repair?.model||"";
+      $("repairIdentifier").value=repair?.serial_or_imei||"";
+      $("repairTechnician").value=repair?.assigned_technician||"";
+      $("repairIssue").value=repair?.reported_issue||"";
+      $("repairDiagnosis").value=repair?.diagnosis||"";
+      $("repairQuote").value=repair?.quoted_amount??"";
+      $("repairCurrentStatus").value=repair?.status||"received";
+      $("repairInternalNotes").value=repair?.internal_notes||"";
+      $("repairEditor").classList.remove("hidden");
+      $("repairEditor").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+    function closeRepairEditor(){$("repairEditor").classList.add("hidden");}
+    async function saveRepair(event) {
+      event.preventDefault();
+      const id=$("repairId").value;
+      const phone=$("repairCustomerPhone").value.trim();
+      const name=$("repairCustomerName").value.trim();
+      if(!name||!phone){setRepairStatus("Customer name and phone are required.","error");return;}
+      const amount=$("repairQuote").value.trim();
+      if(amount!==""&&(!Number.isFinite(Number(amount))||Number(amount)<0)){setRepairStatus("Enter a valid non-negative quotation.","error");return;}
+      const button=$("saveRepairBtn");button.disabled=true;button.textContent="Saving…";
+      try{
+        const customerPayload={full_name:name,phone,email:$("repairCustomerEmail").value.trim()||null};
+        const {data:customer,error:customerError}=await db.from("customers").upsert(customerPayload,{onConflict:"phone"}).select("id").single();
+        if(customerError)throw customerError;
+        const payload={
+          customer_id:customer.id,device_type:$("repairDeviceType").value,brand:$("repairBrand").value.trim(),
+          model:$("repairModel").value.trim(),serial_or_imei:$("repairIdentifier").value.trim()||null,
+          reported_issue:$("repairIssue").value.trim(),diagnosis:$("repairDiagnosis").value.trim()||null,
+          quoted_amount:amount===""?null:Number(amount),status:$("repairCurrentStatus").value,
+          assigned_technician:$("repairTechnician").value.trim()||null,
+          internal_notes:$("repairInternalNotes").value.trim()||null,updated_at:new Date().toISOString()
+        };
+        let saved;
+        if(id){
+          const previous=repairs.find(r=>r.id===id);
+          const {data,error}=await db.from("repair_jobs").update(payload).eq("id",id).select("id,status").single();
+          if(error)throw error;saved=data;
+          if(previous&&previous.status!==saved.status){
+            const {error:historyError}=await db.from("repair_status_history").insert({repair_id:id,old_status:previous.status,new_status:saved.status,notes:"Status updated from admin dashboard"});
+            if(historyError)throw historyError;
+          }
+        }else{
+          const {data,error}=await db.from("repair_jobs").insert(payload).select("id,status").single();
+          if(error)throw error;saved=data;
+          const {error:historyError}=await db.from("repair_status_history").insert({repair_id:saved.id,old_status:null,new_status:saved.status,notes:"Repair registered"});
+          if(historyError)throw historyError;
+        }
+        closeRepairEditor();await loadRepairs();setRepairStatus("Repair "+repairReference(saved.id)+" saved successfully.","good");
+      }catch(error){setRepairStatus("Could not save repair: "+errorText(error),"error");}
+      finally{button.disabled=false;button.textContent="Save repair";}
+    }
     function setStatus(message,kind="") {
       const el=$("status");
       el.textContent=message;
@@ -537,6 +700,12 @@
       if(error){setStatus("Could not add model: "+errorText(error),"error");return;}
       $("modelForm").reset();await loadAll();setStatus("Phone model added.","good");
     }
+    $("newRepairBtn").addEventListener("click",()=>openRepairEditor());
+    $("closeRepairEditorBtn").addEventListener("click",closeRepairEditor);
+    $("cancelRepairBtn").addEventListener("click",closeRepairEditor);
+    $("repairForm").addEventListener("submit",saveRepair);
+    $("repairSearch").addEventListener("input",renderRepairs);
+    $("repairFilter").addEventListener("change",renderRepairs);
     async function startSession(session){
       if(!session){showLogin();return;}
       try{
