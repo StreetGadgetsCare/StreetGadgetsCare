@@ -148,8 +148,18 @@
           <div class="field full"><label for="imagePath">Existing image filename or image URL</label><input id="imagePath" maxlength="1000" placeholder="Enter an existing GitHub filename or leave this blank to upload below"><span class="hint">Keep existing GitHub image filenames here. A newly uploaded image will automatically fill this field with its Supabase image URL.</span></div>
           <div class="field full"><label for="imageFile">Upload image from this computer</label><div class="image-upload"><input id="imageFile" type="file" accept="image/*"><img id="imagePreview" class="image-preview hidden" alt="Selected product image preview"></div><span class="hint">Choose an image to preview it. It uploads to the product-images storage bucket when you save the product. Maximum file size: 50 MB.</span></div>
           <div class="field"><label for="categoryId">Category</label><select id="categoryId"><option value="">No category</option></select></div>
-          <div class="field full"><label for="modelSearch">Find compatible phone models</label><input id="modelSearch" type="search" placeholder="Search brand or model to filter the list…"></div>
-          <div class="field full"><label for="compatibleModels">Compatible models (select one or more)</label><select id="compatibleModels" multiple></select><span class="hint">Use Ctrl (Windows) or Command (Mac) to select multiple models. Existing selections are retained when editing.</span></div>
+          <div class="field"><label for="compatibleBrandFilter">Phone brand</label><select id="compatibleBrandFilter"><option value="">All brands</option></select><span class="hint">Choose a brand to narrow the compatible model list.</span></div>
+          <div class="field"><label for="modelSearch">Search phone models</label><input id="modelSearch" type="search" placeholder="Type a model name…"></div>
+          <div class="field full"><label for="compatibleModels">Compatible models (select one or more)</label><select id="compatibleModels" multiple></select><span class="hint">Select every model this product fits. On Windows, hold Ctrl while selecting more than one.</span></div>
+          <div class="field full">
+            <label>Add a phone model if it is not listed</label>
+            <div class="form-grid">
+              <div class="field"><label for="compatibleNewModelBrand">Brand</label><select id="compatibleNewModelBrand"></select></div>
+              <div class="field"><label for="compatibleNewModelName">New phone model</label><input id="compatibleNewModelName" maxlength="120" placeholder="e.g. Galaxy S26 Ultra"></div>
+            </div>
+            <button id="addModelInlineBtn" class="btn secondary" type="button">+ Add model to this product</button>
+            <span class="hint">The new model will be saved under the selected brand and automatically selected as compatible with this product.</span>
+          </div>
           <div class="field full"><label class="checkline"><input id="isActive" type="checkbox" checked> Show this product on the public spare-parts catalogue</label><span class="hint">Untick to hide the product from the public catalogue without deleting it.</span></div>
         </div>
         <div class="row-end"><button id="cancelProductBtn" class="btn secondary" type="button">Cancel</button><button id="saveProductBtn" class="btn" type="submit">Save product</button></div>
@@ -293,21 +303,59 @@
     }
     function renderBrands() {
       const select=$("modelBrand");select.innerHTML="";
-      brands.forEach(b=>{const o=document.createElement("option");o.value=b.id;o.textContent=b.name;select.append(o);});
+      const inlineBrand=$("compatibleNewModelBrand");inlineBrand.innerHTML="";
+      const filter=$("compatibleBrandFilter");filter.innerHTML='<option value="">All brands</option>';
+      brands.forEach(b=>{
+        const o=document.createElement("option");o.value=b.id;o.textContent=b.name;select.append(o);
+        const inlineOption=document.createElement("option");inlineOption.value=b.id;inlineOption.textContent=b.name;inlineBrand.append(inlineOption);
+        const filterOption=document.createElement("option");filterOption.value=b.id;filterOption.textContent=b.name;filter.append(filterOption);
+      });
       renderModelOptions();
     }
     function renderModelOptions() {
       const query=$("modelSearch").value.trim().toLowerCase();
+      const brandFilter=$("compatibleBrandFilter").value;
       const select=$("compatibleModels");
       const chosen=selectedModelIds;
       select.innerHTML="";
       const brandById=new Map(brands.map(b=>[b.id,b.name]));
       models.forEach(m=>{
+        if(brandFilter&&m.brand_id!==brandFilter) return;
         const brand=brandById.get(m.brand_id)||"Other";
         const label=brand+" — "+m.model_name;
         if(query&&!label.toLowerCase().includes(query)) return;
         const o=document.createElement("option");o.value=m.id;o.textContent=label;o.selected=chosen.has(m.id);select.append(o);
       });
+    }
+    async function addModelToCurrentProduct() {
+      const brand_id=$("compatibleNewModelBrand").value;
+      const model_name=$("compatibleNewModelName").value.trim();
+      if(!brand_id||!model_name){setStatus("Choose a brand and enter the phone model name.","error");return;}
+      const existing=models.find(m=>m.brand_id===brand_id&&m.model_name.trim().toLowerCase()===model_name.toLowerCase());
+      if(existing){
+        selectedModelIds.add(existing.id);
+        $("compatibleBrandFilter").value=brand_id;
+        $("modelSearch").value="";
+        renderModelOptions();
+        $("compatibleNewModelName").value="";
+        setStatus("That model already exists and has been selected for this product.","good");
+        return;
+      }
+      const button=$("addModelInlineBtn");button.disabled=true;button.textContent="Adding model…";
+      try{
+        const {data,error}=await db.from("device_models").insert({brand_id,model_name}).select("id,brand_id,model_name").single();
+        if(error)throw error;
+        models.push(data);
+        models.sort((a,b)=>a.model_name.localeCompare(b.model_name));
+        selectedModelIds.add(data.id);
+        $("compatibleBrandFilter").value=brand_id;
+        $("modelSearch").value="";
+        $("compatibleNewModelName").value="";
+        renderModelOptions();
+        updateStats();
+        setStatus("Phone model added and selected for this product. Save the product to finish.","good");
+      }catch(error){setStatus("Could not add phone model: "+errorText(error),"error");}
+      finally{button.disabled=false;button.textContent="+ Add model to this product";}
     }
     async function openEditor(product=null) {
       $("productForm").reset();
@@ -434,6 +482,8 @@
       Array.from($("compatibleModels").selectedOptions).forEach(o=>selectedModelIds.add(o.value));
     });
     $("modelSearch").addEventListener("input",()=>renderModelOptions());
+    $("compatibleBrandFilter").addEventListener("change",()=>renderModelOptions());
+    $("addModelInlineBtn").addEventListener("click",addModelToCurrentProduct);
     db.auth.getSession().then(({data})=>startSession(data.session)).catch(error=>showLogin(errorText(error)));
     db.auth.onAuthStateChange((event,session)=>{if(event==="SIGNED_OUT")showLogin();});
   </script>
