@@ -82,6 +82,19 @@
     .notice{background:#f0f8fb;border-left:3px solid var(--cyan);padding:11px 13px;border-radius:7px;color:#315269;font-size:11px;margin:10px 0 15px}
     .row-end{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
     .divider{height:1px;background:var(--border);margin:17px 0}
+    .module-nav{display:flex;gap:7px;overflow-x:auto;padding:7px;background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:20px;scrollbar-width:thin}
+    .module-nav button{flex:0 0 auto;border:0;border-radius:8px;background:transparent;color:#526075;padding:10px 13px;font-size:12px;font-weight:800;white-space:nowrap}
+    .module-nav button:hover{background:#eef7fa;color:#075d77}
+    .module-nav button[aria-current="page"]{background:var(--navy);color:#fff}
+    .overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:18px}
+    .module-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:17px;min-height:145px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+    .module-card h3{font-size:14px;color:var(--navy)}
+    .module-card p{font-size:12px;color:var(--muted);flex:1}
+    .module-card .module-state{font-size:10px;font-weight:800;color:#17683a;background:#eaf8ef;border-radius:20px;padding:4px 8px}
+    .module-card .module-state.planned{color:#76520a;background:#fff5dc}
+    .module-card button{margin-top:4px}
+    .module-view{min-width:0}
+    @media(max-width:720px){.overview-grid{grid-template-columns:1fr}.module-nav{margin-bottom:15px}.module-nav button{padding:9px 11px}}
     @media(max-width:720px){.wrap{margin:20px auto;padding:0 13px 35px}.topbar{padding:11px 13px}.brand img{width:43px;height:43px}.top-actions a{display:none}.intro{align-items:flex-start;flex-direction:column}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.grid2,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.panel{padding:15px}.product{grid-template-columns:48px minmax(0,1fr);gap:10px}.product img{width:48px;height:48px}.product-actions{grid-column:2;justify-content:flex-start}.product-actions button{padding:7px 10px}.status{max-width:none}}
   </style>
 </head>
@@ -114,6 +127,37 @@
   </main>
 
   <main id="appView" class="wrap hidden">
+    <nav class="module-nav" aria-label="Business dashboard sections">
+      <button type="button" data-module="overview" aria-current="page">Overview</button>
+      <button type="button" data-module="products">Products</button>
+      <button type="button" data-module="repairs">Repairs</button>
+      <button type="button" data-module="customers">Customers</button>
+      <button type="button" data-module="orders">Orders</button>
+      <button type="button" data-module="inventory">Inventory</button>
+      <button type="button" data-module="website">Website</button>
+      <button type="button" data-module="staff">Staff</button>
+    </nav>
+
+    <section id="moduleOverview" class="module-view">
+      <div class="intro">
+        <div><h1>Business overview</h1><p class="sub">Your central workspace for managing Street Gadgets Care.</p></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h2>Business management</h2><p class="muted">The dashboard is being expanded into one connected system for the whole business.</p></div></div>
+        <p class="sub">Product catalogue management is already connected. The other sections will be connected in stages, with their own records, permissions and workflows.</p>
+      </div>
+      <div class="overview-grid">
+        <article class="module-card"><span class="module-state">Available</span><h3>Products</h3><p>Manage spare parts, shop products, descriptions, images and catalogue visibility.</p><button class="btn secondary" type="button" data-module="products">Open products</button></article>
+        <article class="module-card"><span class="module-state planned">Planned</span><h3>Repairs</h3><p>Receive repair requests, record device issues, update repair stages and manage collections.</p></article>
+        <article class="module-card"><span class="module-state planned">Planned</span><h3>Customers</h3><p>Keep customer contact details and their repair and order history together.</p></article>
+        <article class="module-card"><span class="module-state planned">Planned</span><h3>Orders</h3><p>Manage customer orders, order items and fulfilment progress.</p></article>
+        <article class="module-card"><span class="module-state planned">Planned</span><h3>Inventory</h3><p>Track stock quantities and availability for shop products and spare parts.</p></article>
+        <article class="module-card"><span class="module-state planned">Planned</span><h3>Website content</h3><p>Manage website information and images from the dashboard instead of editing page code.</p></article>
+        <article class="module-card"><span class="module-state planned">Planned</span><h3>Staff and access</h3><p>Manage staff accounts and define which parts of the system each role can access.</p></article>
+      </div>
+    </section>
+
+    <section id="moduleProducts" class="module-view hidden">
     <div class="intro">
       <div><h1>Catalogue management</h1><p class="sub">Manage spare-parts listings, compatible phone models and catalogue visibility.</p></div>
       <div id="status" class="status" role="status">Checking administrator access…</div>
@@ -180,6 +224,7 @@
         </form>
       </div>
     </section>
+    </section>
     <p class="muted" style="text-align:center">Street Gadgets Care · Admin dashboard</p>
   </main>
 
@@ -197,6 +242,21 @@
     let currentProductLinks = [];
     let selectedModelIds = new Set();
     let imagePreviewObjectUrl = null;
+
+    function switchModule(moduleName) {
+      const validModules = ["overview","products","repairs","customers","orders","inventory","website","staff"];
+      if (!validModules.includes(moduleName)) return;
+      document.querySelectorAll(".module-view").forEach(view => {
+        view.classList.toggle("hidden", view.id !== "module" + moduleName.charAt(0).toUpperCase() + moduleName.slice(1));
+      });
+      document.querySelectorAll(".module-nav [data-module]").forEach(button => {
+        if (button.dataset.module === moduleName) button.setAttribute("aria-current","page");
+        else button.removeAttribute("aria-current");
+      });
+    }
+    document.querySelectorAll(".module-nav [data-module]").forEach(button => {
+      button.addEventListener("click", () => switchModule(button.dataset.module));
+    });
 
     function setStatus(message,kind="") {
       const el=$("status");
