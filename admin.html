@@ -421,9 +421,10 @@
           transition.textContent=previous+" → "+next;
           const meta=document.createElement("div");meta.className="repair-history-meta";
           const date=item.created_at?new Date(item.created_at).toLocaleString():"Date not recorded";
-          meta.textContent=date+" · "+(item.changed_by?"Staff account recorded":"System / account not recorded");
-          card.append(transition,meta);
           const noteText=[item.note,item.notes].filter((value,index,array)=>value&&array.indexOf(value)===index).join("\n");
+          const actorMatch=noteText.match(/Recorded by: ([^\n]+)/i);
+          meta.textContent=date+" · "+(actorMatch?actorMatch[1]:(item.changed_by?"Staff account recorded":"System / account not recorded"));
+          card.append(transition,meta);
           if(noteText){
             const note=document.createElement("div");note.className="repair-history-note";note.textContent=noteText;card.append(note);
           }
@@ -433,6 +434,15 @@
         if($("repairId").value!==repairId)return;
         root.textContent="Could not load repair history: "+errorText(error);
       }
+    }
+    async function getRepairHistoryActor() {
+      const {data,error}=await db.auth.getUser();
+      if(error)throw error;
+      const user=data&&data.user;
+      if(!user)throw new Error("Your staff session could not be verified. Please sign in again.");
+      const metadata=user.user_metadata||{};
+      const displayName=metadata.full_name||metadata.name||metadata.display_name||user.email||"Signed-in staff";
+      return {changed_by:user.id,actorLabel:String(displayName)+(user.email&&displayName!==user.email?" ("+user.email+")":"")};
     }
     async function saveRepair(event) {
       event.preventDefault();
@@ -461,13 +471,15 @@
           const {data,error}=await db.from("repair_jobs").update(payload).eq("id",id).select("id,status").single();
           if(error)throw error;saved=data;
           if(previous&&previous.status!==saved.status){
-            const {error:historyError}=await db.from("repair_status_history").insert({repair_id:id,old_status:previous.status,new_status:saved.status,notes:"Status updated from admin dashboard"});
+            const actor=await getRepairHistoryActor();
+            const {error:historyError}=await db.from("repair_status_history").insert({repair_id:id,old_status:previous.status,new_status:saved.status,changed_by:actor.changed_by,notes:"Status updated from admin dashboard\nRecorded by: "+actor.actorLabel});
             if(historyError)throw historyError;
           }
         }else{
           const {data,error}=await db.from("repair_jobs").insert(payload).select("id,status").single();
           if(error)throw error;saved=data;
-          const {error:historyError}=await db.from("repair_status_history").insert({repair_id:saved.id,old_status:null,new_status:saved.status,notes:"Repair registered"});
+          const actor=await getRepairHistoryActor();
+          const {error:historyError}=await db.from("repair_status_history").insert({repair_id:saved.id,old_status:null,new_status:saved.status,changed_by:actor.changed_by,notes:"Repair registered\nRecorded by: "+actor.actorLabel});
           if(historyError)throw historyError;
         }
         closeRepairEditor();await loadRepairs();setRepairStatus("Repair "+repairReference(saved.id)+" saved successfully.","good");
