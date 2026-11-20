@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Repair | Street Gadgets Care Nairobi</title>
+  <meta name="description" content="Request a phone, laptop or device repair with Street Gadgets Care in Nairobi, Kenya. Submit your device details and describe the problem.">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://streetgadgetscare.github.io/StreetGadgetsCare/book-repair.html">
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0b1220;--navy2:#142238;--cyan:#19a7ce;--cyan-dark:#087fa3;--green:#25d366;--white:#fff;--light:#f5f8fa;--text:#101a29;--muted:#657284;--border:#e3e9ef;--shadow:0 14px 40px rgba(11,18,32,.08)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--light);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .container{width:min(1120px,calc(100% - 36px));margin:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(8,14,25,.98);border-bottom:1px solid #ffffff14}
+    .navbar{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .logo-link{display:flex;align-items:center;gap:8px;min-width:0;flex-shrink:0}
+    .logo-link img{width:54px;height:54px;object-fit:contain;flex-shrink:0}
+    .brand-copy{display:flex;flex-direction:column;justify-content:center;gap:2px;line-height:1.15}
+    .brand-copy strong{color:#fff;font-size:15px;font-weight:900;letter-spacing:.1px;white-space:nowrap}
+    .brand-tagline{color:#8eddf1;font-size:8px;font-weight:800;letter-spacing:.8px;white-space:nowrap}
+    .nav-links{display:flex;align-items:center;gap:17px}
+    .nav-links a{color:#ffffffdc;font-size:12px;font-weight:700;white-space:nowrap}
+    .nav-links a:hover,.nav-links a.active{color:#8eddf1}
+    .nav-links .nav-cta{padding:10px 14px;border-radius:8px;color:#fff;background:var(--green)}
+    .hero{padding:54px 0 30px;background:linear-gradient(125deg,#080e19,#0b1220 58%,#142238);color:#fff}
+    .eyebrow{color:#8eddf1;font-size:11px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:10px}
+    h1{font-size:clamp(30px,4vw,43px);line-height:1.15;letter-spacing:-1.4px;margin-bottom:12px}
+    .hero p{max-width:690px;color:#d5deea;font-size:14px}
+    main{padding:34px 0 70px}
+    .layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:24px;align-items:start}
+    .card{background:#fff;border:1px solid var(--border);border-radius:15px;box-shadow:var(--shadow);padding:25px}
+    .card h2{font-size:19px;color:var(--navy);margin-bottom:5px}
+    .intro{font-size:12px;color:var(--muted);margin-bottom:21px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:15px;min-width:0}
+    label{font-size:12px;font-weight:800;color:#344156}
+    .required{color:#c43d4b}
+    input,select,textarea{width:100%;min-height:45px;border:1px solid #d7dee7;border-radius:8px;padding:10px 12px;background:#fff;color:var(--text);font-size:13px;outline:none}
+    textarea{min-height:120px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #19a7ce1c}
+    .full{grid-column:1/-1}
+    .hint{font-size:11px;color:var(--muted)}
+    .submit{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:0;border-radius:8px;background:var(--cyan);color:#fff;font-size:13px;font-weight:800;cursor:pointer}
+    .submit:hover{background:var(--cyan-dark)}
+    .submit:disabled{opacity:.6;cursor:not-allowed}
+    .status{display:none;margin-top:16px;padding:13px 14px;border-radius:9px;font-size:12px;font-weight:600;overflow-wrap:anywhere}
+    .status.show{display:block}
+    .status.success{background:#eaf8ef;color:#17683a;border:1px solid #ccebd6}
+    .status.error{background:#fff0f1;color:#9e2634;border:1px solid #f4cbd0}
+    .side-card{background:#fff;border:1px solid var(--border);border-radius:15px;padding:22px;margin-bottom:15px}
+    .side-card h3{font-size:15px;color:var(--navy);margin-bottom:9px}
+    .side-card p,.side-card li{font-size:12px;color:var(--muted);line-height:1.8}
+    .side-card ul{padding-left:18px;margin-top:8px}
+    .contact-link{display:inline-block;margin-top:12px;color:var(--cyan-dark);font-size:12px;font-weight:800}
+    footer{background:var(--navy);color:#d7e0eb;padding:24px 0}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+    footer p,footer a{font-size:11px;color:#d7e0eb}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap}
+    .honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+    @media(max-width:760px){.navbar{min-height:72px}.nav-links{gap:11px}.nav-links a{font-size:11px}.layout{grid-template-columns:1fr}.hero{padding:40px 0 25px}}
+    @media(max-width:560px){.container{width:min(100% - 26px,1120px)}.navbar{gap:10px}.logo-link{gap:6px}.logo-link img{width:46px;height:46px}.brand-copy strong{font-size:12px}.brand-tagline{font-size:7px;letter-spacing:.55px}.nav-links a:not(.nav-cta){display:none}.nav-links .nav-cta{font-size:10px;padding:9px 10px}.card{padding:18px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.hero{padding-top:35px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo-link" href="index.html" aria-label="Street Gadgets Care home">
+        <img src="Logo.png" alt="Street Gadgets Care logo">
+        <span class="brand-copy">
+          <strong>STREET GADGETS CARE</strong>
+          <span class="brand-tagline">REPAIR . RELIABLE . TRUSTED</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="spare-parts.html">Spare Parts</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta active" href="book-repair.html" aria-current="page">Book a Repair</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Street Gadgets Care · Nairobi, Kenya</div>
+      <h1>Request a device repair</h1>
+      <p>Tell us about your device and the problem you are experiencing. Your request will be sent to our repair team for follow-up.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="layout">
+      <section class="card">
+        <h2>Repair booking details</h2>
+        <p class="intro">Fields marked with <span class="required">*</span> are required. Please provide a phone number we can reach you on.</p>
+
+        <form id="bookingForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Customer full name <span class="required">*</span></label>
+              <input id="fullName" name="fullName" type="text" maxlength="120" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number <span class="required">*</span></label>
+              <input id="phone" name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="e.g. 0712 345 678" required>
+            </div>
+            <div class="field full">
+              <label for="email">Email address <span class="hint">(Optional)</span></label>
+              <input id="email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="deviceType">Device type <span class="required">*</span></label>
+              <select id="deviceType" name="deviceType" required>
+                <option value="">Select device type</option>
+                <option>Phone</option>
+                <option>Laptop</option>
+                <option>Tablet</option>
+                <option>Desktop computer</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="brand">Brand <span class="required">*</span></label>
+              <input id="brand" name="brand" type="text" maxlength="80" placeholder="e.g. Samsung, Apple, HP" required>
+            </div>
+            <div class="field full">
+              <label for="model">Device model <span class="required">*</span></label>
+              <input id="model" name="model" type="text" maxlength="120" placeholder="e.g. Samsung Galaxy A14, HP EliteBook 840 G5" required>
+            </div>
+            <div class="field full">
+              <label for="issue">Describe the problem <span class="required">*</span></label>
+              <textarea id="issue" name="issue" maxlength="2000" placeholder="Explain what is wrong with your device and when the problem started..." required></textarea>
+              <span class="hint">Please do not include passwords or other private account information.</span>
+            </div>
+          </div>
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="submit" id="submitBtn" type="submit">Submit repair request</button>
+          <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <aside>
+        <div class="side-card">
+          <h3>What happens next?</h3>
+          <ul>
+            <li>Your repair request is recorded in our system.</li>
+            <li>Our team reviews the device details and reported problem.</li>
+            <li>We contact you using the phone number you provide to discuss the next steps.</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Need help before booking?</h3>
+          <p>You can contact Street Gadgets Care directly if you have a question about a repair.</p>
+          <a class="contact-link" href="https://wa.me/254114259961?text=Hello%20Street%20Gadgets%20Care%2C%20I%20have%20a%20repair%20enquiry." target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp →</a>
+          <p style="margin-top:10px">Call: <a href="tel:+254114259961">0114259961</a><br>Email: <a href="mailto:streetgadgetscare@gmail.com">streetgadgetscare@gmail.com</a></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Street Gadgets Care · Nairobi, Kenya</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    "use strict";
+
+    const SUPABASE_URL = "https://adipqznxhpwnilsmjhiq.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_K0STbvDLc39F_KA9Ja6q3w_JU0dpJGS";
+    const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+    const form = document.getElementById("bookingForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formStatus = document.getElementById("formStatus");
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function showStatus(message, type) {
+      formStatus.textContent = message;
+      formStatus.className = "status show " + type;
+    }
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      if (document.getElementById("website").value.trim() !== "") {
+        showStatus("Your request could not be submitted. Please try again.", "error");
+        return;
+      }
+
+      if (!form.reportValidity()) return;
+
+      const values = {
+        p_full_name: document.getElementById("fullName").value.trim(),
+        p_phone: document.getElementById("phone").value.trim(),
+        p_email: document.getElementById("email").value.trim() || null,
+        p_device_type: document.getElementById("deviceType").value.trim(),
+        p_brand: document.getElementById("brand").value.trim(),
+        p_model: document.getElementById("model").value.trim(),
+        p_reported_issue: document.getElementById("issue").value.trim()
+      };
+
+      if (!values.p_full_name || !values.p_phone || !values.p_device_type ||
+          !values.p_brand || !values.p_model || !values.p_reported_issue) {
+        showStatus("Please complete all required fields.", "error");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting request...";
+      formStatus.className = "status";
+
+      try {
+        const { data, error } = await db.rpc("submit_repair_booking", values);
+        if (error) throw error;
+
+        const shortReference = "SGC-" + String(data).replace(/-/g, "").slice(0, 8).toUpperCase();
+        showStatus(
+          "Your repair request has been submitted successfully. Your booking reference is " +
+          shortReference + ". Please keep this reference when contacting us.",
+          "success"
+        );
+        form.reset();
+      } catch (error) {
+        console.error("Repair booking error:", error);
+        showStatus(
+          "We could not submit your request at the moment. Please try again or contact us on WhatsApp at 0114259961.",
+          "error"
+        );
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit repair request";
+      }
+    });
+  </script>
+</body>
+</html>
