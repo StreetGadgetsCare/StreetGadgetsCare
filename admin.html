@@ -104,6 +104,12 @@
     .repair-status.received,.repair-status.diagnosing{background:#eaf3ff;color:#24558a}
     .repair-status.ready_for_collection{background:#eaf8ef;color:#17683a}
     .repair-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+    .repair-history-panel{margin-top:20px;padding-top:18px;border-top:1px solid var(--border)}
+    .repair-history-list{display:grid;gap:10px}
+    .repair-history-item{border:1px solid var(--border);border-left:3px solid var(--cyan);border-radius:9px;padding:12px 14px;background:#fbfdff}
+    .repair-history-transition{font-size:13px;font-weight:800;color:var(--navy)}
+    .repair-history-meta{font-size:11px;color:var(--muted);margin-top:4px}
+    .repair-history-note{font-size:12px;color:#354156;margin-top:7px;white-space:pre-wrap;overflow-wrap:anywhere}
     @media(max-width:720px){.repair-form-grid{grid-template-columns:1fr}.repair-row{grid-template-columns:1fr}.repair-row .btn{justify-self:start}}
     @media(max-width:720px){.overview-grid{grid-template-columns:1fr}.module-nav{margin-bottom:15px}.module-nav button{padding:9px 11px}}
     @media(max-width:720px){.wrap{margin:20px auto;padding:0 13px 35px}.topbar{padding:11px 13px}.brand img{width:43px;height:43px}.top-actions a{display:none}.intro{align-items:flex-start;flex-direction:column}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.grid2,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.panel{padding:15px}.product{grid-template-columns:48px minmax(0,1fr);gap:10px}.product img{width:48px;height:48px}.product-actions{grid-column:2;justify-content:flex-start}.product-actions button{padding:7px 10px}.status{max-width:none}}
@@ -282,6 +288,10 @@
           </div>
           <div class="row-end"><button id="cancelRepairBtn" class="btn secondary" type="button">Cancel</button><button id="saveRepairBtn" class="btn" type="submit">Save repair</button></div>
         </form>
+        <div id="repairHistoryPanel" class="repair-history-panel hidden" aria-live="polite">
+          <div class="panel-head"><div><h2>Repair status history</h2><p class="muted">A record of the status changes saved for this repair.</p></div></div>
+          <div id="repairHistoryList" class="repair-history-list"><div class="muted">Loading repair history…</div></div>
+        </div>
       </section>
     </section>
     <p class="muted" style="text-align:center">Street Gadgets Care · Admin dashboard</p>
@@ -377,10 +387,53 @@
       $("repairQuote").value=repair?.quoted_amount??"";
       $("repairCurrentStatus").value=repair?.status||"received";
       $("repairInternalNotes").value=repair?.internal_notes||"";
+      const historyPanel=$("repairHistoryPanel");
+      if(repair){
+        historyPanel.classList.remove("hidden");
+        $("repairHistoryList").textContent="Loading repair history…";
+        loadRepairHistory(repair.id);
+      }else{
+        historyPanel.classList.add("hidden");
+        $("repairHistoryList").textContent="";
+      }
       $("repairEditor").classList.remove("hidden");
       $("repairEditor").scrollIntoView({behavior:"smooth",block:"start"});
     }
     function closeRepairEditor(){$("repairEditor").classList.add("hidden");}
+    async function loadRepairHistory(repairId) {
+      const root=$("repairHistoryList");
+      try{
+        const {data,error}=await db.from("repair_status_history")
+          .select("id,old_status,new_status,note,notes,changed_by,created_at")
+          .eq("repair_id",repairId)
+          .order("created_at",{ascending:false});
+        if(error)throw error;
+        if($("repairId").value!==repairId)return;
+        root.textContent="";
+        if(!data||!data.length){
+          const empty=document.createElement("div");empty.className="empty";empty.textContent="No status history has been recorded for this repair yet.";root.append(empty);return;
+        }
+        data.forEach(item=>{
+          const card=document.createElement("article");card.className="repair-history-item";
+          const transition=document.createElement("div");transition.className="repair-history-transition";
+          const previous=item.old_status?REPAIR_STATUS_LABELS[item.old_status]||item.old_status:"New repair received";
+          const next=REPAIR_STATUS_LABELS[item.new_status]||item.new_status||"Status not specified";
+          transition.textContent=previous+" → "+next;
+          const meta=document.createElement("div");meta.className="repair-history-meta";
+          const date=item.created_at?new Date(item.created_at).toLocaleString():"Date not recorded";
+          meta.textContent=date+" · "+(item.changed_by?"Staff account recorded":"System / account not recorded");
+          card.append(transition,meta);
+          const noteText=[item.note,item.notes].filter((value,index,array)=>value&&array.indexOf(value)===index).join("\n");
+          if(noteText){
+            const note=document.createElement("div");note.className="repair-history-note";note.textContent=noteText;card.append(note);
+          }
+          root.append(card);
+        });
+      }catch(error){
+        if($("repairId").value!==repairId)return;
+        root.textContent="Could not load repair history: "+errorText(error);
+      }
+    }
     async function saveRepair(event) {
       event.preventDefault();
       const id=$("repairId").value;
