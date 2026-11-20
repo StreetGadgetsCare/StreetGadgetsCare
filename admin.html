@@ -107,8 +107,11 @@
     .repair-history-panel{margin-top:20px;padding-top:18px;border-top:1px solid var(--border)}
     .repair-history-list{display:grid;gap:10px}
     .repair-history-item{border:1px solid var(--border);border-left:3px solid var(--cyan);border-radius:9px;padding:12px 14px;background:#fbfdff}
+    .repair-history-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
     .repair-history-transition{font-size:13px;font-weight:800;color:var(--navy)}
-    .repair-history-meta{font-size:11px;color:var(--muted);margin-top:4px}
+    .repair-history-source{display:inline-block;border-radius:20px;padding:3px 8px;font-size:10px;font-weight:800;background:#eaf3ff;color:#24558a}
+    .repair-history-source.online{background:#eaf8ef;color:#17683a}
+    .repair-history-meta{font-size:11px;color:var(--muted);margin-top:5px}
     .repair-history-note{font-size:12px;color:#354156;margin-top:7px;white-space:pre-wrap;overflow-wrap:anywhere}
     @media(max-width:720px){.repair-form-grid{grid-template-columns:1fr}.repair-row{grid-template-columns:1fr}.repair-row .btn{justify-self:start}}
     @media(max-width:720px){.overview-grid{grid-template-columns:1fr}.module-nav{margin-bottom:15px}.module-nav button{padding:9px 11px}}
@@ -415,6 +418,7 @@
         }
         data.forEach(item=>{
           const card=document.createElement("article");card.className="repair-history-item";
+          const top=document.createElement("div");top.className="repair-history-top";
           const transition=document.createElement("div");transition.className="repair-history-transition";
           const previous=item.old_status?REPAIR_STATUS_LABELS[item.old_status]||item.old_status:"New repair received";
           const next=REPAIR_STATUS_LABELS[item.new_status]||item.new_status||"Status not specified";
@@ -423,10 +427,16 @@
           const date=item.created_at?new Date(item.created_at).toLocaleString():"Date not recorded";
           const noteText=[item.note,item.notes].filter((value,index,array)=>value&&array.indexOf(value)===index).join("\n");
           const actorMatch=noteText.match(/Recorded by: ([^\n]+)/i);
-          meta.textContent=date+" · "+(actorMatch?actorMatch[1]:(item.changed_by?"Staff account recorded":"System / account not recorded"));
-          card.append(transition,meta);
-          if(noteText){
-            const note=document.createElement("div");note.className="repair-history-note";note.textContent=noteText;card.append(note);
+          const isOnlineBooking=/Repair booking submitted online/i.test(noteText);
+          const source=document.createElement("span");
+          source.className="repair-history-source"+(isOnlineBooking?" online":"");
+          source.textContent=isOnlineBooking?"Online booking":(item.changed_by||actorMatch?"Staff update":"System activity");
+          top.append(transition,source);
+          meta.textContent=date+" · "+(actorMatch?actorMatch[1]:(item.changed_by?"Staff account recorded":"No staff account recorded"));
+          card.append(top,meta);
+          const cleanNote=noteText.replace(/^Recorded by: [^\n]+\n?/gim,"").trim();
+          if(cleanNote){
+            const note=document.createElement("div");note.className="repair-history-note";note.textContent=cleanNote;card.append(note);
           }
           root.append(card);
         });
